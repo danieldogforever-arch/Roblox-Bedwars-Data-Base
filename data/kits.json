@@ -525,7 +525,8 @@
     "cdText": "0.625s - 1s",
     "dmg": 20,
     "dmgText": "10 - 20 (headshot 15 - 30)",
-    "nodps": true
+    "nodps": true,
+    "img": "images/items/bow.png"
    },
    {
     "name": "Tactical Crossbow",
@@ -588,6 +589,16 @@
    {
     "name": "Nightmare",
     "img": "images/skins/archer-nightmare.webp"
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Aim for headshots",
+    "text": "Headshots are the best part of Archer, so always aim for the head."
+   },
+   {
+    "title": "Save emeralds for the Crossbow",
+    "text": "Save the emeralds you get from the middle and buy the Tactical Crossbow as fast as you can. Archer gets the biggest damage increase over a normal crossbow, so it gives you a lot of control."
    }
   ]
  },
