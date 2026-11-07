@@ -102,23 +102,93 @@
   },
   "diff": "hard",
   "hp": "100",
-  "desc": "Start with a powerful Frost Hammer. Damaging people using the hammer has a chance to drop Frost Crystals which can be used to upgrade your hammer.",
-  "adv": "",
+  "desc": "Start with a powerful Frosty Hammer. Hitting enemies has a chance to drop Frost Crystals, which you can spend to upgrade your hammer.",
+  "adv": "You spawn with a Frosty Hammer, which has a 4.5 block reach, the same as a sword. Every hit on an enemy has an 80% chance to give you a Frost Crystal. Crystals are spent on hammer upgrades, can be stored in your Personal Chest, and are all lost when you die.\nTier 1 costs 3 crystals (9 in total), Tier 2 costs 7 crystals (21 in total), and Tier 3 costs 15. The upgrades are Speed, Shield and Damage, and you can only pick one Tier 3 upgrade. Every time you upgrade, you are frozen in place for 2 seconds.\nShield is capped at 50. If you have not hit anyone for 2 seconds, it drops by 5 every 0.75 seconds.\nThe Tier 3 upgrade you pick gives you something special: Damage unlocks the Arctic Slam ability, Shield unlocks the Permafrost Shield ability, and Speed (cooldown) unlocks the Blizzard Storm passive.",
   "items": [
    {
     "name": "Frosty Hammer",
-    "img": "images/items/frosty-hammer.png"
+    "img": "images/items/frosty-hammer.png",
+    "desc": "Your main weapon, with a 4.5 block reach, the same as a sword. Tier 0 deals 23 damage every 0.35 seconds. Each hit has an 80% chance to drop a Frost Crystal.",
+    "cd": 0.35,
+    "dmg": 23
    },
    {
     "name": "Frost Crystal",
-    "img": "images/items/frost-crystal.png"
+    "img": "images/items/frost-crystal.png",
+    "desc": "Gained from hitting enemies (80% chance). Spend them on hammer upgrades or store them in your Personal Chest. You lose all of them when you die."
    }
   ],
   "abilities": [
    {
     "name": "Open Hammer Upgrades",
     "note": "Only while holding the Hammer",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Opens the hammer upgrade menu. Each upgrade freezes you in place for 2 seconds.\nTier 0: 23 damage every 0.35 seconds.\nTier 1 (3 crystals): 30 damage every 0.32 seconds, and 2 shield per attack.\nTier 2 (7 crystals): 40 damage every 0.28 seconds, and 3 shield per attack.\nTier 3 (15 crystals, pick one): 52 damage, or 4 shield per attack, or a 0.25 second cooldown. Each one unlocks its own ability or passive."
+   },
+   {
+    "name": "Permafrost Shield",
+    "note": "Tier 3 Shield upgrade",
+    "img": "images/abilities/ability-template.png",
+    "desc": "Gain 30 shield for 6 seconds. The shield then explodes in a 7 block radius, dealing damage based on how much shield you have. The explosion has 100% armor penetration.",
+    "cd": 25
+   },
+   {
+    "name": "Arctic Slam",
+    "note": "Tier 3 Damage upgrade",
+    "img": "images/abilities/ability-template.png",
+    "desc": "Hits 3 times over 2 seconds for 40, then 30, then 20 damage (90 in total). Each hit has 10% armor penetration. Reaches a 20 block radius, 9 blocks wide from end to end and 3 blocks tall. Damages and breaks blocks depending on their type, and launches enemies 2 blocks into the air.",
+    "cd": 25,
+    "dmg": 90
+   }
+  ],
+  "passives": [
+   {
+    "name": "Frost Crystal Drops",
+    "when": "On hitting an enemy",
+    "desc": "80% chance to gain a Frost Crystal. Crystals are lost on death, but you can keep them safe in your Personal Chest."
+   },
+   {
+    "name": "Upgrade Freeze",
+    "when": "When you upgrade",
+    "desc": "You are frozen in place for 2 seconds every time you upgrade your hammer."
+   },
+   {
+    "name": "Shield Decay",
+    "when": "2 seconds without hitting anyone",
+    "desc": "Shield is capped at 50 and drops by 5 every 0.75 seconds."
+   },
+   {
+    "name": "Blizzard Storm",
+    "when": "Tier 3 Speed upgrade",
+    "desc": "After landing 4 hits in a row, an aura with a 6 block radius forms around you. It ticks every 0.525 seconds, starting at 3 damage and rising by 1 per tick up to a max of 8. The longer you keep hitting, the longer the aura lasts after you stop: every hit adds 1 extra tick."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Hit and run early",
+    "text": "Your hammer has a slow cooldown at first, so use hit-and-run tactics to collect crystals safely. Save them up before upgrading your cooldown, then your damage."
+   },
+   {
+    "title": "Upgrade order",
+    "text": "Always keep upgrading, and take Cooldown and Damage before Shield."
+   },
+   {
+    "title": "Best Tier 3 pick",
+    "text": "Tier 3 Damage gives the best DPS. You can choose the others if you prefer them or want to play that specific style."
+   },
+   {
+    "title": "Arctic Slam on bridges",
+    "text": "Use Arctic Slam when enemies are crossing bridges. It destroys the bridge and drops them into the void."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Void Adetunde",
+    "img": "images/skins/adetunde-void.webp"
+   },
+   {
+    "name": "Snow Owl Adetunde",
+    "img": "images/skins/adetunde-snow-owl.webp"
    }
   ]
  },
