@@ -185,11 +185,11 @@
   ],
   "skins": [
    {
-    "name": "Void Adetunde",
+    "name": "Void Skin",
     "img": "images/skins/adetunde-void.webp"
    },
    {
-    "name": "Snow Owl Adetunde",
+    "name": "Snow Owl Skin",
     "img": "images/skins/adetunde-snow-owl.webp"
    }
   ]
@@ -270,11 +270,11 @@
   ],
   "skins": [
    {
-    "name": "Academy Aery",
+    "name": "Academy Skin",
     "img": "images/skins/aery-academy.webp"
    },
    {
-    "name": "Heartseeker Aery",
+    "name": "Heartseeker Skin",
     "img": "images/skins/aery-heartseeker.webp"
    }
   ]
@@ -315,7 +315,7 @@
   ],
   "skins": [
    {
-    "name": "Spirit Agni",
+    "name": "Spirit Skin",
     "img": "images/skins/agni-spirit.webp"
    }
   ],
@@ -570,27 +570,27 @@
   ],
   "skins": [
    {
-    "name": "Lunar Dragon Archer",
+    "name": "Lunar Dragon Skin",
     "img": "images/skins/archer-lunar-dragon.webp"
    },
    {
-    "name": "Victorious Gold",
+    "name": "Victorious Gold Skin",
     "img": "images/skins/archer-victorious-gold.webp"
    },
    {
-    "name": "Victorious Platinum",
+    "name": "Victorious Platinum Skin",
     "img": "images/skins/archer-platinum.webp"
    },
    {
-    "name": "Victorious Diamond",
+    "name": "Victorious Diamond Skin",
     "img": "images/skins/archer-diamond.webp"
    },
    {
-    "name": "Victorious Emerald",
+    "name": "Victorious Emerald Skin",
     "img": "images/skins/archer-emerald.webp"
    },
    {
-    "name": "Victorious Nightmare",
+    "name": "Victorious Nightmare Skin",
     "img": "images/skins/archer-nightmare.webp"
    }
   ],
@@ -676,26 +676,86 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Use your pet axolotls to empower yourself and nearby teammates with shields, increased attack damage, faster break speed and health regen.",
-  "adv": "",
+  "adv": "Buy Axolotls in the shop to power up yourself and nearby teammates. Every Axolotl has a 5 second cooldown and a 9 block radius.\nShield Axolotl gives shield when you are damaged, Damage Axolotl boosts damage after you hit someone, Break Speed Axolotl speeds up block breaking, and Health Regen Axolotl heals you when you drop below 50% HP.",
   "items": [
    {
     "name": "Shield Axolotl",
-    "img": "images/items/shield-axolotl.png"
+    "img": "images/items/shield-axolotl.png",
+    "note": "Cost: 40 iron",
+    "desc": "Gives you and nearby teammates 15 shield when they get damaged. 9 block radius.",
+    "cd": 5
    },
    {
     "name": "Damage Axolotl",
-    "img": "images/items/damage-axolotl.png"
+    "img": "images/items/damage-axolotl.png",
+    "note": "Cost: 90 iron",
+    "desc": "Gives you and nearby teammates 16% more damage. Activates after you deal damage. 9 block radius.",
+    "cd": 5
    },
    {
     "name": "Break Speed Axolotl",
-    "img": "images/items/break-speed-axolotl.png"
+    "img": "images/items/break-speed-axolotl.png",
+    "note": "Cost: 1 emerald",
+    "desc": "Gives you and nearby teammates 60% break speed. 9 block radius.",
+    "cd": 5
    },
    {
     "name": "Health Regen Axolotl",
-    "img": "images/items/health-regen-axolotl.png"
+    "img": "images/items/health-regen-axolotl.png",
+    "note": "Cost: 5 emeralds",
+    "desc": "Heals you and your teammates by 1% HP for 12 ticks, with 0.45 seconds between ticks. Activates when you take damage below 50% HP. 9 block radius.",
+    "cd": 5
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "strategy": [
+   {
+    "title": "Shield Axolotl early",
+    "text": "Get the Shield Axolotl early in the game and stick with your teammates so they benefit from it too."
+   },
+   {
+    "title": "Damage Axolotl later",
+    "text": "Only buy the Damage Axolotl after you have iron armor and a stone sword."
+   },
+   {
+    "title": "Break Speed is the strongest",
+    "text": "Break Speed Axolotl is the most powerful one. Use it to shred through bed defenses."
+   },
+   {
+    "title": "Health Regen is expensive",
+    "text": "The Health Regen Axolotl costs too much. Only buy it once you have the essentials you need, like a crossbow, diamond armor, enchants and pearls."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Reindeer Trainer Skin",
+    "img": "images/skins/axolotl-amy-reindeer-trainer.webp"
+   },
+   {
+    "name": "Easter Bunny Skin",
+    "img": "images/skins/axolotl-amy-easter-bunny.webp"
+   },
+   {
+    "name": "Victorious Gold Skin",
+    "img": "images/skins/axolotl-amy-victorious-gold.webp"
+   },
+   {
+    "name": "Victorious Platinum Skin",
+    "img": "images/skins/axolotl-amy-victorious-platinum.webp"
+   },
+   {
+    "name": "Victorious Diamond Skin",
+    "img": "images/skins/axolotl-amy-victorious-diamond.webp"
+   },
+   {
+    "name": "Victorious Emerald Skin",
+    "img": "images/skins/axolotl-amy-victorious-emerald.webp"
+   },
+   {
+    "name": "Victorious Nightmare Skin",
+    "img": "images/skins/axolotl-amy-victorious-nightmare.webp"
+   }
+  ]
  },
  {
   "name": "Baker",
