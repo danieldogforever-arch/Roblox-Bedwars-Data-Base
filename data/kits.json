@@ -1486,12 +1486,7 @@
   "hp": "",
   "desc": "Summon your mount, charge at your enemies and send them flying! Cannot use weapons while riding the Elk.",
   "adv": "",
-  "items": [
-   {
-    "name": "Elk",
-    "img": "images/items/elk.png"
-   }
-  ]
+  "items": []
  },
  {
   "name": "Silas",
@@ -1790,8 +1785,20 @@
   "adv": "",
   "items": [
    {
-    "name": "Noctium Gear",
-    "img": ""
+    "name": "Noctium Blade I",
+    "img": "images/items/noctium-blade-1.png"
+   },
+   {
+    "name": "Noctium Blade II",
+    "img": "images/items/noctium-blade-2.png"
+   },
+   {
+    "name": "Noctium Blade III",
+    "img": "images/items/noctium-blade-3.png"
+   },
+   {
+    "name": "Noctium Blade IV",
+    "img": "images/items/noctium-blade-4.png"
    }
   ]
  },
@@ -1911,6 +1918,14 @@
    {
     "name": "Shadow Coin",
     "img": "images/items/shadow-coin.png"
+   },
+   {
+    "name": "Mini Shield",
+    "img": "images/items/mini-shield.png"
+   },
+   {
+    "name": "Invisibility Potion",
+    "img": "images/items/invisibility-potion.png"
    }
   ]
  },
@@ -2038,8 +2053,16 @@
   "adv": "",
   "items": [
    {
-    "name": "Wizard Staff",
-    "img": "images/items/wizard-staff.png"
+    "name": "Wizard Staff I",
+    "img": "images/items/wizard-staff-1.png"
+   },
+   {
+    "name": "Wizard Staff II",
+    "img": "images/items/wizard-staff-2.png"
+   },
+   {
+    "name": "Wizard Staff III",
+    "img": "images/items/wizard-staff-3.png"
    },
    {
     "name": "Magic Wand",
