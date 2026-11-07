@@ -611,7 +611,7 @@
    },
    {
     "name": "Obsidian",
-    "img": ""
+    "img": "images/items/obsidian.png"
    },
    {
     "name": "Coral Blocks",
@@ -619,23 +619,23 @@
    },
    {
     "name": "Blastproof Ceramic",
-    "img": ""
+    "img": "images/items/blastproof-ceramic.png"
    },
    {
     "name": "TNT",
-    "img": ""
+    "img": "images/items/tnt.png"
    },
    {
     "name": "Siege TNT",
-    "img": ""
+    "img": "images/items/siege-tnt.png"
    },
    {
     "name": "Balloons",
-    "img": ""
+    "img": "images/items/balloons.png"
    },
    {
     "name": "Hair Dryer",
-    "img": ""
+    "img": "images/items/hair-dryer.png"
    },
    {
     "name": "Charge Shield",
@@ -647,15 +647,15 @@
    },
    {
     "name": "Rockets",
-    "img": ""
+    "img": "images/items/rockets.png"
    },
    {
     "name": "Knockback Fish",
-    "img": ""
+    "img": "images/items/knockback-fish.png"
    },
    {
     "name": "Telepearls",
-    "img": ""
+    "img": "images/items/telepearls.png"
    },
    {
     "name": "Soaked Warfists",
@@ -851,12 +851,44 @@
   "adv": "",
   "items": [
    {
-    "name": "Mech",
-    "img": "images/items/mech.png"
+    "name": "Wood Mech",
+    "img": "images/items/mech-wood.png"
    },
    {
-    "name": "Chainsaw",
-    "img": "images/items/chainsaw.png"
+    "name": "Iron Mech",
+    "img": "images/items/mech-iron.png"
+   },
+   {
+    "name": "Diamond Mech",
+    "img": "images/items/mech-diamond.png"
+   },
+   {
+    "name": "Emerald Mech",
+    "img": "images/items/mech-emerald.png"
+   },
+   {
+    "name": "Void Mech",
+    "img": "images/items/mech-void.png"
+   },
+   {
+    "name": "Wood Chainsaw",
+    "img": "images/items/chainsaw-wood.png"
+   },
+   {
+    "name": "Iron Chainsaw",
+    "img": "images/items/chainsaw-iron.png"
+   },
+   {
+    "name": "Diamond Chainsaw",
+    "img": "images/items/chainsaw-diamond.png"
+   },
+   {
+    "name": "Emerald Chainsaw",
+    "img": "images/items/chainsaw-emerald.png"
+   },
+   {
+    "name": "Void Chainsaw",
+    "img": "images/items/chainsaw-void.png"
    },
    {
     "name": "Tinker's Wrench",
@@ -938,7 +970,15 @@
   "adv": "",
   "items": [
    {
-    "name": "Jade Hammer",
+    "name": "Jade Hammer I",
+    "img": "images/items/jade-hammer.png"
+   },
+   {
+    "name": "Jade Hammer II",
+    "img": "images/items/jade-hammer.png"
+   },
+   {
+    "name": "Jade Hammer III",
     "img": "images/items/jade-hammer.png"
    }
   ]
