@@ -130,7 +130,8 @@
     "note": "Tier 3 Shield upgrade",
     "img": "images/abilities/ability-template.png",
     "desc": "Gain 30 shield for 6 seconds. The shield then explodes in a 7 block radius, dealing damage based on how much shield you have. The explosion has 100% armor penetration.",
-    "cd": 25
+    "cd": 25,
+    "nodps": true
    },
    {
     "name": "Arctic Slam",
@@ -138,7 +139,8 @@
     "img": "images/abilities/ability-template.png",
     "desc": "Hits 3 times over 2 seconds for 40, then 30, then 20 damage (90 in total). Each hit has 10% armor penetration. Reaches a 20 block radius, 9 blocks wide from end to end and 3 blocks tall. Damages and breaks blocks depending on their type, and launches enemies 2 blocks into the air.",
     "cd": 25,
-    "dmg": 90
+    "dmg": 90,
+    "nodps": true
    }
   ],
   "passives": [
@@ -288,17 +290,33 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Throw cluster bombs at your enemies and watch them go flying! Blast off with your Rocket Boost ability.",
-  "adv": "",
+  "adv": "Agni's kit is built around fire and explosives. Fire deals 3 damage per tick for 3 ticks, 9 damage in total.\nRocket Boost launches you into the air and burns enemies it hits. Cluster Bombs are thrown at enemies and burst into smaller fire bombs that spread out and explode. Throwing a Cluster Bomb takes 2 seconds from start to finish.",
   "items": [
    {
     "name": "Cluster Bomb",
-    "img": "images/items/cluster-bomb.png"
+    "img": "images/items/cluster-bomb.png",
+    "note": "Cost: 45 iron",
+    "desc": "You get a new Cluster Bomb every 35 seconds, holding up to 5, or you can buy one in the shop. The bomb deals 16-17 damage and applies Fire. It then drops 8 smaller fire bombs in a 25 block radius. Each one explodes in a 3x3 area, dealing 9 damage and applying Fire. Throwing it takes 2 seconds in total.",
+    "cd": 35,
+    "dmg": 16.5,
+    "dmgText": "16-17",
+    "nodps": true
    }
   ],
   "abilities": [
    {
     "name": "Rocket Boost",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Launches you up to 7 blocks into the air. Deals 12 damage to enemies and applies Fire (3 damage per tick, 3 ticks).",
+    "cd": 13,
+    "dmg": 12,
+    "nodps": true
+   }
+  ],
+  "skins": [
+   {
+    "name": "Spirit Agni",
+    "img": "images/skins/agni-spirit.webp"
    }
   ]
  },
