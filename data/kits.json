@@ -33,6 +33,12 @@
     "name": "Hive Upgrade 3",
     "img": "images/items/hive-upgrade-3.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Place Hive",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -53,6 +59,13 @@
     "name": "Frost Crystal",
     "img": "images/items/frost-crystal.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Open Hammer Upgrades",
+    "note": "Only while holding the Hammer",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -69,7 +82,8 @@
     "name": "Spirit Butterfly",
     "img": "images/items/spirit-butterfly.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Agni",
@@ -84,6 +98,12 @@
    {
     "name": "Cluster Bomb",
     "img": "images/items/cluster-bomb.png"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Rocket Boost",
+    "img": "images/abilities/ability-template.png"
    }
   ]
  },
@@ -129,6 +149,23 @@
     "name": "Big Shield",
     "img": "images/items/big-shield.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Add Thorns",
+    "note": "Only while holding the Flask",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Add Mushroom",
+    "note": "Only while holding the Flask",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Add Flowers",
+    "note": "Only while holding the Flask",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -140,7 +177,17 @@
   "hp": "",
   "desc": "The Spider Queen uses web bridges to traverse the map and can summon spiderlings from her webs to attack enemies. Enemies are slowed if they run into her webs.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Spider Summon",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Web Bridge",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Archer",
@@ -160,7 +207,8 @@
     "name": "Tactical Headhunter",
     "img": "images/items/tactical-headhunter.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Ares",
@@ -176,7 +224,8 @@
     "name": "Spear",
     "img": "images/items/spear.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Axolotl Amy",
@@ -204,7 +253,8 @@
     "name": "Health Regen Axolotl",
     "img": "images/items/health-regen-axolotl.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Baker",
@@ -232,7 +282,8 @@
     "name": "Knockback Baguette",
     "img": "images/items/knockback-baguette.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Barbarian",
@@ -248,7 +299,8 @@
     "name": "Rageblade",
     "img": "images/items/rageblade.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Beekeeper Beatrix",
@@ -272,7 +324,8 @@
     "name": "Bee Net",
     "img": "images/items/bee-net.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Bekzat",
@@ -296,6 +349,16 @@
     "name": "Featherlight Bow",
     "img": "images/items/featherlight-bow.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Summon Falcon",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Recall Falcon",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -307,7 +370,17 @@
   "hp": "",
   "desc": "Get assigned bounties for killing certain players in the match. Completing a bounty rewards a random amount of resources.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Hunting Time",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Reroll",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Builder",
@@ -327,7 +400,8 @@
     "name": "Bridge Printer Block",
     "img": "images/items/bridge-printer-block.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Caitlyn",
@@ -338,7 +412,13 @@
   "hp": "",
   "desc": "Fulfill assassination contracts to empower your attacks with a deadly decay.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Open Contracts",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Cobalt",
@@ -349,7 +429,8 @@
   "hp": "",
   "desc": "Every time you take damage you have a chance of dropping a battery on the ground. Once the battery activates you can pick it up for a small shield. After collecting 3 batteries you will overload, gaining movement speed and damage!",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": []
  },
  {
   "name": "Cogsworth",
@@ -368,6 +449,12 @@
    {
     "name": "Emmy-Z2",
     "img": "images/items/emmy-z2.png"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Overclock",
+    "img": "images/abilities/ability-template.png"
    }
   ]
  },
@@ -393,7 +480,8 @@
     "name": "Fire Banner",
     "img": "images/items/fire-banner.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Crocowolf",
@@ -404,7 +492,13 @@
   "hp": "",
   "desc": "Being in the vicinity of damage dealt builds bloodlust. Activate Beast Form to temporarily give you enhanced damage, knockback, and movement speed. Dealing damage to non-player entities builds more bloodlust. When your bed breaks you will be given full bloodlust.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Beast Form Activate/Deactivate",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Crypt",
@@ -424,6 +518,24 @@
     "name": "Gravestone",
     "img": "images/items/gravestone.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Recall Skeletons",
+    "note": "Only while holding the Necromancer Staff",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Set Target",
+    "note": "Only while holding the Necromancer Staff",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Swap Skeleton Mode",
+    "note": "Only while holding the Necromancer Staff",
+    "desc": "Switch between Ranged and Fighter Skeletons.",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -440,6 +552,18 @@
     "name": "Drone",
     "img": "images/items/drone.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Speed Boost",
+    "note": "Only while holding the Drone",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "TNT Drop",
+    "note": "Only while holding the Drone",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -451,7 +575,13 @@
   "hp": "",
   "desc": "Charge up explosive comets to rain destruction on your enemy's base. Collect alchemy crystals to unlock even stronger abilities!",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Charge Explosive Comet",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Dino Tamer Dom",
@@ -466,6 +596,13 @@
    {
     "name": "Dino",
     "img": "images/items/dino.png"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Charge",
+    "note": "Only while on the dino",
+    "img": "images/abilities/ability-template.png"
    }
   ]
  },
@@ -483,6 +620,13 @@
     "name": "Drill",
     "img": "images/items/drill.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Swap Drills",
+    "note": "Only while on the Tablet",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -494,7 +638,8 @@
   "hp": "",
   "desc": "Collect tree orbs around the map to increase size and max HP. Cannot buy armor.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": []
  },
  {
   "name": "Eldric",
@@ -510,7 +655,8 @@
     "name": "Warlock Staff",
     "img": "images/items/warlock-staff.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Elektra",
@@ -521,7 +667,13 @@
   "hp": "",
   "desc": "Dash through players to deal electric damage! Hold up to two stacks of dashes and regain all stacks if you kill an enemy with your dash.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Electric Dash",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Ember",
@@ -537,7 +689,8 @@
     "name": "Infernal Saber",
     "img": "images/items/infernal-saber.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Evelynn",
@@ -548,7 +701,8 @@
   "hp": "",
   "desc": "Damage enemies to attract nearby spirits. Consume spirits to instantly teleport and gain an attack buff for a short duration.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": []
  },
  {
   "name": "Farmer Cletus",
@@ -572,7 +726,8 @@
     "name": "Pumpkin Seeds",
     "img": "images/items/pumpkin-seeds.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Fisherman",
@@ -664,7 +819,8 @@
     "name": "Soggy Deathbloom",
     "img": "images/items/soggy-deathbloom.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Flora",
@@ -680,6 +836,12 @@
     "name": "Beehive Grenade",
     "img": "images/items/beehive-grenade.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Glide",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -691,7 +853,17 @@
   "hp": "",
   "desc": "Summon cards to attack players! Deal damage to enhance your cards with different effects.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Card Throw",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "See Current Upgrades",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Freiya",
@@ -706,6 +878,12 @@
    {
     "name": "Ice Sword",
     "img": "images/items/ice-sword.png"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Frost Explosion",
+    "img": "images/abilities/ability-template.png"
    }
   ]
  },
@@ -723,7 +901,8 @@
     "name": "Frosted Snowball",
     "img": "images/items/frosted-snowball.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Gingerbread Man",
@@ -739,7 +918,8 @@
     "name": "Gumdrop Bounce Pad",
     "img": "images/items/gumdrop-bounce-pad.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Gompy",
@@ -759,7 +939,8 @@
     "name": "Ghost",
     "img": "images/items/ghost.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Gregory",
@@ -783,7 +964,8 @@
     "name": "Giant Gargoyle Statue",
     "img": "images/items/gargoyle-statue-giant.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Grim Reaper",
@@ -794,7 +976,8 @@
   "hp": "",
   "desc": "Consuming enemy souls grants health regen, movespeed and invulnerability for 2.5s. Combat is disabled while consuming.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": []
  },
  {
   "name": "Grove",
@@ -818,6 +1001,12 @@
     "name": "Tearbloom Seed",
     "img": "images/items/tearbloom-seed.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Spirit Transfer Start/Stop",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -829,7 +1018,8 @@
   "hp": "",
   "desc": "Activate your Execute ability to defeat a nearby enemy with low health! Hannah's base health is reduced by 10%.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": []
  },
  {
   "name": "Hephaestus",
@@ -885,6 +1075,25 @@
     "name": "Tinker's Wrench",
     "img": "images/items/tinker-s-wrench.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Summon Talos Mech",
+    "note": "Only when out of the mech",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Self-Repair",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Self-Destruct",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Whirling Death",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -901,7 +1110,8 @@
     "name": "Spirit Bridge",
     "img": "images/items/spirit-bridge.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Infernal Shielder",
@@ -917,6 +1127,13 @@
     "name": "Infernal Shield",
     "img": "images/items/infernal-shield.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Leap",
+    "note": "Only while holding the Infernal Shield",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -928,7 +1145,8 @@
   "hp": "",
   "desc": "Upgrade her shield by purchasing better swords. Each upgraded shield will block more damage before breaking. The final upgrade, the Emerald Shield, will block all damage from the first hit. Shields reactivate after 30 [sic] seconds.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": []
  },
  {
   "name": "Jack",
@@ -948,7 +1166,8 @@
     "name": "Fire Match",
     "img": "images/items/fire-match.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Jade",
@@ -972,7 +1191,8 @@
     "name": "Jade Hammer III",
     "img": "images/items/jade-hammer.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Kaida",
@@ -1000,6 +1220,16 @@
     "name": "Summoner Claw Tier IV (Emerald)",
     "img": "images/items/summoner-claw-4.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Summon",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Finish Summon",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -1011,7 +1241,13 @@
   "hp": "",
   "desc": "A fearsome warrior with a fiery punch!",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Dragon Punch",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Krystal",
@@ -1022,7 +1258,18 @@
   "hp": "",
   "desc": "Keep moving (especially on frozen blocks!) to increase your momentum and movement speed. At high momentum, trigger jumps to dodge.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Freeze",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Spin & Dodge",
+    "note": "Only at high speeds",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Lani",
@@ -1038,7 +1285,8 @@
     "name": "Scepter of Light",
     "img": "images/items/scepter-of-light.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Lassy",
@@ -1054,7 +1302,8 @@
     "name": "Lasso",
     "img": "images/items/lasso.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Lian",
@@ -1065,7 +1314,17 @@
   "hp": "",
   "desc": "A mysterious warrior gifted by the dragon. Control swords to fight your enemy",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Dragon Sword",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Dragon Sword Ultimate",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Lucía",
@@ -1085,7 +1344,8 @@
     "name": "Candy",
     "img": "images/items/candy.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Lumen",
@@ -1101,7 +1361,8 @@
     "name": "Light Sword",
     "img": "images/items/light-sword.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Lyla",
@@ -1125,7 +1386,8 @@
     "name": "Floral Bow",
     "img": "images/items/floral-bow.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Marcel",
@@ -1141,7 +1403,8 @@
     "name": "Defense Scanner",
     "img": "images/items/defense-scanner.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Marina",
@@ -1157,6 +1420,12 @@
     "name": "Jellyfish",
     "img": "images/items/jellyfish.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Electrify Jellyfish",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -1168,7 +1437,13 @@
   "hp": "",
   "desc": "Defy death and hop around as a skull after taking mortal damage. Survive long enough in this form and you will revive! Use your ability to create poison clouds that damage and slow enemies (this ability also triggers while in skull form).",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Toxic Escape",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Martin",
@@ -1179,7 +1454,13 @@
   "hp": "",
   "desc": "Absorb life essence from nearby enemies and convert it to max hp! Attack is slower but passively reflects damage for melee hits to the enemy.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Wild Growth",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Melody",
@@ -1195,7 +1476,8 @@
     "name": "Guitar",
     "img": "images/items/guitar.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Merchant Marco",
@@ -1206,7 +1488,13 @@
   "hp": "",
   "desc": "Get resources back on certain item shop purchases! This refund is randomized each game!",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Reroll",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Metal Detector",
@@ -1222,7 +1510,8 @@
     "name": "Metal Detector",
     "img": "images/items/metal-detector.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Milo",
@@ -1233,7 +1522,13 @@
   "hp": "",
   "desc": "Disguise as a block and pickpocket from other players!",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Block Disguise",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Miner",
@@ -1244,7 +1539,8 @@
   "hp": "",
   "desc": "Killing enemies turns them into stone. The Miner can break down the stone for valuables[sic]'’ resources (scaled by the price of enemy's armor + sword). Unable to purchase Axes.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": []
  },
  {
   "name": "Nahla",
@@ -1267,6 +1563,16 @@
    {
     "name": "Oasis Vessel III",
     "img": "images/items/oasis-vessel-3.png"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Oasis Heal Veil",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Oasis Swap Staff",
+    "img": "images/abilities/ability-template.png"
    }
   ]
  },
@@ -1291,6 +1597,16 @@
    {
     "name": "Life Bow",
     "img": "images/items/life-bow.png"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Consume Life Force",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Enable/Disable Empowered Attacks",
+    "img": "images/abilities/ability-template.png"
    }
   ]
  },
@@ -1324,6 +1640,16 @@
     "name": "Slime Flute",
     "img": "images/items/slime-flute.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Cycle Slimes",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Direct/Recall Slime",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -1348,6 +1674,17 @@
     "name": "Mending Canopy III",
     "img": "images/items/mending-canopy-3.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Charge Staff",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Overcharge Staff",
+    "note": "Only on the last upgrade",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -1359,7 +1696,13 @@
   "hp": "",
   "desc": "Trigger the darkness of Midnight to deal ramping increased damage and armor pen.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Midnight",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Pirate Davey",
@@ -1375,7 +1718,8 @@
     "name": "Cannon",
     "img": "images/items/cannon.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Pyro",
@@ -1395,6 +1739,13 @@
     "name": "Ember",
     "img": "images/items/ember.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Open Flamethrower Upgrades",
+    "note": "Only while holding the Flamethrower",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -1406,7 +1757,13 @@
   "hp": "",
   "desc": "Use your Berserker Rage ability to increase break speed, reduce incoming damage and prevent incoming knockback to rush in on an enemy's bed defense.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Berserker's Rage",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Ramil",
@@ -1417,7 +1774,17 @@
   "hp": "",
   "desc": "Create sandstorms to control the battlefield, move enemies, and protect allies.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Sandstorm",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Moving Sandstorm",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Raven",
@@ -1432,6 +1799,16 @@
    {
     "name": "Ravens",
     "img": "images/items/ravens.png"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Homing Ravens",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Raven Storm",
+    "img": "images/abilities/ability-template.png"
    }
   ]
  },
@@ -1453,7 +1830,8 @@
     "name": "Santa Siege",
     "img": "images/items/santa-strafe.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Sheep Herder",
@@ -1464,7 +1842,8 @@
   "hp": "",
   "desc": "Find and tame wild sheep around the map. Each tamed sheep amplifies your damage.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": []
  },
  {
   "name": "Sheila",
@@ -1475,7 +1854,8 @@
   "hp": "",
   "desc": "Start the game with an egg on your shoulder. Get kills to hatch and evolve your Seahorse, increasing its damage and unlocking passive abilities.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": []
  },
  {
   "name": "Sigrid",
@@ -1486,7 +1866,23 @@
   "hp": "",
   "desc": "Summon your mount, charge at your enemies and send them flying! Cannot use weapons while riding the Elk.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Elk Summon",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Dismount Elk",
+    "note": "Only while on the Elk",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Charge Attack",
+    "note": "Only while on the Elk",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Silas",
@@ -1497,7 +1893,17 @@
   "hp": "",
   "desc": "The leader of the citizens' rebellion, who encourages and buffs his allies with healing and damage auras!",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Swap Aura",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Press the Attack!",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Skoll",
@@ -1508,7 +1914,18 @@
   "hp": "",
   "desc": "Summon your void wolf companion Fenrir to mark an enemy. Deal extra damage to your marked target, gain a speed boost when following their trail, and see them through walls. You can detonate the mark to end the effect and deal damage.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Fenrir",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Hunt's End",
+    "note": "Only while Fenrir is on a target",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Smoke",
@@ -1528,7 +1945,8 @@
     "name": "Smoke Block",
     "img": "images/items/smoke-block.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Sophia",
@@ -1552,7 +1970,8 @@
     "name": "Frost Staff 3",
     "img": "images/items/frost-staff-3.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Spirit Catcher",
@@ -1567,6 +1986,13 @@
    {
     "name": "Spirit Jar",
     "img": "images/items/spirit-jar.png"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Recall Spirits",
+    "note": "Only when a spirit is placed",
+    "img": "images/abilities/ability-template.png"
    }
   ]
  },
@@ -1588,7 +2014,8 @@
     "name": "Crit Star",
     "img": "images/items/crit-star.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Styx",
@@ -1604,7 +2031,8 @@
     "name": "Confluence Portal",
     "img": "images/items/confluence-portal.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Taliyah",
@@ -1624,7 +2052,8 @@
     "name": "Chicken",
     "img": "images/items/chicken.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Terra",
@@ -1635,7 +2064,17 @@
   "hp": "",
   "desc": "Stomp the ground to gather protective blocks, then kick them at your enemies. Each successful hit permanently increases kick damage!",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Block Stomp",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Block Kick",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Trapper",
@@ -1659,6 +2098,20 @@
     "name": "Explosive Trap",
     "img": "images/items/explosive-trap.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Throw Trap",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Switch Trap",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Detonate Traps",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -1670,7 +2123,13 @@
   "hp": "",
   "desc": "Ascend into an angelic form and switch freely between Light and Void. When you melee attack, Light form grants shield for you and allies, and Void form inflicts max health decay on your target.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Inversion",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Triton",
@@ -1686,7 +2145,8 @@
     "name": "Trident",
     "img": "images/items/trident.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Trixie",
@@ -1697,7 +2157,18 @@
   "hp": "",
   "desc": "Warp around and confuse your enemies with evasive combat. Every time you use Rift Warp you gain a buff that allows you to reduce Rift Warp's cooldown with melee attacks. You can also use Rift Rewind to teleport back to your last warp point.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Rift Warp",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Rift Rewind",
+    "note": "Only after using Rift Warp",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Uma",
@@ -1717,6 +2188,20 @@
     "name": "Spirit Staff",
     "img": "images/items/spirit-staff.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Change Spirit Affinity",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Summon Attack Spirit",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Summon Heal Spirit",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -1732,6 +2217,16 @@
    {
     "name": "Teleport Hat",
     "img": "images/items/teleport-hat.png"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Teleport",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Peek",
+    "img": "images/abilities/ability-template.png"
    }
   ]
  },
@@ -1761,7 +2256,8 @@
     "name": "Emerald Chakram",
     "img": "images/items/emerald-chakram.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Vanessa",
@@ -1772,7 +2268,8 @@
   "hp": "",
   "desc": "Super charge your bow to perform a triple shot.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": []
  },
  {
   "name": "Void Knight",
@@ -1800,6 +2297,17 @@
     "name": "Noctium Blade IV",
     "img": "images/items/noctium-blade-4.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Consume",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Void Ascension",
+    "note": "Only on the final upgrade",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -1816,7 +2324,8 @@
     "name": "Void Axe",
     "img": "images/items/void-axe.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Vulcan",
@@ -1836,6 +2345,18 @@
     "name": "Camera Turret",
     "img": "images/items/camera-turret.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Artillery Mark",
+    "note": "Only while holding the Tablet",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Turret Link",
+    "note": "Only while holding the Tablet",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -1847,7 +2368,8 @@
   "hp": "",
   "desc": "Imprison the souls of recently killed enemies to increase their respawn time. For each actively imprisoned soul you gain Break Speed and Shield Regeneration.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": []
  },
  {
   "name": "Warrior",
@@ -1862,6 +2384,12 @@
    {
     "name": "Warrior Armor",
     "img": "images/items/warrior-armor.png"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Warrior's Strike",
+    "img": "images/abilities/ability-template.png"
    }
   ]
  },
@@ -1879,7 +2407,8 @@
     "name": "Mage Spellbook",
     "img": "images/items/mage-spellbook.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Whisper",
@@ -1894,6 +2423,23 @@
    {
     "name": "Spirit Owl",
     "img": "images/items/spirit-owl.png"
+   }
+  ],
+  "abilities": [
+   {
+    "name": "Heal + Speed",
+    "note": "Only while using the owl on another player",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Deactivate",
+    "note": "Only while using the owl on another player",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Fly",
+    "note": "Only while using the owl on another player",
+    "img": "images/abilities/ability-template.png"
    }
   ]
  },
@@ -1927,6 +2473,12 @@
     "name": "Invisibility Potion",
     "img": "images/items/invisibility-potion.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Open/Close Black Market",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -1938,7 +2490,13 @@
   "hp": "",
   "desc": "Transform into Dragon Form, unlocking a decaying dragon breath and the ability to fly. Items can't be used while in dragon form and damage scales with the highest tier sword obtained.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Dragon Form",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Yamini",
@@ -1949,7 +2507,13 @@
   "hp": "",
   "desc": "Climb and pounce with feline dexterity! Fall damage is reduced since you always land on your feet.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Pouncing",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Yeti",
@@ -1960,7 +2524,13 @@
   "hp": "",
   "desc": "Let out a Glacier Roar to temporarily freeze nearby blocks. Frozen blocks can be destroyed extremely fast.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Glacial Roar",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  },
  {
   "name": "Yuzi",
@@ -1992,7 +2562,8 @@
     "name": "Emerald Dao",
     "img": "images/items/emerald-dao.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Zarrah",
@@ -2024,6 +2595,12 @@
     "name": "Emerald Cutlass",
     "img": "images/items/emerald-cutlass.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Fire!",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -2040,7 +2617,8 @@
     "name": "Satellite Dish",
     "img": "images/items/satellite-dish.png"
    }
-  ]
+  ],
+  "abilities": []
  },
  {
   "name": "Zeno",
@@ -2068,6 +2646,17 @@
     "name": "Magic Wand",
     "img": "images/items/magic-wand.png"
    }
+  ],
+  "abilities": [
+   {
+    "name": "Ability Swap",
+    "desc": "Switch between Normal Lightning and Lightning Storm.",
+    "img": "images/abilities/ability-template.png"
+   },
+   {
+    "name": "Shockwave",
+    "img": "images/abilities/ability-template.png"
+   }
   ]
  },
  {
@@ -2079,7 +2668,8 @@
   "hp": "",
   "desc": "Killing enemies gives you a stack of wind, decaying a short while after. Each stack of wind gives you more speed and adds a second wind strike to your attack. At 5 stacks you can triple jump!",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": []
  },
  {
   "name": "Zola",
@@ -2090,6 +2680,12 @@
   "hp": "",
   "desc": "Connect enemies with soul links! Damage dealt to linked enemies incurs bonus damage to any other linked enemies. Allies can also be linked, allowing you to take damage in their place.",
   "adv": "",
-  "items": []
+  "items": [],
+  "abilities": [
+   {
+    "name": "Soul Link",
+    "img": "images/abilities/ability-template.png"
+   }
+  ]
  }
 ]
