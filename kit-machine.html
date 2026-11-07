@@ -50,8 +50,8 @@ button:focus-visible,#q:focus-visible{outline:3px solid var(--accent);outline-of
 .cap{text-align:center;margin-top:8px;color:var(--muted);min-height:1.5em}
 .picwrap{position:relative}
 .adet{margin-bottom:8px}
-.dock{display:flex;flex-wrap:wrap;gap:12px}
-.slot{width:92px;background:none;border:0;padding:0;text-align:center;font-size:.8rem;line-height:1.15;color:var(--muted)}
+.dock{display:flex;flex-wrap:wrap;gap:14px 12px;align-items:flex-start}
+.slot{align-self:flex-start;display:block;width:92px;background:none;border:0;padding:0;text-align:center;font-size:.8rem;line-height:1.15;color:var(--muted)}
 .slot .aico{width:92px;height:92px;border:2px solid transparent}
 .slot.on .aico{border-color:#fff;background:rgba(255,255,255,.16)}
 .slot.on{color:#fff}
@@ -67,17 +67,18 @@ button:focus-visible,#q:focus-visible{outline:3px solid var(--accent);outline-of
 .wbtn.on{background:#fff;color:#12082e}
 .wbtn img{width:30px;height:30px;object-fit:contain}
 .wbtn i{position:absolute;right:-8px;bottom:-8px;min-width:22px;height:22px;border-radius:99px;background:var(--accent);color:#12082e;font-style:normal;font-size:.8rem;line-height:22px;text-align:center;padding:0 5px}
-.skpanel{position:absolute;top:66px;left:10px;right:10px;z-index:4;background:rgba(8,3,26,.97);border:3px solid #fff;border-radius:16px;padding:12px;max-height:300px;overflow:auto}
+.skpanel{position:absolute;top:66px;left:10px;right:10px;z-index:4;background:rgba(8,3,26,.97);border:3px solid #fff;border-radius:16px;padding:16px 16px 20px;max-height:320px;overflow:auto}
 .skpanel .t{color:var(--muted);font-size:.9rem;margin-bottom:8px}
-.skgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.skgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(84px,1fr));gap:12px 10px;align-items:start}
 .skgrid .sk{font-size:.7rem;line-height:1.1}
 .btn{background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:8px 16px}
 .btn:hover{border-color:#fff}.btn.on{background:#fff;color:#12082e}
 .row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
 #skinbox{display:grid;grid-template-columns:repeat(auto-fill,minmax(76px,1fr));gap:10px;margin-top:12px}
-.sk{background:none;border:0;padding:0;text-align:center;font-size:.8rem;color:var(--muted)}
-.sk .th{width:100%;height:auto;aspect-ratio:1;display:block}
-.sk.on .th{border-color:var(--accent);box-shadow:0 0 0 3px var(--accent)}.sk.on{color:#fff}
+.sk{background:none;border:0;padding:0;text-align:center;font-size:.8rem;color:var(--muted);align-self:start;display:block}
+.sk .lb{display:block;margin-top:8px;padding:0 2px;overflow-wrap:break-word;hyphens:none;line-height:1.2}
+.sk .th{width:100%;height:auto;aspect-ratio:1;display:block;box-sizing:border-box;border:3px solid #fff}
+.sk.on .th{border-color:var(--accent)}.sk.on{color:#fff}
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:12px;margin:20px 0 4px}
 .stat{background:var(--soft);border-radius:14px;padding:12px 14px}
 .stat>span{display:block;color:var(--muted);font-size:.85rem;margin-bottom:2px}
@@ -363,7 +364,7 @@ function calcUpdate(){
 document.addEventListener('input',function(e){ if(e.target&&e.target.matches&&e.target.matches('[data-calc]')) calcUpdate(); });
 function abCard(a,label){
   var v = a.nodps ? null : dps(a);
-  return '<div class="ab"><div class="aico">'+pic(a,a.name)+'</div><div><span class="tag">'+label+'</span><span class="nm">'+esc(a.name)+'</span>'+(a.note?costHtml(a.note):'')+(a.desc?'<p style="margin:6px 0 0;white-space:pre-line">'+esc(a.desc)+'</p>':'')+(a.cd==null&&a.dmg==null?'':'<div class="nums">'+
+  return '<div class="ab"><div class="aico">'+pic(a,a.name)+'</div><div><span class="nm">'+esc(a.name)+'</span>'+(a.note?costHtml(a.note):'')+(a.desc?'<p style="margin:6px 0 0;white-space:pre-line">'+esc(a.desc)+'</p>':'')+(a.cd==null&&a.dmg==null?'':'<div class="nums">'+
     '<span>Cooldown <b>'+(a.cd==null?'—':a.cd>0?a.cd+'s':'None')+'</b></span><span>Damage <b>'+(a.dmg==null?'—':a.dmgText?a.dmgText:a.dmg>0?a.dmg+((a.hits||1)>1?' × '+a.hits:''):'None')+'</b></span>'+(v===null?'':'<span>DPS <b>'+v.toFixed(1)+'</b></span>')+'</div>')+'</div></div>';
 }
 function renderDetail(){
@@ -377,8 +378,8 @@ function renderDetail(){
   var h = '<div class="dgrid"><div class="dleft"><div class="picwrap skwrap"><div class="pic">'+pic(cur&&cur.img ? cur : k,k.name)+'</div>';
   if(sk.length){
     h += '<button class="wbtn'+(S.skins?' on':'')+'" data-act="skins" aria-expanded="'+S.skins+'" aria-label="Skins ('+sk.length+')">'+wi+'<i>'+sk.length+'</i></button>';
-    if(S.skins) h += '<div class="skpanel"><div class="t">Skins</div><div class="skgrid"><button class="sk'+(S.skin<0?' on':'')+'" data-skin="-1" title="Default"><div class="th">'+pic(k,k.name)+'</div>Default</button>'+
-      sk.map(function(s,i){return '<button class="sk'+(S.skin===i?' on':'')+'" data-skin="'+i+'" title="'+esc(s.name)+'"><div class="th">'+pic(s,s.name||k.name)+'</div>'+esc(s.name)+'</button>';}).join("")+'</div></div>';
+    if(S.skins) h += '<div class="skpanel"><div class="t">Skins</div><div class="skgrid"><button class="sk'+(S.skin<0?' on':'')+'" data-skin="-1" title="Default"><div class="th">'+pic(k,k.name)+'</div><span class="lb">Default</span></button>'+
+      sk.map(function(s,i){return '<button class="sk'+(S.skin===i?' on':'')+'" data-skin="'+i+'" title="'+esc(s.name)+'"><div class="th">'+pic(s,s.name||k.name)+'</div><span class="lb">'+esc(s.name)+'</span></button>';}).join("")+'</div></div>';
   }
   h += '</div><div class="cap">'+esc(cur ? cur.name : "Default")+'</div>';
   h += '<div class="stats">'+
@@ -408,8 +409,8 @@ function renderDetail(){
           return '<button class="slot'+(pick.key===key?' on':'')+'" data-pick="'+key+'"><div class="aico">'+pic(a,a.name)+'</div><span>'+esc(a.name)+'</span></button>';
         }).join("")+'</div>' : '';
       };
-      h += '<div class="adet">'+abCard(pick.a,pick.label)+'</div>'+mk("Special abilities","a",abs,10)+mk("Special items","i",its,abs.length?22:10)+
-        (any ? '<p class="muted" style="margin-top:16px">Select one to see its details. DPS = damage × hits ÷ cooldown.</p>' : '<p class="muted" style="margin-top:16px">Select one to see its details.</p>');
+      h += mk("Special abilities","a",abs,0)+mk("Special items","i",its,abs.length?22:0)+'<div class="adet" style="margin-top:20px">'+abCard(pick.a,pick.label)+'</div>'+
+        (any ? '<p class="muted" style="margin-top:16px">DPS = damage × hits ÷ cooldown.</p>' : '');
     }
   }else{
     var f = FUSIONS.filter(function(x){return x.a===k.name||x.b===k.name;});
@@ -458,7 +459,7 @@ document.addEventListener("click",function(e){
   }
   else if("pick" in ds){ S.pick = ds.pick; renderDetail(); }
   else if("tab" in ds){ S.tab = ds.tab; renderDetail(); }
-  else if("skin" in ds){ S.skin = +ds.skin; renderDetail(); }
+  else if("skin" in ds){ S.skin = +ds.skin; S.skins = false; renderDetail(); }
   else if(ds.act==="skins"){ S.skins = !S.skins; renderDetail(); }
   else if(ds.act==="close"){ history.replaceState(null,"",location.pathname+location.search); apply(); window.scrollTo(0,0); }
 });
