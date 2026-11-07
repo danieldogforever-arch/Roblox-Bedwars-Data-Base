@@ -90,7 +90,9 @@
     "text": "Use your scarabs as a shield: they soak up hits while you fight."
    }
   ],
-  "skins": []
+  "skins": [],
+  "bal": "bal",
+  "balWhy": "The hives are easily broken and a bit expensive, but it provides good value if you know how to play it."
  },
  {
   "name": "Adetunde",
@@ -192,7 +194,9 @@
     "name": "Snow Owl Skin",
     "img": "images/skins/adetunde-snow-owl.webp"
    }
-  ]
+  ],
+  "bal": "bal",
+  "balWhy": "You save a ton of resources that would normally go into your sword just by upgrading the hammer, and how hard it is to upgrade is part of the cost."
  },
  {
   "name": "Aery",
@@ -277,7 +281,9 @@
     "name": "Heartseeker Skin",
     "img": "images/skins/aery-heartseeker.webp"
    }
-  ]
+  ],
+  "bal": "bal",
+  "balWhy": "Many people use it, and even though it may be slightly outclassed, it still has a use because it works great with support."
  },
  {
   "name": "Agni",
@@ -332,7 +338,9 @@
     "title": "Rocket Boost tricks",
     "text": "Use Rocket Boost to save yourself from fall damage, or to deal extra damage to your enemy."
    }
-  ]
+  ],
+  "bal": "sup",
+  "balWhy": "It just doesn't do a lot of damage compared to similar kits that spawn an item every few seconds, and the Rocket Boost jump is pretty situational."
  },
  {
   "name": "Alchemist",
@@ -440,7 +448,9 @@
     "text": "Use a Shield potion before every fight, and have a Poison potion ready to throw. Prioritize keeping 1 Poison potion and 1 Shield potion on hand, and always keep crafting Heal potions and Shields."
    }
   ],
-  "skins": []
+  "skins": [],
+  "bal": "sop",
+  "balWhy": "Even though not many people use it, stunlocking people is not healthy game design. It might need a nerf in that area, with buffs elsewhere to balance it out."
  },
  {
   "name": "Arachne",
@@ -503,7 +513,12 @@
     "text": "Use your spiders to soak up damage while you fight."
    }
   ],
-  "skins": []
+  "skins": [],
+  "bal": "sup",
+  "balWhy": "Nobody really notices or cares about the spiders leveling up, so that should be removed. Its damage should be improved overall, and it could get some armor penetration as a unique perk.",
+  "notes": [
+   "The webs make people get anti-cheated the second they touch them."
+  ]
  },
  {
   "name": "Archer",
@@ -603,7 +618,9 @@
     "title": "Save emeralds for the Crossbow",
     "text": "Save the emeralds you get from the middle and buy the Tactical Crossbow as fast as you can. Archer gets the biggest damage increase over a normal crossbow, so it gives you a lot of control."
    }
-  ]
+  ],
+  "bal": "adj",
+  "balWhy": "Its damage is worse than every special bow kit, including kits that aren't even in the Ranged class. It needs a unique mechanic instead of more damage, since the headshot gimmick is a bit outdated."
  },
  {
   "name": "Ares",
@@ -663,7 +680,9 @@
     "text": "Zapped cuts healing and shields by 40%, so aim at enemies who heal or shield for the best results."
    }
   ],
-  "skins": []
+  "skins": [],
+  "bal": "adj",
+  "balWhy": "It now gets outclassed by other kits, and it needs more armor penetration to make up for all the damage it lost through nerfs."
  },
  {
   "name": "Axolotl Amy",
@@ -755,7 +774,9 @@
     "name": "Victorious Nightmare Skin",
     "img": "images/skins/axolotl-amy-victorious-nightmare.webp"
    }
-  ]
+  ],
+  "bal": "adj",
+  "balWhy": "Some of the prices are outrageous for what the Axolotls do. The prices, and what each Axolotl does, might need some changes."
  },
  {
   "name": "Baker",
