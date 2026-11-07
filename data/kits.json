@@ -318,6 +318,20 @@
     "name": "Spirit Agni",
     "img": "images/skins/agni-spirit.webp"
    }
+  ],
+  "strategy": [
+   {
+    "title": "Save your iron",
+    "text": "Don't waste early-game iron on Cluster Bombs. Only buy them when you have plenty of iron left over."
+   },
+   {
+    "title": "When to throw them",
+    "text": "Use Cluster Bombs in group fights, and always use one when you have to fight someone one-on-one."
+   },
+   {
+    "title": "Rocket Boost tricks",
+    "text": "Use Rocket Boost to save yourself from fall damage, or to deal extra damage to your enemy."
+   }
   ]
  },
  {
@@ -331,58 +345,102 @@
   "diff": "extreme",
   "hp": "100",
   "desc": "Use flasks to brew various potions with foraged ingredients.",
-  "adv": "",
+  "adv": "Thorns, Mushrooms and Flowers spawn frequently around the map. You can pick up all of them, and drop them or store them in a chest. The same goes for the potions you make, but not the flasks.\nYou can buy Alchemist Flasks in the shop for 10 iron, with a max of 16. While holding a flask, add Thorns, Mushrooms and Flowers to brew a special potion:\n3 Mushrooms: Sleep Splash Potion\n3 Flowers: Heal Splash Potion\n1 Thorn + 2 Mushrooms: Poison Splash Potion\n2 Thorns + 1 Flower: Big Shield",
   "items": [
    {
     "name": "Alchemist Flask",
-    "img": "images/items/alchemist-flask.png"
+    "img": "images/items/alchemist-flask.png",
+    "note": "Cost: 10 iron",
+    "desc": "Buy up to 16 in the shop. While holding it, add Thorns, Mushrooms and Flowers to brew special potions. Flasks cannot be stored in a chest."
    },
    {
     "name": "Mushroom",
-    "img": "images/items/mushroom.png"
+    "img": "images/items/mushroom.png",
+    "desc": "Spawns frequently around the map. Used for Sleep and Poison potions. Can be picked up, dropped and stored in a chest."
    },
    {
     "name": "Thorn",
-    "img": "images/items/thorn.png"
+    "img": "images/items/thorn.png",
+    "desc": "Spawns frequently around the map. Used for Poison potions and Big Shields. Can be picked up, dropped and stored in a chest."
    },
    {
     "name": "Flower",
-    "img": "images/items/flower.png"
+    "img": "images/items/flower.png",
+    "desc": "Spawns frequently around the map. Used for Heal potions and Big Shields. Can be picked up, dropped and stored in a chest."
    },
    {
     "name": "Sleep Splash Potion",
-    "img": "images/items/sleep-splash-potion.png"
+    "img": "images/items/sleep-splash-potion.png",
+    "note": "Recipe: 3 Mushrooms",
+    "desc": "Stuns anyone hit, including you, for 2 seconds in a 3x3 block radius."
    },
    {
-    "name": "Heal Potion",
-    "img": "images/items/heal-potion.png"
+    "name": "Heal Splash Potion",
+    "img": "images/items/heal-potion.png",
+    "note": "Recipe: 3 Flowers",
+    "desc": "Heals 30 HP in a 5x5 block radius."
    },
    {
-    "name": "Poison Potion",
-    "img": "images/items/poison-potion.png"
+    "name": "Poison Splash Potion",
+    "img": "images/items/poison-potion.png",
+    "note": "Recipe: 1 Thorn + 2 Mushrooms",
+    "desc": "Deals 6 damage per tick for 10 ticks, with 80% armor penetration. Poison cannot kill: it leaves enemies on 1 HP at minimum.",
+    "cd": 0.525,
+    "dmg": 6
    },
    {
     "name": "Big Shield",
-    "img": "images/items/big-shield.png"
+    "img": "images/items/big-shield.png",
+    "note": "Recipe: 2 Thorns + 1 Flower",
+    "desc": "Gives you 30 shield."
    }
   ],
   "abilities": [
    {
     "name": "Add Thorns",
     "note": "Only while holding the Flask",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Adds a Thorn to the flask. Used in the Poison Splash Potion (1 Thorn) and Big Shield (2 Thorns) recipes."
    },
    {
     "name": "Add Mushroom",
     "note": "Only while holding the Flask",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Adds a Mushroom to the flask. Used in the Sleep Splash Potion (3 Mushrooms) and Poison Splash Potion (2 Mushrooms) recipes."
    },
    {
     "name": "Add Flowers",
     "note": "Only while holding the Flask",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Adds a Flower to the flask. Used in the Heal Splash Potion (3 Flowers) and Big Shield (1 Flower) recipes."
    }
-  ]
+  ],
+  "passives": [
+   {
+    "name": "Foraging",
+    "when": "Always",
+    "desc": "Thorns, Mushrooms and Flowers spawn frequently around the map. You can pick up, drop and store them in a chest."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Craft for your playstyle",
+    "text": "Choose which potions to craft depending on how you play."
+   },
+   {
+    "title": "Solo and offensive play",
+    "text": "Mainly craft Heal and Sleep potions, so you can stunlock enemies and keep yourself healthy."
+   },
+   {
+    "title": "Supporting your team",
+    "text": "Craft Big Shields and Heal potions for your teammates, and Sleep and Poison potions for yourself to help in fights."
+   },
+   {
+    "title": "Always be prepared",
+    "text": "Use a Shield potion before every fight, and have a Poison potion ready to throw. Prioritize keeping 1 Poison potion and 1 Shield potion on hand, and always keep crafting Heal potions and Shields."
+   }
+  ],
+  "skins": []
  },
  {
   "name": "Arachne",
