@@ -453,16 +453,52 @@
   "diff": "easy",
   "hp": "100",
   "desc": "The Spider Queen uses web bridges to traverse the map and can summon spiderlings from her webs to attack enemies. Enemies are slowed if they run into her webs.",
-  "adv": "",
+  "adv": "Arachne shoots webs that slow enemies down and double as a bridge only you and your Arachne teammates can use. Enemies who touch cobwebs are slowed by a lot, and the more cobwebs they touch, the slower they get.\nYou can summon spiders while you have webs placed. The number of spiders depends on your webs, up to a max of 4 (4 or more webs gives 4 spiders). Each spider spawns with 30 HP and deals 4 damage every 0.5 seconds. When a spider kills or assists on an enemy, its damage and HP go up, to a max of 80 HP and 15 damage.",
   "items": [],
   "abilities": [
    {
-    "name": "Spider Summon",
-    "img": "images/abilities/ability-template.png"
+    "name": "Aim Web Bridge",
+    "img": "images/abilities/ability-template.png",
+    "desc": "Shoots a web in any direction with a 17 block line radius. Enemies who touch the cobwebs are slowed by a lot, and the slow builds up the more cobwebs they touch. You can jump onto the cobwebs and use them as a bridge, but only you and other Arachne teammates can use it.",
+    "cd": 8
    },
    {
-    "name": "Web Bridge",
-    "img": "images/abilities/ability-template.png"
+    "name": "Spider Summon",
+    "note": "Only while webs are present",
+    "img": "images/abilities/ability-template.png",
+    "desc": "Summons spiders from your webs, up to 4 at a time (4 or more webs gives 4 spiders). Each spider spawns with 30 HP and deals 4 damage. A spider that kills or assists on an enemy gains damage and HP, up to 80 HP and 15 damage.",
+    "cd": 0.5,
+    "dmg": 4
+   }
+  ],
+  "passives": [
+   {
+    "name": "Sticky Webs",
+    "when": "When enemies touch cobwebs",
+    "desc": "Enemies are slowed by a lot, and the slow gets stronger the more cobwebs they touch."
+   },
+   {
+    "name": "Spider Growth",
+    "when": "When a spider kills or assists",
+    "desc": "The spider's damage and HP increase, up to a max of 80 HP and 15 damage. Spiders spawn with 30 HP and 4 damage."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Move fast and save iron",
+    "text": "Use Arachne for movement, and save a ton of iron you would normally spend on blocks."
+   },
+   {
+    "title": "Grab loot first",
+    "text": "On most maps you can use the ability right away and get to the middle for loot before anyone else, depending on the mode."
+   },
+   {
+    "title": "Slow your enemies",
+    "text": "The webs slow enemies down a lot, which gives you a big advantage in PvP."
+   },
+   {
+    "title": "Let spiders tank",
+    "text": "Use your spiders to soak up damage while you fight."
    }
   ]
  },
