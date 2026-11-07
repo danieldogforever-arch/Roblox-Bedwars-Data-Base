@@ -202,10 +202,80 @@
   },
   "diff": "hard",
   "hp": "90",
-  "desc": "Killing enemies adds to your collection of spirit butterflies. Each spirit butterfly amplifies sword & projectile damage. Aery's base health is reduced by 10%.",
-  "adv": "",
+  "desc": "Killing enemies adds to your collection of spirit butterflies. Each spirit butterfly amplifies sword and projectile damage. Aery's base health is reduced by 10%.",
+  "adv": "Aery spawns with 90 HP. You gain 2 butterflies for every kill, and none for assists. Each butterfly is one stack, and stacks increase your projectile damage by 80% of the butterfly's value.\nThe bonus slows down as you collect more: each new stack adds less damage than the last, and eventually each butterfly adds less than 1 damage. After killing an enemy, you have to wait 25 seconds before you can gain stacks from that same enemy again.\nWhen you die you lose around 30% of your stacks, a little more or less depending on how many you have.",
   "items": [],
-  "abilities": []
+  "abilities": [],
+  "calc": {
+   "title": "Stack calculator",
+   "label": "Butterfly stacks",
+   "unitIn": "stacks",
+   "unitOut": "damage",
+   "a": 2.0104,
+   "p": 0.7144,
+   "max": 60,
+   "start": 20,
+   "note": "Bonus damage from butterfly stacks. The listed values are exact; other numbers use the formula damage = 2.0104 × stacks^0.7144.",
+   "table": {
+    "2": 3.3,
+    "4": 5.41,
+    "6": 7.23,
+    "8": 8.88,
+    "10": 10.42,
+    "12": 11.87,
+    "14": 13.25,
+    "16": 14.57,
+    "18": 15.85,
+    "20": 17.09,
+    "22": 18.3
+   }
+  },
+  "passives": [
+   {
+    "name": "Butterfly Stacks",
+    "when": "On kill",
+    "desc": "Gain 2 butterflies for every kill. Assists give none. Each butterfly is one stack."
+   },
+   {
+    "name": "Butterfly Damage",
+    "when": "While you have stacks",
+    "desc": "Increases your projectile damage by 80% of the butterfly's value. Each extra stack adds less than the last, eventually under 1 damage per butterfly."
+   },
+   {
+    "name": "Same-Enemy Cooldown",
+    "when": "After a kill",
+    "desc": "You cannot gain stacks from the same enemy again for 25 seconds."
+   },
+   {
+    "name": "Stack Loss",
+    "when": "On death",
+    "desc": "You lose around 30% of your stacks, a little more or less depending on how many you have."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Get support early",
+    "text": "Aery needs help early in the game to build up stacks. Around 20 stacks is the sweet spot."
+   },
+   {
+    "title": "Don't ego fights",
+    "text": "Losing stacks hurts, so avoid fights you don't need to take."
+   },
+   {
+    "title": "Go ranged at 20 stacks",
+    "text": "Once you reach 20 stacks, switch to ranged weapons so you don't risk losing all your stacks late in the game."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Academy Aery",
+    "img": "images/skins/aery-academy.webp"
+   },
+   {
+    "name": "Heartseeker Aery",
+    "img": "images/skins/aery-heartseeker.webp"
+   }
+  ]
  },
  {
   "name": "Agni",
