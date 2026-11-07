@@ -1017,7 +1017,7 @@
  {
   "name": "Marrow",
   "img": "images/kits/marrow.webp",
-  "cls": "",
+  "cls": "Miscellaneous",
   "tier": "",
   "diff": "",
   "hp": "",
@@ -1278,7 +1278,7 @@
    },
    {
     "name": "Santa Siege",
-    "img": "images/items/santa-siege.png"
+    "img": "images/items/santa-strafe.png"
    }
   ]
  },
@@ -1818,12 +1818,24 @@
   "adv": "",
   "items": [
    {
-    "name": "Cutlass",
-    "img": "images/items/cutlass.png"
+    "name": "Wood Cutlass",
+    "img": "images/items/wood-cutlass.png"
    },
    {
-    "name": "Blunderbuss",
-    "img": "images/items/blunderbuss.png"
+    "name": "Stone Cutlass",
+    "img": "images/items/stone-cutlass.png"
+   },
+   {
+    "name": "Iron Cutlass",
+    "img": "images/items/iron-cutlass.png"
+   },
+   {
+    "name": "Diamond Cutlass",
+    "img": "images/items/diamond-cutlass.png"
+   },
+   {
+    "name": "Emerald Cutlass",
+    "img": "images/items/emerald-cutlass.png"
    }
   ]
  },
