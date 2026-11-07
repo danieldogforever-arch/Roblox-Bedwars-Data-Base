@@ -516,18 +516,80 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Can headshot with any projectile! Deal 12.5% more projectile damage and gain access to the Tactical Crossbow in the Item Shop.",
-  "adv": "",
+  "adv": "Archer can headshot with any projectile and deals extra damage with every bow-type weapon. The Tactical Crossbow and Tactical Headhunter are cheaper for Archer, at 6 emeralds and 21 emeralds. Each weapon's damage, cooldown and bonus over normal damage are listed under Abilities and items.",
   "items": [
    {
+    "name": "Bow",
+    "desc": "Damage depends on how long you charge it.\nLowest charge: 10 damage (15 headshot), 0.625 second cooldown.\nHighest charge: 20 damage (30 headshot), 1 second cooldown.\nBodyshots deal 12.50% more damage than normal, and headshots deal 79.89% more.",
+    "cd": 0.625,
+    "cdText": "0.625s - 1s",
+    "dmg": 20,
+    "dmgText": "10 - 20 (headshot 15 - 30)",
+    "nodps": true
+   },
+   {
     "name": "Tactical Crossbow",
-    "img": "images/items/tactical-crossbow.png"
+    "img": "images/items/tactical-crossbow.png",
+    "note": "Cost: 6 emeralds",
+    "desc": "Cheaper for Archer. Deals 42.75 damage (64 headshot) with a 1.25 second cooldown.\nBodyshots deal 25.74% more damage than normal, and headshots deal 88.59% more.",
+    "cd": 1.25,
+    "dmg": 42.75,
+    "dmgText": "42.75 (headshot 64)"
    },
    {
     "name": "Tactical Headhunter",
-    "img": "images/items/tactical-headhunter.png"
+    "img": "images/items/tactical-headhunter.png",
+    "note": "Cost: 21 emeralds",
+    "desc": "Cheaper for Archer. Deals 67.5 damage (101.25 headshot) with a 1.25 second cooldown.\nBodyshots and headshots both deal 22.73% more damage than normal.",
+    "cd": 1.25,
+    "dmg": 67.5,
+    "dmgText": "67.5 (headshot 101.25)"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "passives": [
+   {
+    "name": "Headshot Anything",
+    "when": "Always",
+    "desc": "Archer can headshot with any projectile, not only arrows."
+   },
+   {
+    "name": "Projectile Bonus",
+    "when": "Always",
+    "desc": "Deals extra damage with the Bow, Crossbow and Headhunter compared to normal. The bonus for each weapon is listed under its item."
+   },
+   {
+    "name": "Cheaper Weapons",
+    "when": "In the item shop",
+    "desc": "The Tactical Crossbow costs 6 emeralds and the Tactical Headhunter costs 21 emeralds."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Lunar Dragon Archer",
+    "img": "images/skins/archer-lunar-dragon.webp"
+   },
+   {
+    "name": "Victorious Gold",
+    "img": "images/skins/archer-victorious-gold.webp"
+   },
+   {
+    "name": "Platinum",
+    "img": "images/skins/archer-platinum.webp"
+   },
+   {
+    "name": "Diamond",
+    "img": "images/skins/archer-diamond.webp"
+   },
+   {
+    "name": "Emerald",
+    "img": "images/skins/archer-emerald.webp"
+   },
+   {
+    "name": "Nightmare",
+    "img": "images/skins/archer-nightmare.webp"
+   }
+  ]
  },
  {
   "name": "Ares",
