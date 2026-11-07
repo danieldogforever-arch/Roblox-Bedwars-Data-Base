@@ -4,10 +4,10 @@
   "img": "images/kits/abaddon.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Places Scarab Hives that periodically spawns scarabs to seek out and attack nearby enemies and beds.",
   "adv": "",
@@ -49,10 +49,10 @@
   "img": "images/kits/adetunde.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Start with a powerful Frost Hammer. Damaging people using the hammer has a chance to drop Frost Crystals which can be used to upgrade your hammer.",
   "adv": "",
@@ -79,10 +79,10 @@
   "img": "images/kits/aery.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "90",
   "desc": "Killing enemies adds to your collection of spirit butterflies. Each spirit butterfly amplifies sword & projectile damage. Aery's base health is reduced by 10%.",
   "adv": "",
@@ -94,10 +94,10 @@
   "img": "images/kits/agni.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Throw cluster bombs at your enemies and watch them go flying! Blast off with your Rocket Boost ability.",
   "adv": "",
@@ -119,10 +119,10 @@
   "img": "images/kits/alchemist.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "extreme",
   "hp": "100",
   "desc": "Use flasks to brew various potions with foraged ingredients.",
   "adv": "",
@@ -183,10 +183,10 @@
   "img": "images/kits/arachne.webp",
   "cls": "Movement",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "The Spider Queen uses web bridges to traverse the map and can summon spiderlings from her webs to attack enemies. Enemies are slowed if they run into her webs.",
   "adv": "",
@@ -207,10 +207,10 @@
   "img": "images/kits/archer.webp",
   "cls": "Ranged",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Can headshot with any projectile! Deal 12.5% more projectile damage and gain access to the Tactical Crossbow in the Item Shop.",
   "adv": "",
@@ -231,10 +231,10 @@
   "img": "images/kits/ares.webp",
   "cls": "Ranged",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "A powerful ancient warrior that uses electric-charged throwing spears to destroy his enemies.",
   "adv": "",
@@ -251,10 +251,10 @@
   "img": "images/kits/axolotl-amy.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Use your pet axolotls to empower yourself and nearby teammates with shields, increased attack damage, faster break speed and health regen.",
   "adv": "",
@@ -283,10 +283,10 @@
   "img": "images/kits/baker.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Gain access to health-gain apples, speed-boost pies, and spawn with a knockback baguette!",
   "adv": "",
@@ -315,10 +315,10 @@
   "img": "images/kits/barbarian.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Build rage by damaging enemies. Instead of buying swords, your sword is upgraded upon reaching max rage. You lose half your rage upon death. Emerald Sword is replaced by the Rageblade.",
   "adv": "",
@@ -335,10 +335,10 @@
   "img": "images/kits/beekeeper-beatrix.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Catch bees around the map to upgrade your Bee Hive. Upgrading your Bee Hive will return additional iron and emeralds.",
   "adv": "",
@@ -363,10 +363,10 @@
   "img": "images/kits/bekzat.webp",
   "cls": "Ranged",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Summon a mythical falcon to dominate an area. Work in tandem to critically strike your companion's target with your feather light bows",
   "adv": "",
@@ -400,10 +400,10 @@
   "img": "images/kits/bounty-hunter.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Get assigned bounties for killing certain players in the match. Completing a bounty rewards a random amount of resources.",
   "adv": "",
@@ -424,10 +424,10 @@
   "img": "images/kits/builder.webp",
   "cls": "Defender",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Fortify blocks with extra health and blast protection using the Builder's hammer. Purchase the Hammer from the Item Shop.",
   "adv": "",
@@ -448,10 +448,10 @@
   "img": "images/kits/caitlyn.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Fulfill assassination contracts to empower your attacks with a deadly decay.",
   "adv": "",
@@ -468,10 +468,10 @@
   "img": "images/kits/cobalt.webp",
   "cls": "Tank",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Every time you take damage you have a chance of dropping a battery on the ground. Once the battery activates you can pick it up for a small shield. After collecting 3 batteries you will overload, gaining movement speed and damage!",
   "adv": "",
@@ -483,10 +483,10 @@
   "img": "images/kits/cogsworth.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Deploy robots that search for generators and collect resources!",
   "adv": "",
@@ -512,10 +512,10 @@
   "img": "images/kits/conqueror.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Place banners to empower nearby allies.",
   "adv": "",
@@ -540,10 +540,10 @@
   "img": "images/kits/crocowolf.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Being in the vicinity of damage dealt builds bloodlust. Activate Beast Form to temporarily give you enhanced damage, knockback, and movement speed. Dealing damage to non-player entities builds more bloodlust. When your bed breaks you will be given full bloodlust.",
   "adv": "",
@@ -560,10 +560,10 @@
   "img": "images/kits/crypt.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Claim souls to build your undead army! Could be unlocked for FREE by completing Crypt's Trials during the Halloween 2022 event.",
   "adv": "",
@@ -601,10 +601,10 @@
   "img": "images/kits/cyber.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Deploy and control drones to pickup resources from around the map. Drones can also airdrop primed TNT.",
   "adv": "",
@@ -632,10 +632,10 @@
   "img": "images/kits/death-adder.webp",
   "cls": "Destroyer",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Charge up explosive comets to rain destruction on your enemy's base. Collect alchemy crystals to unlock even stronger abilities!",
   "adv": "",
@@ -652,10 +652,10 @@
   "img": "images/kits/dino-tamer-dom.webp",
   "cls": "Destroyer",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Can purchase a Dino mount. Charge into defenses to knock them down!",
   "adv": "",
@@ -678,10 +678,10 @@
   "img": "images/kits/drill.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Purchase Drills to deploy on Diamond and Emerald generators. Drills automatically harvest 2x gen resources. Control them to fight off attackers.",
   "adv": "",
@@ -704,10 +704,10 @@
   "img": "images/kits/eldertree.webp",
   "cls": "Tank",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "OP"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Collect tree orbs around the map to increase size and max HP. Cannot buy armor.",
   "adv": "",
@@ -719,10 +719,10 @@
   "img": "images/kits/eldric.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "OP",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Drain health from enemies or sacrifice your health to heal allies. Could be unlocked for FREE by completing Crypt's Coven during the Halloween 2023 event.",
   "adv": "",
@@ -739,10 +739,10 @@
   "img": "images/kits/elektra.webp",
   "cls": "Movement",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Dash through players to deal electric damage! Hold up to two stacks of dashes and regain all stacks if you kill an enemy with your dash.",
   "adv": "",
@@ -759,10 +759,10 @@
   "img": "images/kits/ember.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "F"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Charge the Blade of Fire to ignite in a deadly spin! Striking enemies OR killing Lumen will upgrade your ability to a much more powerful spin.",
   "adv": "",
@@ -779,10 +779,10 @@
   "img": "images/kits/evelynn.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Damage enemies to attract nearby spirits. Consume spirits to instantly teleport and gain an attack buff for a short duration.",
   "adv": "",
@@ -794,10 +794,10 @@
   "img": "images/kits/farmer-cletus.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "F"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Invest your resources into crops that yield more diamonds and emeralds.",
   "adv": "",
@@ -822,10 +822,10 @@
   "img": "images/kits/fisherman.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Why fight when you can fish? Catch resources and Fish Coins, upgrade your rod, and use bait to reel in rarer rewards.",
   "adv": "",
@@ -918,10 +918,10 @@
   "img": "images/kits/flora.webp",
   "cls": "Movement",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Use explosive beehives to deal high damage to your enemies or throw them at yourself for a massive launch.",
   "adv": "",
@@ -943,10 +943,10 @@
   "img": "images/kits/fortuna.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Summon cards to attack players! Deal damage to enhance your cards with different effects.",
   "adv": "",
@@ -967,10 +967,10 @@
   "img": "images/kits/freiya.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Dealing damage will apply stacks of Frost. At four stacks, Frost is consumed and applies Frostbite to the target, making them fragile. Emerald Sword is replaced by the Ice Sword, which applies two stacks per hit. Use your Frost Explosion ability to immediately deal damage to nearby targets with stacks of Frost.",
   "adv": "",
@@ -992,10 +992,10 @@
   "img": "images/kits/frosty.webp",
   "cls": "Ranged",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Passively create Frosted Snowballs for free. Frosted Snowballs are faster and larger.",
   "adv": "",
@@ -1012,10 +1012,10 @@
   "img": "images/kits/gingerbread-man.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Place gumdrops bounce pads for extreme movement. Using a gumdrop bounce pad negates all fall damage and grants a shield.",
   "adv": "",
@@ -1032,10 +1032,10 @@
   "img": "images/kits/gompy.webp",
   "cls": "Ranged",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Gompy the Ghost Hunter! Find ghosts around the map, vacuum them and fire them across the map.",
   "adv": "",
@@ -1056,10 +1056,10 @@
   "img": "images/kits/gregory.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Place gargoyle statues and take control of them.",
   "adv": "",
@@ -1084,10 +1084,10 @@
   "img": "images/kits/grim-reaper.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Consuming enemy souls grants health regen, movespeed and invulnerability for 2.5s. Combat is disabled while consuming.",
   "adv": "",
@@ -1099,10 +1099,10 @@
   "img": "images/kits/grove.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Purchase seeds and grow them into flowers that buff allies and enhance generator production. Keep your flowers alive by providing them with spirit energy gathered around the map to prevent them from withering.",
   "adv": "",
@@ -1132,10 +1132,10 @@
   "img": "images/kits/hannah.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "90",
   "desc": "Activate your Execute ability to defeat a nearby enemy with low health! Hannah's base health is reduced by 10%.",
   "adv": "",
@@ -1147,10 +1147,10 @@
   "img": "images/kits/hephaestus.webp",
   "cls": "Tank",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "30",
   "desc": "Upgrade your Talos Mech to increase shield and damage! Activate Self-Destruct to deal massive damage.",
   "adv": "",
@@ -1225,10 +1225,10 @@
   "img": "images/kits/ignis.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Use a spirit bridge to travel around the map healing your allies and providing them with armor buffs.",
   "adv": "",
@@ -1245,10 +1245,10 @@
   "img": "images/kits/infernal-shielder.webp",
   "cls": "Tank",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Spawn with a massive shield. Gain energy while holding your shield, and raise your shield to deflect incoming projectiles.",
   "adv": "",
@@ -1271,10 +1271,10 @@
   "img": "images/kits/isabel.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "F",
+   "ranked": "F"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Upgrade her shield by purchasing better swords. Each upgraded shield will block more damage before breaking. The final upgrade, the Emerald Shield, will block all damage from the first hit. Shields reactivate after 30 [sic] seconds.",
   "adv": "",
@@ -1286,10 +1286,10 @@
   "img": "images/kits/jack.webp",
   "cls": "Ranged",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Lob bundles of poisonous pumpkin oil across the map.",
   "adv": "",
@@ -1310,10 +1310,10 @@
   "img": "images/kits/jade.webp",
   "cls": "Movement",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Launch into the air with a giant war hammer. Higher launches deal more slam damage, and the hammer can be upgraded throughout the match.",
   "adv": "",
@@ -1338,10 +1338,10 @@
   "img": "images/kits/kaida.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "extreme",
   "hp": "100",
   "desc": "Summon a powerful dragon's claw to swipe multiple enemies at once, or summon a dragon head through a rune below you to damage all surrounding enemies. Upgrade your claw and summon attack by damaging enemies with your summon spell.",
   "adv": "",
@@ -1379,10 +1379,10 @@
   "img": "images/kits/kaliyah.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "A fearsome warrior with a fiery punch!",
   "adv": "",
@@ -1399,10 +1399,10 @@
   "img": "images/kits/krystal.webp",
   "cls": "Movement",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Keep moving (especially on frozen blocks!) to increase your momentum and movement speed. At high momentum, trigger jumps to dodge.",
   "adv": "",
@@ -1424,10 +1424,10 @@
   "img": "images/kits/lani.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "An ascended healer, Lani can purchase the Scepter of Light. Use this Scepter to fly to your low health allies, providing healing and damage reduction!",
   "adv": "",
@@ -1444,10 +1444,10 @@
   "img": "images/kits/lassy.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "OP"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Wrangle enemies towards you using a lasso.",
   "adv": "",
@@ -1464,10 +1464,10 @@
   "img": "images/kits/lian.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "A mysterious warrior gifted by the dragon. Control swords to fight your enemy",
   "adv": "",
@@ -1488,10 +1488,10 @@
   "img": "images/kits/lucia.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Use the candy you get from damaging players to fill up your piñata. When you're ready, smash it for lots of loot!",
   "adv": "",
@@ -1512,10 +1512,10 @@
   "img": "images/kits/lumen.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Charge the Sword of Light to shoot powerful waves at enemies! Hitting light waves OR killing Ember will upgrade your ability to shoot many powerful beams at once.",
   "adv": "",
@@ -1532,10 +1532,10 @@
   "img": "images/kits/lyla.webp",
   "cls": "Ranged",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Your bow is replaced with the Floral Bow! Shooting an enemy twice will bloom a flower on their head, attracting a swarm of bees!",
   "adv": "",
@@ -1560,10 +1560,10 @@
   "img": "images/kits/marcel.webp",
   "cls": "Defender",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Use your Defense Scanner to instantly purchase blocks in the Defense Schematic shown around your team's bed. Can place two Tesla Traps.",
   "adv": "",
@@ -1580,10 +1580,10 @@
   "img": "images/kits/marina.webp",
   "cls": "Defender",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Deploy jellyfish and electrify them with your Electric Pulse ability, causing them to zap nearby enemies. Connect jellyfish to increase the range and power of your ability.",
   "adv": "",
@@ -1605,10 +1605,10 @@
   "img": "images/kits/marrow.webp",
   "cls": "Miscellaneous",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Defy death and hop around as a skull after taking mortal damage. Survive long enough in this form and you will revive! Use your ability to create poison clouds that damage and slow enemies (this ability also triggers while in skull form).",
   "adv": "",
@@ -1625,10 +1625,10 @@
   "img": "images/kits/martin.webp",
   "cls": "Tank",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Absorb life essence from nearby enemies and convert it to max hp! Attack is slower but passively reflects damage for melee hits to the enemy.",
   "adv": "",
@@ -1645,10 +1645,10 @@
   "img": "images/kits/melody.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Use a guitar and the power of music to heal nearby teammates. Heal yourself for 50% [sic] of the heal given.",
   "adv": "",
@@ -1665,10 +1665,10 @@
   "img": "images/kits/merchant-marco.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Get resources back on certain item shop purchases! This refund is randomized each game!",
   "adv": "",
@@ -1685,10 +1685,10 @@
   "img": "images/kits/metal-detector.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Use a Metal Detector to find treasure around the map.",
   "adv": "",
@@ -1705,10 +1705,10 @@
   "img": "images/kits/milo.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Disguise as a block and pickpocket from other players!",
   "adv": "",
@@ -1725,10 +1725,10 @@
   "img": "images/kits/miner.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "OP",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Killing enemies turns them into stone. The Miner can break down the stone for valuables[sic]'’ resources (scaled by the price of enemy's armor + sword). Unable to purchase Axes.",
   "adv": "",
@@ -1740,10 +1740,10 @@
   "img": "images/kits/nahla.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Use water veil to temporally boost the health regen of nearby allies. Purchase upgrades for your oasis vessel to strengthen your healing and buffing abilities!",
   "adv": "",
@@ -1777,10 +1777,10 @@
   "img": "images/kits/nazar.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Give up out-of-combat health regeneration to manipulate your life force and empower your attacks or heal. Gain life force by landing shots with life arrows and attacking.",
   "adv": "",
@@ -1814,10 +1814,10 @@
   "img": "images/kits/noelle.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Tame slimes to befriend your team, providing your teammates with unique buffs that strengthen over time!",
   "adv": "",
@@ -1859,10 +1859,10 @@
   "img": "images/kits/nyoka.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Charge your Mending Canopy to shine healing light on your allies.",
   "adv": "",
@@ -1897,10 +1897,10 @@
   "img": "images/kits/nyx.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Trigger the darkness of Midnight to deal ramping increased damage and armor pen.",
   "adv": "",
@@ -1917,10 +1917,10 @@
   "img": "images/kits/pirate-davey.webp",
   "cls": "Destroyer",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "OP"
   },
-  "diff": "",
+  "diff": "extreme",
   "hp": "100",
   "desc": "Use a TNT Cannon to bombard your enemies.",
   "adv": "",
@@ -1937,10 +1937,10 @@
   "img": "images/kits/pyro.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Use your flamethrower to spray fire, making enemies brittle, and taking more damage from attacks. Killing brittle enemies rewards ember, which you can use to upgrade your flamethrower.",
   "adv": "",
@@ -1967,10 +1967,10 @@
   "img": "images/kits/ragnar.webp",
   "cls": "Destroyer",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Use your Berserker Rage ability to increase break speed, reduce incoming damage and prevent incoming knockback to rush in on an enemy's bed defense.",
   "adv": "",
@@ -1987,10 +1987,10 @@
   "img": "images/kits/ramil.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Create sandstorms to control the battlefield, move enemies, and protect allies.",
   "adv": "",
@@ -2011,10 +2011,10 @@
   "img": "images/kits/raven.webp",
   "cls": "Ranged",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Buy ravens and fly at enemies to deliver deadly doses of poison.",
   "adv": "",
@@ -2040,10 +2040,10 @@
   "img": "images/kits/santa.webp",
   "cls": "Destroyer",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Play as Santa and call in high-explosive sleigh strafe runs!",
   "adv": "",
@@ -2064,10 +2064,10 @@
   "img": "images/kits/sheep-herder.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Find and tame wild sheep around the map. Each tamed sheep amplifies your damage.",
   "adv": "",
@@ -2079,10 +2079,10 @@
   "img": "images/kits/sheila.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Start the game with an egg on your shoulder. Get kills to hatch and evolve your Seahorse, increasing its damage and unlocking passive abilities.",
   "adv": "",
@@ -2094,10 +2094,10 @@
   "img": "images/kits/sigrid.webp",
   "cls": "Movement",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Summon your mount, charge at your enemies and send them flying! Cannot use weapons while riding the Elk.",
   "adv": "",
@@ -2124,10 +2124,10 @@
   "img": "images/kits/silas.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "The leader of the citizens' rebellion, who encourages and buffs his allies with healing and damage auras!",
   "adv": "",
@@ -2148,10 +2148,10 @@
   "img": "images/kits/skoll.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Summon your void wolf companion Fenrir to mark an enemy. Deal extra damage to your marked target, gain a speed boost when following their trail, and see them through walls. You can detonate the mark to end the effect and deal damage.",
   "adv": "",
@@ -2173,10 +2173,10 @@
   "img": "images/kits/smoke.webp",
   "cls": "Destroyer",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "A stealth-focused kit that uses smoke charges to grant invisibility.",
   "adv": "",
@@ -2197,10 +2197,10 @@
   "img": "images/kits/sophia.webp",
   "cls": "Miscellaneous",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Use a Frost Staff to slow and freeze enemies!",
   "adv": "",
@@ -2225,10 +2225,10 @@
   "img": "images/kits/spirit-catcher.webp",
   "cls": "Ranged",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Carry a jar of regenerating spirits. Catch wisps from damaged enemies to recharge faster, and recall unused spirits. Place idle spirits together to fuse them into a larger spirit with a chain of shrinking explosions.",
   "adv": "",
@@ -2251,10 +2251,10 @@
   "img": "images/kits/star-collector-stella.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Pick up floating stars around the map. Consume them while near teammates to share permanent Max Health and Critical Strike chance!",
   "adv": "",
@@ -2275,10 +2275,10 @@
   "img": "images/kits/styx.webp",
   "cls": "Movement",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Connect your Confluence Portal to a slain enemy to teleport you and your allies to that location.",
   "adv": "",
@@ -2295,10 +2295,10 @@
   "img": "images/kits/taliyah.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Buy eggs & hatch them into chickens! Chickens can either be sold back to the merchant or deployed in combat!",
   "adv": "",
@@ -2319,10 +2319,10 @@
   "img": "images/kits/terra.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Stomp the ground to gather protective blocks, then kick them at your enemies. Each successful hit permanently increases kick damage!",
   "adv": "",
@@ -2343,10 +2343,10 @@
   "img": "images/kits/trapper.webp",
   "cls": "Defender",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Place Snap Traps to stun unexpecting enemies, Damaging a recently trapped enemy will consume a mark dealing extra damage.",
   "adv": "",
@@ -2384,10 +2384,10 @@
   "img": "images/kits/trinity.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Ascend into an angelic form and switch freely between Light and Void. When you melee attack, Light form grants shield for you and allies, and Void form inflicts max health decay on your target.",
   "adv": "",
@@ -2404,10 +2404,10 @@
   "img": "images/kits/triton.webp",
   "cls": "Movement",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "An agile warrior with a Trident! Hurl your trident towards a wall, or your opponents, to quickly travel and dominate the battlefield.",
   "adv": "",
@@ -2424,10 +2424,10 @@
   "img": "images/kits/trixie.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Warp around and confuse your enemies with evasive combat. Every time you use Rift Warp you gain a buff that allows you to reduce Rift Warp's cooldown with melee attacks. You can also use Rift Rewind to teleport back to your last warp point.",
   "adv": "",
@@ -2449,10 +2449,10 @@
   "img": "images/kits/uma.webp",
   "cls": "Ranged",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Summon creatures from the spirit world to assist you in combat, healing, and resource collecting!",
   "adv": "",
@@ -2486,10 +2486,10 @@
   "img": "images/kits/umbra.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "B",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Toss a hat onto other players to gain the ability to teleport to them from anywhere on the map. Ally players near the target destination are given boosted movement speed and several seconds of invulnerability while enemy players are knocked back and briefly slowed.",
   "adv": "",
@@ -2515,10 +2515,10 @@
   "img": "images/kits/umeko.webp",
   "cls": "Ranged",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Use chakrams to fight at mid-range. You can turn invisible and escape from battle if you get attacked by a melee attack.",
   "adv": "",
@@ -2547,10 +2547,10 @@
   "img": "images/kits/vanessa.webp",
   "cls": "Ranged",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Super charge your bow to perform a triple shot.",
   "adv": "",
@@ -2562,10 +2562,10 @@
   "img": "images/kits/void-knight.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "90",
   "desc": "Feed your Void Corruption with resources and kills to upgrade your gear and unlock your abilities of Void Decay and Shielding. With enough resources, unlock the full power of the Void and become the Ascended Void Knight. Void Knight's base health is reduced by 10%.",
   "adv": "",
@@ -2604,10 +2604,10 @@
   "img": "images/kits/void-regent.webp",
   "cls": "Movement",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Use a Void Axe to dash forward while slashing at enemies, healing for a portion of the damage dealt.",
   "adv": "",
@@ -2624,10 +2624,10 @@
   "img": "images/kits/vulcan.webp",
   "cls": "Defender",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Use a high tech tablet to control camera turrets across the map. While holding the tablet, mark enemies or link to your turrets' view.",
   "adv": "",
@@ -2659,10 +2659,10 @@
   "img": "images/kits/warden.webp",
   "cls": "Destroyer",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Imprison the souls of recently killed enemies to increase their respawn time. For each actively imprisoned soul you gain Break Speed and Shield Regeneration.",
   "adv": "",
@@ -2674,10 +2674,10 @@
   "img": "images/kits/warrior.webp",
   "cls": "Tank",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Gain grit in battle and can keep fighting after taken fatal damage.",
   "adv": "",
@@ -2699,10 +2699,10 @@
   "img": "images/kits/whim.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Master arcane secrets to unlock elemental powers! Spawn with a magic spellbook. Deal 20% reduced damage with swords and take 10% increased damage from all sources.",
   "adv": "",
@@ -2719,10 +2719,10 @@
   "img": "images/kits/whisper.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Control a Spirit Owl to support ally players. Unlocked at Player Level 10.",
   "adv": "",
@@ -2755,10 +2755,10 @@
   "img": "images/kits/wren.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Summon a secret black market offering powerful potions and random deals. Earn a cut from every sale, and use shadow coins gathered from fallen players to upgrade your shop.",
   "adv": "",
@@ -2796,10 +2796,10 @@
   "img": "images/kits/xu-rot.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "extreme",
   "hp": "100",
   "desc": "Transform into Dragon Form, unlocking a decaying dragon breath and the ability to fly. Items can't be used while in dragon form and damage scales with the highest tier sword obtained.",
   "adv": "",
@@ -2816,10 +2816,10 @@
   "img": "images/kits/yamini.webp",
   "cls": "Movement",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Climb and pounce with feline dexterity! Fall damage is reduced since you always land on your feet.",
   "adv": "",
@@ -2836,10 +2836,10 @@
   "img": "images/kits/yeti.webp",
   "cls": "Destroyer",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "C",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Let out a Glacier Roar to temporarily freeze nearby blocks. Frozen blocks can be destroyed extremely fast.",
   "adv": "",
@@ -2856,10 +2856,10 @@
   "img": "images/kits/yuzi.webp",
   "cls": "Movement",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "B"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Swords are replaced by traditional Dao Swords. Hold attack to execute a forward dash AOE attack.",
   "adv": "",
@@ -2892,10 +2892,10 @@
   "img": "images/kits/zarrah.webp",
   "cls": "Fighter",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "A"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Wields a Cutlass and Blunderbuss. Ability fires the Blunderbuss, damaging and marking enemies ahead while knocking you back. Melee hits on marked foes reset cooldown, cause bleeding, and grant a speed boost.",
   "adv": "",
@@ -2933,10 +2933,10 @@
   "img": "images/kits/zenith.webp",
   "cls": "Economy",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "F",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Deploy a satellite to disrupt enemy team economies. Enemy shop prices are increased and you get a cut of each purchase!",
   "adv": "",
@@ -2953,10 +2953,10 @@
   "img": "images/kits/zeno.webp",
   "cls": "Ranged",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "A",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "easy",
   "hp": "100",
   "desc": "Use a magical staff to cast lightning spells.",
   "adv": "",
@@ -2995,10 +2995,10 @@
   "img": "images/kits/zephyr.webp",
   "cls": "Movement",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "C"
   },
-  "diff": "",
+  "diff": "hard",
   "hp": "100",
   "desc": "Killing enemies gives you a stack of wind, decaying a short while after. Each stack of wind gives you more speed and adds a second wind strike to your attack. At 5 stacks you can triple jump!",
   "adv": "",
@@ -3010,10 +3010,10 @@
   "img": "images/kits/zola.webp",
   "cls": "Support",
   "tiers": {
-   "casual": "",
-   "ranked": ""
+   "casual": "S",
+   "ranked": "S"
   },
-  "diff": "",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Connect enemies with soul links! Damage dealt to linked enemies incurs bonus damage to any other linked enemies. Allies can also be linked, allowing you to take damage in their place.",
   "adv": "",
