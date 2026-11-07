@@ -453,7 +453,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "The Spider Queen uses web bridges to traverse the map and can summon spiderlings from her webs to attack enemies. Enemies are slowed if they run into her webs.",
-  "adv": "Arachne shoots webs that slow enemies down and double as a bridge only you and your Arachne teammates can use. Enemies who touch cobwebs are slowed by a lot, and the more cobwebs they touch, the slower they get.\nYou can summon spiders while you have webs placed. You get 1 to 4 spiders depending on how many cobwebs are up, so 1 cobweb gives 1 spider and 4 or more cobwebs give 4. Each spider spawns with 30 HP and deals 4 damage every 0.5 seconds. When a spider kills or assists on an enemy, its damage and HP go up, to a max of 80 HP and 15 damage.",
+  "adv": "Arachne shoots webs that slow enemies down and double as a bridge only you and your Arachne teammates can use. Enemies who touch cobwebs are slowed by a lot, and the more cobwebs they touch, the slower they get.\nYou can summon spiders while you have webs placed. You get 1 to 4 spiders depending on how many cobwebs are up, so 1 cobweb gives 1 spider and 4 or more cobwebs give 4. Spiders disappear after 6 seconds. Each spider spawns with 30 HP and deals 4 damage every 0.5 seconds. When a spider kills or assists on an enemy, its damage and HP go up, to a max of 80 HP and 15 damage.",
   "items": [],
   "abilities": [
    {
@@ -466,7 +466,7 @@
     "name": "Spider Summon",
     "note": "Only while webs are present",
     "img": "images/abilities/ability-template.png",
-    "desc": "Summons 1 to 4 spiders from your webs, depending on how many cobwebs are up (1 cobweb = 1 spider, 4 or more = 4). Each spider spawns with 30 HP and deals 4 damage every 0.5 seconds. A spider that kills or assists on an enemy gains damage and HP, up to 80 HP and 15 damage.",
+    "desc": "Summons 1 to 4 spiders from your webs, depending on how many cobwebs are up (1 cobweb = 1 spider, 4 or more = 4). Spiders last 6 seconds before they disappear. Each spider spawns with 30 HP and deals 4 damage every 0.5 seconds. A spider that kills or assists on an enemy gains damage and HP, up to 80 HP and 15 damage.",
     "cd": 10,
     "dmg": 4,
     "dmgText": "4 per hit (every 0.5s)",
