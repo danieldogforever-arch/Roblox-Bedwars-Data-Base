@@ -1,0 +1,458 @@
+[
+ {
+  "name": "Abaddon",
+  "image": "images/kits/abaddon.webp"
+ },
+ {
+  "name": "Adetunde",
+  "image": "images/kits/adetunde.webp"
+ },
+ {
+  "name": "Aery",
+  "image": "images/kits/aery.webp"
+ },
+ {
+  "name": "Agni",
+  "image": "images/kits/agni.webp"
+ },
+ {
+  "name": "Alchemist",
+  "image": "images/kits/alchemist.webp"
+ },
+ {
+  "name": "Arachne",
+  "image": "images/kits/arachne.webp"
+ },
+ {
+  "name": "Archer",
+  "image": "images/kits/archer.webp"
+ },
+ {
+  "name": "Ares",
+  "image": "images/kits/ares.webp"
+ },
+ {
+  "name": "Axolotl Amy",
+  "image": "images/kits/axolotl-amy.webp"
+ },
+ {
+  "name": "Baker",
+  "image": "images/kits/baker.webp"
+ },
+ {
+  "name": "Barbarian",
+  "image": "images/kits/barbarian.webp"
+ },
+ {
+  "name": "Beekeeper Beatrix",
+  "image": "images/kits/beekeeper-beatrix.webp"
+ },
+ {
+  "name": "Bekzat",
+  "image": "images/kits/bekzat.webp"
+ },
+ {
+  "name": "Bounty Hunter",
+  "image": "images/kits/bounty-hunter.webp"
+ },
+ {
+  "name": "Builder",
+  "image": "images/kits/builder.webp"
+ },
+ {
+  "name": "Caitlyn",
+  "image": "images/kits/caitlyn.webp"
+ },
+ {
+  "name": "Cobalt",
+  "image": "images/kits/cobalt.webp"
+ },
+ {
+  "name": "Cogsworth",
+  "image": "images/kits/cogsworth.webp"
+ },
+ {
+  "name": "Conqueror",
+  "image": "images/kits/conqueror.webp"
+ },
+ {
+  "name": "Crocowolf",
+  "image": "images/kits/crocowolf.webp"
+ },
+ {
+  "name": "Crypt",
+  "image": "images/kits/crypt.webp"
+ },
+ {
+  "name": "Cyber",
+  "image": "images/kits/cyber.webp"
+ },
+ {
+  "name": "Death Adder",
+  "image": "images/kits/death-adder.webp"
+ },
+ {
+  "name": "Dino Tamer Dom",
+  "image": "images/kits/dino-tamer-dom.webp"
+ },
+ {
+  "name": "Drill",
+  "image": "images/kits/drill.webp"
+ },
+ {
+  "name": "Eldertree",
+  "image": "images/kits/eldertree.webp"
+ },
+ {
+  "name": "Eldric",
+  "image": "images/kits/eldric.webp"
+ },
+ {
+  "name": "Elektra",
+  "image": "images/kits/elektra.webp"
+ },
+ {
+  "name": "Ember",
+  "image": "images/kits/ember.webp"
+ },
+ {
+  "name": "Evelynn",
+  "image": "images/kits/evelynn.webp"
+ },
+ {
+  "name": "Farmer Cletus",
+  "image": "images/kits/farmer-cletus.webp"
+ },
+ {
+  "name": "Fisherman",
+  "image": "images/kits/fisherman.webp"
+ },
+ {
+  "name": "Flora",
+  "image": "images/kits/flora.webp"
+ },
+ {
+  "name": "Fortuna",
+  "image": "images/kits/fortuna.webp"
+ },
+ {
+  "name": "Freiya",
+  "image": "images/kits/freiya.webp"
+ },
+ {
+  "name": "Frosty",
+  "image": "images/kits/frosty.webp"
+ },
+ {
+  "name": "Gingerbread Man",
+  "image": "images/kits/gingerbread-man.webp"
+ },
+ {
+  "name": "Gompy",
+  "image": "images/kits/gompy.webp"
+ },
+ {
+  "name": "Gregory",
+  "image": "images/kits/gregory.webp"
+ },
+ {
+  "name": "Grim Reaper",
+  "image": "images/kits/grim-reaper.webp"
+ },
+ {
+  "name": "Grove",
+  "image": "images/kits/grove.webp"
+ },
+ {
+  "name": "Hannah",
+  "image": "images/kits/hannah.webp"
+ },
+ {
+  "name": "Hephaestus",
+  "image": "images/kits/hephaestus.webp"
+ },
+ {
+  "name": "Ignis",
+  "image": "images/kits/ignis.webp"
+ },
+ {
+  "name": "Infernal Shielder",
+  "image": "images/kits/infernal-shielder.webp"
+ },
+ {
+  "name": "Isabel",
+  "image": "images/kits/isabel.webp"
+ },
+ {
+  "name": "Jack",
+  "image": "images/kits/jack.webp"
+ },
+ {
+  "name": "Jade",
+  "image": "images/kits/jade.webp"
+ },
+ {
+  "name": "Kaida",
+  "image": "images/kits/kaida.webp"
+ },
+ {
+  "name": "Kaliyah",
+  "image": "images/kits/kaliyah.webp"
+ },
+ {
+  "name": "Krystal",
+  "image": "images/kits/krystal.webp"
+ },
+ {
+  "name": "Lani",
+  "image": "images/kits/lani.webp"
+ },
+ {
+  "name": "Lassy",
+  "image": "images/kits/lassy.webp"
+ },
+ {
+  "name": "Lian",
+  "image": "images/kits/lian.webp"
+ },
+ {
+  "name": "Lucía",
+  "image": "images/kits/lucia.webp"
+ },
+ {
+  "name": "Lumen",
+  "image": "images/kits/lumen.webp"
+ },
+ {
+  "name": "Lyla",
+  "image": "images/kits/lyla.webp"
+ },
+ {
+  "name": "Marcel",
+  "image": "images/kits/marcel.webp"
+ },
+ {
+  "name": "Marina",
+  "image": "images/kits/marina.webp"
+ },
+ {
+  "name": "Marrow",
+  "image": "images/kits/marrow.webp"
+ },
+ {
+  "name": "Martin",
+  "image": "images/kits/martin.webp"
+ },
+ {
+  "name": "Melody",
+  "image": "images/kits/melody.webp"
+ },
+ {
+  "name": "Merchant Marco",
+  "image": "images/kits/merchant-marco.webp"
+ },
+ {
+  "name": "Metal Detector",
+  "image": "images/kits/metal-detector.webp"
+ },
+ {
+  "name": "Milo",
+  "image": "images/kits/milo.webp"
+ },
+ {
+  "name": "Miner",
+  "image": "images/kits/miner.webp"
+ },
+ {
+  "name": "Nahla",
+  "image": "images/kits/nahla.webp"
+ },
+ {
+  "name": "Nazar",
+  "image": "images/kits/nazar.webp"
+ },
+ {
+  "name": "Noelle",
+  "image": "images/kits/noelle.webp"
+ },
+ {
+  "name": "Nyoka",
+  "image": "images/kits/nyoka.webp"
+ },
+ {
+  "name": "Nyx",
+  "image": "images/kits/nyx.webp"
+ },
+ {
+  "name": "Pirate Davey",
+  "image": "images/kits/pirate-davey.webp"
+ },
+ {
+  "name": "Pyro",
+  "image": "images/kits/pyro.webp"
+ },
+ {
+  "name": "Ragnar",
+  "image": "images/kits/ragnar.webp"
+ },
+ {
+  "name": "Ramil",
+  "image": "images/kits/ramil.webp"
+ },
+ {
+  "name": "Raven",
+  "image": "images/kits/raven.webp"
+ },
+ {
+  "name": "Santa",
+  "image": "images/kits/santa.webp"
+ },
+ {
+  "name": "Sheep Herder",
+  "image": "images/kits/sheep-herder.webp"
+ },
+ {
+  "name": "Sheila",
+  "image": "images/kits/sheila.webp"
+ },
+ {
+  "name": "Sigrid",
+  "image": "images/kits/sigrid.webp"
+ },
+ {
+  "name": "Silas",
+  "image": "images/kits/silas.webp"
+ },
+ {
+  "name": "Skoll",
+  "image": "images/kits/skoll.webp"
+ },
+ {
+  "name": "Smoke",
+  "image": "images/kits/smoke.webp"
+ },
+ {
+  "name": "Sophia",
+  "image": "images/kits/sophia.webp"
+ },
+ {
+  "name": "Spirit Catcher",
+  "image": "images/kits/spirit-catcher.webp"
+ },
+ {
+  "name": "Star Collector Stella",
+  "image": "images/kits/star-collector-stella.webp"
+ },
+ {
+  "name": "Styx",
+  "image": "images/kits/styx.webp"
+ },
+ {
+  "name": "Taliyah",
+  "image": "images/kits/taliyah.webp"
+ },
+ {
+  "name": "Terra",
+  "image": "images/kits/terra.webp"
+ },
+ {
+  "name": "Trapper",
+  "image": "images/kits/trapper.webp"
+ },
+ {
+  "name": "Trinity",
+  "image": "images/kits/trinity.webp"
+ },
+ {
+  "name": "Triton",
+  "image": "images/kits/triton.webp"
+ },
+ {
+  "name": "Trixie",
+  "image": "images/kits/trixie.webp"
+ },
+ {
+  "name": "Uma",
+  "image": "images/kits/uma.webp"
+ },
+ {
+  "name": "Umbra",
+  "image": "images/kits/umbra.webp"
+ },
+ {
+  "name": "Umeko",
+  "image": "images/kits/umeko.webp"
+ },
+ {
+  "name": "Vanessa",
+  "image": "images/kits/vanessa.webp"
+ },
+ {
+  "name": "Void Knight",
+  "image": "images/kits/void-knight.webp"
+ },
+ {
+  "name": "Void Regent",
+  "image": "images/kits/void-regent.webp"
+ },
+ {
+  "name": "Vulcan",
+  "image": "images/kits/vulcan.webp"
+ },
+ {
+  "name": "Warden",
+  "image": "images/kits/warden.webp"
+ },
+ {
+  "name": "Warrior",
+  "image": "images/kits/warrior.webp"
+ },
+ {
+  "name": "Whim",
+  "image": "images/kits/whim.webp"
+ },
+ {
+  "name": "Whisper",
+  "image": "images/kits/whisper.webp"
+ },
+ {
+  "name": "Wren",
+  "image": "images/kits/wren.webp"
+ },
+ {
+  "name": "Xu'rot",
+  "image": "images/kits/xu-rot.webp"
+ },
+ {
+  "name": "Yamini",
+  "image": "images/kits/yamini.webp"
+ },
+ {
+  "name": "Yeti",
+  "image": "images/kits/yeti.webp"
+ },
+ {
+  "name": "Yuzi",
+  "image": "images/kits/yuzi.webp"
+ },
+ {
+  "name": "Zarrah",
+  "image": "images/kits/zarrah.webp"
+ },
+ {
+  "name": "Zenith",
+  "image": "images/kits/zenith.webp"
+ },
+ {
+  "name": "Zeno",
+  "image": "images/kits/zeno.webp"
+ },
+ {
+  "name": "Zephyr",
+  "image": "images/kits/zephyr.webp"
+ },
+ {
+  "name": "Zola",
+  "image": "images/kits/zola.webp"
+ }
+]
