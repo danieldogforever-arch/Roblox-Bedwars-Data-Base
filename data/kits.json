@@ -562,7 +562,7 @@
    },
    {
     "name": "Fish Coin",
-    "img": ""
+    "img": "images/items/fish-coin.png"
    },
    {
     "name": "Coral Block",
@@ -680,15 +680,15 @@
   "items": [
    {
     "name": "Small Gargoyle Statue",
-    "img": ""
+    "img": "images/items/gargoyle-statue-small.png"
    },
    {
     "name": "Regular Gargoyle Statue",
-    "img": ""
+    "img": "images/items/gargoyle-statue-regular.png"
    },
    {
     "name": "Giant Gargoyle Statue",
-    "img": ""
+    "img": "images/items/gargoyle-statue-giant.png"
    }
   ]
  },
@@ -821,7 +821,7 @@
    },
    {
     "name": "Fire Match",
-    "img": ""
+    "img": "images/items/fire-match.png"
    }
   ]
  },
@@ -1379,7 +1379,7 @@
   "items": [
    {
     "name": "Frost Staff",
-    "img": ""
+    "img": "images/items/frost-staff.png"
    }
   ]
  },
@@ -1560,7 +1560,7 @@
   "items": [
    {
     "name": "Teleport Hat",
-    "img": ""
+    "img": "images/items/teleport-hat.png"
    }
   ]
  },
@@ -1575,8 +1575,20 @@
   "adv": "",
   "items": [
    {
-    "name": "Chakram",
-    "img": ""
+    "name": "Stone Chakram",
+    "img": "images/items/stone-chakram.png"
+   },
+   {
+    "name": "Iron Chakram",
+    "img": "images/items/iron-chakram.png"
+   },
+   {
+    "name": "Diamond Chakram",
+    "img": "images/items/diamond-chakram.png"
+   },
+   {
+    "name": "Emerald Chakram",
+    "img": "images/items/emerald-chakram.png"
    }
   ]
  },
@@ -1707,22 +1719,6 @@
   ]
  },
  {
-  "name": "Wizard",
-  "img": "",
-  "cls": "Ranged",
-  "tier": "",
-  "diff": "",
-  "hp": "",
-  "desc": "Use a magical staff to cast lightning strikes and electricity orbs.",
-  "adv": "",
-  "items": [
-   {
-    "name": "Wizard Staff",
-    "img": "images/items/wizard-staff.png"
-   }
-  ]
- },
- {
   "name": "Wren",
   "img": "images/kits/wren.webp",
   "cls": "Economy",
@@ -1790,8 +1786,24 @@
   "adv": "",
   "items": [
    {
-    "name": "Daos",
-    "img": ""
+    "name": "Wood Dao",
+    "img": "images/items/wood-dao.png"
+   },
+   {
+    "name": "Stone Dao",
+    "img": "images/items/stone-dao.png"
+   },
+   {
+    "name": "Iron Dao",
+    "img": "images/items/iron-dao.png"
+   },
+   {
+    "name": "Diamond Dao",
+    "img": "images/items/diamond-dao.png"
+   },
+   {
+    "name": "Emerald Dao",
+    "img": "images/items/emerald-dao.png"
    }
   ]
  },
@@ -1847,7 +1859,7 @@
    },
    {
     "name": "Magic Wand",
-    "img": ""
+    "img": "images/items/magic-wand.png"
    }
   ]
  },
