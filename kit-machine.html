@@ -102,6 +102,13 @@ button:focus-visible,#q:focus-visible{outline:3px solid var(--accent);outline-of
 .tbtn small{display:block;font-size:.75rem;color:var(--muted)}.tbtn b{font-size:1.4rem;line-height:1.2}
 .tbtn:hover{border-color:#fff}.tbtn.on{background:#fff;color:#12082e}.tbtn.on small{color:#4a3d7a}
 .dleft .stat.wide{grid-column:1/-1}
+.cost{display:flex;align-items:center;gap:8px;width:fit-content;margin:10px 0 4px;padding:5px 14px 5px 10px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);font-size:1rem;line-height:1}
+.cost img{height:22px;width:auto;max-width:30px;object-fit:contain;display:block}
+.cost b{font-weight:400;background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.cost.emerald{background:rgba(60,200,120,.12);border-color:rgba(110,235,160,.35)}
+.cost.emerald b{background-image:linear-gradient(90deg,#b6ffd2,#4be08a 55%,#1fa862)}
+.cost.iron{background:rgba(220,225,235,.1);border-color:rgba(230,235,245,.3)}
+.cost.iron b{background-image:linear-gradient(90deg,#ffffff,#d5d9e0 55%,#9aa1ac)}
 .cond{display:inline-block;margin-top:6px;background:rgba(255,255,255,.14);border-radius:8px;padding:1px 10px;font-size:.9rem}
 .nums{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .nums span{background:rgba(0,0,0,.35);border-radius:8px;padding:2px 12px;color:var(--muted);font-size:.95rem}.nums b{color:#fff}
@@ -325,9 +332,15 @@ function fusCard(k,f){
              : '<div class="fp"><div class="th"><span class="ph">?</span></div>'+esc(on)+'</div>';
   return '<div class="fus"><div class="fpair">'+me+'<span class="plus">+</span>'+ot+'</div>'+(f.note?'<p>'+esc(f.note)+'</p>':'')+'</div>';
 }
+function costHtml(n){
+  var m = /^Cost:\s*(\d+)\s*(iron|emeralds?)\s*$/i.exec(n);
+  if(!m) return '<div class="cond">'+esc(n)+'</div>';
+  var cur = m[2].toLowerCase().charAt(0)==='e' ? 'emerald' : 'iron';
+  return '<div class="cost '+cur+'"><img src="images/currency/'+cur+'.png" alt=""><b>Cost: '+m[1]+' '+(cur==='emerald'?(m[1]==='1'?'emerald':'emeralds'):'iron')+'</b></div>';
+}
 function abCard(a,label){
   var v = dps(a);
-  return '<div class="ab"><div class="aico">'+pic(a,a.name)+'</div><div><span class="tag">'+label+'</span><span class="nm">'+esc(a.name)+'</span>'+(a.note?'<div class="cond">'+esc(a.note)+'</div>':'')+(a.desc?'<p style="margin:6px 0 0">'+esc(a.desc)+'</p>':'')+(a.cd==null&&a.dmg==null?'':'<div class="nums">'+
+  return '<div class="ab"><div class="aico">'+pic(a,a.name)+'</div><div><span class="tag">'+label+'</span><span class="nm">'+esc(a.name)+'</span>'+(a.note?costHtml(a.note):'')+(a.desc?'<p style="margin:6px 0 0">'+esc(a.desc)+'</p>':'')+(a.cd==null&&a.dmg==null?'':'<div class="nums">'+
     '<span>Cooldown <b>'+(a.cd==null?'—':a.cd>0?a.cd+'s':'None')+'</b></span><span>Damage <b>'+(a.dmg==null?'—':a.dmg>0?a.dmg+((a.hits||1)>1?' × '+a.hits:''):'None')+'</b></span>'+(v===null?'':'<span>DPS <b>'+v.toFixed(1)+'</b></span>')+'</div>')+'</div></div>';
 }
 function renderDetail(){
