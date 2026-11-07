@@ -622,8 +622,9 @@
     "name": "Spear",
     "img": "images/items/spear.png",
     "note": "Cost: 40 iron",
-    "desc": "Buy up to 10 in the shop, or wait 40 seconds for one to generate (it won't generate if you have 3 or more). Deals 40 damage with 40% armor penetration and has a massive range, but travels at half the speed of an arrow. It can hit through walls and floors or ceilings, and it can hit you. Applies Zapped 1 for 5 seconds in a 4x4 block radius, reducing healing and shields by 40%. Killing someone with it gives you another Spear.",
-    "dmg": 40
+    "desc": "Buy up to 10 in the shop, or wait 40 seconds for one to generate (it won't generate if you have 3 or more). Deals 40 damage with 40% armor penetration, with a 0.75 second throw cooldown. It has a massive range, but travels at half the speed of an arrow. It can hit through walls and floors or ceilings, and it can hit you. Applies Zapped 1 for 5 seconds in a 4x4 block radius, reducing healing and shields by 40%. Killing someone with it gives you another Spear.",
+    "dmg": 40,
+    "cd": 0.75
    }
   ],
   "abilities": [],
