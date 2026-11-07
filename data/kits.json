@@ -526,7 +526,8 @@
     "dmg": 20,
     "dmgText": "10 - 20 (headshot 15 - 30)",
     "nodps": true,
-    "img": "images/items/bow.png"
+    "img": "images/items/bow.png",
+    "note": "Cost: 24 iron"
    },
    {
     "name": "Tactical Crossbow",
@@ -615,14 +616,53 @@
   "diff": "hard",
   "hp": "100",
   "desc": "A powerful ancient warrior that uses electric-charged throwing spears to destroy his enemies.",
-  "adv": "",
+  "adv": "Ares throws electric-charged Spears. You can buy Spears in the shop for 40 iron, holding up to 10, or wait 40 seconds for a free one to generate. Free spears won't generate if you already have 3 or more.\nSpears fly slowly, at half the speed of an arrow, but have a massive range. They can hit through walls, and can hit someone above or below a floor or ceiling. They can also hit you, so be careful.\nWhen a Spear hits, it applies Zapped 1 for 5 seconds in a 4x4 block radius, which reduces healing and shields by 40%.",
   "items": [
    {
     "name": "Spear",
-    "img": "images/items/spear.png"
+    "img": "images/items/spear.png",
+    "note": "Cost: 40 iron",
+    "desc": "Buy up to 10 in the shop, or wait 40 seconds for one to generate (it won't generate if you have 3 or more). Deals 40 damage with 40% armor penetration and has a massive range, but travels at half the speed of an arrow. It can hit through walls and floors or ceilings, and it can hit you. Applies Zapped 1 for 5 seconds in a 4x4 block radius, reducing healing and shields by 40%. Killing someone with it gives you another Spear.",
+    "dmg": 40
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "passives": [
+   {
+    "name": "Spear Generation",
+    "when": "Every 40 seconds",
+    "desc": "You get a free Spear every 40 seconds. It won't generate if you already have 3 or more Spears."
+   },
+   {
+    "name": "Spear Refund",
+    "when": "When you kill someone with a Spear",
+    "desc": "You gain another Spear."
+   },
+   {
+    "name": "Zapped 1",
+    "when": "When a Spear hits",
+    "desc": "Everyone in a 4x4 block radius, including you, is Zapped for 5 seconds. Healing and shields are reduced by 40%."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Back off and throw",
+    "text": "Damage someone first. When they are in range of a Spear, back off and throw it to get another one back."
+   },
+   {
+    "title": "Spam late game",
+    "text": "Once you have a lot of iron later in the game, spam Spears."
+   },
+   {
+    "title": "Don't hit yourself",
+    "text": "The blast can hit you too, so make sure you are outside the 4x4 radius when you throw."
+   },
+   {
+    "title": "Target healers and shielders",
+    "text": "Zapped cuts healing and shields by 40%, so aim at enemies who heal or shield for the best results."
+   }
+  ],
+  "skins": []
  },
  {
   "name": "Axolotl Amy",
