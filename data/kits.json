@@ -1481,18 +1481,97 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Fortify blocks with extra health and blast protection using the Builder's hammer. Purchase the Hammer from the Item Shop.",
-  "adv": "",
+  "adv": "Builder spawns with a Builder Hammer and 8 Stone Bricks. With the hammer you can upgrade blocks using iron or emeralds. Upgraded (reinforced) blocks are blast resistant and have 60% more durability, which makes them harder to break.\nIt takes about 8 TNT to break a single reinforced stone brick, while the other reinforced blocks still get one shot by TNT. Siege TNT still one shots, but it destroys fewer blocks when they are reinforced than when they aren't.\nThe hammer can also upgrade other kits' items, like Beekeeper Beatrix's Beehives.\nThe Bridge Printer is bought in the shop. Use the hammer and click the printer source to turn it on or off, and it stretches out blocks (see the Bridge Printer details).",
   "items": [
    {
     "name": "Hammer",
-    "img": "images/items/hammer.png"
+    "img": "images/items/hammer.png",
+    "desc": "Builder spawns with it. Upgrades blocks with iron or emeralds, making them blast resistant and giving them 60% more durability. Can also upgrade other kits' items, like Beekeeper Beatrix's Beehives. Click a Bridge Printer source with it to turn the printer on or off."
    },
    {
     "name": "Bridge Printer Block",
-    "img": "images/items/bridge-printer-block.png"
+    "img": "images/items/bridge-printer-block.png",
+    "note": "Cost: 18 iron",
+    "desc": "Stretches out up to 25 blocks, vertically or horizontally, and you can place up to 24. The source breaks in 2 hits with a wood or stone pickaxe and 1 hit with iron or diamond. The stretched blocks break in 1 hit with a wood pickaxe or better. You don't get it back when it breaks unless its extra blocks haven't been broken. Connected printers activate together with one click, and standing above or below several printers suffocates you."
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "tables": [
+   {
+    "title": "Block upgrade costs",
+    "head": [
+     "Block",
+     "Upgrade cost"
+    ],
+    "rows": [
+     [
+      "Wool",
+      "2 iron"
+     ],
+     [
+      "Stone Brick",
+      "6 iron"
+     ],
+     [
+      "Obsidian",
+      "1 emerald"
+     ],
+     [
+      "Ceramic",
+      "6 iron"
+     ],
+     [
+      "Tesla Coil",
+      "147 iron"
+     ]
+    ],
+    "note": "Upgraded blocks are blast resistant and have 60% more durability."
+   },
+   {
+    "title": "Bridge Printer",
+    "head": [
+     "Stat",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Cost",
+      "18 iron"
+     ],
+     [
+      "Stretches",
+      "25 blocks, vertical or horizontal"
+     ],
+     [
+      "Max placed",
+      "24"
+     ],
+     [
+      "Source block breaks in",
+      "2 hits with a wood or stone pickaxe, 1 hit with iron or diamond"
+     ],
+     [
+      "Stretched blocks",
+      "1 hit with a wood pickaxe or better"
+     ]
+    ],
+    "note": "You don't get the Bridge Printer back if you break it, unless its extra blocks haven't been broken or destroyed. You can break certain blocks to make it a certain length before you activate it. It only turns on or off when you are holding your hammer and click the printer source. If several printers are touching, they connect and all activate with one click, no matter which one you press. If you are standing above or below several printers, you will be suffocated."
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "Siege TNT completely obliterates Builder, so it could be changed to destroy fewer blocks when placed on reinforced ones. It's also a bit expensive: obsidian shouldn't cost 1 emerald to upgrade, and 100 iron would be a better price.",
+  "counter": [
+   {
+    "title": "Place a Siege TNT",
+    "text": "Just place a Siege TNT and the entire bed will be exposed, unless there is obsidian under it."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Nutcracker Skin",
+    "img": "images/skins/builder-nutcracker.webp"
+   }
+  ]
  },
  {
   "name": "Caitlyn",
