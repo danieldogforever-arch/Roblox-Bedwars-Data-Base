@@ -16,7 +16,7 @@
     "name": "Scarab Upgrade 1",
     "img": "images/items/scarab-upgrade-1.png",
     "note": "Cost: 40 iron",
-    "desc": "Scarabs deal 4 damage and have 200 HP. Scarabs can now fly and climb blocks to reach enemies.",
+    "desc": "Scarabs deal 4 damage and have 165 HP. Scarabs can now fly and climb blocks to reach enemies.",
     "cd": 0.5,
     "dmg": 4
    },
@@ -30,7 +30,7 @@
     "name": "Scarab Upgrade 2",
     "img": "images/items/scarab-upgrade-2.png",
     "note": "Cost: 2 emeralds",
-    "desc": "Scarabs deal 6 damage, have 200 HP, and move faster. An exploding scarab with 100 HP spawns alongside the 4th scarab, with the same damage and block destruction as TNT.",
+    "desc": "Scarabs deal 6 damage, have 190 HP, and move faster. An exploding scarab with 100 HP spawns alongside the 4th scarab, with the same damage and block destruction as TNT.",
     "cd": 0.5,
     "dmg": 6
    },
@@ -44,7 +44,7 @@
     "name": "Scarab Upgrade 3",
     "img": "images/items/scarab-upgrade-3.png",
     "note": "Cost: 4 emeralds",
-    "desc": "Scarabs deal 8 damage and have 225 HP. Every time a scarab hits an enemy, you heal 1 HP.",
+    "desc": "Scarabs deal 8 damage and have 220 HP. Every time a scarab hits an enemy, you heal 1 HP.",
     "cd": 0.5,
     "dmg": 8
    },
@@ -59,7 +59,7 @@
    {
     "name": "Place Hive",
     "img": "images/abilities/ability-template.png",
-    "desc": "Places a Scarab Hive that spawns scarabs. Base (Tier 0): scarabs have 150 HP and deal 2 damage. The hive lasts 12 seconds and spawns a scarab every 4.5 seconds, 3 in total. You get a new hive every 20 seconds, holding up to 2.",
+    "desc": "Places a Scarab Hive that spawns scarabs. Base (Tier 0): scarabs have 140 HP and deal 2 damage. The hive lasts 12 seconds and spawns a scarab every 4.5 seconds, 3 in total. You get a new hive every 20 seconds, holding up to 2.",
     "cd": 20
    }
   ],
@@ -470,7 +470,7 @@
   "diff": "hard",
   "hp": "90",
   "desc": "Killing enemies adds to your collection of spirit butterflies. Each spirit butterfly amplifies sword and projectile damage. Aery's base health is reduced by 10%.",
-  "adv": "Aery spawns with 90 HP. You gain 2 butterflies for every kill, and none for assists. Each butterfly is one stack, and stacks increase your projectile damage by 80% of the butterfly's value.\nThe bonus slows down as you collect more: each new stack adds less damage than the last, and eventually each butterfly adds less than 1 damage. After killing an enemy, you have to wait 25 seconds before you can gain stacks from that same enemy again.\nWhen you die you lose around 30% of your stacks, a little more or less depending on how many you have.",
+  "adv": "Aery spawns with 90 HP. You gain 2 butterflies for every kill, and none for assists. Each butterfly is one stack, and stacks increase your projectile damage by 80% of the butterfly's value.\nThe bonus slows down as you collect more: each new stack adds less damage than the last, and eventually each butterfly adds less than 1 damage. After killing an enemy, you have to wait 25 seconds before you can gain stacks from that same enemy again.\nWhen you die you lose part of your stacks, and the more stacks you have, the bigger the share you lose (see the stack loss table).",
   "items": [],
   "abilities": [],
   "calc": {
@@ -516,7 +516,7 @@
    {
     "name": "Stack Loss",
     "when": "On death",
-    "desc": "You lose around 30% of your stacks, a little more or less depending on how many you have."
+    "desc": "You lose 15% of your stacks with 0–9 stacks, 20% with 10–19, 25% with 20–29, and 33% with 30 or more."
    }
   ],
   "strategy": [
@@ -607,6 +607,33 @@
      "30 second cooldown for gaining stacks against the same player"
     ]
    }
+  ],
+  "tables": [
+   {
+    "title": "Stack loss on death",
+    "head": [
+     "Stacks you have",
+     "Stacks lost"
+    ],
+    "rows": [
+     [
+      "0 - 9",
+      "15%"
+     ],
+     [
+      "10 - 19",
+      "20%"
+     ],
+     [
+      "20 - 29",
+      "25%"
+     ],
+     [
+      "30+",
+      "33%"
+     ]
+    ]
+   }
   ]
  },
  {
@@ -626,7 +653,7 @@
     "name": "Cluster Bomb",
     "img": "images/items/cluster-bomb.png",
     "note": "Cost: 45 iron",
-    "desc": "You get a new Cluster Bomb every 35 seconds, holding up to 5, or you can buy one in the shop. The bomb deals 16-17 damage and applies Fire. It then drops 8 smaller fire bombs in a 25 block radius. Each one explodes in a 3x3 area, dealing 9 damage and applying Fire. Throwing it takes 2 seconds in total.",
+    "desc": "You get a new Cluster Bomb every 35 seconds, holding up to 5, or you can buy one in the shop. The bomb deals 16-17 damage and applies Fire. It then drops 8 smaller fire bombs in a 25 block radius. Each one explodes in a 3x3 area, dealing 12 damage and applying Fire. Throwing it takes 2 seconds in total.",
     "cd": 35,
     "dmg": 16.5,
     "dmgText": "16-17",
@@ -1657,13 +1684,13 @@
     "name": "Health Apple",
     "img": "images/items/health-apple.png",
     "note": "Cost: 40 iron",
-    "desc": "Max 3. Heals 20 HP. Takes 0.75 seconds to eat, and you move slower while eating."
+    "desc": "Max 3. Heals 20 HP. Takes 0.8 seconds to eat, and you move slower while eating."
    },
    {
     "name": "Speed Pie",
     "img": "images/items/speed-pie.png",
     "note": "Cost: 2 emeralds",
-    "desc": "Unlimited capacity. Gives 100 seconds of speed that increases your movement by 100% (2x)."
+    "desc": "Unlimited capacity. Gives 100 seconds of speed that increases your movement speed by 27.5% (1.275x). Takes 0.8 seconds to eat."
    },
    {
     "name": "Golden Apple",
@@ -2576,14 +2603,14 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Get assigned bounties for killing certain players in the match. Completing a bounty rewards a random amount of resources.",
-  "adv": "A random player in the server is your target. Hunting Time marks your target on the map, but your target also sees your mark, so they know where you are and that they are your target. They can't see the mark if you don't click Hunting Time. You can reroll your target (random) every 60 seconds.\nKilling your bounty rewards iron and emeralds, but no diamonds, and the reward scales with how long the game has been going. If you hit your bounty and your teammate kills them, you get the reward too (there is a 5 to 10 second leeway).\nAfter you get a new bounty you have to wait 30 seconds before you can get another one, and that timer starts when you reroll. So if you reroll and kill your target quickly, you still wait out the 30 seconds. If you reroll and don't kill them within 30 seconds, then kill them after that, your next bounty appears right away and the 30 second timer starts again.\nYou level up by killing your bounty, and each level upgrades Hunting Time (see the level table).",
+  "adv": "A random player in the server is your target. Hunting Time marks your target on the map, but your target also sees your mark, so they know where you are and that they are your target. They can't see the mark if you don't click Hunting Time. You can reroll your target (random) every 60 seconds.\nKilling your bounty rewards iron and emeralds, but no diamonds, and the reward scales with how long the game has been going. If you hit your bounty and your teammate kills them, you get the reward too (there is a 5 to 10 second leeway).\nAfter you get a new bounty you have to wait 20 seconds before you can get another one, and that timer starts when you reroll. So if you reroll and kill your target quickly, you still wait out the 20 seconds. If you reroll and don't kill them within 20 seconds, then kill them after that, your next bounty appears right away and the 20 second timer starts again.\nYou level up by killing your bounty, and each level upgrades Hunting Time (see the level table).",
   "items": [],
   "abilities": [
    {
     "name": "Hunting Time",
     "img": "images/abilities/ability-template.png",
     "nodps": true,
-    "desc": "Lasts 15 seconds. Marks your target on the map, but your target sees your mark too, so they know you are hunting them. Gives bonuses depending on your level: level 1 +5% damage to your target, level 2 +10%, level 3 the same damage plus +75% movement speed, level 4 the same as level 3 plus 10% less damage taken from and dealt to everyone who isn't your target while active.",
+    "desc": "Lasts 15 seconds. Marks your target on the map, but your target sees your mark too, so they know you are hunting them. Gives bonuses depending on your level: level 1 +10% damage to your target, level 2 +20%, level 3 the same damage plus +15% movement speed, level 4 the same as level 3 plus 10% less damage taken from and dealt to everyone who isn't your target while active.",
     "cd": 30
    },
    {
@@ -2591,7 +2618,7 @@
     "img": "images/abilities/ability-template.png",
     "cd": 60,
     "nodps": true,
-    "desc": "Changes your target to a different random player. The 30 second wait before your next bounty starts when you reroll."
+    "desc": "Changes your target to a different random player. The 20 second wait before your next bounty starts when you reroll."
    }
   ],
   "tables": [
@@ -2608,19 +2635,19 @@
       "1",
       "-",
       "-",
-      "+5% damage to your target"
+      "+10% damage to your target"
      ],
      [
       "2",
       "2",
       "50 iron",
-      "+10% damage to your target"
+      "+20% damage to your target"
      ],
      [
       "3",
       "2",
       "2 emeralds",
-      "+10% damage to your target and +75% movement speed (1.75x)"
+      "+20% damage to your target and +15% movement speed"
      ],
      [
       "4",
@@ -3045,7 +3072,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Fulfill assassination contracts to empower your attacks with a deadly decay.",
-  "adv": "Caitlyn's attacks apply decay, which deals 2 damage per second for 2 seconds. Hitting an enemy that is already decaying makes the decay 25% stronger per hit, up to double the base damage at 4 total hits. Contracts upgrade the decay so it hits harder, lasts longer, and gets special effects.\nPress R to open the contracts menu. It shows the stats of her Dark Decay (duration, damage and bonus effects) and three random players with their team color, armor type and distance in blocks. Pick one to assassinate and upgrade your ability. The target is highlighted in red, so you can see where they are, until they are killed (teammates can help) or you reject the contract, which you can do once every minute.\nBetter armor on the target gives better upgrades. Sometimes a special contract appears on a player with diamond armor or higher, and completing it gives your decay a special effect. The upgrade and its amount are shown on the contract screen. Amounts are random and scale with the target's armor and how long the game has gone on.",
+  "adv": "Caitlyn's attacks apply decay, which deals 2 damage per second for 2 seconds. Hitting an enemy that is already decaying makes the decay 25% stronger per hit, stacking up to 3 times. Contracts upgrade the decay so it hits harder, lasts longer, and gets special effects.\nPress R to open the contracts menu. It shows the stats of her Dark Decay (duration, damage and bonus effects) and three random players with their team color, armor type and distance in blocks. Pick one to assassinate and upgrade your ability. The target is highlighted in red, so you can see where they are, until they are killed (teammates can help) or you reject the contract, which you can do once every minute.\nBetter armor on the target gives better upgrades. Sometimes a special contract appears on a player with diamond armor or higher, and completing it gives your decay a special effect. The upgrade and its amount are shown on the contract screen. Amounts are random and scale with the target's armor and how long the game has gone on.",
   "items": [],
   "abilities": [
    {
@@ -3137,7 +3164,7 @@
    {
     "name": "Dark Decay",
     "when": "Hitting enemies",
-    "desc": "Applies decay: 2 damage per second for 2 seconds. Each extra hit on a decaying enemy adds 25% strength, up to double damage at 4 hits."
+    "desc": "Applies decay: 2 damage per second for 2 seconds. Each extra hit on a decaying enemy adds 25% strength, stacking up to 3 times."
    }
   ],
   "strategy": [
