@@ -17,6 +17,7 @@ h2{font-size:1.7rem;margin:0;line-height:1.2}
 h3{font-size:1.2rem;margin:22px 0 6px}
 p{margin:0 0 12px}.muted{color:var(--muted)}
 .lead{margin:6px 0 0}
+#detail{position:relative;z-index:5}
 .box{background:rgba(8,3,26,.9);border:4px solid #fff;padding:24px;margin-top:26px}
 .label{color:var(--muted);font-size:.95rem;margin:18px 0 8px}
 #q{width:100%;font:inherit;font-size:1.3rem;padding:14px 16px;background:var(--card);color:#fff;border:3px solid #fff;border-radius:14px}
@@ -121,7 +122,7 @@ button:focus-visible,#q:focus-visible{outline:3px solid var(--accent);outline-of
 .bal .bi,.cbal,.bchip .bi{display:inline-flex;align-items:center;justify-content:center;flex:none;width:28px;height:28px;border-radius:50%;background:rgba(0,0,0,.3);box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.7)}
 .bal svg,.cbal svg,.bchip svg{width:17px;height:17px;fill:none;stroke:#fff;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
 .balwrap{position:relative;display:inline-block;max-width:100%}
-.baltip{display:none;position:absolute;left:0;top:calc(100% + 10px);z-index:8;width:min(330px,78vw);background:rgba(8,3,26,.98);border:2px solid #fff;border-radius:14px;padding:12px 14px;font-size:.95rem;line-height:1.35;text-align:left;white-space:pre-line;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.baltip{display:none;position:fixed;left:12px;top:12px;z-index:60;width:min(330px,calc(100vw - 24px));max-height:calc(100vh - 24px);overflow:auto;background:rgba(8,3,26,.98);border:2px solid #fff;border-radius:14px;padding:12px 14px;font-size:.95rem;line-height:1.35;text-align:left;white-space:pre-line;box-shadow:0 8px 24px rgba(0,0,0,.5)}
 .baltip b{display:block;font-size:1rem;margin-bottom:4px;background:var(--g);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
 .balwrap:hover .baltip,.balwrap:focus-within .baltip,.balwrap.open .baltip{display:block}
 .balnone{color:var(--muted);font-size:1.05rem}
@@ -483,7 +484,8 @@ function apply(){
   S.sel = KITS.filter(function(k){return slug(k.name)===h;})[0] || null;
   if(S.sel !== lastSel){ S.tab = "info"; S.skins = false; S.skin = -1; S.pick = ""; lastSel = S.sel; }
   renderDetail();
-  if(S.sel) $("detail").scrollIntoView({block:"start"});
+  $("browse").hidden = !!S.sel;
+  if(S.sel) window.scrollTo(0,0);
 }
 function go(s){ if(location.hash.slice(1)===s) apply(); else location.hash = s; }
 
@@ -497,6 +499,21 @@ $("q").onkeydown = function(e){
   if(e.key==="Enter"){ var q = S.q.trim().toLowerCase(), m = matches(); var ex = m.filter(function(k){return k.name.toLowerCase()===q;})[0]; if(ex||m[0]) go(slug((ex||m[0]).name)); }
   if(e.key==="Escape"){ this.value = ""; S.q = ""; renderList(); }
 };
+
+function placeTip(w){
+  var tip = w && w.querySelector(".baltip"), bd = w && w.querySelector(".bal"); if(!tip||!bd) return;
+  var r = bd.getBoundingClientRect(), vw = window.innerWidth, vh = window.innerHeight;
+  var W = Math.min(330, vw-24), h = tip.offsetHeight;
+  var left = Math.max(12, Math.min(r.left, vw-W-12));
+  var top = r.bottom + 10;
+  if(top + h > vh - 12){ var up = r.top - 10 - h; top = up >= 12 ? up : Math.max(12, vh - 12 - h); }
+  tip.style.left = left+"px"; tip.style.top = top+"px";
+}
+function placeOpenTip(){ placeTip(document.querySelector(".balwrap:hover, .balwrap:focus-within, .balwrap.open")); }
+document.addEventListener("mouseover",function(e){ var w = e.target.closest && e.target.closest(".balwrap"); if(w) placeTip(w); });
+document.addEventListener("focusin",function(e){ var w = e.target.closest && e.target.closest(".balwrap"); if(w) placeTip(w); });
+window.addEventListener("scroll",placeOpenTip,{passive:true});
+window.addEventListener("resize",placeOpenTip);
 document.addEventListener("click",function(e){
   var t = e.target.closest("[data-kit],[data-mode],[data-cls],[data-tier],[data-bal],[data-tab],[data-skin],[data-pick],[data-act]");
   if(moved) return;
@@ -504,7 +521,7 @@ document.addEventListener("click",function(e){
   if(S.skins && !inSk){ S.skins = false; renderDetail(); }
   var bw = e.target.closest(".balwrap");
   Array.prototype.forEach.call(document.querySelectorAll(".balwrap.open"),function(w){ if(w!==bw) w.classList.remove("open"); });
-  if(bw && e.target.closest("[data-baltoggle]")){ bw.classList.toggle("open"); return; }
+  if(bw && e.target.closest("[data-baltoggle]")){ bw.classList.toggle("open"); placeTip(bw); return; }
   if(!t) return;
   if("mode" in ds){
     S.mode = ds.mode; try{ localStorage.setItem("bwMode",S.mode); }catch(x){}
