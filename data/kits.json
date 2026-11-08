@@ -98,6 +98,25 @@
     "title": "Fireballs and hive breaking",
     "text": "Use fireballs, or break the hive before it spawns any more bugs."
    }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Sep 18, 2026",
+    "title": "",
+    "changes": [
+     "Hive duration increased by 2s at every level",
+     "Duration by level: 10/13/16/16s → 12/15/18/18s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 27, 2026",
+    "title": "",
+    "changes": [
+     "Scarab health now only starts decreasing once the spawner disappears or moves out of range"
+    ]
+   }
   ]
  },
  {
@@ -212,6 +231,28 @@
     "title": "Don't let it escape",
     "text": "If it is close to its final upgrade, don't let it get away, or it will chest all of its crystals."
    }
+  ],
+  "history": [
+   {
+    "type": "bal",
+    "date": "Oct 30, 2026",
+    "title": "",
+    "changes": [
+     "Adetunde can now store Crystals in personal chest",
+     "Now lose all crystals on death",
+     "Level 1 upgrade cost 2 → 3",
+     "Level 2 Upgrade cost 5 → 7",
+     "Level 3 Upgrade cost 12 → 14"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 10, 2026",
+    "title": "",
+    "changes": [
+     "Shield max cap set to 50"
+    ]
+   }
   ]
  },
  {
@@ -305,6 +346,16 @@
     "title": "Be prepared",
     "text": "Don't fight it if you are unprepared, and warn your teammates."
    }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Apr 10, 2026",
+    "title": "",
+    "changes": [
+     "Projectile stack damage ratio: 50% → 80%"
+    ]
+   }
   ]
  },
  {
@@ -367,6 +418,16 @@
    {
     "title": "Bait the jump",
     "text": "Try to bait it into using Rocket Boost near you so it misses."
+   }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Mar 13, 2026",
+    "title": "",
+    "changes": [
+     "Decreased time to get a new cluster bomb: 40s → 35s"
+    ]
    }
   ]
  },
@@ -487,6 +548,16 @@
    {
     "title": "Waste its healing",
     "text": "Use ranged weapons to make it waste all of its healing."
+   }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Sep 18, 2026",
+    "title": "",
+    "changes": [
+     "Ingredients spawn more frequently: every 5–8s → every 4–7s"
+    ]
    }
   ]
  },
@@ -745,6 +816,33 @@
    {
     "title": "Fight up close",
     "text": "Fight it up close so the spear also hits Ares himself."
+   }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Oct 30, 2026",
+    "title": "",
+    "changes": [
+     "Spear damage decreased 45 -> 40"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 4, 2026",
+    "title": "",
+    "changes": [
+     "Spear damage: 52 → 45"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 3, 2026",
+    "title": "",
+    "changes": [
+     "Spear cost increased: 35 → 40",
+     "Max Spear capacity reduced: 10 → 8"
+    ]
    }
   ]
  },
@@ -1024,6 +1122,25 @@
     "name": "Victorious Skin",
     "img": "images/skins/barbarian-victorious.webp"
    }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Sep 18, 2026",
+    "title": "",
+    "changes": [
+     "Stone sword rage requirement: 90 → 85",
+     "Iron sword rage requirement: 280 → 270"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 8, 2026",
+    "title": "",
+    "changes": [
+     "Increased rage gain if enemy gear is stronger than barbarian, up to 50%"
+    ]
+   }
   ]
  },
  {
@@ -1183,6 +1300,16 @@
    {
     "name": "Meadow Skin",
     "img": "images/skins/beekeeper-beatrix-meadow.webp"
+   }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Mar 13, 2026",
+    "title": "",
+    "changes": [
+     "Emerald and diamond drop rate reduced on lower level bee hive"
+    ]
    }
   ]
  },
@@ -1468,6 +1595,31 @@
     "name": "Wanderer Skin",
     "img": "images/skins/bounty-hunter-wanderer.webp"
    }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Aug 21, 2026",
+    "title": "",
+    "changes": [
+     "Now can only receive 1 bounty request every 20 seconds"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Aug 14, 2026",
+    "title": "Rework",
+    "changes": [
+     "Bounty Hunter gets iron and emeralds on completing a bounty. The reward is shown on the bounty poster.",
+     "Bounty Hunter now has a progression system. Level up by completing bounties. On level up, gain extra resources and upgrade their ability!",
+     "New Ability:",
+     "Bounty Hunter track and focus on their current target for 15 seconds. Increase damage by 10% against their target but 10% less damage to other players.",
+     "On level 2: Get 50 Iron, and increase the damage boost to target during ability by 20%",
+     "On level 3: Get 2 Emerald, get 15% movement speed while the ability is active",
+     "On level 4: Get 4 Emerald, get 10% damage reduction against other players while ability is active",
+     "On level 5: Get 8 Emerald, Double all Bounty Reward"
+    ]
+   }
   ]
  },
  {
@@ -1729,7 +1881,29 @@
   "desc": "Every time you take damage you have a chance of dropping a battery on the ground. Once the battery activates you can pick it up for a small shield. After collecting 3 batteries you will overload, gaining movement speed and damage!",
   "adv": "",
   "items": [],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Oct 30, 2026",
+    "title": "",
+    "changes": [
+     "Shield Per Battery 12 -> 16",
+     "Improved tile placement for batteries"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Apr 10, 2026",
+    "title": "Rework",
+    "changes": [
+     "While in Overload you will reflect 25% of all melee damage dealt to you back to the attacker",
+     "No longer gives a damage buff",
+     "Still has speed boost",
+     "Duration increased: 6s → 8s"
+    ]
+   }
+  ]
  },
  {
   "name": "Cogsworth",
@@ -1757,6 +1931,29 @@
    {
     "name": "Overclock",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Sep 18, 2026",
+    "title": "",
+    "changes": [
+     "Bot movement speed: 16 → 20",
+     "Bots no longer take knockback",
+     "Improved pathfinding, enemy avoidance, and recovery when stuck or routes break",
+     "Added status and resource indicators"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Mar 27, 2026",
+    "title": "",
+    "changes": [
+     "Reduce overclock gather bot damage per tick: 7 → 4",
+     "Gatherbot damage applies knockback",
+     "Gatherbot movement speed increased: 1.75x → 1.85x"
+    ]
    }
   ]
  },
@@ -1786,7 +1983,17 @@
     "img": "images/items/fire-banner.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "May 8, 2026",
+    "title": "",
+    "changes": [
+     "Healing banner’s healing reduced by 5% for each teammate in area"
+    ]
+   }
+  ]
  },
  {
   "name": "Crocowolf",
@@ -1805,6 +2012,20 @@
    {
     "name": "Beast Form Activate/Deactivate",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "bal",
+    "date": "Apr 10, 2026",
+    "title": "Rework",
+    "changes": [
+     "Build Bloodlust gauge by being near damage dealt (damage to you, teammates, enemies, etc.)",
+     "Slightly more Bloodlust from non-player entities",
+     "When the Bloodlust gauge is full use your ability to transform into Beast Form",
+     "Can cancel Beast Form early to maintain some Bloodlust",
+     "Get full Bloodlust when your bed is broken"
+    ]
    }
   ]
  },
@@ -1846,6 +2067,36 @@
     "note": "Only while holding the Necromancer Staff",
     "desc": "Switch between Ranged and Fighter Skeletons.",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Sep 18, 2026",
+    "title": "",
+    "changes": [
+     "Melee skeleton damage: 70% → 75% of their sword’s base damage"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 1, 2026",
+    "title": "",
+    "changes": [
+     "Headhunter skeleton damage reduced by 40%",
+     "Crossbow skeleton damage reduced by 20%"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "May 1, 2026",
+    "title": "Rework",
+    "changes": [
+     "Added 2 new Abilities to Necromancer’s Staff🔮 Recall Skeletons: Teleports all skeletons to Crypt🎯 Set target: Mark an enemy as target. All Skeletons will prioritize the marked enemy",
+     "Added Skeleton Archers",
+     "Crypt can not swap the skeleton type with necromancer’s staff",
+     "Skeleton Archers do not move. They will search for enemy in range and attack them with bow."
+    ]
    }
   ]
  },
@@ -1924,6 +2175,21 @@
     "note": "Only while on the dino",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "bal",
+    "date": "Aug 7, 2026",
+    "title": "",
+    "changes": [
+     "Dino Charge duration: 5s → 3s",
+     "Dino Charge cooldown: 50s → 40s",
+     "Time to reach Charge II: 2.5s → 2s",
+     "Charge I can no longer break blastproof blocks.",
+     "Charge II damage radius: 9 → 8 blocks",
+     "Charge II explosion power: 12 → 11"
+    ]
+   }
   ]
  },
  {
@@ -1950,6 +2216,23 @@
     "note": "Only while on the Tablet",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Jul 17, 2026",
+    "title": "",
+    "changes": [
+     "Drill Health:",
+     "Early game: 450 → 425",
+     "Mid game: 750 → 700",
+     "Late game: 900 → 850",
+     "Drill damage:",
+     "Early game: 32 → 30",
+     "Mid game: 45 → 42",
+     "Late game: 58 → 54"
+    ]
+   }
   ]
  },
  {
@@ -1965,7 +2248,34 @@
   "desc": "Collect tree orbs around the map to increase size and max HP. Cannot buy armor.",
   "adv": "",
   "items": [],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Sep 4, 2026",
+    "title": "",
+    "changes": [
+     "Orbs are now less likely to spawn near bases",
+     "Slightly reduced early health gain and increased high-stack scaling"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "May 8, 2026",
+    "title": "",
+    "changes": [
+     "Automatically picks up orb when near it"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 13, 2026",
+    "title": "",
+    "changes": [
+     "Slightly increased the number of orbs that spawn at the start of a match"
+    ]
+   }
+  ]
  },
  {
   "name": "Eldric",
@@ -1985,7 +2295,36 @@
     "img": "images/items/warlock-staff.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Oct 30, 2026",
+    "title": "",
+    "changes": [
+     "Siphon Link Damage increased by 20% against close range target"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 3, 2026",
+    "title": "",
+    "changes": [
+     "Base damage per tick increased: 4 → 6"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Apr 24, 2026",
+    "title": "",
+    "changes": [
+     "Assist kills and certain mobs now give a full stack",
+     "Increased max stacks: 20 → 30",
+     "Ally damage buff: 30% → 25%",
+     "Final damage buff: 20% → 15%"
+    ]
+   }
+  ]
  },
  {
   "name": "Elektra",
@@ -2004,6 +2343,27 @@
    {
     "name": "Electric Dash",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Jul 17, 2026",
+    "title": "",
+    "changes": [
+     "Electric Dash recharge time: 9s → 10s"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Mar 27, 2026",
+    "title": "",
+    "changes": [
+     "Elektra can no longer attack while dashing",
+     "Elektra dash exit duration increased: 0.2s → 0.3s",
+     "Elektra dash damage: 8 → 15",
+     "When killing a player with static debuff applied from dash, refund 1 dash"
+    ]
    }
   ]
  },
@@ -2025,7 +2385,34 @@
     "img": "images/items/infernal-saber.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Oct 30, 2026",
+    "title": "",
+    "changes": [
+     "Spin deals 30% increased damage against single target",
+     "Slightly Shortened sword swing block duration for upgraded spins."
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 21, 2026",
+    "title": "",
+    "changes": [
+     "Spin damage increased 24 → 32"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 3, 2026",
+    "title": "",
+    "changes": [
+     "Infernal Sword damage increased: 40 → 42"
+    ]
+   }
+  ]
  },
  {
   "name": "Evelynn",
@@ -2040,7 +2427,18 @@
   "desc": "Damage enemies to attract nearby spirits. Consume spirits to instantly teleport and gain an attack buff for a short duration.",
   "adv": "",
   "items": [],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Oct 2, 2026",
+    "title": "",
+    "changes": [
+     "Shield Increased 15→ 20",
+     "Slash damage 10 + 25% Sword Damage → 10 + 30% sword damage"
+    ]
+   }
+  ]
  },
  {
   "name": "Farmer Cletus",
@@ -2068,7 +2466,18 @@
     "img": "images/items/pumpkin-seeds.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Mar 13, 2026",
+    "title": "",
+    "changes": [
+     "Can only carry up to 8 Pumpkin bombs",
+     "Pumpkin Bomb is now a non-sharable item"
+    ]
+   }
+  ]
  },
  {
   "name": "Fisherman",
@@ -2164,7 +2573,20 @@
     "img": "images/items/soggy-deathbloom.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "bal",
+    "date": "Sep 25, 2026",
+    "title": "Rework",
+    "changes": [
+     "Fisherman now starts with a novice fishing rod",
+     "Fisherman can purchase higher tier fishing rods using fish coins, which can be obtained by fishing",
+     "Fishing spots will spawn randomly on the map. Fishing in designated ponds yields better rewards.",
+     "Fish bait is unlocked in the shop once upgraded to the highest tier fishing rod. Fish bait is a consumable item that grants a chance to hook a Shark."
+    ]
+   }
+  ]
  },
  {
   "name": "Flora",
@@ -2213,6 +2635,35 @@
     "name": "See Current Upgrades",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Sep 4, 2026",
+    "title": "",
+    "changes": [
+     "Added card rerolls: start with 1 and earn another every 3 eliminations",
+     "Added new cards and upgrades: Moonlit, Electrifying I & II, Sticky Cards, Decay, Poisonous, Volley, Jack of All Trades, and Quick Draw II",
+     "Energy Drain now heals 25% of direct card damage, capped at 4/6/8 HP per volley for Minisized/standard/Oversized",
+     "Critical Strike chance: 40% → 50%",
+     "Critical Strike bonus damage: 15–35% → 25–40%",
+     "Scorched now requires Tier 3 and only activates on the final card",
+     "Explosive rarity: Common → Uncommon. Now requires Tier 2 and no longer benefits from Fortuna crits",
+     "Greater Draw now increases Oversized card count, up to 3 before Volley, and grants twice as many additional cards with Minisized",
+     "Oversized deals 4× damage with one card, or 3× damage per card with Greater Draw, before Volley modifiers",
+     "Sticky Cards grounds enemies for 3 seconds",
+     "Decay is available as an Uncommon card starting at Tier 3",
+     "Casting now requires line of sight"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 27, 2026",
+    "title": "",
+    "changes": [
+     "No longer able to combat while drawing cards"
+    ]
+   }
   ]
  },
  {
@@ -2237,6 +2688,17 @@
    {
     "name": "Frost Explosion",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "bal",
+    "date": "Jul 3, 2026",
+    "title": "",
+    "changes": [
+     "Ability no longer detonates automatically upon reaching max stacks.",
+     "Ability cooldown reduced: 15 → 10"
+    ]
    }
   ]
  },
@@ -2278,7 +2740,17 @@
     "img": "images/items/gumdrop-bounce-pad.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Jul 3, 2026",
+    "title": "",
+    "changes": [
+     "Jump power now decays when jumping continuously."
+    ]
+   }
+  ]
  },
  {
   "name": "Gompy",
@@ -2302,7 +2774,21 @@
     "img": "images/items/ghost.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "bal",
+    "date": "Oct 30, 2026",
+    "title": "Rework",
+    "changes": [
+     "Collecting ghosts now fills an “ectoplasm” bar",
+     "The vacuum now uses a charged attack, consuming more ectoplasm with longer charges, and dealing more damage and knockback",
+     "No longer use the vacuum to collect ghosts, it’s a proximity prompt (as an adjustment for the vacuum using charged attacks now)",
+     "Ghosts teleport after a while when there are no nearby Gompy players",
+     "Ghosts spawn on non-void kills, unless the maximum number of ghosts has been reached, or there are other nearby ghosts"
+    ]
+   }
+  ]
  },
  {
   "name": "Gregory",
@@ -2334,10 +2820,11 @@
   "history": [
    {
     "type": "buff",
-    "date": "Recent",
-    "title": "Small Gargoyle Statue cost",
-    "from": "1 emerald",
-    "to": "50 iron"
+    "date": "Oct 30, 2026",
+    "title": "",
+    "changes": [
+     "Swift Gargoyle Statue price changed from 1 emerald to 50 Iron"
+    ]
    }
   ]
  },
@@ -2354,7 +2841,17 @@
   "desc": "Consuming enemy souls grants health regen, movespeed and invulnerability for 2.5s. Combat is disabled while consuming.",
   "adv": "",
   "items": [],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "bal",
+    "date": "Mar 27, 2026",
+    "title": "",
+    "changes": [
+     "Slower movespeed but longer invincibility when consuming soul"
+    ]
+   }
+  ]
  },
  {
   "name": "Grove",
@@ -2386,6 +2883,16 @@
    {
     "name": "Spirit Transfer Start/Stop",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Sep 4, 2026",
+    "title": "",
+    "changes": [
+     "Global generator speed boost: 20% → 30%"
+    ]
    }
   ]
  },
@@ -2480,6 +2987,20 @@
     "name": "Whirling Death",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Mar 13, 2026",
+    "title": "",
+    "changes": [
+     "Shield reduced for void and emerald mechs:",
+     "Emerald Mech Health: 430→410",
+     "Void Mech Health: 630→600",
+     "Self Repair cooldown increased: 5→6",
+     "Team Upgrades"
+    ]
+   }
   ]
  },
  {
@@ -2500,7 +3021,18 @@
     "img": "images/items/spirit-bridge.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Apr 24, 2026",
+    "title": "",
+    "changes": [
+     "Disabled breaking blocks & placing blocks while on the spirit bridge",
+     "Reduced vertical knockback reduction while on the spirit bridge"
+    ]
+   }
+  ]
  },
  {
   "name": "Infernal Shielder",
@@ -2526,6 +3058,34 @@
     "note": "Only while holding the Infernal Shield",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Sep 4, 2026",
+    "title": "",
+    "changes": [
+     "Energy drain per second: 3 → 2",
+     "Energy recovery per second: 8 → 12",
+     "Maximum energy is now 150"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 3, 2026",
+    "title": "",
+    "changes": [
+     "Leap range increased: 150 → 220"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Apr 24, 2026",
+    "title": "",
+    "changes": [
+     "Increased range of ally damage reduction buff: 5 → 6.5 blocks"
+    ]
+   }
   ]
  },
  {
@@ -2541,7 +3101,18 @@
   "desc": "Upgrade her shield by purchasing better swords. Each upgraded shield will block more damage before breaking. The final upgrade, the Emerald Shield, will block all damage from the first hit. Shields reactivate after 30 [sic] seconds.",
   "adv": "",
   "items": [],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Sep 18, 2026",
+    "title": "",
+    "changes": [
+     "Wood shield damage blocked: 8 → 10",
+     "Stone shield damage blocked: 13 → 15"
+    ]
+   }
+  ]
  },
  {
   "name": "Jack",
@@ -2565,7 +3136,39 @@
     "img": "images/items/fire-match.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Oct 30, 2026",
+    "title": "",
+    "changes": [
+     "Oil Blob hit box size decreased"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Aug 7, 2026",
+    "title": "",
+    "changes": [
+     "Oil capacity: 100 → 60",
+     "Oil Blob vertical hitbox: 5 → 3 blocks",
+     "Oil Blob radius scaling per second charged: 4 → 5",
+     "Players standing in Oil Blobs can now jump, but are Grounded and cannot use mobility abilities.",
+     "Entering an Oil Blob no longer applies knockback."
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jul 17, 2026",
+    "title": "Rework",
+    "changes": [
+     "Oil blobs are no longer slippery when stepped on and are no longer purchased from the Shop. Instead, players start the game with an Oil Blob item which slowly regenerates stacks over time. These stacks can be consumed to produce bigger oil splatters which scales with the stacks consumed. The oil splatters can be lit on fire with any explosions or Jack’s new Fire Match item in the shop.",
+     "NEW: Fire Match - light oil splatters on fire!",
+     "NEW: Jack heals for 30% from his fire damage (Reduced to 20% in 16 v 16)."
+    ]
+   }
+  ]
  },
  {
   "name": "Jade",
@@ -2593,7 +3196,30 @@
     "img": "images/items/jade-hammer.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Oct 2, 2026",
+    "title": "",
+    "changes": [
+     "Speed during Jump Increased"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Aug 14, 2026",
+    "title": "Rework",
+    "changes": [
+     "Jade is back on-sale with a new hammer! Jade’s hammer now deals more damage to any hit players the higher up she jumps from. If you don’t hit any players, though, Jade will now take some reduced fall damage. The shop also now has 3 hammer tiers. An upgraded hammer gives Jade’s hammer slam more armor penetration, more damage, and you lose less health from fall damage when you don’t hit any players.",
+     "The shop also now has 3 hammer tiers:",
+     "Tier 1 Jade Hammer: 40 iron",
+     "Tier 2 Jade Hammer: 80 iron",
+     "Tier 3 Jade Hammer: 4 emeralds",
+     "An upgraded hammer gives Jade’s hammer slam more armor penetration, more damage, and you lose less health from fall damage when you don’t hit any players."
+    ]
+   }
+  ]
  },
  {
   "name": "Kaida",
@@ -2634,6 +3260,70 @@
     "name": "Finish Summon",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Aug 21, 2026",
+    "title": "",
+    "changes": [
+     "Reduced spell charge times across all tiers: 0.6/1.2/2.0/3.0s → 0.4/0.9/1.5/2.2s",
+     "Increased maximum charging distance before Dragon Summon automatically casts: 13 → 15 blocks",
+     "Increased Tier 2–4 maximum spell radius: 4.67/5.33/6.67 blocks → 5/6/7 blocks",
+     "Reduced Tier 2 upgrade requirement from 4 → 3 hits.",
+     "Reduced Tier 3 upgrade requirement from 6 → 5 hits."
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 7, 2026",
+    "title": "",
+    "changes": [
+     "We’ve hot patched Kaida to make Dragon Summon faster and more flexible!",
+     "Dragon Summon placement range: 10 → 13 blocks",
+     "Kaida can now move, jump, and use items—including her claw—while summoning.",
+     "Maximum summon radius increased:",
+     "Level I: 3 → 3.5 blocks",
+     "Level II: 4 → 4.5 blocks",
+     "Level III: 5 → 5.5 blocks",
+     "Full charge time reduced:",
+     "Level I: 0.7s → 0.6s",
+     "Level II: 1.5s → 1.2s",
+     "Level III: 2.5s → 2s",
+     "Level IV: 3.7s → 3s",
+     "Summoning no longer grants 10% damage reduction or knockback immunity."
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Aug 7, 2026",
+    "title": "",
+    "changes": [
+     "Dragon Summon can now be placed at the cursor within 10 blocks.",
+     "Added placement and area-of-effect indicators for Dragon Summon.",
+     "Moving more than 10 blocks away from the summon location while charging will automatically cast it.",
+     "Summon cooldown: 22s → 20s",
+     "Maximum summon radius reduced:",
+     "Level I: 5 → 3 blocks",
+     "Level II: 7 → 4 blocks",
+     "Level III: 9 → 5 blocks",
+     "Level IV: 12 → 6 blocks",
+     "Damaging casts required to upgrade increased:",
+     "Level I: 1 → 2",
+     "Level II: 2 → 4",
+     "Level III: 3 → 6",
+     "Dragon Summon can grant at most one progression point per cast.",
+     "Added a Grounded indicator while summoning to make the jump restriction clearer."
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jul 3, 2026",
+    "title": "",
+    "changes": [
+     "Damage now scales inversely with the number of targets hit (increased damage against fewer targets, decreased damage against multiple)."
+    ]
+   }
   ]
  },
  {
@@ -2653,6 +3343,60 @@
    {
     "name": "Dragon Punch",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Aug 21, 2026",
+    "title": "",
+    "changes": [
+     "Increased open-field punch damage: 4/6/8 → 5/8/10 at 1/2/3 stacks.",
+     "Increased wall-impact damage: 18 → 20 at 2 stacks.",
+     "Increased wall-impact damage: 25 → 30 at 3 stacks."
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 7, 2026",
+    "title": "",
+    "changes": [
+     "Dragon Punch has been made significantly faster and more reliable!",
+     "Dragon Punch animation is now 2.5× faster.",
+     "Time before impact: 0.33s → 0.13s",
+     "Movement lock duration: 0.46s → 0.18s",
+     "Global cooldown adjusted:",
+     "1 Stack: 4s",
+     "2 Stacks: 6s → 5s",
+     "3 Stacks: 8s → 6s",
+     "Dragon Punch damage rebalanced:",
+     "1 Stack: 12 → 10 wall damage, 2 → 4 open-field damage",
+     "2 Stacks: 20 → 18 wall damage, 4 → 6 open-field damage",
+     "3 Stacks: 28 → 25 wall damage, 6 → 8 open-field damage"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Aug 7, 2026",
+    "title": "",
+    "changes": [
+     "Dragon Punch is now an ability that targets the closest marked enemy.",
+     "Dragon Punch can now be activated with one or more stacks.",
+     "Dragon Punch now scales based on the number of stacks consumed:",
+     "1 Stack: ~2.7-block launch, 12 wall damage, 2 open-field damage, 4s cooldown",
+     "2 Stacks: ~4.7-block launch, 20 wall damage, 4 open-field damage, 6s cooldown",
+     "3 Stacks: ~6.7-block launch, 28 wall damage, 6 open-field damage, 8s cooldown",
+     "Dragon Punch now has a global cooldown instead of a per-target cooldown."
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Apr 10, 2026",
+    "title": "",
+    "changes": [
+     "Increased stack duration: 8 seconds → 12",
+     "Decreased punch cooldown: 10 seconds → 8"
+    ]
    }
   ]
  },
@@ -2679,6 +3423,43 @@
     "note": "Only at high speeds",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Sep 18, 2026",
+    "title": "",
+    "changes": [
+     "Dodge cooldown: 8s → 10s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 21, 2026",
+    "title": "",
+    "changes": [
+     "Reduced momentum gained",
+     "Freeze ability range reduced from 2 blocks below Player → 1 block below"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 17, 2026",
+    "title": "",
+    "changes": [
+     "Maximum momentum lost from damage: 18 → 20",
+     "Dodge cooldown: 7s → 8s",
+     "Freeze cooldown: 12s → 14s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 27, 2026",
+    "title": "",
+    "changes": [
+     "Reduce amount of momentum lost on taking damage"
+    ]
+   }
   ]
  },
  {
@@ -2699,7 +3480,17 @@
     "img": "images/items/scepter-of-light.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Mar 13, 2026",
+    "title": "",
+    "changes": [
+     "Healing effect reduced by 50% if target was recently affected by Lani"
+    ]
+   }
+  ]
  },
  {
   "name": "Lassy",
@@ -2767,7 +3558,17 @@
     "img": "images/items/candy.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "May 8, 2026",
+    "title": "",
+    "changes": [
+     "Candy amount per damage 55% → 45%"
+    ]
+   }
+  ]
  },
  {
   "name": "Lumen",
@@ -2787,7 +3588,17 @@
     "img": "images/items/light-sword.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Aug 21, 2026",
+    "title": "",
+    "changes": [
+     "Light Sword price 4 Emerald → 3 Emerald"
+    ]
+   }
+  ]
  },
  {
   "name": "Lyla",
@@ -2835,7 +3646,22 @@
     "img": "images/items/defense-scanner.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "May 29, 2026",
+    "title": "",
+    "changes": [
+     "2 new scanner modes:",
+     "Refund Mode: refunds and removes team’s placed blocks into half of the shop resource value",
+     "Upgrade Mode: upgrades team’s placed blocks to a block tier higher (Wool < Stone Bricks < Obsidian)",
+     "Upgrading  to obsidian block upgrades multiple stone bricks near the selected into obsidian",
+     "The scanner will now initially only place wool blocks",
+     "Click and hold scanner block interactions"
+    ]
+   }
+  ]
  },
  {
   "name": "Marina",
@@ -2860,6 +3686,16 @@
     "name": "Electrify Jellyfish",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "May 29, 2026",
+    "title": "",
+    "changes": [
+     "Jellyfish on spawn 1 → 2"
+    ]
+   }
   ]
  },
  {
@@ -2879,6 +3715,16 @@
    {
     "name": "Toxic Escape",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Oct 30, 2026",
+    "title": "",
+    "changes": [
+     "Skull Form Movement Speed: 85% → 95%"
+    ]
    }
   ]
  },
@@ -2920,7 +3766,17 @@
     "img": "images/items/guitar.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Mar 13, 2026",
+    "title": "",
+    "changes": [
+     "self healing ratio: 85%→90%"
+    ]
+   }
+  ]
  },
  {
   "name": "Merchant Marco",
@@ -2960,7 +3816,17 @@
     "img": "images/items/metal-detector.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "May 29, 2026",
+    "title": "",
+    "changes": [
+     "Slightly reduced reward"
+    ]
+   }
+  ]
  },
  {
   "name": "Milo",
@@ -2980,6 +3846,16 @@
     "name": "Block Disguise",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Oct 2, 2026",
+    "title": "",
+    "changes": [
+     "Gloops reveal Milo in block form"
+    ]
+   }
   ]
  },
  {
@@ -2995,7 +3871,18 @@
   "desc": "Killing enemies turns them into stone. The Miner can break down the stone for valuables[sic]'’ resources (scaled by the price of enemy's armor + sword). Unable to purchase Axes.",
   "adv": "",
   "items": [],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Jul 3, 2026",
+    "title": "",
+    "changes": [
+     "Petrifying an Elder Tree or Tinker now yields extra rewards based on their max Health or Mech level.",
+     "Increased rewards for petrifying a Void Knight or a victim equipped with Warrior Armor."
+    ]
+   }
+  ]
  },
  {
   "name": "Nahla",
@@ -3031,6 +3918,29 @@
    {
     "name": "Oasis Swap Staff",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Sep 4, 2026",
+    "title": "",
+    "changes": [
+     "Level 2 Vessel healing per water orb: 1 → 2",
+     "Level 2 Vessel damage buff per water orb: 1 → 2",
+     "Level 3 Vessel healing per water orb: 1 → 3",
+     "Level 3 Vessel damage buff per water orb: 1 → 3"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 27, 2026",
+    "title": "",
+    "changes": [
+     "Oasis Heal Veil Ability: Reduced effectiveness on self by 20%",
+     "Reduced max damage buff from 30% → 20%",
+     "Vessel fire cooldown: 0.35s → 0.5s"
+    ]
    }
   ]
  },
@@ -3114,6 +4024,17 @@
     "name": "Direct/Recall Slime",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Mar 13, 2026",
+    "title": "",
+    "changes": [
+     "Decreased Frosty Slime’s maximum slow amount: 35% → 30%",
+     "Increased time between Blessed Slime healing: 2s → 2.5s"
+    ]
+   }
   ]
  },
  {
@@ -3152,6 +4073,35 @@
     "note": "Only on the last upgrade",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Sep 4, 2026",
+    "title": "",
+    "changes": [
+     "Minimum healing radius: 2.5 → 3 blocks",
+     "Maximum healing radius: 4.5 → 6 blocks",
+     "Base healing per tick: 7 → 9"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 3, 2026",
+    "title": "",
+    "changes": [
+     "Charged heal radius increased by 1 block"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 27, 2026",
+    "title": "",
+    "changes": [
+     "On using “Charge Staff” ability, you lose a base flat amount of progress",
+     "Enchants"
+    ]
+   }
   ]
  },
  {
@@ -3171,6 +4121,19 @@
    {
     "name": "Midnight",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Mar 13, 2026",
+    "title": "",
+    "changes": [
+     "Reduced max armor penetration during midnight: 80% → 75%",
+     "Reduced armor penetration scaling per attack during midnight: 20% → 15%",
+     "After using the midnight ability, there’s a 15s cooldown before damage counts towards re-activating the ability",
+     "Increased midnight duration: 10s → 12s"
+    ]
    }
   ]
  },
@@ -3192,7 +4155,17 @@
     "img": "images/items/cannon.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "May 8, 2026",
+    "title": "",
+    "changes": [
+     "Cannon Price 40 Iron → 50 Iron"
+    ]
+   }
+  ]
  },
  {
   "name": "Pyro",
@@ -3241,6 +4214,41 @@
    {
     "name": "Berserker's Rage",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "bal",
+    "date": "Oct 2, 2026",
+    "title": "",
+    "changes": [
+     "Berserker’s Rage Break Power Buff : 50% → 35%",
+     "Ragnar now gain 10% damage Increase during Berserker’s Rage"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 18, 2026",
+    "title": "",
+    "changes": [
+     "Rage cooldown: 33s → 36s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 17, 2026",
+    "title": "",
+    "changes": [
+     "Berserker Rage cooldown: 30s → 33s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 8, 2026",
+    "title": "",
+    "changes": [
+     "Ability cooldown 26→30"
+    ]
    }
   ]
  },
@@ -3295,6 +4303,26 @@
     "name": "Raven Storm",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "bal",
+    "date": "Sep 4, 2026",
+    "title": "",
+    "changes": [
+     "Poison damage per tick: 5 → 4",
+     "Poison duration: 5s → 4s",
+     "Explosive raven cost: 65 Iron → 45 Iron"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 27, 2026",
+    "title": "",
+    "changes": [
+     "Lowered poison damage per tick (8 → 5), increased tickrate (0.75s → 0.5s)"
+    ]
+   }
   ]
  },
  {
@@ -3319,7 +4347,28 @@
     "img": "images/items/santa-strafe.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Aug 21, 2026",
+    "title": "",
+    "changes": [
+     "Santa Strafe now drops 4 TNT, increased from 3.",
+     "Reduced the strafe-run activation delay: 2 → 1 second.",
+     "Reduced the TNT fuse duration: 3 → 2.5 seconds for Santa Strafe and Santa Siege."
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 17, 2026",
+    "title": "",
+    "changes": [
+     "Santa Strafe price: 70 → 60 Iron",
+     "Santa Siege price: 225 → 200 Iron"
+    ]
+   }
+  ]
  },
  {
   "name": "Sheep Herder",
@@ -3349,7 +4398,29 @@
   "desc": "Start the game with an egg on your shoulder. Get kills to hatch and evolve your Seahorse, increasing its damage and unlocking passive abilities.",
   "adv": "",
   "items": [],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Apr 10, 2026",
+    "title": "",
+    "changes": [
+     "More stack reduction on death: 40 + stacks * 0.1 → 40 + stacks * 0.15",
+     "Increase stacks needed for each level: 200, 600, 1200 → 215, 625, 1240"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 27, 2026",
+    "title": "",
+    "changes": [
+     "Minimum death penalty stack loss: 75 → 40 + 0.1*(current stacks)",
+     "Lowered level 3 stack threshold from 1500 → 1200",
+     "Base seahorse damage 2 → 3",
+     "Don’t lose stacks past the last upgraded seahorse level"
+    ]
+   }
+  ]
  },
  {
   "name": "Sigrid",
@@ -3379,6 +4450,24 @@
     "note": "Only while on the Elk",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Sep 18, 2026",
+    "title": "",
+    "changes": [
+     "Charge cooldown: 14s → 15s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 3, 2026",
+    "title": "",
+    "changes": [
+     "Now automatically exits her Charge state if lifted by Whisper."
+    ]
+   }
   ]
  },
  {
@@ -3402,6 +4491,26 @@
    {
     "name": "Press the Attack!",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "bal",
+    "date": "Apr 24, 2026",
+    "title": "",
+    "changes": [
+     "Max stacks 10 → 20",
+     "Damage reduction per stack: 2.5% → 1%",
+     "Max damage reduction: 25% → 17.5%",
+     "Stacks lost on death: 70% → 30%",
+     "Ability - Press the Attack:",
+     "No longer consumes any triumph.",
+     "Shield now applies to all nearby allies",
+     "Damage aura buff now applies to all nearby allies",
+     "Heal aura buff now applies to all nearby allies",
+     "Removed receiving double stacks duration ability duration",
+     "Cooldown: 20 → 18s"
+    ]
    }
   ]
  },
@@ -3427,6 +4536,17 @@
     "name": "Hunt's End",
     "note": "Only while Fenrir is on a target",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "May 8, 2026",
+    "title": "",
+    "changes": [
+     "Mark duration 16→20",
+     "Slightly increased the area to trigger speed boost"
+    ]
    }
   ]
  },
@@ -3480,7 +4600,40 @@
     "img": "images/items/frost-staff-3.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Oct 2, 2026",
+    "title": "",
+    "changes": [
+     "Frost Staff II price 5 → 4 Emerald"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Aug 7, 2026",
+    "title": "",
+    "changes": [
+     "Level I Frost Mist damage interval: 0.22s → 0.18s",
+     "Level I Frost Staff can no longer fire projectiles.",
+     "Level III projectile base cold stacks: 3 → 4",
+     "Frost Staff upgrade prices increased:",
+     "Level II: 4 → 5 Emeralds",
+     "Level III: 6 → 8 Emeralds"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 29, 2026",
+    "title": "",
+    "changes": [
+     "Tier 1 Staff projectile damage: 20 → 17",
+     "Tier 1 Staff  projectile knockback: 0.8 → 0.6",
+     "Tier 1 Frost Mist damage cooldown 0.2 →0.22"
+    ]
+   }
+  ]
  },
  {
   "name": "Spirit Catcher",
@@ -3505,6 +4658,42 @@
     "name": "Recall Spirits",
     "note": "Only when a spirit is placed",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Nov 6, 2026",
+    "title": "",
+    "changes": [
+     "Fused spirits now haunt an enemy for 6 seconds after their initial explosion",
+     "Damaging enemies consume an orbiting spirit for a critical hit",
+     "Crit bonus damage scales with the original fusion size: 22–42% / 32–52% / 42–62% for 2 / 3 / 4 fused spirits",
+     "When the haunt expires or its target dies, each unused spirit refunds 13 seconds of recharge",
+     "Improved orbit animations, expiry warnings, impact effects, and sounds"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Oct 30, 2026",
+    "title": "Rework",
+    "changes": [
+     "Start with a Spirit Jar that regenerates spirits over time",
+     "Throw spirits around the map to chase and explode nearby enemies",
+     "Fuse up to four idle spirits into a larger spirit with a chain of shrinking explosions",
+     "Collect wisps dropped during combat to recharge spirits faster",
+     "Recall unused spirits back into your lantern",
+     "New spirit and wisp models, animations, and effects!"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 3, 2026",
+    "title": "",
+    "changes": [
+     "Spirit damage increased: 22 → 30",
+     "Max Spirits increased: 2 → 3"
+    ]
    }
   ]
  },
@@ -3550,7 +4739,18 @@
     "img": "images/items/confluence-portal.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Apr 24, 2026",
+    "title": "",
+    "changes": [
+     "Portal block health now scales from 30 → 90 over the match duration",
+     "This scaling speeds up for modes with faster team gen speeds"
+    ]
+   }
+  ]
  },
  {
   "name": "Taliyah",
@@ -3574,7 +4774,34 @@
     "img": "images/items/chicken.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Oct 2, 2026",
+    "title": "",
+    "changes": [
+     "Chicken harvest time reduced from 53 ~ 70 seconds  to 50~60 seconds"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 18, 2026",
+    "title": "",
+    "changes": [
+     "Maximum deployed chickens: 3 → 4"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Aug 21, 2026",
+    "title": "",
+    "changes": [
+     "Chicken Price are cheaper early game",
+     "Chicken Price increase slower"
+    ]
+   }
+  ]
  },
  {
   "name": "Terra",
@@ -3597,6 +4824,18 @@
    {
     "name": "Block Kick",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Jul 17, 2026",
+    "title": "",
+    "changes": [
+     "Kick impact radius: 12 → 11",
+     "Direct-hit damage: 24 → 22",
+     "Maximum area damage: 16 → 15"
+    ]
    }
   ]
  },
@@ -3638,6 +4877,49 @@
    {
     "name": "Detonate Traps",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Oct 2, 2026",
+    "title": "",
+    "changes": [
+     "8→10 max traps",
+     "Get a Snap Trap for kills"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 26, 2026",
+    "title": "",
+    "changes": [
+     "Throw range increased: 12 → 15 blocks",
+     "Increased detection height, trigger radius, and effect areas",
+     "Snap Trap: Restored Mark for 5 seconds. The next direct hit deals 60% more damage and 50% more horizontal knockback",
+     "Snap Trap: Disables item use for 0.5 seconds when triggered"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Sep 25, 2026",
+    "title": "Rework",
+    "changes": [
+     "Set an ambush anywhere: throw traps onto floors, walls, and ceilings.",
+     "Snap Traps root and ground enemies.",
+     "Venom Traps burst when enemies approach, poisoning nearby targets.",
+     "Explosive Traps can be detonated remotely to damage enemies and nearby blocks."
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 29, 2026",
+    "title": "",
+    "changes": [
+     "Get 3 Snap Traps when game starts.",
+     "Snap Traps now deals 5 damage to the victim on trigger.",
+     "Can place up to 18 Snap Traps"
+    ]
    }
   ]
  },
@@ -3770,6 +5052,25 @@
     "name": "Peek",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "May 8, 2026",
+    "title": "",
+    "changes": [
+     "Travel time increased to 1.5 + 1 seconds per 100 studs"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 24, 2026",
+    "title": "",
+    "changes": [
+     "Reduced movement speed buff: 1.3x → 1.2x",
+     "Max shield from Umbra teleports reduced: 40 → 30"
+    ]
+   }
   ]
  },
  {
@@ -3817,7 +5118,25 @@
   "desc": "Super charge your bow to perform a triple shot.",
   "adv": "",
   "items": [],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Jul 17, 2026",
+    "title": "",
+    "changes": [
+     "Arrow price: 12 → 10 Iron"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 27, 2026",
+    "title": "",
+    "changes": [
+     "Slightly increased projectile knockback multiplier"
+    ]
+   }
+  ]
  },
  {
   "name": "Void Knight",
@@ -3858,6 +5177,17 @@
     "name": "Void Ascension",
     "note": "Only on the final upgrade",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Apr 10, 2026",
+    "title": "",
+    "changes": [
+     "Corrupt Tier emerald requirement: 10 → 12",
+     "Chosen Tier emerald requirement: 40 → 48"
+    ]
    }
   ]
  },
@@ -3929,7 +5259,33 @@
   "desc": "Imprison the souls of recently killed enemies to increase their respawn time. For each actively imprisoned soul you gain Break Speed and Shield Regeneration.",
   "adv": "",
   "items": [],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Jul 17, 2026",
+    "title": "",
+    "changes": [
+     "Maximum shield per imprisoned soul: 15 → 12"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 29, 2026",
+    "title": "",
+    "changes": [
+     "Warden imprisoned respawn delay reduced based on the distance between victim and their bed. Players killed closer the bed will have shorter respawn time"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 13, 2026",
+    "title": "",
+    "changes": [
+     "Only drops soul if at least one Warden contributed to the kill"
+    ]
+   }
+  ]
  },
  {
   "name": "Warrior",
@@ -3954,6 +5310,30 @@
     "name": "Warrior's Strike",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "bal",
+    "date": "May 22, 2026",
+    "title": "Rework",
+    "changes": [
+     "Removed shop discount and damage reduction",
+     "New Mechanic: Grit & Final Stand",
+     "Grit Generation: Warrior gains Grit by dealing or taking damage from sword and arrow.",
+     "Final Stand: Upon taking fatal damage, Warrior defies death and enters a Final Stand. While in this state, Grit continuously decays and absorbs all incoming damage. Warrior remains active until their Grit is completely depleted.",
+     "On Warrior armor and Emerald Armor, If Warrior gets a kill during Final Stand, they immediately exit the state and convert all remaining Grit into Health, escaping death.",
+     "Active Ability: Warrior’s Strike",
+     "The effects of this ability scale based on the Warrior's current Grit:",
+     "Low Grit (< 50): Deals damage to nearby enemies and gain Grit for each enemy hit.",
+     "High Grit (50–99): Consumes 50 Grit to deal damage to nearby enemies and grants a shield for each enemy hit.",
+     "Max Grit (100): Consumes all Grit to deal massive damage in a larger radius and heals the Warrior for each enemy hit.",
+     "During Final Stand: Automatically triggers the Max Grit version with increased damage, but no longer heals.",
+     "Warrior ignores knockback and gain 30% damage reduction while using the ability.",
+     "Warrior Armor:",
+     "Warrior’s diamond armor is replaced with Warrior armor.",
+     "Warrior armor has increased defense compared to Diamond armor and gain 3 extra grit when taking damage."
+    ]
+   }
   ]
  },
  {
@@ -3974,7 +5354,36 @@
     "img": "images/items/mage-spellbook.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Oct 30, 2026",
+    "title": "",
+    "changes": [
+     "Mana regen per second decreased from 6 to 5"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 4, 2026",
+    "title": "",
+    "changes": [
+     "Removed armor effectiveness reduction",
+     "Now takes 5% extra damage from swords and projectiles",
+     "Sword damage reduction: 15% → 20%",
+     "Magic Wand damage: 13 → 15"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 8, 2026",
+    "title": "",
+    "changes": [
+     "Gain half of your mana back on hits"
+    ]
+   }
+  ]
  },
  {
   "name": "Whisper",
@@ -4009,6 +5418,29 @@
     "name": "Fly",
     "note": "Only while using the owl on another player",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Jul 3, 2026",
+    "title": "",
+    "changes": [
+     "The horizontal movement speed of a lifted player is now set to a fixed value."
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 10, 2026",
+    "title": "",
+    "changes": [
+     "Projectile damage now scales with equipped sword:",
+     "Wood: 5",
+     "Stone: 7",
+     "Iron: 10",
+     "Diamond: 14",
+     "Emerald: 18"
+    ]
    }
   ]
  },
@@ -4050,6 +5482,26 @@
    {
     "name": "Open/Close Black Market",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Oct 30, 2026",
+    "title": "",
+    "changes": [
+     "Jump and Speed Potion duration decreased from 25 seconds to 20 seconds"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 21, 2026",
+    "title": "",
+    "changes": [
+     "potion hold limit: 3 → 2",
+     "Serpent's Touch & Fury Potions duration reduced: 35 →30",
+     "Jump Potion cost: 75 iron -> 100 iron"
+    ]
    }
   ]
  },
@@ -4147,7 +5599,17 @@
     "img": "images/items/emerald-dao.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Apr 10, 2026",
+    "title": "",
+    "changes": [
+     "Progress regen time delay: 8 seconds → 6 seconds"
+    ]
+   }
+  ]
  },
  {
   "name": "Zarrah",
@@ -4188,6 +5650,43 @@
     "name": "Fire!",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Oct 30, 2026",
+    "title": "",
+    "changes": [
+     "Gun Fire Damage increased from 100% Current Sword damage to 130% Current Sword damage"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 7, 2026",
+    "title": "",
+    "changes": [
+     "Speed boost: 20% → 50%",
+     "Mark-trigger speed boost duration: 5s → 3s",
+     "Bonus damage on mark trigger: 20% → 35%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 8, 2026",
+    "title": "",
+    "changes": [
+     "Extra 20% damage on the hit that triggers the gun mark"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Apr 24, 2026",
+    "title": "",
+    "changes": [
+     "Grounded (Gloops): No longer disables Fire ability. Now only prevents the recoil movement.",
+     "Improved detection to reduce gun recoil when Zarrah is touching the ground"
+    ]
+   }
   ]
  },
  {
@@ -4208,7 +5707,25 @@
     "img": "images/items/satellite-dish.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "May 29, 2026",
+    "title": "",
+    "changes": [
+     "Satellite now uses a limited charge progress bar",
+     "Activating satellite drains charge over time",
+     "Charge replenishes while satellite is inactive",
+     "Kills restore 15 seconds of charge",
+     "Satellite upgrades increase max charge:",
+     "Tier 1: 1:00 max charge, 15% → 20% shop tax",
+     "Tier 2: 1:30 max charge, 20% → 25% shop tax",
+     "Tier 3: 2:00 max charge, 30% shop tax",
+     "When charge reaches 0, satellite shop tax deactivates and satellite is disabled for 30 seconds. Satellite still activates through death"
+    ]
+   }
+  ]
  },
  {
   "name": "Zeno",
@@ -4249,6 +5766,17 @@
    {
     "name": "Shockwave",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Sep 4, 2026",
+    "title": "",
+    "changes": [
+     "Mana regeneration at staff tiers 1/2/3: 0.30/0.45/0.55 → 0.33/0.50/0.60",
+     "Movement slowdown while casting: 20% → 10%"
+    ]
    }
   ]
  },
