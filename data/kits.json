@@ -942,15 +942,89 @@
   },
   "diff": "hard",
   "hp": "100",
-  "desc": "Build rage by damaging enemies. Instead of buying swords, your sword is upgraded upon reaching max rage. You lose half your rage upon death. Emerald Sword is replaced by the Rageblade.",
-  "adv": "",
+  "desc": "Build rage by damaging enemies. Instead of buying swords, your sword is upgraded when you reach enough rage. You lose all your rage on death. The Emerald Sword is replaced by the Rageblade.",
+  "adv": "Barbarian cannot buy swords. You start with a wooden sword and upgrade it by building rage, which you get from dealing damage and from kills. Once upgraded, your sword never goes back to the previous one when you die.\nDamage needed for each upgrade:\nStone sword: 85\nIron sword: 210\nDiamond sword: 430\nRageblade: 650\nYour rage resets each time you upgrade, so you need 1375 damage in total.\nRanged damage gives 2x less rage than other damage. Killing an enemy gives you around 40 damage worth of rage. You cannot get rage from enemies who respawned within the last 9 seconds.\nWhen you die you lose all your rage and restart the tier you are on.",
   "items": [
    {
     "name": "Rageblade",
-    "img": "images/items/rageblade.png"
+    "img": "images/items/rageblade.png",
+    "note": "Rage needed: 650 damage",
+    "desc": "Replaces the Emerald Sword. Deals 70 damage with a 0.25 second cooldown.",
+    "cd": 0.25,
+    "dmg": 70
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "bal": "adj",
+  "balWhy": "It is really good in casuals but terrible in ranked. A fix could be giving its normal swords more attack speed, so it isn't just \"no kit\". That wouldn't change much for casuals, but in ranked it would become a unique kit that attacks faster after each hit, up to a cap. The Rageblade wouldn't change, only the other swords.",
+  "passives": [
+   {
+    "name": "No Sword Shop",
+    "when": "Always",
+    "desc": "Barbarian cannot buy swords. You start with a wooden sword and upgrade it by building rage."
+   },
+   {
+    "name": "Rage",
+    "when": "When you deal damage or kill",
+    "desc": "Damage and kills build rage. Ranged damage gives 2x less rage, and a kill gives around 40 damage worth of rage. You get no rage from enemies who respawned within 9 seconds."
+   },
+   {
+    "name": "Sword Upgrades",
+    "when": "At 85, 210, 430 and 650 rage",
+    "desc": "Reaching each rage amount upgrades your sword: stone, iron, diamond, then Rageblade. Rage resets on every upgrade, and you need 1375 damage in total."
+   },
+   {
+    "name": "Death Penalty",
+    "when": "On death",
+    "desc": "You lose all your rage and restart the tier you are on, but your sword never goes back to the previous one."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Early game",
+    "text": "Get armor unless you are getting rushed. Make sure you don't die to the first enemy rush, or you will be at a disadvantage for the rest of the match."
+   },
+   {
+    "title": "Midgame",
+    "text": "Look for tanky enemies with lots of HP to farm rage off of."
+   },
+   {
+    "title": "After the Rageblade",
+    "text": "Play safe and don't risk dying, because the chances of getting a Rageblade again are low."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Early game Barbarian",
+    "text": "Don't give it the damage it needs for a stone sword."
+   },
+   {
+    "title": "Late game Barbarian",
+    "text": "If it has a diamond sword, focus it and make sure it is constantly reset, because getting a Rageblade that early is not good for the whole lobby."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Deep Void Skin",
+    "img": "images/skins/barbarian-deep-void.webp"
+   },
+   {
+    "name": "Barbunny Skin",
+    "img": "images/skins/barbarian-barbunny.webp"
+   },
+   {
+    "name": "Corrupted Skin",
+    "img": "images/skins/barbarian-corrupted.webp"
+   },
+   {
+    "name": "Dynasty Skin",
+    "img": "images/skins/barbarian-dynasty.webp"
+   },
+   {
+    "name": "Victorious Skin",
+    "img": "images/skins/barbarian-victorious.webp"
+   }
+  ]
  },
  {
   "name": "Beekeeper Beatrix",
