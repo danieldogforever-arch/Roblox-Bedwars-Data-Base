@@ -745,6 +745,42 @@
     "title": "Deny the middle",
     "text": "Don't let it collect the middle emeralds, so it can't get its crossbow early."
    }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Jul 13, 2021",
+    "title": "",
+    "changes": [
+     "Reduced Tactical Crossbow knockback by 30%",
+     "Tactical Crossbow reload time: 1.0s → 1.3s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 12, 2021",
+    "title": "",
+    "changes": [
+     "Tactical Crossbow reload time: 0.8s → 1.0s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 6, 2021",
+    "title": "",
+    "changes": [
+     "Tactical Crossbow cost: 8 emeralds → 10 emeralds"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 5, 2021",
+    "title": "",
+    "changes": [
+     "Projectile damage bonus: +20% → +15%",
+     "Tactical Crossbow damage: 60 → 50"
+    ]
+   }
   ]
  },
  {
@@ -1139,6 +1175,23 @@
     "title": "",
     "changes": [
      "Increased rage gain if enemy gear is stronger than barbarian, up to 50%"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jul 5, 2021",
+    "title": "",
+    "changes": [
+     "Barbarian now has a unique Rageblade sword that replaces the Emerald Sword"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 28, 2021",
+    "title": "",
+    "changes": [
+     "Gain rage on kill",
+     "Reduced diamond and emerald sword rage requirements"
     ]
    }
   ]
@@ -2476,6 +2529,14 @@
      "Can only carry up to 8 Pumpkin bombs",
      "Pumpkin Bomb is now a non-sharable item"
     ]
+   },
+   {
+    "type": "bal",
+    "date": "Jun 17, 2021",
+    "title": "",
+    "changes": [
+     "You can no longer break your teammates' crops"
+    ]
    }
   ]
  },
@@ -3084,6 +3145,14 @@
     "title": "",
     "changes": [
      "Increased range of ally damage reduction buff: 5 → 6.5 blocks"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 13, 2021",
+    "title": "",
+    "changes": [
+     "Shield slowness: 40% → 25%"
     ]
    }
   ]
