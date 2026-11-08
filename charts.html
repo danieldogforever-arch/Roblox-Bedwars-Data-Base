@@ -49,6 +49,15 @@ h1{font-size:2.8rem;margin:0;line-height:1.1}
 .sbtn:hover{border-color:#fff}.sbtn:disabled{opacity:.5;cursor:wait}
 .sbtn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 #sstat{color:var(--muted);font-size:.95rem}
+.findrow{display:flex;flex-wrap:wrap;align-items:center;gap:8px 14px;margin-top:16px}
+#find{flex:1 1 260px;max-width:420px;font:inherit;font-size:1.1rem;padding:10px 14px;background:var(--card);color:#fff;border:3px solid #fff;border-radius:14px}
+#find::placeholder{color:var(--muted)}
+#find:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+#fcount{color:var(--muted);font-size:.95rem}
+.chart.searching .kit{opacity:.22;filter:grayscale(.7)}
+.chart.searching .kit.hit{opacity:1;filter:none;border-color:#ffd166;box-shadow:0 0 0 3px rgba(255,209,102,.45)}
+.mv{position:absolute;top:-7px;left:-7px;width:20px;height:20px;display:block}
+.legend .mvk{width:16px;height:16px}
 #ov{position:fixed;inset:0;z-index:40;background:rgba(5,2,15,.92);display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:18px}
 #ov.show{display:flex}
 #ov img{max-width:100%;max-height:calc(100vh - 140px);border:2px solid #fff}
@@ -71,8 +80,9 @@ h1{font-size:2.8rem;margin:0;line-height:1.1}
   <div class="tabs" id="tabs" role="tablist"></div>
   <div class="head">
     <div><h2 id="ttl"></h2><p id="note"></p></div>
-    <div class="legend" aria-label="Difficulty"><span><i class="dot easy"></i>Easy</span><span><i class="dot moderate"></i>Moderate</span><span><i class="dot hard"></i>Hard</span><span><i class="dot extreme"></i>Extreme</span></div>
+    <div class="legend" aria-label="Difficulty"><span><i class="dot easy"></i>Easy</span><span><i class="dot moderate"></i>Moderate</span><span><i class="dot hard"></i>Hard</span><span><i class="dot extreme"></i>Extreme</span><span id="mvkey"></span></div>
   </div>
+  <div class="findrow"><input id="find" type="search" placeholder="Find a kit…" aria-label="Find a kit on the tier list" autocomplete="off"><span id="fcount" role="status"></span></div>
   <div class="share"><button class="sbtn" id="dl">Download image</button><button class="sbtn" id="cp">Copy image</button><span id="sstat" role="status"></span></div>
   <div class="chart" id="chart"></div>
   <p class="foot">The dot on each kit shows its difficulty.</p>
@@ -85,6 +95,17 @@ var KITS = {"Abaddon":{"s":"abaddon","i":"images/kits/abaddon.webp","d":"easy"},
 var $ = function(id){return document.getElementById(id);};
 function esc(t){ return String(t==null?"":t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
 var cur = 0;
+function mvIcon(dir,cls){
+  var up = dir==="up", c = up ? ["#8ff5bf","#1fae6a"] : ["#ff9aab","#d6304f"], id = "mv"+dir+(cls||"");
+  return '<svg class="'+(cls||"mv")+'" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="'+id+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+c[0]+'"/><stop offset="1" stop-color="'+c[1]+'"/></linearGradient></defs><circle cx="12" cy="12" r="10.5" fill="url(#'+id+')" stroke="#fff" stroke-width="2"/>'+
+    (up ? '<path d="M12 5.6 17.6 12.2H14.2V18H9.8V12.2H6.4Z" fill="#fff"/>' : '<path d="M12 18.4 6.4 11.8H9.8V6H14.2V11.8H17.6Z" fill="#fff"/>')+'</svg>';
+}
+function moveOf(L,name,label){
+  var p = L.prev && L.prev[name]; if(!p || p===label) return null;
+  var idx = function(l){ for(var i=0;i<L.rows.length;i++) if(L.rows[i].label===l) return i; return -1; };
+  var a = idx(p), b = idx(label); if(a<0||b<0) return null;
+  return {dir: b<a ? "up" : "down", from: p};
+}
 function pick(){
   var h = location.hash.replace("#","");
   for(var i=0;i<LISTS.length;i++) if(LISTS[i].id===h) return i;
@@ -100,13 +121,24 @@ function render(){
   $("chart").innerHTML = L.rows.map(function(r){
     var ks = r.kits.map(function(n){
       var k = KITS[n]; if(!k) return "";
-      return '<a class="kit" href="kit-machine.html#'+k.s+'" data-name="'+esc(n)+'" aria-label="'+esc(n)+'">'+
-        '<img src="'+esc(k.i)+'" alt="" loading="lazy">'+(k.d?'<i class="dot '+k.d+'"></i>':'')+'</a>';
+      var mv = moveOf(L,n,r.label), tipText = n + (mv ? " · Moved "+mv.dir+" from "+mv.from : "");
+      return '<a class="kit" href="kit-machine.html#'+k.s+'" data-name="'+esc(tipText)+'" data-k="'+esc(n.toLowerCase())+'" aria-label="'+esc(tipText)+'">'+
+        '<img src="'+esc(k.i)+'" alt="" loading="lazy">'+(k.d?'<i class="dot '+k.d+'"></i>':'')+(mv?mvIcon(mv.dir):'')+'</a>';
     }).join("");
     return '<div class="row"><div class="lab">'+esc(r.label)+'<small>'+r.kits.length+' kit'+(r.kits.length===1?'':'s')+'</small></div>'+
       '<div class="kits">'+(ks || '<span class="empty">No kits</span>')+'</div></div>';
   }).join("");
+  applyFind(false);
 }
+function applyFind(scroll){
+  var q = $("find").value.trim().toLowerCase(), ch = $("chart"), ks = ch.querySelectorAll(".kit"), hits = [];
+  ch.classList.toggle("searching", !!q);
+  ks.forEach(function(el){ var on = !!q && el.dataset.k.indexOf(q) >= 0; el.classList.toggle("hit", on); if(on) hits.push(el); });
+  $("fcount").textContent = q ? (hits.length ? hits.length+" kit"+(hits.length===1?"":"s")+" found"+(hits.length===1?": "+hits[0].getAttribute("aria-label").split(" · ")[0]:"") : "No kits found") : "";
+  if(scroll && hits.length){ var r = hits[0].getBoundingClientRect(); if(r.top < 0 || r.bottom > innerHeight) hits[0].scrollIntoView({behavior:"smooth",block:"center"}); }
+}
+$("find").addEventListener("input",function(){ applyFind(true); });
+$("find").addEventListener("keydown",function(e){ if(e.key==="Enter"){ var h = $("chart").querySelector(".kit.hit"); if(h) location.href = h.href; } });
 document.addEventListener("click",function(e){
   var t = e.target.closest(".tab"); if(!t) return;
   cur = +t.dataset.i; $("sstat").textContent = ""; history.replaceState(null,"","#"+LISTS[cur].id); hideTip(); render();
@@ -125,6 +157,7 @@ document.addEventListener("mouseover",function(e){ var k = e.target.closest(".ki
 document.addEventListener("focusin",function(e){ var k = e.target.closest(".kit"); if(k) showTip(k); });
 document.addEventListener("focusout",hideTip);
 window.addEventListener("scroll",hideTip,{passive:true});
+$("mvkey").outerHTML = '<span>'+mvIcon("up","mvk")+'Moved up</span><span>'+mvIcon("down","mvk")+'Moved down</span>';
 cur = pick(); render();
 
 // ---- Image export (drawn on a canvas) ----
@@ -173,6 +206,12 @@ function makeCanvas(){
         var im = imgs[n];
         if(im){ c.save(); rr(c,x+3,ty+3,TILE-6,TILE-6,11); c.clip(); var s = Math.min((TILE-6)/im.width,(TILE-6)/im.height), iw = im.width*s, ih = im.height*s; c.drawImage(im, x+3+(TILE-6-iw)/2, ty+3+(TILE-6-ih)/2, iw, ih); c.restore(); }
         c.strokeStyle = "#fff"; c.lineWidth = 3.5; rr(c,x+1.75,ty+1.75,TILE-3.5,TILE-3.5,13); c.stroke();
+        var mv = moveOf(L,n,r.label);
+        if(mv){ var cx = x+4, cy = ty+4, up = mv.dir==="up", gr = c.createLinearGradient(0,cy-12,0,cy+12);
+          gr.addColorStop(0, up?"#8ff5bf":"#ff9aab"); gr.addColorStop(1, up?"#1fae6a":"#d6304f");
+          c.fillStyle = "#fff"; c.beginPath(); c.arc(cx,cy,14,0,7); c.fill(); c.fillStyle = gr; c.beginPath(); c.arc(cx,cy,12,0,7); c.fill();
+          c.fillStyle = "#fff"; c.beginPath(); var s = up?1:-1;
+          c.moveTo(cx,cy-8*s); c.lineTo(cx+7,cy+0.5*s); c.lineTo(cx+2.8,cy+0.5*s); c.lineTo(cx+2.8,cy+7.5*s); c.lineTo(cx-2.8,cy+7.5*s); c.lineTo(cx-2.8,cy+0.5*s); c.lineTo(cx-7,cy+0.5*s); c.closePath(); c.fill(); }
         var d = KITS[n] && KITS[n].d; if(DCOL[d]){ c.fillStyle = "#0a0418"; c.beginPath(); c.arc(x+TILE-4,ty+4,12,0,7); c.fill(); c.fillStyle = DCOL[d]; c.beginPath(); c.arc(x+TILE-4,ty+4,9,0,7); c.fill(); }
       });
       y += h; c.fillStyle = "#fff"; c.fillRect(PAD, y, cw, BW); y += BW;

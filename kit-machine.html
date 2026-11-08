@@ -17,6 +17,27 @@ h2{font-size:1.7rem;margin:0;line-height:1.2}
 h3{font-size:1.2rem;margin:22px 0 6px}
 p{margin:0 0 12px}.muted{color:var(--muted)}
 .lead{margin:6px 0 0}
+.chg{display:inline-block;flex:none;vertical-align:middle}
+.hist{position:relative;margin-top:6px;padding-left:4px}
+.hent{position:relative;display:flex;gap:14px;padding:0 0 18px}
+.hent:not(:last-child)::before{content:"";position:absolute;left:17px;top:40px;bottom:2px;width:2px;background:rgba(255,255,255,.18)}
+.hent .chg{margin-top:2px}
+.hbody{flex:1;min-width:0;background:var(--soft);border-radius:16px;padding:12px 16px}
+.htop{display:flex;flex-wrap:wrap;align-items:center;gap:6px 10px}
+.htag{font-size:.85rem;border-radius:999px;padding:2px 10px;color:#12082e}
+.htag.t-buff{background:#5fe3a1}.htag.t-nerf{background:#ff7a8e}.htag.t-bal{background:#ffd166}
+.hdate{color:var(--muted);font-size:.9rem}
+.htitle{font-size:1.15rem;margin:6px 0 0;overflow-wrap:break-word}
+.hchange{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:8px}
+.hchange .cost{margin:0}
+.hchange .old{opacity:.55}
+.hchange .old b{text-decoration:line-through}
+.harrow{color:var(--muted)}
+.hval{background:rgba(255,255,255,.08);border-radius:999px;padding:4px 12px;font-size:1rem}
+.hval.old{text-decoration:line-through}
+.hnote{color:var(--muted);margin:8px 0 0}
+.hkey{display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--muted);font-size:.95rem;margin:0 0 14px}
+.hkey span{display:inline-flex;align-items:center;gap:7px}
 .topnav{display:flex;gap:18px;font-size:.95rem;margin-bottom:14px}
 .topnav a{color:var(--muted);text-decoration:none}
 .topnav a:hover,.topnav a:focus-visible{color:#fff}
@@ -257,7 +278,7 @@ var KITS = [
 {"name": "Frosty", "img": "images/kits/frosty.webp", "cls": "Ranged", "tiers": {"casual": "B", "ranked": "B"}, "diff": "moderate", "hp": "100", "desc": "Passively create Frosted Snowballs for free. Frosted Snowballs are faster and larger.", "adv": "", "items": [{"name": "Frosted Snowball", "img": "images/items/frosted-snowball.png"}], "abilities": []},
 {"name": "Gingerbread Man", "img": "images/kits/gingerbread-man.webp", "cls": "Support", "tiers": {"casual": "A", "ranked": "A"}, "diff": "hard", "hp": "100", "desc": "Place gumdrops bounce pads for extreme movement. Using a gumdrop bounce pad negates all fall damage and grants a shield.", "adv": "", "items": [{"name": "Gumdrop Bounce Pad", "img": "images/items/gumdrop-bounce-pad.png"}], "abilities": []},
 {"name": "Gompy", "img": "images/kits/gompy.webp", "cls": "Ranged", "tiers": {"casual": "C", "ranked": "C"}, "diff": "moderate", "hp": "100", "desc": "Gompy the Ghost Hunter! Find ghosts around the map, vacuum them and fire them across the map.", "adv": "", "items": [{"name": "Vacuum", "img": "images/items/vacuum.png"}, {"name": "Ghost", "img": "images/items/ghost.png"}], "abilities": []},
-{"name": "Gregory", "img": "images/kits/gregory.webp", "cls": "Fighter", "tiers": {"casual": "C", "ranked": "C"}, "diff": "moderate", "hp": "100", "desc": "Place gargoyle statues and take control of them.", "adv": "", "items": [{"name": "Small Gargoyle Statue", "img": "images/items/gargoyle-statue-small.png"}, {"name": "Regular Gargoyle Statue", "img": "images/items/gargoyle-statue-regular.png"}, {"name": "Giant Gargoyle Statue", "img": "images/items/gargoyle-statue-giant.png"}], "abilities": []},
+{"name": "Gregory", "img": "images/kits/gregory.webp", "cls": "Fighter", "tiers": {"casual": "C", "ranked": "C"}, "diff": "moderate", "hp": "100", "desc": "Place gargoyle statues and take control of them.", "adv": "", "items": [{"name": "Small Gargoyle Statue", "img": "images/items/gargoyle-statue-small.png"}, {"name": "Regular Gargoyle Statue", "img": "images/items/gargoyle-statue-regular.png"}, {"name": "Giant Gargoyle Statue", "img": "images/items/gargoyle-statue-giant.png"}], "abilities": [], "history": [{"type": "buff", "date": "Recent", "title": "Small Gargoyle Statue cost", "from": "1 emerald", "to": "50 iron"}]},
 {"name": "Grim Reaper", "img": "images/kits/grim-reaper.webp", "cls": "Fighter", "tiers": {"casual": "S", "ranked": "C"}, "diff": "easy", "hp": "100", "desc": "Consuming enemy souls grants health regen, movespeed and invulnerability for 2.5s. Combat is disabled while consuming.", "adv": "", "items": [], "abilities": []},
 {"name": "Grove", "img": "images/kits/grove.webp", "cls": "Economy", "tiers": {"casual": "B", "ranked": "C"}, "diff": "moderate", "hp": "100", "desc": "Purchase seeds and grow them into flowers that buff allies and enhance generator production. Keep your flowers alive by providing them with spirit energy gathered around the map to prevent them from withering.", "adv": "", "items": [{"name": "Crystalheart Seed", "img": "images/items/crystalheart-seed.png"}, {"name": "Soulvine Seed", "img": "images/items/soulvine-seed.png"}, {"name": "Tearbloom Seed", "img": "images/items/tearbloom-seed.png"}], "abilities": [{"name": "Spirit Transfer Start/Stop", "img": "images/abilities/ability-template.png"}]},
 {"name": "Hannah", "img": "images/kits/hannah.webp", "cls": "Fighter", "tiers": {"casual": "S", "ranked": "A"}, "diff": "easy", "hp": "90", "desc": "Activate your Execute ability to defeat a nearby enemy with low health! Hannah's base health is reduced by 10%.", "adv": "", "items": [], "abilities": []},
@@ -425,6 +446,29 @@ function fusCard(k,f){
              : '<div class="fp"><div class="th"><span class="ph">?</span></div>'+esc(on)+'</div>';
   return '<div class="fus"><div class="fpair">'+me+'<span class="plus">+</span>'+ot+'</div>'+(f.note?'<p>'+esc(f.note)+'</p>':'')+'</div>';
 }
+function chgIcon(type,sz){
+  sz = sz||36; var c = {buff:["#8ff5bf","#1fae6a"],nerf:["#ff9aab","#d6304f"],bal:["#ffe08a","#e0a81f"]}[type] || ["#ccc","#888"], id = "cg"+type+sz;
+  var g = type==="buff" ? '<path d="M12 5.2 18.4 12.6H14.4V18.8H9.6V12.6H5.6Z" fill="#fff"/>' : type==="nerf" ? '<path d="M12 18.8 5.6 11.4H9.6V5.2H14.4V11.4H18.4Z" fill="#fff"/>' : '<rect x="5.5" y="10" width="13" height="4" rx="2" fill="#fff"/>';
+  return '<svg class="chg" width="'+sz+'" height="'+sz+'" viewBox="0 0 24 24" aria-hidden="true"><defs><linearGradient id="'+id+'" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="'+c[0]+'"/><stop offset="1" stop-color="'+c[1]+'"/></linearGradient></defs><circle cx="12" cy="12" r="11" fill="url(#'+id+')" stroke="#fff" stroke-width="1.5"/>'+g+'</svg>';
+}
+var HTYPE = {buff:"Buff",nerf:"Nerf",bal:"Balanced"};
+function hval(v,old){
+  var m = /^(\d+)\s*(iron|emeralds?)$/i.exec(String(v).trim());
+  if(m){ var cur = m[2].toLowerCase().charAt(0)==='e' ? 'emerald' : 'iron';
+    return '<div class="cost '+cur+(old?' old':'')+'"><img src="images/currency/'+cur+'.png" alt=""><b>'+m[1]+' '+(cur==='emerald'?(m[1]==='1'?'emerald':'emeralds'):'iron')+'</b></div>'; }
+  return '<span class="hval'+(old?' old':'')+'">'+esc(v)+'</span>';
+}
+function histHtml(k){
+  var hs = k.history||[];
+  var h = '<div class="hkey">'+["buff","nerf","bal"].map(function(t){return '<span>'+chgIcon(t,20)+HTYPE[t]+'</span>';}).join("")+'</div>';
+  if(!hs.length) return h+'<p class="muted">No balance changes recorded for this kit yet.</p>';
+  return h+'<div class="hist">'+hs.map(function(e){
+    return '<div class="hent">'+chgIcon(e.type)+'<div class="hbody"><div class="htop"><span class="htag t-'+esc(e.type)+'">'+(HTYPE[e.type]||"Change")+'</span>'+(e.date?'<span class="hdate">'+esc(e.date)+'</span>':'')+'</div>'+
+      (e.title?'<div class="htitle">'+esc(e.title)+'</div>':'')+
+      (e.from||e.to?'<div class="hchange">'+(e.from?hval(e.from,true):'')+(e.from&&e.to?'<span class="harrow">→</span>':'')+(e.to?hval(e.to,false):'')+'</div>':'')+
+      (e.note?'<p class="hnote">'+esc(e.note)+'</p>':'')+'</div></div>';
+  }).join("")+'</div>';
+}
 function costHtml(n){
   var m = /^Cost:\s*(\d+)\s*(iron|emeralds?)\s*$/i.exec(n);
   if(!m) return '<div class="cond">'+esc(n)+'</div>';
@@ -480,7 +524,7 @@ function renderDetail(){
     '<div class="stat wide"><span>Balance</span>'+balBadge(k)+'</div>'+
     (k.diff ? '<div class="stat"><span>Difficulty</span><b>'+dm(k.diff)+DN[k.diff]+'</b></div>' : '')+'</div>'+
     '</div><div><div class="row"><h2>'+esc(k.name)+'</h2><button class="btn" data-act="close">Back to all kits</button></div>';
-  h += '<div class="tabs">'+[["info","Overview"],["abil","Abilities and items"],["fus","Best fusions"]].map(function(t){
+  h += '<div class="tabs">'+[["info","Overview"],["abil","Abilities and items"],["fus","Best fusions"],["hist","Balance History"]].map(function(t){
     return '<button class="tab'+(S.tab===t[0]?' on':'')+'" data-tab="'+t[0]+'">'+t[1]+'</button>';}).join("")+'</div>';
   if(S.tab==="info"){
     h += '<p>'+esc(k.desc)+'</p>'+(k.adv?'<h3>Advanced description</h3><p style="white-space:pre-line">'+esc(k.adv)+'</p>':'');
@@ -509,6 +553,8 @@ function renderDetail(){
       h += mk("Special abilities","a",abs,0)+mk("Special items","i",its,abs.length?22:0)+'<div class="adet" style="margin-top:20px">'+abCard(pick.a,pick.label)+'</div>'+
         (any ? '<p class="muted" style="margin-top:16px">DPS = damage × hits ÷ cooldown.</p>' : '');
     }
+  }else if(S.tab==="hist"){
+    h += histHtml(k);
   }else{
     var f = FUSIONS.filter(function(x){return x.a===k.name||x.b===k.name;});
     h += f.length ? f.map(function(x){return fusCard(k,x);}).join("") : '<p class="muted">No fusions listed for this kit yet.</p>';

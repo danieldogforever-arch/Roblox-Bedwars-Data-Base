@@ -2330,7 +2330,16 @@
     "img": "images/items/gargoyle-statue-giant.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Recent",
+    "title": "Small Gargoyle Statue cost",
+    "from": "1 emerald",
+    "to": "50 iron"
+   }
+  ]
  },
  {
   "name": "Grim Reaper",
