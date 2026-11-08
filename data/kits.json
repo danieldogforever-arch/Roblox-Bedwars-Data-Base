@@ -129,7 +129,12 @@
      "Scarab armor: 75% → 0%"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Adetunde",
@@ -634,7 +639,13 @@
      ]
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 3 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s3.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Agni",
@@ -769,7 +780,14 @@
      "Cluster Bombs now apply burn damage"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 10 Battle Pass",
+   "tier": "10",
+   "badge": "images/bp/s10.webp",
+   "rent": 2000,
+   "buy": 10000
+  }
  },
  {
   "name": "Alchemist",
@@ -964,7 +982,13 @@
      "Increased Ingredients spawning speed"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 4 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s4.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Arachne",
@@ -1278,7 +1302,12 @@
      "Tactical Crossbow damage: 60 → 50"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Ares",
@@ -1462,7 +1491,13 @@
      "Spears now have a max stack size of 10"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 2 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s2.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Axolotl Amy",
@@ -1665,7 +1700,12 @@
      "Break speed axolotl price (3 ems → 1 em)"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Baker",
@@ -1864,7 +1904,12 @@
      "Apple heal: 20 → 30"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Barbarian",
@@ -2078,7 +2123,12 @@
      "Reduced diamond and emerald sword rage requirements"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Beekeeper Beatrix",
@@ -2406,7 +2456,13 @@
      "Fixed Beekeeper spawning too many emeralds"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 1 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s1.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Bekzat",
@@ -2590,7 +2646,14 @@
      "Increase bird damage 10 → 14"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 10 Battle Pass",
+   "tier": "40",
+   "badge": "images/bp/s10.webp",
+   "rent": 2000,
+   "buy": 10000
+  }
  },
  {
   "name": "Bounty Hunter",
@@ -2827,7 +2890,13 @@
      "Raised upper limit on bounty rewards"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 1 Battle Pass",
+   "tier": "16 (free)",
+   "badge": "images/bp/s1.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Builder",
@@ -3059,7 +3128,12 @@
      "Slightly increased upgrade cost"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Caitlyn",
@@ -3314,7 +3388,13 @@
      "You can now discard your active contract after 1 minute"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 7 Battle Pass",
+   "tier": "50",
+   "badge": "images/bp/s7.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Cobalt",
@@ -3377,7 +3457,13 @@
      "Shield 15 → 10"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 5 Battle Pass",
+   "tier": "30",
+   "badge": "images/bp/s5.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Cogsworth",
@@ -3480,7 +3566,13 @@
      "Increased size of Overlock zap attack"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 9 Battle Pass",
+   "tier": "30",
+   "badge": "images/bp/s9.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Conqueror",
@@ -3617,7 +3709,13 @@
      "Heal Banner’s healing per second reduced (10% → 8%)"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 4 Battle Pass",
+   "tier": "40 (free)",
+   "badge": "images/bp/s4.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Crocowolf",
@@ -3719,7 +3817,13 @@
      "Knockback multiplier: 1.5 → 1.4"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 4 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s4.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Crypt",
@@ -3963,7 +4067,12 @@
      "Drone HP: 60 → 15"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Death Adder",
@@ -4038,7 +4147,12 @@
      "Decreased Tier 3 explosion power"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Dino Tamer Dom",
@@ -4317,7 +4431,13 @@
      "Drill damage scaled over time: 30 → 40 → 50 at 0m/5m/10m"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 7 Battle Pass",
+   "tier": "10 (free)",
+   "badge": "images/bp/s7.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Eldertree",
@@ -4495,7 +4615,12 @@
      "Fixed starting health: 104 → 100"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Eldric",
@@ -4808,7 +4933,13 @@
      "Recharge speed: +50%"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 8 Battle Pass",
+   "tier": "50",
+   "badge": "images/bp/s8.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Ember",
@@ -4985,7 +5116,12 @@
      "Spin damage radius: 6 blocks → 5 blocks"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Evelynn",
@@ -5267,7 +5403,12 @@
      "You can no longer break your teammates' crops"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Fisherman",
@@ -5495,7 +5636,13 @@
      "You can now catch a new coral block, which is stronger than obsidian"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 2 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s2.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Flora",
@@ -5617,7 +5764,13 @@
      "Seeking bee armor pen: 0% → 20%"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 7 Battle Pass",
+   "tier": "20",
+   "badge": "images/bp/s7.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Fortuna",
@@ -5763,7 +5916,13 @@
      "Increased time to unlock new cards"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 8 Battle Pass",
+   "tier": "35",
+   "badge": "images/bp/s8.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Freiya",
@@ -5920,7 +6079,12 @@
      "Amplified slow length: 1s → 2.5s"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Frosty",
@@ -5972,7 +6136,13 @@
      "Buffed snowball spawn rate"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 3 Battle Pass",
+   "tier": "40 (free)",
+   "badge": "images/bp/s3.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Gingerbread Man",
@@ -6045,7 +6215,13 @@
      "Enemies break gumdrop at 20% speed"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 3 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s3.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Gompy",
@@ -6133,7 +6309,13 @@
      "Ghost damage: 90 damage → 60 damage with 40% armor penetration"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 2 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s2.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Gregory",
@@ -6171,7 +6353,12 @@
      "Swift Gargoyle Statue price changed from 1 emerald to 50 Iron"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Halloween Battle Pass 2026",
+   "tier": "35",
+   "rent": 2000
+  }
  },
  {
   "name": "Grim Reaper",
@@ -6247,7 +6434,12 @@
      "Removed delay when consuming souls"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Grove",
@@ -6377,7 +6569,12 @@
      "Flowers are no longer affected by teammate’s fireballs"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Hannah",
@@ -6404,7 +6601,12 @@
      "Max HP: 100 → 90"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Hephaestus",
@@ -6596,7 +6798,14 @@
      "Void Chainsaw: 55 → 58"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 10 Battle Pass",
+   "tier": "50",
+   "badge": "images/bp/s10.webp",
+   "rent": 2000,
+   "buy": 10000
+  }
  },
  {
   "name": "Ignis",
@@ -6693,7 +6902,13 @@
      "Shield amount: -40%"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 8 Battle Pass",
+   "tier": "25",
+   "badge": "images/bp/s8.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Infernal Shielder",
@@ -6865,7 +7080,12 @@
      "Shield slowness: 40% → 25%"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Isabel",
@@ -6919,7 +7139,10 @@
      "Reduced cooldown on shield regeneration 30s → 20s"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Free kit"
+  }
  },
  {
   "name": "Jack",
@@ -7013,7 +7236,13 @@
      "Lowered blob lifetime: 30s → 20s"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 2 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s2.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Jade",
@@ -7141,7 +7370,13 @@
      "No longer has access to telepearls"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 1 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s1.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Kaida",
@@ -7375,7 +7610,12 @@
      "Summon horizontal and vertical range increased"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Kaliyah",
@@ -7536,7 +7776,13 @@
      "Fixed players breaking after being punched"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 6 Battle Pass",
+   "tier": "50",
+   "badge": "images/bp/s6.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Krystal",
@@ -7634,7 +7880,11 @@
      "Increased overall momentum gain"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Holiday Bundle 2024",
+   "rent": 2500
+  }
  },
  {
   "name": "Lani",
@@ -7729,7 +7979,13 @@
      "Aura duration: 3s → 4s"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 6 Battle Pass",
+   "tier": "15 (free)",
+   "badge": "images/bp/s6.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Lassy",
@@ -7810,7 +8066,12 @@
      "Lasso disables all movement abilities for 7 seconds (Jade, Void Regent and Yuzi)"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Lian",
@@ -7862,7 +8123,12 @@
      "Decreased Fire Dragon Sword ability cooldown 3s → 2s"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Lucía",
@@ -7977,7 +8243,13 @@
      "Gain candy 20% faster"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 5 Battle Pass",
+   "tier": "5",
+   "badge": "images/bp/s5.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Lumen",
@@ -8123,7 +8395,12 @@
      "Upgraded wave damage: 25 → 34"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Lyla",
@@ -8235,7 +8512,12 @@
      "Small nerf to the flower crossbow"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Marcel",
@@ -8278,7 +8560,10 @@
      "Now Gets discount on Tesla Coils: 65 Iron →50 Iron"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Free kit"
+  }
  },
  {
   "name": "Marina",
@@ -8393,7 +8678,12 @@
      "Restricted jellyfish placement, see bug fixes for more information"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Marrow",
@@ -8496,7 +8786,12 @@
      "Martin's healing behavior has been adjusted: Instead of healing 1 HP every tick, he now receives larger chunks of healing less frequently. The total healing remains the same."
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Melody",
@@ -8677,7 +8972,12 @@
      "You now heal yourself for 20% of the healing you give"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Merchant Marco",
@@ -8969,7 +9269,13 @@
      "Loot reduced by 15%"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 4 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s4.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Milo",
@@ -9073,7 +9379,12 @@
      "Hidden from Fortuna, Tesla Traps, Necromancer Skeletons, Taliyah Chickens, Gloop, Diamond Guardians, Radioactive Plants, and other Milos"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Miner",
@@ -9174,7 +9485,12 @@
      "Resources from kill: +35%"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Nahla",
@@ -9276,7 +9592,12 @@
      "Projectile cooldown while holding 0.75s -> 0.6s"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Nazar",
@@ -9359,7 +9680,12 @@
      "Consume max healing capped at 40 lifeforce or 32 health per use."
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Noelle",
@@ -9503,7 +9829,13 @@
      "Decreased max damage buff on Void Slime: 22% → 20% increased damage"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 9 Battle Pass",
+   "tier": "40",
+   "badge": "images/bp/s9.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Nyoka",
@@ -9606,7 +9938,14 @@
      "Heal tick rate 0.25s → 0.3s"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 10 Battle Pass",
+   "tier": "30",
+   "badge": "images/bp/s10.webp",
+   "rent": 2000,
+   "buy": 10000
+  }
  },
  {
   "name": "Nyx",
@@ -9742,7 +10081,13 @@
      "Ability damage requirement: 200 → 140"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 4 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s4.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Pirate Davey",
@@ -9889,7 +10234,12 @@
      "Cannon fires twice while only consuming one TNT"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Pyro",
@@ -10002,7 +10352,13 @@
      "Fire damage upgrades: [40%, 80%, 150%] → [60%, 100%, 200%]"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 1 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s1.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Ragnar",
@@ -10103,7 +10459,10 @@
      "Stacks are consumed on damage taken, once all stacks are consumed Ragnar will take knockback again"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Free kit"
+  }
  },
  {
   "name": "Ramil",
@@ -10192,7 +10551,12 @@
      "Moving Sandstorm duration 10s → 8s"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Raven",
@@ -10319,7 +10683,13 @@
      "Poison tick damage: 5 regular damage → 3 true damage (ignores armor)"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 1 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s1.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Santa",
@@ -10397,7 +10767,13 @@
      "Decreased delay between Santa Strafe ability activation and TNT drop 4s → 2s"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 3 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s3.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Sheep Herder",
@@ -10472,7 +10848,13 @@
      "Damage per sheep: 6.5% → 7%"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 4 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s4.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Sheila",
@@ -10603,7 +10985,11 @@
      "Stacks for killing enemies: 100 flat → 0 to 100 based on enemy time alive (max at 30s)"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Holiday Bundle 2022",
+   "rent": 2500
+  }
  },
  {
   "name": "Sigrid",
@@ -10780,7 +11166,11 @@
      "Charge hit damage reduced: 18 → 8"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Holiday Bundle 2023",
+   "rent": 2500
+  }
  },
  {
   "name": "Silas",
@@ -10882,7 +11272,12 @@
      "The shield no longer scales based on triumph stacks"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Skoll",
@@ -10945,7 +11340,12 @@
      "Mark damage multiplier 1.25 → 1.15"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Smoke",
@@ -11003,7 +11403,13 @@
      "Smoke Bomb Consume time: 1.5 → 0.5"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 3 Battle Pass",
+   "tier": "25",
+   "badge": "images/bp/s3.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Sophia",
@@ -11079,7 +11485,11 @@
      "Higher-tier staffs spray faster (0.2s → 0.18s → 0.16s)"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Holiday Bundle 2025",
+   "rent": 2500
+  }
  },
  {
   "name": "Spirit Catcher",
@@ -11245,7 +11655,13 @@
      "Spirits now have a max stack size of 10"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 1 Battle Pass",
+   "tier": "45 (free)",
+   "badge": "images/bp/s1.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Star Collector Stella",
@@ -11477,7 +11893,14 @@
      "Entrance portal block health increased"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 10 Battle Pass",
+   "tier": "20",
+   "badge": "images/bp/s10.webp",
+   "rent": 2000,
+   "buy": 10000
+  }
  },
  {
   "name": "Taliyah",
@@ -11782,7 +12205,13 @@
      "Blocks now reduce incoming damage by 10 or 25% of the incoming attack damage, whichever is greater"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 9 Battle Pass",
+   "tier": "50",
+   "badge": "images/bp/s9.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Trapper",
@@ -11927,7 +12356,13 @@
      "Trap cost: 20 iron → 16 iron"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 2 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s2.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Trinity",
@@ -12032,7 +12467,12 @@
      "Void form healing: 15% → 12%"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Triton",
@@ -12117,7 +12557,12 @@
      "Harpoon no longer needs to be charged before throwing"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Trixie",
@@ -12177,7 +12622,12 @@
      "Increase cooldown on warp ability: 8s → 10s"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Uma",
@@ -12225,7 +12675,12 @@
      "Uma no longer slows down when using spirit staff"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Umbra",
@@ -12366,7 +12821,13 @@
      "Invulnerability duration: 3 seconds → 2 seconds"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 7 Battle Pass",
+   "tier": "35",
+   "badge": "images/bp/s7.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Umeko",
@@ -12469,7 +12930,13 @@
      "Increased chakram speed"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 9 Battle Pass",
+   "tier": "15",
+   "badge": "images/bp/s9.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Vanessa",
@@ -12553,7 +13020,12 @@
      "Increased triple shot charge time when using a crossbow"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Void Knight",
@@ -12622,7 +13094,12 @@
      "When killing a Void Knight, you'll now get a bounty relative to their Void Knight progress (this is more of a bug fix, but it results in a nerf)"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Void Regent",
@@ -12865,7 +13342,12 @@
      "Turret max distance: +25%"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Warden",
@@ -12969,7 +13451,13 @@
      "Spawn time increased by 1 second"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 6 Battle Pass",
+   "tier": "45 (free)",
+   "badge": "images/bp/s6.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Warrior",
@@ -13090,7 +13578,13 @@
      "Emerald armor is cheaper for Warrior: 40 emeralds → 35 emeralds"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 1 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s1.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Whim",
@@ -13276,7 +13770,13 @@
      "Sword damage reduction: 50% → 35%"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 6 Battle Pass",
+   "tier": "25",
+   "badge": "images/bp/s6.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Whisper",
@@ -13554,7 +14054,12 @@
      "Black Market is now unbreakable by teammates"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Xu'rot",
@@ -13671,7 +14176,13 @@
      "Dragon breath energy cost: 5 → 0"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 6 Battle Pass",
+   "tier": "35",
+   "badge": "images/bp/s6.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Yamini",
@@ -13736,7 +14247,13 @@
      "Increased size of Pounce swipe attack"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 9 Battle Pass",
+   "tier": "20",
+   "badge": "images/bp/s9.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Yeti",
@@ -13795,7 +14312,13 @@
      "Range: 4 blocks → 3.5 blocks"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 3 Battle Pass",
+   "tier": null,
+   "badge": "images/bp/s3.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Yuzi",
@@ -13898,7 +14421,12 @@
      "Reduced damage range of Yuzi's dash attack (movement distance is the same)"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Zarrah",
@@ -14005,7 +14533,12 @@
      "Increase Gun shot damage from 50% Current sword damage → 100% Current sword damage"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Zenith",
@@ -14130,7 +14663,12 @@
      "Base shop price increase: 50% → 35%"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Zeno",
@@ -14289,7 +14827,12 @@
      "Lightning Storm: a flurry of Lightning Strikes that deals damage over time in an area"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Zephyr",
@@ -14414,6 +14957,13 @@
     "name": "Soul Link",
     "img": "images/abilities/ability-template.png"
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Easter Battle Pass 2026",
+   "tier": "20 (paid) / 40 (free)",
+   "badge": "images/bp/easter-2026.webp",
+   "buy": 10000,
+   "rent": 1500
+  }
  }
 ]
