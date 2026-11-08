@@ -1297,7 +1297,7 @@
   "counter": [
    {
     "title": "Shoot the Falcon",
-    "text": "Always target the Falcon when you have a projectile weapon. This decreases Bekzat's damage by 60%, which makes him very weak for that time."
+    "text": "Always target the Falcon when you have a projectile weapon. If you kill it, Bekzat can't use it to target anyone, so he loses the +60% crit damage and becomes very weak for that time."
    },
    {
     "title": "The Falcon is easy to kill",
