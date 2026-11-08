@@ -1341,7 +1341,8 @@
     "name": "Hunting Time",
     "img": "images/abilities/ability-template.png",
     "nodps": true,
-    "desc": "Marks your target on the map, but your target sees your mark too, so they know you are hunting them. Gives bonuses depending on your level: level 1 +5% damage to your target, level 2 +10%, level 3 the same damage plus +75% movement speed, level 4 the same as level 3 plus 10% less damage taken from and dealt to everyone who isn't your target while active."
+    "desc": "Lasts 15 seconds. Marks your target on the map, but your target sees your mark too, so they know you are hunting them. Gives bonuses depending on your level: level 1 +5% damage to your target, level 2 +10%, level 3 the same damage plus +75% movement speed, level 4 the same as level 3 plus 10% less damage taken from and dealt to everyone who isn't your target while active.",
+    "cd": 30
    },
    {
     "name": "Reroll",
@@ -1408,6 +1409,11 @@
       "1 (instead of iron)"
      ],
      [
+      "2 - 3 min",
+      "30 - 60",
+      "Unknown"
+     ],
+     [
       "3 - 6 min",
       "about 40",
       "1 - 2"
@@ -1428,7 +1434,7 @@
       "10 - 15"
      ]
     ],
-    "note": "These are estimates, not exact numbers. They don't include the double rewards from level 5."
+    "note": "These are estimates, not exact numbers. The 2 - 3 minute iron range is a rough guess. They don't include the double rewards from level 5."
    }
   ],
   "strategy": [
