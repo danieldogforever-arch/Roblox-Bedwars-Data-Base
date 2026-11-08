@@ -1475,7 +1475,7 @@
     "name": "Health Regen Axolotl",
     "img": "images/items/health-regen-axolotl.png",
     "note": "Cost: 5 emeralds",
-    "desc": "Heals you and your teammates by 1% HP for 12 ticks, with 0.45 seconds between ticks. Activates when you take damage below 50% HP. 9 block radius.",
+    "desc": "Heals you and your teammates by 1% HP every 0.55 seconds for 5 seconds (about 9 ticks). Activates when you take damage below 50% HP. 9 block radius.",
     "cd": 5
    }
   ],
