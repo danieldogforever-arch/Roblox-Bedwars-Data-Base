@@ -58,7 +58,8 @@ button:focus-visible,#q:focus-visible{outline:3px solid var(--accent);outline-of
 .slot.on{color:#fff}
 .slot:hover .aico{border-color:var(--line)}
 .slot span{display:block;margin-top:6px;overflow-wrap:anywhere}
-.dleft{position:sticky;top:20px;align-self:start}
+.dleft{position:sticky;top:20px;align-self:start;max-height:calc(100vh - 40px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin;padding-right:4px}
+@media(max-width:780px){.dleft{position:static;max-height:none;overflow:visible}}
 .dleft .stats{grid-template-columns:repeat(2,minmax(0,1fr));margin:16px 0 0}
 .dleft .stat{min-width:0}
 .dleft .stat b,.dleft .cbtn{font-size:1.15rem;overflow-wrap:anywhere}
