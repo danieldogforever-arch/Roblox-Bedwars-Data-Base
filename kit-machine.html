@@ -49,7 +49,23 @@ button:focus-visible,#q:focus-visible{outline:3px solid var(--accent);outline-of
 .card .dm{position:absolute;top:2px;right:2px;margin:0;width:16px;height:16px;z-index:1}
 .easy{--c:#5fe3a1}.moderate{--c:#ffd166}.hard{--c:#ff6b81}.extreme{--c:#a98bff}
 .dgrid{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:28px}
-@media(max-width:780px){.dgrid{grid-template-columns:1fr}}
+@media(max-width:780px){.dgrid{grid-template-columns:minmax(0,1fr)}}
+.dgrid>*{min-width:0}
+.row h2{min-width:0;overflow-wrap:break-word}
+.row .btn{flex:none;white-space:nowrap}
+@media(max-width:560px){
+  .wrap{padding-left:12px;padding-right:12px}
+  .box{padding:16px}
+  .tabs{gap:4px 18px}
+  .tab{font-size:1.05rem}
+  .row .btn{padding:6px 12px;font-size:.95rem}
+  .dleft{padding-right:0}
+  .ptable{font-size:.9rem}
+  .ptable th,.ptable td{padding:6px 5px}
+  .ptable td:first-child{white-space:normal}
+  .ptable .ticon{display:block;margin:0 0 4px}
+}
+html,body{overflow-x:hidden}
 .pic{aspect-ratio:1;border:4px solid #fff;background:var(--card);display:flex;align-items:center;justify-content:center;font-size:6rem}
 .cap{text-align:center;margin-top:8px;color:var(--muted);min-height:1.5em}
 .picwrap{position:relative}
