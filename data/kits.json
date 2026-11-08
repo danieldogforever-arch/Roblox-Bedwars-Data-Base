@@ -2171,17 +2171,24 @@
       "74%",
       "13%",
       "12.5%"
+     ],
+     [
+      "15",
+      "2s",
+      "74%",
+      "12%",
+      "14%"
      ]
     ],
-    "note": "Each drop is 1 iron, 1 diamond or 1 emerald. Chances were measured from tests with 5 hives over 2 minutes 30 seconds, so they are estimates. Emeralds jump from about 4% to about 12% at 8 bees. A hive doesn't drop any faster after 10 bees, so a new hive is more beneficial."
+    "note": "Each drop is 1 iron, 1 diamond or 1 emerald. Chances were measured from our own tests with 5 hives, so they are estimates. Emeralds jump from about 4% to about 12% at 8 bees. A hive doesn't drop any faster after 10 bees. Going from 10 to 15 bees may raise the emerald chance a little (about 11% → 14% in our 5 minute test), but that difference could be luck."
    }
   ],
   "bal": "bal",
   "balWhy": "It gives a lot of loot, but it's risky to use because the hive can be found and broken if you or your teammates aren't there to protect it.",
   "strategy": [
    {
-    "title": "Don't go past 10 bees",
-    "text": "Don't put more than 10 bees in a hive. Making a new hive is more beneficial."
+    "title": "Fill hives to 10 bees first",
+    "text": "Get each hive to 10 bees before adding more, because making a new hive is more beneficial than going past 10. Once all 5 hives have 10 bees, you can add extra bees up to 15 per hive, which may slightly raise your emerald chance."
    },
    {
     "title": "Escape and slow chasers",
