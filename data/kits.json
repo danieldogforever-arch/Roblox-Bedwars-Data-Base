@@ -1481,7 +1481,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Fortify blocks with extra health and blast protection using the Builder's hammer. Purchase the Hammer from the Item Shop.",
-  "adv": "Builder spawns with a Builder Hammer and 8 Stone Bricks. With the hammer you can upgrade blocks using iron or emeralds. Upgraded (reinforced) blocks are blast resistant and have 60% more durability, which makes them harder to break.\nIt takes about 8 TNT to break a single reinforced stone brick, while the other reinforced blocks still get one shot by TNT. Siege TNT still one shots, but it destroys fewer blocks when they are reinforced than when they aren't.\nThe hammer can also upgrade other kits' items, like Beekeeper Beatrix's Beehives.\nThe Bridge Printer is bought in the shop. Use the hammer and click the printer source to turn it on or off, and it stretches out blocks (see the Bridge Printer details).",
+  "adv": "Builder spawns with a Builder Hammer and 8 Stone Bricks. The Stone Bricks are normal, so you still need to upgrade them. With the hammer you can upgrade blocks using iron or emeralds. Upgraded (reinforced) blocks are blast resistant and have 60% more durability, which makes them harder to break.\nIt takes about 8 TNT to break a single reinforced stone brick, while the other reinforced blocks still get one shot by TNT. Siege TNT still one shots, but it destroys fewer blocks when they are reinforced than when they aren't.\nThe hammer can also upgrade other kits' items, like Beekeeper Beatrix's Beehives.\nThe Bridge Printer is bought in the shop. Use the hammer and click the printer source to turn it on or off, and it stretches out blocks (see the Bridge Printer details).\nFun fact: the official kit description says to buy the Hammer from the Item Shop, but that is out of date. Builder used to need to buy it, and now spawns with it.",
   "items": [
    {
     "name": "Hammer",
@@ -1570,6 +1570,16 @@
    {
     "name": "Nutcracker Skin",
     "img": "images/skins/builder-nutcracker.webp"
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Defend your bed early",
+    "text": "Place your Stone Bricks around your bed as an early game defense, then upgrade them."
+   },
+   {
+    "title": "Use Bridge Printers as traps",
+    "text": "Use Bridge Printers as traps, or to troll your teammates or enemies by suffocating them or voiding them."
    }
   ]
  },
