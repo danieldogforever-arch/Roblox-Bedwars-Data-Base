@@ -1594,14 +1594,127 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Fulfill assassination contracts to empower your attacks with a deadly decay.",
-  "adv": "",
+  "adv": "Caitlyn's attacks apply decay, which deals 2 damage per second for 2 seconds. Hitting an enemy that is already decaying makes the decay 25% stronger per hit, up to double the base damage at 4 total hits. Contracts upgrade the decay so it hits harder, lasts longer, and gets special effects.\nPress R to open the contracts menu. It shows the stats of her Dark Decay (duration, damage and bonus effects) and three random players with their team color, armor type and distance in blocks. Pick one to assassinate and upgrade your ability. The target is highlighted in red, so you can see where they are, until they are killed (teammates can help) or you reject the contract, which you can do once every minute.\nBetter armor on the target gives better upgrades. Sometimes a special contract appears on a player with diamond armor or higher, and completing it gives your decay a special effect. The upgrade and its amount are shown on the contract screen. Amounts are random and scale with the target's armor and how long the game has gone on.",
   "items": [],
   "abilities": [
    {
     "name": "Open Contracts",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "nodps": true,
+    "desc": "Press R to open the contracts menu. Choose one of 3 random players to assassinate and upgrade your decay. Reject the current contract once every minute."
    }
-  ]
+  ],
+  "tables": [
+   {
+    "title": "Contract upgrades",
+    "head": [
+     "Upgrade",
+     "What it does",
+     "Max"
+    ],
+    "rows": [
+     [
+      "Target Damage",
+      "More damage to your current target",
+      "25%"
+     ],
+     [
+      "Armor Penetration",
+      "How much of your decay ignores armor",
+      "75%"
+     ],
+     [
+      "Damage",
+      "More decay damage per tick",
+      "+10"
+     ],
+     [
+      "Duration",
+      "Longer decay",
+      "+5s"
+     ]
+    ]
+   },
+   {
+    "title": "Special contracts",
+    "head": [
+     "Effect",
+     "What it does",
+     "Appears when"
+    ],
+    "rows": [
+     [
+      "img:images/classes/support.png|Silence",
+      "Healing on decaying enemies is reduced by 75%",
+      "The target has diamond armor or higher and a Support kit"
+     ],
+     [
+      "img:images/classes/movement.png|Thrill of the Hunt",
+      "+15% move speed when moving toward decaying enemies",
+      "The target has diamond armor or higher and a Movement kit"
+     ],
+     [
+      "img:images/classes/tank.png|Dark Insight",
+      "Heal for 50% of the decay damage you deal",
+      "The target has diamond armor or higher and a Tank kit"
+     ],
+     [
+      "img:images/icons/decay.png|Assassin's Instinct",
+      "Decay deals double damage to your active target",
+      "The target has diamond armor or higher and is also a Caitlyn"
+     ],
+     [
+      "img:images/classes/economy.png|Bounty",
+      "Killing your target gives you 2 emeralds",
+      "The target has diamond armor or higher and an Economy kit"
+     ],
+     [
+      "img:images/icons/eye.png|Focus",
+      "You take and deal +25% damage with your active target",
+      "Passive: you get it whenever you select a target"
+     ],
+     [
+      "img:images/icons/diamond-helmet.png|Vulnerable",
+      "Decaying enemies take +10% damage from all sources",
+      "Any player in the server has diamond armor or higher, any kit"
+     ]
+    ],
+    "note": "Special contracts only have a chance to appear. Except for Focus, they depend on the target's kit and armor. Info is from the wiki, not our own testing."
+   }
+  ],
+  "passives": [
+   {
+    "name": "Dark Decay",
+    "when": "Hitting enemies",
+    "desc": "Applies decay: 2 damage per second for 2 seconds. Each extra hit on a decaying enemy adds 25% strength, up to double damage at 4 hits."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Upgrade duration and damage",
+    "text": "Focus on the decay duration and decay damage upgrades, or just choose the player nearest to you if they are close."
+   },
+   {
+    "title": "Get the Fire enchant",
+    "text": "Always get the Fire enchant to deal a ton of tick damage."
+   },
+   {
+    "title": "Early crossbow",
+    "text": "Focus on getting a crossbow early to make your life easier."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Don't feed a diamond Caitlyn",
+    "text": "Try not to die to a Caitlyn with diamond armor, as you might give her a special contract."
+   },
+   {
+    "title": "Block after the first hit",
+    "text": "Caitlyn relies heavily on hitting multiple shots, so if you get hit once, build a wall to stop getting hit again."
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "It's only good in Ranked 5v5s, and even there it has fallen off a bit. In every other mode it's very weak, and it's very late game prone, which most games don't reach. It needs a rework."
  },
  {
   "name": "Cobalt",
