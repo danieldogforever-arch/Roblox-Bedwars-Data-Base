@@ -1334,16 +1334,133 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Get assigned bounties for killing certain players in the match. Completing a bounty rewards a random amount of resources.",
-  "adv": "",
+  "adv": "A random player in the server is your target. Hunting Time marks your target on the map, but your target also sees your mark, so they know where you are and that they are your target. They can't see the mark if you don't click Hunting Time. You can reroll your target (random) every 60 seconds.\nKilling your bounty rewards iron and emeralds, but no diamonds, and the reward scales with how long the game has been going. If you hit your bounty and your teammate kills them, you get the reward too (there is a 5 to 10 second leeway).\nAfter you get a new bounty you have to wait 30 seconds before you can get another one, and that timer starts when you reroll. So if you reroll and kill your target quickly, you still wait out the 30 seconds. If you reroll and don't kill them within 30 seconds, then kill them after that, your next bounty appears right away and the 30 second timer starts again.\nYou level up by killing your bounty, and each level upgrades Hunting Time (see the level table).",
   "items": [],
   "abilities": [
    {
     "name": "Hunting Time",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "nodps": true,
+    "desc": "Marks your target on the map, but your target sees your mark too, so they know you are hunting them. Gives bonuses depending on your level: level 1 +5% damage to your target, level 2 +10%, level 3 the same damage plus +75% movement speed, level 4 the same as level 3 plus 10% less damage taken from and dealt to everyone who isn't your target while active."
    },
    {
     "name": "Reroll",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 60,
+    "nodps": true,
+    "desc": "Changes your target to a different random player. The 30 second wait before your next bounty starts when you reroll."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Bounty levels",
+    "head": [
+     "Level",
+     "Bounty kills needed",
+     "Level up reward",
+     "Hunting Time"
+    ],
+    "rows": [
+     [
+      "1",
+      "-",
+      "-",
+      "+5% damage to your target"
+     ],
+     [
+      "2",
+      "2",
+      "50 iron",
+      "+10% damage to your target"
+     ],
+     [
+      "3",
+      "2",
+      "2 emeralds",
+      "+10% damage to your target and +75% movement speed (1.75x)"
+     ],
+     [
+      "4",
+      "3",
+      "4 emeralds",
+      "Same as level 3, plus you take 10% less damage and deal 10% less damage to everyone who isn't your target while it's active"
+     ],
+     [
+      "5",
+      "5",
+      "-",
+      "No new Hunting Time, but every target gives double rewards"
+     ]
+    ],
+    "note": "Bounty kills needed is the number of bounty kills to reach that level from the level before it."
+   },
+   {
+    "title": "Bounty rewards by game time",
+    "head": [
+     "Game time",
+     "Iron",
+     "Emeralds"
+    ],
+    "rows": [
+     [
+      "0 - 2 min",
+      "1 - 40",
+      "1 (instead of iron)"
+     ],
+     [
+      "3 - 6 min",
+      "about 40",
+      "1 - 2"
+     ],
+     [
+      "6 - 10 min",
+      "50 - 80",
+      "1 - 3"
+     ],
+     [
+      "10 - 15 min",
+      "125 - 250",
+      "4 - 8"
+     ],
+     [
+      "15 - 20 min",
+      "300+",
+      "10 - 15"
+     ]
+    ],
+    "note": "These are estimates, not exact numbers. They don't include the double rewards from level 5."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Don't use Hunting Time early",
+    "text": "Don't activate Hunting Time early in the game. It does no damage, so it only tells your opponent that they are your target."
+   },
+   {
+    "title": "Use it from level 3",
+    "text": "Use Hunting Time once you reach level 3 for the good speed boost. You can use it to run away from fights, not only to catch up to your target."
+   },
+   {
+    "title": "Get a crossbow fast",
+    "text": "Save up for a crossbow as soon as you can. It helps you get to your targets really quickly."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Reset before you get hit",
+    "text": "If you know you are the target and haven't been hit, try resetting before the Bounty Hunter hits you so you don't feed."
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "It's really good in modes with fewer people, and a bit worse in modes with more people.",
+  "skins": [
+   {
+    "name": "OG Chroma Skin",
+    "img": "images/skins/bounty-hunter-og-chroma.webp"
+   },
+   {
+    "name": "Wanderer Skin",
+    "img": "images/skins/bounty-hunter-wanderer.webp"
    }
   ]
  },

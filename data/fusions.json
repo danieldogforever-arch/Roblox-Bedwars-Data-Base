@@ -110,11 +110,6 @@
   "note": ""
  },
  {
-  "a": "Baker",
-  "b": "Bounty Hunter",
-  "note": ""
- },
- {
   "a": "Barbarian",
   "b": "Grim Reaper",
   "note": ""
@@ -147,6 +142,16 @@
  {
   "a": "Bekzat",
   "b": "Bounty Hunter",
+  "note": ""
+ },
+ {
+  "a": "Bounty Hunter",
+  "b": "Jade",
+  "note": ""
+ },
+ {
+  "a": "Bounty Hunter",
+  "b": "Baker",
   "note": ""
  }
 ]
