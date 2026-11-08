@@ -1197,29 +1197,119 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Summon a mythical falcon to dominate an area. Work in tandem to critically strike your companion's target with your feather light bows",
-  "adv": "",
+  "adv": "Bekzat's bows are Featherlight, so there is no slowdown while charging a shot. Shots deal normal bow damage, unless the Falcon is targeting the player you are shooting, then you deal increased damage.\nThe Falcon flies around the enemy it is targeting and attacks every 5 seconds. Its damage and HP go up as you buy better Featherlight bows (see the Falcon tiers table). With the Summon Falcon ability you can target any enemy within 60 blocks by aiming and clicking on them, and once it is out you can recall it with Recall Falcon.\nIf a player damages the Falcon, it won't heal unless you recall it, and then it heals 6% HP every second. If a player kills the Falcon, you have to wait 5 seconds before it starts recharging, and only once it is at half charge can you summon it again.",
   "items": [
    {
     "name": "Featherlight Headhunter",
-    "img": "images/items/featherlight-headhunter.png"
+    "img": "images/items/featherlight-headhunter.png",
+    "note": "Cost: 25 emeralds",
+    "desc": "No slowdown while charging. Upgrades the Falcon to tier 3: 20 damage and 250 HP."
    },
    {
     "name": "Featherlight Crossbow",
-    "img": "images/items/featherlight-crossbow.png"
+    "img": "images/items/featherlight-crossbow.png",
+    "note": "Cost: 8 emeralds",
+    "desc": "No slowdown while charging. Upgrades the Falcon to tier 2: 18 damage and 200 HP."
    },
    {
     "name": "Featherlight Bow",
-    "img": "images/items/featherlight-bow.png"
+    "img": "images/items/featherlight-bow.png",
+    "note": "Cost: 32 iron",
+    "desc": "No slowdown while charging. Upgrades the Falcon to tier 1: 16 damage and 150 HP."
    }
   ],
   "abilities": [
    {
     "name": "Summon Falcon",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 5,
+    "nodps": true,
+    "desc": "Aim and click on any enemy within 60 blocks to send the Falcon after them. It flies around the enemy and attacks every 5 seconds. If it is killed, it starts recharging after 5 seconds, and you can only summon it again once it is at half charge."
    },
    {
     "name": "Recall Falcon",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 3,
+    "nodps": true,
+    "desc": "Calls the Falcon back to you. While recalled it heals 6% HP every second. A Falcon that was damaged won't heal unless you recall it."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Falcon tiers",
+    "head": [
+     "Tier",
+     "Unlocked by",
+     "Damage",
+     "HP"
+    ],
+    "rows": [
+     [
+      "0",
+      "No bow",
+      "14",
+      "100"
+     ],
+     [
+      "1",
+      "Featherlight Bow",
+      "16",
+      "150"
+     ],
+     [
+      "2",
+      "Featherlight Crossbow",
+      "18",
+      "200"
+     ],
+     [
+      "3",
+      "Featherlight Headhunter",
+      "20",
+      "250"
+     ]
+    ],
+    "note": "The Falcon attacks every 5 seconds. While it is targeting an enemy, you get +60% critical strike damage against that enemy."
+   }
+  ],
+  "passives": [
+   {
+    "name": "Featherlight",
+    "when": "Charging a bow",
+    "desc": "There is no slowdown while charging a shot."
+   },
+   {
+    "name": "Falcon Focus",
+    "when": "Shooting the enemy your Falcon is targeting",
+    "desc": "You get +60% critical strike damage against them."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Only send the Falcon when you have a target",
+    "text": "Make sure to only have the Falcon out when you are targeting someone, otherwise it will be killed easily."
+   },
+   {
+    "title": "Use the bow",
+    "text": "Most kits aren't worth buying a bow for, but Bekzat doesn't need to charge it, so he gets the highest amount of damage out of it."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Shoot the Falcon",
+    "text": "Always target the Falcon when you have a projectile weapon. This decreases Bekzat's damage by 60%, which makes him very weak for that time."
+   },
+   {
+    "title": "The Falcon is easy to kill",
+    "text": "Killing the Falcon isn't that hard, so Bekzat is good but not uncounterable."
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "It costs a bit more to use, but the Falcon gives great stalling chip damage and he has really high projectile damage. The Falcon isn't that hard to kill, which keeps him good but not uncounterable.",
+  "skins": [
+   {
+    "name": "Sailor Skin",
+    "img": "images/skins/bekzat-sailor.webp"
    }
   ]
  },
