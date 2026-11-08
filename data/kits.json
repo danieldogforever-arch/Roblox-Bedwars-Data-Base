@@ -116,6 +116,18 @@
     "changes": [
      "Scarab health now only starts decreasing once the spawner disappears or moves out of range"
     ]
+   },
+   {
+    "type": "bal",
+    "date": "Jun 30, 2025",
+    "title": "",
+    "changes": [
+     "Scarab health per level: [70, 90, 100, 110] → [140, 165, 190, 220]",
+     "Scarab movement speed per level: [12, 12, 17, 17] → [15, 17, 20, 22]",
+     "Scarab damage per level: [2, 3, 3, 4] → [2, 4, 6, 8]",
+     "Scarab & Hive first level upgrade cost: 80 iron → 40 iron",
+     "Scarab armor: 75% → 0%"
+    ]
    }
   ]
  },
@@ -251,6 +263,138 @@
     "title": "",
     "changes": [
      "Shield max cap set to 50"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 14, 2025",
+    "title": "",
+    "changes": [
+     "Hammer nolonger applies an attack cooldown when you miss",
+     "Hammer Damage:",
+     "T1: 28 → 30",
+     "T2: 38 → 40",
+     "T3: 50 → 52",
+     "Increased blizzard hitbox: 4 → 6 blocks",
+     "Increased permafrost explosion hitbox: 7 → 8 blocks",
+     "T3 Attack Speed: .26 → .25",
+     "Crystal Drop Rate: 70% → 80%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 22, 2025",
+    "title": "",
+    "changes": [
+     "Increased Frost Crystal cost for Level III upgrades 10 → 12",
+     "Decreased attack speed for Level I Attack Speed 0.3s → 0.32s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 8, 2025",
+    "title": "",
+    "changes": [
+     "Slam damage 35 → 32",
+     "Damage per level 30, 40, 52 → 28, 38, 50"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 25, 2025",
+    "title": "",
+    "changes": [
+     "Slam Down Ability no longer fully breaks Stone Brick",
+     "Reduced frost crystal drop chance: 90% → 70%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 30, 2025",
+    "title": "",
+    "changes": [
+     "Decreased Frost Crystals saved on death from 40% → 20% (always rounding up)"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 9, 2025",
+    "title": "",
+    "changes": [
+     "Upgrade Costs",
+     "Level 1: 2 → 3",
+     "Level 2: 5 → 7",
+     "Level 3: 10 → 12",
+     "Damage Upgrade",
+     "Base Damage: 25 → 24",
+     "Level 1 Damage: 32 → 30",
+     "Level 3 Damage: 55 → 52",
+     "Keep 40% of crystals"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "May 2, 2025",
+    "title": "",
+    "changes": [
+     "Crystal drop rate chances scale linearly with the damage ratio (instead of fixed 90% drop rate)",
+     "Removed crystal drop cooldown",
+     "A shield is only gained at 90% or more of a maximum power hammer swing",
+     "Shield upgrades per level changed: 2, 3, 4 → 2, 4, 6"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 28, 2024",
+    "title": "",
+    "changes": [
+     "Decreased hammer damage Lv 1: 35 → 32, Lv 2: 44 → 40, Lv 3: 60 → 55",
+     "Decreased chance of earning a crystal on-hit 95% → 90%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 14, 2024",
+    "title": "",
+    "changes": [
+     "Increased Frosty Hammer cooldown per Attack Speed upgrade [0.3s, 0.27s, 0.22s] → [0.3s, 0.28s, 0.26s]"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 19, 2024",
+    "title": "",
+    "changes": [
+     "Adetunde can no longer increase his shield by attacking non-player entities"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 15, 2023",
+    "title": "",
+    "changes": [
+     "Frost Crystal drop cooldown 1.2s → 0.8s",
+     "Frost Crystal drop chance 90% → 95%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 20, 2023",
+    "title": "",
+    "changes": [
+     "Increased chance of dropping frost crystals 80% → 90%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 18, 2023",
+    "title": "",
+    "changes": [
+     "Ice Shard drop rate 70% → 80%",
+     "Ice Shard drop cooldown 1.5s → 1.2s",
+     "Frosty Hammer level 1 damage: 30 → 35",
+     "Frosty Hammer level 1 shield: 1 → 2",
+     "Frosty Hammer level 2 shield: 2 → 3"
     ]
    },
    {
@@ -417,6 +561,36 @@
     ]
    },
    {
+    "type": "bal",
+    "date": "Oct 17, 2025",
+    "title": "",
+    "changes": [
+     "Spawn camping cooldown reduced: 30s → 25s",
+     "Butterfly stacks now boost all damage but are 70% less effective on non-sword attacks",
+     "Aery now loses a higher percentage of stacks at higher stacks:",
+     "0–9 stacks: lose 15%",
+     "10–19: 15% → 20%",
+     "20–29: 15% → 25%",
+     "30+: 15% → 33%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 26, 2024",
+    "title": "",
+    "changes": [
+     "Lose stacks on death: 5% → 15%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 19, 2024",
+    "title": "",
+    "changes": [
+     "Aery will lose 5% of her Butterfly Stacks on death if she has more than 20 stacks"
+    ]
+   },
+   {
     "type": "nerf",
     "date": "Dec 9, 2022",
     "title": "",
@@ -504,6 +678,68 @@
     "title": "",
     "changes": [
      "Decreased time to get a new cluster bomb: 40s → 35s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 13, 2025",
+    "title": "",
+    "changes": [
+     "Increased rocket jump cooldown: 10s → 13s",
+     "Decreased cluster bomb direct hit damage: 24 → 18",
+     "Decreased mini cluster bomb damage: 16 → 12"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 17, 2025",
+    "title": "",
+    "changes": [
+     "Now has an indicator for when the next cluster bomb will be received"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 11, 2024",
+    "title": "",
+    "changes": [
+     "Decreased rocket jump cooldown: 12s → 10s",
+     "Decreased interval for receiving cluster bombs: 45s → 40s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 13, 2024",
+    "title": "",
+    "changes": [
+     "Reduced Rocket Boost cooldown 15s → 12s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 14, 2024",
+    "title": "",
+    "changes": [
+     "Decreased Cluster Bomb knockback on direct hits by 50%",
+     "Decreased Rocket Jump ability knockback by ~30%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 31, 2024",
+    "title": "",
+    "changes": [
+     "reduced cluster bomb knockback",
+     "increase price 35→45"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 17, 2024",
+    "title": "",
+    "changes": [
+     "Rocket Boost now applies burn damage",
+     "Cluster Bombs now apply burn damage"
     ]
    }
   ]
@@ -637,6 +873,61 @@
     ]
    },
    {
+    "type": "bal",
+    "date": "Jan 30, 2026",
+    "title": "",
+    "changes": [
+     "Collectible spawn rates now scale with map size: larger maps spawn more, smaller maps spawn less"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 22, 2024",
+    "title": "",
+    "changes": [
+     "Slightly increased ingredients spawn rate",
+     "reduced slow when trying to use heal, sleep and poison potion"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 9, 2024",
+    "title": "",
+    "changes": [
+     "Healing Potion no longer heals enemy players",
+     "Increased potion throw distance"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Apr 19, 2024",
+    "title": "",
+    "changes": [
+     "Increased number of ingredients spawned at the start of the match 10 → 15",
+     "Increased time before ingredients disappear 60s → 90s",
+     "Increased Poison splash potion duration 3.5s → 5s",
+     "Increased max stack size for Heal splash potion 2 → 3",
+     "Increased max stack size for Sleep splash potion 2 → 3"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 8, 2023",
+    "title": "",
+    "changes": [
+     "Increased potion ingredient spawn rate"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 27, 2023",
+    "title": "",
+    "changes": [
+     "Mini Shield Potion replaced with Big Shield Potion",
+     "Increased radius of Heal Splash Potion and Poison Splash Potion by 50%"
+    ]
+   },
+   {
     "type": "buff",
     "date": "Mar 3, 2023",
     "title": "",
@@ -719,6 +1010,37 @@
    {
     "title": "Don't touch the webs",
     "text": "Touching the webs makes you anti-cheat so badly that it's pretty much an automatic death."
+   }
+  ],
+  "history": [
+   {
+    "type": "bal",
+    "date": "Nov 28, 2025",
+    "title": "",
+    "changes": [
+     "Added timer on when spiders will dissapear",
+     "Added stack counter for spider level",
+     "Fix spiders not leveling up with assist kills"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 31, 2025",
+    "title": "",
+    "changes": [
+     "Improved spider AI",
+     "Increased spider jumping distance"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 28, 2025",
+    "title": "",
+    "changes": [
+     "Spider max health Cap : 70 → 80",
+     "Spider max damage Cap: 14 → 15",
+     "Web ability cast range: 15 blocks → 17 blocks"
+    ]
    }
   ]
  },
@@ -834,6 +1156,41 @@
    }
   ],
   "history": [
+   {
+    "type": "nerf",
+    "date": "May 30, 2025",
+    "title": "",
+    "changes": [
+     "Tactical Crossbow Arrow Damage 44 → 38",
+     "Tactical Headhunter Arrow Damage 63 → 60"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Mar 28, 2025",
+    "title": "",
+    "changes": [
+     "Can now headshot with any projectile",
+     "Reduced projectile damage bonus: 20% → 12.5%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 17, 2023",
+    "title": "",
+    "changes": [
+     "Tactical Crossbow damage: 50 → 42",
+     "Tactical Headhunter damage: 70 → 60"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 3, 2023",
+    "title": "",
+    "changes": [
+     "Increased projectile damage buff +15% → +16%"
+    ]
+   },
    {
     "type": "buff",
     "date": "Jul 21, 2023",
@@ -995,6 +1352,50 @@
    },
    {
     "type": "buff",
+    "date": "Sep 19, 2025",
+    "title": "",
+    "changes": [
+     "Spear price: 40 → 35 iron",
+     "Spear armor piercing: 1.35 → 1.4",
+     "Free spear cooldown: 60s → 40s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 2, 2025",
+    "title": "",
+    "changes": [
+     "Now gets a spear for free every 60 seconds"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 6, 2024",
+    "title": "",
+    "changes": [
+     "If you kill a player with a Spear you will get a Spear back"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 30, 2024",
+    "title": "",
+    "changes": [
+     "Spears now have 35% armor penetration",
+     "Spear stack size increased 8 → 10",
+     "Spears now deal damage to non-player entities"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 18, 2023",
+    "title": "",
+    "changes": [
+     "Spear now applies Zapped status to enemies for 5s"
+    ]
+   },
+   {
+    "type": "buff",
     "date": "Sep 30, 2022",
     "title": "",
     "changes": [
@@ -1137,6 +1538,81 @@
   ],
   "history": [
    {
+    "type": "buff",
+    "date": "May 2, 2025",
+    "title": "",
+    "changes": [
+     "Health regen duration: 4s → 5s",
+     "Health regen tick rate: 0.6s → 0.55s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 25, 2025",
+    "title": "",
+    "changes": [
+     "Regen duration 5s → 4s",
+     "Regen tick rate 0.4s → 0.6s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 17, 2025",
+    "title": "",
+    "changes": [
+     "Increased Shield provided by Shield Axolotl 10 → 15"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 20, 2024",
+    "title": "",
+    "changes": [
+     "Break speed axolotl increased 40% → 60%",
+     "Prices decreased (Shield 50 iron → 40, Damage 100 iron → 90, Break 2 emerald → 1, Regen 6 emerald → 5)"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 31, 2024",
+    "title": "",
+    "changes": [
+     "Increase break speed axolotl multiplier 1.2 → 1.4"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 5, 2024",
+    "title": "Season X",
+    "changes": [
+     "Removed dependence on Eras to buy more axolotls",
+     "Shield Axolotl cost: 30 iron → 50 iron",
+     "Damage Axolotl cost: 60 iron → 100 iron",
+     "Break Speed Axolotl cost: 80 iron → 2 emeralds",
+     "Health Regen Axolotl cost: 4 emeralds → 6 emeralds"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 19, 2024",
+    "title": "",
+    "changes": [
+     "Shield axolotl shield increased 6 → 10",
+     "Break speed axolotl price reduced 1 emerald → 80 iron",
+     "Health regen axolotl price reduced 6 emerald → 4 emerald"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 18, 2023",
+    "title": "",
+    "changes": [
+     "Shield Axolotl bonus: 8 → 6",
+     "Health regen Axolotl cooldown: 0.2s → 0.4s",
+     "Break damage Axolotl bonus: 1.4x → 1.2x"
+    ]
+   },
+   {
     "type": "nerf",
     "date": "Mar 31, 2023",
     "title": "",
@@ -1248,6 +1724,57 @@
    }
   ],
   "history": [
+   {
+    "type": "nerf",
+    "date": "Oct 17, 2025",
+    "title": "",
+    "changes": [
+     "Apple Consume Time: 1 → .8",
+     "Golden Apple Consume Time: .5 → 1",
+     "Golden Apple Instant Heal: 40 → 30",
+     "Speed Pie Duration: 125 → 100 sec"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 2, 2025",
+    "title": "",
+    "changes": [
+     "Increased the consume time of apples: 0.8s → 1s",
+     "Decreased the max stack size of apples and golden apples: 4 → 3"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Nov 22, 2024",
+    "title": "",
+    "changes": [
+     "Spawns with a knockback baguette",
+     "Increased knockback of knockback baguette",
+     "Golden Apple damage reduction 15% → 5%",
+     "Golden Apple health regen per tick 10hp → 5hp",
+     "Golden Apple price 6 emeralds → 3 emeralds"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Oct 25, 2024",
+    "title": "",
+    "changes": [
+     "Speed Pie speed multiplier: 1.24x → 1.275x",
+     "Speed Pie duration: 150s → 125s",
+     "Apple heal: 18 → 20 health"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 3, 2023",
+    "title": "",
+    "changes": [
+     "Decreased speed pie price 3 emeralds → 2 emeralds",
+     "Decreased golden apple price 7 emeralds → 6 emeralds"
+    ]
+   },
    {
     "type": "nerf",
     "date": "Feb 24, 2023",
@@ -1421,6 +1948,49 @@
     "title": "",
     "changes": [
      "Increased rage gain if enemy gear is stronger than barbarian, up to 50%"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Sep 5, 2025",
+    "title": "",
+    "changes": [
+     "Barbarian now loses all progress on the current sword tier, but can not drop below the current sword, except if the current sword is a Rageblade"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 18, 2025",
+    "title": "",
+    "changes": [
+     "Lose less rage at lower sword tiers",
+     "Rebalanced a wide range of kits to adjust for the combat changes."
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 30, 2025",
+    "title": "",
+    "changes": [
+     "Reduced Rage gained from damage by 10%"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "May 3, 2024",
+    "title": "",
+    "changes": [
+     "Lowered rage requirements for swords",
+     "Reduced rage by half for projectiles"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 2, 2024",
+    "title": "",
+    "changes": [
+     "Lower rage required to upgrade to a diamond sword 750 → 700",
+     "Lower rage required to upgrade to an iron sword 325 → 300"
     ]
    },
    {
@@ -1652,6 +2222,99 @@
     ]
    },
    {
+    "type": "bal",
+    "date": "Jan 30, 2026",
+    "title": "",
+    "changes": [
+     "Collectible spawn rates now scale with map size: larger maps spawn more, smaller maps spawn less"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 16, 2026",
+    "title": "",
+    "changes": [
+     "Decreased bee spawn interval"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 14, 2025",
+    "title": "",
+    "changes": [
+     "Beekeepers who place a hive will get it back if they break it",
+     "Bees now have a pulsing effect, to make them easier to find"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 31, 2025",
+    "title": "",
+    "changes": [
+     "Slightly decreased chance of getting emeralds"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jan 24, 2025",
+    "title": "",
+    "changes": [
+     "Can now place a maximum of 5 Beehives",
+     "Each bee added to a beehive after 6 bees will significantly increase the drop rate of emeralds, up to 15 bees"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 3, 2025",
+    "title": "",
+    "changes": [
+     "Teammates can no longer break beehives"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 28, 2024",
+    "title": "",
+    "changes": [
+     "Decreased emerald drop chance"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 31, 2024",
+    "title": "",
+    "changes": [
+     "Slightly reduced chance drop emerald & diamond"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 3, 2024",
+    "title": "",
+    "changes": [
+     "Decrease spawn interval time: 45s→40s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 5, 2024",
+    "title": "Season X",
+    "changes": [
+     "Beehive generator cooldown: 8 seconds → 10 seconds"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 18, 2023",
+    "title": "",
+    "changes": [
+     "Initial spawned bees count: 3 → 4",
+     "Bee spawn over time: 2 → 3 bees every 45s",
+     "Increased max range for bee collection prompt",
+     "Decreased hold duration required for bee collection and deposit"
+    ]
+   },
+   {
     "type": "buff",
     "date": "Jun 9, 2023",
     "title": "",
@@ -1839,6 +2502,53 @@
     "name": "Sailor Skin",
     "img": "images/skins/bekzat-sailor.webp"
    }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Aug 8, 2025",
+    "title": "",
+    "changes": [
+     "Bow damage multiplier on falcon targets 1.5 → 1.6"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 28, 2025",
+    "title": "",
+    "changes": [
+     "Bird Health now scales with Bekzat’s weapon",
+     "Base: 100 health",
+     "Feather-light Bow: +40 max health (140)",
+     "Feather-light Crossbow: +80 max health (180)",
+     "Feather-light Headhunter: +120 max health (220)",
+     "Bird Damage now scales with Bekzat’s weapon",
+     "Base: 14 damage",
+     "Feather-light Bow: +2 damage (16)",
+     "Feather-light Crossbow: +4 damage (18)",
+     "Feather-light Headhunter: +6 damage (20)"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 22, 2024",
+    "title": "",
+    "changes": [
+     "reduced price for Feather light weapons",
+     "Falconer bow: 36 Iron → 32 Iron",
+     "Falconer Crossbow: 9 Emerald → 8 Emerald",
+     "Falconer HeadHunter: 27 Emerald → 25 Emerald"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 31, 2024",
+    "title": "",
+    "changes": [
+     "Decrease bird attack cooldown 5-8s → 3-6s",
+     "Increase bird damage 10 → 14"
+    ]
+   }
   ]
  },
  {
@@ -2010,6 +2720,71 @@
      "On level 4: Get 4 Emerald, get 10% damage reduction against other players while ability is active",
      "On level 5: Get 8 Emerald, Double all Bounty Reward"
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 13, 2026",
+    "title": "",
+    "changes": [
+     "Assists payout 50% of bounty rewards (rounded values)"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 12, 2025",
+    "title": "",
+    "changes": [
+     "Adjusted scaling + loot table values"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 13, 2025",
+    "title": "",
+    "changes": [
+     "Reroll Cooldown: 120 → 45 seconds",
+     "Buffed diamond and emerald reward scaling. Especially in the early game"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 14, 2025",
+    "title": "",
+    "changes": [
+     "Increased reward growth rate by 20%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 3, 2025",
+    "title": "",
+    "changes": [
+     "Added Reroll Bounty ability to switch bounty targets with a 120 second cooldown."
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 6, 2024",
+    "title": "",
+    "changes": [
+     "Can reroll your target after 60 seconds"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Feb 16, 2024",
+    "title": "",
+    "changes": [
+     "Bounty rewards now scale over time"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 12, 2024",
+    "title": "",
+    "changes": [
+     "Raised upper limit on bounty rewards"
+    ]
    }
   ]
  },
@@ -2126,6 +2901,73 @@
    }
   ],
   "history": [
+   {
+    "type": "buff",
+    "date": "Sep 19, 2025",
+    "title": "",
+    "changes": [
+     "Max block health multiplier 1.5x → 1.6x"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 31, 2025",
+    "title": "",
+    "changes": [
+     "Increased fortification defense against explosions (should be close to what it was before the TNT buff)"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 22, 2024",
+    "title": "",
+    "changes": [
+     "Reinforcing blocks instantly heals them to full"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 9, 2024",
+    "title": "",
+    "changes": [
+     "Now starts the game with Hammer item"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 15, 2024",
+    "title": "",
+    "changes": [
+     "Increase auto bridge scaffold distance (20 blocks → 25 blocks)",
+     "Decrease drawbridge block cost (40 iron → 18 iron)"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 19, 2024",
+    "title": "",
+    "changes": [
+     "Increased cost to fortify blastproof blocks 1.50 → 1.75 times the cost of the block",
+     "Increased cost to fortify non-blastproof blocks 2.25 → 2.50 times the cost of the block"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 20, 2023",
+    "title": "",
+    "changes": [
+     "Start the game with 8 stone brick"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 29, 2023",
+    "title": "",
+    "changes": [
+     "Fortified block blast resistance multiplier: 1.45 → 1.65",
+     "Fortified blocks will not burn"
+    ]
+   },
    {
     "type": "buff",
     "date": "Jul 7, 2023",
@@ -2313,6 +3155,99 @@
   "history": [
    {
     "type": "nerf",
+    "date": "Jan 16, 2026",
+    "title": "",
+    "changes": [
+     "Vulnerable damage: 12% → 10%",
+     "Decay initial duration: 3s → 2s",
+     "Active target damage boost: 30% → 25%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 11, 2025",
+    "title": "",
+    "changes": [
+     "Reduced the bonus to decay damage upgrades from armor effectiveness"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 11, 2025",
+    "title": "",
+    "changes": [
+     "Contract delay time 30s → 40s",
+     "Max bleed stacks 4 → 3",
+     "Max bleed duration 6s → 5s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 14, 2025",
+    "title": "",
+    "changes": [
+     "Reduce contract reward scaling from higher tier targets",
+     "Reduced Target Damage Cap: 40% → 30%",
+     "Reduced Armor Pen Cap: 100% → 75%",
+     "Vulnerable Perk: 15% → 12% bonus damage against decayed enemies"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 17, 2025",
+    "title": "",
+    "changes": [
+     "Reduced instances where her Decay was activated by other damage over time sources or caused other damage over time sources to be re-activated on Decay damage taken",
+     "Reduced the increase in Decay damage per kill from 0.75 → 0.5",
+     "Reduced the increase in Decay duration per kill from 0.6 → 0.5",
+     "Reduced the maximum Decay duration from 10s → 6s",
+     "Reduced damage boost toward active contract target from 6% → 5%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 28, 2024",
+    "title": "",
+    "changes": [
+     "Slightly decrease contract upgrade scaling"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 17, 2024",
+    "title": "",
+    "changes": [
+     "Contract upgrades scale 1.5x faster"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Apr 19, 2024",
+    "title": "",
+    "changes": [
+     "Increased rewards for completing more difficult contracts"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 24, 2023",
+    "title": "",
+    "changes": [
+     "Base decay damage: 4 → 2",
+     "Reduced contract rewards"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 1, 2023",
+    "title": "",
+    "changes": [
+     "Increased base decay damage 2→ 4",
+     "Increased upgrade scaling"
+    ]
+   },
+   {
+    "type": "nerf",
     "date": "Jun 9, 2023",
     "title": "",
     "changes": [
@@ -2373,6 +3308,14 @@
      "No longer gives a damage buff",
      "Still has speed boost",
      "Duration increased: 6s → 8s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 11, 2023",
+    "title": "",
+    "changes": [
+     "Shield health gain from battery 8 → 12"
     ]
    },
    {
@@ -2444,6 +3387,57 @@
      "Gatherbot damage applies knockback",
      "Gatherbot movement speed increased: 1.75x → 1.85x"
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 30, 2026",
+    "title": "",
+    "changes": [
+     "Bots have better pathfinding and no longer get stuck"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 8, 2024",
+    "title": "",
+    "changes": [
+     "Overclock Cooldown: 22s → 20s",
+     "Overclock Damage Per Tick Increased: 5 → 7",
+     "Dimmy-X1 Health: 100 → 150 health",
+     "Emmy-Z2 Health: 150 → 200 health"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 9, 2024",
+    "title": "",
+    "changes": [
+     "Now starts the game with a Dimmy-X1 Gather Bot"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 29, 2024",
+    "title": "",
+    "changes": [
+     "Emerald and Diamond duplication chance: 50% → 60%",
+     "Overlock ability cooldown: 25 → 22 seconds"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 24, 2023",
+    "title": "",
+    "changes": [
+     "Added 50% chance to duplicate diamonds and emeralds picked up by robots",
+     "Added red outline to robots when enemies are nearby",
+     "Can now pickup resources from your robots",
+     "Emmy-Z2 now deposits emeralds in the personal chest",
+     "Cost of Dimmy-X1: 60 iron → 50 iron",
+     "Overclock cooldown: 30s → 25s",
+     "Overclock damage: 4 → 5",
+     "Increased size of Overlock zap attack"
+    ]
    }
   ]
  },
@@ -2481,6 +3475,80 @@
     "title": "",
     "changes": [
      "Healing banner’s healing reduced by 5% for each teammate in area"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 13, 2026",
+    "title": "",
+    "changes": [
+     "Damage, Heal, and Defense Banners now have a maximum stack size of 3",
+     "Reduced healing on Heal Banner: 17.5% per tick → 13% per tick"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Dec 12, 2025",
+    "title": "",
+    "changes": [
+     "Banner price: 50 iron→ 60 iron"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 28, 2025",
+    "title": "",
+    "changes": [
+     "Flag block health: 40 → 80",
+     "Heal Banner:  15% → 18% of missing health",
+     "Heal Banner: Added minimum heal amount (5)"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 8, 2024",
+    "title": "",
+    "changes": [
+     "Conqueror bug fix gives buff to the closest 4 allies instead of only the closest",
+     "Conqueror flag radius increased: 16.5 blocks -> 19 blocks",
+     "Healing Banner increased healing: 13% -> 15%"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "May 3, 2024",
+    "title": "",
+    "changes": [
+     "Decreased flag buff duration: 7s→5s",
+     "Increased flag buff radius: 40->50",
+     "Only 4 players at a time closest to the flag will receive buffs"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 1, 2024",
+    "title": "",
+    "changes": [
+     "Flag buff duration: 3 → 7"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Oct 27, 2023",
+    "title": "",
+    "changes": [
+     "Decreased healing banner percent healing 15% missing health → 12.5% missing health"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 8, 2023",
+    "title": "",
+    "changes": [
+     "Flag radius: 10 → 13.5 blocks",
+     "Flag buff duration: 2s → 3s",
+     "Flag lifetime: 15s → 30s",
+     "Healing Flag percentage of missing health restored per tick: 12% → 15%"
     ]
    },
    {
@@ -2540,6 +3608,48 @@
      "When the Bloodlust gauge is full use your ability to transform into Beast Form",
      "Can cancel Beast Form early to maintain some Bloodlust",
      "Get full Bloodlust when your bed is broken"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 27, 2026",
+    "title": "",
+    "changes": [
+     "Increased beast duration: 6 mins → 7 mins"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 12, 2025",
+    "title": "",
+    "changes": [
+     "Beast damage multiplier: 1.2x → 1.25x",
+     "Beast duration: 7 minutes → 6 minutes"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 31, 2024",
+    "title": "",
+    "changes": [
+     "Increase damage buff after bed destroyed 15% → 20%"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Oct 13, 2023",
+    "title": "",
+    "changes": [
+     "Increased damage buff 5% → 15%",
+     "Decreased buff duration 10m → 7m"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 29, 2023",
+    "title": "",
+    "changes": [
+     "Increased speed buff 200% → 225%"
     ]
    },
    {
@@ -2640,6 +3750,34 @@
     ]
    },
    {
+    "type": "nerf",
+    "date": "Jul 25, 2025",
+    "title": "",
+    "changes": [
+     "Max skeletons 6 → 5"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 6, 2023",
+    "title": "",
+    "changes": [
+     "Skeletons now have a 50% chance to survive after Crypt dies"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 8, 2023",
+    "title": "",
+    "changes": [
+     "Skeleton health: 100 → 125",
+     "Skeleton lifetime: 60s → 120s",
+     "Skeleton damage: +10%",
+     "Max placed skeleton count: 5 → 6",
+     "Gravestones appear closer to the map center when a player dies to the void"
+    ]
+   },
+   {
     "type": "buff",
     "date": "Feb 24, 2023",
     "title": "",
@@ -2689,6 +3827,44 @@
    }
   ],
   "history": [
+   {
+    "type": "bal",
+    "date": "Jul 11, 2025",
+    "title": "",
+    "changes": [
+     "No longer receives free drone at the start of the match",
+     "Drone cost changed 50 iron → 40 iron"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 14, 2024",
+    "title": "",
+    "changes": [
+     "Increased drone speed boost duration 3s → 4s",
+     "Increased drone health 15 → 20",
+     "Decreased drone price 60 iron → 50 iron"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 17, 2024",
+    "title": "",
+    "changes": [
+     "Start match with a drone",
+     "Drone base speed 1.4 → 1.5",
+     "Drone boosted speed 1.8 → 1.85",
+     "Drone speed boost cooldown 13s → 12s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 1, 2024",
+    "title": "",
+    "changes": [
+     "Added a speed boost ability to drones with a 13 second cooldown"
+    ]
+   },
    {
     "type": "nerf",
     "date": "Jun 30, 2023",
@@ -2766,6 +3942,61 @@
     "name": "Charge Explosive Comet",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Jul 25, 2025",
+    "title": "",
+    "changes": [
+     "Ability block damage increased for Tier 3 & 4 (Now does significant damage to obsidian)"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 13, 2025",
+    "title": "",
+    "changes": [
+     "Fixed not being able to reach Tier 5 Ability",
+     "Buffed Tier 5 explosion power to now be able to damage obsidian blocks"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Feb 14, 2025",
+    "title": "",
+    "changes": [
+     "Added 2 new tiers to smooth out the power of the tiers. (Tier 4 and 5)",
+     "Tier 5 is slightly stronger than previous tier 3",
+     "Player damage increased across all tiers"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 3, 2025",
+    "title": "",
+    "changes": [
+     "Explosive Comet base damage increased 5/8/15 → 8/14/22"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 20, 2024",
+    "title": "",
+    "changes": [
+     "Crystal spawn rate increased by 33%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 13, 2024",
+    "title": "",
+    "changes": [
+     "Decreased crystal spawn rate",
+     "Decreased knockback on Tier 2 and Tier 3 explosions",
+     "Decreased Tier 3 explosion power"
+    ]
+   }
   ]
  },
  {
@@ -2805,6 +4036,47 @@
      "Charge I can no longer break blastproof blocks.",
      "Charge II damage radius: 9 → 8 blocks",
      "Charge II explosion power: 12 → 11"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Nov 28, 2025",
+    "title": "",
+    "changes": [
+     "Charging with the Dino past a 2.5 seconds will have higher destructive damage with indicator",
+     "Dino cost reduced:  75 -> 60 iron",
+     "Dino charge attack trigger range increased: 1 block -> 2 blocks",
+     "Slight Dino destructive decrease if triggered under 2.5s, but increased destructiveness after 2.5s",
+     "Weapons can no longer be used while using the Dino's charge attack"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 17, 2025",
+    "title": "",
+    "changes": [
+     "Decreased Dino price 100 → 75 iron"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 3, 2025",
+    "title": "",
+    "changes": [
+     "Charge duration reduced 10 → 5s",
+     "Charge speed reduced 300% → 250%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 8, 2024",
+    "title": "",
+    "changes": [
+     "Dino Summon Time: 3s → 2s",
+     "Dino item is no longer consumed on use or unmount",
+     "Dino charge cooldown reduced: 60s → 50s",
+     "Dino Tamer Dom now gains a 10% move speed bonus while mounted",
+     "Dino Item Cost Increased: 80 → 100 iron"
     ]
    },
    {
@@ -2893,6 +4165,87 @@
    },
    {
     "type": "buff",
+    "date": "Oct 17, 2025",
+    "title": "",
+    "changes": [
+     "Removed purchase limit for drills",
+     "Reduced hitbox"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 28, 2025",
+    "title": "",
+    "changes": [
+     "Increased drill out of combat heal speed"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 8, 2024",
+    "title": "",
+    "changes": [
+     "Drill attack range increased 25% horizontally and 50% vertically"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 27, 2024",
+    "title": "",
+    "changes": [
+     "Increased max number of drills 3 → 4",
+     "Increased early-game drill health 400 → 450",
+     "Increased mid-game drill health 600 → 750",
+     "Increased late-game drill health 800 → 900"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 13, 2024",
+    "title": "",
+    "changes": [
+     "Drills now have a 25% chance to triple generator drops"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 17, 2024",
+    "title": "",
+    "changes": [
+     "Increased drill damage scaling over time: 30 → 32, 40 → 45, 50 → 58 at 0m/5m/10m",
+     "Fixed drills being locked in the item shop when destroyed"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 5, 2024",
+    "title": "Season X",
+    "changes": [
+     "Drill cost: 2 emeralds → 3 emeralds",
+     "Max drills on the map per player: 3"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Mar 29, 2024",
+    "title": "",
+    "changes": [
+     "Drill health increases as the match goes on.",
+     "Early game hp: 600 → 400",
+     "Mid game hp: 600",
+     "Late game hp: 800"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 3, 2023",
+    "title": "",
+    "changes": [
+     "Increased drill health 500hp → 600hp"
+    ]
+   },
+   {
+    "type": "buff",
     "date": "Jul 14, 2023",
     "title": "",
     "changes": [
@@ -2963,6 +4316,73 @@
     "title": "",
     "changes": [
      "Slightly increased the number of orbs that spawn at the start of a match"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jan 30, 2026",
+    "title": "",
+    "changes": [
+     "Collectible spawn rates now scale with map size: larger maps spawn more, smaller maps spawn less"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 16, 2026",
+    "title": "",
+    "changes": [
+     "Initial orb spawns: 5 → 4",
+     "Max health per orb decreased"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 2, 2026",
+    "title": "",
+    "changes": [
+     "Vertical knockback reduction reduced: 5% per orb → 1% per orb, max of 15%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 12, 2025",
+    "title": "",
+    "changes": [
+     "Initial orb spawns: 3 → 5"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 28, 2025",
+    "title": "",
+    "changes": [
+     "Increased tree orb spawn rate"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 19, 2024",
+    "title": "",
+    "changes": [
+     "Decreased number of tree orbs spawned at the start of the match 5 → 3",
+     "Increased time between each tree orb spawn in early game"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 12, 2024",
+    "title": "",
+    "changes": [
+     "Now additionally gains 5% knockback reduction per orb"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Dec 1, 2023",
+    "title": "",
+    "changes": [
+     "Decreased health gained from orbs",
+     "Decreased spawn rate of orbs in game modes with 4 or less players by 50%"
     ]
    },
    {
@@ -3082,6 +4502,132 @@
      "Ally damage buff: 30% → 25%",
      "Final damage buff: 20% → 15%"
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 3, 2025",
+    "title": "",
+    "changes": [
+     "Grants partial stacks if the siphon ability kills a non-player entity."
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 5, 2025",
+    "title": "",
+    "changes": [
+     "Increased Warlock Staff damage: 20%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 25, 2025",
+    "title": "",
+    "changes": [
+     "Earn 50% of a stack from assists where Eldric is siphoning an enemy",
+     "5 second cooldown between earning stacks from assists"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 13, 2025",
+    "title": "",
+    "changes": [
+     "Increase damage that linked players deal: 20% increased damage → 30% increased damage",
+     "Increase max stacks: 15 → 20",
+     "Slightly decreased damage and healing performed per stack: 85% → 80%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 2, 2025",
+    "title": "",
+    "changes": [
+     "Ally heal per tick: 2 → 3",
+     "Lifesteal ratio: 25% → 37.5%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 25, 2025",
+    "title": "",
+    "changes": [
+     "Ally heal per tick 3 → 2",
+     "Lifesteal ratio 50% → 25%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Apr 11, 2025",
+    "title": "",
+    "changes": [
+     "Damage per tick increased 2 → 4"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 17, 2025",
+    "title": "",
+    "changes": [
+     "Staff no longer applies enchants"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 27, 2024",
+    "title": "",
+    "changes": [
+     "Added cap to stacks (15)"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 14, 2024",
+    "title": "",
+    "changes": [
+     "No longer receives stacks for Titan or Diamond Guardian kills"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 1, 2024",
+    "title": "",
+    "changes": [
+     "Enemy linked lifesteal ratio: 75% → 100%",
+     "Ally damage buff: 15% → 20%"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Dec 15, 2023",
+    "title": "",
+    "changes": [
+     "Increase damage at maximum range 50% → 75%",
+     "Decrease damage at minimum range 150% → 130%",
+     "Decrease maximum range of 17 blocks at 42 stacks → range of 15 blocks at 36 stacks"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 24, 2023",
+    "title": "",
+    "changes": [
+     "Stack amount for assists: 2 → 1",
+     "Heal ally minimum health sacrifice: 2 → 4",
+     "Siphon ramping damage: -50%",
+     "Ally damage buff: 20% → 15%",
+     "Stack to damage/heal conversion: 1 → 0.75",
+     "Added a spawn kill cooldown"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Nov 17, 2023",
+    "title": "",
+    "changes": [
+     "Decreased base damage per tick 3 → 2",
+     "Decreased base heal per tick 3 → 2"
+    ]
    }
   ]
  },
@@ -3122,6 +4668,76 @@
      "Elektra dash exit duration increased: 0.2s → 0.3s",
      "Elektra dash damage: 8 → 15",
      "When killing a player with static debuff applied from dash, refund 1 dash"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Feb 28, 2025",
+    "title": "",
+    "changes": [
+     "Increased cooldown between dash use: 0.03s → 0.25s",
+     "Increased rate of ability recharge → 0.1/s → 0.11/s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 31, 2025",
+    "title": "",
+    "changes": [
+     "Cooldown when not hitting enemy with dash 8s → 10s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 9, 2024",
+    "title": "",
+    "changes": [
+     "Decreased cooldown on dash 10s → 8s",
+     "Decreased cooldown on dash after hitting enemy 7s → 6s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 17, 2024",
+    "title": "",
+    "changes": [
+     "Decreased cooldown of dash 14s → 10s",
+     "Increased maximum dash distance 5 → 6 blocks"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 3, 2024",
+    "title": "",
+    "changes": [
+     "Elektra no longer turns invisible during her dash"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 19, 2024",
+    "title": "",
+    "changes": [
+     "Increased time to recover a Dash change 12 → 14 seconds",
+     "Increased regeneration to recover a Dash charge when a player was hit by her dash 6 → 7 seconds"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 19, 2024",
+    "title": "",
+    "changes": [
+     "Time to restore one dash charge increased 10s → 12s"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Nov 24, 2023",
+    "title": "",
+    "changes": [
+     "Dash cooldown: 5.5 → 10",
+     "Dash damage: 15 → 8",
+     "Damaging a player with your dash gives you rapidly increased cooldown regen temporarily"
     ]
    },
    {
@@ -3196,6 +4812,55 @@
     "title": "",
     "changes": [
      "Infernal Sword damage increased: 40 → 42"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Apr 11, 2025",
+    "title": "",
+    "changes": [
+     "Repurchasing Infernal Saber gives discount 3 → 2 emerald",
+     "Hitting non-player entities no longer increases progress"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 31, 2025",
+    "title": "",
+    "changes": [
+     "Spin damage 22 → 24"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 8, 2024",
+    "title": "",
+    "changes": [
+     "No longer moves slower when charging the infernal saber"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 15, 2024",
+    "title": "",
+    "changes": [
+     "Increase spin damage (18 → 22)"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 12, 2024",
+    "title": "",
+    "changes": [
+     "Super-Charged Infernal Blade spin armor penetration: 80% → 40%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 22, 2023",
+    "title": "",
+    "changes": [
+     "Increased Infernal Saber damage 36 → 40"
     ]
    },
    {
@@ -3306,6 +4971,22 @@
     ]
    },
    {
+    "type": "buff",
+    "date": "Apr 11, 2025",
+    "title": "",
+    "changes": [
+     "Slash damage now scales with her highest level sword"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 22, 2023",
+    "title": "",
+    "changes": [
+     "Increased slash damage 10 → 15"
+    ]
+   },
+   {
     "type": "nerf",
     "date": "Sep 30, 2022",
     "title": "",
@@ -3351,6 +5032,124 @@
     "changes": [
      "Can only carry up to 8 Pumpkin bombs",
      "Pumpkin Bomb is now a non-sharable item"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Feb 27, 2026",
+    "title": "",
+    "changes": [
+     "Pumpkin Seed cost 100 iron → 60",
+     "Melon Seeds now cost +1 emerald for every 5 purchased within the last minute (prices decrease back down after the minute)"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 27, 2026",
+    "title": "",
+    "changes": [
+     "Fire now spreads to crop blocks"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 19, 2025",
+    "title": "",
+    "changes": [
+     "Pumpkin Seeds 200 iron → 100 iron",
+     "Melon Seeds Growth Time 150s → 140s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 14, 2025",
+    "title": "",
+    "changes": [
+     "Decreased the crop growth time for carrots: 2 minutes, 30 seconds → 2 minutes",
+     "Decreased the cost of melon seeds: 3 emeralds → 2 emeralds",
+     "Decreased the chance that melons yield 2 emeralds when harvested: 30% → 10%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 22, 2024",
+    "title": "",
+    "changes": [
+     "Teammates cannot destroy your crops"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 13, 2024",
+    "title": "",
+    "changes": [
+     "Increased chance of receiving 2 emeralds from 1 melon 20% → 30%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 30, 2024",
+    "title": "",
+    "changes": [
+     "Decreased Carrot growth time 2.75 min → 2.5 min",
+     "Decreased Melon growth time 3 min → 2.5 min"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 17, 2024",
+    "title": "",
+    "changes": [
+     "Decreased Carrot growth time 3.25 min → 2.75 min",
+     "Decreased Carrot Seeds price 70 iron → 60 iron",
+     "Decreased Melon growth time 3.25 min → 3 min"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 5, 2024",
+    "title": "Season X",
+    "changes": [
+     "Carrot seed cost: 60 iron → 70 iron",
+     "Carrot growth time: 2m 45s → 3m 15s",
+     "Melon growth time: 2m 45s → 3m 15s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 1, 2024",
+    "title": "",
+    "changes": [
+     "Refund 30% of the cost of seeds on plant destruction"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 24, 2023",
+    "title": "",
+    "changes": [
+     "Carrot Price: 40 → 60",
+     "Carrots now take longer to grow",
+     "Melons now take longer to grow",
+     "Pumpkins no longer infinitely yield"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 27, 2023",
+    "title": "",
+    "changes": [
+     "Pumpkin seeds now infinitely yield Jack o’Booms",
+     "Reduced pumpkin seed cost 300 iron → 200 iron"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Oct 6, 2023",
+    "title": "",
+    "changes": [
+     "Decreased cost of Pumpkin Seeds from 1 Emerald → 300 Iron",
+     "Increased cost of Melon Seeds from 2 Emeralds → 3 Emeralds"
     ]
    },
    {
@@ -3537,6 +5336,58 @@
     ]
    },
    {
+    "type": "nerf",
+    "date": "Feb 27, 2026",
+    "title": "",
+    "changes": [
+     "Chances of getting jackpot and emerald fish now scale dynamically based on how lucky you are rather than a static value. Overall this will be a decrease in the chance of getting these rare fish"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 30, 2026",
+    "title": "",
+    "changes": [
+     "Slightly reduced Diamond gains",
+     "Slightly reduced early game Emerald gains"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 2, 2026",
+    "title": "",
+    "changes": [
+     "Because TNT is now shareable, lowered the drop rate of TNT",
+     "Reduced the amount of early-game TNT dropped"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 19, 2025",
+    "title": "",
+    "changes": [
+     "Late game fishing loot table active time: 8m → 7m",
+     "Max reward multiplier match time: 12m → 10m",
+     "Min / max catch time: 6s / 10s → 5s / 9s"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Nov 22, 2024",
+    "title": "",
+    "changes": [
+     "Siege TNT and gloops can now be fished"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 15, 2024",
+    "title": "",
+    "changes": [
+     "Slightly increased resource gains for loot table"
+    ]
+   },
+   {
     "type": "buff",
     "date": "Apr 21, 2023",
     "title": "",
@@ -3630,6 +5481,59 @@
    }
   ],
   "history": [
+   {
+    "type": "nerf",
+    "date": "Dec 12, 2025",
+    "title": "",
+    "changes": [
+     "Max beehive grenades: 6 → 5",
+     "Glide duration: 8.5s → 7.5s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 25, 2025",
+    "title": "",
+    "changes": [
+     "Floating ability cooldown:  60 → 30 sec",
+     "Gives a grenade every 45 seconds"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 28, 2025",
+    "title": "",
+    "changes": [
+     "Gain a Bee grenade on spawn, once every 60 seconds."
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 3, 2025",
+    "title": "",
+    "changes": [
+     "Glide cooldown reduced 180 → 60",
+     "Beehive grenade max stack increased 5 → 6"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 19, 2024",
+    "title": "",
+    "changes": [
+     "Decreased Beehive Grenade explosive power by 15%",
+     "Decreased Beehive Grenades granted on assist 2 → 1"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 29, 2023",
+    "title": "",
+    "changes": [
+     "Increased beehive grenades rewarded on kills and assists 1 → 2",
+     "Increased bee armor penetration 25% → 30%"
+    ]
+   },
    {
     "type": "nerf",
     "date": "May 26, 2023",
@@ -3726,6 +5630,81 @@
     ]
    },
    {
+    "type": "buff",
+    "date": "Oct 17, 2025",
+    "title": "",
+    "changes": [
+     "Energy Drain: Increased appearance rate (lower rarity)",
+     "Aerodynamic: Increased appearance rate (lower rarity)",
+     "Scorched: Fire damage 2 → 4",
+     "Critical Strike: Crit chance 31% → 40%"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Nov 22, 2024",
+    "title": "",
+    "changes": [
+     "Increased knockback of Aerodynamic Card Upgrade",
+     "Increased knockback of Explosive Card Upgrade",
+     "Decreased explosion size of Explosive Card Upgrade",
+     "Reduced cooldown of card throw 15s → 12s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 22, 2023",
+    "title": "",
+    "changes": [
+     "Increased upgrade progression multiplier on player damage: 25% → 40%",
+     "Increased upgrade progression multiplier on NPC damage: 2% → 3%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 24, 2023",
+    "title": "",
+    "changes": [
+     "Scorched Card enchant: Fire 3 → Fire 2",
+     "Energy Drain Card enchant: Lifesteal 3 → Lifesteal 2",
+     "Explosive Card damage: -50%",
+     "Sharper Cards II damage: 5 → 4"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Nov 17, 2023",
+    "title": "",
+    "changes": [
+     "Decreased base card damage 6 → 4"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 29, 2023",
+    "title": "",
+    "changes": [
+     "Decreased progress speed towards card upgrades"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 15, 2023",
+    "title": "",
+    "changes": [
+     "Reduced power and knockback of explosive cards"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Sep 1, 2023",
+    "title": "",
+    "changes": [
+     "Reduced knockback on knockback and explosion upgrades",
+     "Increased base damage per card 5 → 6"
+    ]
+   },
+   {
     "type": "nerf",
     "date": "Jul 14, 2023",
     "title": "",
@@ -3777,6 +5756,94 @@
     "changes": [
      "Ability no longer detonates automatically upon reaching max stacks.",
      "Ability cooldown reduced: 15 → 10"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 5, 2025",
+    "title": "",
+    "changes": [
+     "Frost bite damage (without ice sword): 3 → 4",
+     "Ice sword attack speed: .35 - >.3",
+     "Cooldown to apply stacks on the same player after detonating stacks: 3 → 2.5 seconds",
+     "Stacks can now be applied on non-player entities",
+     "Fixed extra on-hit frost damage being applied even when enemy isn’t frostbitten",
+     "Detonate Ice Stacks Ability",
+     "Detonate Ice Stacks Ability now ignores all armor",
+     "Ice stacks will now auto detonate when a player reaches max stacks (This doesn’t put the ability on cooldown)",
+     "Detonate Ice Stacks Ability now applies Frost Bite Status Effect at any stack count",
+     "Duration of Frost Bite Status Effect depends on the amount of stacks detonated on a player. (3,4,5,6)",
+     "Using an ice sword prolongs the duration by 2 seconds",
+     "Ice Sword",
+     "Ice Sword now applies Frost Bite Status effect on-hit. (Applies for effect for 6 seconds)",
+     "Detonate Ice Stacks will do 30% more damage when Ice Sword is in hand",
+     "Frost Bite Status Effect Rework",
+     "Frost Bite reduces the armor values of a player/monster by 30%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 9, 2024",
+    "title": "",
+    "changes": [
+     "Ice sword swing cooldown reduced from 0.45 → 0.35s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 15, 2024",
+    "title": "",
+    "changes": [
+     "Increase sword cost (4 emeralds → 6 emeralds)",
+     "Decrease sword attack speed (0.3s → 0.45s)"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 16, 2024",
+    "title": "",
+    "changes": [
+     "Increased cost of Ice Sword 3 emeralds → 5 emeralds",
+     "Decreased Frost Explosion ability armor penetration 80% → 60%",
+     "Decreased Frost Bite damage with any sword 4 → 3",
+     "Decreased Frost Bite damage with Ice Sword 7 → 6"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 2, 2024",
+    "title": "",
+    "changes": [
+     "Frost explosion ability armor penetration reduced 100% → 80%"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jan 19, 2024",
+    "title": "Rework",
+    "changes": [
+     "Now applies a frost stack every attack, up to 4 stacks. Damage from the Ice Sword applies two stacks",
+     "Frostbite is applied to enemies at full stacks, making them fragile and take extra frost damage when hit",
+     "New Frost Explosion ability: clears frost stacks from nearby targets and deals explosive damage to each",
+     "No longer needs to fill the Ice Bar to unlock her ability",
+     "Removed the slow debuff at full stacks"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 15, 2023",
+    "title": "",
+    "changes": [
+     "Reduced damage dealt requirement to unlock Frost passive ability 250 → 200"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 13, 2023",
+    "title": "",
+    "changes": [
+     "Ice stacks apply faster 0.25s cooldown → 0.2s cooldown",
+     "Increased time before ice stacks expire 10s → 15s"
     ]
    },
    {
@@ -3835,6 +5902,27 @@
   "abilities": [],
   "history": [
    {
+    "type": "buff",
+    "date": "Dec 12, 2025",
+    "title": "",
+    "changes": [
+     "Frosty snowball projectile armor penetration multiplier: 10% → 75%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 1, 2023",
+    "title": "",
+    "changes": [
+     "Now receives frosty snowballs",
+     "Decreased rate of receiving frosty snowballs every 1.8s → every 3s",
+     "Frosty snowballs",
+     "Decreased fire rate",
+     "Decreased knockback",
+     "Decreased slow"
+    ]
+   },
+   {
     "type": "bal",
     "date": "Mar 18, 2022",
     "title": "",
@@ -3871,6 +5959,15 @@
     "title": "",
     "changes": [
      "Jump power now decays when jumping continuously."
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Oct 13, 2023",
+    "title": "",
+    "changes": [
+     "Increased shield 15hp → 30hp",
+     "Shield now expires after 5 seconds"
     ]
    },
    {
@@ -3947,6 +6044,48 @@
    },
    {
     "type": "bal",
+    "date": "Jan 30, 2026",
+    "title": "",
+    "changes": [
+     "Collectible spawn rates now scale with map size: larger maps spawn more, smaller maps spawn less"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Dec 12, 2025",
+    "title": "",
+    "changes": [
+     "Vacuum ghost capacity: 4 →2"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 31, 2025",
+    "title": "",
+    "changes": [
+     "Vacuum ghost capacity increased: 1 → 4",
+     "Ghost spawns increased"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 25, 2024",
+    "title": "",
+    "changes": [
+     "Increased initial ghosts on spawn: 3 ghosts → 4 ghosts",
+     "Increased ghost spawnrate: approx. 1 ghost per 15s → 1 ghost per 12.5s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 13, 2023",
+    "title": "",
+    "changes": [
+     "Reduced vacuum price 60 → 50 iron"
+    ]
+   },
+   {
+    "type": "bal",
     "date": "Nov 5, 2021",
     "title": "",
     "changes": [
@@ -4014,6 +6153,24 @@
     "title": "",
     "changes": [
      "Slower movespeed but longer invincibility when consuming soul"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 17, 2024",
+    "title": "",
+    "changes": [
+     "Increased soul orb healing from 22hp → 25hp",
+     "Fixed soul orb speed, now properly grants 160% → 180% speed"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 6, 2023",
+    "title": "",
+    "changes": [
+     "Increased speed boost after consuming soul 160% → 180%",
+     "Increased heal after consuming soul 20hp → 22hp"
     ]
    },
    {
@@ -4090,6 +6247,93 @@
     "title": "",
     "changes": [
      "Global generator speed boost: 20% → 30%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 27, 2026",
+    "title": "",
+    "changes": [
+     "Crystalheart flowers now cost double the water of Soulvine and Tearbloom flowers",
+     "Crystalheart crops are now flammable"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 27, 2026",
+    "title": "",
+    "changes": [
+     "Fire now spreads to crop blocks"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 13, 2026",
+    "title": "",
+    "changes": [
+     "Crystalheart flowers now cost double the water of Soulvine and Tearbloom flowers"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 30, 2026",
+    "title": "",
+    "changes": [
+     "Energy loss is now based on the amount of plants being nurtured",
+     "Fixed ability sometimes permanently showing disabled",
+     "Crystal Heart gen multiplier buff per seed: 10% → 8%",
+     "Enchants"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jan 30, 2026",
+    "title": "",
+    "changes": [
+     "Collectible spawn rates now scale with map size: larger maps spawn more, smaller maps spawn less"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Dec 12, 2025",
+    "title": "",
+    "changes": [
+     "Water energy cost per second: 7s → 8s",
+     "Tearbloom Heal per stack: 1.5x → 1.25x"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 28, 2025",
+    "title": "",
+    "changes": [
+     "No longer loses energy on death",
+     "Reduced price of Economy Seed: 3 → 1 Emerald",
+     "Reduced effectiveness of Economy Seed. Team Gen 1.15x → 1.1x, Global Gen 1.3x → 1.2x"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Feb 14, 2025",
+    "title": "",
+    "changes": [
+     "Increased cost of seeds:",
+     "Tearbloom: 30 iron → 50 iron",
+     "Soulvine: 30 iron → 50 iron",
+     "Crystalheart: 2 emeralds → 3 emeralds",
+     "Increased effectiveness of flowers:",
+     "Tearbloom healing per second per stack: 1 → 1.5",
+     "Soulvine additional damage percent per stack: 2% (additive) → 3% (additive)",
+     "Crystalheart generator speed multiplier per stack: 10% (multiplicative) → 15% (multiplicative)",
+     "Decreased the maximum number of flower stacks: 15 → 10"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 20, 2024",
+    "title": "",
+    "changes": [
+     "Flowers are no longer affected by teammate’s fireballs"
     ]
    }
   ]
@@ -4210,6 +6454,106 @@
      "Self Repair cooldown increased: 5→6",
      "Team Upgrades"
     ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 2, 2026",
+    "title": "",
+    "changes": [
+     "Vertical knockback reduction for all mech tiers: 10%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 27, 2025",
+    "title": "",
+    "changes": [
+     "Reduced summon mech cooldown: 14s → 10s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Apr 11, 2025",
+    "title": "",
+    "changes": [
+     "Iron machine attack damage 30 → 33",
+     "Emerald machine attack damage 50 → 54",
+     "Void machine attack damage 60 → 65",
+     "Wood machine health 100 → 110",
+     "Void machine health 600 → 630"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 3, 2025",
+    "title": "",
+    "changes": [
+     "Chainsaw damage increased 24/30/40/48/58 → 25/30/42/50/60"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 20, 2024",
+    "title": "",
+    "changes": [
+     "Mech shield per level increased 95/155/230/385/515 → 100/180/270/430/600",
+     "Mech Price increased 100 iron/5 em/14 em/35 em → 120 iron/7 em/18 em/40 em",
+     "Projectile damage reduction decreased 10%/20%/30%/40%/50% → 0%/15%/25%/30%/40%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 27, 2024",
+    "title": "",
+    "changes": [
+     "Damage from arrows is reduced and scales with Mech Upgrade",
+     "Base mech: 10%",
+     "Iron mech: 20%",
+     "Diamond mech: 30%",
+     "Emerald mech: 40%",
+     "Void mech: 50%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 12, 2024",
+    "title": "",
+    "changes": [
+     "Knockback reduction increased",
+     "Shield increased"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 31, 2024",
+    "title": "",
+    "changes": [
+     "Now takes reduced knockback"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 17, 2024",
+    "title": "",
+    "changes": [
+     "Increased shield amount for Iron (40 → 50), Diamond (100 → 120), and Emerald (250 → 275) Mechs",
+     "Decreased time to self destruct 3s → 2s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Apr 12, 2024",
+    "title": "",
+    "changes": [
+     "Increased base explosion damage and radius",
+     "Iron Mech: 120 iron → 100 iron",
+     "Diamond Mech: 8 emeralds → 5 emeralds",
+     "Emerald Mech: 22 emeralds → 14 emeralds",
+     "Void Mech: 40 emeralds → 35 emeralds",
+     "No longer takes damage until his Mech is fully broken",
+     "Emerald Chainsaw: 47 → 48",
+     "Void Chainsaw: 55 → 58"
+    ]
    }
   ]
  },
@@ -4240,6 +6584,53 @@
     "changes": [
      "Disabled breaking blocks & placing blocks while on the spirit bridge",
      "Reduced vertical knockback reduction while on the spirit bridge"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 28, 2025",
+    "title": "",
+    "changes": [
+     "Added 50% reduced damage and 80% reduced knockback while on a spirit bridge",
+     "Increased max shield from: 35 → 40",
+     "Shield amount from bridge length scales more smoothly"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Sep 27, 2024",
+    "title": "",
+    "changes": [
+     "Added indicator to aiming line to show if it will hit a block.",
+     "Reduced Spirit Bridge cost 40 → 35 iron",
+     "Reduced max personal Spirit Bridge shield 45 → 35"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 9, 2024",
+    "title": "",
+    "changes": [
+     "Reduced max shield on exiting Spirit Bridge 80 → 60",
+     "Decreased base shield amount 20 → 15"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Mar 1, 2024",
+    "title": "",
+    "changes": [
+     "Spirit Bridge price 50 → 40 iron",
+     "Max stack size: 1 → 2",
+     "Removed free spirit bridge after 60 seconds into a match"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 1, 2023",
+    "title": "",
+    "changes": [
+     "Increased shield"
     ]
    },
    {
@@ -4316,6 +6707,88 @@
     ]
    },
    {
+    "type": "buff",
+    "date": "Oct 31, 2025",
+    "title": "",
+    "changes": [
+     "Max shield energy: 100 → 120",
+     "Shield energy recovered per second: 6 → 8"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "May 16, 2025",
+    "title": "",
+    "changes": [
+     "Infernal Shield now has an energy bar that decreases while it’s being held",
+     "Shield energy increases while the shield is unequipped",
+     "Shield’s normal effects are only active if the shield has energy",
+     "Shield energy is also restored when mitigating damage or reflecting projectiles",
+     "Shield Leap ability charge increases slower, but also gains charge when reflecting projectiles or mitigating damage",
+     "This encourages a more engaging playstyle instead of just always holding out the shield"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 11, 2025",
+    "title": "",
+    "changes": [
+     "Shield bubble size has been reduced"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 28, 2025",
+    "title": "",
+    "changes": [
+     "Decrease damage reduction when holding shield 50% → 40%",
+     "Reduce knockback while holding shield"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 16, 2024",
+    "title": "",
+    "changes": [
+     "Decreased range of Leap ability 300 → 150",
+     "Increased energy required for Leap ability 130 → 150"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 19, 2024",
+    "title": "",
+    "changes": [
+     "Infernal Energy required to leap increased 100 → 130"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 5, 2024",
+    "title": "",
+    "changes": [
+     "Shielder now passively gains energy while holding his shield",
+     "Increased projectile hit box while holding his shield",
+     "Added damage reduction Aura Visual effect"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 3, 2023",
+    "title": "",
+    "changes": [
+     "Decreased Infernal Energy required to leap 150 damage blocked → 100 damage blocked"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 11, 2023",
+    "title": "",
+    "changes": [
+     "Decreased shield energy required 250 → 150"
+    ]
+   },
+   {
     "type": "nerf",
     "date": "May 5, 2023",
     "title": "",
@@ -4376,6 +6849,34 @@
      "Wood shield damage blocked: 8 → 10",
      "Stone shield damage blocked: 13 → 15"
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 5, 2025",
+    "title": "",
+    "changes": [
+     "Damage blocked by shield: 5, 10, 15, 25 → 8, 13, 20, 30",
+     "Shield cooldown: 14s → 10s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 25, 2025",
+    "title": "",
+    "changes": [
+     "Shield blocking reduced: 20 sec → 14 sec",
+     "Shield now activates with all melees weapons",
+     "Added a status effect timer to let you know when your shield will come back up",
+     "Your shield level is now based on the best base sword you own (ex. you have a diamond & wood sword in inventory)"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 30, 2025",
+    "title": "",
+    "changes": [
+     "Reduced cooldown on shield regeneration 30s → 20s"
+    ]
    }
   ]
  },
@@ -4432,6 +6933,44 @@
      "NEW: Fire Match - light oil splatters on fire!",
      "NEW: Jack heals for 30% from his fire damage (Reduced to 20% in 16 v 16)."
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 31, 2025",
+    "title": "",
+    "changes": [
+     "Increase oil detection area",
+     "Staying in oil will restrict jumping"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 3, 2025",
+    "title": "",
+    "changes": [
+     "Oil blobs can be lit on fire using fireball or TNT, and enemies on the burning oil blob will be burned. An oil blob next to another burning oil blob will also be set on fire."
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 1, 2024",
+    "title": "",
+    "changes": [
+     "We noticed that Jack is still pretty weak and his oil blobs were still too expensive compared to the poison damage output",
+     "Increased initial position damage: 8→10",
+     "Increased minimum blob size"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 25, 2024",
+    "title": "",
+    "changes": [
+     "Oil blobs no longer can damage teammates and self",
+     "In addition to the initial 8 poison damage, Oil blobs now does 3 poison damage to enemies every second for 5 seconds",
+     "Increased minimum blob size",
+     "Lowered blob lifetime: 30s → 20s"
+    ]
    }
   ]
  },
@@ -4482,6 +7021,50 @@
      "Tier 2 Jade Hammer: 80 iron",
      "Tier 3 Jade Hammer: 4 emeralds",
      "An upgraded hammer gives Jade’s hammer slam more armor penetration, more damage, and you lose less health from fall damage when you don’t hit any players."
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Oct 31, 2025",
+    "title": "",
+    "changes": [
+     "Hammer cooldown: 4→5",
+     "Hammer slam damage: 15 → 25"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 28, 2025",
+    "title": "",
+    "changes": [
+     "Increased forward momentum speed multiplier when casting ability: 2x → 2.6x",
+     "Increased jump force when casting ability: 20 → 20.5"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 14, 2025",
+    "title": "",
+    "changes": [
+     "Now has complete movement control in the air when activating hammer jump",
+     "Invulnerable to damage while using hammer jump"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 31, 2025",
+    "title": "",
+    "changes": [
+     "Hammer damage 12 → 15"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 1, 2023",
+    "title": "",
+    "changes": [
+     "Increased Jade Hammer damage 8 → 12",
+     "Decreased Jade Hammer ability cooldown 6s → 4s"
     ]
    },
    {
@@ -4621,6 +7204,135 @@
     "changes": [
      "Damage now scales inversely with the number of targets hit (increased damage against fewer targets, decreased damage against multiple)."
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 30, 2026",
+    "title": "",
+    "changes": [
+     "Claw Attack Speed: .65 → .55"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 2, 2026",
+    "title": "",
+    "changes": [
+     "Summon damage increased for first two tiers: (27, 40, 54, 72) → (30, 44, 54, 72)",
+     "Summon cooldown reduced: 25s → 22s",
+     "Claw damage increased: (22, 28, 42, 54) → (23, 29, 43, 56)"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 28, 2025",
+    "title": "",
+    "changes": [
+     "Claw Damage: [21, 26] → [22, 28, 42, 54]",
+     "Claw Attack Speed: .75 → .65"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 17, 2025",
+    "title": "",
+    "changes": [
+     "Increase claw attack rate: .85 → .75"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 3, 2025",
+    "title": "",
+    "changes": [
+     "Reduced the cooldown on “summon”: 30s → 25s",
+     "Changed the charge time for summon tiers: all tiers 1s → 0.7s, 0.8s, 1s, 1.2s",
+     "Adjusted damage on summon tiers: 34, 44, 54, 64 → 27, 40, 54, 72"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jul 11, 2025",
+    "title": "",
+    "changes": [
+     "Summoner Claw Damage [24, 29, 40, 51] → [21, 26, 42, 54]",
+     "Summoner Spell Damage [38, 48, 58, 68] → [34, 44, 54, 64]"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 16, 2025",
+    "title": "",
+    "changes": [
+     "Reduced damage mitigation while casting 20% → 10%",
+     "Reduced claw swing rate 0.7s → 0.85",
+     "Reduced claw damage (26, 31, 42, 53 → 24, 29, 40, 51)"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 2, 2025",
+    "title": "",
+    "changes": [
+     "Nerfed damage of claws by 15%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 14, 2025",
+    "title": "",
+    "changes": [
+     "Using a Pirate Davey cannon cancels Kaida’s summon ability"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 31, 2025",
+    "title": "",
+    "changes": [
+     "Summon spell damage slightly increased (35, 45, 55, 65 → 38, 48, 58, 68)",
+     "Claw damage slightly increased (30, 35, 48, 60 → 31, 37, 50, 62)"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Dec 20, 2024",
+    "title": "",
+    "changes": [
+     "All claw and summon spell damage slightly reduced",
+     "Summon spell cooldown 25s → 30s",
+     "Claw speed slightly reduced"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 27, 2024",
+    "title": "",
+    "changes": [
+     "Kaida can no longer deal damage through walls with the Dragon Claws"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 30, 2024",
+    "title": "",
+    "changes": [
+     "Reduced claw damage if the hit enemy is not in Kaida’s line of sight",
+     "Level progress will only go up by 1 regardless of how many enemies are hit by a Summon",
+     "Dying will reduce your current level progress by 1 hit. Will not make you go down a level"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 23, 2024",
+    "title": "",
+    "changes": [
+     "Summon cast time reduced 1.3s per tier → 1.0s",
+     "Spell hits to level up spell & claw reduced",
+     "Can end cast sooner",
+     "Claw attack speed increased",
+     "Summon horizontal and vertical range increased"
+    ]
    }
   ]
  },
@@ -4694,6 +7406,38 @@
     "changes": [
      "Increased stack duration: 8 seconds → 12",
      "Decreased punch cooldown: 10 seconds → 8"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 14, 2025",
+    "title": "",
+    "changes": [
+     "Wall damage armor pen: 0% → 30%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 19, 2024",
+    "title": "",
+    "changes": [
+     "Fiery punch base damage 8 → 6"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 2, 2024",
+    "title": "",
+    "changes": [
+     "Punch damage increased when an enemy doesn’t hit a block 6 → 8"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 29, 2023",
+    "title": "",
+    "changes": [
+     "Punching enemies into blocks will now spawn fire"
     ]
    },
    {
@@ -4812,6 +7556,42 @@
     "changes": [
      "Reduce amount of momentum lost on taking damage"
     ]
+   },
+   {
+    "type": "bal",
+    "date": "Oct 3, 2025",
+    "title": "",
+    "changes": [
+     "Can no longer attack while using the “spin and dodge” ability",
+     "Increased momentum gained while skating on ice: +100% → +150%",
+     "Krystal’s passive ability to create frozen blocks has been replaced with an active ability to freeze nearby blocks. The new ability creates a larger frozen area than the passive ability did, but it doesn’t last as long."
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 28, 2025",
+    "title": "",
+    "changes": [
+     "Decreased frozen block spawn interval: 4s → 6s"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jan 17, 2025",
+    "title": "",
+    "changes": [
+     "Krystal now becomes transparent during her dodge, to improve timing the dodge and telegraphing it."
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Dec 27, 2024",
+    "title": "",
+    "changes": [
+     "Skate Jump (the spin) is now an ability instead of triggering on a normal jump",
+     "Less momentum lost when jumping",
+     "Increased overall momentum gain"
+    ]
    }
   ]
  },
@@ -4841,6 +7621,30 @@
     "title": "",
     "changes": [
      "Healing effect reduced by 50% if target was recently affected by Lani"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 22, 2025",
+    "title": "",
+    "changes": [
+     "If multiple Lani users are healing the same player, healing from each Lani will be reduced by 50%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 14, 2024",
+    "title": "",
+    "changes": [
+     "Increased duration of healing aura after teleport 6s → 8s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 1, 2023",
+    "title": "",
+    "changes": [
+     "Increased healing per tick 12hp → 8% max hp"
     ]
    },
    {
@@ -4908,6 +7712,23 @@
   "history": [
    {
     "type": "buff",
+    "date": "May 17, 2024",
+    "title": "",
+    "changes": [
+     "Lasso cooldown 10s → 8s",
+     "Lasso range 65 → 70"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 15, 2024",
+    "title": "",
+    "changes": [
+     "Increase projectile lifetime (1.1s → 2s)"
+    ]
+   },
+   {
+    "type": "buff",
     "date": "Jun 16, 2023",
     "title": "",
     "changes": [
@@ -4972,6 +7793,34 @@
     "name": "Dragon Sword Ultimate",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Sep 19, 2025",
+    "title": "",
+    "changes": [
+     "Dragon Sword Damage Multiplier 1.2x → 1.35x"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jun 27, 2025",
+    "title": "",
+    "changes": [
+     "Increased ult cooldown: 10s → 15s",
+     "Increased ult range: 7 blocks → 9 blocks"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 16, 2024",
+    "title": "",
+    "changes": [
+     "Decreased Dragon Sword regeneration rate 15s → 12s",
+     "Decreased Fire Dragon Sword ability cooldown 3s → 2s"
+    ]
+   }
   ]
  },
  {
@@ -5004,6 +7853,47 @@
     "title": "",
     "changes": [
      "Candy amount per damage 55% → 45%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 22, 2024",
+    "title": "",
+    "changes": [
+     "Slightly reduced emeralds from rewards"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Oct 11, 2024",
+    "title": "",
+    "changes": [
+     "Reduced amount of emeralds gained when above Stage 3 Pinata (400 Candy+)",
+     "Reduce damage"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 14, 2024",
+    "title": "",
+    "changes": [
+     "Decreased emeralds earned from candy, when there’s a lot of candy"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 24, 2023",
+    "title": "",
+    "changes": [
+     "Damage to candy conversion rate: 50% → 60%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 1, 2023",
+    "title": "",
+    "changes": [
+     "Candy can now only be put into your own piñata"
     ]
    },
    {
@@ -5074,6 +7964,49 @@
     "title": "",
     "changes": [
      "Light Sword price 4 Emerald → 3 Emerald"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 3, 2025",
+    "title": "",
+    "changes": [
+     "Fully charged sword wave damage: 28 →34"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Apr 11, 2025",
+    "title": "",
+    "changes": [
+     "Repurchasing Light Sword gives discount 4 → 2 emerald",
+     "Hitting non-player entities no longer increases progress"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 20, 2024",
+    "title": "",
+    "changes": [
+     "Light Sword half charge projectile damage 18→ 21",
+     "Light Sword full charge projectile damage 24 → 28"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Dec 8, 2023",
+    "title": "",
+    "changes": [
+     "Must finish firing multi-shot before charging next attack"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 17, 2023",
+    "title": "",
+    "changes": [
+     "Partial charge damage: 24 → 18",
+     "Full charge damage: 32 → 24"
     ]
    },
    {
@@ -5180,6 +8113,56 @@
   "abilities": [],
   "history": [
    {
+    "type": "nerf",
+    "date": "May 2, 2025",
+    "title": "",
+    "changes": [
+     "Floral bow updated to have a max charge and fire delay similar to the wood bow"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Oct 25, 2024",
+    "title": "",
+    "changes": [
+     "Decreased max flower lifetime: 10m → 8m"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Mar 29, 2024",
+    "title": "",
+    "changes": [
+     "Base stack bee damage: 4 → 2",
+     "Extra damage per stack: 2 → 3"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 17, 2023",
+    "title": "",
+    "changes": [
+     "Bee damage reduced"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 25, 2023",
+    "title": "",
+    "changes": [
+     "Max bee stacks: infinite → 10"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 18, 2023",
+    "title": "",
+    "changes": [
+     "Damage per bee: 4 → 3",
+     "Default Bloom duration: 3.9s → 3.6s"
+    ]
+   },
+   {
     "type": "buff",
     "date": "Jun 28, 2023",
     "title": "",
@@ -5245,6 +8228,14 @@
      "The scanner will now initially only place wool blocks",
      "Click and hold scanner block interactions"
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 16, 2026",
+    "title": "",
+    "changes": [
+     "Now Gets discount on Tesla Coils: 65 Iron →50 Iron"
+    ]
    }
   ]
  },
@@ -5280,6 +8271,86 @@
     "changes": [
      "Jellyfish on spawn 1 → 2"
     ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 8, 2025",
+    "title": "",
+    "changes": [
+     "Jellyfish base damage 16 → 14",
+     "Jellyfish damage scaling 12% → 10%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 27, 2025",
+    "title": "",
+    "changes": [
+     "Time to get Jellyfish 30s -> 35s",
+     "Jellyfish placement distance 8 -> 7 blocks",
+     "Jellyfish health 80 -> 70"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 11, 2025",
+    "title": "",
+    "changes": [
+     "Slightly reduced max range for jellyfish to activate others with electric pulse",
+     "Slightly reduced max range player can be from a jellyfish to activate it"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 14, 2025",
+    "title": "",
+    "changes": [
+     "Damage boost based on number of jellyfish connected 15% → 12% per jellyfish"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 8, 2024",
+    "title": "",
+    "changes": [
+     "Jellyfish reduced health: 100 → 80 health",
+     "Electrify Jellyfish increased cooldown: 7s → 9s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 13, 2024",
+    "title": "",
+    "changes": [
+     "Decreased base damage per jellyfish 18 → 16"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Aug 9, 2024",
+    "title": "",
+    "changes": [
+     "Damage boost based on number of jellyfish connected 22% → 15% per jellyfish",
+     "Base damage decreased 20 → 18",
+     "Jellyfish can now be removed if they have already taken damage, without returning the jellyfish to the player"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 26, 2024",
+    "title": "",
+    "changes": [
+     "You will receive jellyfish only if the total placed and in inventory is below 4"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 28, 2024",
+    "title": "",
+    "changes": [
+     "Increased electrify jellyfish ability 5s → 7s",
+     "Restricted jellyfish placement, see bug fixes for more information"
+    ]
    }
   ]
  },
@@ -5310,6 +8381,16 @@
     "changes": [
      "Skull Form Movement Speed: 85% → 95%"
     ]
+   },
+   {
+    "type": "bal",
+    "date": "Feb 27, 2026",
+    "title": "",
+    "changes": [
+     "Decrease player health on respawn 75 → 50",
+     "Less slow from poison 0.7x move speed → 0.75x",
+     "Faster when in head form 0.8x move speed → 0.85x"
+    ]
    }
   ]
  },
@@ -5330,6 +8411,49 @@
    {
     "name": "Wild Growth",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Jan 16, 2026",
+    "title": "",
+    "changes": [
+     "Ability cooldown increased 15s→17s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Dec 12, 2025",
+    "title": "",
+    "changes": [
+     "Slightly reduce max health gain"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 19, 2025",
+    "title": "",
+    "changes": [
+     "Faster siphon tick rate: 0.5s → 0.3s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 27, 2025",
+    "title": "",
+    "changes": [
+     "Lowered cooldown of max damage attack: 20% higher than normal → 10% higher than normal"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 25, 2025",
+    "title": "",
+    "changes": [
+     "Reduced Martin’s max health growing rate",
+     "Martin's healing behavior has been adjusted: Instead of healing 1 HP every tick, he now receives larger chunks of healing less frequently. The total healing remains the same."
+    ]
    }
   ]
  },
@@ -5359,6 +8483,93 @@
     "title": "",
     "changes": [
      "self healing ratio: 85%→90%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 16, 2026",
+    "title": "",
+    "changes": [
+     "Healing amount: 11 per second → 13",
+     "Healing range: 15 blocks → 17",
+     "Self heal multiplier: 80% → 85%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 8, 2025",
+    "title": "",
+    "changes": [
+     "Self heal 60% → 80%",
+     "Heal cooldown 2s → 1",
+     "Heal amount 20 → 11 (heals per second 10 → 11)"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 13, 2025",
+    "title": "",
+    "changes": [
+     "Max Heal: 18HP → 20HP"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 25, 2025",
+    "title": "",
+    "changes": [
+     "Heal cooldown 2s → 3s",
+     "Max heal 20 → 18"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Oct 25, 2024",
+    "title": "",
+    "changes": [
+     "Max target healing: 25 → 20 health",
+     "Self healing multiplier: 0.5x → 0.65x"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 29, 2024",
+    "title": "",
+    "changes": [
+     "Heal cooldown: 2.3 → 2 seconds"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 2, 2024",
+    "title": "",
+    "changes": [
+     "Guitar heal amount increased 22 → 25",
+     "Guitar heal range increased 20 blocks → 24 blocks"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 15, 2023",
+    "title": "",
+    "changes": [
+     "Increased heal per tick 20 → 22"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 24, 2023",
+    "title": "",
+    "changes": [
+     "Reduced heal per tick: 28 → 20"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 13, 2023",
+    "title": "",
+    "changes": [
+     "Increased self-healing 20% → 50%"
     ]
    },
    {
@@ -5448,6 +8659,50 @@
   ],
   "history": [
    {
+    "type": "buff",
+    "date": "Nov 28, 2025",
+    "title": "",
+    "changes": [
+     "Add reroll ability:",
+     "Reroll shop discounts every 3 minutes"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 14, 2025",
+    "title": "",
+    "changes": [
+     "Teammates get refunded at a 50% rate compared to Merchant Marco players"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 30, 2025",
+    "title": "",
+    "changes": [
+     "All of Merchant Marco's teammates get a refund on the discounted items",
+     "Merchant Marco's sword is always discounted"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Apr 11, 2025",
+    "title": "",
+    "changes": [
+     "Discounted item count 9 → 11"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 8, 2024",
+    "title": "",
+    "changes": [
+     "Discounted item count increased: 7 -> 9",
+     "Silver discount amount increased: 20% -> 25%",
+     "Gold discount amount increased: 30% -> 40%"
+    ]
+   },
+   {
     "type": "bal",
     "date": "Aug 4, 2023",
     "title": "",
@@ -5516,6 +8771,72 @@
     "title": "",
     "changes": [
      "Slightly reduced reward"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jan 30, 2026",
+    "title": "",
+    "changes": [
+     "Collectible spawn rates now scale with map size: larger maps spawn more, smaller maps spawn less"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 5, 2025",
+    "title": "",
+    "changes": [
+     "Slightly lowered hidden metal rewards"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Oct 11, 2024",
+    "title": "",
+    "changes": [
+     "Increased time to reach max reward scaling: 15min → 17min"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 12, 2024",
+    "title": "",
+    "changes": [
+     "Max reward scale time 18m → 15m",
+     "Increased rewards from finding buried metal"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 5, 2024",
+    "title": "Season X",
+    "changes": [
+     "Time to scale to max rewards from Hidden Metal: 15m → 18m"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 29, 2024",
+    "title": "",
+    "changes": [
+     "Increased reward amount from hidden resources"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 19, 2024",
+    "title": "",
+    "changes": [
+     "Frequency of hidden resource spawns reduced",
+     "Hidden resource rewards reduced"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 22, 2023",
+    "title": "",
+    "changes": [
+     "Decreased amount of resources obtained from finding metal"
     ]
    },
    {
@@ -5636,6 +8957,80 @@
     "changes": [
      "Gloops reveal Milo in block form"
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 25, 2025",
+    "title": "",
+    "changes": [
+     "Movement energy decay rate: 6 → 4.5 (Can stay disguised for longer)",
+     "Time to get reveal buff: 5 → 4.25 sec"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 1, 2024",
+    "title": "",
+    "changes": [
+     "Shield amount on reveal: 40 → 25",
+     "Bar regen rate per tick: 2 → 3",
+     "Bar decay rate while moving: 3 → 6"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 27, 2023",
+    "title": "",
+    "changes": [
+     "Increased shield health 25hp → 40hp",
+     "Increased disguise ability total duration 1m30s → 2m"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Oct 13, 2023",
+    "title": "",
+    "changes": [
+     "Increased shield 20hp → 25 hp",
+     "Shield now expires after 5 seconds"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 22, 2023",
+    "title": "",
+    "changes": [
+     "Increased shield 10hp → 20hp",
+     "Increased resource steal cap 15% of enemy resource —> up to 25% of enemy resource"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 18, 2023",
+    "title": "",
+    "changes": [
+     "Milo is now revealed by actions such as recalling, triggering bed alarms, teleporting and more"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 16, 2023",
+    "title": "",
+    "changes": [
+     "Milo now gets a small shield and speed buff when revealing himself after 5 seconds of being disguised"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 15, 2023",
+    "title": "",
+    "changes": [
+     "Increased disguise ability total duration (1m30s)",
+     "Lose less ability duration when moving while disguised (3s per second)",
+     "Increased disguise ability regeneration when out of disguise (2s per second)",
+     "Increased pickpocket range and resource steal amount",
+     "Hidden from Fortuna, Tesla Traps, Necromancer Skeletons, Taliyah Chickens, Gloop, Diamond Guardians, Radioactive Plants, and other Milos"
+    ]
    }
   ]
  },
@@ -5661,6 +9056,65 @@
     "changes": [
      "Petrifying an Elder Tree or Tinker now yields extra rewards based on their max Health or Mech level.",
      "Increased rewards for petrifying a Void Knight or a victim equipped with Warrior Armor."
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jul 11, 2025",
+    "title": "",
+    "changes": [
+     "Reduced range of reward randomness"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 2, 2025",
+    "title": "",
+    "changes": [
+     "Improved reward chances overall, especially late-game chances of emerald rewards"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 25, 2024",
+    "title": "",
+    "changes": [
+     "Slightly increased diamond and emerald weights in loot table"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "May 3, 2024",
+    "title": "",
+    "changes": [
+     "Increased loot percentages",
+     "You can no longer mine teammates"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 5, 2024",
+    "title": "Season X",
+    "changes": [
+     "Mining rewards reduced by 15%",
+     "Reduced rewards from mid-game and late-game armor"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 16, 2024",
+    "title": "",
+    "changes": [
+     "Decreased rewards obtained from enemies with early game equipment"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 19, 2024",
+    "title": "",
+    "changes": [
+     "Chance of mining emeralds increased",
+     "Mining drops now scale off of mined player’s crossbow, headhunter, void sword, void armor, and dao"
     ]
    },
    {
@@ -5738,6 +9192,48 @@
      "Reduced max damage buff from 30% → 20%",
      "Vessel fire cooldown: 0.35s → 0.5s"
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 30, 2026",
+    "title": "",
+    "changes": [
+     "Heal per projectile at all Vessel Tiers: 2 (previously: [.5, 1, 1])",
+     "Holding down to heal now goes as fast as the cooldown allows"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 19, 2025",
+    "title": "",
+    "changes": [
+     "Water Veil regen: 20% → 24%",
+     "Water Veil immediate heal: 10% → 15%",
+     "Healing projectile range: 12 blocks → 14",
+     "Healing projectile cooldown holding: 0.6s → 0.55s",
+     "Healing projectile cooldown click: 0.4s → 0.35s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 8, 2025",
+    "title": "",
+    "changes": [
+     "Water Veil radius 10 blocks → 13",
+     "Water Veil max players 2 → 3",
+     "Water Veil regen 16% → 20%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 27, 2025",
+    "title": "",
+    "changes": [
+     "Projectile range 10 blocks -> 12 blocks",
+     "Projectile travel time 0.4s -> 0.35s",
+     "Projectile cooldown while clicking 0.5s -> 0.4s",
+     "Projectile cooldown while holding 0.75s -> 0.6s"
+    ]
    }
   ]
  },
@@ -5775,6 +9271,52 @@
    {
     "name": "Enable/Disable Empowered Attacks",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Dec 6, 2024",
+    "title": "",
+    "changes": [
+     "Max health gained on consume, 36 → 28",
+     "Increased amount of life force used on consume",
+     "Passive life force gain reduced by ~16%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 8, 2024",
+    "title": "",
+    "changes": [
+     "No longer gains life force from damage taken",
+     "Life force gained passively while out of combat can no longer be gained above 50% of the max life force bar"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 11, 2024",
+    "title": "",
+    "changes": [
+     "Empowered attacks now have slightly increased armor penetration"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 27, 2024",
+    "title": "",
+    "changes": [
+     "Shocked status effect anti-healing is 50% less effective at reducing healing from Life Force"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Aug 30, 2024",
+    "title": "",
+    "changes": [
+     "Consume cooldown decreased 6s → 3s",
+     "Consume max healing capped at 40 lifeforce or 32 health per use."
+    ]
    }
   ]
  },
@@ -5830,6 +9372,94 @@
     "changes": [
      "Decreased Frosty Slime’s maximum slow amount: 35% → 30%",
      "Increased time between Blessed Slime healing: 2s → 2.5s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 25, 2025",
+    "title": "",
+    "changes": [
+     "Heal rate 2s → 3s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 28, 2025",
+    "title": "",
+    "changes": [
+     "Adjusted efficacy of slime buff if 3 slimes are on a player 25% →30%",
+     "Reduced efficacy of slime buffs if 4 slimes are on a player 10% → 12%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 9, 2024",
+    "title": "",
+    "changes": [
+     "Reduced max Blessed Slime healing 12% → 10%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 14, 2024",
+    "title": "",
+    "changes": [
+     "Increased time between healing from Heal Slime 1s → 2s",
+     "Decreased max healing rate 15% → 12%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 3, 2024",
+    "title": "",
+    "changes": [
+     "Lowered friendship gain per minute: 12.5→10"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 19, 2024",
+    "title": "",
+    "changes": [
+     "Reduced efficacy of slime buff if 3 slimes are on a player 40% → 25%",
+     "Reduced efficacy of slime buffs if 4 slimes are on a player 20% → 10%",
+     "Decreased max damage boost from Void Slime 16% → 15%",
+     "Decreased max movement speed reduction from Frosty Slime 50% → 35%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 15, 2024",
+    "title": "",
+    "changes": [
+     "Decrease rate of friendship per minute (15 → 12.5)"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 16, 2024",
+    "title": "",
+    "changes": [
+     "Increased cost of Healing and Void slimes 2 emeralds → 3 emeralds"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 2, 2024",
+    "title": "",
+    "changes": [
+     "Void slime max damage boost decreased 20% → 16%"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Dec 15, 2023",
+    "title": "",
+    "changes": [
+     "Increased base healing on Blessed Slime: 4% → 5% missing health",
+     "Decreased max healing on Blessed Slime: 17% → 15% missing health",
+     "Increased base damage buff on Void Slime: 4% → 5% increased damage",
+     "Decreased max damage buff on Void Slime: 22% → 20% increased damage"
     ]
    }
   ]
@@ -5898,6 +9528,42 @@
      "On using “Charge Staff” ability, you lose a base flat amount of progress",
      "Enchants"
     ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 27, 2026",
+    "title": "",
+    "changes": [
+     "Reduced Mending Canopy Staff self healing multiplier: 0.33x → 0.25x"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Oct 17, 2025",
+    "title": "",
+    "changes": [
+     "Charge required to glide: 10% → 20%",
+     "Gliding now gets disabled by Grounded Effect (Gloops)"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 25, 2025",
+    "title": "",
+    "changes": [
+     "Heal rate 0.3s → 0.4s",
+     "Each tier heal amount reduced by 1"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 12, 2024",
+    "title": "",
+    "changes": [
+     "Canopy knockback no longer triggers Forest or Plunder Enchant",
+     "Heal per tick 8 → 7",
+     "Heal tick rate 0.25s → 0.3s"
+    ]
    }
   ]
  },
@@ -5930,6 +9596,33 @@
      "Reduced armor penetration scaling per attack during midnight: 20% → 15%",
      "After using the midnight ability, there’s a 15s cooldown before damage counts towards re-activating the ability",
      "Increased midnight duration: 10s → 12s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 2, 2025",
+    "title": "",
+    "changes": [
+     "Midnight now reaches max scaled damage and armor piercing with fewer attacks: 5 → 4",
+     "Midnight armor piercing at max scale: 15% → 20%"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Dec 6, 2024",
+    "title": "",
+    "changes": [
+     "Gain a 10% speed buff while she’s in her Midnight Mode",
+     "While Midnight Mode is active, Nyx’s armor is reduced by 10%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Dec 15, 2023",
+    "title": "",
+    "changes": [
+     "Decreased maximum damage buff during Midnight: 35% → 30% increased damage",
+     "Decreased Midnight duration: 12s → 10s"
     ]
    },
    {
@@ -6039,6 +9732,65 @@
     ]
    },
    {
+    "type": "nerf",
+    "date": "Mar 14, 2025",
+    "title": "",
+    "changes": [
+     "When non-Davey players use a Davey cannon, 2 stacks of \"Powdered\" are applied instead of 1"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Aug 23, 2024",
+    "title": "",
+    "changes": [
+     "Removed powdered damage armor penetration",
+     "Powdered damage 10 → 20",
+     "Powdered damage cap 50 → 60"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 29, 2024",
+    "title": "",
+    "changes": [
+     "Cannon price: 40 → 60 iron",
+     "Cannon distance impulse: -15%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 15, 2024",
+    "title": "",
+    "changes": [
+     "Decrease max powdered status effect damage (50 → 30)"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 1, 2024",
+    "title": "",
+    "changes": [
+     "Firing yourself from Pirate Davey’s cannon now gives you a “powdered” status for 7 seconds. If you fire yourself from a cannon with the “powdered” status, you take 10 damage per stack."
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 16, 2024",
+    "title": "",
+    "changes": [
+     "Decreased damage when firing from Davey’s cannon 20 → 12"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Dec 22, 2023",
+    "title": "",
+    "changes": [
+     "Firing yourself from Pirate Davey’s cannon inflicts 20 damage"
+    ]
+   },
+   {
     "type": "buff",
     "date": "Jul 14, 2023",
     "title": "",
@@ -6128,6 +9880,39 @@
    }
   ],
   "history": [
+   {
+    "type": "buff",
+    "date": "Jul 25, 2025",
+    "title": "",
+    "changes": [
+     "Removed 8s cooldown on earning embers",
+     "Can only earn ember from same target once every 30 seconds"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 30, 2024",
+    "title": "",
+    "changes": [
+     "Flamethrower now deals damage to non-player entities"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 14, 2024",
+    "title": "",
+    "changes": [
+     "Added an 8s cooldown on earning embers"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 20, 2023",
+    "title": "",
+    "changes": [
+     "Ranged upgrade flamethrower now ignites flammable blocks"
+    ]
+   },
    {
     "type": "buff",
     "date": "Aug 4, 2023",
@@ -6230,6 +10015,52 @@
     "changes": [
      "Ability cooldown 26→30"
     ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 2, 2026",
+    "title": "",
+    "changes": [
+     "Reduced vertical knockback reduction when enraged: 70% → 12%",
+     "Reduced horizontal knockback reduction when enraged: 70% → 40%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 8, 2025",
+    "title": "",
+    "changes": [
+     "Knockback resistance stacks 6 → 5",
+     "Rage damage reduction 10% → 7.5%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 25, 2025",
+    "title": "",
+    "changes": [
+     "Break Speed Multiplier: 1.6x → 1.5x",
+     "Knockback Reduction: 100% → 70% kb reduction",
+     "Items"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 27, 2025",
+    "title": "",
+    "changes": [
+     "Rage duration 12s -> 10s",
+     "Rage block damage buff 1.75x -> 1.6x"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 9, 2025",
+    "title": "",
+    "changes": [
+     "Now receives 6 stacks of knockback prevention when using his “Berserker Rage” ability",
+     "Stacks are consumed on damage taken, once all stacks are consumed Ragnar will take knockback again"
+    ]
    }
   ]
  },
@@ -6254,6 +10085,71 @@
    {
     "name": "Moving Sandstorm",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Oct 31, 2025",
+    "title": "",
+    "changes": [
+     "Sandstorm cooldown: 14s → 17s",
+     "Moving Sandstorm cooldown: 17s → 20s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 8, 2025",
+    "title": "",
+    "changes": [
+     "Sandstorm cooldown 12s → 14s",
+     "Moving Sandstorm cooldown 14s → 17s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 25, 2025",
+    "title": "",
+    "changes": [
+     "Using one ability places the other ability on cooldown",
+     "Increased Tornado Damage per tick: 3 → 4"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 13, 2025",
+    "title": "",
+    "changes": [
+     "Fixed not being able to build while in a tornado. (From a previous balance patch)"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 16, 2025",
+    "title": "",
+    "changes": [
+     "Reduced Sandstorm pull"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 2, 2025",
+    "title": "",
+    "changes": [
+     "Players can now place and break blocks in Sandstorm"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 25, 2025",
+    "title": "",
+    "changes": [
+     "Sandstorm pull strength reduced, consistency improved",
+     "Sandstorm cooldown 10s → 12s",
+     "Sandstorm duration 8s → 6s",
+     "Moving Sandstorm cooldown 12s → 14s",
+     "Moving Sandstorm duration 10s → 8s"
+    ]
    }
   ]
  },
@@ -6302,6 +10198,51 @@
     "title": "",
     "changes": [
      "Lowered poison damage per tick (8 → 5), increased tickrate (0.75s → 0.5s)"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 5, 2025",
+    "title": "",
+    "changes": [
+     "Raven poison damage per tick: 6 → 8"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 13, 2025",
+    "title": "",
+    "changes": [
+     "Adds a raven to your inventory every 45 seconds. You will not receive anymore ravens once you have 2 or more in your inventory."
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 25, 2024",
+    "title": "",
+    "changes": [
+     "Lowered Raven Iron Costs: 90 → 60 iron",
+     "Increased poison tickrate: 0.5s → 0.75s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 17, 2024",
+    "title": "",
+    "changes": [
+     "Increase poison duration 3s → 5s",
+     "Increased raven explosion range 7 blocks → 8 blocks",
+     "Increased raven speed 45 → 55",
+     "Decreased raven cost 120 iron → 90 iron"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Oct 6, 2023",
+    "title": "",
+    "changes": [
+     "Decrease Raven poison duration 5s → 3s",
+     "Decrease cost of Ravens 1 Emerald → 120 Iron"
     ]
    },
    {
@@ -6381,6 +10322,39 @@
      "Santa Strafe price: 70 → 60 Iron",
      "Santa Siege price: 225 → 200 Iron"
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 28, 2025",
+    "title": "",
+    "changes": [
+     "TNT no longer slides off blocks"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 28, 2025",
+    "title": "",
+    "changes": [
+     "Santa Strafe: 325 → 225 Iron"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 6, 2024",
+    "title": "",
+    "changes": [
+     "Santa can now buy Santa Siege items in the shop for 325 iron that drops 1 Siege TNT where thrown"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 16, 2024",
+    "title": "",
+    "changes": [
+     "Increased max launch range of Santa Strafe ability",
+     "Decreased delay between Santa Strafe ability activation and TNT drop 4s → 2s"
+    ]
    }
   ]
  },
@@ -6399,6 +10373,40 @@
   "items": [],
   "abilities": [],
   "history": [
+   {
+    "type": "nerf",
+    "date": "Nov 28, 2025",
+    "title": "",
+    "changes": [
+     "Expand sheep spawning radius"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 14, 2025",
+    "title": "",
+    "changes": [
+     "Sheeps now highlight after 10 seconds",
+     "Sheeps now spawn closer to the center of the map"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 26, 2024",
+    "title": "",
+    "changes": [
+     "Improved spawn points closer to team base",
+     "Sheep becomes highlighted after a minute"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 29, 2023",
+    "title": "",
+    "changes": [
+     "Increased damage per sheep 8 → 9%"
+    ]
+   },
    {
     "type": "buff",
     "date": "Apr 7, 2023",
@@ -6458,6 +10466,55 @@
      "Lowered level 3 stack threshold from 1500 → 1200",
      "Base seahorse damage 2 → 3",
      "Don’t lose stacks past the last upgraded seahorse level"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 28, 2025",
+    "title": "",
+    "changes": [
+     "Seahorse Stacks Death Penalty 50 → 75"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 14, 2024",
+    "title": "",
+    "changes": [
+     "Increased time between Seahorse ice and heal projectiles 0.1s → 0.5s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 3, 2024",
+    "title": "",
+    "changes": [
+     "Increased level 3 Seahorse beam cooldown: 5s→8s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 19, 2024",
+    "title": "",
+    "changes": [
+     "Increased stacks required for Level 1 Seahorse 150 → 200",
+     "Increased stacks required for Level 2 Seahorse 500 → 600"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 29, 2024",
+    "title": "",
+    "changes": [
+     "Lose 50 stacks per death. Stacks will not go below a seahorse level threshold: [150, 500, 1500]"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 19, 2024",
+    "title": "",
+    "changes": [
+     "Heal and damage rate reduced"
     ]
    },
    {
@@ -6552,6 +10609,135 @@
     "changes": [
      "Now automatically exits her Charge state if lifted by Whisper."
     ]
+   },
+   {
+    "type": "nerf",
+    "date": "Oct 31, 2025",
+    "title": "",
+    "changes": [
+     "Moving energy decay: 0.15 → 0.2"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 22, 2025",
+    "title": "",
+    "changes": [
+     "Grounded and Silence status effect will disable mounting"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 14, 2025",
+    "title": "",
+    "changes": [
+     "Sigrid starts the match with less stamina: 50% stamina → 25% stamina"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 3, 2025",
+    "title": "",
+    "changes": [
+     "Sigrid energy on respawn reduced 100% → 50%",
+     "Sigrid charge base damage reduced 26 → 20",
+     "Sigrid charge damage multiplier removed 120% → 100%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Oct 11, 2024",
+    "title": "",
+    "changes": [
+     "Reduced jump height multiplier: 1.8 → 1.5",
+     "Energy decay rate increased when Moving: .1 → .15",
+     "Energy decay rate increased when Charging: .15 → .2",
+     "Energy decay rate increased when Idle: .05 → .1"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 30, 2024",
+    "title": "",
+    "changes": [
+     "Gloops now cause Sigrid to dismount her elk"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 26, 2024",
+    "title": "",
+    "changes": [
+     "Increased charge cooldown from 12s → 14s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 28, 2024",
+    "title": "",
+    "changes": [
+     "Uppercut Charge now has a flat energy cost",
+     "Increased energy consumption while moving",
+     "While Charging, energy consumption is greatly increased",
+     "Charge Duration 6s → 5s",
+     "Charge Cooldown 18s → 10s"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "May 31, 2024",
+    "title": "Rework",
+    "changes": [
+     "Can now charge forward at ramping speeds, damaging the first enemy hit",
+     "Charge damage scales with her speed on collision",
+     "Hitting an enemy with her charge dismounts her",
+     "Base speed and jump height on the elk increased",
+     "No longer deals damage or gains high move speed when sprinting on her elk",
+     "Hitting a wall while charging hurts her",
+     "Removed the Uppercut stun ability"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 19, 2024",
+    "title": "",
+    "changes": [
+     "Energy consumed while charging decreased",
+     "Speed buff while mounted increased",
+     "Uppercut ability range increased",
+     "Uppercut damage increased 20 → 24",
+     "Uppercut knockback increased",
+     "Charge damage increased 10 → 20",
+     "Charge knockback increased"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jan 12, 2024",
+    "title": "",
+    "changes": [
+     "Uppercut damage increased: 15 → 20",
+     "Uppercut knockback decreased",
+     "Charge damage increased: 8 → 10",
+     "Charge knockback decreased",
+     "Energy consumed while idle reduced",
+     "Energy gained while unmounted increased"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 5, 2024",
+    "title": "",
+    "changes": [
+     "Energy depletion is faster when on mount",
+     "Speed reduced on mount: 1.5 → 1.25",
+     "Jump reduced on mount: 1.75 → 1.5",
+     "Uppercut range reduced: 10 → 5",
+     "Uppercut damage reduced: 24 → 15",
+     "Uppercut stun reduced: 3 → 1.5 seconds",
+     "Charge hit range reduced: 10 → 5",
+     "Charge hit damage reduced: 18 → 8"
+    ]
    }
   ]
  },
@@ -6596,6 +10782,64 @@
      "Removed receiving double stacks duration ability duration",
      "Cooldown: 20 → 18s"
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 8, 2025",
+    "title": "",
+    "changes": [
+     "Retain 1/3 Triumph stacks on death (rounded up)",
+     "Triumph damage reduction per stack 2% → 2.5%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 2, 2025",
+    "title": "",
+    "changes": [
+     "Triumph",
+     "Max Stack: 15 → 10",
+     "Press the Attack ability",
+     "Shield scales off triumph stacks (Maxes out at 5 triumph stacks). Minimum of 10 shield and maximum of 20 shield.",
+     "Now consumes triumph stacks on ability use. Consumes a max of 5 to scale ability to the max"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 25, 2025",
+    "title": "",
+    "changes": [
+     "Buff tick rate 0.75s → 1s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 11, 2025",
+    "title": "",
+    "changes": [
+     "Damage Aura scaling 7.5% → 5%",
+     "Enhanced Damage Aura scaling 15% → 12.5%"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Mar 28, 2025",
+    "title": "",
+    "changes": [
+     "Health Aura",
+     "+1 health per tick (Doubled for allies)",
+     "Reduce tick cooldown from: 1 → 0.75 seconds",
+     "Remove the below 50% bonus health bonus",
+     "Damage Aura",
+     "Now scales off of Silas’s sword damage",
+     "Base 7.5% damage bonus (Doubled for allies)",
+     "Press the Attack",
+     "No longer consumes triumph stacks",
+     "Reduced Cooldown: 30 → 20 seconds",
+     "Shield now only apply to Silas",
+     "Shield Health: 10 → 20",
+     "The shield no longer scales based on triumph stacks"
+    ]
    }
   ]
  },
@@ -6632,6 +10876,33 @@
      "Mark duration 16→20",
      "Slightly increased the area to trigger speed boost"
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 8, 2025",
+    "title": "",
+    "changes": [
+     "Mark speed multiplier 1.35 → 1.45",
+     "Mark damage multiplier 1.15 → 1.18"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 28, 2025",
+    "title": "",
+    "changes": [
+     "Decreased mark projectile speed: 43 → 39",
+     "Decreased mark speed multiplier: 1.5 → 1.35x"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 14, 2025",
+    "title": "",
+    "changes": [
+     "Mark duration 20s → 16s",
+     "Mark damage multiplier 1.25 → 1.15"
+    ]
    }
   ]
  },
@@ -6659,6 +10930,30 @@
   ],
   "abilities": [],
   "history": [
+   {
+    "type": "buff",
+    "date": "Aug 8, 2025",
+    "title": "",
+    "changes": [
+     "Smoke Bomb now gives a 1.5 second window where actions will not remove invisibility"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 16, 2024",
+    "title": "",
+    "changes": [
+     "Increased invisibility duration 10s → 15s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 18, 2023",
+    "title": "",
+    "changes": [
+     "Smoke invisibility now hides you from entities and other traps"
+    ]
+   },
    {
     "type": "buff",
     "date": "Mar 3, 2023",
@@ -6727,6 +11022,21 @@
      "Tier 1 Staff  projectile knockback: 0.8 → 0.6",
      "Tier 1 Frost Mist damage cooldown 0.2 →0.22"
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 20, 2025",
+    "title": "",
+    "changes": [
+     "Tier 2 Ice Projectile damage: 28 → 34",
+     "Tier 3 Ice Projectile damage: 38 → 50",
+     "Tier 2 Spray damage: 6 → 7",
+     "Tier 3 Spray damage: 8 → 12",
+     "All staff damage now ignores 15% of enemy armor",
+     "Higher-tier staffs charge to max damage faster (0.85s → 0.8s → 0.75s)",
+     "Higher-tier staffs have shorter cooldowns between shots (1s → 0.9s → 0.8s)",
+     "Higher-tier staffs spray faster (0.2s → 0.18s → 0.16s)"
+    ]
    }
   ]
  },
@@ -6788,6 +11098,53 @@
     "changes": [
      "Spirit damage increased: 22 → 30",
      "Max Spirits increased: 2 → 3"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 14, 2025",
+    "title": "",
+    "changes": [
+     "Reduced life span of thrown spirits before disappearing: 2 minutes → 30 seconds",
+     "After taking damage from an exploding spirit, you take 30% less damage from all other exploding spirits for 5 seconds"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 3, 2025",
+    "title": "",
+    "changes": [
+     "Spirit target detection radius increased 8 → 10 blocks",
+     "Spirits now have 60% armor penetration"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jul 26, 2024",
+    "title": "",
+    "changes": [
+     "Damage: 20 → 22",
+     "Price: 50 → 40 iron",
+     "Lifespan: 8min → 2min"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 29, 2024",
+    "title": "",
+    "changes": [
+     "Spirit damage: 17 → 20",
+     "Max stack size: 6 → 8"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jan 12, 2024",
+    "title": "",
+    "changes": [
+     "Spirit price decreased 60 → 50 iron",
+     "Max spirits increased 4 → 6",
+     "Charge time to throw max distance increased"
     ]
    },
    {
@@ -6873,6 +11230,22 @@
   ],
   "abilities": [],
   "history": [
+   {
+    "type": "bal",
+    "date": "Jan 30, 2026",
+    "title": "",
+    "changes": [
+     "Collectible spawn rates now scale with map size: larger maps spawn more, smaller maps spawn less"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 31, 2024",
+    "title": "",
+    "changes": [
+     "increased star spawn cooldown from 12~16 second → 15~20 seconds"
+    ]
+   },
    {
     "type": "nerf",
     "date": "Jan 20, 2023",
@@ -6961,6 +11334,107 @@
      "Portal block health now scales from 30 → 90 over the match duration",
      "This scaling speeds up for modes with faster team gen speeds"
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 27, 2026",
+    "title": "",
+    "changes": [
+     "Increased portal HP: 30 → 100",
+     "Small speed boost after exiting portal"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 2, 2025",
+    "title": "",
+    "changes": [
+     "Reduce Exit portal block health: 100 → 30",
+     "Reduce Entrance portal block health: 80 → 30",
+     "Decreased time to mine: 3.5s → 2.5s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 14, 2025",
+    "title": "",
+    "changes": [
+     "No longer get an entrance portal on spawn",
+     "Styx' entrance portal is now in the shop as a one-time purchase for 30 iron (kept on death after one purchase)"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 31, 2025",
+    "title": "",
+    "changes": [
+     "Exit portal block health 200 → 100",
+     "Teleport speed 130 → 110"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 17, 2025",
+    "title": "",
+    "changes": [
+     "Entrance Portal health 40 → 80, Exit Portal health 40 → 200",
+     "Portal can now be instantly broken by the owner for pickup"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 3, 2025",
+    "title": "",
+    "changes": [
+     "Confluence Portal block health increased 20 → 40 hp"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 23, 2024",
+    "title": "",
+    "changes": [
+     "Confluence Portal health reduced 50 → 20",
+     "Teleport speed reduced 160 → 130"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jul 26, 2024",
+    "title": "",
+    "changes": [
+     "Teleport speed: 180 → 160",
+     "Opened portal active time: 60 → 30"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 14, 2024",
+    "title": "",
+    "changes": [
+     "Added a 15s cooldown between opening new portals after a player has been killed"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 31, 2024",
+    "title": "",
+    "changes": [
+     "Increase portal travel speed",
+     "Increase portal lifetime 30s → 60s",
+     "Increase number of portal uses 3 → 5"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Apr 11, 2024",
+    "title": "",
+    "changes": [
+     "Can now respawn if her team's bed breaks while she is in ghost form",
+     "Can respawn early by pressing Recall while in ghost form",
+     "Portal travel speed increased",
+     "Entrance portal block health increased"
+    ]
    }
   ]
  },
@@ -7015,6 +11489,152 @@
    },
    {
     "type": "nerf",
+    "date": "Feb 27, 2026",
+    "title": "",
+    "changes": [
+     "Slightly decreased iron + emerald scaling"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 27, 2026",
+    "title": "",
+    "changes": [
+     "Fire now spreads to crop blocks"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Dec 12, 2025",
+    "title": "",
+    "changes": [
+     "Chickens can now be stored in the personal chest",
+     "Keep half of your chickens on death",
+     "Chicken price will be less likely above 100 Iron but more likely to be emerald",
+     "Reduced chicken damage",
+     "Iron chicken damage: 11 → 9",
+     "Diamond Chicken Damage: 13 → 11",
+     "Emerald Chicken Damage: 15 →13",
+     "Void Chicken Damage: 18 → 16"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 19, 2025",
+    "title": "",
+    "changes": [
+     "Chicken damage per tier: 9, 12, 15, 17, 20 → 8, 11, 13, 15, 18"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 16, 2025",
+    "title": "",
+    "changes": [
+     "Increased chicken base lifetime 60s → 75s",
+     "Egg harvest time now has random variation instead of always 60s (+/- 7.5s)"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Apr 11, 2025",
+    "title": "",
+    "changes": [
+     "Chicken sell value increased by 20%",
+     "Leather chicken damage 12 → 9",
+     "Iron chicken damage 15 → 12",
+     "Diamond chicken damage 18 → 15",
+     "Emerald chicken damage 20 → 17",
+     "Void chicken damage 22 → 20"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Nov 22, 2024",
+    "title": "",
+    "changes": [
+     "Chicken and egg prices change every 90s → 60s",
+     "Chicken and egg prices now fluctuate by a wider range"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 13, 2024",
+    "title": "",
+    "changes": [
+     "Reduced Chicken Nest prices: Iron 120 iron → 60 iron, Diamond 4 emeralds → 2 emeralds, Emerald 6 emeralds → 4 emeralds, Void 10 emeralds → 6 emeralds"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 17, 2024",
+    "title": "",
+    "changes": [
+     "Increased Chicken health 70 → 80"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Apr 5, 2024",
+    "title": "Season X",
+    "changes": [
+     "Chickens are now upgraded through nests bought in the shop",
+     "Iron Armor Chicken Nest: 120 iron",
+     "Diamond Armor Chicken Nest: 4 emeralds",
+     "Emerald Armor Chicken Nest: 6 emeralds",
+     "Void Armor Chicken Nest: 10 emeralds"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 5, 2024",
+    "title": "",
+    "changes": [
+     "Diamond chicken damage reduced: 19 → 18",
+     "Emerald chicken damage reduced: 23 → 20",
+     "Void chicken damage reduced: 27 → 22"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 24, 2023",
+    "title": "",
+    "changes": [
+     "Chicken Health: 80 → 70",
+     "Chicken Iron Damage: 16 → 15",
+     "Chicken Diamond Damage: 21 → 19",
+     "Chicken Emerald Damage: 27 → 23",
+     "Chicken Void Damage: 30 → 27"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 17, 2023",
+    "title": "",
+    "changes": [
+     "Diamond chicken damage: 26 → 21",
+     "Emerald chicken damage: 30 → 27",
+     "Void chicken damage: 34 → 30"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 20, 2023",
+    "title": "",
+    "changes": [
+     "Increased chicken base health 60hp → 80hp"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 25, 2023",
+    "title": "",
+    "changes": [
+     "Increased Tier 4 Chicken Armor"
+    ]
+   },
+   {
+    "type": "nerf",
     "date": "Jul 14, 2023",
     "title": "",
     "changes": [
@@ -7056,6 +11676,69 @@
      "Kick impact radius: 12 → 11",
      "Direct-hit damage: 24 → 22",
      "Maximum area damage: 16 → 15"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 8, 2025",
+    "title": "",
+    "changes": [
+     "Kicked block AOE radius ~3 blocks → 4",
+     "Kicked block direct hit base damage 20 → 24",
+     "Kicked block AOE damage min/max 9/14 → 10/16"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 13, 2025",
+    "title": "",
+    "changes": [
+     "Increased Damage reduction when blocking an attack decreased from: 10% → 15%",
+     "Reduced Stomp Ability Cooldown: 35 → 30 seconds",
+     "Nerfed Stomp Cooldown Reduction Per Hit: 5 → 4 seconds"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jan 17, 2025",
+    "title": "",
+    "changes": [
+     "Can no longer pick up player-placed blocks. If Terra is not within range of any map blocks, he will summon blocks instead."
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Oct 11, 2024",
+    "title": "",
+    "changes": [
+     "Damage reduction when blocking an attack decreased from: 20% → 10%",
+     "Direct hits now increase damage reduction by 1% per, up to a maximum of 30%",
+     "Minimum damage reduced when blocking an attack decreased from: 5 → 3"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 29, 2024",
+    "title": "",
+    "changes": [
+     "Will always choose the option that blocks the most damage between Flat and Percentage.",
+     "Flat damage blocked with a block: 10 → 5",
+     "Percent damage blocked with a block: 25% → 20%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 24, 2023",
+    "title": "",
+    "changes": [
+     "Block Kick direct hit base damage: 15 → 20",
+     "Block Kick AOE damage: 5-10 → 9-14",
+     "Added 50% armor penetration to Block Kick",
+     "Block Stomp cooldown: 40s → 35s",
+     "Can now gain a stack of Empowered Kicks from players hit by Block Kick AOE damage",
+     "Empowered Kicks will now increase Block Kick AOE damage as well as direct hit damage",
+     "Blocks now also reduce knockback on incoming attacks",
+     "Blocks now reduce incoming damage by 10 or 25% of the incoming attack damage, whichever is greater"
     ]
    }
   ]
@@ -7144,6 +11827,24 @@
    },
    {
     "type": "buff",
+    "date": "Nov 22, 2024",
+    "title": "",
+    "changes": [
+     "Enemy Players no longer receive trap when breaking one"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 8, 2024",
+    "title": "",
+    "changes": [
+     "Snap Traps now disable jumping and placing blocks for trapped players",
+     "Snap Trap disabled time reduced 2.25s -> 1.75s",
+     "Snap Trap grounded time reduced 10s -> 7s"
+    ]
+   },
+   {
+    "type": "buff",
     "date": "Feb 10, 2023",
     "title": "",
     "changes": [
@@ -7209,6 +11910,62 @@
   "history": [
    {
     "type": "buff",
+    "date": "Nov 28, 2025",
+    "title": "",
+    "changes": [
+     "Reduce Light Orb stacking cooldown 0.8s → 0.6s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 5, 2025",
+    "title": "",
+    "changes": [
+     "Decay stacks to reach max potency per level: 6, 6, 7, 8 → 6, 6, 6, 6",
+     "Decay max potency increased per level: 25%, 30%, 40%, 50% → 25%, 35%, 45%, 60%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 8, 2025",
+    "title": "",
+    "changes": [
+     "Shield amount per level 1, 2, 3, 5 → 2, 3, 4, 6"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jul 26, 2024",
+    "title": "Rework",
+    "changes": [
+     "Can freely switch between Light and Void forms with the Inversion ability (30s cooldown)",
+     "Starts at Angel Tier 0 and transforms into Light form on her first level up",
+     "Light form gives a shield to herself and all allies on every melee hit instead of healing",
+     "Void form gives a stacking max health Decay effect to her melee target",
+     "Gains Tier EXP from damage instead of kills, up to Tier 4",
+     "Loses EXP on death, but never drops a Tier",
+     "Light and Void effects get stronger each tier"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 29, 2024",
+    "title": "",
+    "changes": [
+     "Light Trinity lifesteal for allies: 36% → 40%",
+     "Void Trinity lifesteal: 16% → 20%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 5, 2024",
+    "title": "",
+    "changes": [
+     "Teammate heal radius increased"
+    ]
+   },
+   {
+    "type": "buff",
     "date": "Oct 28, 2022",
     "title": "",
     "changes": [
@@ -7254,7 +12011,72 @@
     "img": "images/items/trident.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Jan 16, 2026",
+    "title": "",
+    "changes": [
+     "Trident damage 28→23"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 30, 2025",
+    "title": "",
+    "changes": [
+     "Cooldown reduced from 10s → 9s",
+     "Damage on enemy hit now ignores 50% of armor"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Dec 6, 2024",
+    "title": "",
+    "changes": [
+     "Reduced range of Trident by 12%",
+     "Increased cooldown of Trident: 8 → 10 seconds"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 22, 2024",
+    "title": "",
+    "changes": [
+     "reduced damage if Trident hits player 35 →28"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 13, 2024",
+    "title": "",
+    "changes": [
+     "Increased Trident damage 20 → 35",
+     "Increased Trident speed and range",
+     "Decreased Trident cooldown 11s → 8s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 9, 2024",
+    "title": "",
+    "changes": [
+     "Added indicator to aiming line to show if it will hit a block",
+     "Increased Trident cooldown 8s → 11s",
+     "Decreased Trident range"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 12, 2024",
+    "title": "",
+    "changes": [
+     "Increased Harpoon range and speed",
+     "Harpoon no longer needs to be charged before throwing"
+    ]
+   }
+  ]
  },
  {
   "name": "Trixie",
@@ -7278,6 +12100,41 @@
     "name": "Rift Rewind",
     "note": "Only after using Rift Warp",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "bal",
+    "date": "Feb 27, 2026",
+    "title": "",
+    "changes": [
+     "Increased warp ability cooldown: 13s → 20s",
+     "Decreased cooldown per hit: 1.4s → 3s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Oct 17, 2025",
+    "title": "",
+    "changes": [
+     "Decrease Cooldown Per Hit: 2 → 1.4"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 11, 2025",
+    "title": "",
+    "changes": [
+     "Rift Warp cooldown 10s → 13s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 14, 2025",
+    "title": "",
+    "changes": [
+     "Increase cooldown on warp ability: 8s → 10s"
+    ]
    }
   ]
  },
@@ -7315,6 +12172,17 @@
    {
     "name": "Summon Heal Spirit",
     "img": "images/abilities/ability-template.png"
+   }
+  ],
+  "history": [
+   {
+    "type": "buff",
+    "date": "Dec 20, 2024",
+    "title": "",
+    "changes": [
+     "Spirit Critter radius increased 3 → 5 blocks",
+     "Uma no longer slows down when using spirit staff"
+    ]
    }
   ]
  },
@@ -7362,6 +12230,82 @@
     "changes": [
      "Reduced movement speed buff: 1.3x → 1.2x",
      "Max shield from Umbra teleports reduced: 40 → 30"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 22, 2024",
+    "title": "",
+    "changes": [
+     "Reduced channel duration 1.2s → 1s",
+     "Shield increase by 5"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jul 26, 2024",
+    "title": "",
+    "changes": [
+     "Charge time reduced: 1.5 → 1.2",
+     "Applies a 15 health shield to self on teleport for 6 seconds"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 28, 2024",
+    "title": "",
+    "changes": [
+     "Decreased Hat Price: 50 iron → 35 iron",
+     "Decreased teleport charge time: 2s → 1.5s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 1, 2024",
+    "title": "",
+    "changes": [
+     "Hat must be purchased for 50 iron and will be permanent after purchase",
+     "Charge Time Increased: 0.5s → 2s",
+     "Teleport duration now increases based on distance"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Dec 8, 2023",
+    "title": "",
+    "changes": [
+     "Teleport grants +15 shield for 6s to target and +10 shield to nearby allies",
+     "Max 2 hats per target",
+     "Invulnerability buff removed",
+     "Multiple hats now visually stack above each other"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 20, 2023",
+    "title": "",
+    "changes": [
+     "Decreased channel time 1s → 0.5s",
+     "Decreased travel time 1.5s → 1s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 22, 2023",
+    "title": "",
+    "changes": [
+     "Increased invulnerability duration 1s → 2s",
+     "Increased ally speed buff 20% → 30%",
+     "Decreased teleport travel time 3s → 2s",
+     "Increased speed and invulnerability area of effect"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 8, 2023",
+    "title": "",
+    "changes": [
+     "Must now channel Teleport ability for 1 second without taking damage before teleporting"
     ]
    },
    {
@@ -7413,7 +12357,78 @@
     "img": "images/items/emerald-chakram.png"
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "history": [
+   {
+    "type": "nerf",
+    "date": "Feb 14, 2025",
+    "title": "",
+    "changes": [
+     "Chakram speed 210 → 180",
+     "Chakram knockback reduced"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 31, 2025",
+    "title": "",
+    "changes": [
+     "Chakram range previously increased each tier (38, 42, 48, 54). Now range for all tiers is 60",
+     "Chakram speed increased 140 → 210 to account for longer range and keeping similar attack speed",
+     "Invisibility cooldown 16s → 12s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 13, 2024",
+    "title": "",
+    "changes": [
+     "Increased Chakram damage, armor penetration, and knockback",
+     "Increased Invisibility duration, decreased cooldown"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 9, 2024",
+    "title": "",
+    "changes": [
+     "Decreased cooldown on chakram throws 0.5s → 0.4s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 28, 2024",
+    "title": "",
+    "changes": [
+     "Increased iron, diamond, and emerald chakram range"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 1, 2024",
+    "title": "",
+    "changes": [
+     "Chakram range : 30 → 38"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 22, 2023",
+    "title": "",
+    "changes": [
+     "Increased charkram armor penetration 0% → 5% at iron, 0% → 10% at diamond, 0% → 20% at emerald"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 15, 2023",
+    "title": "",
+    "changes": [
+     "Increased chakram range",
+     "Increased chakram speed"
+    ]
+   }
+  ]
  },
  {
   "name": "Vanessa",
@@ -7444,6 +12459,23 @@
     "title": "",
     "changes": [
      "Slightly increased projectile knockback multiplier"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 17, 2025",
+    "title": "",
+    "changes": [
+     "Triple shot charge Time",
+     "Wood Bow: 1 → .85 sec"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 28, 2025",
+    "title": "",
+    "changes": [
+     "Discounted Arrows: 16 → 12 iron per stack"
     ]
    },
    {
@@ -7532,6 +12564,22 @@
      "Corrupt Tier emerald requirement: 10 → 12",
      "Chosen Tier emerald requirement: 40 → 48"
     ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 13, 2026",
+    "title": "",
+    "changes": [
+     "Void Knight no longer takes reduced fall damage"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 2, 2026",
+    "title": "",
+    "changes": [
+     "When killing a Void Knight, you'll now get a bounty relative to their Void Knight progress (this is more of a bug fix, but it results in a nerf)"
+    ]
    }
   ]
  },
@@ -7555,6 +12603,59 @@
   ],
   "abilities": [],
   "history": [
+   {
+    "type": "nerf",
+    "date": "Jun 13, 2025",
+    "title": "",
+    "changes": [
+     "Heal Ratio: Nerfed by 15% when dashing through 1-3 players",
+     "Increased Armor Pen: 30% → 40%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 28, 2025",
+    "title": "",
+    "changes": [
+     "Heal ratio reduced when hitting multiple players:",
+     "1st player: 100% → 100%",
+     "2nd: 80%, 3rd: 60%, 4th: 40%, 5th: 20%, nth: 20%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 22, 2024",
+    "title": "",
+    "changes": [
+     "Reduced axe damage 20 → 18"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "May 31, 2024",
+    "title": "",
+    "changes": [
+     "void axe healing ratio 1.2 → 1"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "May 3, 2024",
+    "title": "",
+    "changes": [
+     "Increased axe damage: 15→20",
+     "Increased axe cooldown: 5s→6s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 8, 2023",
+    "title": "",
+    "changes": [
+     "Decreased axe leap cooldown 6s → 4s",
+     "Increased heal ratio on axe damage 110% → 120%"
+    ]
+   },
    {
     "type": "buff",
     "date": "Oct 28, 2022",
@@ -7635,6 +12736,60 @@
   ],
   "history": [
    {
+    "type": "buff",
+    "date": "Apr 11, 2025",
+    "title": "",
+    "changes": [
+     "Turret shot delay 0.25s → 0.2s",
+     "Turret shot velocity 300 → 320",
+     "Turret shot damage 15 → 18"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 14, 2025",
+    "title": "",
+    "changes": [
+     "Add armor penetration to turret shots: 20%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jun 14, 2024",
+    "title": "",
+    "changes": [
+     "Increased range of turret shots by 50%",
+     "Increased velocity of turret shots 260 → 300"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 17, 2024",
+    "title": "",
+    "changes": [
+     "Increased fire rate 3.5s → 2.5s"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Mar 15, 2024",
+    "title": "",
+    "changes": [
+     "Increase damage (10 → 15)",
+     "Decrease fire-rate (0.2s → 0.35s)",
+     "Increase knockback multiplier (0.2x → 0.4x)",
+     "Receive turret block when broken by owner"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 3, 2023",
+    "title": "",
+    "changes": [
+     "Decreased turret knockback"
+    ]
+   },
+   {
     "type": "nerf",
     "date": "Aug 4, 2023",
     "title": "",
@@ -7708,6 +12863,43 @@
     "title": "",
     "changes": [
      "Only drops soul if at least one Warden contributed to the kill"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 31, 2025",
+    "title": "",
+    "changes": [
+     "Increased max shield: 8 → 15"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 22, 2025",
+    "title": "",
+    "changes": [
+     "Decreased Warden imprisoned respawn delay multiplier 3x → 2x respawn time"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "May 16, 2025",
+    "title": "",
+    "changes": [
+     "Max block damage multiplier 1.2 → 1.25",
+     "Block damage multiplier per soul 0.05 → 0.1",
+     "Respawn delay increased from 5s -> 7.5s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Apr 19, 2024",
+    "title": "",
+    "changes": [
+     "Decreased block damage increase per captured soul 35% → 5%",
+     "Capped block damage increase from captured souls at 20%",
+     "Decreased shield amount per soul 4 → 3",
+     "Decreased respawn time added 5s → 4s"
     ]
    },
    {
@@ -7787,6 +12979,52 @@
    },
    {
     "type": "buff",
+    "date": "Jan 16, 2026",
+    "title": "",
+    "changes": [
+     "Warrior Armor gives extra 5% damage reduction against swords and projectiles",
+     "Emerald Armor (equipped on Warrior) gives extra 10% damage reduction against swords and projectiles"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Apr 11, 2025",
+    "title": "",
+    "changes": [
+     "Warrior Armor price 7 → 6 emerald",
+     "Emerald Armor price 34 → 32 emerald"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 20, 2024",
+    "title": "",
+    "changes": [
+     "All swords have a discounted price (20 iron → 15, 70 iron → 60, 4 emerald → 3, 20 emerald → 17)"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 9, 2024",
+    "title": "",
+    "changes": [
+     "Decreased armor price across all tiers",
+     "Leather: 45 Iron → 40 Iron",
+     "Iron: 110 Iron → 100 Iron",
+     "Warrior Armor: 8 Emerald → 7 Emerald",
+     "Emerald Armor: 36 Emerald → 34 Emerald"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 24, 2023",
+    "title": "",
+    "changes": [
+     "Warrior armor adjusted to be stronger than diamond armor"
+    ]
+   },
+   {
+    "type": "buff",
     "date": "May 12, 2023",
     "title": "",
     "changes": [
@@ -7858,6 +13096,59 @@
     "title": "",
     "changes": [
      "Gain half of your mana back on hits"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 28, 2025",
+    "title": "",
+    "changes": [
+     "Mana regen per second 5 mana/s → 6 mana/s"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Sep 5, 2025",
+    "title": "",
+    "changes": [
+     "Whim now has a mana bar, where mana is consumed when casting a spell and regenerates over time",
+     "Increased fire rate of Whim’s spells: ~40%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 31, 2025",
+    "title": "",
+    "changes": [
+     "Starts the game with a Twig instead of Wood Sword",
+     "Spell damage is halved until getting first elemental book",
+     "Fire, Ice, Nature spell recast time 0.8s → 1.2s (same as base spell)"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 12, 2024",
+    "title": "",
+    "changes": [
+     "Spell fire rate reduced"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Dec 1, 2023",
+    "title": "",
+    "changes": [
+     "Decreased all spells’ base damage by 5",
+     "Decreased fire spell burn damage per tick 6 → 4"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Sep 15, 2023",
+    "title": "",
+    "changes": [
+     "Spell speed is now twice as fast",
+     "Reduced extra damage taken 10% → 5%"
     ]
    },
    {
@@ -8004,6 +13295,72 @@
     ]
    },
    {
+    "type": "buff",
+    "date": "Oct 17, 2025",
+    "title": "",
+    "changes": [
+     "Projectile",
+     "Cooldown: 0.7 → 0.85",
+     "Ignores Armor: 0 → 20%",
+     "Healing regen speed:  1 → 0.5 sec (total healing remains the same)"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 19, 2025",
+    "title": "",
+    "changes": [
+     "Heal is now a regen instead of instant heal: 14 instant health → 2 health every second x 7 (14 total health)",
+     "Lift cooldown 70s → 85s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 8, 2025",
+    "title": "",
+    "changes": [
+     "Owl Lift cooldown 60s → 70",
+     "Owl Heal amount 16 → 14"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "May 2, 2025",
+    "title": "",
+    "changes": [
+     "Decreased heal amount: 20 → 16",
+     "Decreased heal Cooldown: 8s → 7s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 28, 2025",
+    "title": "",
+    "changes": [
+     "Increased attack cooldown: 0.6 → 0.7 seconds",
+     "Projectile velocity 240 → 220",
+     "Projectile lifetime 2.8s → 2.4s",
+     "Added a mobile projectile button"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Apr 19, 2024",
+    "title": "",
+    "changes": [
+     "Increased heal amount from heal ability 15 → 20",
+     "Increased speed buff duration 3s → 4s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 6, 2023",
+    "title": "",
+    "changes": [
+     "Increased heal from 10hp → 15hp"
+    ]
+   },
+   {
     "type": "nerf",
     "date": "May 26, 2023",
     "title": "",
@@ -8089,6 +13446,72 @@
      "Serpent's Touch & Fury Potions duration reduced: 35 →30",
      "Jump Potion cost: 75 iron -> 100 iron"
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 30, 2026",
+    "title": "",
+    "changes": [
+     "Jump/Speed Potion Duration: 20 → 25s",
+     "Jump/Speed Potion Price: 90 → 75 Iron",
+     "Serpents Touch Potion Price: 90 Iron → 1 Emerald",
+     "Serpent Touch Potion Duration: 30 → 35s",
+     "Fury Potion Price: 90 Iron → 1 Emerald",
+     "Jump, Speed, Serpent, Fury potion max stack size: 3",
+     "Invis Potion max stack size: 1 → 2"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 28, 2025",
+    "title": "",
+    "changes": [
+     "Speed potion duration: 15 → 20",
+     "Jump potion duration: 15 → 20"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 14, 2025",
+    "title": "",
+    "changes": [
+     "Speed Potion duration: 35 → 15sec",
+     "Jump Potion duration: 20 → 15sec",
+     "Jump Potion no longer negates fall damage. It now reduces fall damage by 50%.",
+     "Enchants",
+     "Cleave",
+     "Removed from the enchant pool"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 5, 2025",
+    "title": "",
+    "changes": [
+     "Jump potion multiplier: 3x → 2.5x",
+     "Speed potion multiplier: 1.75x → 1.5x"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jan 3, 2025",
+    "title": "",
+    "changes": [
+     "Fury Potion price increased 75 → 90 iron",
+     "Serpent’s Touch Potion price increased 75 → 90 iron",
+     "Jump Potion price increased 75 → 90 iron",
+     "Speed Potion price increased 75 → 90 iron"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 8, 2024",
+    "title": "",
+    "changes": [
+     "Fury potion duration 45s -> 35s",
+     "Fury potion now locked behind black market upgrade 1",
+     "Black Market is now unbreakable by teammates"
+    ]
    }
   ]
  },
@@ -8112,6 +13535,74 @@
    }
   ],
   "history": [
+   {
+    "type": "buff",
+    "date": "Feb 13, 2026",
+    "title": "",
+    "changes": [
+     "Reduced dragon breath cooldown: 2s → 1s",
+     "Reduced dragon breath armor penetration: 40% → 30%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 12, 2025",
+    "title": "",
+    "changes": [
+     "Dragon Form Damage Reduction: 20% → 30%"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Jun 13, 2025",
+    "title": "",
+    "changes": [
+     "No longer get energy from kills while in dragon form",
+     "Increased energy gained from kills when not in dragon form: 25% of max energy → 30% of max energy",
+     "Increased energy gained form telepearls: 15% of max energy → 25% of max energy",
+     "Dragon breath consumes 5% of max energy when used",
+     "Dragon breath cooldown increased: 1s → 2s",
+     "Decreased energy gained per second: 1.5% of max energy → 1% of max energy",
+     "Reduced energy decay in dragon form: 4% of max energy → 3% of max energy"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 28, 2025",
+    "title": "",
+    "changes": [
+     "Gain 20% damage reduction while transformed"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 14, 2025",
+    "title": "",
+    "changes": [
+     "Decreased stamina lost on death: 100% → 50%",
+     "Increased passive stamina per second gains: 0.75% → 1.5%",
+     "Increase stamina gained from telepearls: 7% → 15%",
+     "Increase stamina lost per second while in Dragon Form: 2% per second → 4% per second"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 30, 2024",
+    "title": "",
+    "changes": [
+     "Dragon’s Breath now deals damage to non-player entities"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Feb 2, 2024",
+    "title": "",
+    "changes": [
+     "Flapping wings requires less stamina -10 → -7",
+     "Stamina gained per second increase 0.5 → 0.75",
+     "Stamina gained when using a telepearl 7 → 10"
+    ]
+   },
    {
     "type": "buff",
     "date": "Nov 25, 2022",
@@ -8159,6 +13650,51 @@
     "name": "Pouncing",
     "img": "images/abilities/ability-template.png"
    }
+  ],
+  "history": [
+   {
+    "type": "bal",
+    "date": "Jan 2, 2026",
+    "title": "",
+    "changes": [
+     "Yamini now has a stamina bar, that drains when climbing a wall. At 0 stamina, Yamini dismounts",
+     "Pounce cooldown reduced: 7.5 seconds → 5 seconds"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 12, 2025",
+    "title": "",
+    "changes": [
+     "Wall climb speed: 20 → 22.5",
+     "Pounce cooldown: 8s → 7.5s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 3, 2025",
+    "title": "",
+    "changes": [
+     "Pounce cooldown reduced 10 → 8s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Jun 14, 2024",
+    "title": "",
+    "changes": [
+     "Increased cooldown on Pounce ability 7s → 10s"
+    ]
+   },
+   {
+    "type": "bal",
+    "date": "Nov 24, 2023",
+    "title": "",
+    "changes": [
+     "Pounce cooldown 8s → 7s",
+     "Increased size of Pounce swipe attack"
+    ]
+   }
   ]
  },
  {
@@ -8181,6 +13717,34 @@
    }
   ],
   "history": [
+   {
+    "type": "buff",
+    "date": "Sep 19, 2025",
+    "title": "",
+    "changes": [
+     "Glacial Roar Ability cooldown 45s → 35s"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 8, 2024",
+    "title": "",
+    "changes": [
+     "Glacial Roar now freeze tesla coils for 6s",
+     "Glacial Roar decreased cooldown: 60s -> 45s",
+     "Glacial Roar radius increased: 3.5 blocks -> 4.5 blocks",
+     "Yeti's ability is moved to an ability button to be more in line with other kits"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Dec 8, 2023",
+    "title": "",
+    "changes": [
+     "Decreased roar cooldown 90s → 60s",
+     "Frozen block health 30% → 20%"
+    ]
+   },
    {
     "type": "nerf",
     "date": "Feb 24, 2023",
@@ -8234,6 +13798,22 @@
     "title": "",
     "changes": [
      "Progress regen time delay: 8 seconds → 6 seconds"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 11, 2024",
+    "title": "",
+    "changes": [
+     "Delay between recovering dash progress: 10s → 8s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 17, 2023",
+    "title": "",
+    "changes": [
+     "Dash damage reduced by 10%"
     ]
    },
    {
@@ -8354,6 +13934,35 @@
      "Grounded (Gloops): No longer disables Fire ability. Now only prevents the recoil movement.",
      "Improved detection to reduce gun recoil when Zarrah is touching the ground"
     ]
+   },
+   {
+    "type": "buff",
+    "date": "Jan 30, 2026",
+    "title": "",
+    "changes": [
+     "Reduced the wielders push back when firing the gun when touching the ground",
+     "Increased width of gun fire hitbox",
+     "Gun Ability Armor Penetration: 0 → 10%",
+     "Bleed Status Effect Armor Penetration: 0 → 30%"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Oct 17, 2025",
+    "title": "",
+    "changes": [
+     "Killing a player with the gun will instantly procs the mark, resetting the ability cooldown and give a speed boost",
+     "Gun range: 7 → 8 blocks",
+     "Mark duration: 7 → 8 sec"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Aug 22, 2025",
+    "title": "",
+    "changes": [
+     "Increase Gun shot damage from 50% Current sword damage → 100% Current sword damage"
+    ]
    }
   ]
  },
@@ -8391,6 +14000,30 @@
      "Tier 2: 1:30 max charge, 20% → 25% shop tax",
      "Tier 3: 2:00 max charge, 30% shop tax",
      "When charge reaches 0, satellite shop tax deactivates and satellite is disabled for 30 seconds. Satellite still activates through death"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 14, 2025",
+    "title": "",
+    "changes": [
+     "Dying nolonger destroys the satellite. It now deactivates the satellite and temporarily disables the satellite for 30 seconds",
+     "Increase duration of satellite from 4 → 5 minutes",
+     "Taxation Strength: No longer depends on the distance of the satellite from the enemy base. Satellite strength can now be upgraded from the shop",
+     "T1: 12% → 15%",
+     "T2: 20% (new)",
+     "T3: 30% (new)",
+     "Updated logic when multiple satellites target the same team to multiplicatively stack",
+     "Reduced proximity prompts hold duration"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Mar 14, 2025",
+    "title": "",
+    "changes": [
+     "Change satellite to have a limited lifetime (4 minutes)",
+     "Decrease price of the satellite: 6 emeralds → 2 emeralds"
     ]
    },
    {
@@ -8511,6 +14144,69 @@
    },
    {
     "type": "buff",
+    "date": "Oct 17, 2025",
+    "title": "",
+    "changes": [
+     "Cast movement slow: 50% → 20%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 22, 2025",
+    "title": "",
+    "changes": [
+     "Now have a slight movement slow while casting abilities"
+    ]
+   },
+   {
+    "type": "buff",
+    "date": "Nov 8, 2024",
+    "title": "",
+    "changes": [
+     "Lightning Strike damage increased: 10 -> 12",
+     "Lightning Storm damage increased: 20 -> 24",
+     "Zeno's Twig damage increased: 10 -> 13"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 29, 2024",
+    "title": "",
+    "changes": [
+     "Lightning strike damage: 12 → 10",
+     "Lightning storm damage per lightning: 23 → 20"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Nov 17, 2023",
+    "title": "",
+    "changes": [
+     "Lightning strike damage: 19 → 16",
+     "Lightning storm strike damage: 36 → 30"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Oct 27, 2023",
+    "title": "",
+    "changes": [
+     "Increased Staff Tier II Upgrade cost 3 emeralds → 4 emeralds",
+     "Increased Staff Tier III Upgrade cost 4 emeralds → 6 emeralds",
+     "Increased Lightning Storm damage 30 → 36"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Aug 11, 2023",
+    "title": "",
+    "changes": [
+     "Decreased Lighting Strike damage 23 → 19",
+     "Reduced spell cast range for Tier 1 and Tier 2 Staff"
+    ]
+   },
+   {
+    "type": "buff",
     "date": "Jul 28, 2023",
     "title": "",
     "changes": [
@@ -8569,6 +14265,46 @@
   "items": [],
   "abilities": [],
   "history": [
+   {
+    "type": "nerf",
+    "date": "Feb 27, 2026",
+    "title": "",
+    "changes": [
+     "Decreased max orb assist time: 5s → 3s"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Sep 5, 2025",
+    "title": "",
+    "changes": [
+     "Slightly reduce additional damage from wind stacks",
+     "Reduced additional speed at 5 wind stacks: +35% → +30%"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Feb 28, 2025",
+    "title": "",
+    "changes": [
+     "Speed multiplier reduced at respective orb counts:",
+     "3rd orb: 1.25x → 1.2x",
+     "4rd orb: 1.3x → 1.25x",
+     "5th orb: 1.4x → 1.35x"
+    ]
+   },
+   {
+    "type": "nerf",
+    "date": "Mar 1, 2024",
+    "title": "",
+    "changes": [
+     "Movement speed per stack reduced:",
+     "Lv.2: 1.2 → 1.15",
+     "Lv.3: 1.3 → 1.25",
+     "Lv.4: 1.4 → 1.3",
+     "Lv.5: 1.5 → 1.4"
+    ]
+   },
    {
     "type": "nerf",
     "date": "May 19, 2023",
