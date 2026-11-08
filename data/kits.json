@@ -1037,22 +1037,154 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Catch bees around the map to upgrade your Bee Hive. Upgrading your Bee Hive will return additional iron and emeralds.",
-  "adv": "",
+  "adv": "Bees spawn everywhere on the map, and the amount depends on the map. Each bee disappears 3 minutes after it spawns. Hold the Bee Net to pick bees up, then put them in your Beehives.\nYou can place up to 5 Beehives. A hive with 0 bees only produces iron, 1 iron every 10 seconds. The more bees inside, the faster it drops loot, and from 3 bees it can drop diamonds, and from 4 bees it can drop emeralds. Each drop is only 1 resource at a time: either 1 iron, 1 diamond or 1 emerald. After 10 bees a hive doesn't drop any faster.\nHives are weak to pickaxes and break in 5 hits with a wooden pickaxe, 4 with stone, and 2 with iron or diamond. They can also be broken by TNT and fireballs if they aren't covered with ceramic or obsidian.",
   "items": [
    {
     "name": "Bee",
-    "img": "images/items/bee.png"
+    "img": "images/items/bee.png",
+    "desc": "Spawns everywhere on the map, and the amount depends on the map. Disappears 3 minutes after spawning. Pick it up with the Bee Net and put it in a Beehive."
    },
    {
     "name": "Beehive",
-    "img": "images/items/beehive.png"
+    "img": "images/items/beehive.png",
+    "note": "Cost: 60 iron",
+    "desc": "You can place up to 5. Produces loot based on how many bees are inside (see the drop table). Weak to pickaxes: breaks in 5 hits with a wooden pickaxe, 4 with stone, and 2 with iron or diamond. TNT and fireballs can break it unless it is covered with ceramic or obsidian."
    },
    {
     "name": "Bee Net",
-    "img": "images/items/bee-net.png"
+    "img": "images/items/bee-net.png",
+    "desc": "Hold it to pick up bees."
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "tables": [
+   {
+    "title": "Hive drop table",
+    "head": [
+     "Bees in hive",
+     "Drops every",
+     "Iron",
+     "Diamond",
+     "Emerald"
+    ],
+    "rows": [
+     [
+      "0",
+      "10s",
+      "100%",
+      "0%",
+      "0%"
+     ],
+     [
+      "1",
+      "9.75s",
+      "100%",
+      "0%",
+      "0%"
+     ],
+     [
+      "2",
+      "9.5s",
+      "100%",
+      "0%",
+      "0%"
+     ],
+     [
+      "3",
+      "8.5s",
+      "83%",
+      "17%",
+      "0%"
+     ],
+     [
+      "4",
+      "7.5s",
+      "69%",
+      "28%",
+      "4%"
+     ],
+     [
+      "5",
+      "6s",
+      "80%",
+      "15%",
+      "4%"
+     ],
+     [
+      "6",
+      "5s",
+      "78%",
+      "14%",
+      "8%"
+     ],
+     [
+      "7",
+      "3.75s",
+      "87%",
+      "11%",
+      "3%"
+     ],
+     [
+      "8",
+      "2.75s",
+      "76%",
+      "12%",
+      "12%"
+     ],
+     [
+      "9",
+      "2.25s",
+      "78%",
+      "13%",
+      "9%"
+     ],
+     [
+      "10",
+      "2s",
+      "74%",
+      "13%",
+      "12.5%"
+     ]
+    ],
+    "note": "Each drop is 1 iron, 1 diamond or 1 emerald. Chances were measured from tests with 5 hives over 2 minutes 30 seconds, so they are estimates. Emeralds jump from about 4% to about 12% at 8 bees. A hive doesn't drop any faster after 10 bees, so a new hive is more beneficial."
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "It gives a lot of loot, but it's risky to use because the hive can be found and broken if you or your teammates aren't there to protect it.",
+  "strategy": [
+   {
+    "title": "Don't go past 10 bees",
+    "text": "Don't put more than 10 bees in a hive. Making a new hive is more beneficial."
+   },
+   {
+    "title": "Escape and slow chasers",
+    "text": "Buy a ton of blocks so you can escape from people, and buy Gloop to slow down anyone chasing you."
+   },
+   {
+    "title": "Protect your hive",
+    "text": "Surround your hive in ceramic early in the game, then replace it with obsidian so enemies can't place a Siege TNT on it."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Break the hive early",
+    "text": "If you see a Beekeeper collecting bees in the lobby, go for the hive while they aren't there. Do it early, before they have the emeralds to surround it with obsidian."
+   },
+   {
+    "title": "Keep resetting them",
+    "text": "Keep killing the Beekeeper so they can't get any more bees in their hives."
+   }
+  ],
+  "skins": [
+   {
+    "name": "OG Chroma Skin",
+    "img": "images/skins/beekeeper-beatrix-og-chroma.webp"
+   },
+   {
+    "name": "Meadow Skin",
+    "img": "images/skins/beekeeper-beatrix-meadow.webp"
+   }
+  ]
  },
  {
   "name": "Bekzat",
