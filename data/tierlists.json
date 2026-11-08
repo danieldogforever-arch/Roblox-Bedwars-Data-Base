@@ -4,6 +4,7 @@
    "id": "casual",
    "name": "Casual",
    "sub": "Squads",
+   "title": "Bedwars User Guide",
    "subt": "Tier List - S17 Casuals (Squads)",
    "note": "Not ranked in order.",
    "rows": [
@@ -157,6 +158,7 @@
    "id": "ranked",
    "name": "Ranked",
    "sub": "5v5s",
+   "title": "Bedwars User Guide",
    "subt": "Tier List - S17 Ranked (5v5s)",
    "note": "Ranked by Viability, Usage, and Statistics.",
    "rows": [

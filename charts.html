@@ -9,7 +9,7 @@
 <style>
 :root{--bg:#0a0418;--card:#150b38;--soft:rgba(255,255,255,.07);--muted:#b9aee0;--accent:#a98bff;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box;font-weight:400}
-body{margin:0;min-height:100vh;color:#fff;font:400 1.05rem/1.5 "Jua","Trebuchet MS",system-ui,sans-serif;background:radial-gradient(circle at 15% 8%,rgba(110,60,220,.35),transparent 40%),radial-gradient(circle at 85% 92%,rgba(120,50,230,.3),transparent 45%),radial-gradient(circle,rgba(255,255,255,.18) 1px,transparent 1.6px) 0 0/46px 46px,var(--bg);background-attachment:fixed}
+body{margin:0;min-height:100vh;color:#fff;font:400 1.05rem/1.5 "Jua","Trebuchet MS",system-ui,sans-serif;background:radial-gradient(circle at 15% 8%,rgba(110,60,220,.35),transparent 40%),radial-gradient(circle at 85% 92%,rgba(120,50,230,.3),transparent 45%),radial-gradient(circle,rgba(255,255,255,.4) 1px,transparent 1.6px) 0 0/87px 87px,radial-gradient(circle,rgba(180,156,255,.32) 2px,transparent 2.8px) 37px 51px/131px 131px,var(--bg);background-attachment:fixed}
 .wrap{max-width:1180px;margin:0 auto;padding:22px 18px 56px}
 a{color:inherit}
 .nav{display:flex;gap:18px;font-size:.95rem;margin-bottom:14px}
@@ -30,7 +30,7 @@ h1{font-size:2.8rem;margin:0;line-height:1.1}
 .legend span{display:inline-flex;align-items:center;gap:6px}
 .dot{width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 0 2px #0a0418;flex:none}
 .easy{--c:#5fe3a1}.moderate{--c:#ffd166}.hard{--c:#ff6b81}.extreme{--c:#a98bff}
-.chart{margin-top:14px;border:4px solid #fff;background:rgba(8,3,26,.92)}
+.chart{margin-top:14px;border:4px solid #fff;background:rgba(18,8,48,.55)}
 .row{display:flex;border-top:4px solid #fff}
 .row:first-child{border-top:0}
 .lab{width:120px;flex:none;border-right:4px solid #fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px 6px;font-size:2.8rem;line-height:1}
@@ -44,6 +44,15 @@ h1{font-size:2.8rem;margin:0;line-height:1.1}
 #tip{position:fixed;z-index:20;pointer-events:none;background:#fff;color:#12082e;border-radius:10px;padding:5px 12px;font-size:1rem;white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.45);opacity:0;transition:opacity .1s}
 #tip.show{opacity:1}
 .foot{margin-top:18px;color:var(--muted);font-size:.9rem}
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin-top:14px}
+.sbtn{font:inherit;font-size:1rem;color:#fff;cursor:pointer;background:var(--soft);border:2px solid rgba(255,255,255,.35);border-radius:12px;padding:7px 16px}
+.sbtn:hover{border-color:#fff}.sbtn:disabled{opacity:.5;cursor:wait}
+.sbtn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+#sstat{color:var(--muted);font-size:.95rem}
+#ov{position:fixed;inset:0;z-index:40;background:rgba(5,2,15,.92);display:none;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:18px}
+#ov.show{display:flex}
+#ov img{max-width:100%;max-height:calc(100vh - 140px);border:2px solid #fff}
+#ov p{margin:0;color:var(--muted);text-align:center}
 @media(max-width:640px){
   h1{font-size:2.2rem}
   .lab{width:62px;font-size:1.7rem;padding:8px 4px}
@@ -64,12 +73,14 @@ h1{font-size:2.8rem;margin:0;line-height:1.1}
     <div><h2 id="ttl"></h2><p id="note"></p></div>
     <div class="legend" aria-label="Difficulty"><span><i class="dot easy"></i>Easy</span><span><i class="dot moderate"></i>Moderate</span><span><i class="dot hard"></i>Hard</span><span><i class="dot extreme"></i>Extreme</span></div>
   </div>
+  <div class="share"><button class="sbtn" id="dl">Download image</button><button class="sbtn" id="cp">Copy image</button><span id="sstat" role="status"></span></div>
   <div class="chart" id="chart"></div>
   <p class="foot">The dot on each kit shows its difficulty.</p>
 </div>
 <div id="tip" role="tooltip"></div>
+<div id="ov"><p>Press and hold (or right-click) the image to save or copy it.</p><img id="ovimg" alt="Tier list image"><button class="sbtn" id="ovx">Close</button></div>
 <script>
-var LISTS = [{"id":"casual","name":"Casual","sub":"Squads","subt":"Tier List - S17 Casuals (Squads)","note":"Not ranked in order.","rows":[{"label":"OP","kits":["Miner","Eldric"]},{"label":"S","kits":["Void Knight","Barbarian","Jack","Aery","Alchemist","Fisherman","Adetunde","Cobalt","Evelynn","Baker","Bounty Hunter","Farmer Cletus","Grim Reaper","Hannah","Jade","Milo","Lumen","Melody","Nahla","Nazar","Sheila","Spirit Catcher","Taliyah","Terra","Vulcan","Whisper","Zola","Zephyr","Pyro","Trinity"]},{"label":"A","kits":["Hephaestus","Ares","Bekzat","Cogsworth","Crocowolf","Crypt","Cyber","Drill","Eldertree","Flora","Yuzi","Yamini","Fortuna","Gingerbread Man","Zeno","Kaliyah","Lassy","Nyoka","Nyx","Pirate Davey","Raven","Abaddon","Sheep Herder","Sigrid","Silas","Zarrah","Skoll","Triton","Umeko","Vanessa","Void Regent","Warrior","Wren","Whim"]},{"label":"B","kits":["Martin","Grove","Agni","Arachne","Frosty","Freiya","Axolotl Amy","Builder","Death Adder","Elektra","Kaida","Krystal","Lucía","Lyla","Marcel","Marrow","Merchant Marco","Noelle","Ragnar","Ramil","Sophia","Star Collector Stella","Styx","Trapper","Uma","Umbra"]},{"label":"C","kits":["Ignis","Lani","Caitlyn","Gregory","Archer","Gompy","Beekeeper Beatrix","Conqueror","Dino Tamer Dom","Ember","Infernal Shielder","Lian","Marina","Metal Detector","Santa","Smoke","Trixie","Warden","Xu'rot","Yeti"]},{"label":"F","kits":["Isabel","Zenith"]}]},{"id":"ranked","name":"Ranked","sub":"5v5s","subt":"Tier List - S17 Ranked (5v5s)","note":"Ranked by Viability, Usage, and Statistics.","rows":[{"label":"OP","kits":["Eldertree","Lassy","Pirate Davey"]},{"label":"S","kits":["Wren","Void Knight","Hephaestus","Beekeeper Beatrix","Zeno","Jack","Milo","Nazar","Star Collector Stella","Baker","Krystal","Silas","Fisherman","Sigrid","Uma","Caitlyn","Terra","Whim","Zola","Axolotl Amy","Void Regent","Whisper","Miner","Alchemist","Sheep Herder","Nahla"]},{"label":"A","kits":["Infernal Shielder","Bounty Hunter","Bekzat","Nyx","Ares","Metal Detector","Umeko","Sophia","Zarrah","Spirit Catcher","Lumen","Nyoka","Melody","Gingerbread Man","Cogsworth","Raven","Crocowolf","Adetunde","Pyro","Freiya","Ramil","Cobalt","Trinity","Fortuna","Warrior","Taliyah","Death Adder","Vulcan","Umbra","Noelle","Abaddon","Hannah","Flora","Triton"]},{"label":"B","kits":["Drill","Frosty","Kaliyah","Trapper","Skoll","Sheila","Aery","Builder","Evelynn","Jade","Kaida","Conqueror","Elektra","Lyla","Lucía","Yeti","Merchant Marco","Vanessa","Yamini","Yuzi","Martin","Xu'rot","Barbarian"]},{"label":"C","kits":["Archer","Gompy","Marrow","Lani","Eldric","Grove","Gregory","Ignis","Smoke","Lian","Warden","Styx","Agni","Arachne","Crypt","Cyber","Dino Tamer Dom","Grim Reaper","Santa","Trixie","Marina","Ragnar","Marcel","Zephyr","Zenith"]},{"label":"F","kits":["Ember","Farmer Cletus","Isabel"]}]}];
+var LISTS = [{"id":"casual","name":"Casual","sub":"Squads","title":"Bedwars User Guide","subt":"Tier List - S17 Casuals (Squads)","note":"Not ranked in order.","rows":[{"label":"OP","kits":["Miner","Eldric"]},{"label":"S","kits":["Void Knight","Barbarian","Jack","Aery","Alchemist","Fisherman","Adetunde","Cobalt","Evelynn","Baker","Bounty Hunter","Farmer Cletus","Grim Reaper","Hannah","Jade","Milo","Lumen","Melody","Nahla","Nazar","Sheila","Spirit Catcher","Taliyah","Terra","Vulcan","Whisper","Zola","Zephyr","Pyro","Trinity"]},{"label":"A","kits":["Hephaestus","Ares","Bekzat","Cogsworth","Crocowolf","Crypt","Cyber","Drill","Eldertree","Flora","Yuzi","Yamini","Fortuna","Gingerbread Man","Zeno","Kaliyah","Lassy","Nyoka","Nyx","Pirate Davey","Raven","Abaddon","Sheep Herder","Sigrid","Silas","Zarrah","Skoll","Triton","Umeko","Vanessa","Void Regent","Warrior","Wren","Whim"]},{"label":"B","kits":["Martin","Grove","Agni","Arachne","Frosty","Freiya","Axolotl Amy","Builder","Death Adder","Elektra","Kaida","Krystal","Lucía","Lyla","Marcel","Marrow","Merchant Marco","Noelle","Ragnar","Ramil","Sophia","Star Collector Stella","Styx","Trapper","Uma","Umbra"]},{"label":"C","kits":["Ignis","Lani","Caitlyn","Gregory","Archer","Gompy","Beekeeper Beatrix","Conqueror","Dino Tamer Dom","Ember","Infernal Shielder","Lian","Marina","Metal Detector","Santa","Smoke","Trixie","Warden","Xu'rot","Yeti"]},{"label":"F","kits":["Isabel","Zenith"]}]},{"id":"ranked","name":"Ranked","sub":"5v5s","title":"Bedwars User Guide","subt":"Tier List - S17 Ranked (5v5s)","note":"Ranked by Viability, Usage, and Statistics.","rows":[{"label":"OP","kits":["Eldertree","Lassy","Pirate Davey"]},{"label":"S","kits":["Wren","Void Knight","Hephaestus","Beekeeper Beatrix","Zeno","Jack","Milo","Nazar","Star Collector Stella","Baker","Krystal","Silas","Fisherman","Sigrid","Uma","Caitlyn","Terra","Whim","Zola","Axolotl Amy","Void Regent","Whisper","Miner","Alchemist","Sheep Herder","Nahla"]},{"label":"A","kits":["Infernal Shielder","Bounty Hunter","Bekzat","Nyx","Ares","Metal Detector","Umeko","Sophia","Zarrah","Spirit Catcher","Lumen","Nyoka","Melody","Gingerbread Man","Cogsworth","Raven","Crocowolf","Adetunde","Pyro","Freiya","Ramil","Cobalt","Trinity","Fortuna","Warrior","Taliyah","Death Adder","Vulcan","Umbra","Noelle","Abaddon","Hannah","Flora","Triton"]},{"label":"B","kits":["Drill","Frosty","Kaliyah","Trapper","Skoll","Sheila","Aery","Builder","Evelynn","Jade","Kaida","Conqueror","Elektra","Lyla","Lucía","Yeti","Merchant Marco","Vanessa","Yamini","Yuzi","Martin","Xu'rot","Barbarian"]},{"label":"C","kits":["Archer","Gompy","Marrow","Lani","Eldric","Grove","Gregory","Ignis","Smoke","Lian","Warden","Styx","Agni","Arachne","Crypt","Cyber","Dino Tamer Dom","Grim Reaper","Santa","Trixie","Marina","Ragnar","Marcel","Zephyr","Zenith"]},{"label":"F","kits":["Ember","Farmer Cletus","Isabel"]}]}];
 var KITS = {"Abaddon":{"s":"abaddon","i":"images/kits/abaddon.webp","d":"easy"},"Adetunde":{"s":"adetunde","i":"images/kits/adetunde.webp","d":"hard"},"Aery":{"s":"aery","i":"images/kits/aery.webp","d":"hard"},"Agni":{"s":"agni","i":"images/kits/agni.webp","d":"easy"},"Alchemist":{"s":"alchemist","i":"images/kits/alchemist.webp","d":"extreme"},"Arachne":{"s":"arachne","i":"images/kits/arachne.webp","d":"easy"},"Archer":{"s":"archer","i":"images/kits/archer.webp","d":"hard"},"Ares":{"s":"ares","i":"images/kits/ares.webp","d":"hard"},"Axolotl Amy":{"s":"axolotl-amy","i":"images/kits/axolotl-amy.webp","d":"easy"},"Baker":{"s":"baker","i":"images/kits/baker.webp","d":"easy"},"Barbarian":{"s":"barbarian","i":"images/kits/barbarian.webp","d":"hard"},"Beekeeper Beatrix":{"s":"beekeeper-beatrix","i":"images/kits/beekeeper-beatrix.webp","d":"hard"},"Bekzat":{"s":"bekzat","i":"images/kits/bekzat.webp","d":"moderate"},"Bounty Hunter":{"s":"bounty-hunter","i":"images/kits/bounty-hunter.webp","d":"moderate"},"Builder":{"s":"builder","i":"images/kits/builder.webp","d":"easy"},"Caitlyn":{"s":"caitlyn","i":"images/kits/caitlyn.webp","d":"hard"},"Cobalt":{"s":"cobalt","i":"images/kits/cobalt.webp","d":"easy"},"Cogsworth":{"s":"cogsworth","i":"images/kits/cogsworth.webp","d":"easy"},"Conqueror":{"s":"conqueror","i":"images/kits/conqueror.webp","d":"easy"},"Crocowolf":{"s":"crocowolf","i":"images/kits/crocowolf.webp","d":"moderate"},"Crypt":{"s":"crypt","i":"images/kits/crypt.webp","d":"easy"},"Cyber":{"s":"cyber","i":"images/kits/cyber.webp","d":"moderate"},"Death Adder":{"s":"death-adder","i":"images/kits/death-adder.webp","d":"moderate"},"Dino Tamer Dom":{"s":"dino-tamer-dom","i":"images/kits/dino-tamer-dom.webp","d":"easy"},"Drill":{"s":"drill","i":"images/kits/drill.webp","d":"easy"},"Eldertree":{"s":"eldertree","i":"images/kits/eldertree.webp","d":"easy"},"Eldric":{"s":"eldric","i":"images/kits/eldric.webp","d":"hard"},"Elektra":{"s":"elektra","i":"images/kits/elektra.webp","d":"easy"},"Ember":{"s":"ember","i":"images/kits/ember.webp","d":"hard"},"Evelynn":{"s":"evelynn","i":"images/kits/evelynn.webp","d":"easy"},"Farmer Cletus":{"s":"farmer-cletus","i":"images/kits/farmer-cletus.webp","d":"moderate"},"Fisherman":{"s":"fisherman","i":"images/kits/fisherman.webp","d":"easy"},"Flora":{"s":"flora","i":"images/kits/flora.webp","d":"hard"},"Fortuna":{"s":"fortuna","i":"images/kits/fortuna.webp","d":"moderate"},"Freiya":{"s":"freiya","i":"images/kits/freiya.webp","d":"hard"},"Frosty":{"s":"frosty","i":"images/kits/frosty.webp","d":"moderate"},"Gingerbread Man":{"s":"gingerbread-man","i":"images/kits/gingerbread-man.webp","d":"hard"},"Gompy":{"s":"gompy","i":"images/kits/gompy.webp","d":"moderate"},"Gregory":{"s":"gregory","i":"images/kits/gregory.webp","d":"moderate"},"Grim Reaper":{"s":"grim-reaper","i":"images/kits/grim-reaper.webp","d":"easy"},"Grove":{"s":"grove","i":"images/kits/grove.webp","d":"moderate"},"Hannah":{"s":"hannah","i":"images/kits/hannah.webp","d":"easy"},"Hephaestus":{"s":"hephaestus","i":"images/kits/hephaestus.webp","d":"moderate"},"Ignis":{"s":"ignis","i":"images/kits/ignis.webp","d":"easy"},"Infernal Shielder":{"s":"infernal-shielder","i":"images/kits/infernal-shielder.webp","d":"easy"},"Isabel":{"s":"isabel","i":"images/kits/isabel.webp","d":"easy"},"Jack":{"s":"jack","i":"images/kits/jack.webp","d":"easy"},"Jade":{"s":"jade","i":"images/kits/jade.webp","d":"moderate"},"Kaida":{"s":"kaida","i":"images/kits/kaida.webp","d":"extreme"},"Kaliyah":{"s":"kaliyah","i":"images/kits/kaliyah.webp","d":"easy"},"Krystal":{"s":"krystal","i":"images/kits/krystal.webp","d":"moderate"},"Lani":{"s":"lani","i":"images/kits/lani.webp","d":"easy"},"Lassy":{"s":"lassy","i":"images/kits/lassy.webp","d":"moderate"},"Lian":{"s":"lian","i":"images/kits/lian.webp","d":"moderate"},"Lucía":{"s":"luc-a","i":"images/kits/lucia.webp","d":"moderate"},"Lumen":{"s":"lumen","i":"images/kits/lumen.webp","d":"moderate"},"Lyla":{"s":"lyla","i":"images/kits/lyla.webp","d":"moderate"},"Marcel":{"s":"marcel","i":"images/kits/marcel.webp","d":"easy"},"Marina":{"s":"marina","i":"images/kits/marina.webp","d":"easy"},"Marrow":{"s":"marrow","i":"images/kits/marrow.webp","d":"easy"},"Martin":{"s":"martin","i":"images/kits/martin.webp","d":"moderate"},"Melody":{"s":"melody","i":"images/kits/melody.webp","d":"easy"},"Merchant Marco":{"s":"merchant-marco","i":"images/kits/merchant-marco.webp","d":"easy"},"Metal Detector":{"s":"metal-detector","i":"images/kits/metal-detector.webp","d":"moderate"},"Milo":{"s":"milo","i":"images/kits/milo.webp","d":"easy"},"Miner":{"s":"miner","i":"images/kits/miner.webp","d":"easy"},"Nahla":{"s":"nahla","i":"images/kits/nahla.webp","d":"moderate"},"Nazar":{"s":"nazar","i":"images/kits/nazar.webp","d":"hard"},"Noelle":{"s":"noelle","i":"images/kits/noelle.webp","d":"moderate"},"Nyoka":{"s":"nyoka","i":"images/kits/nyoka.webp","d":"moderate"},"Nyx":{"s":"nyx","i":"images/kits/nyx.webp","d":"moderate"},"Pirate Davey":{"s":"pirate-davey","i":"images/kits/pirate-davey.webp","d":"extreme"},"Pyro":{"s":"pyro","i":"images/kits/pyro.webp","d":"hard"},"Ragnar":{"s":"ragnar","i":"images/kits/ragnar.webp","d":"easy"},"Ramil":{"s":"ramil","i":"images/kits/ramil.webp","d":"easy"},"Raven":{"s":"raven","i":"images/kits/raven.webp","d":"easy"},"Santa":{"s":"santa","i":"images/kits/santa.webp","d":"easy"},"Sheep Herder":{"s":"sheep-herder","i":"images/kits/sheep-herder.webp","d":"moderate"},"Sheila":{"s":"sheila","i":"images/kits/sheila.webp","d":"hard"},"Sigrid":{"s":"sigrid","i":"images/kits/sigrid.webp","d":"moderate"},"Silas":{"s":"silas","i":"images/kits/silas.webp","d":"moderate"},"Skoll":{"s":"skoll","i":"images/kits/skoll.webp","d":"moderate"},"Smoke":{"s":"smoke","i":"images/kits/smoke.webp","d":"easy"},"Sophia":{"s":"sophia","i":"images/kits/sophia.webp","d":"moderate"},"Spirit Catcher":{"s":"spirit-catcher","i":"images/kits/spirit-catcher.webp","d":"easy"},"Star Collector Stella":{"s":"star-collector-stella","i":"images/kits/star-collector-stella.webp","d":"moderate"},"Styx":{"s":"styx","i":"images/kits/styx.webp","d":"easy"},"Taliyah":{"s":"taliyah","i":"images/kits/taliyah.webp","d":"moderate"},"Terra":{"s":"terra","i":"images/kits/terra.webp","d":"hard"},"Trapper":{"s":"trapper","i":"images/kits/trapper.webp","d":"hard"},"Trinity":{"s":"trinity","i":"images/kits/trinity.webp","d":"easy"},"Triton":{"s":"triton","i":"images/kits/triton.webp","d":"easy"},"Trixie":{"s":"trixie","i":"images/kits/trixie.webp","d":"moderate"},"Uma":{"s":"uma","i":"images/kits/uma.webp","d":"moderate"},"Umbra":{"s":"umbra","i":"images/kits/umbra.webp","d":"easy"},"Umeko":{"s":"umeko","i":"images/kits/umeko.webp","d":"moderate"},"Vanessa":{"s":"vanessa","i":"images/kits/vanessa.webp","d":"hard"},"Void Knight":{"s":"void-knight","i":"images/kits/void-knight.webp","d":"easy"},"Void Regent":{"s":"void-regent","i":"images/kits/void-regent.webp","d":"moderate"},"Vulcan":{"s":"vulcan","i":"images/kits/vulcan.webp","d":"easy"},"Warden":{"s":"warden","i":"images/kits/warden.webp","d":"easy"},"Warrior":{"s":"warrior","i":"images/kits/warrior.webp","d":"easy"},"Whim":{"s":"whim","i":"images/kits/whim.webp","d":"moderate"},"Whisper":{"s":"whisper","i":"images/kits/whisper.webp","d":"easy"},"Wren":{"s":"wren","i":"images/kits/wren.webp","d":"easy"},"Xu'rot":{"s":"xu-rot","i":"images/kits/xu-rot.webp","d":"extreme"},"Yamini":{"s":"yamini","i":"images/kits/yamini.webp","d":"easy"},"Yeti":{"s":"yeti","i":"images/kits/yeti.webp","d":"moderate"},"Yuzi":{"s":"yuzi","i":"images/kits/yuzi.webp","d":"easy"},"Zarrah":{"s":"zarrah","i":"images/kits/zarrah.webp","d":"hard"},"Zenith":{"s":"zenith","i":"images/kits/zenith.webp","d":"easy"},"Zeno":{"s":"zeno","i":"images/kits/zeno.webp","d":"easy"},"Zephyr":{"s":"zephyr","i":"images/kits/zephyr.webp","d":"hard"},"Zola":{"s":"zola","i":"images/kits/zola.webp","d":"moderate"}};
 var $ = function(id){return document.getElementById(id);};
 function esc(t){ return String(t==null?"":t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
@@ -98,7 +109,7 @@ function render(){
 }
 document.addEventListener("click",function(e){
   var t = e.target.closest(".tab"); if(!t) return;
-  cur = +t.dataset.i; history.replaceState(null,"","#"+LISTS[cur].id); hideTip(); render();
+  cur = +t.dataset.i; $("sstat").textContent = ""; history.replaceState(null,"","#"+LISTS[cur].id); hideTip(); render();
 });
 window.addEventListener("hashchange",function(){ cur = pick(); render(); });
 var tip = $("tip"), tipFor = null;
@@ -115,6 +126,88 @@ document.addEventListener("focusin",function(e){ var k = e.target.closest(".kit"
 document.addEventListener("focusout",hideTip);
 window.addEventListener("scroll",hideTip,{passive:true});
 cur = pick(); render();
+
+// ---- Image export (drawn on a canvas) ----
+var SITE_URL = ""; // put your website link here later and it will show at the bottom of the image
+var DCOL = {easy:"#5fe3a1",moderate:"#ffd166",hard:"#ff6b81",extreme:"#a98bff"};
+function loadImg(src){ return new Promise(function(res){ var i = new Image(); i.onload = function(){res(i);}; i.onerror = function(){res(null);}; i.src = src; }); }
+function rr(c,x,y,w,h,r){ c.beginPath(); c.moveTo(x+r,y); c.arcTo(x+w,y,x+w,y+h,r); c.arcTo(x+w,y+h,x,y+h,r); c.arcTo(x,y+h,x,y,r); c.arcTo(x,y,x+w,y,r); c.closePath(); }
+function makeCanvas(){
+  var L = LISTS[cur], F = '"Jua","Trebuchet MS",sans-serif';
+  var W = 1600, PAD = 48, LAB = 170, TILE = 92, GAP = 14, IN = 18, BW = 6;
+  var area = W - PAD*2 - BW*2 - LAB - BW - IN*2, per = Math.max(1, Math.floor((area + GAP) / (TILE + GAP)));
+  var rowsH = L.rows.map(function(r){ var lines = Math.max(1, Math.ceil(r.kits.length / per)); return Math.max(150, IN*2 + lines*TILE + (lines-1)*GAP); });
+  var HEAD = 190, FOOT = 70, H = PAD + HEAD + BW + rowsH.reduce(function(a,b){return a+b+BW;},0) + FOOT;
+  var names = []; L.rows.forEach(function(r){ r.kits.forEach(function(n){ if(KITS[n]) names.push(n); }); });
+  return Promise.all([document.fonts ? document.fonts.load('40px "Jua"').catch(function(){}) : null].concat(names.map(function(n){ return loadImg(KITS[n].i); }))).then(function(res){
+    var imgs = {}; names.forEach(function(n,i){ imgs[n] = res[i+1]; });
+    var cv = document.createElement("canvas"); cv.width = W; cv.height = H; var c = cv.getContext("2d");
+    // background with stars
+    c.fillStyle = "#0a0418"; c.fillRect(0,0,W,H);
+    [[.15*W,.08*H,"rgba(110,60,220,.35)",.45],[.85*W,.92*H,"rgba(120,50,230,.3)",.5]].forEach(function(g){
+      var gr = c.createRadialGradient(g[0],g[1],0,g[0],g[1],Math.max(W,H)*g[3]); gr.addColorStop(0,g[2]); gr.addColorStop(1,"rgba(0,0,0,0)"); c.fillStyle = gr; c.fillRect(0,0,W,H); });
+    function dots(step,ox,oy,r,col){ c.fillStyle = col; for(var y=oy+step/2;y<H;y+=step) for(var x=ox+step/2;x<W;x+=step){ c.beginPath(); c.arc(x,y,r,0,7); c.fill(); } }
+    dots(87,0,0,1.3,"rgba(255,255,255,.4)"); dots(131,37,51,2.4,"rgba(180,156,255,.32)");
+    // header
+    c.textBaseline = "alphabetic"; c.fillStyle = "#fff"; c.font = "72px "+F; c.fillText(L.title || "Bedwars User Guide", PAD, PAD+68);
+    c.font = "40px "+F; c.fillText(L.subt || (L.name+" tier list"), PAD, PAD+122);
+    c.fillStyle = "#b9aee0"; c.font = "28px "+F; if(L.note) c.fillText(L.note, PAD, PAD+164);
+    var lx = W - PAD, ly = PAD+164; c.font = "26px "+F;
+    ["extreme","hard","moderate","easy"].forEach(function(d){
+      var lab = d.charAt(0).toUpperCase()+d.slice(1), tw = c.measureText(lab).width; lx -= tw;
+      c.fillStyle = "#b9aee0"; c.fillText(lab, lx, ly); lx -= 22; c.fillStyle = DCOL[d]; c.beginPath(); c.arc(lx, ly-9, 9, 0, 7); c.fill(); lx -= 34; });
+    // chart
+    var top = PAD + HEAD, cw = W - PAD*2;
+    c.fillStyle = "rgba(18,8,48,.55)"; c.fillRect(PAD, top, cw, H - top - FOOT);
+    c.fillStyle = "#fff"; c.fillRect(PAD, top, cw, BW);
+    var y = top + BW;
+    L.rows.forEach(function(r,ri){
+      var h = rowsH[ri];
+      c.fillStyle = "#fff"; c.textAlign = "center";
+      var fs = r.label.length > 3 ? 44 : 84; c.font = fs+"px "+F; c.fillText(r.label, PAD+BW+LAB/2, y + h/2 + fs*0.32);
+      c.textAlign = "left";
+      r.kits.forEach(function(n,i){
+        var col = i % per, line = Math.floor(i / per);
+        var x = PAD + BW + LAB + BW + IN + col*(TILE+GAP), ty = y + IN + line*(TILE+GAP);
+        c.fillStyle = "#0d0626"; rr(c,x,ty,TILE,TILE,14); c.fill();
+        var im = imgs[n];
+        if(im){ c.save(); rr(c,x+3,ty+3,TILE-6,TILE-6,11); c.clip(); var s = Math.min((TILE-6)/im.width,(TILE-6)/im.height), iw = im.width*s, ih = im.height*s; c.drawImage(im, x+3+(TILE-6-iw)/2, ty+3+(TILE-6-ih)/2, iw, ih); c.restore(); }
+        c.strokeStyle = "#fff"; c.lineWidth = 3.5; rr(c,x+1.75,ty+1.75,TILE-3.5,TILE-3.5,13); c.stroke();
+        var d = KITS[n] && KITS[n].d; if(DCOL[d]){ c.fillStyle = "#0a0418"; c.beginPath(); c.arc(x+TILE-4,ty+4,12,0,7); c.fill(); c.fillStyle = DCOL[d]; c.beginPath(); c.arc(x+TILE-4,ty+4,9,0,7); c.fill(); }
+      });
+      y += h; c.fillStyle = "#fff"; c.fillRect(PAD, y, cw, BW); y += BW;
+    });
+    // sides and label divider
+    c.fillStyle = "#fff"; c.fillRect(PAD, top, BW, y-top); c.fillRect(PAD+cw-BW, top, BW, y-top); c.fillRect(PAD+BW+LAB, top, BW, y-top);
+    // footer
+    c.fillStyle = "#b9aee0"; c.font = "26px "+F; c.fillText("The dot on each kit shows its difficulty.", PAD, y + 44);
+    if(SITE_URL){ c.textAlign = "right"; c.fillStyle = "#fff"; c.fillText(SITE_URL, W-PAD, y + 44); c.textAlign = "left"; }
+    return cv;
+  });
+}
+function toBlob(cv){ return new Promise(function(res,rej){ try{ cv.toBlob(function(b){ b ? res(b) : rej(new Error("no blob")); },"image/png"); }catch(e){ rej(e); } }); }
+function busy(on,msg){ $("dl").disabled = $("cp").disabled = on; $("sstat").textContent = msg || ""; }
+function fname(){ return "tier-list-" + LISTS[cur].id + ".png"; }
+function preview(blob){ $("ovimg").src = URL.createObjectURL(blob); $("ov").classList.add("show"); }
+$("dl").onclick = function(){
+  busy(true,"Making image…");
+  makeCanvas().then(toBlob).then(function(b){
+    var a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = fname(); document.body.appendChild(a); a.click(); a.remove();
+    busy(false,"Image downloaded.");
+    if(/iPhone|iPad|iPod/.test(navigator.userAgent)) preview(b);
+  }).catch(function(){ busy(false,"Couldn't make the image here. Try it on the live site."); });
+};
+$("cp").onclick = function(){
+  busy(true,"Making image…");
+  var p = makeCanvas().then(toBlob);
+  if(navigator.clipboard && window.ClipboardItem){
+    navigator.clipboard.write([new ClipboardItem({"image/png": p})]).then(function(){ busy(false,"Copied! Paste it anywhere."); })
+      .catch(function(){ p.then(function(b){ busy(false,"Your browser blocked copying, so here is the image instead."); preview(b); }).catch(function(){ busy(false,"Couldn't make the image here. Try it on the live site."); }); });
+  } else {
+    p.then(function(b){ busy(false,"Copying isn't supported here, so here is the image instead."); preview(b); }).catch(function(){ busy(false,"Couldn't make the image here. Try it on the live site."); });
+  }
+};
+$("ovx").onclick = function(){ $("ov").classList.remove("show"); };
 </script>
 </body>
 </html>
