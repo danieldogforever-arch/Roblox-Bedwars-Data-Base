@@ -92,7 +92,13 @@
   ],
   "skins": [],
   "bal": "bal",
-  "balWhy": "The hives are easily broken and a bit expensive, but it provides good value if you know how to play it."
+  "balWhy": "The hives are easily broken and a bit expensive, but it provides good value if you know how to play it.",
+  "counter": [
+   {
+    "title": "Fireballs and hive breaking",
+    "text": "Use fireballs, or break the hive before it spawns any more bugs."
+   }
+  ]
  },
  {
   "name": "Adetunde",
@@ -196,7 +202,17 @@
    }
   ],
   "bal": "bal",
-  "balWhy": "You save a ton of resources that would normally go into your sword just by upgrading the hammer, and how hard it is to upgrade is part of the cost."
+  "balWhy": "You save a ton of resources that would normally go into your sword just by upgrading the hammer, and how hard it is to upgrade is part of the cost.",
+  "counter": [
+   {
+    "title": "Limit its hits",
+    "text": "Don't let it get many hits on you."
+   },
+   {
+    "title": "Don't let it escape",
+    "text": "If it is close to its final upgrade, don't let it get away, or it will chest all of its crystals."
+   }
+  ]
  },
  {
   "name": "Aery",
@@ -283,7 +299,13 @@
    }
   ],
   "bal": "bal",
-  "balWhy": "Many people use it, and even though it may be slightly outclassed, it still has a use because it works great with support."
+  "balWhy": "Many people use it, and even though it may be slightly outclassed, it still has a use because it works great with support.",
+  "counter": [
+   {
+    "title": "Be prepared",
+    "text": "Don't fight it if you are unprepared, and warn your teammates."
+   }
+  ]
  },
  {
   "name": "Agni",
@@ -340,7 +362,13 @@
    }
   ],
   "bal": "sup",
-  "balWhy": "It just doesn't do a lot of damage compared to similar kits that spawn an item every few seconds, and the Rocket Boost jump is pretty situational."
+  "balWhy": "It just doesn't do a lot of damage compared to similar kits that spawn an item every few seconds, and the Rocket Boost jump is pretty situational.",
+  "counter": [
+   {
+    "title": "Bait the jump",
+    "text": "Try to bait it into using Rocket Boost near you so it misses."
+   }
+  ]
  },
  {
   "name": "Alchemist",
@@ -450,7 +478,17 @@
   ],
   "skins": [],
   "bal": "sop",
-  "balWhy": "Even though not many people use it, stunlocking people is not healthy game design. It might need a nerf in that area, with buffs elsewhere to balance it out."
+  "balWhy": "Even though not many people use it, stunlocking people is not healthy game design. It might need a nerf in that area, with buffs elsewhere to balance it out.",
+  "counter": [
+   {
+    "title": "Keep building",
+    "text": "It can stunlock you very easily, so keep building to mess up its aim."
+   },
+   {
+    "title": "Waste its healing",
+    "text": "Use ranged weapons to make it waste all of its healing."
+   }
+  ]
  },
  {
   "name": "Arachne",
@@ -518,6 +556,12 @@
   "balWhy": "Nobody really notices or cares about the spiders leveling up, so that should be removed. Its damage should be improved overall, and it could get some armor penetration as a unique perk.",
   "notes": [
    "The webs make people get anti-cheated the second they touch them."
+  ],
+  "counter": [
+   {
+    "title": "Don't touch the webs",
+    "text": "Touching the webs makes you anti-cheat so badly that it's pretty much an automatic death."
+   }
   ]
  },
  {
@@ -620,7 +664,17 @@
    }
   ],
   "bal": "adj",
-  "balWhy": "Its damage is worse than every special bow kit, including kits that aren't even in the Ranged class. It needs a unique mechanic instead of more damage, since the headshot gimmick is a bit outdated."
+  "balWhy": "Its damage is worse than every special bow kit, including kits that aren't even in the Ranged class. It needs a unique mechanic instead of more damage, since the headshot gimmick is a bit outdated.",
+  "counter": [
+   {
+    "title": "Not much counterplay",
+    "text": "There isn't much counterplay, since no kit has better ranged damage."
+   },
+   {
+    "title": "Deny the middle",
+    "text": "Don't let it collect the middle emeralds, so it can't get its crossbow early."
+   }
+  ]
  },
  {
   "name": "Ares",
@@ -682,7 +736,17 @@
   ],
   "skins": [],
   "bal": "adj",
-  "balWhy": "It now gets outclassed by other kits, and it needs more armor penetration to make up for all the damage it lost through nerfs."
+  "balWhy": "It now gets outclassed by other kits, and it needs more armor penetration to make up for all the damage it lost through nerfs.",
+  "counter": [
+   {
+    "title": "Dodge early spears",
+    "text": "Early game it won't have many spears, so dodge them by placing blocks and building over them. This baits it into throwing and missing."
+   },
+   {
+    "title": "Fight up close",
+    "text": "Fight it up close so the spear also hits Ares himself."
+   }
+  ]
  },
  {
   "name": "Axolotl Amy",
@@ -776,7 +840,13 @@
    }
   ],
   "bal": "adj",
-  "balWhy": "Some of the prices are outrageous for what the Axolotls do. The prices, and what each Axolotl does, might need some changes."
+  "balWhy": "Some of the prices are outrageous for what the Axolotls do. The prices, and what each Axolotl does, might need some changes.",
+  "counter": [
+   {
+    "title": "Strong bed defense",
+    "text": "There isn't much counterplay besides your bed defense. It can shred obsidian, so place 2 layers plus wool, since it one-shots stone."
+   }
+  ]
  },
  {
   "name": "Baker",
@@ -789,26 +859,78 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Gain access to health-gain apples, speed-boost pies, and spawn with a knockback baguette!",
-  "adv": "",
+  "adv": "Baker always spawns with the Knockback Baguette and can store it in chests for teammates to pick up. Baker can also drop all of its items for teammates, and they have the same capacities.\nApples, Golden Apples and Speed Pies are bought in the shop. Eating an apple slows you down while you eat.\nA Golden Apple heals 175 HP in total: 30 instantly, then 5 HP every 0.5 seconds for 15 seconds (145 HP), along with 5% damage reduction until it runs out.",
   "items": [
    {
     "name": "Health Apple",
-    "img": "images/items/health-apple.png"
+    "img": "images/items/health-apple.png",
+    "note": "Cost: 40 iron",
+    "desc": "Max 3. Heals 20 HP. Takes 0.75 seconds to eat, and you move slower while eating."
    },
    {
     "name": "Speed Pie",
-    "img": "images/items/speed-pie.png"
+    "img": "images/items/speed-pie.png",
+    "note": "Cost: 2 emeralds",
+    "desc": "Unlimited capacity. Gives 100 seconds of speed that increases your movement by 100% (2x)."
    },
    {
     "name": "Golden Apple",
-    "img": "images/items/golden-apple.png"
+    "img": "images/items/golden-apple.png",
+    "note": "Cost: 3 emeralds",
+    "desc": "Max 3. Takes 1 second to eat, and you move slower while eating. Heals 30 HP instantly, then 5 HP every 0.5 seconds for 15 seconds (145 HP), plus 5% damage reduction until it runs out. 175 HP in total."
    },
    {
     "name": "Knockback Baguette",
-    "img": "images/items/knockback-baguette.png"
+    "img": "images/items/knockback-baguette.png",
+    "desc": "Baker always spawns with it. Deals 1 damage and 4 blocks of knockback. Can be stored in chests for teammates to pick up.",
+    "dmg": 1
    }
   ],
-  "abilities": []
+  "abilities": [],
+  "bal": "op",
+  "balWhy": "For 3 emeralds you are basically unkillable, unless the other team has enchants and gets lucky and rolls static. Coils aren't much of a counter because they aren't mobile. Healing more than double your HP for 3 emeralds is insane, and with the Speed Pie, which outclasses most movement kits, it's a bit crazy.\nSuggested changes: keep the healing the same but tick every 0.75s instead of 0.5s, which makes it easier to deal with in fights. Raise the damage reduction by another 5% to make up for it, and nerf the Speed Pie to 1.75x movement instead of 2x.",
+  "passives": [
+   {
+    "name": "Knockback Baguette",
+    "when": "Always",
+    "desc": "Baker always spawns with the Knockback Baguette and can store it in chests for teammates to pick up."
+   },
+   {
+    "name": "Team Supplies",
+    "when": "Always",
+    "desc": "Baker can drop all of its items for teammates, and they have the same capacities."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Loot early",
+    "text": "Focus on loot early in the game. If you have the emeralds, buy a Speed Pie to get diamonds quicker."
+   },
+   {
+    "title": "Dominate at tier 3",
+    "text": "Once you reach tier 3, you can dominate with all the OP items."
+   },
+   {
+    "title": "Pair it with Berserker",
+    "text": "Combine Baker with Berserker to simply be unkillable, even when static'd."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Coil your base",
+    "text": "Place coils in your base so Baker gets heavily nerfed when it arrives."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Spirit Skin",
+    "img": "images/skins/baker-spirit.webp"
+   },
+   {
+    "name": "Loveseeker Skin",
+    "img": "images/skins/baker-loveseeker.webp"
+   }
+  ]
  },
  {
   "name": "Barbarian",
