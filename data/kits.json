@@ -462,7 +462,14 @@
      "Hammer attack speed increased at all levels"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop or event",
+   "tier": null,
+   "event": "Minigame Mountain (Winter 2022)",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Aery",
@@ -1093,7 +1100,14 @@
      "Web ability cast range: 15 blocks → 17 blocks"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop or event",
+   "tier": null,
+   "event": "Arachne's Lair (Halloween 2024)",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Archer",
@@ -3941,7 +3955,14 @@
      "Reduced time to summon skeleton: 1s → 0.5s"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop or event",
+   "tier": null,
+   "event": "Crypt's Trials (Halloween 2022)",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Cyber",
@@ -4803,7 +4824,14 @@
      "Decreased base heal per tick 3 → 2"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop or event",
+   "tier": null,
+   "event": "Crypt's Coven (Halloween 2023)",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Elektra",
@@ -6373,7 +6401,7 @@
    "src": "Halloween Battle Pass 2026",
    "tier": "35",
    "badge": "images/bp/halloween-2026.webp",
-   "rent": 2000
+   "note": "Cannot be rented yet"
   }
  },
  {
@@ -8741,7 +8769,14 @@
      "Faster when in head form 0.8x move speed → 0.85x"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop or event",
+   "tier": null,
+   "event": "Marrow's Madness (Halloween 2025)",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Martin",
@@ -13252,7 +13287,11 @@
      "No longer has access to telepearls"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Limited kit (2021)",
+   "rent": 2500
+  }
  },
  {
   "name": "Vulcan",
