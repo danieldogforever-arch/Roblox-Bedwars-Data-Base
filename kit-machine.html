@@ -17,6 +17,9 @@ h2{font-size:1.7rem;margin:0;line-height:1.2}
 h3{font-size:1.2rem;margin:22px 0 6px}
 p{margin:0 0 12px}.muted{color:var(--muted)}
 .lead{margin:6px 0 0}
+.topnav{display:flex;gap:18px;font-size:.95rem;margin-bottom:14px}
+.topnav a{color:var(--muted);text-decoration:none}
+.topnav a:hover,.topnav a:focus-visible{color:#fff}
 #detail{position:relative;z-index:5}
 .box{background:rgba(8,3,26,.9);border:4px solid #fff;padding:24px;margin-top:26px}
 .label{color:var(--muted);font-size:.95rem;margin:18px 0 8px}
@@ -168,6 +171,7 @@ button.fp:hover .th{border-color:var(--accent)}
 </head>
 <body>
 <div class="wrap">
+  <nav class="topnav"><a href="index.html">Home</a><a href="charts.html">Tier Lists</a></nav>
   <h1>Kit Machine</h1>
   <p class="muted lead">Type a kit name, pick one from the bar, or browse by class and tier. Stats, passives and strategy are still being added for each kit.</p>
   <div id="modebar" class="modebar" role="group" aria-label="Tier list"></div>

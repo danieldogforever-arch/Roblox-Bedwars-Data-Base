@@ -1,0 +1,310 @@
+{
+ "lists": [
+  {
+   "id": "casual",
+   "name": "Casual",
+   "sub": "Squads",
+   "subt": "Tier List - S17 Casuals (Squads)",
+   "note": "Not ranked in order.",
+   "rows": [
+    {
+     "label": "OP",
+     "kits": [
+      "Miner",
+      "Eldric"
+     ]
+    },
+    {
+     "label": "S",
+     "kits": [
+      "Void Knight",
+      "Barbarian",
+      "Jack",
+      "Aery",
+      "Alchemist",
+      "Fisherman",
+      "Adetunde",
+      "Cobalt",
+      "Evelynn",
+      "Baker",
+      "Bounty Hunter",
+      "Farmer Cletus",
+      "Grim Reaper",
+      "Hannah",
+      "Jade",
+      "Milo",
+      "Lumen",
+      "Melody",
+      "Nahla",
+      "Nazar",
+      "Sheila",
+      "Spirit Catcher",
+      "Taliyah",
+      "Terra",
+      "Vulcan",
+      "Whisper",
+      "Zola",
+      "Zephyr",
+      "Pyro",
+      "Trinity"
+     ]
+    },
+    {
+     "label": "A",
+     "kits": [
+      "Hephaestus",
+      "Ares",
+      "Bekzat",
+      "Cogsworth",
+      "Crocowolf",
+      "Crypt",
+      "Cyber",
+      "Drill",
+      "Eldertree",
+      "Flora",
+      "Yuzi",
+      "Yamini",
+      "Fortuna",
+      "Gingerbread Man",
+      "Zeno",
+      "Kaliyah",
+      "Lassy",
+      "Nyoka",
+      "Nyx",
+      "Pirate Davey",
+      "Raven",
+      "Abaddon",
+      "Sheep Herder",
+      "Sigrid",
+      "Silas",
+      "Zarrah",
+      "Skoll",
+      "Triton",
+      "Umeko",
+      "Vanessa",
+      "Void Regent",
+      "Warrior",
+      "Wren",
+      "Whim"
+     ]
+    },
+    {
+     "label": "B",
+     "kits": [
+      "Martin",
+      "Grove",
+      "Agni",
+      "Arachne",
+      "Frosty",
+      "Freiya",
+      "Axolotl Amy",
+      "Builder",
+      "Death Adder",
+      "Elektra",
+      "Kaida",
+      "Krystal",
+      "Lucía",
+      "Lyla",
+      "Marcel",
+      "Marrow",
+      "Merchant Marco",
+      "Noelle",
+      "Ragnar",
+      "Ramil",
+      "Sophia",
+      "Star Collector Stella",
+      "Styx",
+      "Trapper",
+      "Uma",
+      "Umbra"
+     ]
+    },
+    {
+     "label": "C",
+     "kits": [
+      "Ignis",
+      "Lani",
+      "Caitlyn",
+      "Gregory",
+      "Archer",
+      "Gompy",
+      "Beekeeper Beatrix",
+      "Conqueror",
+      "Dino Tamer Dom",
+      "Ember",
+      "Infernal Shielder",
+      "Lian",
+      "Marina",
+      "Metal Detector",
+      "Santa",
+      "Smoke",
+      "Trixie",
+      "Warden",
+      "Xu'rot",
+      "Yeti"
+     ]
+    },
+    {
+     "label": "F",
+     "kits": [
+      "Isabel",
+      "Zenith"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "ranked",
+   "name": "Ranked",
+   "sub": "5v5s",
+   "subt": "Tier List - S17 Ranked (5v5s)",
+   "note": "Ranked by Viability, Usage, and Statistics.",
+   "rows": [
+    {
+     "label": "OP",
+     "kits": [
+      "Eldertree",
+      "Lassy",
+      "Pirate Davey"
+     ]
+    },
+    {
+     "label": "S",
+     "kits": [
+      "Wren",
+      "Void Knight",
+      "Hephaestus",
+      "Beekeeper Beatrix",
+      "Zeno",
+      "Jack",
+      "Milo",
+      "Nazar",
+      "Star Collector Stella",
+      "Baker",
+      "Krystal",
+      "Silas",
+      "Fisherman",
+      "Sigrid",
+      "Uma",
+      "Caitlyn",
+      "Terra",
+      "Whim",
+      "Zola",
+      "Axolotl Amy",
+      "Void Regent",
+      "Whisper",
+      "Miner",
+      "Alchemist",
+      "Sheep Herder",
+      "Nahla"
+     ]
+    },
+    {
+     "label": "A",
+     "kits": [
+      "Infernal Shielder",
+      "Bounty Hunter",
+      "Bekzat",
+      "Nyx",
+      "Ares",
+      "Metal Detector",
+      "Umeko",
+      "Sophia",
+      "Zarrah",
+      "Spirit Catcher",
+      "Lumen",
+      "Nyoka",
+      "Melody",
+      "Gingerbread Man",
+      "Cogsworth",
+      "Raven",
+      "Crocowolf",
+      "Adetunde",
+      "Pyro",
+      "Freiya",
+      "Ramil",
+      "Cobalt",
+      "Trinity",
+      "Fortuna",
+      "Warrior",
+      "Taliyah",
+      "Death Adder",
+      "Vulcan",
+      "Umbra",
+      "Noelle",
+      "Abaddon",
+      "Hannah",
+      "Flora",
+      "Triton"
+     ]
+    },
+    {
+     "label": "B",
+     "kits": [
+      "Drill",
+      "Frosty",
+      "Kaliyah",
+      "Trapper",
+      "Skoll",
+      "Sheila",
+      "Aery",
+      "Builder",
+      "Evelynn",
+      "Jade",
+      "Kaida",
+      "Conqueror",
+      "Elektra",
+      "Lyla",
+      "Lucía",
+      "Yeti",
+      "Merchant Marco",
+      "Vanessa",
+      "Yamini",
+      "Yuzi",
+      "Martin",
+      "Xu'rot",
+      "Barbarian"
+     ]
+    },
+    {
+     "label": "C",
+     "kits": [
+      "Archer",
+      "Gompy",
+      "Marrow",
+      "Lani",
+      "Eldric",
+      "Grove",
+      "Gregory",
+      "Ignis",
+      "Smoke",
+      "Lian",
+      "Warden",
+      "Styx",
+      "Agni",
+      "Arachne",
+      "Crypt",
+      "Cyber",
+      "Dino Tamer Dom",
+      "Grim Reaper",
+      "Santa",
+      "Trixie",
+      "Marina",
+      "Ragnar",
+      "Marcel",
+      "Zephyr",
+      "Zenith"
+     ]
+    },
+    {
+     "label": "F",
+     "kits": [
+      "Ember",
+      "Farmer Cletus",
+      "Isabel"
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tier Lists</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0418;--card:#150b38;--soft:rgba(255,255,255,.07);--muted:#b9aee0;--accent:#a98bff;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box;font-weight:400}
+body{margin:0;min-height:100vh;color:#fff;font:400 1.05rem/1.5 "Jua","Trebuchet MS",system-ui,sans-serif;background:radial-gradient(circle at 15% 8%,rgba(110,60,220,.35),transparent 40%),radial-gradient(circle at 85% 92%,rgba(120,50,230,.3),transparent 45%),radial-gradient(circle,rgba(255,255,255,.18) 1px,transparent 1.6px) 0 0/46px 46px,var(--bg);background-attachment:fixed}
+.wrap{max-width:1180px;margin:0 auto;padding:22px 18px 56px}
+a{color:inherit}
+.nav{display:flex;gap:18px;font-size:.95rem;margin-bottom:14px}
+.nav a{color:var(--muted);text-decoration:none}
+.nav a:hover,.nav a:focus-visible{color:#fff}
+h1{font-size:2.8rem;margin:0;line-height:1.1}
+.lead{color:var(--muted);margin:6px 0 0}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.tab{font:inherit;font-size:1.1rem;color:#fff;cursor:pointer;background:var(--soft);border:2px solid rgba(255,255,255,.25);border-radius:14px;padding:8px 20px}
+.tab small{color:var(--muted);font-size:.85rem;margin-left:6px}
+.tab.on{background:#fff;color:#12082e;border-color:#fff}
+.tab.on small{color:#5b4d8c}
+.tab:focus-visible,.kit:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 24px;margin-top:22px}
+.head h2{font-size:1.7rem;margin:0;line-height:1.2}
+.head p{margin:2px 0 0;color:var(--muted)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.95rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.dot{width:12px;height:12px;border-radius:50%;background:var(--c);box-shadow:0 0 0 2px #0a0418;flex:none}
+.easy{--c:#5fe3a1}.moderate{--c:#ffd166}.hard{--c:#ff6b81}.extreme{--c:#a98bff}
+.chart{margin-top:14px;border:4px solid #fff;background:rgba(8,3,26,.92)}
+.row{display:flex;border-top:4px solid #fff}
+.row:first-child{border-top:0}
+.lab{width:120px;flex:none;border-right:4px solid #fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px 6px;font-size:2.8rem;line-height:1}
+.lab small{font-size:.85rem;color:var(--muted);margin-top:8px}
+.kits{flex:1;min-width:0;display:flex;flex-wrap:wrap;align-content:flex-start;gap:10px;padding:12px}
+.kit{position:relative;display:block;width:72px;height:72px;border:3px solid #fff;border-radius:12px;background:#0d0626;text-decoration:none;transition:transform .12s,border-color .12s}
+.kit img{width:100%;height:100%;object-fit:contain;display:block;border-radius:9px}
+.kit .dot{position:absolute;top:-5px;right:-5px}
+.kit:hover,.kit:focus-visible{transform:translateY(-3px);border-color:var(--accent)}
+.empty{color:var(--muted);font-size:.95rem;align-self:center}
+#tip{position:fixed;z-index:20;pointer-events:none;background:#fff;color:#12082e;border-radius:10px;padding:5px 12px;font-size:1rem;white-space:nowrap;box-shadow:0 4px 16px rgba(0,0,0,.45);opacity:0;transition:opacity .1s}
+#tip.show{opacity:1}
+.foot{margin-top:18px;color:var(--muted);font-size:.9rem}
+@media(max-width:640px){
+  h1{font-size:2.2rem}
+  .lab{width:62px;font-size:1.7rem;padding:8px 4px}
+  .lab small{font-size:.75rem}
+  .kits{gap:8px;padding:10px}
+  .kit{width:54px;height:54px;border-width:2px;border-radius:10px}
+  .kit img{border-radius:8px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="nav"><a href="index.html">Home</a><a href="kit-machine.html">Kit Machine</a></nav>
+  <h1>Tier Lists</h1>
+  <p class="lead">Hover over a kit to see its name, and click it to open it in the Kit Machine.</p>
+  <div class="tabs" id="tabs" role="tablist"></div>
+  <div class="head">
+    <div><h2 id="ttl"></h2><p id="note"></p></div>
+    <div class="legend" aria-label="Difficulty"><span><i class="dot easy"></i>Easy</span><span><i class="dot moderate"></i>Moderate</span><span><i class="dot hard"></i>Hard</span><span><i class="dot extreme"></i>Extreme</span></div>
+  </div>
+  <div class="chart" id="chart"></div>
+  <p class="foot">The dot on each kit shows its difficulty.</p>
+</div>
+<div id="tip" role="tooltip"></div>
+<script>
+var LISTS = [{"id":"casual","name":"Casual","sub":"Squads","subt":"Tier List - S17 Casuals (Squads)","note":"Not ranked in order.","rows":[{"label":"OP","kits":["Miner","Eldric"]},{"label":"S","kits":["Void Knight","Barbarian","Jack","Aery","Alchemist","Fisherman","Adetunde","Cobalt","Evelynn","Baker","Bounty Hunter","Farmer Cletus","Grim Reaper","Hannah","Jade","Milo","Lumen","Melody","Nahla","Nazar","Sheila","Spirit Catcher","Taliyah","Terra","Vulcan","Whisper","Zola","Zephyr","Pyro","Trinity"]},{"label":"A","kits":["Hephaestus","Ares","Bekzat","Cogsworth","Crocowolf","Crypt","Cyber","Drill","Eldertree","Flora","Yuzi","Yamini","Fortuna","Gingerbread Man","Zeno","Kaliyah","Lassy","Nyoka","Nyx","Pirate Davey","Raven","Abaddon","Sheep Herder","Sigrid","Silas","Zarrah","Skoll","Triton","Umeko","Vanessa","Void Regent","Warrior","Wren","Whim"]},{"label":"B","kits":["Martin","Grove","Agni","Arachne","Frosty","Freiya","Axolotl Amy","Builder","Death Adder","Elektra","Kaida","Krystal","Lucía","Lyla","Marcel","Marrow","Merchant Marco","Noelle","Ragnar","Ramil","Sophia","Star Collector Stella","Styx","Trapper","Uma","Umbra"]},{"label":"C","kits":["Ignis","Lani","Caitlyn","Gregory","Archer","Gompy","Beekeeper Beatrix","Conqueror","Dino Tamer Dom","Ember","Infernal Shielder","Lian","Marina","Metal Detector","Santa","Smoke","Trixie","Warden","Xu'rot","Yeti"]},{"label":"F","kits":["Isabel","Zenith"]}]},{"id":"ranked","name":"Ranked","sub":"5v5s","subt":"Tier List - S17 Ranked (5v5s)","note":"Ranked by Viability, Usage, and Statistics.","rows":[{"label":"OP","kits":["Eldertree","Lassy","Pirate Davey"]},{"label":"S","kits":["Wren","Void Knight","Hephaestus","Beekeeper Beatrix","Zeno","Jack","Milo","Nazar","Star Collector Stella","Baker","Krystal","Silas","Fisherman","Sigrid","Uma","Caitlyn","Terra","Whim","Zola","Axolotl Amy","Void Regent","Whisper","Miner","Alchemist","Sheep Herder","Nahla"]},{"label":"A","kits":["Infernal Shielder","Bounty Hunter","Bekzat","Nyx","Ares","Metal Detector","Umeko","Sophia","Zarrah","Spirit Catcher","Lumen","Nyoka","Melody","Gingerbread Man","Cogsworth","Raven","Crocowolf","Adetunde","Pyro","Freiya","Ramil","Cobalt","Trinity","Fortuna","Warrior","Taliyah","Death Adder","Vulcan","Umbra","Noelle","Abaddon","Hannah","Flora","Triton"]},{"label":"B","kits":["Drill","Frosty","Kaliyah","Trapper","Skoll","Sheila","Aery","Builder","Evelynn","Jade","Kaida","Conqueror","Elektra","Lyla","Lucía","Yeti","Merchant Marco","Vanessa","Yamini","Yuzi","Martin","Xu'rot","Barbarian"]},{"label":"C","kits":["Archer","Gompy","Marrow","Lani","Eldric","Grove","Gregory","Ignis","Smoke","Lian","Warden","Styx","Agni","Arachne","Crypt","Cyber","Dino Tamer Dom","Grim Reaper","Santa","Trixie","Marina","Ragnar","Marcel","Zephyr","Zenith"]},{"label":"F","kits":["Ember","Farmer Cletus","Isabel"]}]}];
+var KITS = {"Abaddon":{"s":"abaddon","i":"images/kits/abaddon.webp","d":"easy"},"Adetunde":{"s":"adetunde","i":"images/kits/adetunde.webp","d":"hard"},"Aery":{"s":"aery","i":"images/kits/aery.webp","d":"hard"},"Agni":{"s":"agni","i":"images/kits/agni.webp","d":"easy"},"Alchemist":{"s":"alchemist","i":"images/kits/alchemist.webp","d":"extreme"},"Arachne":{"s":"arachne","i":"images/kits/arachne.webp","d":"easy"},"Archer":{"s":"archer","i":"images/kits/archer.webp","d":"hard"},"Ares":{"s":"ares","i":"images/kits/ares.webp","d":"hard"},"Axolotl Amy":{"s":"axolotl-amy","i":"images/kits/axolotl-amy.webp","d":"easy"},"Baker":{"s":"baker","i":"images/kits/baker.webp","d":"easy"},"Barbarian":{"s":"barbarian","i":"images/kits/barbarian.webp","d":"hard"},"Beekeeper Beatrix":{"s":"beekeeper-beatrix","i":"images/kits/beekeeper-beatrix.webp","d":"hard"},"Bekzat":{"s":"bekzat","i":"images/kits/bekzat.webp","d":"moderate"},"Bounty Hunter":{"s":"bounty-hunter","i":"images/kits/bounty-hunter.webp","d":"moderate"},"Builder":{"s":"builder","i":"images/kits/builder.webp","d":"easy"},"Caitlyn":{"s":"caitlyn","i":"images/kits/caitlyn.webp","d":"hard"},"Cobalt":{"s":"cobalt","i":"images/kits/cobalt.webp","d":"easy"},"Cogsworth":{"s":"cogsworth","i":"images/kits/cogsworth.webp","d":"easy"},"Conqueror":{"s":"conqueror","i":"images/kits/conqueror.webp","d":"easy"},"Crocowolf":{"s":"crocowolf","i":"images/kits/crocowolf.webp","d":"moderate"},"Crypt":{"s":"crypt","i":"images/kits/crypt.webp","d":"easy"},"Cyber":{"s":"cyber","i":"images/kits/cyber.webp","d":"moderate"},"Death Adder":{"s":"death-adder","i":"images/kits/death-adder.webp","d":"moderate"},"Dino Tamer Dom":{"s":"dino-tamer-dom","i":"images/kits/dino-tamer-dom.webp","d":"easy"},"Drill":{"s":"drill","i":"images/kits/drill.webp","d":"easy"},"Eldertree":{"s":"eldertree","i":"images/kits/eldertree.webp","d":"easy"},"Eldric":{"s":"eldric","i":"images/kits/eldric.webp","d":"hard"},"Elektra":{"s":"elektra","i":"images/kits/elektra.webp","d":"easy"},"Ember":{"s":"ember","i":"images/kits/ember.webp","d":"hard"},"Evelynn":{"s":"evelynn","i":"images/kits/evelynn.webp","d":"easy"},"Farmer Cletus":{"s":"farmer-cletus","i":"images/kits/farmer-cletus.webp","d":"moderate"},"Fisherman":{"s":"fisherman","i":"images/kits/fisherman.webp","d":"easy"},"Flora":{"s":"flora","i":"images/kits/flora.webp","d":"hard"},"Fortuna":{"s":"fortuna","i":"images/kits/fortuna.webp","d":"moderate"},"Freiya":{"s":"freiya","i":"images/kits/freiya.webp","d":"hard"},"Frosty":{"s":"frosty","i":"images/kits/frosty.webp","d":"moderate"},"Gingerbread Man":{"s":"gingerbread-man","i":"images/kits/gingerbread-man.webp","d":"hard"},"Gompy":{"s":"gompy","i":"images/kits/gompy.webp","d":"moderate"},"Gregory":{"s":"gregory","i":"images/kits/gregory.webp","d":"moderate"},"Grim Reaper":{"s":"grim-reaper","i":"images/kits/grim-reaper.webp","d":"easy"},"Grove":{"s":"grove","i":"images/kits/grove.webp","d":"moderate"},"Hannah":{"s":"hannah","i":"images/kits/hannah.webp","d":"easy"},"Hephaestus":{"s":"hephaestus","i":"images/kits/hephaestus.webp","d":"moderate"},"Ignis":{"s":"ignis","i":"images/kits/ignis.webp","d":"easy"},"Infernal Shielder":{"s":"infernal-shielder","i":"images/kits/infernal-shielder.webp","d":"easy"},"Isabel":{"s":"isabel","i":"images/kits/isabel.webp","d":"easy"},"Jack":{"s":"jack","i":"images/kits/jack.webp","d":"easy"},"Jade":{"s":"jade","i":"images/kits/jade.webp","d":"moderate"},"Kaida":{"s":"kaida","i":"images/kits/kaida.webp","d":"extreme"},"Kaliyah":{"s":"kaliyah","i":"images/kits/kaliyah.webp","d":"easy"},"Krystal":{"s":"krystal","i":"images/kits/krystal.webp","d":"moderate"},"Lani":{"s":"lani","i":"images/kits/lani.webp","d":"easy"},"Lassy":{"s":"lassy","i":"images/kits/lassy.webp","d":"moderate"},"Lian":{"s":"lian","i":"images/kits/lian.webp","d":"moderate"},"Lucía":{"s":"luc-a","i":"images/kits/lucia.webp","d":"moderate"},"Lumen":{"s":"lumen","i":"images/kits/lumen.webp","d":"moderate"},"Lyla":{"s":"lyla","i":"images/kits/lyla.webp","d":"moderate"},"Marcel":{"s":"marcel","i":"images/kits/marcel.webp","d":"easy"},"Marina":{"s":"marina","i":"images/kits/marina.webp","d":"easy"},"Marrow":{"s":"marrow","i":"images/kits/marrow.webp","d":"easy"},"Martin":{"s":"martin","i":"images/kits/martin.webp","d":"moderate"},"Melody":{"s":"melody","i":"images/kits/melody.webp","d":"easy"},"Merchant Marco":{"s":"merchant-marco","i":"images/kits/merchant-marco.webp","d":"easy"},"Metal Detector":{"s":"metal-detector","i":"images/kits/metal-detector.webp","d":"moderate"},"Milo":{"s":"milo","i":"images/kits/milo.webp","d":"easy"},"Miner":{"s":"miner","i":"images/kits/miner.webp","d":"easy"},"Nahla":{"s":"nahla","i":"images/kits/nahla.webp","d":"moderate"},"Nazar":{"s":"nazar","i":"images/kits/nazar.webp","d":"hard"},"Noelle":{"s":"noelle","i":"images/kits/noelle.webp","d":"moderate"},"Nyoka":{"s":"nyoka","i":"images/kits/nyoka.webp","d":"moderate"},"Nyx":{"s":"nyx","i":"images/kits/nyx.webp","d":"moderate"},"Pirate Davey":{"s":"pirate-davey","i":"images/kits/pirate-davey.webp","d":"extreme"},"Pyro":{"s":"pyro","i":"images/kits/pyro.webp","d":"hard"},"Ragnar":{"s":"ragnar","i":"images/kits/ragnar.webp","d":"easy"},"Ramil":{"s":"ramil","i":"images/kits/ramil.webp","d":"easy"},"Raven":{"s":"raven","i":"images/kits/raven.webp","d":"easy"},"Santa":{"s":"santa","i":"images/kits/santa.webp","d":"easy"},"Sheep Herder":{"s":"sheep-herder","i":"images/kits/sheep-herder.webp","d":"moderate"},"Sheila":{"s":"sheila","i":"images/kits/sheila.webp","d":"hard"},"Sigrid":{"s":"sigrid","i":"images/kits/sigrid.webp","d":"moderate"},"Silas":{"s":"silas","i":"images/kits/silas.webp","d":"moderate"},"Skoll":{"s":"skoll","i":"images/kits/skoll.webp","d":"moderate"},"Smoke":{"s":"smoke","i":"images/kits/smoke.webp","d":"easy"},"Sophia":{"s":"sophia","i":"images/kits/sophia.webp","d":"moderate"},"Spirit Catcher":{"s":"spirit-catcher","i":"images/kits/spirit-catcher.webp","d":"easy"},"Star Collector Stella":{"s":"star-collector-stella","i":"images/kits/star-collector-stella.webp","d":"moderate"},"Styx":{"s":"styx","i":"images/kits/styx.webp","d":"easy"},"Taliyah":{"s":"taliyah","i":"images/kits/taliyah.webp","d":"moderate"},"Terra":{"s":"terra","i":"images/kits/terra.webp","d":"hard"},"Trapper":{"s":"trapper","i":"images/kits/trapper.webp","d":"hard"},"Trinity":{"s":"trinity","i":"images/kits/trinity.webp","d":"easy"},"Triton":{"s":"triton","i":"images/kits/triton.webp","d":"easy"},"Trixie":{"s":"trixie","i":"images/kits/trixie.webp","d":"moderate"},"Uma":{"s":"uma","i":"images/kits/uma.webp","d":"moderate"},"Umbra":{"s":"umbra","i":"images/kits/umbra.webp","d":"easy"},"Umeko":{"s":"umeko","i":"images/kits/umeko.webp","d":"moderate"},"Vanessa":{"s":"vanessa","i":"images/kits/vanessa.webp","d":"hard"},"Void Knight":{"s":"void-knight","i":"images/kits/void-knight.webp","d":"easy"},"Void Regent":{"s":"void-regent","i":"images/kits/void-regent.webp","d":"moderate"},"Vulcan":{"s":"vulcan","i":"images/kits/vulcan.webp","d":"easy"},"Warden":{"s":"warden","i":"images/kits/warden.webp","d":"easy"},"Warrior":{"s":"warrior","i":"images/kits/warrior.webp","d":"easy"},"Whim":{"s":"whim","i":"images/kits/whim.webp","d":"moderate"},"Whisper":{"s":"whisper","i":"images/kits/whisper.webp","d":"easy"},"Wren":{"s":"wren","i":"images/kits/wren.webp","d":"easy"},"Xu'rot":{"s":"xu-rot","i":"images/kits/xu-rot.webp","d":"extreme"},"Yamini":{"s":"yamini","i":"images/kits/yamini.webp","d":"easy"},"Yeti":{"s":"yeti","i":"images/kits/yeti.webp","d":"moderate"},"Yuzi":{"s":"yuzi","i":"images/kits/yuzi.webp","d":"easy"},"Zarrah":{"s":"zarrah","i":"images/kits/zarrah.webp","d":"hard"},"Zenith":{"s":"zenith","i":"images/kits/zenith.webp","d":"easy"},"Zeno":{"s":"zeno","i":"images/kits/zeno.webp","d":"easy"},"Zephyr":{"s":"zephyr","i":"images/kits/zephyr.webp","d":"hard"},"Zola":{"s":"zola","i":"images/kits/zola.webp","d":"moderate"}};
+var $ = function(id){return document.getElementById(id);};
+function esc(t){ return String(t==null?"":t).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];}); }
+var cur = 0;
+function pick(){
+  var h = location.hash.replace("#","");
+  for(var i=0;i<LISTS.length;i++) if(LISTS[i].id===h) return i;
+  return 0;
+}
+function render(){
+  var L = LISTS[cur];
+  $("tabs").innerHTML = LISTS.map(function(l,i){
+    return '<button class="tab'+(i===cur?' on':'')+'" role="tab" aria-selected="'+(i===cur)+'" data-i="'+i+'">'+esc(l.name)+(l.sub?'<small>'+esc(l.sub)+'</small>':'')+'</button>';
+  }).join("");
+  $("ttl").textContent = L.subt || (L.name + " tier list");
+  $("note").textContent = L.note || "";
+  $("chart").innerHTML = L.rows.map(function(r){
+    var ks = r.kits.map(function(n){
+      var k = KITS[n]; if(!k) return "";
+      return '<a class="kit" href="kit-machine.html#'+k.s+'" data-name="'+esc(n)+'" aria-label="'+esc(n)+'">'+
+        '<img src="'+esc(k.i)+'" alt="" loading="lazy">'+(k.d?'<i class="dot '+k.d+'"></i>':'')+'</a>';
+    }).join("");
+    return '<div class="row"><div class="lab">'+esc(r.label)+'<small>'+r.kits.length+' kit'+(r.kits.length===1?'':'s')+'</small></div>'+
+      '<div class="kits">'+(ks || '<span class="empty">No kits</span>')+'</div></div>';
+  }).join("");
+}
+document.addEventListener("click",function(e){
+  var t = e.target.closest(".tab"); if(!t) return;
+  cur = +t.dataset.i; history.replaceState(null,"","#"+LISTS[cur].id); hideTip(); render();
+});
+window.addEventListener("hashchange",function(){ cur = pick(); render(); });
+var tip = $("tip"), tipFor = null;
+function showTip(el){
+  tipFor = el; tip.textContent = el.dataset.name; tip.classList.add("show");
+  var r = el.getBoundingClientRect(), w = tip.offsetWidth, h = tip.offsetHeight;
+  var x = Math.max(8, Math.min(r.left + r.width/2 - w/2, innerWidth - w - 8));
+  var y = r.top - h - 10; if(y < 8) y = r.bottom + 10;
+  tip.style.left = x+"px"; tip.style.top = y+"px";
+}
+function hideTip(){ tipFor = null; tip.classList.remove("show"); }
+document.addEventListener("mouseover",function(e){ var k = e.target.closest(".kit"); if(k){ if(k!==tipFor) showTip(k); } else if(tipFor) hideTip(); });
+document.addEventListener("focusin",function(e){ var k = e.target.closest(".kit"); if(k) showTip(k); });
+document.addEventListener("focusout",hideTip);
+window.addEventListener("scroll",hideTip,{passive:true});
+cur = pick(); render();
+</script>
+</body>
+</html>
