@@ -1037,23 +1037,23 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Catch bees around the map to upgrade your Bee Hive. Upgrading your Bee Hive will return additional iron and emeralds.",
-  "adv": "Bees spawn everywhere on the map, and the amount depends on the map. Each bee disappears 3 minutes after it spawns. Hold the Bee Net to pick bees up, then put them in your Beehives.\nYou can place up to 5 Beehives. A hive with 0 bees only produces iron, 1 iron every 10 seconds. The more bees inside, the faster it drops loot, and from 3 bees it can drop diamonds, and from 4 bees it can drop emeralds. Each drop is only 1 resource at a time: either 1 iron, 1 diamond or 1 emerald. After 10 bees a hive doesn't drop any faster.\nHives are weak to pickaxes and break in 5 hits with a wooden pickaxe, 4 with stone, and 2 with iron or diamond. They can also be broken by TNT and fireballs if they aren't covered with ceramic or obsidian.",
+  "adv": "Bees spawn around the map, similar to Alchemist's ingredients but not as many, and the amount depends on the map. A bee on the ground disappears 3 minutes after it spawns, and bees pulse every 7 seconds so they are easier to find. Hold the Bee Net to pick a bee up: it goes into your inventory as a separate item, then you put it in a Beehive. You lose your bees when you die, but you keep the net. Bees inside a hive never despawn.\nYou can place up to 5 Beehives. A hive with 0 bees only produces iron, 1 iron every 10 seconds. The more bees inside, the faster it drops loot, and from 3 bees it can drop diamonds, and from 4 bees it can drop emeralds. Each drop is only 1 resource at a time: either 1 iron, 1 diamond or 1 emerald. After 10 bees a hive doesn't drop any faster. There are no hive upgrades.\nHives have normal block HP and are weak to pickaxes: they break in 5 hits with a wooden pickaxe, 4 with stone, and 2 with iron or diamond. They can also be broken by TNT and fireballs if they aren't covered with ceramic or obsidian.",
   "items": [
    {
     "name": "Bee",
     "img": "images/items/bee.png",
-    "desc": "Spawns everywhere on the map, and the amount depends on the map. Disappears 3 minutes after spawning. Pick it up with the Bee Net and put it in a Beehive."
+    "desc": "Spawns around the map, similar to Alchemist's ingredients but not as many, and the amount depends on the map. Pulses every 7 seconds so it's easier to find. Disappears 3 minutes after spawning on the ground, but never inside a hive. Pick it up with the Bee Net, put it in a Beehive, and you lose it if you die."
    },
    {
     "name": "Beehive",
     "img": "images/items/beehive.png",
     "note": "Cost: 60 iron",
-    "desc": "You can place up to 5. Produces loot based on how many bees are inside (see the drop table). Weak to pickaxes: breaks in 5 hits with a wooden pickaxe, 4 with stone, and 2 with iron or diamond. TNT and fireballs can break it unless it is covered with ceramic or obsidian."
+    "desc": "You can place up to 5. Produces loot based on how many bees are inside (see the drop table). It has normal block HP and no upgrades. Weak to pickaxes: breaks in 5 hits with a wooden pickaxe, 4 with stone, and 2 with iron or diamond. TNT and fireballs can break it unless it is covered with ceramic or obsidian."
    },
    {
     "name": "Bee Net",
     "img": "images/items/bee-net.png",
-    "desc": "Hold it to pick up bees."
+    "desc": "Hold it to pick up bees. Bees go into your inventory as a separate item. You keep the net when you die, but you lose your bees."
    }
   ],
   "abilities": [],
@@ -1105,14 +1105,14 @@
      ],
      [
       "5",
-      "6s",
+      "6.25s",
       "80%",
       "15%",
       "4%"
      ],
      [
       "6",
-      "5s",
+      "4.5s",
       "78%",
       "14%",
       "8%"
@@ -1158,7 +1158,7 @@
    },
    {
     "title": "Escape and slow chasers",
-    "text": "Buy a ton of blocks so you can escape from people, and buy Gloop to slow down anyone chasing you."
+    "text": "Buy a ton of blocks so you can escape from people, and buy Gloop (35 iron) to slow down anyone chasing you. It slows them for 1 second and gives them Grounded for 10 seconds, so they can't use movement abilities or ender pearls."
    },
    {
     "title": "Protect your hive",
