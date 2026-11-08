@@ -1203,19 +1203,29 @@
     "name": "Featherlight Headhunter",
     "img": "images/items/featherlight-headhunter.png",
     "note": "Cost: 25 emeralds",
-    "desc": "No slowdown while charging. Upgrades the Falcon to tier 3: 20 damage and 250 HP."
+    "desc": "No slowdown while charging. Upgrades the Falcon to tier 3: 20 damage and 250 HP.",
+    "cd": 1.25,
+    "dmg": 88,
+    "dmgText": "88 (headshot 115.5)",
+    "dpsText": "70.4 - 92.4"
    },
    {
     "name": "Featherlight Crossbow",
     "img": "images/items/featherlight-crossbow.png",
     "note": "Cost: 8 emeralds",
-    "desc": "No slowdown while charging. Upgrades the Falcon to tier 2: 18 damage and 200 HP."
+    "desc": "No slowdown while charging. Upgrades the Falcon to tier 2: 18 damage and 200 HP.",
+    "cd": 1.25,
+    "dmg": 54.4
    },
    {
     "name": "Featherlight Bow",
     "img": "images/items/featherlight-bow.png",
     "note": "Cost: 32 iron",
-    "desc": "No slowdown while charging. Upgrades the Falcon to tier 1: 16 damage and 150 HP."
+    "desc": "No slowdown while charging. Upgrades the Falcon to tier 1: 16 damage and 150 HP.",
+    "cd": 0.625,
+    "cdText": "0.625s - 1s",
+    "dmg": 28.8,
+    "nodps": true
    }
   ],
   "abilities": [
