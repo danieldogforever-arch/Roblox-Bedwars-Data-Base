@@ -642,7 +642,7 @@
   ],
   "obtain": {
    "src": "Season 3 Battle Pass",
-   "tier": null,
+   "tier": "50 (paid)",
    "badge": "images/bp/s3.webp",
    "rent": 2000
   }
@@ -783,10 +783,10 @@
   ],
   "obtain": {
    "src": "Season 10 Battle Pass",
-   "tier": "10",
+   "tier": "10 (free)",
    "badge": "images/bp/s10.webp",
    "rent": 2000,
-   "buy": 10000
+   "buy": 12000
   }
  },
  {
@@ -985,7 +985,7 @@
   ],
   "obtain": {
    "src": "Season 4 Battle Pass",
-   "tier": null,
+   "tier": "10 (free)",
    "badge": "images/bp/s4.webp",
    "rent": 2000
   }
@@ -1494,7 +1494,7 @@
   ],
   "obtain": {
    "src": "Season 2 Battle Pass",
-   "tier": null,
+   "tier": "50 (paid)",
    "badge": "images/bp/s2.webp",
    "rent": 2000
   }
@@ -2459,9 +2459,10 @@
   ],
   "obtain": {
    "src": "Season 1 Battle Pass",
-   "tier": null,
+   "tier": "20 (paid)",
    "badge": "images/bp/s1.webp",
-   "rent": 2000
+   "rent": 2000,
+   "buy": 25000
   }
  },
  {
@@ -2649,10 +2650,10 @@
   ],
   "obtain": {
    "src": "Season 10 Battle Pass",
-   "tier": "40",
+   "tier": "40 (paid)",
    "badge": "images/bp/s10.webp",
    "rent": 2000,
-   "buy": 10000
+   "buy": 12000
   }
  },
  {
@@ -2895,7 +2896,8 @@
    "src": "Season 1 Battle Pass",
    "tier": "16 (free)",
    "badge": "images/bp/s1.webp",
-   "rent": 2000
+   "rent": 2000,
+   "buy": 25000
   }
  },
  {
@@ -3391,7 +3393,7 @@
   ],
   "obtain": {
    "src": "Season 7 Battle Pass",
-   "tier": "50",
+   "tier": "50 (paid)",
    "badge": "images/bp/s7.webp",
    "rent": 2000
   }
@@ -3460,7 +3462,7 @@
   ],
   "obtain": {
    "src": "Season 5 Battle Pass",
-   "tier": "30",
+   "tier": "30 (paid)",
    "badge": "images/bp/s5.webp",
    "rent": 2000
   }
@@ -3569,7 +3571,7 @@
   ],
   "obtain": {
    "src": "Season 9 Battle Pass",
-   "tier": "30",
+   "tier": "30 (free)",
    "badge": "images/bp/s9.webp",
    "rent": 2000
   }
@@ -3820,7 +3822,7 @@
   ],
   "obtain": {
    "src": "Season 4 Battle Pass",
-   "tier": null,
+   "tier": "30 (paid)",
    "badge": "images/bp/s4.webp",
    "rent": 2000
   }
@@ -4275,7 +4277,13 @@
      "Dino cost reduced (40 iron → 32 iron)"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 5 Battle Pass",
+   "tier": "20 (free)",
+   "badge": "images/bp/s5.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Drill",
@@ -4936,7 +4944,7 @@
   ],
   "obtain": {
    "src": "Season 8 Battle Pass",
-   "tier": "50",
+   "tier": "50 (paid)",
    "badge": "images/bp/s8.webp",
    "rent": 2000
   }
@@ -5172,7 +5180,12 @@
      "Assassination speed multiplier: 1.5x → 1.4x"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Kit Shop",
+   "buy": 10000,
+   "rent": 1500
+  }
  },
  {
   "name": "Farmer Cletus",
@@ -5639,9 +5652,10 @@
   ],
   "obtain": {
    "src": "Season 2 Battle Pass",
-   "tier": null,
+   "tier": "25 (paid)",
    "badge": "images/bp/s2.webp",
-   "rent": 2000
+   "rent": 2000,
+   "buy": 25000
   }
  },
  {
@@ -5767,7 +5781,7 @@
   ],
   "obtain": {
    "src": "Season 7 Battle Pass",
-   "tier": "20",
+   "tier": "20 (paid)",
    "badge": "images/bp/s7.webp",
    "rent": 2000
   }
@@ -5919,7 +5933,7 @@
   ],
   "obtain": {
    "src": "Season 8 Battle Pass",
-   "tier": "35",
+   "tier": "35 (free)",
    "badge": "images/bp/s8.webp",
    "rent": 2000
   }
@@ -6218,7 +6232,7 @@
   ],
   "obtain": {
    "src": "Season 3 Battle Pass",
-   "tier": null,
+   "tier": "20 (free)",
    "badge": "images/bp/s3.webp",
    "rent": 2000
   }
@@ -6312,9 +6326,10 @@
   ],
   "obtain": {
    "src": "Season 2 Battle Pass",
-   "tier": null,
+   "tier": "20 (free)",
    "badge": "images/bp/s2.webp",
-   "rent": 2000
+   "rent": 2000,
+   "buy": 25000
   }
  },
  {
@@ -6357,6 +6372,7 @@
   "obtain": {
    "src": "Halloween Battle Pass 2026",
    "tier": "35",
+   "badge": "images/bp/halloween-2026.webp",
    "rent": 2000
   }
  },
@@ -6801,10 +6817,10 @@
   ],
   "obtain": {
    "src": "Season 10 Battle Pass",
-   "tier": "50",
+   "tier": "50 (paid)",
    "badge": "images/bp/s10.webp",
    "rent": 2000,
-   "buy": 10000
+   "buy": 12000
   }
  },
  {
@@ -6905,7 +6921,7 @@
   ],
   "obtain": {
    "src": "Season 8 Battle Pass",
-   "tier": "25",
+   "tier": "25 (paid)",
    "badge": "images/bp/s8.webp",
    "rent": 2000
   }
@@ -7239,9 +7255,10 @@
   ],
   "obtain": {
    "src": "Season 2 Battle Pass",
-   "tier": null,
+   "tier": "40 (free)",
    "badge": "images/bp/s2.webp",
-   "rent": 2000
+   "rent": 2000,
+   "buy": 25000
   }
  },
  {
@@ -7373,9 +7390,10 @@
   ],
   "obtain": {
    "src": "Season 1 Battle Pass",
-   "tier": null,
+   "tier": "30 (free)",
    "badge": "images/bp/s1.webp",
-   "rent": 2000
+   "rent": 2000,
+   "buy": 25000
   }
  },
  {
@@ -7779,7 +7797,7 @@
   ],
   "obtain": {
    "src": "Season 6 Battle Pass",
-   "tier": "50",
+   "tier": "50 (paid)",
    "badge": "images/bp/s6.webp",
    "rent": 2000
   }
@@ -8246,7 +8264,7 @@
   ],
   "obtain": {
    "src": "Season 5 Battle Pass",
-   "tier": "5",
+   "tier": "5 (paid)",
    "badge": "images/bp/s5.webp",
    "rent": 2000
   }
@@ -9084,7 +9102,13 @@
      "More discounts: 5 → 7"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 5 Battle Pass",
+   "tier": "10 (free)",
+   "badge": "images/bp/s5.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Metal Detector",
@@ -9272,7 +9296,7 @@
   ],
   "obtain": {
    "src": "Season 4 Battle Pass",
-   "tier": null,
+   "tier": "5 (paid)",
    "badge": "images/bp/s4.webp",
    "rent": 2000
   }
@@ -9832,7 +9856,7 @@
   ],
   "obtain": {
    "src": "Season 9 Battle Pass",
-   "tier": "40",
+   "tier": "40 (paid)",
    "badge": "images/bp/s9.webp",
    "rent": 2000
   }
@@ -9941,10 +9965,10 @@
   ],
   "obtain": {
    "src": "Season 10 Battle Pass",
-   "tier": "30",
+   "tier": "30 (free)",
    "badge": "images/bp/s10.webp",
    "rent": 2000,
-   "buy": 10000
+   "buy": 12000
   }
  },
  {
@@ -10084,7 +10108,7 @@
   ],
   "obtain": {
    "src": "Season 4 Battle Pass",
-   "tier": null,
+   "tier": "50 (paid)",
    "badge": "images/bp/s4.webp",
    "rent": 2000
   }
@@ -10355,7 +10379,7 @@
   ],
   "obtain": {
    "src": "Season 1 Battle Pass",
-   "tier": null,
+   "tier": "50 (paid)",
    "badge": "images/bp/s1.webp",
    "rent": 2000
   }
@@ -10686,9 +10710,10 @@
   ],
   "obtain": {
    "src": "Season 1 Battle Pass",
-   "tier": null,
+   "tier": "40 (paid)",
    "badge": "images/bp/s1.webp",
-   "rent": 2000
+   "rent": 2000,
+   "buy": 25000
   }
  },
  {
@@ -10770,7 +10795,7 @@
   ],
   "obtain": {
    "src": "Season 3 Battle Pass",
-   "tier": null,
+   "tier": "10 (paid)",
    "badge": "images/bp/s3.webp",
    "rent": 2000
   }
@@ -10851,7 +10876,7 @@
   ],
   "obtain": {
    "src": "Season 4 Battle Pass",
-   "tier": null,
+   "tier": "20 (free)",
    "badge": "images/bp/s4.webp",
    "rent": 2000
   }
@@ -11406,7 +11431,7 @@
   ],
   "obtain": {
    "src": "Season 3 Battle Pass",
-   "tier": "25",
+   "tier": "25 (paid)",
    "badge": "images/bp/s3.webp",
    "rent": 2000
   }
@@ -11660,7 +11685,8 @@
    "src": "Season 1 Battle Pass",
    "tier": "45 (free)",
    "badge": "images/bp/s1.webp",
-   "rent": 2000
+   "rent": 2000,
+   "buy": 25000
   }
  },
  {
@@ -11761,7 +11787,13 @@
      "Fixed Stella losing max health on death"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 5 Battle Pass",
+   "tier": "40 (free)",
+   "badge": "images/bp/s5.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Styx",
@@ -11896,10 +11928,10 @@
   ],
   "obtain": {
    "src": "Season 10 Battle Pass",
-   "tier": "20",
+   "tier": "20 (paid)",
    "badge": "images/bp/s10.webp",
    "rent": 2000,
-   "buy": 10000
+   "buy": 12000
   }
  },
  {
@@ -12106,7 +12138,10 @@
      "Lowered Chicken twin chance at all tiers"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Player Level 15 reward"
+  }
  },
  {
   "name": "Terra",
@@ -12208,7 +12243,7 @@
   ],
   "obtain": {
    "src": "Season 9 Battle Pass",
-   "tier": "50",
+   "tier": "50 (paid)",
    "badge": "images/bp/s9.webp",
    "rent": 2000
   }
@@ -12359,9 +12394,10 @@
   ],
   "obtain": {
    "src": "Season 2 Battle Pass",
-   "tier": null,
+   "tier": "3 (paid)",
    "badge": "images/bp/s2.webp",
-   "rent": 2000
+   "rent": 2000,
+   "buy": 25000
   }
  },
  {
@@ -12824,7 +12860,7 @@
   ],
   "obtain": {
    "src": "Season 7 Battle Pass",
-   "tier": "35",
+   "tier": "35 (free)",
    "badge": "images/bp/s7.webp",
    "rent": 2000
   }
@@ -12933,7 +12969,7 @@
   ],
   "obtain": {
    "src": "Season 9 Battle Pass",
-   "tier": "15",
+   "tier": "15 (paid)",
    "badge": "images/bp/s9.webp",
    "rent": 2000
   }
@@ -13581,9 +13617,10 @@
   ],
   "obtain": {
    "src": "Season 1 Battle Pass",
-   "tier": null,
+   "tier": "10 (paid)",
    "badge": "images/bp/s1.webp",
-   "rent": 2000
+   "rent": 2000,
+   "buy": 25000
   }
  },
  {
@@ -13773,7 +13810,7 @@
   ],
   "obtain": {
    "src": "Season 6 Battle Pass",
-   "tier": "25",
+   "tier": "25 (free)",
    "badge": "images/bp/s6.webp",
    "rent": 2000
   }
@@ -13927,7 +13964,10 @@
      "Heal cooldown: 5s → 4s"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Player Level reward"
+  }
  },
  {
   "name": "Wren",
@@ -14179,7 +14219,7 @@
   ],
   "obtain": {
    "src": "Season 6 Battle Pass",
-   "tier": "35",
+   "tier": "35 (paid)",
    "badge": "images/bp/s6.webp",
    "rent": 2000
   }
@@ -14250,7 +14290,7 @@
   ],
   "obtain": {
    "src": "Season 9 Battle Pass",
-   "tier": "20",
+   "tier": "20 (paid)",
    "badge": "images/bp/s9.webp",
    "rent": 2000
   }
@@ -14315,7 +14355,7 @@
   ],
   "obtain": {
    "src": "Season 3 Battle Pass",
-   "tier": null,
+   "tier": "30 (free)",
    "badge": "images/bp/s3.webp",
    "rent": 2000
   }
@@ -14937,7 +14977,13 @@
      "Orb damage armor penetration: 100% → 50%"
     ]
    }
-  ]
+  ],
+  "obtain": {
+   "src": "Season 5 Battle Pass",
+   "tier": "50 (paid)",
+   "badge": "images/bp/s5.webp",
+   "rent": 2000
+  }
  },
  {
   "name": "Zola",
