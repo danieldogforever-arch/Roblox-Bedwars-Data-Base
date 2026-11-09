@@ -13109,12 +13109,12 @@
   "diff": "easy",
   "hp": "90",
   "desc": "Feed your Void Corruption with resources and kills to upgrade your gear and unlock your abilities of Void Decay and Shielding. With enough resources, unlock the full power of the Void and become the Ascended Void Knight. Void Knight's base health is reduced by 10%.",
-  "adv": "Void Knight spawns with 90 HP, a Noctium Blade I and the Consume ability. Consume eats 10 resources at a time (0.1 second cooldown), and you level up by consuming resources and dealing sword damage, and every kill counts as 200 damage toward that. Damage to NPCs (like Diamond Guards) and any damage that isn't from your sword only counts 50%. Each tier upgrades your blade and gives more damage reduction.\nTier 3 adds Void Decay to your hits: the first hit takes away 10% of the enemy's total HP, and the decay lasts 10 seconds before you need to hit them again. Tier 4 gives you a 30 HP shield that fully comes back after 15 seconds of not taking damage.\nThe last upgrade turns you into the Ascended Void Knight: Consume is replaced by Void Ascension, your damage reduction goes up to 84%, and you keep the Noctium Blade IV and the shield. Void Ascension gives you 20% more damage on everything (not just your sword) and 30% more health for 15 seconds, with a 60 second cooldown.",
+  "adv": "Void Knight spawns with 90 HP, a Noctium Blade I and the Consume ability. Consume eats 10 resources at a time (0.1 second cooldown), and you level up by consuming resources and dealing sword damage, and every kill counts as 200 damage toward that. Damage to NPCs (like Diamond Guards) and any damage that isn't from your sword only counts 50%. There are 5 forms: Base, Enhanced, Empowered, Corrupt and Chosen. Each form upgrades your blade and gives more damage reduction.\nEmpowered Form adds Void Decay to your hits: the first hit takes away 10% of the enemy's total HP, and the decay lasts 10 seconds before you need to hit them again. Corrupt Form gives you a 30 HP shield that fully comes back after 15 seconds of not taking damage.\nChosen Form is the last upgrade: Consume is replaced by Void Ascension, your damage reduction goes up to 84%, and you keep the Noctium Blade IV and the shield. Void Ascension gives you 20% more damage on everything (not just your sword) and 30% more health for 15 seconds, with a 60 second cooldown.",
   "items": [
    {
     "name": "Noctium Blade I",
     "img": "images/items/noctium-blade-1.png",
-    "note": "Tier 1",
+    "note": "Base Form",
     "desc": "Deals 22 damage with a 0.35 second cooldown. You spawn with it.",
     "cd": 0.35,
     "dmg": 22
@@ -13122,7 +13122,7 @@
    {
     "name": "Noctium Blade II",
     "img": "images/items/noctium-blade-2.png",
-    "note": "Tier 2",
+    "note": "Enhanced Form",
     "desc": "Deals 27 damage with a 0.35 second cooldown.",
     "cd": 0.35,
     "dmg": 27
@@ -13130,7 +13130,7 @@
    {
     "name": "Noctium Blade III",
     "img": "images/items/noctium-blade-3.png",
-    "note": "Tier 3",
+    "note": "Empowered Form",
     "desc": "Deals 33 damage with a 0.35 second cooldown. Hits apply Void Decay.",
     "cd": 0.35,
     "dmg": 33
@@ -13138,7 +13138,7 @@
    {
     "name": "Noctium Blade IV",
     "img": "images/items/noctium-blade-4.png",
-    "note": "Tier 4, and stays your sword after you Ascend",
+    "note": "Corrupt Form and Chosen Form",
     "desc": "Deals 47 damage with a 0.35 second cooldown. Hits apply Void Decay. Deals 56.4 damage while Void Ascension is active.",
     "cd": 0.35,
     "dmg": 47
@@ -13148,15 +13148,15 @@
    {
     "name": "Consume",
     "img": "images/abilities/ability-template.png",
-    "note": "Until you Ascend",
-    "desc": "Consumes 10 resources at a time to level up your Void Knight. Iron for tiers 1 and 2, emeralds for tiers 3 and 4.",
+    "note": "Until Chosen Form",
+    "desc": "Consumes 10 resources at a time to level up your Void Knight. Iron for Base and Enhanced Form, emeralds for Empowered and Corrupt Form.",
     "cd": 0.1,
     "nodps": true
    },
    {
     "name": "Void Ascension",
     "img": "images/abilities/ability-template.png",
-    "note": "Only after the final upgrade",
+    "note": "Chosen Form only",
     "desc": "Replaces Consume. Gives you 20% more damage on all your attacks, not just your sword, and 30% more health (90 → 117 HP) for 15 seconds.",
     "cd": 60,
     "nodps": true
@@ -13198,12 +13198,12 @@
    {
     "name": "Damage Reduction",
     "when": "Always",
-    "desc": "You take less damage at every tier: 18%, 36%, 60%, 76%, then 84% when Ascended."
+    "desc": "You take less damage in every form: 18% (Base), 36% (Enhanced), 60% (Empowered), 76% (Corrupt) and 84% (Chosen)."
    },
    {
     "name": "Kill Bonus",
     "when": "On kill",
-    "desc": "A kill counts as 200 damage toward your next upgrade. At Tier 1 you only need 200 damage, so one kill fills the damage requirement right away."
+    "desc": "A kill counts as 200 damage toward your next upgrade. In Base Form you only need 200 damage, so one kill fills the damage requirement right away."
    },
    {
     "name": "Half Progress",
@@ -13212,29 +13212,29 @@
    },
    {
     "name": "Void Decay",
-    "when": "Tier 3 and up",
+    "when": "Empowered Form and up",
     "desc": "Your first hit takes away 10% of the enemy's total HP. The decay then lasts 10 seconds, and you need to hit them again after that to apply it again."
    },
    {
     "name": "Void Shield",
-    "when": "Tier 4 and up",
+    "when": "Corrupt Form and up",
     "desc": "A 30 HP shield that fully regenerates after 15 seconds of not taking damage."
    }
   ],
   "tables": [
    {
-    "title": "Tiers",
+    "title": "Forms",
     "head": [
-     "Tier",
+     "Form",
      "Sword",
      "Damage",
      "Damage reduction",
      "Extras",
-     "To reach next tier"
+     "To reach next form"
     ],
     "rows": [
      [
-      "1",
+      "Base",
       "img:images/items/noctium-blade-1.png|Blade I",
       "22",
       "18%",
@@ -13242,7 +13242,7 @@
       "90 iron + 200 damage"
      ],
      [
-      "2",
+      "Enhanced",
       "img:images/items/noctium-blade-2.png|Blade II",
       "27",
       "36%",
@@ -13250,7 +13250,7 @@
       "160 iron + 400 damage"
      ],
      [
-      "3",
+      "Empowered",
       "img:images/items/noctium-blade-3.png|Blade III",
       "33",
       "60%",
@@ -13258,7 +13258,7 @@
       "11 emeralds + 800 damage"
      ],
      [
-      "4",
+      "Corrupt",
       "img:images/items/noctium-blade-4.png|Blade IV",
       "47",
       "76%",
@@ -13266,7 +13266,7 @@
       "44 emeralds + 1200 damage"
      ],
      [
-      "Ascended",
+      "Chosen",
       "img:images/items/noctium-blade-4.png|Blade IV",
       "47 (56.4 with Void Ascension)",
       "84%",
@@ -13279,44 +13279,44 @@
    {
     "title": "True HP",
     "head": [
-     "Tier",
+     "Form",
      "HP",
      "Damage reduction",
      "True HP"
     ],
     "rows": [
      [
-      "1",
+      "Base",
       "90",
       "18%",
       "110 effective HP"
      ],
      [
-      "2",
+      "Enhanced",
       "90",
       "36%",
       "141 effective HP"
      ],
      [
-      "3",
+      "Empowered",
       "90",
       "60%",
       "225 effective HP"
      ],
      [
-      "4",
+      "Corrupt",
       "90 + 30 shield",
       "76%",
       "375 effective HP, 500 with shield"
      ],
      [
-      "Ascended",
+      "Chosen",
       "90 + 30 shield",
       "84%",
       "562 effective HP, 750 with shield"
      ],
      [
-      "Ascended + Void Ascension",
+      "Chosen + Void Ascension",
       "117 + 30 shield",
       "84%",
       "731 effective HP, 919 with shield"

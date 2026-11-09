@@ -116,7 +116,7 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
       <div id="weapons"></div>
 
       <div id="headWrap" class="hidden"><label class="tog"><input type="checkbox" id="head"><span>Headshot</span><em id="headTxt"></em></label></div>
-      <div id="ascWrap" class="hidden"><label class="tog"><input type="checkbox" id="asc"><span>Void Ascension</span><em>final tier only, +20% damage</em></label></div>
+      <div id="ascWrap" class="hidden"><label class="tog"><input type="checkbox" id="asc"><span>Void Ascension</span><em>Chosen Form only, +20% damage</em></label></div>
 
       <div class="lab">Team damage upgrade <small>diamond shop</small></div>
       <div class="seg" id="dmgup" data-key="du"></div>
@@ -159,7 +159,7 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
       <div class="kitpick"><span class="kimg none" id="dkimg">?</span><select id="dkit"></select></div>
 
       <div id="vkWrap" class="hidden">
-        <div class="lab">Void Knight tier</div>
+        <div class="lab">Void Knight form</div>
         <div class="seg" id="vktier" data-key="vt"></div>
         <label class="tog" id="dascWrap"><input type="checkbox" id="dasc"><span>Void Ascension active</span><em>+30% HP</em></label>
       </div>
@@ -212,7 +212,7 @@ var ENCH=[{id:"none",name:"None",d:"No enchant."},
  {id:"soul",name:"Soul Reaver",img:"soul-reaver",d:"A soul aura deals 6 damage every 0.5 seconds with 100% armor penetration. The aura lasts 14 ticks (7 seconds) and you need a kill to keep it going. Each kill adds a stack: +1 damage and a bigger aura, with no cap on damage or range."}];
 var CRITM=[{label:"Average"},{label:"Max crit"},{label:"No crit"}];
 var FIRE=[3,5,8,10];
-var VK=[{t:"1",dr:.18,sh:0},{t:"2",dr:.36,sh:0},{t:"3",dr:.60,sh:0},{t:"4",dr:.76,sh:30},{t:"Ascended",dr:.84,sh:30}];
+var VK=[{t:"Base",dr:.18,sh:0},{t:"Enhanced",dr:.36,sh:0},{t:"Empowered",dr:.60,sh:0},{t:"Corrupt",dr:.76,sh:30},{t:"Chosen",dr:.84,sh:30}];
 var GENERAL=[
  {name:"Wood Sword",dmg:20,cd:.3,img:"images/items/wood-sword.png"},{name:"Stone Sword",dmg:25,cd:.3,img:"images/items/stone-sword.png"},{name:"Iron Sword",dmg:30,cd:.3,img:"images/items/iron-sword.png"},
  {name:"Diamond Sword",dmg:42,cd:.3,img:"images/items/diamond-sword.png"},{name:"Emerald Sword",dmg:55,cd:.3,img:"images/items/emerald-sword.png"},{name:"Headhunter",dmg:55,head:82.5,cd:1.3,img:"images/items/headhunter.png"},{name:"Crossbow",dmg:34,cd:1.3,img:"images/items/crossbow.png"}];
@@ -270,7 +270,7 @@ function compute(){
   if(arm.dr) out.push({x:arm.name+" armor"+(pen?" ("+fmt(pen*100)+"% pen)":"")+" -"+fmt((1-am)*100)+"%",v:fmt(d),c:"down"});
   var au=ARMUP[S.au]; if(au){ d*=1-au; out.push({x:"Team armor upgrade -"+au*100+"%",v:fmt(d),c:"down"}); }
   var vkOn=S.dk==="Void Knight", vk=VK[S.vt]||VK[0], kd=vkOn?vk.dr:0;
-  if(kd){ d*=1-kd; out.push({x:"Void Knight tier "+vk.t+" -"+Math.round(kd*100)+"%",v:fmt(d),c:"down"}); }
+  if(kd){ d*=1-kd; out.push({x:"Void Knight "+vk.t+" Form -"+Math.round(kd*100)+"%",v:fmt(d),c:"down"}); }
   var hp=+S.hp||1, sh=+S.sh||0, tot=hp+sh;
   var hits=d>0?Math.ceil(tot/d - 1e-9):Infinity;
   var redNoPen=armMult(0)*(1-au)*(1-kd), redHit=am*(1-au)*(1-kd), redFull=(1-au)*(1-kd);
@@ -370,7 +370,7 @@ function init(){
   fillKits();
   seg("dmgup",[{label:"None"},{label:"+5%"},{label:"+10%"},{label:"+20%"}]);
   seg("armup",[{label:"None"},{label:"+10%"},{label:"+20%"},{label:"+30%"}]);
-  seg("vktier",VK.map(function(v){return {label:v.t==="Ascended"?"Ascended":"Tier "+v.t};}));
+  seg("vktier",VK.map(function(v){return {label:v.t};}));
   seg("armor",ARMOR.map(function(a){return {label:a.name,icon:a.dr?'<img src="images/armor/'+a.id+'.png" alt="" width="24" height="24" style="object-fit:contain">':''};}));
   seg("critm",CRITM);
   seg("ench",ENCH.map(function(e){return {label:e.name,icon:e.img?'<img src="images/enchants/'+e.img+'.png" alt="">':''};}));
