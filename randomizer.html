@@ -29,7 +29,11 @@ h1{font-size:clamp(2.1rem,6vw,2.8rem);margin:0;line-height:1.1}
 .reel::before{top:0;background:linear-gradient(rgba(10,4,24,.9),transparent)}
 .reel::after{bottom:0;background:linear-gradient(transparent,rgba(10,4,24,.9))}
 .strip{position:absolute;left:0;top:0;width:100%;will-change:transform}
-.strip img{display:block;width:190px;height:190px;object-fit:contain;padding:14px}
+.strip{height:100%}
+.strip img{display:block;width:100%;height:var(--s,100%);object-fit:contain;padding:14px}
+.pick{font-size:.85rem;color:var(--gold)}
+select{font:inherit;color:#fff;background:var(--card);border:2px solid rgba(255,255,255,.35);border-radius:12px;padding:8px 12px;width:100%;cursor:pointer}
+select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 .reel.done{box-shadow:0 0 0 4px var(--gold),0 0 34px rgba(255,209,102,.55)}
 .reel .q{position:absolute;inset:0;display:grid;place-items:center;font-size:4rem;color:rgba(255,255,255,.35)}
 .lock{font:inherit;font-size:.85rem;color:#fff;background:var(--soft);border:2px solid transparent;border-radius:999px;padding:4px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
@@ -79,8 +83,8 @@ h1{font-size:clamp(2.1rem,6vw,2.8rem);margin:0;line-height:1.1}
 .foot{margin-top:28px;text-align:center;font-size:.9rem;color:var(--muted)}
 .foot a{color:var(--accent)}
 @media(max-width:820px){.layout{grid-template-columns:minmax(0,1fr)}}
-@media(max-width:520px){.reel{width:130px;height:130px;border-radius:16px}.strip img{width:130px;height:130px;padding:10px}.reels{gap:8px}.plus{font-size:1.8rem}.stage{padding:20px 12px}.rname{font-size:1.6rem}.fresult{gap:10px}.fresult .rname{font-size:1.25rem}.pill{font-size:.8rem;padding:3px 9px}.go{font-size:.85rem;padding:5px 12px}}
-@media(max-width:360px){.reel{width:112px;height:112px}.strip img{width:112px;height:112px}}
+@media(max-width:520px){.reel{width:130px;height:130px;border-radius:16px}.strip img{padding:10px}.reels{gap:8px}.plus{font-size:1.8rem}.stage{padding:20px 12px}.rname{font-size:1.6rem}.fresult{gap:10px}.fresult .rname{font-size:1.25rem}.pill{font-size:.8rem;padding:3px 9px}.go{font-size:.85rem;padding:5px 12px}}
+@media(max-width:360px){.reel{width:112px;height:112px}}
 </style>
 </head>
 <body>
@@ -107,6 +111,8 @@ h1{font-size:clamp(2.1rem,6vw,2.8rem);margin:0;line-height:1.1}
         <div class="lab">Fusions from</div>
         <div class="chips" id="fmode"></div>
         <p class="hint" id="fmHint"></p>
+        <div class="lab">Your first kit</div>
+        <select id="first"><option value="">Random</option></select>
       </div>
       <div id="filters">
         <div class="lab">Class <button type="button" data-clear="cls">Any</button></div>
@@ -131,7 +137,7 @@ var FUSIONS=[{"a":"Abaddon","b":"Lucía","note":""},{"a":"Adetunde","b":"Trinity
 var TIERS=["OP","S","A","B","C","F"], TCOL={OP:"#ff4d6d",S:"#ff8a5c",A:"#ffd166",B:"#5fe3a1",C:"#5cc8ff",F:"#a98bff"};
 var DIFFS=[["easy","Easy","#5fe3a1"],["moderate","Moderate","#ffd166"],["hard","Hard","#ff6b81"],["extreme","Extreme","#a98bff"]];
 var CLS=["Fighter","Economy","Tank","Movement","Support","Ranged","Defender","Destroyer","Miscellaneous"];
-var S={mode:"kit",cls:[],tier:[],tl:"casual",diff:[],norep:true,fm:"best",lock:[false,false],cur:[null,null],busy:false,hist:[],seen:{}};
+var S={first:"",mode:"kit",cls:[],tier:[],tl:"casual",diff:[],norep:true,fm:"best",lock:[false,false],cur:[null,null],busy:false,hist:[],seen:{}};
 var $=function(id){return document.getElementById(id);};
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
 function slug(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");}
@@ -158,12 +164,13 @@ function renderFilters(){
   $("filters").classList.toggle("hidden",bestMode);
   $("fmHint").textContent=bestMode?"Picks from the "+FUSIONS.length+" fusions on the Kit Machine's Best fusions tabs.":"Two random kits that match your filters. Lock one to keep it and re-spin the other.";
   var n=pool().length;
-  $("count").innerHTML=bestMode?'<b>'+FUSIONS.length+'</b> fusions to pick from':'<b>'+n+'</b> of '+KITS.length+' kits match'+(n<2&&S.mode==="fus"?' (need at least 2)':'');
+  var nf=S.first?FUSIONS.filter(function(x){return x.a===S.first||x.b===S.first;}).length:FUSIONS.length;
+  $("count").innerHTML=bestMode?'<b>'+nf+'</b> fusion'+(nf===1?'':'s')+' to pick from'+(S.first?' with '+esc(S.first):''):'<b>'+n+'</b> of '+KITS.length+' kits match'+(n<2&&S.mode==="fus"?' (need at least 2)':'');
 }
 
-function reelHtml(i){ var c=S.cur[i]; var locked=S.mode==="fus"&&S.fm==="any";
+function reelHtml(i){ var c=S.cur[i]; var mine=S.mode==="fus"&&i===0&&S.first; var locked=S.mode==="fus"&&S.fm==="any"&&!mine;
   return '<div class="slot"><div class="reel'+(c?' done':'')+'" id="reel'+i+'">'+(c?'<div class="strip"><img src="'+esc(c.img)+'" alt="'+esc(c.name)+'"></div>':'<span class="q">?</span>')+'</div>'+
-    (locked?'<button type="button" class="lock" data-lock="'+i+'" aria-pressed="'+S.lock[i]+'">'+lockSvg(S.lock[i])+(S.lock[i]?'Locked':'Lock')+'</button>':'')+'</div>'; }
+    (locked?'<button type="button" class="lock" data-lock="'+i+'" aria-pressed="'+S.lock[i]+'">'+lockSvg(S.lock[i])+(S.lock[i]?'Locked':'Lock')+'</button>':'')+(mine?'<span class="pick">Your pick</span>':'')+'</div>'; }
 function lockSvg(on){return '<svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"><rect x="2.5" y="7" width="11" height="8" rx="2" fill="currentColor"/><path d="M5 7V5a3 3 0 016 0'+(on?'v2':'')+'" fill="none" stroke="currentColor" stroke-width="2"/></svg>';}
 function renderReels(){ var n=S.mode==="kit"?1:2, h='';
   for(var i=0;i<n;i++){ if(i) h+='<span class="plus" aria-hidden="true">+</span>'; h+=reelHtml(i); }
@@ -177,7 +184,7 @@ function kitCard(k){ var d=DIFFS.filter(function(x){return x[0]===k.diff;})[0];
     (d?'<span class="pill" style="--c:'+d[2]+'"><span class="dot"></span>'+d[1]+'</span>':'')+
     '</div><a class="go" href="kit-machine.html#'+slug(k.name)+'">Open in Kit Machine</a></div>'; }
 function renderResult(note){
-  if(!S.cur[0]){ $("result").innerHTML='<p class="hint">Press Spin'+(S.mode==="kit"?' to get a kit.':' to get two kits to fuse.')+'</p>'; return; }
+  if(!S.cur[0]||(S.mode==="fus"&&!S.cur[1])){ $("result").innerHTML='<p class="hint">Press Spin'+(S.mode==="kit"?' to get a kit.':' to get two kits to fuse.')+'</p>'; return; }
   if(S.mode==="kit"){ $("result").innerHTML=kitCard(S.cur[0]); return; }
   $("result").innerHTML='<div class="fresult">'+kitCard(S.cur[0])+kitCard(S.cur[1])+'</div>'+(note?'<p class="fnote">'+esc(note)+'</p>':'');
 }
@@ -186,14 +193,14 @@ function pickKit(list,avoid){ var p=list.filter(function(k){return avoid.indexOf
   if(S.norep){ var fresh=p.filter(function(k){return !S.seen[k.name];}); if(!fresh.length){ S.seen={}; fresh=p; } p=fresh; }
   return p.length?rnd(p):null; }
 
-function animate(i,target,delay){ return new Promise(function(res){
+function animate(i,target,prev){ return new Promise(function(res){
   var reel=$("reel"+i); if(!reel){ res(); return; }
   reel.classList.remove("done");
   var size=reel.clientHeight, n=reduce?1:22+i*6, imgs=[];
-  for(var j=0;j<n;j++) imgs.push(rnd(KITS).img);
+  for(var j=0;j<n;j++) imgs.push(j===0&&prev?prev.img:rnd(KITS).img);
   imgs.push(target.img);
   reel.innerHTML='<div class="strip">'+imgs.map(function(s,j){return '<img src="'+esc(s)+'" alt="'+(j===imgs.length-1?esc(target.name):'')+'">';}).join('')+'</div>';
-  var strip=reel.firstChild;
+  var strip=reel.firstChild; strip.style.setProperty("--s",size+"px");
   if(reduce){ strip.style.transform="translateY(-"+(n*size)+"px)"; reel.classList.add("done"); res(); return; }
   strip.style.transform="translateY(0)";
   requestAnimationFrame(function(){ requestAnimationFrame(function(){
@@ -206,20 +213,23 @@ function spin(){
   if(S.busy) return;
   var picks=[], note="";
   if(S.mode==="kit"){ var k=pickKit(pool(),[]); if(!k){ $("result").innerHTML='<p class="hint">No kits match these filters.</p>'; return; } picks=[k]; }
-  else if(S.fm==="best"){ var f=rnd(FUSIONS), a=byName(f.a), b=byName(f.b); if(Math.random()<.5){ var t=a; a=b; b=t; } picks=[a,b]; note=f.note||""; }
+  else if(S.fm==="best"){ var cand=S.first?FUSIONS.filter(function(x){return x.a===S.first||x.b===S.first;}):FUSIONS;
+    if(!cand.length){ var me=byName(S.first), other=pickKit(KITS,[S.first]); picks=[me,other]; note="There are no Best fusions with "+S.first+" yet, so here's a random partner."; }
+    else { var f=rnd(cand), a=byName(f.a), b=byName(f.b); if(S.first? b.name===S.first : Math.random()<.5){ var t=a; a=b; b=t; } picks=[a,b]; note=f.note||""; } }
   else { var p=pool(); if(p.length<2&&!(S.lock[0]||S.lock[1])){ $("result").innerHTML='<p class="hint">At least 2 kits need to match your filters.</p>'; return; }
-    var a2=S.lock[0]&&S.cur[0]?S.cur[0]:null, b2=S.lock[1]&&S.cur[1]?S.cur[1]:null;
+    var a2=S.first?byName(S.first):(S.lock[0]&&S.cur[0]?S.cur[0]:null), b2=S.lock[1]&&S.cur[1]?S.cur[1]:null;
     if(!a2) a2=pickKit(p,b2?[b2.name]:[]); if(!b2) b2=pickKit(p,a2?[a2.name]:[]);
     if(!a2||!b2){ $("result").innerHTML='<p class="hint">Not enough kits match your filters.</p>'; return; }
     picks=[a2,b2]; var fm=FUSIONS.filter(function(x){return (x.a===a2.name&&x.b===b2.name)||(x.a===b2.name&&x.b===a2.name);})[0];
     if(fm) note="This one is on the Best fusions list!"+(fm.note?" "+fm.note:""); }
   S.busy=true; $("spin").disabled=true; $("result").innerHTML='';
-  var jobs=picks.map(function(k,i){ var keep=S.mode==="fus"&&S.fm==="any"&&S.lock[i]&&S.cur[i]===k; S.cur[i]=k; S.seen[k.name]=1; return keep?Promise.resolve():animate(i,k); });
+  var prev=S.cur.slice();
+  var jobs=picks.map(function(k,i){ var keep=S.mode==="fus"&&((S.fm==="any"&&S.lock[i])||(i===0&&S.first))&&prev[i]===k; S.cur[i]=k; S.seen[k.name]=1; return keep?Promise.resolve():animate(i,k,prev[i]); });
   Promise.all(jobs).then(function(){ S.busy=false; $("spin").disabled=false; renderResult(note); addHist(picks); });
 }
 function addHist(picks){ S.hist.unshift(picks.slice()); S.hist=S.hist.slice(0,8);
   $("hist").innerHTML=S.hist.map(function(p){ return '<span class="hgrp">'+p.map(function(k){return '<a href="kit-machine.html#'+slug(k.name)+'" title="'+esc(k.name)+'"><img src="'+esc(k.img)+'" alt="'+esc(k.name)+'"></a>';}).join('<span class="hp">+</span>')+'</span>'; }).join(''); }
-function setMode(m){ if(S.busy) return; S.mode=m; S.cur=[null,null]; S.lock=[false,false];
+function setMode(m){ if(S.busy) return; S.mode=m; S.cur=[null,null]; S.lock=[false,false]; S.first=""; $("first").value="";
   $("tabKit").setAttribute("aria-selected",m==="kit"); $("tabFus").setAttribute("aria-selected",m==="fus");
   $("fusMode").classList.toggle("hidden",m!=="fus"); $("spin").textContent=m==="kit"?"Spin":"Spin fusion";
   S.hist=[]; $("hist").innerHTML='<span class="empty">Nothing yet.</span>';
@@ -235,6 +245,8 @@ $("ftier").onclick=function(e){ var b=e.target.closest(".chip"); if(!b) return; 
 $("ftl").onclick=function(e){ var b=e.target.closest(".chip"); if(!b) return; S.tl=b.dataset.v; renderFilters(); };
 $("fdiff").onclick=function(e){ var b=e.target.closest(".chip"); if(!b) return; toggle(S.diff,b.dataset.v); renderFilters(); };
 $("fmode").onclick=function(e){ var b=e.target.closest(".chip"); if(!b||S.busy) return; S.fm=b.dataset.v; S.lock=[false,false]; renderFilters(); renderReels(); };
+$("first").innerHTML+=KITS.map(function(k){return '<option>'+esc(k.name)+'</option>';}).join('');
+$("first").onchange=function(){ if(S.busy){ this.value=S.first; return; } S.first=this.value; S.lock=[false,false]; S.cur[0]=S.first?byName(S.first):null; if(S.cur[1]&&S.first===S.cur[1].name) S.cur[1]=null; renderFilters(); renderReels(); renderResult(); };
 $("norep").onclick=function(){ S.norep=!S.norep; S.seen={}; renderFilters(); };
 document.querySelectorAll("[data-clear]").forEach(function(b){ b.onclick=function(){ S[b.dataset.clear]=[]; renderFilters(); }; });
 $("reels").onclick=function(e){ var b=e.target.closest(".lock"); if(!b||S.busy) return; var i=+b.dataset.lock; if(!S.cur[i]) return; S.lock[i]=!S.lock[i]; renderReels(); };
