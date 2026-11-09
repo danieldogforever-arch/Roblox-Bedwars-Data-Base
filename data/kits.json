@@ -3422,8 +3422,8 @@
   },
   "diff": "easy",
   "hp": "100",
-  "desc": "Every time you take damage you have a chance of dropping a battery on the ground. Once the battery activates you can pick it up for a small shield. After collecting 3 batteries you will overload, gaining movement speed and damage!",
-  "adv": "Whenever you take damage, you have a 33% chance to drop a battery. Picking one up gives you 16 shield.\nAfter picking up 3 batteries, you go into Overcharge for 8 seconds. You get 17.5% more speed, and anyone who hits you with a melee weapon takes 25% of that damage back as mirror damage, with 0% armor penetration. They also get Zapped, so they heal and gain shields 60% less for 10 seconds.\nYou can still drop batteries during Overcharge, but you can't pick them up. When Overcharge ends, you lose any shield you have left.",
+  "desc": "Every time you take damage you have a chance of dropping a battery on the ground. Once the battery activates you can pick it up for a small shield. After collecting 3 batteries you will overload, gaining movement speed!",
+  "adv": "Whenever you take damage, you have a 33% chance to drop a battery. Picking one up gives you 16 shield.\nAfter picking up 3 batteries, you go into Overcharge for 8 seconds. You get 20% more speed, and anyone who hits you with a melee weapon takes 25% of that damage back as mirror damage, with 0% armor penetration. They also get Zapped, so they heal and gain shields 60% less for 10 seconds.\nYou can still drop batteries during Overcharge, but you can't pick them up. When Overcharge ends, you lose any shield you have left.",
   "items": [],
   "abilities": [],
   "history": [
@@ -3489,7 +3489,7 @@
    {
     "name": "Overcharge",
     "when": "After picking up 3 batteries",
-    "desc": "Lasts 8 seconds. +17.5% speed, and melee attackers take 25% of their damage back as mirror damage (0% armor penetration). Your shield is removed when it ends."
+    "desc": "Lasts 8 seconds. +20% speed, and melee attackers take 25% of their damage back as mirror damage (0% armor penetration). Your shield is removed when it ends."
    },
    {
     "name": "Zapped",
@@ -3523,7 +3523,7 @@
      ],
      [
       "Overcharge speed",
-      "+17.5%"
+      "+20%"
      ],
      [
       "Mirror damage",
