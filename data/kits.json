@@ -2688,7 +2688,7 @@
     "name": "Hunting Time",
     "img": "images/abilities/ability-template.png",
     "nodps": true,
-    "desc": "Lasts 15 seconds. Marks your target on the map, but your target sees your mark too, so they know you are hunting them. Gives bonuses depending on your level: level 1 +10% damage to your target, level 2 +20%, level 3 the same damage plus +15% movement speed, level 4 the same as level 3 plus 10% less damage taken from and dealt to everyone who isn't your target while active.",
+    "desc": "Lasts 15 seconds. Marks your target on the map, but your target sees your mark too, so they know you are hunting them. Gives bonuses depending on your level: level 1 +10% damage to your target, level 2 +20%, level 3 the same damage plus +12.5% movement speed, level 4 the same as level 3 plus 10% less damage taken from and dealt to everyone who isn't your target while active.",
     "cd": 30
    },
    {
@@ -2725,7 +2725,7 @@
       "3",
       "2",
       "2 emeralds",
-      "+20% damage to your target and +15% movement speed"
+      "+20% damage to your target and +12.5% movement speed"
      ],
      [
       "4",
