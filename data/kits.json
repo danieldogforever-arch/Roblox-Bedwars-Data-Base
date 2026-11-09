@@ -13109,34 +13109,56 @@
   "diff": "easy",
   "hp": "90",
   "desc": "Feed your Void Corruption with resources and kills to upgrade your gear and unlock your abilities of Void Decay and Shielding. With enough resources, unlock the full power of the Void and become the Ascended Void Knight. Void Knight's base health is reduced by 10%.",
-  "adv": "",
+  "adv": "Void Knight spawns with 90 HP, a Noctium Blade I and the Consume ability. Consume eats 10 resources at a time (0.1 second cooldown), and you level up by consuming resources and dealing sword damage. Each tier upgrades your blade and gives more damage reduction.\nTier 3 adds Void Decay to your hits, which takes away 10% of the enemy's total HP. Tier 4 gives you a 30 HP shield that fully comes back after 15 seconds of not taking damage.\nThe last upgrade turns you into the Ascended Void Knight: Consume is replaced by Void Ascension, your damage reduction goes up to 84%, and you keep the Noctium Blade IV and the shield. Void Ascension gives you 20% more damage and 30% more health.",
   "items": [
    {
     "name": "Noctium Blade I",
-    "img": "images/items/noctium-blade-1.png"
+    "img": "images/items/noctium-blade-1.png",
+    "note": "Tier 1",
+    "desc": "Deals 22 damage with a 0.35 second cooldown. You spawn with it.",
+    "cd": 0.35,
+    "dmg": 22
    },
    {
     "name": "Noctium Blade II",
-    "img": "images/items/noctium-blade-2.png"
+    "img": "images/items/noctium-blade-2.png",
+    "note": "Tier 2",
+    "desc": "Deals 27 damage with a 0.35 second cooldown.",
+    "cd": 0.35,
+    "dmg": 27
    },
    {
     "name": "Noctium Blade III",
-    "img": "images/items/noctium-blade-3.png"
+    "img": "images/items/noctium-blade-3.png",
+    "note": "Tier 3",
+    "desc": "Deals 33 damage with a 0.35 second cooldown. Hits apply Void Decay.",
+    "cd": 0.35,
+    "dmg": 33
    },
    {
     "name": "Noctium Blade IV",
-    "img": "images/items/noctium-blade-4.png"
+    "img": "images/items/noctium-blade-4.png",
+    "note": "Tier 4, and stays your sword after you Ascend",
+    "desc": "Deals 47 damage with a 0.35 second cooldown. Hits apply Void Decay.",
+    "cd": 0.35,
+    "dmg": 47
    }
   ],
   "abilities": [
    {
     "name": "Consume",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Until you Ascend",
+    "desc": "Consumes 10 resources at a time to level up your Void Knight. Iron for tiers 1 and 2, emeralds for tiers 3 and 4.",
+    "cd": 0.1,
+    "nodps": true
    },
    {
     "name": "Void Ascension",
-    "note": "Only on the final upgrade",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Only after the final upgrade",
+    "desc": "Replaces Consume. Gives you 20% more damage and 30% more health (90 → 117 HP). A kill counts as 200 damage toward the ability.",
+    "nodps": true
    }
   ],
   "history": [
@@ -13170,7 +13192,164 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Damage Reduction",
+    "when": "Always",
+    "desc": "You take less damage at every tier: 18%, 36%, 60%, 76%, then 84% when Ascended."
+   },
+   {
+    "name": "Void Decay",
+    "when": "Tier 3 and up",
+    "desc": "Your sword hits take away 10% of the enemy's total HP."
+   },
+   {
+    "name": "Void Shield",
+    "when": "Tier 4 and up",
+    "desc": "A 30 HP shield that fully regenerates after 15 seconds of not taking damage."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Tiers",
+    "head": [
+     "Tier",
+     "Sword",
+     "Damage",
+     "Damage reduction",
+     "Extras",
+     "To reach next tier"
+    ],
+    "rows": [
+     [
+      "1",
+      "img:images/items/noctium-blade-1.png|Blade I",
+      "22",
+      "18%",
+      "-",
+      "90 iron + 200 damage"
+     ],
+     [
+      "2",
+      "img:images/items/noctium-blade-2.png|Blade II",
+      "27",
+      "36%",
+      "-",
+      "160 iron + 400 damage"
+     ],
+     [
+      "3",
+      "img:images/items/noctium-blade-3.png|Blade III",
+      "33",
+      "60%",
+      "Void Decay",
+      "11 emeralds + 800 damage"
+     ],
+     [
+      "4",
+      "img:images/items/noctium-blade-4.png|Blade IV",
+      "47",
+      "76%",
+      "Void Decay, 30 shield",
+      "44 emeralds + 1200 damage"
+     ],
+     [
+      "Ascended",
+      "img:images/items/noctium-blade-4.png|Blade IV",
+      "47",
+      "84%",
+      "Void Decay, 30 shield, Void Ascension",
+      "-"
+     ]
+    ],
+    "note": "Every sword has a 0.35 second cooldown. Resources are fed with Consume."
+   },
+   {
+    "title": "True HP",
+    "head": [
+     "Tier",
+     "HP",
+     "Damage reduction",
+     "True HP"
+    ],
+    "rows": [
+     [
+      "1",
+      "90",
+      "18%",
+      "110 effective HP"
+     ],
+     [
+      "2",
+      "90",
+      "36%",
+      "141 effective HP"
+     ],
+     [
+      "3",
+      "90",
+      "60%",
+      "225 effective HP"
+     ],
+     [
+      "4",
+      "90 + 30 shield",
+      "76%",
+      "375 effective HP, 500 with shield"
+     ],
+     [
+      "Ascended",
+      "90 + 30 shield",
+      "84%",
+      "562 effective HP, 750 with shield"
+     ],
+     [
+      "Ascended + Void Ascension",
+      "117 + 30 shield",
+      "84%",
+      "731 effective HP, 919 with shield"
+     ]
+    ],
+    "note": "True HP is how much HP you would need to take the same hits with no damage reduction: HP ÷ (1 − reduction). Armor is not included, and the shield is counted with the same reduction."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Consume everything",
+    "text": "Play Void Knight like any other kit, just remember to consume your resources as soon as you get them."
+   },
+   {
+    "title": "Rush the shield",
+    "text": "Once you get the shield upgrade, you are almost unkillable unless someone has emerald armor."
+   },
+   {
+    "title": "Stack more HP",
+    "text": "Try to roll the Forest enchant for even more HP. Void Ascension's extra health works with other HP buffs too, like Star Collector Stella's Vitality Stars."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Kill it early",
+    "text": "Void Knight is really bad early game because of its slow sword speed, so it is easy to kill. Try to get it out of the game before it gets the shield upgrade."
+   },
+   {
+    "title": "Use damage over time",
+    "text": "If it already has the shield, keep ticking its HP down with damage over time, like Fire."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Winterforged Skin",
+    "img": "images/skins/void-knight-winterforged.webp"
+   },
+   {
+    "name": "Pumpkin Skin",
+    "img": "images/skins/void-knight-pumpkin.webp"
+   }
+  ],
+  "bal": "op",
+  "balWhy": "Void Knight is insanely tanky, and you don't have to worry about spending emeralds on gear because you just consume them. Combine Void Ascension's extra HP with other HP buffs like the Forest enchant or Star Collector Stella's Vitality Stars and you are almost unkillable."
  },
  {
   "name": "Void Regent",
