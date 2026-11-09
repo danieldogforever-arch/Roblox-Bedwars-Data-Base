@@ -13109,7 +13109,7 @@
   "diff": "easy",
   "hp": "90",
   "desc": "Feed your Void Corruption with resources and kills to upgrade your gear and unlock your abilities of Void Decay and Shielding. With enough resources, unlock the full power of the Void and become the Ascended Void Knight. Void Knight's base health is reduced by 10%.",
-  "adv": "Void Knight spawns with 90 HP, a Noctium Blade I and the Consume ability. Consume eats 10 resources at a time (0.1 second cooldown), and you level up by consuming resources and dealing sword damage, and every kill counts as 200 damage toward that. Each tier upgrades your blade and gives more damage reduction.\nTier 3 adds Void Decay to your hits, which takes away 10% of the enemy's total HP. Tier 4 gives you a 30 HP shield that fully comes back after 15 seconds of not taking damage.\nThe last upgrade turns you into the Ascended Void Knight: Consume is replaced by Void Ascension, your damage reduction goes up to 84%, and you keep the Noctium Blade IV and the shield. Void Ascension gives you 20% more damage and 30% more health.",
+  "adv": "Void Knight spawns with 90 HP, a Noctium Blade I and the Consume ability. Consume eats 10 resources at a time (0.1 second cooldown), and you level up by consuming resources and dealing sword damage, and every kill counts as 200 damage toward that. Each tier upgrades your blade and gives more damage reduction.\nTier 3 adds Void Decay to your hits: the first hit takes away 10% of the enemy's total HP, and the decay lasts 10 seconds before you need to hit them again. Tier 4 gives you a 30 HP shield that fully comes back after 15 seconds of not taking damage.\nThe last upgrade turns you into the Ascended Void Knight: Consume is replaced by Void Ascension, your damage reduction goes up to 84%, and you keep the Noctium Blade IV and the shield. Void Ascension gives you 20% more damage and 30% more health for 15 seconds, with a 60 second cooldown.",
   "items": [
    {
     "name": "Noctium Blade I",
@@ -13157,7 +13157,8 @@
     "name": "Void Ascension",
     "img": "images/abilities/ability-template.png",
     "note": "Only after the final upgrade",
-    "desc": "Replaces Consume. Gives you 20% more damage and 30% more health (90 → 117 HP).",
+    "desc": "Replaces Consume. Gives you 20% more damage and 30% more health (90 → 117 HP) for 15 seconds.",
+    "cd": 60,
     "nodps": true
    }
   ],
@@ -13207,7 +13208,7 @@
    {
     "name": "Void Decay",
     "when": "Tier 3 and up",
-    "desc": "Your sword hits take away 10% of the enemy's total HP."
+    "desc": "Your first hit takes away 10% of the enemy's total HP. The decay then lasts 10 seconds, and you need to hit them again after that to apply it again."
    },
    {
     "name": "Void Shield",
@@ -13316,7 +13317,7 @@
       "731 effective HP, 919 with shield"
      ]
     ],
-    "note": "True HP is how much HP you would need to take the same hits with no damage reduction: HP ÷ (1 − reduction). Armor is not included, and the shield is counted with the same reduction."
+    "note": "True HP is how much HP you would need to take the same hits with no damage reduction: HP ÷ (1 − reduction). Armor is not included, and the damage reduction also applies to the shield."
    }
   ],
   "strategy": [
