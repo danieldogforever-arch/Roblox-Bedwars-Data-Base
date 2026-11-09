@@ -13109,7 +13109,7 @@
   "diff": "easy",
   "hp": "90",
   "desc": "Feed your Void Corruption with resources and kills to upgrade your gear and unlock your abilities of Void Decay and Shielding. With enough resources, unlock the full power of the Void and become the Ascended Void Knight. Void Knight's base health is reduced by 10%.",
-  "adv": "Void Knight spawns with 90 HP, a Noctium Blade I and the Consume ability. Consume eats 10 resources at a time (0.1 second cooldown), and you level up by consuming resources and dealing sword damage, and every kill counts as 200 damage toward that. Damage to NPCs, like Diamond Guards, only counts 50%. Each tier upgrades your blade and gives more damage reduction.\nTier 3 adds Void Decay to your hits: the first hit takes away 10% of the enemy's total HP, and the decay lasts 10 seconds before you need to hit them again. Tier 4 gives you a 30 HP shield that fully comes back after 15 seconds of not taking damage.\nThe last upgrade turns you into the Ascended Void Knight: Consume is replaced by Void Ascension, your damage reduction goes up to 84%, and you keep the Noctium Blade IV and the shield. Void Ascension gives you 20% more damage and 30% more health for 15 seconds, with a 60 second cooldown.",
+  "adv": "Void Knight spawns with 90 HP, a Noctium Blade I and the Consume ability. Consume eats 10 resources at a time (0.1 second cooldown), and you level up by consuming resources and dealing sword damage, and every kill counts as 200 damage toward that. Damage to NPCs (like Diamond Guards) and any damage that isn't from your sword only counts 50%. Each tier upgrades your blade and gives more damage reduction.\nTier 3 adds Void Decay to your hits: the first hit takes away 10% of the enemy's total HP, and the decay lasts 10 seconds before you need to hit them again. Tier 4 gives you a 30 HP shield that fully comes back after 15 seconds of not taking damage.\nThe last upgrade turns you into the Ascended Void Knight: Consume is replaced by Void Ascension, your damage reduction goes up to 84%, and you keep the Noctium Blade IV and the shield. Void Ascension gives you 20% more damage on everything (not just your sword) and 30% more health for 15 seconds, with a 60 second cooldown.",
   "items": [
    {
     "name": "Noctium Blade I",
@@ -13157,7 +13157,7 @@
     "name": "Void Ascension",
     "img": "images/abilities/ability-template.png",
     "note": "Only after the final upgrade",
-    "desc": "Replaces Consume. Gives you 20% more damage and 30% more health (90 → 117 HP) for 15 seconds.",
+    "desc": "Replaces Consume. Gives you 20% more damage on all your attacks, not just your sword, and 30% more health (90 → 117 HP) for 15 seconds.",
     "cd": 60,
     "nodps": true
    }
@@ -13206,9 +13206,9 @@
     "desc": "A kill counts as 200 damage toward your next upgrade. At Tier 1 you only need 200 damage, so one kill fills the damage requirement right away."
    },
    {
-    "name": "NPC Damage",
-    "when": "Hitting NPCs",
-    "desc": "Damage to NPCs only counts 50% toward your upgrades. Dealing 200 damage to a Diamond Guard gets you halfway to your first upgrade."
+    "name": "Half Progress",
+    "when": "NPCs and non-sword damage",
+    "desc": "Damage to NPCs and any damage that isn't from your sword (bows, other items, abilities) only counts 50% toward your upgrades. Dealing 200 damage to a Diamond Guard gets you halfway to your first upgrade."
    },
    {
     "name": "Void Decay",
