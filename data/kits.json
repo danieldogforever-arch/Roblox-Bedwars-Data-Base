@@ -1137,8 +1137,8 @@
     "name": "Tactical Crossbow",
     "img": "images/items/tactical-crossbow.png",
     "note": "Cost: 6 emeralds",
-    "desc": "Cheaper for Archer. Deals 42.75 damage (64 headshot) with a 1.25 second cooldown.\nBodyshots deal 25.74% more damage than normal, and headshots deal 88.59% more.",
-    "cd": 1.25,
+    "desc": "Cheaper for Archer. Deals 42.75 damage (64 headshot) with a 1.3 second cooldown.\nBodyshots deal 25.74% more damage than normal, and headshots deal 88.59% more.",
+    "cd": 1.3,
     "dmg": 42.75,
     "dmgText": "42.75 (headshot 64)",
     "dpsText": "34.2 - 51.2"
@@ -1147,8 +1147,8 @@
     "name": "Tactical Headhunter",
     "img": "images/items/tactical-headhunter.png",
     "note": "Cost: 21 emeralds",
-    "desc": "Cheaper for Archer. Deals 67.5 damage (101.25 headshot) with a 1.25 second cooldown.\nBodyshots and headshots both deal 22.73% more damage than normal.",
-    "cd": 1.25,
+    "desc": "Cheaper for Archer. Deals 67.5 damage (101.25 headshot) with a 1.3 second cooldown.\nBodyshots and headshots both deal 22.73% more damage than normal.",
+    "cd": 1.3,
     "dmg": 67.5,
     "dmgText": "67.5 (headshot 101.25)",
     "dpsText": "54.0 - 81.0"
@@ -2497,7 +2497,7 @@
     "img": "images/items/featherlight-headhunter.png",
     "note": "Cost: 25 emeralds",
     "desc": "No slowdown while charging. Upgrades the Falcon to tier 3: 20 damage and 250 HP.",
-    "cd": 1.25,
+    "cd": 1.3,
     "dmg": 88,
     "dmgText": "88 (headshot 115.5)",
     "dpsText": "70.4 - 92.4"
@@ -2507,7 +2507,7 @@
     "img": "images/items/featherlight-crossbow.png",
     "note": "Cost: 8 emeralds",
     "desc": "No slowdown while charging. Upgrades the Falcon to tier 2: 18 damage and 200 HP.",
-    "cd": 1.25,
+    "cd": 1.3,
     "dmg": 54.4
    },
    {
