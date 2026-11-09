@@ -169,7 +169,9 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
       <li>Armor: leather 36%, iron 56%, diamond 76%, emerald 84% damage reduction.</li>
       <li>Armor penetration ignores part of the armor. Example: 40 damage on leather does 25.6, or 29.91 with 40% penetration (Ares's Spear).</li>
       <li>Team damage upgrades don't stack: +5%, +10% or +20%, whichever is highest.</li>
-      <li>Still being tested: the team armor upgrade is counted as an extra 10/20/30% damage reduction after armor (it works with no armor too), and damage buffs are multiplied together.</li>
+      <li>The team armor upgrade takes another 10/20/30% off after armor, and it works with no armor too. Armor penetration doesn't affect it. Example: an Iron Sword (30) on leather with +10% does 17.28.</li>
+      <li>Damage buffs multiply together. Example: Noctium Blade IV (47) with the +20% upgrade does 56.4, and 67.68 with Void Ascension on top.</li>
+      <li>Swords have a 0.3 second cooldown, and the crossbow has 1.25 seconds.</li>
       <li>Crit stars and enchants like Fire aren't in yet. Use "Extra damage" for now.</li>
     </ul>
   </div>
@@ -183,8 +185,8 @@ var ARMOR=[{id:"none",name:"None",dr:0,c:"#6c6488"},{id:"leather",name:"Leather"
 var DMGUP=[0,.05,.1,.2], ARMUP=[0,.1,.2,.3];
 var VK=[{t:"1",dr:.18,sh:0},{t:"2",dr:.36,sh:0},{t:"3",dr:.60,sh:0},{t:"4",dr:.76,sh:30},{t:"Ascended",dr:.84,sh:30}];
 var GENERAL=[
- {name:"Wood Sword",dmg:20,c:"#b5703c",t:"sword"},{name:"Stone Sword",dmg:25,c:"#9a9aa6",t:"sword"},{name:"Iron Sword",dmg:30,c:"#e4e7ee",t:"sword"},
- {name:"Diamond Sword",dmg:42,c:"#54e0ff",t:"sword"},{name:"Emerald Sword",dmg:55,c:"#3fe37d",t:"sword"},{name:"Crossbow",dmg:34,c:"#c9a46a",t:"xbow"}];
+ {name:"Wood Sword",dmg:20,cd:.3,img:"images/items/wood-sword.png"},{name:"Stone Sword",dmg:25,cd:.3,img:"images/items/stone-sword.png"},{name:"Iron Sword",dmg:30,cd:.3,img:"images/items/iron-sword.png"},
+ {name:"Diamond Sword",dmg:42,cd:.3,img:"images/items/diamond-sword.png"},{name:"Emerald Sword",dmg:55,cd:.3,img:"images/items/emerald-sword.png"},{name:"Crossbow",dmg:34,cd:1.25,c:"#c9a46a",t:"xbow"}];
 function slug(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
 function fmt(n){ if(!isFinite(n)) return "-"; var r=Math.round(n*100)/100; return r.toLocaleString("en-US",{maximumFractionDigits:2}); }
@@ -196,7 +198,7 @@ var S={ak:"",w:"g:Diamond Sword",head:false,asc:false,du:0,extra:0,pen:null,dk:"
 var $=function(id){return document.getElementById(id);};
 
 function kitByName(n){for(var i=0;i<KITS.length;i++) if(KITS[i].name===n) return KITS[i]; return null;}
-function weaponsFor(kit){ var out=GENERAL.map(function(g){return {id:"g:"+g.name,name:g.name,dmg:g.dmg,g:g};});
+function weaponsFor(kit){ var out=GENERAL.map(function(g){return {id:"g:"+g.name,name:g.name,dmg:g.dmg,cd:g.cd,img:g.img,g:g};});
   var k=kitByName(kit); if(k) (k.w||[]).forEach(function(w){ out.push({id:"k:"+w.name,name:w.name,dmg:w.dmg,cd:w.cd,head:w.head,pen:w.pen,img:w.img,kit:k.name}); });
   return out; }
 function curWeapon(){ var ws=weaponsFor(S.ak); for(var i=0;i<ws.length;i++) if(ws[i].id===S.w) return ws[i]; return ws[4]; }
@@ -208,7 +210,7 @@ function seg(id,items,key){ $(id).innerHTML=items.map(function(it,i){return '<bu
 function renderWeapons(){
   var ws=weaponsFor(S.ak), cur=curWeapon(); S.w=cur.id;
   var gen=ws.filter(function(w){return w.g;}), kw=ws.filter(function(w){return !w.g;});
-  function tile(w){ var ic=w.g?(w.g.t==="sword"?swordSvg(w.g.c):xbowSvg(w.g.c)):'<img src="'+esc(w.img)+'" alt="" loading="lazy">';
+  function tile(w){ var ic=(w.g&&w.g.t==="xbow")?xbowSvg(w.g.c):'<img src="'+esc(w.img)+'" alt="" loading="lazy">';
     return '<button type="button" class="wpn" data-w="'+esc(w.id)+'" aria-pressed="'+(w.id===S.w)+'"><span class="wi">'+ic+'</span><span class="wn">'+esc(w.name)+'</span><span class="wd">'+fmt(w.dmg)+' dmg</span></button>'; }
   var h='<div class="wgrid">'+gen.map(tile).join('')+'</div>';
   if(kw.length) h+='<div class="wsub">'+esc(S.ak)+'\'s items</div><div class="wgrid">'+kw.map(tile).join('')+'</div>';
@@ -295,7 +297,7 @@ function init(){
   seg("dmgup",[{label:"None"},{label:"+5%"},{label:"+10%"},{label:"+20%"}]);
   seg("armup",[{label:"None"},{label:"+10%"},{label:"+20%"},{label:"+30%"}]);
   seg("vktier",VK.map(function(v){return {label:v.t==="Ascended"?"Ascended":"Tier "+v.t};}));
-  seg("armor",ARMOR.map(function(a){return {label:a.name,icon:a.dr?helmSvg(a.c):''};}));
+  seg("armor",ARMOR.map(function(a){return {label:a.name,icon:a.dr?'<img src="images/armor/'+a.id+'.png" alt="" width="24" height="24" style="object-fit:contain">':''};}));
   loadHash();
   $("akit").value=S.ak; $("dkit").value=S.dk;
   if(!kitByName(S.ak)) S.ak=""; if(!kitByName(S.dk)) S.dk="";
