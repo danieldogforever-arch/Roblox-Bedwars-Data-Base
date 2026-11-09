@@ -36,6 +36,7 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
 .seg{display:flex;flex-wrap:wrap;gap:6px}
 .seg button{font:inherit;font-size:.95rem;color:#fff;background:var(--soft);border:2px solid transparent;border-radius:999px;padding:6px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
 .seg button:hover{border-color:rgba(255,255,255,.35)}
+.seg button:disabled{opacity:.35;cursor:not-allowed;border-color:transparent}
 .seg button[aria-pressed=true]{background:#fff;color:#12082e}
 .seg button svg{flex:none}
 .wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px}
@@ -115,7 +116,7 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
       <div id="weapons"></div>
 
       <div id="headWrap" class="hidden"><label class="tog"><input type="checkbox" id="head"><span>Headshot</span><em id="headTxt"></em></label></div>
-      <div id="ascWrap" class="hidden"><label class="tog"><input type="checkbox" id="asc"><span>Void Ascension</span><em>+20% damage</em></label></div>
+      <div id="ascWrap" class="hidden"><label class="tog"><input type="checkbox" id="asc"><span>Void Ascension</span><em>final tier only, +20% damage</em></label></div>
 
       <div class="lab">Team damage upgrade <small>diamond shop</small></div>
       <div class="seg" id="dmgup" data-key="du"></div>
@@ -160,10 +161,10 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
       <div id="vkWrap" class="hidden">
         <div class="lab">Void Knight tier</div>
         <div class="seg" id="vktier" data-key="vt"></div>
-        <label class="tog"><input type="checkbox" id="dasc"><span>Void Ascension active</span><em>+30% HP</em></label>
+        <label class="tog" id="dascWrap"><input type="checkbox" id="dasc"><span>Void Ascension active</span><em>+30% HP</em></label>
       </div>
 
-      <div class="lab">Armor</div>
+      <div class="lab">Armor <small id="armNote"></small></div>
       <div class="seg" id="armor" data-key="ar"></div>
 
       <div class="lab">Team armor upgrade <small>diamond shop</small></div>
@@ -224,6 +225,8 @@ function helmSvg(c){return '<svg width="18" height="18" viewBox="0 0 20 20" aria
 
 var S={ak:"",w:"g:Diamond Sword",head:false,asc:false,du:0,extra:0,pen:null,en:[],cm:0,bhp:10,ss:0,dk:"",vt:4,dasc:false,dfor:false,ar:"iron",au:0,hp:null,sh:null};
 var $=function(id){return document.getElementById(id);};
+var NOARMOR=["Void Knight","Hephaestus","Eldertree"];
+function tArm(){ return NOARMOR.indexOf(S.dk)>=0?"none":S.ar; }
 function has(id){ return S.en.indexOf(id)>=0; }
 
 function kitByName(n){for(var i=0;i<KITS.length;i++) if(KITS[i].name===n) return KITS[i]; return null;}
@@ -261,7 +264,7 @@ function compute(){
   if(has("berserker")){ berB=(105-bh)/300; d*=1+berB; out.push({x:"Berserker at "+fmt(bh)+" HP +"+fmt(berB*100)+"%",v:fmt(d),c:"up"}); }
   var raw=d;
   var pen=S.pen==null?(w.pen||0):S.pen; pen=Math.max(0,Math.min(100,+pen||0))/100;
-  var arm=ARMOR.filter(function(a){return a.id===S.ar;})[0]||ARMOR[0];
+  var arm=ARMOR.filter(function(a){return a.id===tArm();})[0]||ARMOR[0];
   function armMult(p){ if(!arm.dr) return 1; var r=arm.dr/(1-arm.dr); return 1/(1+r*(1-p)); }
   var am=armMult(pen); d*=am;
   if(arm.dr) out.push({x:arm.name+" armor"+(pen?" ("+fmt(pen*100)+"% pen)":"")+" -"+fmt((1-am)*100)+"%",v:fmt(d),c:"down"});
@@ -325,7 +328,8 @@ function render(){
   $("ench").querySelectorAll("button").forEach(function(b){ var id=ENCH[+b.getAttribute("data-v")].id; b.setAttribute("aria-pressed", id==="none"?!S.en.length:has(id)); });
   $("dfor").checked=!!S.dfor;
   // target
-  var vkOn=S.dk==="Void Knight"; $("vkWrap").classList.toggle("hidden",!vkOn); $("dasc").checked=!!S.dasc;
+  var vkOn=S.dk==="Void Knight"; if(S.vt!==4) S.dasc=false; $("vkWrap").classList.toggle("hidden",!vkOn); $("dascWrap").classList.toggle("hidden",S.vt!==4); $("dasc").checked=!!S.dasc;
+  var noArm=NOARMOR.indexOf(S.dk)>=0; $("armNote").textContent=noArm?S.dk+" can't buy armor":""; $("armor").querySelectorAll("button").forEach(function(b){ b.disabled=noArm && b.getAttribute("data-v")!=="0"; });
   var dk=kitByName(S.dk), baseHp=dk?+dk.hp:100;
   if(vkOn && S.dasc) baseHp=Math.round(baseHp*1.3*100)/100;
   if(S.dfor) baseHp=Math.round(baseHp*1.1*100)/100;
@@ -333,7 +337,7 @@ function render(){
   setVal("hp",S.hp==null?baseHp:S.hp);
   setVal("shield",S.sh==null?autoSh:S.sh);
   $("hpSrc").textContent=S.hp==null?((dk?dk.name+"'s HP":"default")+(vkOn&&S.dasc?" with Void Ascension":"")+(S.dfor?" with Forest":"")):"custom";
-  var segs={dmgup:S.du,armup:S.au,vktier:S.vt,critm:S.cm,armor:ARMOR.map(function(a){return a.id;}).indexOf(S.ar)};
+  var segs={dmgup:S.du,armup:S.au,vktier:S.vt,critm:S.cm,armor:ARMOR.map(function(a){return a.id;}).indexOf(tArm())};
   Object.keys(segs).forEach(function(id){ $(id).querySelectorAll("button").forEach(function(b){ b.setAttribute("aria-pressed", +b.getAttribute("data-v")===segs[id]); }); });
   // results
   var hpv=S.hp==null?baseHp:S.hp, shv=S.sh==null?autoSh:S.sh; 
