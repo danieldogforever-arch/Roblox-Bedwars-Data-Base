@@ -13139,7 +13139,7 @@
     "name": "Noctium Blade IV",
     "img": "images/items/noctium-blade-4.png",
     "note": "Tier 4, and stays your sword after you Ascend",
-    "desc": "Deals 47 damage with a 0.35 second cooldown. Hits apply Void Decay.",
+    "desc": "Deals 47 damage with a 0.35 second cooldown. Hits apply Void Decay. Deals 56.4 damage while Void Ascension is active.",
     "cd": 0.35,
     "dmg": 47
    }
@@ -13268,7 +13268,7 @@
      [
       "Ascended",
       "img:images/items/noctium-blade-4.png|Blade IV",
-      "47",
+      "47 (56.4 with Void Ascension)",
       "84%",
       "Void Decay, 30 shield, Void Ascension",
       "-"
