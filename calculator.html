@@ -86,6 +86,10 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
 .note h3{color:#fff;margin:0 0 6px;font-size:1.1rem}
 .note ul{margin:6px 0 0;padding-left:20px}
 .note li{margin:3px 0}
+.ench button{padding:5px 11px 5px 6px}
+.ench button img{width:26px;height:26px;object-fit:contain}
+.edesc{color:var(--muted);font-size:.9rem;margin:8px 0 0;min-height:1em}
+.tog img{flex:none}
 .mini{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:20;display:none;justify-content:center;gap:14px;align-items:baseline;background:rgba(18,8,48,.96);border:3px solid #fff;border-radius:16px;padding:10px 14px;box-shadow:0 8px 24px rgba(0,0,0,.5)}
 .mini b{font-size:1.5rem}.mini span{color:var(--muted);font-size:.9rem}
 .mini.show{display:flex}
@@ -121,6 +125,12 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
 
       <div class="lab">Armor penetration</div>
       <div class="numrow"><input type="number" id="pen" min="0" max="100" step="1" value="0" inputmode="decimal"><span>% <span id="penSrc"></span></span></div>
+
+      <div class="lab">Enchant</div>
+      <div class="seg ench" id="ench"></div>
+      <p class="edesc" id="edesc"></p>
+      <div id="critWrap" class="hidden"><div class="lab">Count crits as</div><div class="seg" id="critm"></div></div>
+      <div id="berWrap" class="hidden"><div class="lab">Your HP <small>Berserker works under 25 HP</small></div><div class="numrow"><input type="number" id="bhp" min="1" max="24" step="1" value="10" inputmode="decimal"><span>HP</span></div></div>
     </section>
 
     <div class="mid">
@@ -129,12 +139,12 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
         <div class="big" id="rDmg">0</div>
         <div class="rsub" id="rSub"></div>
         <div class="hpbar" id="hpbar" aria-hidden="true"></div>
-        <div class="hpkey"><span><b style="background:var(--hp)"></b>HP</span><span id="shKey"><b style="background:var(--shield)"></b>Shield</span><span>1 block = 1 hit</span></div>
+        <div class="hpkey"><span><b style="background:var(--hp)"></b>HP</span><span id="shKey"><b style="background:var(--shield)"></b>Shield</span><span id="blkKey">1 block = 1 hit</span></div>
       </div>
       <div class="tiles">
         <div class="tile"><div class="tv" id="rHits">0</div><div class="tl">Hits to kill</div></div>
         <div class="tile"><div class="tv" id="rTrue">0</div><div class="tl">Target's true HP</div></div>
-        <div class="tile"><div class="tv" id="rDps">-</div><div class="tl">Damage per second</div></div>
+        <div class="tile"><div class="tv" id="rDps">-</div><div class="tl" id="rDpsL">Damage per second</div></div>
         <div class="tile"><div class="tv" id="rTtk">-</div><div class="tl">Time to kill</div></div>
       </div>
       <div class="steps"><h3>How it adds up</h3><div id="steps"></div></div>
@@ -158,6 +168,8 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
       <div class="lab">Team armor upgrade <small>diamond shop</small></div>
       <div class="seg" id="armup" data-key="au"></div>
 
+      <label class="tog"><input type="checkbox" id="dfor"><img src="images/enchants/forest.png" alt="" width="26" height="26"><span>Forest enchant</span><em>+10% HP</em></label>
+
       <div class="lab">HP <small id="hpSrc"></small></div>
       <div class="numrow"><input type="number" id="hp" min="1" max="1000" step="1" value="100" inputmode="decimal"><span>+</span><input type="number" id="shield" min="0" max="500" step="1" value="0" inputmode="decimal"><span>shield</span></div>
     </section>
@@ -172,7 +184,10 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
       <li>The team armor upgrade takes another 10/20/30% off after armor, and it works with no armor too. Armor penetration doesn't affect it. Example: an Iron Sword (30) on leather with +10% does 17.28.</li>
       <li>Damage buffs multiply together. Example: Noctium Blade IV (47) with the +20% upgrade does 56.4, and 67.68 with Void Ascension on top.</li>
       <li>Swords have a 0.3 second cooldown, and the crossbow has 1.25 seconds.</li>
-      <li>Crit stars and enchants like Fire aren't in yet. Use "Extra damage" for now.</li>
+      <li>With an enchant, hits to kill and time to kill come from simulating the fight: you swing as fast as your weapon allows, and Fire, Static and Soul Reaver tick in between. Each block in the bar is everything dealt from one hit to the next.</li>
+      <li>Critical Strike: 20-45% more damage in whole percents. "Average" uses a 40% crit chance and a 32.5% average bonus.</li>
+      <li>Berserker (under 25 HP): about 35% more damage at 0 HP, 1% less for every 3 HP you have. It heals about half the bonus damage.</li>
+      <li>Crit stars aren't in yet. Use "Extra damage" for now.</li>
     </ul>
   </div>
   <div class="mini" id="mini" aria-hidden="true"><b id="mDmg"></b><span>per hit</span><b id="mHits"></b><span>hits to kill</span></div>
@@ -183,6 +198,16 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
 var KITS=[{"name":"Abaddon","img":"images/kits/abaddon.webp","hp":"100","w":[{"name":"Scarab Upgrade 1","img":"images/items/scarab-upgrade-1.png","dmg":4,"cd":0.5},{"name":"Scarab Upgrade 2","img":"images/items/scarab-upgrade-2.png","dmg":6,"cd":0.5},{"name":"Scarab Upgrade 3","img":"images/items/scarab-upgrade-3.png","dmg":8,"cd":0.5}]},{"name":"Adetunde","img":"images/kits/adetunde.webp","hp":"100","w":[{"name":"Frosty Hammer","img":"images/items/frosty-hammer.png","dmg":23,"cd":0.35},{"name":"Arctic Slam","img":"images/abilities/ability-template.png","dmg":90,"pen":10}]},{"name":"Aery","img":"images/kits/aery.webp","hp":"90"},{"name":"Agni","img":"images/kits/agni.webp","hp":"100","w":[{"name":"Cluster Bomb","img":"images/items/cluster-bomb.png","dmg":16.5},{"name":"Rocket Boost","img":"images/abilities/ability-template.png","dmg":12}]},{"name":"Alchemist","img":"images/kits/alchemist.webp","hp":"100","w":[{"name":"Poison Splash Potion","img":"images/items/poison-potion.png","dmg":6,"cd":0.525,"pen":80}]},{"name":"Arachne","img":"images/kits/arachne.webp","hp":"100","w":[{"name":"Spider Summon","img":"images/abilities/ability-template.png","dmg":4}]},{"name":"Archer","img":"images/kits/archer.webp","hp":"100","w":[{"name":"Bow","img":"images/items/bow.png","dmg":20,"cd":0.625,"head":15.0},{"name":"Tactical Crossbow","img":"images/items/tactical-crossbow.png","dmg":42.75,"cd":1.25,"head":64.0},{"name":"Tactical Headhunter","img":"images/items/tactical-headhunter.png","dmg":67.5,"cd":1.25,"head":101.25}]},{"name":"Ares","img":"images/kits/ares.webp","hp":"100","w":[{"name":"Spear","img":"images/items/spear.png","dmg":40,"cd":0.75,"pen":40}]},{"name":"Axolotl Amy","img":"images/kits/axolotl-amy.webp","hp":"100"},{"name":"Baker","img":"images/kits/baker.webp","hp":"100"},{"name":"Barbarian","img":"images/kits/barbarian.webp","hp":"100","w":[{"name":"Rageblade","img":"images/items/rageblade.png","dmg":70,"cd":0.25}]},{"name":"Beekeeper Beatrix","img":"images/kits/beekeeper-beatrix.webp","hp":"100"},{"name":"Bekzat","img":"images/kits/bekzat.webp","hp":"100","w":[{"name":"Featherlight Headhunter","img":"images/items/featherlight-headhunter.png","dmg":88,"cd":1.25,"head":115.5},{"name":"Featherlight Crossbow","img":"images/items/featherlight-crossbow.png","dmg":54.4,"cd":1.25},{"name":"Featherlight Bow","img":"images/items/featherlight-bow.png","dmg":28.8,"cd":0.625}]},{"name":"Bounty Hunter","img":"images/kits/bounty-hunter.webp","hp":"100"},{"name":"Builder","img":"images/kits/builder.webp","hp":"100"},{"name":"Caitlyn","img":"images/kits/caitlyn.webp","hp":"100"},{"name":"Cobalt","img":"images/kits/cobalt.webp","hp":"100"},{"name":"Cogsworth","img":"images/kits/cogsworth.webp","hp":"100"},{"name":"Conqueror","img":"images/kits/conqueror.webp","hp":"100"},{"name":"Crocowolf","img":"images/kits/crocowolf.webp","hp":"100"},{"name":"Crypt","img":"images/kits/crypt.webp","hp":"100"},{"name":"Cyber","img":"images/kits/cyber.webp","hp":"100"},{"name":"Death Adder","img":"images/kits/death-adder.webp","hp":"100"},{"name":"Dino Tamer Dom","img":"images/kits/dino-tamer-dom.webp","hp":"100"},{"name":"Drill","img":"images/kits/drill.webp","hp":"100"},{"name":"Eldertree","img":"images/kits/eldertree.webp","hp":"100"},{"name":"Eldric","img":"images/kits/eldric.webp","hp":"100"},{"name":"Elektra","img":"images/kits/elektra.webp","hp":"100"},{"name":"Ember","img":"images/kits/ember.webp","hp":"100"},{"name":"Evelynn","img":"images/kits/evelynn.webp","hp":"100"},{"name":"Farmer Cletus","img":"images/kits/farmer-cletus.webp","hp":"100"},{"name":"Fisherman","img":"images/kits/fisherman.webp","hp":"100"},{"name":"Flora","img":"images/kits/flora.webp","hp":"100"},{"name":"Fortuna","img":"images/kits/fortuna.webp","hp":"100"},{"name":"Freiya","img":"images/kits/freiya.webp","hp":"100"},{"name":"Frosty","img":"images/kits/frosty.webp","hp":"100"},{"name":"Gingerbread Man","img":"images/kits/gingerbread-man.webp","hp":"100"},{"name":"Gompy","img":"images/kits/gompy.webp","hp":"100"},{"name":"Gregory","img":"images/kits/gregory.webp","hp":"100"},{"name":"Grim Reaper","img":"images/kits/grim-reaper.webp","hp":"100"},{"name":"Grove","img":"images/kits/grove.webp","hp":"100"},{"name":"Hannah","img":"images/kits/hannah.webp","hp":"90"},{"name":"Hephaestus","img":"images/kits/hephaestus.webp","hp":"30"},{"name":"Ignis","img":"images/kits/ignis.webp","hp":"100"},{"name":"Infernal Shielder","img":"images/kits/infernal-shielder.webp","hp":"100"},{"name":"Isabel","img":"images/kits/isabel.webp","hp":"100"},{"name":"Jack","img":"images/kits/jack.webp","hp":"100"},{"name":"Jade","img":"images/kits/jade.webp","hp":"100"},{"name":"Kaida","img":"images/kits/kaida.webp","hp":"100"},{"name":"Kaliyah","img":"images/kits/kaliyah.webp","hp":"100"},{"name":"Krystal","img":"images/kits/krystal.webp","hp":"100"},{"name":"Lani","img":"images/kits/lani.webp","hp":"100"},{"name":"Lassy","img":"images/kits/lassy.webp","hp":"100"},{"name":"Lian","img":"images/kits/lian.webp","hp":"100"},{"name":"Lucía","img":"images/kits/lucia.webp","hp":"100"},{"name":"Lumen","img":"images/kits/lumen.webp","hp":"100"},{"name":"Lyla","img":"images/kits/lyla.webp","hp":"100"},{"name":"Marcel","img":"images/kits/marcel.webp","hp":"100"},{"name":"Marina","img":"images/kits/marina.webp","hp":"100"},{"name":"Marrow","img":"images/kits/marrow.webp","hp":"100"},{"name":"Martin","img":"images/kits/martin.webp","hp":"100"},{"name":"Melody","img":"images/kits/melody.webp","hp":"100"},{"name":"Merchant Marco","img":"images/kits/merchant-marco.webp","hp":"100"},{"name":"Metal Detector","img":"images/kits/metal-detector.webp","hp":"100"},{"name":"Milo","img":"images/kits/milo.webp","hp":"100"},{"name":"Miner","img":"images/kits/miner.webp","hp":"100"},{"name":"Nahla","img":"images/kits/nahla.webp","hp":"100"},{"name":"Nazar","img":"images/kits/nazar.webp","hp":"100"},{"name":"Noelle","img":"images/kits/noelle.webp","hp":"100"},{"name":"Nyoka","img":"images/kits/nyoka.webp","hp":"100"},{"name":"Nyx","img":"images/kits/nyx.webp","hp":"100"},{"name":"Pirate Davey","img":"images/kits/pirate-davey.webp","hp":"100"},{"name":"Pyro","img":"images/kits/pyro.webp","hp":"100"},{"name":"Ragnar","img":"images/kits/ragnar.webp","hp":"100"},{"name":"Ramil","img":"images/kits/ramil.webp","hp":"100"},{"name":"Raven","img":"images/kits/raven.webp","hp":"100"},{"name":"Santa","img":"images/kits/santa.webp","hp":"100"},{"name":"Sheep Herder","img":"images/kits/sheep-herder.webp","hp":"100"},{"name":"Sheila","img":"images/kits/sheila.webp","hp":"100"},{"name":"Sigrid","img":"images/kits/sigrid.webp","hp":"100"},{"name":"Silas","img":"images/kits/silas.webp","hp":"100"},{"name":"Skoll","img":"images/kits/skoll.webp","hp":"100"},{"name":"Smoke","img":"images/kits/smoke.webp","hp":"100"},{"name":"Sophia","img":"images/kits/sophia.webp","hp":"100"},{"name":"Spirit Catcher","img":"images/kits/spirit-catcher.webp","hp":"100"},{"name":"Star Collector Stella","img":"images/kits/star-collector-stella.webp","hp":"100"},{"name":"Styx","img":"images/kits/styx.webp","hp":"100"},{"name":"Taliyah","img":"images/kits/taliyah.webp","hp":"100"},{"name":"Terra","img":"images/kits/terra.webp","hp":"100"},{"name":"Trapper","img":"images/kits/trapper.webp","hp":"100"},{"name":"Trinity","img":"images/kits/trinity.webp","hp":"100"},{"name":"Triton","img":"images/kits/triton.webp","hp":"100"},{"name":"Trixie","img":"images/kits/trixie.webp","hp":"100"},{"name":"Uma","img":"images/kits/uma.webp","hp":"100"},{"name":"Umbra","img":"images/kits/umbra.webp","hp":"100"},{"name":"Umeko","img":"images/kits/umeko.webp","hp":"100"},{"name":"Vanessa","img":"images/kits/vanessa.webp","hp":"100"},{"name":"Void Knight","img":"images/kits/void-knight.webp","hp":"90","w":[{"name":"Noctium Blade I","img":"images/items/noctium-blade-1.png","dmg":22,"cd":0.35},{"name":"Noctium Blade II","img":"images/items/noctium-blade-2.png","dmg":27,"cd":0.35},{"name":"Noctium Blade III","img":"images/items/noctium-blade-3.png","dmg":33,"cd":0.35},{"name":"Noctium Blade IV","img":"images/items/noctium-blade-4.png","dmg":47,"cd":0.35}]},{"name":"Void Regent","img":"images/kits/void-regent.webp","hp":"100"},{"name":"Vulcan","img":"images/kits/vulcan.webp","hp":"100"},{"name":"Warden","img":"images/kits/warden.webp","hp":"100"},{"name":"Warrior","img":"images/kits/warrior.webp","hp":"100"},{"name":"Whim","img":"images/kits/whim.webp","hp":"100"},{"name":"Whisper","img":"images/kits/whisper.webp","hp":"100"},{"name":"Wren","img":"images/kits/wren.webp","hp":"100"},{"name":"Xu'rot","img":"images/kits/xu-rot.webp","hp":"100"},{"name":"Yamini","img":"images/kits/yamini.webp","hp":"100"},{"name":"Yeti","img":"images/kits/yeti.webp","hp":"100"},{"name":"Yuzi","img":"images/kits/yuzi.webp","hp":"100"},{"name":"Zarrah","img":"images/kits/zarrah.webp","hp":"100"},{"name":"Zenith","img":"images/kits/zenith.webp","hp":"100"},{"name":"Zeno","img":"images/kits/zeno.webp","hp":"100"},{"name":"Zephyr","img":"images/kits/zephyr.webp","hp":"100"},{"name":"Zola","img":"images/kits/zola.webp","hp":"100"}];
 var ARMOR=[{id:"none",name:"None",dr:0,c:"#6c6488"},{id:"leather",name:"Leather",dr:.36,c:"#b5703c"},{id:"iron",name:"Iron",dr:.56,c:"#d9dde6"},{id:"diamond",name:"Diamond",dr:.76,c:"#54e0ff"},{id:"emerald",name:"Emerald",dr:.84,c:"#3fe37d"}];
 var DMGUP=[0,.05,.1,.2], ARMUP=[0,.1,.2,.3];
+var ENCH=[{id:"none",name:"None",d:"No enchant."},
+ {id:"fire",name:"Fire",img:"fire",d:"Sets the enemy on fire: a tick every second for 3 seconds after your last hit. Each hit in a row makes it stronger: 3, 5, 8, then 10 per tick. No armor penetration."},
+ {id:"forest",name:"Forest",img:"forest",d:"A seed appears over enemies. Hitting it deals 11 extra damage and heals you (2 HP with a sword, 1 with projectiles). It comes back after 45 seconds. Also gives you 10% more max HP."},
+ {id:"static",name:"Static",img:"static",d:"5 extra damage to the enemy and everyone within 10 blocks, once per second. Each proc adds a lightning charge (hit again within 4 seconds). At 3 charges it deals 15 extra in a 3x3 area. No armor penetration."},
+ {id:"crit",name:"Critical Strike",img:"critical-strike",d:"Hits have a chance to deal 20-45% more damage."},
+ {id:"execute",name:"Execute",img:"execute",d:"Curses the enemy for 10 seconds. If your next hit leaves them under 12% HP, they die. Each extra hit raises it by 2%, up to 18%."},
+ {id:"berserker",name:"Berserker",img:"berserker",d:"Under 25 HP, your hits deal extra damage and heal you. The lower your HP, the bigger the bonus."},
+ {id:"soul",name:"Soul Reaver",img:"soul-reaver",d:"A soul aura deals 6 damage every 0.5 seconds with 100% armor penetration. Each kill adds a stack and makes the aura stronger."}];
+var CRITM=[{label:"Average"},{label:"Max crit"},{label:"No crit"}];
+var FIRE=[3,5,8,10];
 var VK=[{t:"1",dr:.18,sh:0},{t:"2",dr:.36,sh:0},{t:"3",dr:.60,sh:0},{t:"4",dr:.76,sh:30},{t:"Ascended",dr:.84,sh:30}];
 var GENERAL=[
  {name:"Wood Sword",dmg:20,cd:.3,img:"images/items/wood-sword.png"},{name:"Stone Sword",dmg:25,cd:.3,img:"images/items/stone-sword.png"},{name:"Iron Sword",dmg:30,cd:.3,img:"images/items/iron-sword.png"},
@@ -194,7 +219,7 @@ function swordSvg(c){return '<svg width="36" height="36" viewBox="0 0 32 32" ari
 function xbowSvg(c){return '<svg width="36" height="36" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 9c6-6 18-6 24 0" fill="none" stroke="'+c+'" stroke-width="3" stroke-linecap="round"/><path d="M5 9l11 7 11-7" fill="none" stroke="#fff" stroke-width="1.2"/><rect x="14.5" y="8" width="3" height="20" rx="1.2" fill="#7a4b2a" stroke="#12082e"/><path d="M16 2l2.5 5h-5z" fill="#e4e7ee"/></svg>';}
 function helmSvg(c){return '<svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 11a7 7 0 0114 0v5h-4v-4H7v4H3z" fill="'+c+'" stroke="#12082e" stroke-width="1.4" stroke-linejoin="round"/></svg>';}
 
-var S={ak:"",w:"g:Diamond Sword",head:false,asc:false,du:0,extra:0,pen:null,dk:"",vt:4,dasc:false,ar:"iron",au:0,hp:null,sh:null};
+var S={ak:"",w:"g:Diamond Sword",head:false,asc:false,du:0,extra:0,pen:null,en:"none",cm:0,bhp:10,dk:"",vt:4,dasc:false,dfor:false,ar:"iron",au:0,hp:null,sh:null};
 var $=function(id){return document.getElementById(id);};
 
 function kitByName(n){for(var i=0;i<KITS.length;i++) if(KITS[i].name===n) return KITS[i]; return null;}
@@ -227,6 +252,9 @@ function compute(){
   if(DMGUP[S.du]){ d*=1+DMGUP[S.du]; out.push({x:"Team upgrade +"+DMGUP[S.du]*100+"%",v:fmt(d),c:"up"}); }
   if(asc){ d*=1.2; out.push({x:"Void Ascension +20%",v:fmt(d),c:"up"}); }
   var ex=+S.extra||0; if(ex){ d*=1+ex/100; out.push({x:"Extra damage +"+fmt(ex)+"%",v:fmt(d),c:"up"}); }
+  var en=S.en, berB=0, bh=Math.max(1,Math.min(24,+S.bhp||1));
+  if(en==="crit"){ var cm=[1+.4*.325,1.45,1][S.cm]; if(cm>1){ d*=cm; out.push({x:S.cm===0?"Crit, average +13%":"Max crit +45%",v:fmt(d),c:"up"}); } }
+  if(en==="berserker"){ berB=(105-bh)/300; d*=1+berB; out.push({x:"Berserker at "+fmt(bh)+" HP +"+fmt(berB*100)+"%",v:fmt(d),c:"up"}); }
   var raw=d;
   var pen=S.pen==null?(w.pen||0):S.pen; pen=Math.max(0,Math.min(100,+pen||0))/100;
   var arm=ARMOR.filter(function(a){return a.id===S.ar;})[0]||ARMOR[0];
@@ -238,10 +266,42 @@ function compute(){
   if(kd){ d*=1-kd; out.push({x:"Void Knight tier "+vk.t+" -"+Math.round(kd*100)+"%",v:fmt(d),c:"down"}); }
   var hp=+S.hp||1, sh=+S.sh||0, tot=hp+sh;
   var hits=d>0?Math.ceil(tot/d - 1e-9):Infinity;
-  var redNoPen=armMult(0)*(1-au)*(1-kd);
+  var redNoPen=armMult(0)*(1-au)*(1-kd), redHit=am*(1-au)*(1-kd), redFull=(1-au)*(1-kd);
   var trueHp=tot/redNoPen;
-  var cd=w.cd;
-  return {d:d,raw:raw,steps:out,hp:hp,sh:sh,tot:tot,hits:hits,trueHp:trueHp,dps:cd?d/cd:null,ttk:cd&&isFinite(hits)?(hits-1)*cd:null,cd:cd,pen:pen,w:w};
+  var cd=w.cd, sim=null;
+  if(en==="forest") out.push({x:"Forest seed: +11 on the first hit (every 45s)",v:"+"+fmt(11*redHit),c:"up"});
+  if(en==="static") out.push({x:"Static: +5 once per second, +15 on every 3rd charge",v:"+"+fmt(5*redNoPen),c:"up"});
+  if(en==="fire") out.push({x:"Fire: 3 / 5 / 8 / 10 per second",v:fmt(10*redNoPen)+"/s",c:"up"});
+  if(en==="soul") out.push({x:"Soul Reaver aura: 6 every 0.5s, ignores armor",v:fmt(12*redFull)+"/s",c:"up"});
+  if(en==="execute") out.push({x:"Execute: kills under 12-18% HP",v:fmt(tot*.12)+"-"+fmt(tot*.18)+" HP",c:"up"});
+  if(en==="berserker") out.push({x:"Berserker heal per hit",v:"~"+fmt(berB*raw/(1+berB)*.5)+" HP",c:"up"});
+  if(cd && en!=="none" && en!=="crit" && en!=="berserker") sim=simulate();
+  function simulate(){
+    var left=tot, t=0, n=0, ev=[], segs=[], cur=0, lastProc=-9, charges=0, killT=null;
+    var tEnd=600, nextSeed=0, nextHit=0, nextFire=1, nextSoul=0.5;
+    function deal(x){ left-=x; cur+=x; }
+    while(t<=tEnd){
+      var tn=Math.min(nextHit, en==="fire"&&n>0?nextFire:Infinity, en==="soul"&&n>0?nextSoul:Infinity);
+      t=tn;
+      if(t===nextHit){
+        if(n>0){ segs.push(cur); cur=0; }
+        n++; var x=raw;
+        if(en==="forest" && t>=nextSeed-1e-9){ x+=11; nextSeed=t+45; }
+        x*=redHit;
+        if(en==="execute" && n>=2){ var thr=.12+.02*Math.min(n-2,3); if(left-x<thr*tot){ x=left; } }
+        deal(x);
+        if(en==="static" && t-lastProc>=1-1e-9){ lastProc=t; charges++; deal(5*redNoPen); if(charges===3){ deal(15*redNoPen); charges=0; } }
+        if(en==="fire" && n===1) nextFire=t+1;
+        if(en==="soul" && n===1) nextSoul=t+.5;
+        nextHit=t+cd;
+      } else if(en==="fire" && t===nextFire){ deal(FIRE[Math.min(n,4)-1]*redNoPen); nextFire=t+1; }
+      else if(en==="soul" && t===nextSoul){ deal(6*redFull); nextSoul=t+.5; }
+      if(left<=1e-9){ killT=t; break; }
+    }
+    if(cur>0) segs.push(cur);
+    return {hits:n,ttk:killT,segs:segs};
+  }
+  return {d:d,raw:raw,steps:out,hp:hp,sh:sh,tot:tot,hits:sim?sim.hits:hits,trueHp:trueHp,dps:cd?(sim&&sim.ttk?tot/sim.ttk:d/cd):null,ttk:sim?sim.ttk:(cd&&isFinite(hits)?(hits-1)*cd:null),cd:cd,pen:pen,w:w,sim:sim};
 }
 
 function setVal(id,v){ var el=$(id); if(document.activeElement!==el) el.value=v; }
@@ -255,15 +315,19 @@ function render(){
   setVal("pen",S.pen==null?(w.pen||0):S.pen);
   $("penSrc").textContent=S.pen==null?(w.pen?"from "+w.name:""):"custom";
   setVal("extra",S.extra);
+  var E=ENCH.filter(function(e){return e.id===S.en;})[0]||ENCH[0];
+  $("edesc").textContent=E.d; $("critWrap").classList.toggle("hidden",S.en!=="crit"); $("berWrap").classList.toggle("hidden",S.en!=="berserker"); setVal("bhp",S.bhp);
+  $("dfor").checked=!!S.dfor;
   // target
   var vkOn=S.dk==="Void Knight"; $("vkWrap").classList.toggle("hidden",!vkOn); $("dasc").checked=!!S.dasc;
   var dk=kitByName(S.dk), baseHp=dk?+dk.hp:100;
   if(vkOn && S.dasc) baseHp=Math.round(baseHp*1.3*100)/100;
+  if(S.dfor) baseHp=Math.round(baseHp*1.1*100)/100;
   var autoSh=vkOn?(VK[S.vt]||VK[0]).sh:0;
   setVal("hp",S.hp==null?baseHp:S.hp);
   setVal("shield",S.sh==null?autoSh:S.sh);
-  $("hpSrc").textContent=S.hp==null?(dk?dk.name+"'s HP"+(vkOn&&S.dasc?" with Void Ascension":""):"default"):"custom";
-  var segs={dmgup:S.du,armup:S.au,vktier:S.vt,armor:ARMOR.map(function(a){return a.id;}).indexOf(S.ar)};
+  $("hpSrc").textContent=S.hp==null?((dk?dk.name+"'s HP":"default")+(vkOn&&S.dasc?" with Void Ascension":"")+(S.dfor?" with Forest":"")):"custom";
+  var segs={dmgup:S.du,armup:S.au,vktier:S.vt,critm:S.cm,ench:ENCH.map(function(e){return e.id;}).indexOf(S.en),armor:ARMOR.map(function(a){return a.id;}).indexOf(S.ar)};
   Object.keys(segs).forEach(function(id){ $(id).querySelectorAll("button").forEach(function(b){ b.setAttribute("aria-pressed", +b.getAttribute("data-v")===segs[id]); }); });
   // results
   var hpv=S.hp==null?baseHp:S.hp, shv=S.sh==null?autoSh:S.sh; 
@@ -272,25 +336,25 @@ function render(){
   $("rSub").textContent=r.raw!==r.d?"from "+fmt(r.raw)+" before armor":"no armor";
   $("rHits").textContent=isFinite(r.hits)?r.hits:"-";
   $("rTrue").textContent=fmt(r.trueHp);
-  $("rDps").textContent=r.dps?fmt(r.dps):"-";
+  $("rDps").textContent=r.dps?fmt(r.dps):"-"; $("rDpsL").textContent=r.sim?"Damage per second (fight)":"Damage per second";
   $("rTtk").textContent=r.ttk!=null?fmt(r.ttk)+"s":"-";
   $("steps").innerHTML=r.steps.map(function(s){return '<div class="step '+(s.c||'')+'"><span class="sx">'+esc(s.x)+'</span><span class="sv">'+s.v+'</span></div>';}).join('')+
     '<div class="step"><span class="sx">Target HP</span><span class="sv">'+fmt(r.hp)+(r.sh?' + '+fmt(r.sh)+' shield':'')+'</span></div>'+
     (r.cd?'':'<div class="step"><span class="sx">No cooldown data for this weapon yet</span><span class="sv"></span></div>');
   // hp bar: each segment = one hit
-  var bar='', n=isFinite(r.hits)?r.hits:0, cap=Math.min(n,60);
-  if(cap){ for(var i=0;i<cap;i++){ var start=i*r.d, end=Math.min(r.tot,(i+1)*r.d), seg=end-start; if(cap<n&&i===cap-1) seg=r.tot-start;
+  var bar='', n=isFinite(r.hits)?r.hits:0, cap=Math.min(n,60), acc=0;
+  if(cap){ for(var i=0;i<cap;i++){ var dd=r.sim?r.sim.segs[i]||0:r.d; var start=acc, end=Math.min(r.tot,acc+dd), seg=end-start; acc=end; if(cap<n&&i===cap-1){ seg=r.tot-start; end=r.tot; }
       var shPart=Math.max(0,Math.min(end,r.sh)-start);
       if(shPart>0) bar+='<i class="sh" style="flex:'+shPart+'"></i>';
       if(seg-shPart>0) bar+='<i style="flex:'+(seg-shPart)+'"></i>'; } }
-  $("hpbar").innerHTML=bar; $("shKey").style.display=r.sh?"":"none";
+  $("hpbar").innerHTML=bar; $("shKey").style.display=r.sh?"":"none"; $("blkKey").textContent=r.sim?"1 block = 1 hit + extras":"1 block = 1 hit";
   saveHash();
 }
-function saveHash(){ var p=[]; ["ak","w","du","extra","pen","dk","vt","ar","au","hp","sh"].forEach(function(k){ if(S[k]!=null&&S[k]!==""&&S[k]!==0) p.push(k+"="+encodeURIComponent(S[k])); });
-  ["head","asc","dasc"].forEach(function(k){ if(S[k]) p.push(k+"=1"); });
+function saveHash(){ var p=[]; ["ak","w","du","extra","pen","en","cm","bhp","dk","vt","ar","au","hp","sh"].forEach(function(k){ if(S[k]!=null&&S[k]!==""&&S[k]!==0) p.push(k+"="+encodeURIComponent(S[k])); });
+  ["head","asc","dasc","dfor"].forEach(function(k){ if(S[k]) p.push(k+"=1"); });
   try{ history.replaceState(null,"","#"+p.join("&")); }catch(e){} }
 function loadHash(){ var h=location.hash.slice(1); if(!h) return; h.split("&").forEach(function(kv){ var i=kv.indexOf("="), k=kv.slice(0,i), v=decodeURIComponent(kv.slice(i+1));
-  if(!(k in S)) return; if(k==="head"||k==="asc"||k==="dasc") S[k]=v==="1"; else if(["du","vt","au"].indexOf(k)>=0) S[k]=+v; else if(["extra","pen","hp","sh"].indexOf(k)>=0) S[k]=+v; else S[k]=v; }); }
+  if(!(k in S)) return; if(k==="head"||k==="asc"||k==="dasc"||k==="dfor") S[k]=v==="1"; else if(["du","vt","au","cm"].indexOf(k)>=0) S[k]=+v; else if(["extra","pen","hp","sh","bhp"].indexOf(k)>=0) S[k]=+v; else S[k]=v; }); }
 
 function init(){
   fillKits();
@@ -298,6 +362,8 @@ function init(){
   seg("armup",[{label:"None"},{label:"+10%"},{label:"+20%"},{label:"+30%"}]);
   seg("vktier",VK.map(function(v){return {label:v.t==="Ascended"?"Ascended":"Tier "+v.t};}));
   seg("armor",ARMOR.map(function(a){return {label:a.name,icon:a.dr?'<img src="images/armor/'+a.id+'.png" alt="" width="24" height="24" style="object-fit:contain">':''};}));
+  seg("critm",CRITM);
+  seg("ench",ENCH.map(function(e){return {label:e.name,icon:e.img?'<img src="images/enchants/'+e.img+'.png" alt="">':''};}));
   loadHash();
   $("akit").value=S.ak; $("dkit").value=S.dk;
   if(!kitByName(S.ak)) S.ak=""; if(!kitByName(S.dk)) S.dk="";
@@ -306,8 +372,11 @@ function init(){
   $("akit").addEventListener("change",function(){ S.ak=this.value; S.asc=false; var k=kitByName(S.ak); if(k&&k.w&&k.w.length) S.w="k:"+k.w[k.w.length-1].name; S.pen=null; S.head=false; setKitImg($("akimg"),S.ak); renderWeapons(); render(); });
   $("dkit").addEventListener("change",function(){ S.dk=this.value; S.hp=null; S.sh=null; S.dasc=false; setKitImg($("dkimg"),S.dk); render(); });
   $("weapons").addEventListener("click",function(e){ var b=e.target.closest(".wpn"); if(!b) return; S.w=b.getAttribute("data-w"); S.pen=null; S.head=false; render(); });
-  [["dmgup","du"],["armup","au"],["vktier","vt"]].forEach(function(p){ $(p[0]).addEventListener("click",function(e){ var b=e.target.closest("button"); if(!b) return; S[p[1]]=+b.getAttribute("data-v"); if(p[0]==="vktier") S.sh=null; render(); }); });
+  [["dmgup","du"],["armup","au"],["vktier","vt"],["critm","cm"]].forEach(function(p){ $(p[0]).addEventListener("click",function(e){ var b=e.target.closest("button"); if(!b) return; S[p[1]]=+b.getAttribute("data-v"); if(p[0]==="vktier") S.sh=null; render(); }); });
   $("armor").addEventListener("click",function(e){ var b=e.target.closest("button"); if(!b) return; S.ar=ARMOR[+b.getAttribute("data-v")].id; render(); });
+  $("ench").addEventListener("click",function(e){ var b=e.target.closest("button"); if(!b) return; S.en=ENCH[+b.getAttribute("data-v")].id; render(); });
+  $("bhp").addEventListener("input",function(){ S.bhp=this.value===""?10:+this.value; render(); });
+  $("dfor").addEventListener("change",function(){ S.dfor=this.checked; S.hp=null; render(); });
   $("head").addEventListener("change",function(){ S.head=this.checked; render(); });
   $("asc").addEventListener("change",function(){ S.asc=this.checked; render(); });
   $("dasc").addEventListener("change",function(){ S.dasc=this.checked; S.hp=null; render(); });
