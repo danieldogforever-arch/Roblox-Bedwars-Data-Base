@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Damage Calculator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0418;--card:#150b38;--soft:rgba(255,255,255,.07);--muted:#b9aee0;--accent:#a98bff;--atk:#ff8a5c;--def:#5cc8ff;--hp:#5fe3a1;--shield:#ffd166;color-scheme:dark}
+*{box-sizing:border-box;font-weight:400}
+html,body{overflow-x:hidden}
+body{margin:0;min-height:100vh;color:#fff;font:400 1.05rem/1.45 "Jua","Trebuchet MS",system-ui,sans-serif;background:radial-gradient(circle at 15% 8%,rgba(110,60,220,.35),transparent 40%),radial-gradient(circle at 85% 92%,rgba(120,50,230,.3),transparent 45%),radial-gradient(circle,rgba(255,255,255,.4) 1px,transparent 1.6px) 0 0/87px 87px,radial-gradient(circle,rgba(180,156,255,.32) 2px,transparent 2.8px) 37px 51px/131px 131px,var(--bg);background-attachment:fixed;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+.wrap{max-width:1180px;margin:0 auto;padding:28px 18px 56px}
+.topnav{display:flex;gap:18px;font-size:.95rem;margin-bottom:14px;flex-wrap:wrap}
+.topnav a{color:var(--muted);text-decoration:none}.topnav a:hover,.topnav a:focus-visible{color:#fff}
+.topnav a[aria-current]{color:#fff}
+h1{font-size:clamp(2.1rem,6vw,2.8rem);margin:0;line-height:1.1}
+.lead{color:var(--muted);margin:6px 0 0}
+.arena{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,380px) minmax(0,1fr);gap:18px;margin-top:24px;align-items:start}
+.side{background:rgba(18,8,48,.55);border:4px solid #fff;padding:20px;min-width:0}
+.side.atk{box-shadow:inset 0 6px 0 var(--atk)}
+.side.def{box-shadow:inset 0 6px 0 var(--def)}
+.shead{display:flex;align-items:center;gap:10px;margin:0 0 14px}
+.shead h2{font-size:1.5rem;margin:0}
+.badge{font-size:.8rem;border-radius:999px;padding:2px 10px;color:#12082e}
+.atk .badge{background:var(--atk)}.def .badge{background:var(--def)}
+.lab{color:var(--muted);font-size:.92rem;margin:16px 0 7px;display:flex;justify-content:space-between;gap:8px}
+.lab small{font-size:.82rem;opacity:.85}
+.kitpick{display:flex;align-items:center;gap:10px}
+.kitpick .kimg{width:52px;height:52px;flex:none;border-radius:12px;background:var(--soft);object-fit:contain;border:2px solid rgba(255,255,255,.25)}
+.kitpick .kimg.none{display:grid;place-items:center;color:var(--muted);font-size:1.3rem}
+select,input[type=number]{font:inherit;color:#fff;background:var(--card);border:2px solid rgba(255,255,255,.35);border-radius:12px;padding:9px 12px;min-width:0}
+select{width:100%;cursor:pointer}
+select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.seg{display:flex;flex-wrap:wrap;gap:6px}
+.seg button{font:inherit;font-size:.95rem;color:#fff;background:var(--soft);border:2px solid transparent;border-radius:999px;padding:6px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.seg button:hover{border-color:rgba(255,255,255,.35)}
+.seg button[aria-pressed=true]{background:#fff;color:#12082e}
+.seg button svg{flex:none}
+.wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:8px}
+.wpn{font:inherit;color:#fff;background:var(--soft);border:2px solid transparent;border-radius:14px;padding:8px 6px 7px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:3px;text-align:center;min-width:0}
+.wpn:hover{border-color:rgba(255,255,255,.35)}
+.wpn[aria-pressed=true]{border-color:var(--atk);background:rgba(255,138,92,.16)}
+.wpn .wi{width:40px;height:40px;display:grid;place-items:center}
+.wpn .wi img{max-width:40px;max-height:40px;object-fit:contain}
+.wpn .wn{font-size:.82rem;line-height:1.15;overflow-wrap:anywhere}
+.wpn .wd{font-size:.8rem;color:var(--muted)}
+.wsub{color:var(--muted);font-size:.85rem;margin:10px 0 6px}
+.tog{display:flex;align-items:center;gap:10px;background:var(--soft);border-radius:14px;padding:9px 12px;margin-top:8px;cursor:pointer;user-select:none}
+.tog input{width:20px;height:20px;accent-color:var(--atk);flex:none;margin:0}
+.def .tog input{accent-color:var(--def)}
+.tog span{flex:1}
+.tog em{font-style:normal;color:var(--muted);font-size:.88rem}
+.numrow{display:flex;align-items:center;gap:10px}
+.numrow input{width:96px}
+.numrow span{color:var(--muted);font-size:.9rem}
+.hidden{display:none!important}
+/* center */
+.mid{position:sticky;top:18px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.res{background:linear-gradient(180deg,rgba(255,138,92,.18),rgba(92,200,255,.14));border:4px solid #fff;padding:20px;text-align:center}
+.res .rl{color:var(--muted);font-size:.95rem}
+.res .big{font-size:clamp(3rem,9vw,4.4rem);line-height:1;margin:6px 0 2px}
+.res .rsub{color:var(--muted);font-size:.95rem}
+.hpbar{display:flex;height:26px;border-radius:8px;overflow:hidden;background:rgba(255,255,255,.08);margin:16px 0 6px;border:2px solid rgba(255,255,255,.4)}
+.hpbar i{display:block;height:100%;background:var(--hp);border-right:2px solid #12082e}
+.hpbar i.sh{background:var(--shield)}
+.hpbar i:last-child{border-right:0}
+.hpkey{display:flex;justify-content:center;gap:14px;font-size:.85rem;color:var(--muted)}
+.hpkey b{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:0}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.tile{background:rgba(18,8,48,.7);border:3px solid rgba(255,255,255,.8);padding:12px;text-align:center;min-width:0}
+.tile .tv{font-size:1.7rem;line-height:1.1}
+.tile .tl{color:var(--muted);font-size:.85rem}
+.steps{background:rgba(18,8,48,.7);border:3px solid rgba(255,255,255,.8);padding:14px 16px}
+.steps h3{margin:0 0 8px;font-size:1.1rem}
+.step{display:flex;justify-content:space-between;gap:10px;padding:5px 0;border-top:1px solid rgba(255,255,255,.12);font-size:.95rem}
+.step:first-of-type{border-top:0}
+.step .sx{color:var(--muted)}
+.step .sv{white-space:nowrap}
+.step.up .sx::before{content:"▲ ";color:var(--atk)}
+.step.down .sx::before{content:"▼ ";color:var(--def)}
+.share{font:inherit;color:#12082e;background:#fff;border:0;border-radius:999px;padding:9px 16px;cursor:pointer}
+.share:hover{background:var(--accent);color:#fff}
+.note{background:rgba(18,8,48,.55);border:3px dashed rgba(255,255,255,.4);padding:16px 18px;margin-top:22px;color:var(--muted);font-size:.95rem}
+.note h3{color:#fff;margin:0 0 6px;font-size:1.1rem}
+.note ul{margin:6px 0 0;padding-left:20px}
+.note li{margin:3px 0}
+.mini{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom,0px));z-index:20;display:none;justify-content:center;gap:14px;align-items:baseline;background:rgba(18,8,48,.96);border:3px solid #fff;border-radius:16px;padding:10px 14px;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+.mini b{font-size:1.5rem}.mini span{color:var(--muted);font-size:.9rem}
+.mini.show{display:flex}
+.foot{margin-top:28px;text-align:center;font-size:.9rem;color:var(--muted)}
+.foot a{color:var(--accent)}
+@media(max-width:980px){.wrap{padding-bottom:110px}.arena{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.mid{grid-column:1/-1;order:-1;position:static}}
+@media(max-width:640px){.arena{grid-template-columns:minmax(0,1fr)}.side{padding:16px}.wgrid{grid-template-columns:repeat(auto-fill,minmax(82px,1fr))}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav class="topnav"><a href="index.html">Home</a><a href="kit-machine.html">Kit Machine</a><a href="charts.html">Tier Lists</a><a href="calculator.html" aria-current="page">Damage Calculator</a></nav>
+  <h1>Damage Calculator</h1>
+  <p class="lead">Pick who's attacking and who's getting hit. See the damage per hit, how many hits it takes, and how tanky the target really is.</p>
+
+  <div class="arena">
+    <section class="side atk" aria-labelledby="atkh">
+      <div class="shead"><h2 id="atkh">Attacker</h2><span class="badge">deals damage</span></div>
+      <div class="lab">Kit</div>
+      <div class="kitpick"><span class="kimg none" id="akimg">?</span><select id="akit"></select></div>
+
+      <div class="lab">Weapon <small id="wcount"></small></div>
+      <div id="weapons"></div>
+
+      <div id="headWrap" class="hidden"><label class="tog"><input type="checkbox" id="head"><span>Headshot</span><em id="headTxt"></em></label></div>
+      <div id="ascWrap" class="hidden"><label class="tog"><input type="checkbox" id="asc"><span>Void Ascension</span><em>+20% damage</em></label></div>
+
+      <div class="lab">Team damage upgrade <small>diamond shop</small></div>
+      <div class="seg" id="dmgup" data-key="du"></div>
+
+      <div class="lab">Extra damage <small>other buffs, in %</small></div>
+      <div class="numrow"><input type="number" id="extra" min="0" max="500" step="1" value="0" inputmode="decimal"><span>% more damage</span></div>
+
+      <div class="lab">Armor penetration</div>
+      <div class="numrow"><input type="number" id="pen" min="0" max="100" step="1" value="0" inputmode="decimal"><span>% <span id="penSrc"></span></span></div>
+    </section>
+
+    <div class="mid">
+      <div class="res" aria-live="polite">
+        <div class="rl">Damage per hit</div>
+        <div class="big" id="rDmg">0</div>
+        <div class="rsub" id="rSub"></div>
+        <div class="hpbar" id="hpbar" aria-hidden="true"></div>
+        <div class="hpkey"><span><b style="background:var(--hp)"></b>HP</span><span id="shKey"><b style="background:var(--shield)"></b>Shield</span><span>1 block = 1 hit</span></div>
+      </div>
+      <div class="tiles">
+        <div class="tile"><div class="tv" id="rHits">0</div><div class="tl">Hits to kill</div></div>
+        <div class="tile"><div class="tv" id="rTrue">0</div><div class="tl">Target's true HP</div></div>
+        <div class="tile"><div class="tv" id="rDps">-</div><div class="tl">Damage per second</div></div>
+        <div class="tile"><div class="tv" id="rTtk">-</div><div class="tl">Time to kill</div></div>
+      </div>
+      <div class="steps"><h3>How it adds up</h3><div id="steps"></div></div>
+      <button class="share" id="share" type="button">Copy link to this setup</button>
+    </div>
+
+    <section class="side def" aria-labelledby="defh">
+      <div class="shead"><h2 id="defh">Target</h2><span class="badge">takes damage</span></div>
+      <div class="lab">Kit</div>
+      <div class="kitpick"><span class="kimg none" id="dkimg">?</span><select id="dkit"></select></div>
+
+      <div id="vkWrap" class="hidden">
+        <div class="lab">Void Knight tier</div>
+        <div class="seg" id="vktier" data-key="vt"></div>
+        <label class="tog"><input type="checkbox" id="dasc"><span>Void Ascension active</span><em>+30% HP</em></label>
+      </div>
+
+      <div class="lab">Armor</div>
+      <div class="seg" id="armor" data-key="ar"></div>
+
+      <div class="lab">Team armor upgrade <small>diamond shop</small></div>
+      <div class="seg" id="armup" data-key="au"></div>
+
+      <div class="lab">HP <small id="hpSrc"></small></div>
+      <div class="numrow"><input type="number" id="hp" min="1" max="1000" step="1" value="100" inputmode="decimal"><span>+</span><input type="number" id="shield" min="0" max="500" step="1" value="0" inputmode="decimal"><span>shield</span></div>
+    </section>
+  </div>
+
+  <div class="note">
+    <h3>How the math works</h3>
+    <ul>
+      <li>Armor: leather 36%, iron 56%, diamond 76%, emerald 84% damage reduction.</li>
+      <li>Armor penetration ignores part of the armor. Example: 40 damage on leather does 25.6, or 29.91 with 40% penetration (Ares's Spear).</li>
+      <li>Team damage upgrades don't stack: +5%, +10% or +20%, whichever is highest.</li>
+      <li>Still being tested: the team armor upgrade is counted as an extra 10/20/30% damage reduction after armor (it works with no armor too), and damage buffs are multiplied together.</li>
+      <li>Crit stars and enchants like Fire aren't in yet. Use "Extra damage" for now.</li>
+    </ul>
+  </div>
+  <div class="mini" id="mini" aria-hidden="true"><b id="mDmg"></b><span>per hit</span><b id="mHits"></b><span>hits to kill</span></div>
+  <p class="foot">Kit data from the <a href="kit-machine.html">Kit Machine</a>.</p>
+</div>
+
+<script>
+var KITS=[{"name":"Abaddon","img":"images/kits/abaddon.webp","hp":"100","w":[{"name":"Scarab Upgrade 1","img":"images/items/scarab-upgrade-1.png","dmg":4,"cd":0.5},{"name":"Scarab Upgrade 2","img":"images/items/scarab-upgrade-2.png","dmg":6,"cd":0.5},{"name":"Scarab Upgrade 3","img":"images/items/scarab-upgrade-3.png","dmg":8,"cd":0.5}]},{"name":"Adetunde","img":"images/kits/adetunde.webp","hp":"100","w":[{"name":"Frosty Hammer","img":"images/items/frosty-hammer.png","dmg":23,"cd":0.35},{"name":"Arctic Slam","img":"images/abilities/ability-template.png","dmg":90,"pen":10}]},{"name":"Aery","img":"images/kits/aery.webp","hp":"90"},{"name":"Agni","img":"images/kits/agni.webp","hp":"100","w":[{"name":"Cluster Bomb","img":"images/items/cluster-bomb.png","dmg":16.5},{"name":"Rocket Boost","img":"images/abilities/ability-template.png","dmg":12}]},{"name":"Alchemist","img":"images/kits/alchemist.webp","hp":"100","w":[{"name":"Poison Splash Potion","img":"images/items/poison-potion.png","dmg":6,"cd":0.525,"pen":80}]},{"name":"Arachne","img":"images/kits/arachne.webp","hp":"100","w":[{"name":"Spider Summon","img":"images/abilities/ability-template.png","dmg":4}]},{"name":"Archer","img":"images/kits/archer.webp","hp":"100","w":[{"name":"Bow","img":"images/items/bow.png","dmg":20,"cd":0.625,"head":15.0},{"name":"Tactical Crossbow","img":"images/items/tactical-crossbow.png","dmg":42.75,"cd":1.25,"head":64.0},{"name":"Tactical Headhunter","img":"images/items/tactical-headhunter.png","dmg":67.5,"cd":1.25,"head":101.25}]},{"name":"Ares","img":"images/kits/ares.webp","hp":"100","w":[{"name":"Spear","img":"images/items/spear.png","dmg":40,"cd":0.75,"pen":40}]},{"name":"Axolotl Amy","img":"images/kits/axolotl-amy.webp","hp":"100"},{"name":"Baker","img":"images/kits/baker.webp","hp":"100"},{"name":"Barbarian","img":"images/kits/barbarian.webp","hp":"100","w":[{"name":"Rageblade","img":"images/items/rageblade.png","dmg":70,"cd":0.25}]},{"name":"Beekeeper Beatrix","img":"images/kits/beekeeper-beatrix.webp","hp":"100"},{"name":"Bekzat","img":"images/kits/bekzat.webp","hp":"100","w":[{"name":"Featherlight Headhunter","img":"images/items/featherlight-headhunter.png","dmg":88,"cd":1.25,"head":115.5},{"name":"Featherlight Crossbow","img":"images/items/featherlight-crossbow.png","dmg":54.4,"cd":1.25},{"name":"Featherlight Bow","img":"images/items/featherlight-bow.png","dmg":28.8,"cd":0.625}]},{"name":"Bounty Hunter","img":"images/kits/bounty-hunter.webp","hp":"100"},{"name":"Builder","img":"images/kits/builder.webp","hp":"100"},{"name":"Caitlyn","img":"images/kits/caitlyn.webp","hp":"100"},{"name":"Cobalt","img":"images/kits/cobalt.webp","hp":"100"},{"name":"Cogsworth","img":"images/kits/cogsworth.webp","hp":"100"},{"name":"Conqueror","img":"images/kits/conqueror.webp","hp":"100"},{"name":"Crocowolf","img":"images/kits/crocowolf.webp","hp":"100"},{"name":"Crypt","img":"images/kits/crypt.webp","hp":"100"},{"name":"Cyber","img":"images/kits/cyber.webp","hp":"100"},{"name":"Death Adder","img":"images/kits/death-adder.webp","hp":"100"},{"name":"Dino Tamer Dom","img":"images/kits/dino-tamer-dom.webp","hp":"100"},{"name":"Drill","img":"images/kits/drill.webp","hp":"100"},{"name":"Eldertree","img":"images/kits/eldertree.webp","hp":"100"},{"name":"Eldric","img":"images/kits/eldric.webp","hp":"100"},{"name":"Elektra","img":"images/kits/elektra.webp","hp":"100"},{"name":"Ember","img":"images/kits/ember.webp","hp":"100"},{"name":"Evelynn","img":"images/kits/evelynn.webp","hp":"100"},{"name":"Farmer Cletus","img":"images/kits/farmer-cletus.webp","hp":"100"},{"name":"Fisherman","img":"images/kits/fisherman.webp","hp":"100"},{"name":"Flora","img":"images/kits/flora.webp","hp":"100"},{"name":"Fortuna","img":"images/kits/fortuna.webp","hp":"100"},{"name":"Freiya","img":"images/kits/freiya.webp","hp":"100"},{"name":"Frosty","img":"images/kits/frosty.webp","hp":"100"},{"name":"Gingerbread Man","img":"images/kits/gingerbread-man.webp","hp":"100"},{"name":"Gompy","img":"images/kits/gompy.webp","hp":"100"},{"name":"Gregory","img":"images/kits/gregory.webp","hp":"100"},{"name":"Grim Reaper","img":"images/kits/grim-reaper.webp","hp":"100"},{"name":"Grove","img":"images/kits/grove.webp","hp":"100"},{"name":"Hannah","img":"images/kits/hannah.webp","hp":"90"},{"name":"Hephaestus","img":"images/kits/hephaestus.webp","hp":"30"},{"name":"Ignis","img":"images/kits/ignis.webp","hp":"100"},{"name":"Infernal Shielder","img":"images/kits/infernal-shielder.webp","hp":"100"},{"name":"Isabel","img":"images/kits/isabel.webp","hp":"100"},{"name":"Jack","img":"images/kits/jack.webp","hp":"100"},{"name":"Jade","img":"images/kits/jade.webp","hp":"100"},{"name":"Kaida","img":"images/kits/kaida.webp","hp":"100"},{"name":"Kaliyah","img":"images/kits/kaliyah.webp","hp":"100"},{"name":"Krystal","img":"images/kits/krystal.webp","hp":"100"},{"name":"Lani","img":"images/kits/lani.webp","hp":"100"},{"name":"Lassy","img":"images/kits/lassy.webp","hp":"100"},{"name":"Lian","img":"images/kits/lian.webp","hp":"100"},{"name":"Lucía","img":"images/kits/lucia.webp","hp":"100"},{"name":"Lumen","img":"images/kits/lumen.webp","hp":"100"},{"name":"Lyla","img":"images/kits/lyla.webp","hp":"100"},{"name":"Marcel","img":"images/kits/marcel.webp","hp":"100"},{"name":"Marina","img":"images/kits/marina.webp","hp":"100"},{"name":"Marrow","img":"images/kits/marrow.webp","hp":"100"},{"name":"Martin","img":"images/kits/martin.webp","hp":"100"},{"name":"Melody","img":"images/kits/melody.webp","hp":"100"},{"name":"Merchant Marco","img":"images/kits/merchant-marco.webp","hp":"100"},{"name":"Metal Detector","img":"images/kits/metal-detector.webp","hp":"100"},{"name":"Milo","img":"images/kits/milo.webp","hp":"100"},{"name":"Miner","img":"images/kits/miner.webp","hp":"100"},{"name":"Nahla","img":"images/kits/nahla.webp","hp":"100"},{"name":"Nazar","img":"images/kits/nazar.webp","hp":"100"},{"name":"Noelle","img":"images/kits/noelle.webp","hp":"100"},{"name":"Nyoka","img":"images/kits/nyoka.webp","hp":"100"},{"name":"Nyx","img":"images/kits/nyx.webp","hp":"100"},{"name":"Pirate Davey","img":"images/kits/pirate-davey.webp","hp":"100"},{"name":"Pyro","img":"images/kits/pyro.webp","hp":"100"},{"name":"Ragnar","img":"images/kits/ragnar.webp","hp":"100"},{"name":"Ramil","img":"images/kits/ramil.webp","hp":"100"},{"name":"Raven","img":"images/kits/raven.webp","hp":"100"},{"name":"Santa","img":"images/kits/santa.webp","hp":"100"},{"name":"Sheep Herder","img":"images/kits/sheep-herder.webp","hp":"100"},{"name":"Sheila","img":"images/kits/sheila.webp","hp":"100"},{"name":"Sigrid","img":"images/kits/sigrid.webp","hp":"100"},{"name":"Silas","img":"images/kits/silas.webp","hp":"100"},{"name":"Skoll","img":"images/kits/skoll.webp","hp":"100"},{"name":"Smoke","img":"images/kits/smoke.webp","hp":"100"},{"name":"Sophia","img":"images/kits/sophia.webp","hp":"100"},{"name":"Spirit Catcher","img":"images/kits/spirit-catcher.webp","hp":"100"},{"name":"Star Collector Stella","img":"images/kits/star-collector-stella.webp","hp":"100"},{"name":"Styx","img":"images/kits/styx.webp","hp":"100"},{"name":"Taliyah","img":"images/kits/taliyah.webp","hp":"100"},{"name":"Terra","img":"images/kits/terra.webp","hp":"100"},{"name":"Trapper","img":"images/kits/trapper.webp","hp":"100"},{"name":"Trinity","img":"images/kits/trinity.webp","hp":"100"},{"name":"Triton","img":"images/kits/triton.webp","hp":"100"},{"name":"Trixie","img":"images/kits/trixie.webp","hp":"100"},{"name":"Uma","img":"images/kits/uma.webp","hp":"100"},{"name":"Umbra","img":"images/kits/umbra.webp","hp":"100"},{"name":"Umeko","img":"images/kits/umeko.webp","hp":"100"},{"name":"Vanessa","img":"images/kits/vanessa.webp","hp":"100"},{"name":"Void Knight","img":"images/kits/void-knight.webp","hp":"90","w":[{"name":"Noctium Blade I","img":"images/items/noctium-blade-1.png","dmg":22,"cd":0.35},{"name":"Noctium Blade II","img":"images/items/noctium-blade-2.png","dmg":27,"cd":0.35},{"name":"Noctium Blade III","img":"images/items/noctium-blade-3.png","dmg":33,"cd":0.35},{"name":"Noctium Blade IV","img":"images/items/noctium-blade-4.png","dmg":47,"cd":0.35}]},{"name":"Void Regent","img":"images/kits/void-regent.webp","hp":"100"},{"name":"Vulcan","img":"images/kits/vulcan.webp","hp":"100"},{"name":"Warden","img":"images/kits/warden.webp","hp":"100"},{"name":"Warrior","img":"images/kits/warrior.webp","hp":"100"},{"name":"Whim","img":"images/kits/whim.webp","hp":"100"},{"name":"Whisper","img":"images/kits/whisper.webp","hp":"100"},{"name":"Wren","img":"images/kits/wren.webp","hp":"100"},{"name":"Xu'rot","img":"images/kits/xu-rot.webp","hp":"100"},{"name":"Yamini","img":"images/kits/yamini.webp","hp":"100"},{"name":"Yeti","img":"images/kits/yeti.webp","hp":"100"},{"name":"Yuzi","img":"images/kits/yuzi.webp","hp":"100"},{"name":"Zarrah","img":"images/kits/zarrah.webp","hp":"100"},{"name":"Zenith","img":"images/kits/zenith.webp","hp":"100"},{"name":"Zeno","img":"images/kits/zeno.webp","hp":"100"},{"name":"Zephyr","img":"images/kits/zephyr.webp","hp":"100"},{"name":"Zola","img":"images/kits/zola.webp","hp":"100"}];
+var ARMOR=[{id:"none",name:"None",dr:0,c:"#6c6488"},{id:"leather",name:"Leather",dr:.36,c:"#b5703c"},{id:"iron",name:"Iron",dr:.56,c:"#d9dde6"},{id:"diamond",name:"Diamond",dr:.76,c:"#54e0ff"},{id:"emerald",name:"Emerald",dr:.84,c:"#3fe37d"}];
+var DMGUP=[0,.05,.1,.2], ARMUP=[0,.1,.2,.3];
+var VK=[{t:"1",dr:.18,sh:0},{t:"2",dr:.36,sh:0},{t:"3",dr:.60,sh:0},{t:"4",dr:.76,sh:30},{t:"Ascended",dr:.84,sh:30}];
+var GENERAL=[
+ {name:"Wood Sword",dmg:20,c:"#b5703c",t:"sword"},{name:"Stone Sword",dmg:25,c:"#9a9aa6",t:"sword"},{name:"Iron Sword",dmg:30,c:"#e4e7ee",t:"sword"},
+ {name:"Diamond Sword",dmg:42,c:"#54e0ff",t:"sword"},{name:"Emerald Sword",dmg:55,c:"#3fe37d",t:"sword"},{name:"Crossbow",dmg:34,c:"#c9a46a",t:"xbow"}];
+function slug(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+function fmt(n){ if(!isFinite(n)) return "-"; var r=Math.round(n*100)/100; return r.toLocaleString("en-US",{maximumFractionDigits:2}); }
+function swordSvg(c){return '<svg width="36" height="36" viewBox="0 0 32 32" aria-hidden="true"><path d="M25 3l4 0 0 4-13 13-4-4z" fill="'+c+'" stroke="#12082e" stroke-width="1.5" stroke-linejoin="round"/><path d="M8 17l7 7-2 2-2-2-4 4-2-2 4-4-2-2z" fill="#7a4b2a" stroke="#12082e" stroke-width="1.5" stroke-linejoin="round"/></svg>';}
+function xbowSvg(c){return '<svg width="36" height="36" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 9c6-6 18-6 24 0" fill="none" stroke="'+c+'" stroke-width="3" stroke-linecap="round"/><path d="M5 9l11 7 11-7" fill="none" stroke="#fff" stroke-width="1.2"/><rect x="14.5" y="8" width="3" height="20" rx="1.2" fill="#7a4b2a" stroke="#12082e"/><path d="M16 2l2.5 5h-5z" fill="#e4e7ee"/></svg>';}
+function helmSvg(c){return '<svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 11a7 7 0 0114 0v5h-4v-4H7v4H3z" fill="'+c+'" stroke="#12082e" stroke-width="1.4" stroke-linejoin="round"/></svg>';}
+
+var S={ak:"",w:"g:Diamond Sword",head:false,asc:false,du:0,extra:0,pen:null,dk:"",vt:4,dasc:false,ar:"iron",au:0,hp:null,sh:null};
+var $=function(id){return document.getElementById(id);};
+
+function kitByName(n){for(var i=0;i<KITS.length;i++) if(KITS[i].name===n) return KITS[i]; return null;}
+function weaponsFor(kit){ var out=GENERAL.map(function(g){return {id:"g:"+g.name,name:g.name,dmg:g.dmg,g:g};});
+  var k=kitByName(kit); if(k) (k.w||[]).forEach(function(w){ out.push({id:"k:"+w.name,name:w.name,dmg:w.dmg,cd:w.cd,head:w.head,pen:w.pen,img:w.img,kit:k.name}); });
+  return out; }
+function curWeapon(){ var ws=weaponsFor(S.ak); for(var i=0;i<ws.length;i++) if(ws[i].id===S.w) return ws[i]; return ws[4]; }
+
+function fillKits(){ var o='<option value="">Any kit</option>'+KITS.map(function(k){return '<option>'+esc(k.name)+'</option>';}).join('');
+  $("akit").innerHTML=o; $("dkit").innerHTML=o; }
+function seg(id,items,key){ $(id).innerHTML=items.map(function(it,i){return '<button type="button" data-v="'+i+'">'+(it.icon||'')+esc(it.label)+'</button>';}).join(''); }
+
+function renderWeapons(){
+  var ws=weaponsFor(S.ak), cur=curWeapon(); S.w=cur.id;
+  var gen=ws.filter(function(w){return w.g;}), kw=ws.filter(function(w){return !w.g;});
+  function tile(w){ var ic=w.g?(w.g.t==="sword"?swordSvg(w.g.c):xbowSvg(w.g.c)):'<img src="'+esc(w.img)+'" alt="" loading="lazy">';
+    return '<button type="button" class="wpn" data-w="'+esc(w.id)+'" aria-pressed="'+(w.id===S.w)+'"><span class="wi">'+ic+'</span><span class="wn">'+esc(w.name)+'</span><span class="wd">'+fmt(w.dmg)+' dmg</span></button>'; }
+  var h='<div class="wgrid">'+gen.map(tile).join('')+'</div>';
+  if(kw.length) h+='<div class="wsub">'+esc(S.ak)+'\'s items</div><div class="wgrid">'+kw.map(tile).join('')+'</div>';
+  $("weapons").innerHTML=h; $("wcount").textContent=ws.length+" to pick from";
+}
+function setKitImg(el,name){ var k=kitByName(name); if(k){ el.outerHTML='<img class="kimg" id="'+el.id+'" src="'+esc(k.img)+'" alt="">'; } else { el.outerHTML='<span class="kimg none" id="'+el.id+'">?</span>'; } }
+
+function compute(){
+  var w=curWeapon(), out=[], k;
+  var base=w.dmg, headOn=S.head && w.head;
+  if(headOn) base=w.head;
+  var d=base; out.push({x:headOn?"Headshot damage":"Base damage",v:fmt(base)});
+  var asc=S.asc && S.ak==="Void Knight";
+  if(DMGUP[S.du]){ d*=1+DMGUP[S.du]; out.push({x:"Team upgrade +"+DMGUP[S.du]*100+"%",v:fmt(d),c:"up"}); }
+  if(asc){ d*=1.2; out.push({x:"Void Ascension +20%",v:fmt(d),c:"up"}); }
+  var ex=+S.extra||0; if(ex){ d*=1+ex/100; out.push({x:"Extra damage +"+fmt(ex)+"%",v:fmt(d),c:"up"}); }
+  var raw=d;
+  var pen=S.pen==null?(w.pen||0):S.pen; pen=Math.max(0,Math.min(100,+pen||0))/100;
+  var arm=ARMOR.filter(function(a){return a.id===S.ar;})[0]||ARMOR[0];
+  function armMult(p){ if(!arm.dr) return 1; var r=arm.dr/(1-arm.dr); return 1/(1+r*(1-p)); }
+  var am=armMult(pen); d*=am;
+  if(arm.dr) out.push({x:arm.name+" armor"+(pen?" ("+fmt(pen*100)+"% pen)":"")+" -"+fmt((1-am)*100)+"%",v:fmt(d),c:"down"});
+  var au=ARMUP[S.au]; if(au){ d*=1-au; out.push({x:"Team armor upgrade -"+au*100+"%",v:fmt(d),c:"down"}); }
+  var vkOn=S.dk==="Void Knight", vk=VK[S.vt]||VK[0], kd=vkOn?vk.dr:0;
+  if(kd){ d*=1-kd; out.push({x:"Void Knight tier "+vk.t+" -"+Math.round(kd*100)+"%",v:fmt(d),c:"down"}); }
+  var hp=+S.hp||1, sh=+S.sh||0, tot=hp+sh;
+  var hits=d>0?Math.ceil(tot/d - 1e-9):Infinity;
+  var redNoPen=armMult(0)*(1-au)*(1-kd);
+  var trueHp=tot/redNoPen;
+  var cd=w.cd;
+  return {d:d,raw:raw,steps:out,hp:hp,sh:sh,tot:tot,hits:hits,trueHp:trueHp,dps:cd?d/cd:null,ttk:cd&&isFinite(hits)?(hits-1)*cd:null,cd:cd,pen:pen,w:w};
+}
+
+function setVal(id,v){ var el=$(id); if(document.activeElement!==el) el.value=v; }
+function render(){
+  // attacker
+  var w=curWeapon();
+  document.querySelectorAll(".wpn").forEach(function(b){ b.setAttribute("aria-pressed", b.getAttribute("data-w")===S.w); });
+  $("headWrap").classList.toggle("hidden",!w.head); $("head").checked=!!S.head;
+  $("headTxt").textContent=w.head?fmt(w.head)+" damage":"";
+  $("ascWrap").classList.toggle("hidden",S.ak!=="Void Knight"); $("asc").checked=!!S.asc;
+  setVal("pen",S.pen==null?(w.pen||0):S.pen);
+  $("penSrc").textContent=S.pen==null?(w.pen?"from "+w.name:""):"custom";
+  setVal("extra",S.extra);
+  // target
+  var vkOn=S.dk==="Void Knight"; $("vkWrap").classList.toggle("hidden",!vkOn); $("dasc").checked=!!S.dasc;
+  var dk=kitByName(S.dk), baseHp=dk?+dk.hp:100;
+  if(vkOn && S.dasc) baseHp=Math.round(baseHp*1.3*100)/100;
+  var autoSh=vkOn?(VK[S.vt]||VK[0]).sh:0;
+  setVal("hp",S.hp==null?baseHp:S.hp);
+  setVal("shield",S.sh==null?autoSh:S.sh);
+  $("hpSrc").textContent=S.hp==null?(dk?dk.name+"'s HP"+(vkOn&&S.dasc?" with Void Ascension":""):"default"):"custom";
+  var segs={dmgup:S.du,armup:S.au,vktier:S.vt,armor:ARMOR.map(function(a){return a.id;}).indexOf(S.ar)};
+  Object.keys(segs).forEach(function(id){ $(id).querySelectorAll("button").forEach(function(b){ b.setAttribute("aria-pressed", +b.getAttribute("data-v")===segs[id]); }); });
+  // results
+  var hpv=S.hp==null?baseHp:S.hp, shv=S.sh==null?autoSh:S.sh; 
+  var tmpHp=S.hp, tmpSh=S.sh; S.hp=hpv; S.sh=shv; var r=compute(); S.hp=tmpHp; S.sh=tmpSh;
+  $("rDmg").textContent=fmt(r.d); $("mDmg").textContent=fmt(r.d); $("mHits").textContent=isFinite(r.hits)?r.hits:"-";
+  $("rSub").textContent=r.raw!==r.d?"from "+fmt(r.raw)+" before armor":"no armor";
+  $("rHits").textContent=isFinite(r.hits)?r.hits:"-";
+  $("rTrue").textContent=fmt(r.trueHp);
+  $("rDps").textContent=r.dps?fmt(r.dps):"-";
+  $("rTtk").textContent=r.ttk!=null?fmt(r.ttk)+"s":"-";
+  $("steps").innerHTML=r.steps.map(function(s){return '<div class="step '+(s.c||'')+'"><span class="sx">'+esc(s.x)+'</span><span class="sv">'+s.v+'</span></div>';}).join('')+
+    '<div class="step"><span class="sx">Target HP</span><span class="sv">'+fmt(r.hp)+(r.sh?' + '+fmt(r.sh)+' shield':'')+'</span></div>'+
+    (r.cd?'':'<div class="step"><span class="sx">No cooldown data for this weapon yet</span><span class="sv"></span></div>');
+  // hp bar: each segment = one hit
+  var bar='', n=isFinite(r.hits)?r.hits:0, cap=Math.min(n,60);
+  if(cap){ for(var i=0;i<cap;i++){ var start=i*r.d, end=Math.min(r.tot,(i+1)*r.d), seg=end-start; if(cap<n&&i===cap-1) seg=r.tot-start;
+      var shPart=Math.max(0,Math.min(end,r.sh)-start);
+      if(shPart>0) bar+='<i class="sh" style="flex:'+shPart+'"></i>';
+      if(seg-shPart>0) bar+='<i style="flex:'+(seg-shPart)+'"></i>'; } }
+  $("hpbar").innerHTML=bar; $("shKey").style.display=r.sh?"":"none";
+  saveHash();
+}
+function saveHash(){ var p=[]; ["ak","w","du","extra","pen","dk","vt","ar","au","hp","sh"].forEach(function(k){ if(S[k]!=null&&S[k]!==""&&S[k]!==0) p.push(k+"="+encodeURIComponent(S[k])); });
+  ["head","asc","dasc"].forEach(function(k){ if(S[k]) p.push(k+"=1"); });
+  try{ history.replaceState(null,"","#"+p.join("&")); }catch(e){} }
+function loadHash(){ var h=location.hash.slice(1); if(!h) return; h.split("&").forEach(function(kv){ var i=kv.indexOf("="), k=kv.slice(0,i), v=decodeURIComponent(kv.slice(i+1));
+  if(!(k in S)) return; if(k==="head"||k==="asc"||k==="dasc") S[k]=v==="1"; else if(["du","vt","au"].indexOf(k)>=0) S[k]=+v; else if(["extra","pen","hp","sh"].indexOf(k)>=0) S[k]=+v; else S[k]=v; }); }
+
+function init(){
+  fillKits();
+  seg("dmgup",[{label:"None"},{label:"+5%"},{label:"+10%"},{label:"+20%"}]);
+  seg("armup",[{label:"None"},{label:"+10%"},{label:"+20%"},{label:"+30%"}]);
+  seg("vktier",VK.map(function(v){return {label:v.t==="Ascended"?"Ascended":"Tier "+v.t};}));
+  seg("armor",ARMOR.map(function(a){return {label:a.name,icon:a.dr?helmSvg(a.c):''};}));
+  loadHash();
+  $("akit").value=S.ak; $("dkit").value=S.dk;
+  if(!kitByName(S.ak)) S.ak=""; if(!kitByName(S.dk)) S.dk="";
+  setKitImg($("akimg"),S.ak); setKitImg($("dkimg"),S.dk);
+  renderWeapons(); render();
+  $("akit").addEventListener("change",function(){ S.ak=this.value; S.asc=false; var k=kitByName(S.ak); if(k&&k.w&&k.w.length) S.w="k:"+k.w[k.w.length-1].name; S.pen=null; S.head=false; setKitImg($("akimg"),S.ak); renderWeapons(); render(); });
+  $("dkit").addEventListener("change",function(){ S.dk=this.value; S.hp=null; S.sh=null; S.dasc=false; setKitImg($("dkimg"),S.dk); render(); });
+  $("weapons").addEventListener("click",function(e){ var b=e.target.closest(".wpn"); if(!b) return; S.w=b.getAttribute("data-w"); S.pen=null; S.head=false; render(); });
+  [["dmgup","du"],["armup","au"],["vktier","vt"]].forEach(function(p){ $(p[0]).addEventListener("click",function(e){ var b=e.target.closest("button"); if(!b) return; S[p[1]]=+b.getAttribute("data-v"); if(p[0]==="vktier") S.sh=null; render(); }); });
+  $("armor").addEventListener("click",function(e){ var b=e.target.closest("button"); if(!b) return; S.ar=ARMOR[+b.getAttribute("data-v")].id; render(); });
+  $("head").addEventListener("change",function(){ S.head=this.checked; render(); });
+  $("asc").addEventListener("change",function(){ S.asc=this.checked; render(); });
+  $("dasc").addEventListener("change",function(){ S.dasc=this.checked; S.hp=null; render(); });
+  $("extra").addEventListener("input",function(){ S.extra=this.value===""?0:+this.value; render(); });
+  $("pen").addEventListener("input",function(){ S.pen=this.value===""?null:+this.value; render(); });
+  $("hp").addEventListener("input",function(){ S.hp=this.value===""?null:+this.value; render(); });
+  $("shield").addEventListener("input",function(){ S.sh=this.value===""?null:+this.value; render(); });
+  $("share").addEventListener("click",function(){ var b=this, u=location.href;
+    function done(){ b.textContent="Link copied"; setTimeout(function(){b.textContent="Copy link to this setup";},1600); }
+    if(navigator.clipboard) navigator.clipboard.writeText(u).then(done,function(){ prompt("Copy this link:",u); }); else prompt("Copy this link:",u); });
+}
+init();
+if("IntersectionObserver" in window){ new IntersectionObserver(function(es){ var vis=es[0].isIntersecting; $("mini").classList.toggle("show",!vis && window.innerWidth<=980); }).observe(document.querySelector(".mid")); }
+</script>
+</body>
+</html>
