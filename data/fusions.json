@@ -11,11 +11,6 @@
  },
  {
   "a": "Adetunde",
-  "b": "Cobalt",
-  "note": ""
- },
- {
-  "a": "Adetunde",
   "b": "Grim Reaper",
   "note": ""
  },
@@ -192,6 +187,16 @@
  {
   "a": "Void Knight",
   "b": "Eldertree",
+  "note": ""
+ },
+ {
+  "a": "Cobalt",
+  "b": "Trinity",
+  "note": ""
+ },
+ {
+  "a": "Cobalt",
+  "b": "Adetunde",
   "note": ""
  }
 ]

@@ -3423,7 +3423,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Every time you take damage you have a chance of dropping a battery on the ground. Once the battery activates you can pick it up for a small shield. After collecting 3 batteries you will overload, gaining movement speed and damage!",
-  "adv": "",
+  "adv": "Whenever you take damage, you have a 33% chance to drop a battery. Picking one up gives you 16 shield.\nAfter picking up 3 batteries, you go into Overcharge for 8 seconds. You get 17.5% more speed, and anyone who hits you (melee or ranged) takes 25% of that damage back as mirror damage, with 0% armor penetration. The mirror damage also applies Zapped, so they heal and gain shields 60% less for 10 seconds.\nYou can still drop batteries during Overcharge, but you can't pick them up. When Overcharge ends, you lose any shield you have left.",
   "items": [],
   "abilities": [],
   "history": [
@@ -3479,7 +3479,98 @@
    "tier": "30 (paid)",
    "badge": "images/bp/s5.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Batteries",
+    "when": "When you take damage",
+    "desc": "33% chance to drop a battery. Pick it up for 16 shield. You can drop batteries during Overcharge, but you can't pick them up."
+   },
+   {
+    "name": "Overcharge",
+    "when": "After picking up 3 batteries",
+    "desc": "Lasts 8 seconds. +17.5% speed, and attackers take 25% of their damage back as mirror damage (melee or ranged, 0% armor penetration). Your shield is removed when it ends."
+   },
+   {
+    "name": "Zapped",
+    "when": "Mirror damage during Overcharge",
+    "desc": "The attacker heals and gains shields 60% less for 10 seconds."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Cobalt stats",
+    "head": [
+     "Stat",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Battery drop chance",
+      "33% when you take damage"
+     ],
+     [
+      "Shield per battery",
+      "16"
+     ],
+     [
+      "Batteries for Overcharge",
+      "3"
+     ],
+     [
+      "Overcharge duration",
+      "8 seconds"
+     ],
+     [
+      "Overcharge speed",
+      "+17.5%"
+     ],
+     [
+      "Mirror damage",
+      "25% of damage taken (melee or ranged)"
+     ],
+     [
+      "Mirror armor penetration",
+      "0%"
+     ],
+     [
+      "Zapped",
+      "60% less healing and shields for 10 seconds"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Get shield before fights",
+    "text": "Try to bait enemies into shooting you, so you drop batteries and get shield before the fight starts."
+   },
+   {
+    "title": "Only pick up 2",
+    "text": "If there are 3 or more batteries on the floor, don't pick up all 3 to start Overcharge. Pick up only 2 so you have 32 free shield going into the fight."
+   },
+   {
+    "title": "Use Zapped",
+    "text": "If your enemy is healing or using a kit with shields, make sure you take advantage of Zapped."
+   },
+   {
+    "title": "Run and reset",
+    "text": "If you're getting low, use the Overcharge speed boost to run away, then stall out the 8 second timer so you can pick up more batteries."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Don't shoot it for no reason",
+    "text": "Only hit Cobalt when it matters. Every hit is a chance for it to drop a battery and gain shield."
+   },
+   {
+    "title": "Get Static",
+    "text": "The Static enchant nerfs its tankiness by a lot."
+   }
+  ],
+  "skins": [],
+  "bal": "adj",
+  "balWhy": "Cobalt's shields are insane early to mid game, but its mirror damage has problems. It's nice that it has a unique purpose, but with 0% armor penetration the mirror damage barely does anything, so its only real use is getting shields and giving out an early Zapped effect. It's also weird that when Cobalt itself is Zapped, it still only gets 60% less shield from batteries; that should be removed. A fix: go back to 36 total shield (12 per battery) and give the mirror damage 100% armor penetration."
  },
  {
   "name": "Cogsworth",
