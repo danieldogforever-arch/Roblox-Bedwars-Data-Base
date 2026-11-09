@@ -185,7 +185,8 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
       <li>The team armor upgrade takes another 10/20/30% off after armor, and it works with no armor too. Armor penetration doesn't affect it. Example: an Iron Sword (30) on leather with +10% does 17.28.</li>
       <li>Damage buffs multiply together. Example: Noctium Blade IV (47) with the +20% upgrade does 56.4, and 67.68 with Void Ascension on top.</li>
       <li>Swords have a 0.3 second cooldown, and the crossbow has 1.25 seconds. The headhunter does 55 (82.5 headshot), and the team damage upgrade works on projectiles too.</li>
-      <li>Forest's extra damage is reduced by armor like a normal hit (no armor penetration). Static's 15 lands at the same time as its 5.</li>
+      <li>Forest's extra damage is reduced by armor like a normal hit (no armor penetration). Static's 15 lands at the same time as its 5. Forest's damage varies a little (about 0.1 off in tests).</li>
+      <li>Soul Reaver assumes you just got a kill, so the aura runs for its 14 ticks (7 seconds) from your first hit.</li>
       <li>With an enchant, hits to kill and time to kill come from simulating the fight: you swing as fast as your weapon allows, and Fire, Static and Soul Reaver tick in between. Each block in the bar is everything dealt from one hit to the next.</li>
       <li>Critical Strike: 20-45% more damage in whole percents. "Average" uses a 40% crit chance and a 32.5% average bonus.</li>
       <li>Berserker (under 25 HP): about 35% more damage at 0 HP, 1% less for every 3 HP you have. It heals about half the bonus damage.</li>
@@ -207,7 +208,7 @@ var ENCH=[{id:"none",name:"None",d:"No enchant."},
  {id:"crit",name:"Critical Strike",img:"critical-strike",d:"Hits have a chance to deal 20-45% more damage."},
  {id:"execute",name:"Execute",img:"execute",d:"Curses the enemy for 10 seconds. If your next hit leaves them under 12% HP, they die. Each extra hit raises it by 2%, up to 18%."},
  {id:"berserker",name:"Berserker",img:"berserker",d:"Under 25 HP, your hits deal extra damage and heal you. The lower your HP, the bigger the bonus."},
- {id:"soul",name:"Soul Reaver",img:"soul-reaver",d:"A soul aura deals 6 damage every 0.5 seconds with 100% armor penetration. Each kill adds a stack: +1 damage and a bigger aura, with no cap on damage or range."}];
+ {id:"soul",name:"Soul Reaver",img:"soul-reaver",d:"A soul aura deals 6 damage every 0.5 seconds with 100% armor penetration. The aura lasts 14 ticks (7 seconds) and you need a kill to keep it going. Each kill adds a stack: +1 damage and a bigger aura, with no cap on damage or range."}];
 var CRITM=[{label:"Average"},{label:"Max crit"},{label:"No crit"}];
 var FIRE=[3,5,8,10];
 var VK=[{t:"1",dr:.18,sh:0},{t:"2",dr:.36,sh:0},{t:"3",dr:.60,sh:0},{t:"4",dr:.76,sh:30},{t:"Ascended",dr:.84,sh:30}];
@@ -275,13 +276,13 @@ function compute(){
   if(has("forest")) out.push({x:"Forest seed: +11 on the first hit (every 45s)",v:"+"+fmt(11*redHit),c:"up"});
   if(has("static")) out.push({x:"Static: +5 once per second, +15 on every 3rd charge",v:"+"+fmt(5*redNoPen),c:"up"});
   if(has("fire")) out.push({x:"Fire: 3 / 5 / 8 / 10 per second",v:fmt(10*redNoPen)+"/s",c:"up"});
-  if(has("soul")) out.push({x:"Soul Reaver aura: "+soulD+" every 0.5s, ignores armor",v:fmt(2*soulD*redFull)+"/s",c:"up"});
+  if(has("soul")) out.push({x:"Soul Reaver aura: "+soulD+" every 0.5s for 7s, ignores armor",v:fmt(2*soulD*redFull)+"/s",c:"up"});
   if(has("execute")) out.push({x:"Execute: kills under 12-18% HP",v:fmt(tot*.12)+"-"+fmt(tot*.18)+" HP",c:"up"});
   if(has("berserker")) out.push({x:"Berserker heal per hit",v:"~"+fmt(berB*raw/(1+berB)*.5)+" HP",c:"up"});
   if(cd && (has("fire")||has("forest")||has("static")||has("execute")||has("soul"))) sim=simulate();
   function simulate(){
     var left=tot, t=0, n=0, ev=[], segs=[], cur=0, lastProc=-9, charges=0, killT=null;
-    var tEnd=600, nextSeed=0, nextHit=0, nextFire=1, nextSoul=0.5;
+    var tEnd=600, soulN=0, nextSeed=0, nextHit=0, nextFire=1, nextSoul=0.5;
     function deal(x){ left-=x; cur+=x; }
     while(t<=tEnd){
       var tn=Math.min(nextHit, has("fire")&&n>0?nextFire:Infinity, has("soul")&&n>0?nextSoul:Infinity);
@@ -295,10 +296,10 @@ function compute(){
         deal(x);
         if(has("static") && t-lastProc>=1-1e-9){ lastProc=t; charges++; deal(5*redNoPen); if(charges===3){ deal(15*redNoPen); charges=0; } }
         if(has("fire") && n===1) nextFire=t+1;
-        if(has("soul") && n===1) nextSoul=t+.5;
+        if(has("soul") && n===1) nextSoul=t;
         nextHit=t+cd;
       } else if(has("fire") && t===nextFire){ deal(FIRE[Math.min(n,4)-1]*redNoPen); nextFire=t+1; }
-      else if(has("soul") && t===nextSoul){ deal(soulD*redFull); nextSoul=t+.5; }
+      else if(has("soul") && t===nextSoul){ deal(soulD*redFull); soulN++; nextSoul=soulN>=14?Infinity:t+.5; }
       if(left<=1e-9){ killT=t; break; }
     }
     if(cur>0) segs.push(cur);
