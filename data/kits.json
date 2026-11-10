@@ -4860,12 +4860,17 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Charge up explosive comets to rain destruction on your enemy's base. Collect alchemy crystals to unlock even stronger abilities!",
-  "adv": "",
+  "adv": "Death Adder spawns with the Charge Explosive Comet ability. Alchemy Crystals spawn around the map every so often and despawn after 3 minutes. Collecting them gives you crystals to shoot (your UI shows how many you're holding), and collecting enough levels up your comet. The count resets every level, and it only matters how many you collect, even if you're already full.\nHold the ability to charge a comet, then release to shoot it. Each charge takes 1 second, and the first one has to finish before you can shoot. You can cancel any time, and the ability has a 1 second cooldown. Each shot uses 1 crystal no matter how many charges you use. While charging you move about 50% slower.\nThe comet deals hit damage, then explodes for around 60 damage, with less damage the farther the explosion is from the target. Neither part has armor penetration. Level 3 unlocks a second charge and level 5 a third; extra charges make the explosion bigger and hit blocks harder.",
   "items": [],
   "abilities": [
    {
     "name": "Charge Explosive Comet",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Uses 1 Alchemy Crystal",
+    "desc": "Hold to charge (1 second per charge), release to shoot. The comet deals hit damage and then explodes for around 60 damage, with falloff. You move about 50% slower while charging. Cancel any time.",
+    "cd": 1,
+    "dmgText": "Hit 10-24 + ~60 explosion (by level)",
+    "nodps": true
    }
   ],
   "history": [
@@ -4927,7 +4932,163 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Alchemy Crystals",
+    "when": "Around the map",
+    "desc": "Crystals spawn every so often and despawn after 3 minutes. Collect them to get shots and to level up your comet."
+   },
+   {
+    "name": "Heavy Charge",
+    "when": "While charging",
+    "desc": "You move about 50% slower (48 blocks took 13.9 seconds)."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Comet levels",
+    "head": [
+     "Level",
+     "Crystals held",
+     "Collect to level up",
+     "Charges",
+     "Hit damage",
+     "Total (no armor)",
+     "Total vs iron armor"
+    ],
+    "rows": [
+     [
+      "1",
+      "2",
+      "5",
+      "1",
+      "10",
+      "~69",
+      "30.49"
+     ],
+     [
+      "2",
+      "3",
+      "7",
+      "1",
+      "12",
+      "73",
+      "~32.1"
+     ],
+     [
+      "3",
+      "4",
+      "8",
+      "2",
+      "14",
+      "76",
+      "~33.4"
+     ],
+     [
+      "4",
+      "5",
+      "12",
+      "2",
+      "18",
+      "~80",
+      "35.28"
+     ],
+     [
+      "5 (max)",
+      "5",
+      "-",
+      "3",
+      "24",
+      "~86",
+      "37.7"
+     ]
+    ],
+    "note": "The explosion is around 60 damage at every level, with falloff if it lands near the target instead of on them. No armor penetration. Totals marked ~ are worked out from your tests."
+   },
+   {
+    "title": "Block damage",
+    "head": [
+     "Level",
+     "What it breaks"
+    ],
+    "rows": [
+     [
+      "1",
+      "-"
+     ],
+     [
+      "2",
+      "Wool and wood with ease, about 25% of a stone block"
+     ],
+     [
+      "3",
+      "One shots stone even with 1 charge, more stone with 2 charges. A full charge does a little damage to obsidian"
+     ],
+     [
+      "4",
+      "A direct hit takes obsidian down to about 20% health. 2 charges spread it to more obsidian around it"
+     ],
+     [
+      "5",
+      "Deletes layers of stone with 1 charge. Obsidian goes very low but can't be one shot. More charges only make the blast bigger"
+     ]
+    ]
+   },
+   {
+    "title": "Charging speed",
+    "head": [
+     "",
+     "Speed"
+    ],
+    "rows": [
+     [
+      "Walking",
+      "6.86 blocks/s"
+     ],
+     [
+      "While charging",
+      "3.45 blocks/s (about 50% slower)"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Playing for damage",
+    "text": "Just play normally and collect crystals as you go."
+   },
+   {
+    "title": "Early bed break",
+    "text": "Unlock the 2nd charge, then fire 2 quick 1 charge comets to break the obsidian and the bed before they buy Bed Shield."
+   },
+   {
+    "title": "Against Bed Shield",
+    "text": "If they buy Bed Shield, charge a comet, drop down onto the bed and explode it there."
+   },
+   {
+    "title": "Better TNT rain",
+    "text": "Have a teammate break the bed while you shoot explosions at the defenders."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Bed Shield",
+    "text": "Bed Shield (5 diamonds, 3 minutes) stops Death Adder from shooting your bed, unless it's right on top of the bed and willing to hurt itself."
+   },
+   {
+    "title": "Chase it",
+    "text": "Without Bed Shield, you can only stop it by chasing it or being close enough to keep it away from your bed."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Frost Skin",
+    "img": "images/skins/death-adder-frost.webp"
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "Destroying obsidian that easily is very strong and makes it a great bed breaker. Charging is balanced, and the damage is fair since you need to find crystals to use it. Bed Shield also stops it for 3 minutes, unless it's on top of your bed and hurting itself with the explosion."
  },
  {
   "name": "Dino Tamer Dom",
