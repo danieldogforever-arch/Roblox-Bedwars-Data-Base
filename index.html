@@ -3,35 +3,86 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Bedwars Kit Guide</title>
+<title>Bedwars User Guide</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="css/site.css">
 <style>
-:root{--bg:#0a0418;--card:#150b38;--muted:#b9aee0;--accent:#a98bff;color-scheme:dark}
+:root{--bg:#0a0418;--card:#150b38;--muted:#b9aee0;--accent:#a98bff;--gold:#ffd166;color-scheme:dark}
 *{box-sizing:border-box;font-weight:400}
-body{margin:0;min-height:100vh;color:#fff;font:400 1.1rem/1.5 "Jua","Trebuchet MS",system-ui,sans-serif;background:radial-gradient(circle at 15% 8%,rgba(110,60,220,.35),transparent 40%),radial-gradient(circle at 85% 92%,rgba(120,50,230,.3),transparent 45%),radial-gradient(circle,rgba(255,255,255,.4) 1px,transparent 1.6px) 0 0/87px 87px,radial-gradient(circle,rgba(180,156,255,.32) 2px,transparent 2.8px) 37px 51px/131px 131px,var(--bg);background-attachment:fixed;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
-.wrap{max-width:900px;margin:0 auto;padding:48px 18px}
-.box{background:rgba(18,8,48,.55);border:4px solid #fff;padding:28px;margin-top:26px}
-h1{font-size:clamp(2.2rem,7vw,3.4rem);margin:0;line-height:1.1}
-h2{font-size:1.6rem;margin:0 0 6px}
-p{margin:0 0 12px;color:var(--muted)}
-.links{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:26px}
-a.card{display:block;text-decoration:none;color:#fff;background:rgba(18,8,48,.55);border:4px solid #fff;padding:22px}
-a.card:hover,a.card:focus-visible{border-color:var(--accent);outline:none}
-a.card p{margin:0}
+html,body{overflow-x:hidden}
+body{margin:0;min-height:100vh;color:#fff;font:400 1.08rem/1.5 "Jua","Trebuchet MS",system-ui,sans-serif;background:radial-gradient(circle at 15% 30%,rgba(110,60,220,.3),transparent 40%),radial-gradient(circle at 85% 92%,rgba(120,50,230,.28),transparent 45%),radial-gradient(circle,rgba(255,255,255,.4) 1px,transparent 1.6px) 0 0/87px 87px,radial-gradient(circle,rgba(180,156,255,.32) 2px,transparent 2.8px) 37px 51px/131px 131px,var(--bg);background-attachment:fixed;padding-bottom:env(safe-area-inset-bottom,0)}
+.wrap{max-width:1080px;margin:0 auto;padding:30px 18px 56px}
+.intro{background:rgba(18,8,48,.6);border:4px solid #fff;padding:24px 26px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:24px;align-items:center}
+.intro h1{font-size:clamp(1.7rem,4.6vw,2.4rem);margin:0 0 8px;line-height:1.15}
+.intro p{color:var(--muted);margin:0}
+.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;min-width:280px}
+.stat{background:rgba(255,255,255,.06);border-radius:16px;padding:10px 14px;text-align:center}
+.stat b{display:block;font-size:1.7rem;line-height:1.1;font-weight:400}
+.stat span{color:var(--muted);font-size:.85rem}
+h2.sec{font-size:1.5rem;margin:34px 0 14px;display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+h2.sec small{color:var(--muted);font-size:.95rem}
+.tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+a.tool{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;align-items:center;text-decoration:none;color:#fff;background:rgba(18,8,48,.6);border:4px solid #fff;padding:18px;transition:transform .15s,border-color .15s,box-shadow .15s}
+a.tool:hover{transform:translateY(-3px);border-color:var(--accent);box-shadow:0 10px 30px rgba(120,70,255,.25)}
+a.tool:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+a.tool h3{margin:0 0 4px;font-size:1.4rem}
+a.tool p{margin:0;color:var(--muted);font-size:.98rem}
+.art{width:120px;height:110px;position:relative;display:grid;place-items:center;border-radius:18px;background:radial-gradient(circle at 50% 40%,rgba(169,139,255,.35),rgba(21,11,56,.9) 72%)}
+.art .k{position:absolute;width:64px;height:64px;object-fit:contain}
+.art .k1{left:-6px;top:30px;transform:rotate(-10deg)}.art .k2{left:25px;top:6px;z-index:2;width:70px;height:70px}.art .k3{right:-6px;top:32px;transform:rotate(10deg)}
+.tiers{display:grid;grid-template-columns:repeat(3,26px);gap:6px}
+.tiers i{font-style:normal;display:grid;place-items:center;height:26px;border-radius:7px;color:#12082e;font-size:.85rem}
+.calc{display:flex;flex-direction:column;align-items:center;gap:4px}
+.calc img{width:56px;height:56px;object-fit:contain}
+.calc span{font-size:.95rem;color:var(--gold)}
+.rand{display:flex;align-items:center;gap:2px}
+.rand img{width:48px;height:48px;object-fit:contain;background:rgba(255,255,255,.08);border-radius:12px;border:2px solid var(--gold)}
+.rand b{color:var(--gold);font-weight:400}
+.prog{height:14px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden;border:2px solid rgba(255,255,255,.35);margin-bottom:14px}
+.prog i{display:block;height:100%;background:linear-gradient(90deg,#a98bff,#ffd166)}
+.done{display:grid;grid-template-columns:repeat(auto-fill,minmax(92px,1fr));gap:10px}
+.done a{display:flex;flex-direction:column;align-items:center;gap:4px;text-decoration:none;color:#fff;background:rgba(18,8,48,.6);border:2px solid rgba(255,255,255,.25);border-radius:16px;padding:8px 6px;font-size:.85rem;text-align:center;line-height:1.15;transition:border-color .15s}
+.done a:hover{border-color:#fff}
+.done a:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.done img{width:60px;height:60px;object-fit:contain}
+.foot{margin-top:34px;text-align:center;font-size:.9rem;color:var(--muted)}
+.foot a{color:var(--accent)}
+@media(max-width:820px){.intro{grid-template-columns:minmax(0,1fr)}.stats{min-width:0;grid-template-columns:repeat(4,minmax(0,1fr))}.tools{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:520px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}a.tool{grid-template-columns:88px minmax(0,1fr);gap:14px;padding:14px}.art{width:88px;height:88px;transform:scale(.8);transform-origin:left center}.intro{padding:18px}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <h1>Bedwars Kit Guide</h1>
-  <div class="box"><p style="margin:0">Stats, tiers, abilities and fusions for every kit. Replace this text with a short introduction to the game and the site.</p></div>
-  <div class="links">
-    <a class="card" href="kit-machine.html"><h2>Kit Machine</h2><p>Look up any kit: stats, tier, class, skins, abilities and best fusions.</p></a>
-    <a class="card" href="charts.html"><h2>Tier Lists</h2><p>Casual and Ranked tier lists. Click any kit to open it in the Kit Machine.</p></a>
-    <a class="card" href="calculator.html"><h2>Damage Calculator</h2><p>Pick a weapon, buffs, armor and a target kit to see damage per hit, hits to kill and true HP.</p></a>
-    <a class="card" href="randomizer.html"><h2>Kit Randomizer</h2><p>Spin for a random kit or a random fusion, with filters for class, tier and difficulty.</p></a>
+<header class="site-head"><a class="brand" href="index.html"><img src="images/logo.png" alt="" width="96" height="96"><span><b>Bedwars User Guide</b><small>Kits, tiers, damage and more</small></span></a></header>
+<nav class="site-nav" aria-label="Pages"><div class="in"><a href="index.html" aria-current="page">Home</a><a href="kit-machine.html">Kit Machine</a><a href="charts.html">Tier Lists</a><a href="calculator.html">Damage Calculator</a><a href="randomizer.html">Kit Randomizer</a></div></nav>
+<main class="wrap">
+  <section class="intro">
+    <div>
+      <h1>Welcome to the Bedwars User Guide</h1>
+      <p>Everything you need to know about BedWars kits: stats, abilities, tier lists, balance history, damage numbers and the best fusions. All tested and written by players.</p>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>114</b><span>kits</span></div>
+      <div class="stat"><b>23</b><span>full guides</span></div>
+      <div class="stat"><b>1,091</b><span>balance changes</span></div>
+      <div class="stat"><b>50</b><span>fusions</span></div>
+    </div>
+  </section>
+
+  <h2 class="sec">Tools</h2>
+  <div class="tools">
+    <a class="tool" href="kit-machine.html"><span class="art"><img class="k k1" src="images/kits/void-knight.webp" alt=""><img class="k k2" src="images/kits/crocowolf.webp" alt=""><img class="k k3" src="images/kits/cobalt.webp" alt=""></span><span><h3>Kit Machine</h3><p>Look up any kit: stats, tier, class, skins, abilities, best fusions and balance history.</p></span></a>
+    <a class="tool" href="charts.html"><span class="art"><span class="tiers"><i style="background:#ff4d6d">OP</i><i style="background:#ff8a5c">S</i><i style="background:#ffd166">A</i><i style="background:#5fe3a1">B</i><i style="background:#5cc8ff">C</i><i style="background:#a98bff">F</i></span></span><span><h3>Tier Lists</h3><p>Casual and Ranked tier lists. Search for a kit, or download the list as an image.</p></span></a>
+    <a class="tool" href="calculator.html"><span class="art"><span class="calc"><img src="images/items/diamond-sword.png" alt=""><span>42 → 18.48</span></span></span><span><h3>Damage Calculator</h3><p>Pick a weapon, buffs, enchants, armor and a target kit to see damage per hit, hits to kill and true HP.</p></span></a>
+    <a class="tool" href="randomizer.html"><span class="art"><span class="rand"><img src="images/kits/cogsworth.webp" alt=""><b>+</b><img src="images/kits/farmer-cletus.webp" alt=""></span></span><span><h3>Kit Randomizer</h3><p>Can't decide? Spin for a random kit or a random fusion, with filters for class, tier and difficulty.</p></span></a>
   </div>
-<p style="margin-top:28px;text-align:center;font-size:.9rem">Kit descriptions and item names from the <a href="https://robloxbedwars.fandom.com/wiki/Kit" style="color:#a98bff">Roblox Bedwars Wiki</a>.</p>
-</div>
+
+  <h2 class="sec">Finished kit guides <small>23 of 114 kits</small></h2>
+  <div class="prog" role="img" aria-label="23 of 114 kit guides finished"><i style="width:20.2%"></i></div>
+  <div class="done"><a href="kit-machine.html#abaddon"><img src="images/kits/abaddon.webp" alt="" loading="lazy">Abaddon</a><a href="kit-machine.html#adetunde"><img src="images/kits/adetunde.webp" alt="" loading="lazy">Adetunde</a><a href="kit-machine.html#aery"><img src="images/kits/aery.webp" alt="" loading="lazy">Aery</a><a href="kit-machine.html#agni"><img src="images/kits/agni.webp" alt="" loading="lazy">Agni</a><a href="kit-machine.html#alchemist"><img src="images/kits/alchemist.webp" alt="" loading="lazy">Alchemist</a><a href="kit-machine.html#arachne"><img src="images/kits/arachne.webp" alt="" loading="lazy">Arachne</a><a href="kit-machine.html#archer"><img src="images/kits/archer.webp" alt="" loading="lazy">Archer</a><a href="kit-machine.html#ares"><img src="images/kits/ares.webp" alt="" loading="lazy">Ares</a><a href="kit-machine.html#axolotl-amy"><img src="images/kits/axolotl-amy.webp" alt="" loading="lazy">Axolotl Amy</a><a href="kit-machine.html#baker"><img src="images/kits/baker.webp" alt="" loading="lazy">Baker</a><a href="kit-machine.html#barbarian"><img src="images/kits/barbarian.webp" alt="" loading="lazy">Barbarian</a><a href="kit-machine.html#beekeeper-beatrix"><img src="images/kits/beekeeper-beatrix.webp" alt="" loading="lazy">Beekeeper Beatrix</a><a href="kit-machine.html#bekzat"><img src="images/kits/bekzat.webp" alt="" loading="lazy">Bekzat</a><a href="kit-machine.html#bounty-hunter"><img src="images/kits/bounty-hunter.webp" alt="" loading="lazy">Bounty Hunter</a><a href="kit-machine.html#builder"><img src="images/kits/builder.webp" alt="" loading="lazy">Builder</a><a href="kit-machine.html#caitlyn"><img src="images/kits/caitlyn.webp" alt="" loading="lazy">Caitlyn</a><a href="kit-machine.html#cobalt"><img src="images/kits/cobalt.webp" alt="" loading="lazy">Cobalt</a><a href="kit-machine.html#cogsworth"><img src="images/kits/cogsworth.webp" alt="" loading="lazy">Cogsworth</a><a href="kit-machine.html#conqueror"><img src="images/kits/conqueror.webp" alt="" loading="lazy">Conqueror</a><a href="kit-machine.html#crocowolf"><img src="images/kits/crocowolf.webp" alt="" loading="lazy">Crocowolf</a><a href="kit-machine.html#crypt"><img src="images/kits/crypt.webp" alt="" loading="lazy">Crypt</a><a href="kit-machine.html#cyber"><img src="images/kits/cyber.webp" alt="" loading="lazy">Cyber</a><a href="kit-machine.html#void-knight"><img src="images/kits/void-knight.webp" alt="" loading="lazy">Void Knight</a></div>
+
+  <p class="foot">Kit descriptions and item names from the <a href="https://robloxbedwars.fandom.com/wiki/Kit">Roblox Bedwars Wiki</a>.</p>
+</main>
 </body>
 </html>

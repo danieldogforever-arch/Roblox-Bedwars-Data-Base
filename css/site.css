@@ -1,0 +1,25 @@
+/* Shared site header: logo + title band, then the page buttons */
+.site-head{position:relative;overflow:hidden;background:
+  radial-gradient(circle at 18% 30%,rgba(205,170,255,.35),transparent 45%),
+  radial-gradient(circle at 82% 70%,rgba(150,110,255,.3),transparent 50%),
+  radial-gradient(circle,rgba(255,255,255,.55) 1px,transparent 1.6px) 0 0/61px 61px,
+  radial-gradient(circle,rgba(230,215,255,.4) 1.6px,transparent 2.4px) 23px 31px/97px 97px,
+  linear-gradient(180deg,#4a2c98 0%,#3a2182 55%,#2c176a 100%);
+  padding:calc(18px + env(safe-area-inset-top,0px)) 16px 18px;color:#fff;font-family:"Jua","Trebuchet MS",system-ui,sans-serif}
+.site-head .brand{display:flex;align-items:center;justify-content:center;gap:18px;text-decoration:none;color:#fff;max-width:1180px;margin:0 auto}
+.site-head .brand img{width:96px;height:96px;flex:none;filter:drop-shadow(0 6px 18px rgba(20,0,60,.55))}
+.site-head .brand b{font-weight:400;font-size:clamp(1.9rem,5.4vw,3rem);line-height:1.05;letter-spacing:.5px;text-shadow:0 3px 0 rgba(20,6,60,.55)}
+.site-head .brand small{display:block;font-size:clamp(.85rem,2.4vw,1.05rem);color:#e3d8ff;letter-spacing:.3px;text-shadow:none;margin-top:4px}
+.site-nav{background:#0b0520;border-top:2px solid rgba(255,255,255,.18);border-bottom:2px solid rgba(255,255,255,.18);font-family:"Jua","Trebuchet MS",system-ui,sans-serif}
+.site-nav .in{max-width:1180px;margin:0 auto;padding:10px 12px;display:flex;justify-content:center;flex-wrap:wrap;gap:8px}
+.site-nav a{color:#e9e3ff;text-decoration:none;font-size:1rem;line-height:1.2;padding:8px 16px;border-radius:999px;border:2px solid rgba(255,255,255,.22);white-space:nowrap;transition:border-color .15s,background .15s}
+.site-nav a:hover{border-color:#fff;background:rgba(255,255,255,.06)}
+.site-nav a:focus-visible{outline:3px solid #a98bff;outline-offset:2px}
+.site-nav a[aria-current=page]{background:#fff;color:#12082e;border-color:#fff}
+@media(max-width:560px){
+  .site-head{padding-top:calc(14px + env(safe-area-inset-top,0px));padding-bottom:14px}
+  .site-head .brand{gap:12px}
+  .site-head .brand img{width:64px;height:64px}
+  .site-nav .in{gap:6px;padding:8px}
+  .site-nav a{font-size:.88rem;padding:6px 11px}
+}
