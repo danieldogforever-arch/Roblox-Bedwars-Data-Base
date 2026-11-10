@@ -4640,23 +4640,30 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Deploy and control drones to pickup resources from around the map. Drones can also airdrop primed TNT.",
-  "adv": "",
+  "adv": "Cyber can buy a Drone for 40 iron. Equip it to take control and fly it anywhere on the map. The drone can pick up iron, diamonds or emeralds, but only one at a time.\nWhile you're not flying it, you can load up to 10 TNT into the drone. While flying, press X to drop a TNT, which starts detonating wherever it lands.\nThe drone has a 490 second battery. When it runs out, the drone explodes (it doesn't do damage) and you have to buy a new one. Stop using the drone to instantly refill the battery.\nThe drone only has 20 HP and doesn't show a health bar, so it's hard to tell how hurt it is. If Cyber dies, the drone stops completely wherever it is.",
   "items": [
    {
     "name": "Drone",
-    "img": "images/items/drone.png"
+    "img": "images/items/drone.png",
+    "note": "Cost: 40 iron",
+    "desc": "Equip to fly it around the map. 20 HP, no health bar. Carries one resource at a time and up to 10 TNT. Battery lasts 490 seconds and refills instantly when you stop using it."
    }
   ],
   "abilities": [
    {
     "name": "Speed Boost",
-    "note": "Only while holding the Drone",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Only while flying the Drone",
+    "desc": "Makes the drone faster for 4 seconds.",
+    "cd": 12,
+    "nodps": true
    },
    {
     "name": "TNT Drop",
-    "note": "Only while holding the Drone",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Only while flying the Drone",
+    "desc": "Press X to drop one of the drone's TNT (up to 10 loaded). It starts detonating wherever it lands.",
+    "nodps": true
    }
   ],
   "history": [
@@ -4760,7 +4767,81 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Battery",
+    "when": "While flying",
+    "desc": "490 seconds of flight. When it runs out the drone explodes harmlessly and you need a new one. Stop flying to refill it instantly."
+   },
+   {
+    "name": "Fragile",
+    "when": "Always",
+    "desc": "The drone only has 20 HP and no health bar. If Cyber dies, the drone stops where it is."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Drone stats",
+    "head": [
+     "Stat",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Cost",
+      "40 iron"
+     ],
+     [
+      "HP",
+      "20"
+     ],
+     [
+      "Battery",
+      "490 seconds"
+     ],
+     [
+      "TNT capacity",
+      "10"
+     ],
+     [
+      "Carries",
+      "1 resource at a time"
+     ],
+     [
+      "Speed",
+      "8.73 blocks/s (about +27% faster than walking)"
+     ],
+     [
+      "Speed Boost",
+      "About 10.8 blocks/s for 4 seconds (12s cooldown)"
+     ]
+    ],
+    "note": "Normal speed tested at 96 blocks in 11 seconds. The boosted speed is estimated from the patch notes (1.5 normal → 1.85 boosted, about 23% faster than the normal drone)."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Stay under bases",
+    "text": "The drone is very fragile, so fly under bases and only come up to grab loot quickly."
+   },
+   {
+    "title": "Watch your surroundings",
+    "text": "Keep an eye out for anyone trying to shoot down your drone."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Shoot it down",
+    "text": "Buy a bow and shoot it. It only takes 2 bow shots (depending on your kit) or 1 crossbow shot."
+   },
+   {
+    "title": "Kill Cyber",
+    "text": "If you kill Cyber, the drone stops completely where it is."
+   }
+  ],
+  "bal": "weak",
+  "balWhy": "Cyber is decent in lobbies where people don't go to diamond generators often, but when they do, it's super weak. It has no way to duplicate resources like other economy kits, and it's very fragile compared to other kits. It needs a heavy resource buff to be viable, and maybe more defense, like an upgraded drone that's slower and bulkier and swaps the speed boost for an attack."
  },
  {
   "name": "Death Adder",
