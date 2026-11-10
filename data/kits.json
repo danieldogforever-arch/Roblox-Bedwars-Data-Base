@@ -4108,14 +4108,14 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Being in the vicinity of damage dealt builds bloodlust. Activate Beast Form to temporarily give you enhanced damage, knockback, and movement speed. Dealing damage to non-player entities builds more bloodlust. When your bed breaks you will be given full bloodlust.",
-  "adv": "Crocowolf builds Bloodlust from damage dealt near it. Once you have 300 Bloodlust, you can activate Beast Form.\nBloodlust counts the base damage of every hit within 5 blocks of you: your hits, your teammates' hits and your enemies' hits, including hits on you. For example, an iron sword (30 damage) fills it in 10 hits, and a Rageblade gives 70 per hit. Hits on NPCs like Diamond Guards and the Titan count double, so you only need half as much. Kills don't give extra Bloodlust, and you lose all of it when you die. When your bed breaks, your bar fills all the way up.\nActivating Beast Form heals you 20 HP right away. While transformed you deal 25% more damage from every source (swords, ranged weapons and more), move about 27% faster, and deal 1 block more knockback. You have to wait 5 seconds before you can cancel it.",
+  "adv": "Crocowolf builds Bloodlust from damage dealt near it. Once you have 300 Bloodlust, you can activate Beast Form.\nBloodlust counts the base damage of every hit within 5 blocks of you: your hits, your teammates' hits and your enemies' hits, including hits on you. For example, an iron sword (30 damage) fills it in 10 hits, and a Rageblade gives 70 per hit. Hits on NPCs like Diamond Guards and the Titan count double, so you only need half as much. Kills don't give extra Bloodlust, and you lose all of it when you die. When your bed breaks, your bar fills all the way up.\nActivating Beast Form heals you 20 HP right away. While transformed you deal 25% more damage from every source (swords, ranged weapons and more), move 27.5% faster (1.275x), and deal 1 block more knockback.\nBeast Form slowly drains your Bloodlust, lasting about 12 seconds from a full bar. You have to wait 5 seconds before you can cancel it, and if you cancel early you keep whatever Bloodlust is left (cancel 6 seconds in and you keep about 50%). You can only activate it with a full bar.",
   "items": [],
   "abilities": [
    {
     "name": "Beast Form Activate/Deactivate",
     "img": "images/abilities/ability-template.png",
     "note": "Needs 300 Bloodlust",
-    "desc": "Transform into Beast Form: heal 20 HP instantly, deal 25% more damage from every source, move about 27% faster, and deal 1 block more knockback. You can cancel it after 5 seconds.",
+    "desc": "Transform into Beast Form: heal 20 HP instantly, deal 25% more damage from every source, move 27.5% faster, and deal 1 block more knockback. It drains your Bloodlust (about 12 seconds from full). You can cancel it after 5 seconds and keep whatever Bloodlust is left. Only works with a full bar.",
     "nodps": true
    }
   ],
@@ -4246,7 +4246,12 @@
      [
       "Speed",
       "6.86 blocks/s",
-      "about 8.73 blocks/s (+27%)"
+      "8.74 blocks/s (+27.5%)"
+     ],
+     [
+      "Duration",
+      "-",
+      "About 12 seconds (drains Bloodlust)"
      ],
      [
       "Knockback",
@@ -4264,7 +4269,7 @@
       "103.12"
      ]
     ],
-    "note": "Activating also heals 20 HP. You can cancel after 5 seconds."
+    "note": "Activating needs a full bar and heals 20 HP. You can cancel after 5 seconds and keep the Bloodlust you have left."
    },
    {
     "title": "Hits to fill Bloodlust (300)",
