@@ -5359,18 +5359,38 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Purchase Drills to deploy on Diamond and Emerald generators. Drills automatically harvest 2x gen resources. Control them to fight off attackers.",
-  "adv": "",
+  "adv": "Drill spawns with a Drill and a Tablet. You can buy more Drills for 3 emeralds each and hold as many as you want, but only 4 can be placed on the map at once.\nPlace a Drill on a generator to take it over and double its resources: you get 1 diamond straight into your inventory, and the generator's own diamond is stored inside the drill. There's also a 25% chance for an extra diamond or emerald to spawn inside it. You or your teammates can take the stored resources by holding R (Extract Ore).\nDrills get stronger as the global generators upgrade (every 5 minutes). They attack with a 0.5 second cooldown, but can't hit players standing 2 blocks above them within 3 blocks.\nUse the Tablet to control your drills, and press A or D to cycle back and forth between them.",
   "items": [
    {
     "name": "Drill",
-    "img": "images/items/drill.png"
+    "img": "images/items/drill.png",
+    "note": "Cost: 3 emeralds",
+    "desc": "Place it on a generator to double its resources. 450 HP and 30 damage at the start, getting stronger as generators upgrade. Only 4 can be placed at once.",
+    "cd": 0.5,
+    "dmg": 30,
+    "dmgText": "30 / 42 / 54 by game stage"
+   },
+   {
+    "name": "Tablet",
+    "img": "images/items/tablet.png",
+    "note": "Spawns with it",
+    "desc": "Take control of your drills. Press A or D to cycle back and forth between them."
    }
   ],
   "abilities": [
    {
     "name": "Swap Drills",
+    "img": "images/abilities/ability-template.png",
     "note": "Only while on the Tablet",
-    "img": "images/abilities/ability-template.png"
+    "desc": "Press A or D to switch to the previous or next drill.",
+    "nodps": true
+   },
+   {
+    "name": "Extract Ore",
+    "img": "images/abilities/ability-template.png",
+    "note": "Next to a drill",
+    "desc": "Hold R to take the resources stored inside a drill. Works for you and your teammates.",
+    "nodps": true
    }
   ],
   "history": [
@@ -5508,7 +5528,96 @@
    "tier": "10 (free)",
    "badge": "images/bp/s7.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Duplication",
+    "when": "Drill on a generator",
+    "desc": "You get 1 diamond in your inventory and the generator's own diamond is stored in the drill. 25% chance for an extra diamond or emerald inside it."
+   },
+   {
+    "name": "Scaling",
+    "when": "Global generator upgrades",
+    "desc": "Drills gain damage and HP as the generators upgrade every 5 minutes."
+   },
+   {
+    "name": "Blind Spot",
+    "when": "Always",
+    "desc": "Drills can't hit players standing 2 blocks above them within 3 blocks."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Drill stats by game stage",
+    "head": [
+     "Generators",
+     "Damage",
+     "HP"
+    ],
+    "rows": [
+     [
+      "Start (tier 1)",
+      "30",
+      "450"
+     ],
+     [
+      "Tier 2 (5 minutes)",
+      "42",
+      "700"
+     ],
+     [
+      "Tier 3",
+      "54",
+      "700"
+     ],
+     [
+      "Tier 4",
+      "54",
+      "700"
+     ]
+    ],
+    "note": "Drills attack every 0.5 seconds. Stats stay the same after tier 3."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Go to diamonds first",
+    "text": "When you spawn, rush to the diamond generator instead of the emerald one. Lots of people go to emeralds, so it isn't safe."
+   },
+   {
+    "title": "Build towers",
+    "text": "Protect the drill with tall towers of hard to break blocks like stone or wood so enemies can't get above it."
+   },
+   {
+    "title": "Guard it",
+    "text": "Have you or a teammate protect the drill if someone is targeting it."
+   },
+   {
+    "title": "Rush tier 3 generators",
+    "text": "Buy tier 3 generators for your team quickly, so you don't have to focus on protecting the drill as much."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Stand above it",
+    "text": "Build 2-3 blocks up and hit it until it's dead. It can't hit you from there."
+   },
+   {
+    "title": "Kill the camper",
+    "text": "If the Drill player is camping it, kill them first, then the drill is easy."
+   },
+   {
+    "title": "Team push",
+    "text": "Coordinate a team push to get rid of it early game."
+   },
+   {
+    "title": "Shoot them late game",
+    "text": "Once there are a bunch of drills late game, shoot them with crossbows or headhunters, and use fireballs if they're walled in."
+   }
+  ],
+  "skins": [],
+  "bal": "weak",
+  "balWhy": "People might ignore your drill, but it's easy to kill: even without standing above it, you can just run circles around it, since turning your camera doesn't turn the drill instantly and it has a slow cooldown. If you lose your drill early, you're done for, since another one costs 3 emeralds. The kit is only good because it spawns with the item, and that says everything."
  },
  {
   "name": "Eldertree",
