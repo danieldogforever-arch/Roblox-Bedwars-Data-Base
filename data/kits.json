@@ -4860,7 +4860,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Charge up explosive comets to rain destruction on your enemy's base. Collect alchemy crystals to unlock even stronger abilities!",
-  "adv": "Death Adder spawns with the Charge Explosive Comet ability. Alchemy Crystals spawn around the map every so often and despawn after 3 minutes. Collecting them gives you crystals to shoot (your UI shows how many you're holding), and collecting enough levels up your comet. The count resets every level, and it only matters how many you collect, even if you're already full.\nHold the ability to charge a comet, then release to shoot it. Each charge takes 1 second, and the first one has to finish before you can shoot. You can cancel any time, and the ability has a 1 second cooldown. Each shot uses 1 crystal no matter how many charges you use. While charging you move about 50% slower.\nThe comet deals hit damage, then explodes for around 60 damage, with less damage the farther the explosion is from the target. Neither part has armor penetration. Level 3 unlocks a second charge and level 5 a third; extra charges make the explosion bigger and hit blocks harder.",
+  "adv": "Death Adder spawns with the Charge Explosive Comet ability. Alchemy Crystals spawn around the map every so often and despawn after 3 minutes. Collecting them gives you crystals to shoot (your UI shows how many you're holding), and collecting enough levels up your comet. The count resets every level, and it only matters how many you collect, even if you're already full.\nHold the ability to charge a comet, then release to shoot it. Each charge takes 1 second, and the first one has to finish before you can shoot. You can cancel any time, and the ability has a 1 second cooldown. Each shot uses 1 crystal no matter how many charges you use. While charging you move about 50% slower.\nThe comet deals hit damage, then explodes for around 60 damage, with less damage the farther the explosion is from the target. Neither part has armor penetration. Level 3 unlocks a second charge and level 5 a third; extra charges make the explosion bigger. Block damage maxes out at level 3, which can take obsidian down by about 80%.",
   "items": [],
   "abilities": [
    {
@@ -5004,36 +5004,45 @@
       "37.7"
      ]
     ],
-    "note": "The explosion is around 60 damage at every level, with falloff if it lands near the target instead of on them. No armor penetration. Totals marked ~ are worked out from your tests."
+    "note": "The explosion is around 60 damage at most, with falloff if it lands near the target instead of right on them, so totals vary a bit. No armor penetration. Totals marked ~ are worked out from tests."
    },
    {
     "title": "Block damage",
     "head": [
      "Level",
-     "What it breaks"
+     "Wool",
+     "Wood",
+     "Stone",
+     "Ceramic",
+     "Obsidian"
     ],
     "rows": [
      [
       "1",
-      "-"
+      "Very easy",
+      "Easy",
+      "About 10%",
+      "No",
+      "No"
      ],
      [
       "2",
-      "Wool and wood with ease, about 25% of a stone block"
+      "Very easy",
+      "Very easy",
+      "About 25%",
+      "No",
+      "No"
      ],
      [
-      "3",
-      "One shots stone even with 1 charge, more stone with 2 charges. A full charge does a little damage to obsidian"
-     ],
-     [
-      "4",
-      "A direct hit takes obsidian down to about 20% health. 2 charges spread it to more obsidian around it"
-     ],
-     [
-      "5",
-      "Deletes layers of stone with 1 charge. Obsidian goes very low but can't be one shot. More charges only make the blast bigger"
+      "3+",
+      "Very easy",
+      "Very easy",
+      "Easy",
+      "Easy",
+      "Up to 80%"
      ]
-    ]
+    ],
+    "note": "Level 3 is the max block damage. After that, levels only add player damage, and extra charges make the blast bigger."
    },
    {
     "title": "Charging speed",
@@ -5101,18 +5110,23 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Can purchase a Dino mount. Charge into defenses to knock them down!",
-  "adv": "",
+  "adv": "Dino Tamer Dom can buy a Dino for 60 iron. Summoning it takes 2 seconds and slows you down a lot while it happens. Riding it makes you about 62.5% faster than walking. You keep the Dino when you get off, but you lose it when you die.\nWhile riding, you can use Charge (40 second cooldown). It lasts 3 seconds and fills a bar; the fuller the bar, the more damage the explosion does to blocks. The bar is full after 2 seconds. Running into any block during the charge makes it explode and ends the charge. You can't use weapons while charging.\nA full charge breaks up to 2 layers of obsidian, but not every block. Against a normal obsidian bed defense (8 obsidian around the bed) it breaks 1-3 blocks depending on how you hit it, and it can't get through 3 layers to expose the bed.",
   "items": [
    {
     "name": "Dino",
-    "img": "images/items/dino.png"
+    "img": "images/items/dino.png",
+    "note": "Cost: 60 iron",
+    "desc": "Takes 2 seconds to summon and slows you while summoning. Riding it makes you about 62.5% faster. Not used up when you get off, but you lose it when you die."
    }
   ],
   "abilities": [
    {
     "name": "Charge",
-    "note": "Only while on the dino",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Only while on the Dino",
+    "desc": "Charge forward for 3 seconds. A bar fills over 2 seconds; the fuller it is, the more block damage the explosion does. Hitting any block explodes it and ends the charge. Can break up to 2 layers of obsidian. No weapons while charging.",
+    "cd": 40,
+    "nodps": true
    }
   ],
   "history": [
@@ -5217,7 +5231,99 @@
    "tier": "20 (free)",
    "badge": "images/bp/s5.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Mounted",
+    "when": "Riding the Dino",
+    "desc": "About 62.5% faster than walking. You lose the Dino if you die."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Speed",
+    "head": [
+     "",
+     "Speed",
+     "Compared to walking"
+    ],
+    "rows": [
+     [
+      "Walking",
+      "6.86 blocks/s",
+      "-"
+     ],
+     [
+      "Summoning the Dino",
+      "2.4 blocks/s",
+      "About 65% slower"
+     ],
+     [
+      "Riding",
+      "11.16 blocks/s",
+      "About +62.5%"
+     ],
+     [
+      "Charging",
+      "About 13.5 blocks/s",
+      "About +100% (2x)"
+     ]
+    ],
+    "note": "Tested: 24 blocks in 10s while summoning, 96 blocks in 8.6s riding, 24 blocks in 1.8s charging."
+   },
+   {
+    "title": "What a full charge breaks",
+    "head": [
+     "Defense",
+     "Result"
+    ],
+    "rows": [
+     [
+      "Wool, wood, stone, ceramic",
+      "Breaks easily"
+     ],
+     [
+      "8 obsidian around the bed",
+      "1-3 blocks, depending on how you hit it"
+     ],
+     [
+      "2 layers of obsidian",
+      "Can break through, but not every block"
+     ],
+     [
+      "3+ layers of obsidian",
+      "Can't expose the bed"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Speed",
+    "text": "If you only want it for movement, go ahead. The Dino is a fast way to get around."
+   },
+   {
+    "title": "Bed breaking",
+    "text": "Ceramic, wool, wood and stone are really easy to break. Obsidian is hard but doable in harder lobbies."
+   },
+   {
+    "title": "Beating Anti-Dino",
+    "text": "If you see an Anti-Dino defense, have a teammate (or yourself) rain TNT everywhere to clear the blocks. Use Siege TNT against ceramic. Against obsidian, the Dino won't help as much."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Spam blocks",
+    "text": "Spam wool around your bed and place blocks everywhere so it can't charge in."
+   },
+   {
+    "title": "Anti-Dino defense",
+    "text": "Place blocks around the second layer of your defense (it ends up looking like a UFO), so the charge only breaks the outer wool and ceramic and doesn't expose the bed."
+   }
+  ],
+  "skins": [],
+  "bal": "sup",
+  "balWhy": "You lose the Dino when you die, and these days it's mostly used for speed since the charge is very easy to counter. It isn't very unique and needs a rework."
  },
  {
   "name": "Drill",
