@@ -5110,13 +5110,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Can purchase a Dino mount. Charge into defenses to knock them down!",
-  "adv": "Dino Tamer Dom can buy a Dino for 60 iron. Summoning it takes 2 seconds and slows you down a lot while it happens. Riding it makes you about 62.5% faster than walking. You keep the Dino when you get off, but you lose it when you die.\nWhile riding, you can use Charge (40 second cooldown). It lasts 3 seconds and fills a bar; the fuller the bar, the more damage the explosion does to blocks. The bar is full after 2 seconds. Running into any block during the charge makes it explode and ends the charge. You can't use weapons while charging.\nA full charge breaks up to 2 layers of obsidian, but not every block. Against a normal obsidian bed defense (8 obsidian around the bed) it breaks 1-3 blocks depending on how you hit it, and it can't get through 3 layers to expose the bed.",
+  "adv": "Dino Tamer Dom can buy a Dino for 60 iron. Summoning it takes 2 seconds and slows you down a lot while it happens. Riding it makes you about 20% faster than walking. You keep the Dino when you get off, but you lose it when you die.\nWhile riding, you can use Charge (40 second cooldown). It lasts 3 seconds and fills a bar; the fuller the bar, the more damage the explosion does to blocks. The bar is full after 2 seconds. Ramming a player deals about 85 damage with no armor penetration (about 38 to iron armor). Running into any block during the charge makes it explode and ends the charge. You can't use weapons while charging.\nA full charge breaks up to 2 layers of obsidian, but not every block. Against a normal obsidian bed defense (8 obsidian around the bed) it breaks 1-3 blocks depending on how you hit it, and it can't get through 3 layers to expose the bed.",
   "items": [
    {
     "name": "Dino",
     "img": "images/items/dino.png",
     "note": "Cost: 60 iron",
-    "desc": "Takes 2 seconds to summon and slows you while summoning. Riding it makes you about 62.5% faster. Not used up when you get off, but you lose it when you die."
+    "desc": "Takes 2 seconds to summon and slows you while summoning. Riding it makes you about 20% faster. Not used up when you get off, but you lose it when you die."
    }
   ],
   "abilities": [
@@ -5124,8 +5124,9 @@
     "name": "Charge",
     "img": "images/abilities/ability-template.png",
     "note": "Only while on the Dino",
-    "desc": "Charge forward for 3 seconds. A bar fills over 2 seconds; the fuller it is, the more block damage the explosion does. Hitting any block explodes it and ends the charge. Can break up to 2 layers of obsidian. No weapons while charging.",
+    "desc": "Charge forward for 3 seconds. A bar fills over 2 seconds; the fuller it is, the more block damage the explosion does. Ramming a player deals about 85 damage (no armor penetration). Hitting any block explodes it and ends the charge. Can break up to 2 layers of obsidian. No weapons while charging.",
     "cd": 40,
+    "dmgText": "About 85 on hit",
     "nodps": true
    }
   ],
@@ -5236,7 +5237,7 @@
    {
     "name": "Mounted",
     "when": "Riding the Dino",
-    "desc": "About 62.5% faster than walking. You lose the Dino if you die."
+    "desc": "About 20% faster than walking. You lose the Dino if you die."
    }
   ],
   "tables": [
@@ -5260,15 +5261,34 @@
      ],
      [
       "Riding",
-      "11.16 blocks/s",
-      "About +62.5%"
+      "8.28 blocks/s",
+      "About +20%"
      ],
      [
       "Charging",
       "About 13.7 blocks/s",
       "About +100% (2x)"
      ]
-    ]
+    ],
+    "note": "From tests: 96 blocks in 11.6s riding, 48 blocks in about 3.3s charging."
+   },
+   {
+    "title": "Charge damage",
+    "head": [
+     "Target",
+     "Damage"
+    ],
+    "rows": [
+     [
+      "No armor",
+      "About 85"
+     ],
+     [
+      "Iron armor",
+      "About 38"
+     ]
+    ],
+    "note": "Estimated from tests. No armor penetration."
    },
    {
     "title": "What a full charge breaks",

@@ -235,21 +235,6 @@
   "note": ""
  },
  {
-  "a": "Dino Tamer Dom",
-  "b": "Krystal",
-  "note": ""
- },
- {
-  "a": "Dino Tamer Dom",
-  "b": "Zephyr",
-  "note": ""
- },
- {
-  "a": "Dino Tamer Dom",
-  "b": "Ragnar",
-  "note": ""
- },
- {
   "a": "Cyber",
   "b": "Farmer Cletus",
   "note": ""
@@ -277,6 +262,21 @@
  {
   "a": "Death Adder",
   "b": "Flora",
+  "note": ""
+ },
+ {
+  "a": "Dino Tamer Dom",
+  "b": "Krystal",
+  "note": ""
+ },
+ {
+  "a": "Dino Tamer Dom",
+  "b": "Zephyr",
+  "note": ""
+ },
+ {
+  "a": "Dino Tamer Dom",
+  "b": "Ragnar",
   "note": ""
  }
 ]
