@@ -4344,7 +4344,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Claim souls to build your undead army! Could be unlocked for FREE by completing Crypt's Trials during the Halloween 2022 event.",
-  "adv": "Crypt spawns with the Necromancer Staff, which summons your skeleton army. Whenever a player dies, a gravestone appears that you can collect from any distance away; gravestones never despawn. Hold for 0.1 seconds within 3 blocks to pick one up. You can carry as many as you want, but only 5 skeletons can be out at once (melee and ranged together).\nThere are 2 kinds of skeletons. Melee skeletons have 150 HP, move at normal speed, and use the sword of the player you killed with that sword's cooldown and 75% of its damage. They hit every enemy bunched up in front of them, unlike a normal sword. Ranged skeletons have 100 HP and stay in place: a bow does 18 damage every 2.5 seconds, a crossbow does 28, and a headhunter does 33 every 3.5 seconds.\nSkeletons get the helmet of the player you killed (iron, diamond or emerald). At minimum they always get a leather helmet and a wood sword or bow. If the player took off their helmet before dying, the skeleton only gets leather. Skeletons last 2 minutes and use your enchants (except Soul Reaver, which gives you the stack instead).\nWhile holding the staff, you can use Set Target on an enemy within 9 blocks (1 second cooldown) and Recall Skeletons to teleport them all to you (5 second cooldown).",
+  "adv": "Crypt spawns with the Necromancer Staff, which summons your skeleton army. Whenever a player dies, a gravestone appears that you can collect from any distance away (if they died in the void, it shows up near the middle of the map); gravestones never despawn. Hold for 0.1 seconds within 3 blocks to pick one up. You can carry as many as you want, but only 5 skeletons can be out at once (melee and ranged together).\nThere are 2 kinds of skeletons. Melee skeletons have 150 HP, move at normal speed, and use the sword of the player you killed with that sword's cooldown and 75% of its damage. They hit every enemy bunched up in front of them, unlike a normal sword. Ranged skeletons have 100 HP and stay in place: a bow does 18 damage every 2.5 seconds, a crossbow does 28 and a headhunter does 33, both every 3.5 seconds.\nSkeletons get the helmet of the player you killed (iron, diamond or emerald). At minimum they always get a leather helmet and a wood sword or bow. If the player took off their helmet before dying, the skeleton only gets leather. Skeletons last 2 minutes, all die when you die, and use your enchants (except Soul Reaver, which gives you the stack instead).\nWhile holding the staff, you can use Set Target on an enemy within 9 blocks (1 second cooldown) and Recall Skeletons to teleport them all to you (5 second cooldown).",
   "items": [
    {
     "name": "Necromancer Staff",
@@ -4381,6 +4381,7 @@
     "img": "images/abilities/ability-template.png",
     "note": "Only while holding the Necromancer Staff",
     "desc": "Switch between Ranged and Melee skeletons.",
+    "cd": 0.5,
     "nodps": true
    }
   ],
@@ -4470,12 +4471,17 @@
    {
     "name": "Grave Collector",
     "when": "Any player dies",
-    "desc": "A gravestone appears that you can collect, no matter how far away it is. It never despawns."
+    "desc": "A gravestone appears that you can collect, no matter how far away it is. Players who die in the void still leave one, near the middle of the map. It never despawns."
    },
    {
     "name": "Inherited Gear",
     "when": "Summoning",
     "desc": "Skeletons get the killed player's helmet and weapon, with at least a leather helmet and a wood sword or bow."
+   },
+   {
+    "name": "Bound to Crypt",
+    "when": "You die",
+    "desc": "All your skeletons die with you."
    },
    {
     "name": "Shared Enchants",
@@ -4536,7 +4542,7 @@
      [
       "img:images/items/crossbow.png|Crossbow",
       "28",
-      "-"
+      "3.5s"
      ],
      [
       "img:images/items/headhunter.png|Headhunter",
@@ -4562,9 +4568,9 @@
      ],
      [
       "Iron",
-      "32%",
-      "221",
-      "147"
+      "20%",
+      "188",
+      "125"
      ],
      [
       "Diamond",
@@ -4579,7 +4585,7 @@
       "132"
      ]
     ],
-    "note": "Tested with 30 damage: 26.4 on leather, 20.4 on iron, 22.8 on diamond and emerald."
+    "note": "Tested with a wood sword (20 damage): 17.6 on leather, 16 on iron, 15.2 on diamond and emerald."
    }
   ],
   "strategy": [
@@ -4602,8 +4608,8 @@
     "text": "Take off your helmet right before you die so the skeleton only gets a leather helmet instead of your armor tier."
    },
    {
-    "title": "Jump in the void",
-    "text": "If you know you're going to die, jumping into the void can help you avoid giving Crypt a good skeleton."
+    "title": "Kill Crypt",
+    "text": "All of Crypt's skeletons die when Crypt dies, so going after Crypt takes out the whole army."
    },
    {
     "title": "Use ranged weapons",
