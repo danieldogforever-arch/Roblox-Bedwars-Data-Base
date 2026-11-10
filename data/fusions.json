@@ -81,11 +81,6 @@
  },
  {
   "a": "Axolotl Amy",
-  "b": "Conqueror",
-  "note": ""
- },
- {
-  "a": "Axolotl Amy",
   "b": "Ragnar",
   "note": ""
  },
@@ -212,6 +207,16 @@
  {
   "a": "Cogsworth",
   "b": "Farmer Cletus",
+  "note": ""
+ },
+ {
+  "a": "Conqueror",
+  "b": "Axolotl Amy",
+  "note": ""
+ },
+ {
+  "a": "Conqueror",
+  "b": "Vulcan",
   "note": ""
  }
 ]

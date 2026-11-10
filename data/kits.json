@@ -3583,7 +3583,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Deploy robots that search for generators and collect resources!",
-  "adv": "Cogsworth spawns with a Dimmy-X1 bot and the Overclock ability. You can buy as many Dimmy-X1 (50 iron) and Emmy-Z2 (1 emerald) bots as you want, but only 4 of each can be placed at once. Placing a bot takes 2.5 seconds and locks you in place.\nDimmy-X1 goes to the nearest diamond generator and brings the diamonds to your team chest. Emmy-Z2 collects emeralds and puts them in your personal chest. Bots have a 60% chance to double the resources they pick up.\nBots move as fast as players, take no knockback, can jump over 1 block gaps, and run away from enemies unless they're waiting for a diamond or emerald to spawn. They glow red on your screen when an enemy is within 8 blocks. They need a bridge to reach a generator, and sometimes the AI walks into the void.\nOverclock lasts 5 seconds (20 second cooldown) and makes your bots 1.85x faster. While it's active, every bot deals 4 damage every 0.5 seconds (10 ticks) in an 8 block radius with knockback, and Zaps enemies it hits. The damage stacks, so all 8 bots deal 32 per tick.",
+  "adv": "Cogsworth spawns with a Dimmy-X1 bot and the Overclock ability. You can buy as many Dimmy-X1 (50 iron) and Emmy-Z2 (1 emerald) bots as you want, but only 4 of each can be placed at once. Placing a bot takes 2.5 seconds and locks you in place.\nDimmy-X1 goes to the nearest diamond generator and brings the diamonds to your team chest. Emmy-Z2 collects emeralds and puts them in your personal chest. Bots have a 60% chance to double the resources they pick up, and you can also take resources straight off your bots.\nBots move as fast as players, take no knockback, can jump over 1 block gaps, and run away from enemies unless they're waiting for a diamond or emerald to spawn. They glow red on your screen when an enemy is within 8 blocks. They need a bridge to reach a generator, and sometimes the AI walks into the void.\nOverclock lasts 5 seconds (20 second cooldown) and makes your bots 1.85x faster. While it's active, every bot deals 4 damage every 0.5 seconds (10 ticks) in an 8 block radius with knockback, and Zaps enemies it hits. The damage stacks, so all 8 bots deal 32 per tick.",
   "items": [
    {
     "name": "Dimmy-X1",
@@ -3698,6 +3698,11 @@
     "name": "Duplication",
     "when": "Bot picks up resources",
     "desc": "60% chance to double the diamonds or emeralds it picks up."
+   },
+   {
+    "name": "Take From Bots",
+    "when": "Standing next to a bot",
+    "desc": "You can pick up the resources your bot is carrying straight off of it."
    },
    {
     "name": "Danger Glow",
@@ -3841,19 +3846,25 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Place banners to empower nearby allies.",
-  "adv": "",
+  "adv": "Conqueror can buy 3 banners in the shop for 60 iron each: the Defense Banner, Fire Banner and Heal Banner. You can hold up to 3 of each, but only 1 of each type can be placed at a time.\nBanners buff allies within 9 blocks, up to the 4 closest players, and disappear after 30 seconds. They're weak to pickaxes (16 hits with wood, 10 with stone, 7 with iron, 4 with diamond) and can also be destroyed with TNT or fireballs.\nThe Defense Banner makes you take no knockback. The Fire Banner gives your hits the Fire enchant, which lasts 5 seconds after the banner disappears or you leave its radius. The Heal Banner heals you every second based on your missing HP, so it heals more the lower you are.",
   "items": [
    {
-    "name": "Heal Banner",
-    "img": "images/items/heal-banner.png"
-   },
-   {
     "name": "Defense Banner",
-    "img": "images/items/defense-banner.png"
+    "img": "images/items/defense-banner.png",
+    "note": "Cost: 60 iron",
+    "desc": "Allies within 9 blocks take no knockback. Lasts 30 seconds."
    },
    {
     "name": "Fire Banner",
-    "img": "images/items/fire-banner.png"
+    "img": "images/items/fire-banner.png",
+    "note": "Cost: 60 iron",
+    "desc": "Allies within 9 blocks get the Fire enchant on their hits. It stays for 5 seconds after the banner disappears or you leave the radius. Lasts 30 seconds."
+   },
+   {
+    "name": "Heal Banner",
+    "img": "images/items/heal-banner.png",
+    "note": "Cost: 60 iron",
+    "desc": "Every second, heals allies within 9 blocks by 13% of their missing HP (at least 5). Healing goes down by 5% for each teammate in the area. Lasts 30 seconds."
    }
   ],
   "abilities": [],
@@ -3971,7 +3982,120 @@
    "tier": "40 (free)",
    "badge": "images/bp/s4.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Banner Rules",
+    "when": "Always",
+    "desc": "Hold up to 3 of each banner, but only 1 of each type can be placed at a time. Banners last 30 seconds and buff the 4 closest allies within 9 blocks."
+   },
+   {
+    "name": "Fragile",
+    "when": "Placed banners",
+    "desc": "Banners break fast to pickaxes and can be destroyed with TNT or fireballs."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Pickaxe hits to break a banner",
+    "head": [
+     "Pickaxe",
+     "Hits"
+    ],
+    "rows": [
+     [
+      "Wood",
+      "16"
+     ],
+     [
+      "Stone",
+      "10"
+     ],
+     [
+      "Iron",
+      "7"
+     ],
+     [
+      "Diamond",
+      "4"
+     ]
+    ],
+    "note": "TNT and fireballs also destroy banners."
+   },
+   {
+    "title": "Heal Banner healing (alone, 100 max HP)",
+    "head": [
+     "Your HP",
+     "Missing HP",
+     "Heal per second"
+    ],
+    "rows": [
+     [
+      "10",
+      "90",
+      "11.7"
+     ],
+     [
+      "25",
+      "75",
+      "9.75"
+     ],
+     [
+      "40",
+      "60",
+      "7.8"
+     ],
+     [
+      "50",
+      "50",
+      "6.5"
+     ],
+     [
+      "60",
+      "40",
+      "5.2"
+     ],
+     [
+      "75",
+      "25",
+      "5"
+     ],
+     [
+      "90",
+      "10",
+      "5"
+     ]
+    ],
+    "note": "13% of missing HP per second, at least 5. Kits with more max HP heal more, since it's a percentage. Healing is lower for each teammate in the area."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Bed breaks",
+    "text": "Go with a teammate and place all 3 banners on the bed (Defense, Heal, then Fire). Fight while your teammate breaks the bed, or switch roles if your teammate has a bed breaking kit."
+   },
+   {
+    "title": "Fire during fights",
+    "text": "Use the Fire Banner during fights. It's a bit more useful than the Heal Banner."
+   },
+   {
+    "title": "High HP teammates",
+    "text": "Kits with more HP, like Eldertree, get more out of the Heal Banner since it heals a percentage, not a set amount."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Mine them together",
+    "text": "Get a diamond pickaxe and have your team mine the banner together to break it almost instantly. Break speed upgrades make it even faster."
+   },
+   {
+    "title": "TNT and fireballs",
+    "text": "TNT and fireballs get rid of banners even quicker."
+   }
+  ],
+  "skins": [],
+  "bal": "weak",
+  "balWhy": "Conqueror costs a lot for banners that are easy to counter and don't do much. Its only really good use is the Defense Banner: no knockback for your team makes bed breaking easier."
  },
  {
   "name": "Crocowolf",
