@@ -1,9 +1,13 @@
-# Roblox Bedwars Data Base
+# Bedwars User Guide
 
-Kit guide website: home page, Kit Machine, and tier list charts.
+A fan-made guide to Roblox BedWars kits.
 
 - `index.html`: home page
 - `kit-machine.html`: kit lookup (kit data is at the top of the file)
-- `editor.html`: private tier list editor, used to build charts and export them as images
-- `data/`: kit data files (coming)
-- `images/`: kit, ability, item, class and skin pictures (coming)
+- `charts.html`: Casual and Ranked tier lists
+- `calculator.html`: damage calculator
+- `randomizer.html`: random kit and random fusion spinner
+- `editor.html`: tier list editor
+- `data/`: kit, fusion and tier list data
+- `images/`: kit, item, ability, class, skin and site pictures
+- `css/site.css`: shared header styles

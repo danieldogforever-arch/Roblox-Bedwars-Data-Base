@@ -2278,7 +2278,7 @@
       "14%"
      ]
     ],
-    "note": "These are estimated chances, smoothed out from our test results so they rise steadily as you add bees. The real chances may be a little different. Each drop is 1 iron, 1 diamond or 1 emerald, and a hive doesn't drop any faster after 10 bees. Going past 10 bees may raise the emerald chance a little, up to 15 bees."
+    "note": "These are approximate chances. Each drop is 1 iron, 1 diamond or 1 emerald, and a hive doesn't drop any faster after 10 bees. Going past 10 bees may raise the emerald chance a little, up to 15 bees."
    }
   ],
   "bal": "bal",
@@ -2758,7 +2758,7 @@
      [
       "2 - 3 min",
       "30 - 60",
-      "Unknown"
+      "-"
      ],
      [
       "3 - 6 min",
@@ -2781,7 +2781,7 @@
       "10 - 15"
      ]
     ],
-    "note": "These are estimates, not exact numbers. The 2 - 3 minute iron range is a rough guess. They don't include the double rewards from level 5."
+    "note": "These are approximate amounts. They don't include the double rewards from level 5."
    }
   ],
   "strategy": [
@@ -3247,7 +3247,7 @@
       "Any player in the server has diamond armor or higher, any kit"
      ]
     ],
-    "note": "Special contracts only have a chance to appear. Except for Focus, they depend on the target's kit and armor. Info is from the wiki, not our own testing."
+    "note": "Special contracts only have a chance to appear. Except for Focus, they depend on the target's kit and armor."
    }
   ],
   "passives": [
@@ -4585,7 +4585,7 @@
       "132"
      ]
     ],
-    "note": "Tested with a wood sword (20 damage): 17.6 on leather, 16 on iron, 15.2 on diamond and emerald."
+    "note": "Example: a wood sword (20 damage) does 17.6 to leather, 16 to iron, and 15.2 to diamond and emerald."
    }
   ],
   "strategy": [
@@ -4817,7 +4817,7 @@
       "About 10.8 blocks/s for 4 seconds (12s cooldown)"
      ]
     ],
-    "note": "Normal speed tested at 96 blocks in 11 seconds. The boosted speed is estimated from the patch notes (1.5 normal → 1.85 boosted, about 23% faster than the normal drone)."
+    "note": "Speed Boost makes the drone about 23% faster than its normal speed."
    }
   ],
   "strategy": [
@@ -5004,7 +5004,7 @@
       "37.7"
      ]
     ],
-    "note": "The explosion is around 60 damage at most, with falloff if it lands near the target instead of right on them, so totals vary a bit. No armor penetration. Totals marked ~ are worked out from tests."
+    "note": "The explosion is around 60 damage at most, with falloff if it lands near the target instead of right on them, so totals vary a bit. No armor penetration. Totals marked ~ are approximate."
    },
    {
     "title": "Block damage",
@@ -5265,11 +5265,10 @@
      ],
      [
       "Charging",
-      "About 13.5 blocks/s",
+      "About 13.7 blocks/s",
       "About +100% (2x)"
      ]
-    ],
-    "note": "Tested: 24 blocks in 10s while summoning, 96 blocks in 8.6s riding, 24 blocks in 1.8s charging."
+    ]
    },
    {
     "title": "What a full charge breaks",
@@ -5279,8 +5278,12 @@
     ],
     "rows": [
      [
-      "Wool, wood, stone, ceramic",
+      "Wool, wood, stone",
       "Breaks easily"
+     ],
+     [
+      "Ceramic",
+      "Breaks fairly easily, about 2x better than obsidian"
      ],
      [
       "8 obsidian around the bed",
