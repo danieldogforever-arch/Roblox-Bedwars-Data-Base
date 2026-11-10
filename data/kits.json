@@ -4640,13 +4640,13 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Deploy and control drones to pickup resources from around the map. Drones can also airdrop primed TNT.",
-  "adv": "Cyber can buy a Drone for 40 iron. Equip it to take control and fly it anywhere on the map. The drone can pick up iron, diamonds or emeralds, but only one at a time.\nWhile you're not flying it, you can load up to 10 TNT into the drone. While flying, press X to drop a TNT, which starts detonating wherever it lands.\nThe drone has a 490 second battery. When it runs out, the drone explodes (it doesn't do damage) and you have to buy a new one. Stop using the drone to instantly refill the battery.\nThe drone only has 20 HP and doesn't show a health bar, so it's hard to tell how hurt it is. If Cyber dies, the drone stops completely wherever it is.",
+  "adv": "Cyber can buy a Drone for 40 iron. Equip it to take control and fly it anywhere on the map. The drone can carry a stack of iron, diamonds or emeralds, but only one type at a time (like 10 diamonds, but no iron or emeralds with them).\nWhile you're not flying it, you can load up to 10 TNT into the drone. While flying, press X to drop a TNT, which starts detonating wherever it lands.\nThe drone has a 490 second battery. When it runs out, the drone explodes (it doesn't do damage) and you have to buy a new one. Stop using the drone to instantly refill the battery.\nThe drone only has 20 HP and doesn't show a health bar, so it's hard to tell how hurt it is. If Cyber dies, the drone stops completely wherever it is. If the drone is destroyed, whoever killed it gets the loot it was carrying.",
   "items": [
    {
     "name": "Drone",
     "img": "images/items/drone.png",
     "note": "Cost: 40 iron",
-    "desc": "Equip to fly it around the map. 20 HP, no health bar. Carries one resource at a time and up to 10 TNT. Battery lasts 490 seconds and refills instantly when you stop using it."
+    "desc": "Equip to fly it around the map. 20 HP, no health bar. Carries a stack of one resource type at a time and up to 10 TNT. Battery lasts 490 seconds and refills instantly when you stop using it."
    }
   ],
   "abilities": [
@@ -4777,7 +4777,7 @@
    {
     "name": "Fragile",
     "when": "Always",
-    "desc": "The drone only has 20 HP and no health bar. If Cyber dies, the drone stops where it is."
+    "desc": "The drone only has 20 HP and no health bar. If Cyber dies, the drone stops where it is. Whoever destroys the drone gets the loot it was carrying."
    }
   ],
   "tables": [
@@ -4806,7 +4806,7 @@
      ],
      [
       "Carries",
-      "1 resource at a time"
+      "1 resource type at a time (any amount)"
      ],
      [
       "Speed",
@@ -4833,7 +4833,7 @@
   "counter": [
    {
     "title": "Shoot it down",
-    "text": "Buy a bow and shoot it. It only takes 2 bow shots (depending on your kit) or 1 crossbow shot."
+    "text": "Buy a bow and shoot it. It only takes 2 bow shots (depending on your kit) or 1 crossbow shot, and you get whatever loot it was carrying."
    },
    {
     "title": "Kill Cyber",
@@ -4841,7 +4841,13 @@
    }
   ],
   "bal": "weak",
-  "balWhy": "Cyber is decent in lobbies where people don't go to diamond generators often, but when they do, it's super weak. It has no way to duplicate resources like other economy kits, and it's very fragile compared to other kits. It needs a heavy resource buff to be viable, and maybe more defense, like an upgraded drone that's slower and bulkier and swaps the speed boost for an attack."
+  "balWhy": "Cyber is decent in lobbies where people don't go to diamond generators often, but when they do, it's super weak. It has no way to duplicate resources like other economy kits, and it's very fragile compared to other kits. It needs a heavy resource buff to be viable, and maybe more defense, like an upgraded drone that's slower and bulkier and swaps the speed boost for an attack.",
+  "skins": [
+   {
+    "name": "DJ Skin",
+    "img": "images/skins/cyber-dj.webp"
+   }
+  ]
  },
  {
   "name": "Death Adder",
