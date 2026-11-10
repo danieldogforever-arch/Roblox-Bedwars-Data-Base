@@ -3583,21 +3583,34 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Deploy robots that search for generators and collect resources!",
-  "adv": "",
+  "adv": "Cogsworth spawns with a Dimmy-X1 bot and the Overclock ability. You can buy as many Dimmy-X1 (50 iron) and Emmy-Z2 (1 emerald) bots as you want, but only 4 of each can be placed at once. Placing a bot takes 2.5 seconds and locks you in place.\nDimmy-X1 goes to the nearest diamond generator and brings the diamonds to your team chest. Emmy-Z2 collects emeralds and puts them in your personal chest. Bots have a 60% chance to double the resources they pick up.\nBots move as fast as players, take no knockback, can jump over 1 block gaps, and run away from enemies unless they're waiting for a diamond or emerald to spawn. They glow red on your screen when an enemy is within 8 blocks. They need a bridge to reach a generator, and sometimes the AI walks into the void.\nOverclock lasts 5 seconds (20 second cooldown) and makes your bots 1.85x faster. While it's active, every bot deals 4 damage every 0.5 seconds (10 ticks) in an 8 block radius with knockback, and Zaps enemies it hits. The damage stacks, so all 8 bots deal 32 per tick.",
   "items": [
    {
     "name": "Dimmy-X1",
-    "img": "images/items/dimmy-x1.png"
+    "img": "images/items/dimmy-x1.png",
+    "note": "Cost: 50 iron",
+    "desc": "150 HP. Collects diamonds and puts them in your team chest. You spawn with one, and up to 4 can be placed.",
+    "dmgText": "4 every 0.5s during Overclock",
+    "nodps": true
    },
    {
     "name": "Emmy-Z2",
-    "img": "images/items/emmy-z2.png"
+    "img": "images/items/emmy-z2.png",
+    "note": "Cost: 1 emerald",
+    "desc": "200 HP. Collects emeralds and puts them in your personal chest. Up to 4 can be placed.",
+    "dmgText": "4 every 0.5s during Overclock",
+    "nodps": true
    }
   ],
   "abilities": [
    {
     "name": "Overclock",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "5 seconds",
+    "desc": "Your bots move 1.85x faster. Each bot deals 4 damage every 0.5 seconds for 10 ticks to enemies within 8 blocks, with knockback and 40% armor penetration, and Zaps them (60% less healing and shields).",
+    "cd": 20,
+    "dmgText": "4 per tick per bot (40 total)",
+    "nodps": true
    }
   ],
   "history": [
@@ -3679,7 +3692,143 @@
    "tier": "30 (free)",
    "badge": "images/bp/s9.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Duplication",
+    "when": "Bot picks up resources",
+    "desc": "60% chance to double the diamonds or emeralds it picks up."
+   },
+   {
+    "name": "Danger Glow",
+    "when": "Enemy within 8 blocks of a bot",
+    "desc": "The bot glows red on your screen."
+   },
+   {
+    "name": "Smart Bots",
+    "when": "Always",
+    "desc": "Bots move as fast as players, take no knockback, jump over 1 block gaps, and run from enemies unless they're waiting at a generator."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Bots",
+    "head": [
+     "Bot",
+     "Cost",
+     "HP",
+     "Collects",
+     "Puts it in",
+     "Max placed"
+    ],
+    "rows": [
+     [
+      "img:images/items/dimmy-x1.png|Dimmy-X1",
+      "50 iron",
+      "150",
+      "Diamonds",
+      "Team chest",
+      "4"
+     ],
+     [
+      "img:images/items/emmy-z2.png|Emmy-Z2",
+      "1 emerald",
+      "200",
+      "Emeralds",
+      "Personal chest",
+      "4"
+     ]
+    ],
+    "note": "You can buy as many as you want. Placing one takes 2.5 seconds and locks you in place."
+   },
+   {
+    "title": "Overclock damage",
+    "head": [
+     "Bots in range",
+     "Per tick",
+     "Total (5s)",
+     "Total vs emerald armor"
+    ],
+    "rows": [
+     [
+      "1",
+      "4",
+      "40",
+      "9.64"
+     ],
+     [
+      "2",
+      "8",
+      "80",
+      "19.28"
+     ],
+     [
+      "3",
+      "12",
+      "120",
+      "28.92"
+     ],
+     [
+      "4",
+      "16",
+      "160",
+      "38.55"
+     ],
+     [
+      "5",
+      "20",
+      "200",
+      "48.19"
+     ],
+     [
+      "6",
+      "24",
+      "240",
+      "57.83"
+     ],
+     [
+      "7",
+      "28",
+      "280",
+      "67.47"
+     ],
+     [
+      "8",
+      "32",
+      "320",
+      "77.11"
+     ]
+    ],
+    "note": "10 ticks, one every 0.5 seconds. 40% armor penetration."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Early game",
+    "text": "Place 2-4 Dimmys to collect diamonds and get to tier 3 fast."
+   },
+   {
+    "title": "Robot coil defense",
+    "text": "Place a coil near your bed and cover it with ceramic or obsidian. Stand against the covered coil and place your robots so they clip into it. When enemies come, Overclock deals knockback and insane shred damage to keep them away."
+   },
+   {
+    "title": "Stack tick damage",
+    "text": "Use Fire or Static for even more tick damage."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Use projectiles",
+    "text": "Try to kill Cogsworth with projectiles, since it can't run for cover."
+   },
+   {
+    "title": "Clear the bots first",
+    "text": "If the robots are on a bed, use a lot of TNT to kill them all before you rush. Rushing without clearing them is a death sentence."
+   }
+  ],
+  "skins": [],
+  "bal": "bal",
+  "balWhy": "Cogsworth does great damage with its robots and gets good loot, since it can duplicate resources from multiple generators. It can be countered if an enemy goes after Cogsworth itself, but that's a bit hard to do."
  },
  {
   "name": "Conqueror",
