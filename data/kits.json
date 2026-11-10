@@ -5359,16 +5359,16 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Purchase Drills to deploy on Diamond and Emerald generators. Drills automatically harvest 2x gen resources. Control them to fight off attackers.",
-  "adv": "Drill spawns with a Drill and a Tablet. You can buy more Drills for 3 emeralds each and hold as many as you want, but only 4 can be placed on the map at once.\nPlace a Drill on a diamond or emerald generator to take it over and double its resources: you get 1 of that resource straight into your inventory, and the generator's own drop is stored inside the drill. There's also a 25% chance for an extra diamond or emerald to spawn inside it. You or your teammates can take the stored resources by holding R (Extract Ore).\nDrills get stronger as the global generators upgrade (every 5 minutes), and they slowly heal themselves after taking damage. If an enemy destroys a drill, they get all the loot stored inside it. They attack with a 0.5 second cooldown, but can't hit players standing 2 blocks above them within 3 blocks.\nUse the Tablet to control your drills, and press A or D to cycle back and forth between them.",
+  "adv": "Drill spawns with a Drill and a Tablet. You can buy more Drills for 3 emeralds each and hold as many as you want, but only 4 can be placed on the map at once.\nPlace a Drill on a diamond or emerald generator to take it over and double its resources: you get 1 of that resource straight into your inventory, and the generator's own drop is stored inside the drill. There's also a 25% chance for an extra diamond or emerald to spawn inside it. You or your teammates can take the stored resources by holding R (Extract Ore).\nDrills get stronger as the match goes on: damage goes up at 5 and 10 minutes, and HP goes up at 6:40 and 13:20. They slowly heal themselves over time, and you get a notification when one of your drills takes damage. If an enemy destroys a drill, they get all the loot stored inside it. They attack with a 0.5 second cooldown, but can't hit players standing 2 blocks above them within 3 blocks.\nUse the Tablet to control your drills, and press A or D to cycle back and forth between them.",
   "items": [
    {
     "name": "Drill",
     "img": "images/items/drill.png",
     "note": "Cost: 3 emeralds",
-    "desc": "Place it on a diamond or emerald generator to double its resources. 425 HP and 30 damage at the start, getting stronger as generators upgrade. Only 4 can be placed at once.",
+    "desc": "Place it on a diamond or emerald generator to double its resources. 425 HP and 30 damage at the start, getting stronger as the match goes on. Only 4 can be placed at once.",
     "cd": 0.5,
     "dmg": 30,
-    "dmgText": "30 / 42 / 54 by game stage"
+    "dmgText": "30 / 42 / 54 (at 0, 5 and 10 minutes)"
    },
    {
     "name": "Tablet",
@@ -5537,13 +5537,18 @@
    },
    {
     "name": "Scaling",
-    "when": "Global generator upgrades",
-    "desc": "Drills gain damage and HP as the generators upgrade every 5 minutes."
+    "when": "As the match goes on",
+    "desc": "Damage goes up at 5 and 10 minutes (max 54). HP goes up at 6:40 and 13:20 (max 850)."
    },
    {
     "name": "Self Repair",
-    "when": "After taking damage",
-    "desc": "Drills slowly heal themselves."
+    "when": "Over time",
+    "desc": "Drills slowly regenerate their health."
+   },
+   {
+    "name": "Alarm",
+    "when": "Drill takes damage",
+    "desc": "You get a notification when one of your drills is being damaged."
    },
    {
     "name": "Loot Drop",
@@ -5558,35 +5563,40 @@
   ],
   "tables": [
    {
-    "title": "Drill stats by game stage",
+    "title": "Drill stats by match time",
     "head": [
-     "Generators",
+     "Match time",
      "Damage",
      "HP"
     ],
     "rows": [
      [
-      "Start (tier 1)",
+      "Start",
       "30",
       "425"
      ],
      [
-      "Tier 2 (5 minutes)",
+      "5:00",
+      "42",
+      "425"
+     ],
+     [
+      "6:40",
       "42",
       "700"
      ],
      [
-      "Tier 3",
-      "54",
-      "850"
+      "10:00",
+      "54 (max)",
+      "700"
      ],
      [
-      "Tier 4",
+      "13:20",
       "54",
-      "850"
+      "850 (max)"
      ]
     ],
-    "note": "Drills attack every 0.5 seconds. Stats stay the same after tier 3."
+    "note": "Drills attack every 0.5 seconds."
    }
   ],
   "strategy": [
