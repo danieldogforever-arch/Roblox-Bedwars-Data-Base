@@ -5359,13 +5359,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Purchase Drills to deploy on Diamond and Emerald generators. Drills automatically harvest 2x gen resources. Control them to fight off attackers.",
-  "adv": "Drill spawns with a Drill and a Tablet. You can buy more Drills for 3 emeralds each and hold as many as you want, but only 4 can be placed on the map at once.\nPlace a Drill on a generator to take it over and double its resources: you get 1 diamond straight into your inventory, and the generator's own diamond is stored inside the drill. There's also a 25% chance for an extra diamond or emerald to spawn inside it. You or your teammates can take the stored resources by holding R (Extract Ore).\nDrills get stronger as the global generators upgrade (every 5 minutes). They attack with a 0.5 second cooldown, but can't hit players standing 2 blocks above them within 3 blocks.\nUse the Tablet to control your drills, and press A or D to cycle back and forth between them.",
+  "adv": "Drill spawns with a Drill and a Tablet. You can buy more Drills for 3 emeralds each and hold as many as you want, but only 4 can be placed on the map at once.\nPlace a Drill on a diamond or emerald generator to take it over and double its resources: you get 1 of that resource straight into your inventory, and the generator's own drop is stored inside the drill. There's also a 25% chance for an extra diamond or emerald to spawn inside it. You or your teammates can take the stored resources by holding R (Extract Ore).\nDrills get stronger as the global generators upgrade (every 5 minutes), and they slowly heal themselves after taking damage. If an enemy destroys a drill, they get all the loot stored inside it. They attack with a 0.5 second cooldown, but can't hit players standing 2 blocks above them within 3 blocks.\nUse the Tablet to control your drills, and press A or D to cycle back and forth between them.",
   "items": [
    {
     "name": "Drill",
     "img": "images/items/drill.png",
     "note": "Cost: 3 emeralds",
-    "desc": "Place it on a generator to double its resources. 450 HP and 30 damage at the start, getting stronger as generators upgrade. Only 4 can be placed at once.",
+    "desc": "Place it on a diamond or emerald generator to double its resources. 425 HP and 30 damage at the start, getting stronger as generators upgrade. Only 4 can be placed at once.",
     "cd": 0.5,
     "dmg": 30,
     "dmgText": "30 / 42 / 54 by game stage"
@@ -5533,12 +5533,22 @@
    {
     "name": "Duplication",
     "when": "Drill on a generator",
-    "desc": "You get 1 diamond in your inventory and the generator's own diamond is stored in the drill. 25% chance for an extra diamond or emerald inside it."
+    "desc": "You get 1 of the generator's resource in your inventory and its own drop is stored in the drill. 25% chance for an extra diamond or emerald inside it."
    },
    {
     "name": "Scaling",
     "when": "Global generator upgrades",
     "desc": "Drills gain damage and HP as the generators upgrade every 5 minutes."
+   },
+   {
+    "name": "Self Repair",
+    "when": "After taking damage",
+    "desc": "Drills slowly heal themselves."
+   },
+   {
+    "name": "Loot Drop",
+    "when": "Drill destroyed",
+    "desc": "Whoever destroys the drill gets all the loot stored inside it."
    },
    {
     "name": "Blind Spot",
@@ -5558,7 +5568,7 @@
      [
       "Start (tier 1)",
       "30",
-      "450"
+      "425"
      ],
      [
       "Tier 2 (5 minutes)",
@@ -5568,12 +5578,12 @@
      [
       "Tier 3",
       "54",
-      "700"
+      "850"
      ],
      [
       "Tier 4",
       "54",
-      "700"
+      "850"
      ]
     ],
     "note": "Drills attack every 0.5 seconds. Stats stay the same after tier 3."
@@ -5600,7 +5610,7 @@
   "counter": [
    {
     "title": "Stand above it",
-    "text": "Build 2-3 blocks up and hit it until it's dead. It can't hit you from there."
+    "text": "Build 2-3 blocks up and hit it until it's dead. It can't hit you from there, and you get all the loot stored inside it."
    },
    {
     "title": "Kill the camper",
