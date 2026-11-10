@@ -3846,25 +3846,25 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Place banners to empower nearby allies.",
-  "adv": "Conqueror can buy 3 banners in the shop for 60 iron each: the Defense Banner, Fire Banner and Heal Banner. You can hold up to 3 of each, but only 1 of each type can be placed at a time.\nBanners buff allies within 9 blocks, up to the 4 closest players, and disappear after 30 seconds. They're weak to pickaxes (16 hits with wood, 10 with stone, 7 with iron, 4 with diamond) and can also be destroyed with TNT or fireballs.\nThe Defense Banner makes you take no knockback. The Fire Banner gives your hits the Fire enchant, which lasts 5 seconds after the banner disappears or you leave its radius. The Heal Banner heals you every second based on your missing HP, so it heals more the lower you are.",
+  "adv": "Conqueror can buy 3 banners in the shop for 60 iron each: the Defense Banner, Fire Banner and Heal Banner. You can hold up to 3 of each, but only 1 of each type can be placed at a time.\nBanners buff every ally within a 9 block radius and disappear after 30 seconds. They're weak to pickaxes (16 hits with wood, 10 with stone, 7 with iron, 4 with diamond) and can also be destroyed with TNT or fireballs.\nThe Defense Banner makes you take no knockback. The Fire Banner gives your hits the normal Fire enchant. Both buffs stay for 5 seconds after the banner disappears or you leave its radius. The Heal Banner heals you every second based on your missing HP, so it heals more the lower you are, but it stops as soon as you leave.",
   "items": [
    {
     "name": "Defense Banner",
     "img": "images/items/defense-banner.png",
     "note": "Cost: 60 iron",
-    "desc": "Allies within 9 blocks take no knockback. Lasts 30 seconds."
+    "desc": "Allies within 9 blocks take no knockback. The buff stays for 5 seconds after the banner disappears or you leave the radius. Lasts 30 seconds."
    },
    {
     "name": "Fire Banner",
     "img": "images/items/fire-banner.png",
     "note": "Cost: 60 iron",
-    "desc": "Allies within 9 blocks get the Fire enchant on their hits. It stays for 5 seconds after the banner disappears or you leave the radius. Lasts 30 seconds."
+    "desc": "Allies within 9 blocks get the normal Fire enchant on their hits. It stays for 5 seconds after the banner disappears or you leave the radius. Lasts 30 seconds."
    },
    {
     "name": "Heal Banner",
     "img": "images/items/heal-banner.png",
     "note": "Cost: 60 iron",
-    "desc": "Every second, heals allies within 9 blocks by 13% of their missing HP (at least 5). Healing goes down by 5% for each teammate in the area. Lasts 30 seconds."
+    "desc": "Every second, heals allies within 9 blocks by 13% of their missing HP. Each teammate in the area makes it heal 5% less (13% becomes about 12.35% with one more teammate), but it always heals at least 5. Only works while you're in range. Lasts 30 seconds."
    }
   ],
   "abilities": [],
@@ -3987,7 +3987,7 @@
    {
     "name": "Banner Rules",
     "when": "Always",
-    "desc": "Hold up to 3 of each banner, but only 1 of each type can be placed at a time. Banners last 30 seconds and buff the 4 closest allies within 9 blocks."
+    "desc": "Hold up to 3 of each banner, but only 1 of each type can be placed at a time. Banners last 30 seconds and buff every ally within a 9 block radius (18 blocks across)."
    },
    {
     "name": "Fragile",
@@ -4066,7 +4066,7 @@
       "5"
      ]
     ],
-    "note": "13% of missing HP per second, at least 5. Kits with more max HP heal more, since it's a percentage. Healing is lower for each teammate in the area."
+    "note": "13% of missing HP per second, at least 5. Kits with more max HP heal more, since it's a percentage. Each teammate in the area lowers it by 5% (×0.95), but it never heals less than 5."
    }
   ],
   "strategy": [
