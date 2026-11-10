@@ -4108,12 +4108,15 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Being in the vicinity of damage dealt builds bloodlust. Activate Beast Form to temporarily give you enhanced damage, knockback, and movement speed. Dealing damage to non-player entities builds more bloodlust. When your bed breaks you will be given full bloodlust.",
-  "adv": "",
+  "adv": "Crocowolf builds Bloodlust from damage dealt near it. Once you have 300 Bloodlust, you can activate Beast Form.\nBloodlust counts the base damage of every hit within 5 blocks of you: your hits, your teammates' hits and your enemies' hits, including hits on you. For example, an iron sword (30 damage) fills it in 10 hits, and a Rageblade gives 70 per hit. Hits on NPCs like Diamond Guards and the Titan count double, so you only need half as much. Kills don't give extra Bloodlust, and you lose all of it when you die. When your bed breaks, your bar fills all the way up.\nActivating Beast Form heals you 20 HP right away. While transformed you deal 25% more damage from every source (swords, ranged weapons and more), move about 27% faster, and deal 1 block more knockback. You have to wait 5 seconds before you can cancel it.",
   "items": [],
   "abilities": [
    {
     "name": "Beast Form Activate/Deactivate",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Needs 300 Bloodlust",
+    "desc": "Transform into Beast Form: heal 20 HP instantly, deal 25% more damage from every source, move about 27% faster, and deal 1 block more knockback. You can cancel it after 5 seconds.",
+    "nodps": true
    }
   ],
   "history": [
@@ -4203,7 +4206,143 @@
    "tier": "30 (paid)",
    "badge": "images/bp/s4.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Bloodlust",
+    "when": "Hits within 5 blocks",
+    "desc": "Gain Bloodlust equal to the base damage of any hit within 5 blocks of you, from you, teammates or enemies. Projectiles only count if you're within 5 blocks, so you can't snipe from far away to build it."
+   },
+   {
+    "name": "NPC Hunter",
+    "when": "Hitting NPCs",
+    "desc": "Damage to NPCs like Diamond Guards and the Titan counts double, so you only need 150 damage to fill the bar."
+   },
+   {
+    "name": "Last Stand",
+    "when": "Your bed breaks",
+    "desc": "Your Bloodlust fills all the way up."
+   },
+   {
+    "name": "Lost on Death",
+    "when": "You die",
+    "desc": "You lose all your Bloodlust. Kills don't give extra."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Beast Form",
+    "head": [
+     "Stat",
+     "Normal",
+     "Beast Form"
+    ],
+    "rows": [
+     [
+      "Damage",
+      "100%",
+      "125%"
+     ],
+     [
+      "Speed",
+      "6.86 blocks/s",
+      "about 8.73 blocks/s (+27%)"
+     ],
+     [
+      "Knockback",
+      "Normal",
+      "+1 block"
+     ],
+     [
+      "img:images/items/headhunter.png|Headhunter body shot",
+      "55",
+      "68.75"
+     ],
+     [
+      "img:images/items/headhunter.png|Headhunter headshot",
+      "82.5",
+      "103.12"
+     ]
+    ],
+    "note": "Activating also heals 20 HP. You can cancel after 5 seconds."
+   },
+   {
+    "title": "Hits to fill Bloodlust (300)",
+    "head": [
+     "Weapon",
+     "Base damage",
+     "Hits on players",
+     "Hits on NPCs"
+    ],
+    "rows": [
+     [
+      "img:images/items/wood-sword.png|Wood Sword",
+      "20",
+      "15",
+      "8"
+     ],
+     [
+      "img:images/items/stone-sword.png|Stone Sword",
+      "25",
+      "12",
+      "6"
+     ],
+     [
+      "img:images/items/iron-sword.png|Iron Sword",
+      "30",
+      "10",
+      "5"
+     ],
+     [
+      "img:images/items/diamond-sword.png|Diamond Sword",
+      "42",
+      "8",
+      "4"
+     ],
+     [
+      "img:images/items/emerald-sword.png|Emerald Sword",
+      "55",
+      "6",
+      "3"
+     ],
+     [
+      "Rageblade",
+      "70",
+      "5",
+      "3"
+     ]
+    ],
+    "note": "Any hit within 5 blocks of you counts, whoever deals it."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Save it up",
+    "text": "Build Bloodlust without jumping into fights while you're under geared, then activate Beast Form when you need to run or PvP."
+   },
+   {
+    "title": "Farm NPCs",
+    "text": "Low on Bloodlust? Go hit a Diamond Guard or the Titan to fill your bar almost instantly."
+   },
+   {
+    "title": "Wren poison (bug)",
+    "text": "If you're fused with Wren, use its poison potion: in Beast Form you deal knockback on every poison tick."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Stall it out",
+    "text": "Don't fight it while Beast Form is active. Build up, or go back to your teammates."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Wendi Wolf Skin",
+    "img": "images/skins/crocowolf-wendi-wolf.webp"
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "Having a form that gives more damage, speed and knockback without it always being active is great. Building Bloodlust isn't too hard, and you don't even have to hit anyone to get it."
  },
  {
   "name": "Crypt",
