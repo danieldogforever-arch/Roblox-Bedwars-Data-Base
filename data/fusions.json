@@ -200,11 +200,6 @@
   "note": ""
  },
  {
-  "a": "Cogsworth",
-  "b": "Farmer Cletus",
-  "note": ""
- },
- {
   "a": "Conqueror",
   "b": "Axolotl Amy",
   "note": ""
@@ -347,6 +342,21 @@
  {
   "a": "Evelynn",
   "b": "Barbarian",
+  "note": ""
+ },
+ {
+  "a": "Farmer Cletus",
+  "b": "Cogsworth",
+  "note": ""
+ },
+ {
+  "a": "Farmer Cletus",
+  "b": "Drill",
+  "note": ""
+ },
+ {
+  "a": "Farmer Cletus",
+  "b": "Taliyah",
   "note": ""
  }
 ]

@@ -7261,19 +7261,25 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Invest your resources into crops that yield more diamonds and emeralds.",
-  "adv": "",
+  "adv": "Farmer Cletus buys seeds and plants them to grow resources. Seeds have no holding limit. Each crop first has to grow, and after that it has a harvest timer. Harvesting resets the harvest timer, so a grown crop keeps producing forever.\nCarrots give 1 diamond. Melons usually give 1 emerald, with a small chance of 2 or 3. Pumpkins give a Pumpkin Bomb: usually a normal one, sometimes a Big or Huge one. You can hold up to 8 Pumpkin Bombs in total, and you can't give them to teammates.\nPumpkin Bombs explode 4 times in a 4×4 area with some burn damage, and the damage drops off the farther you are from the center. They have no armor penetration.\nCrops are weak to axes: a wood axe takes 2 hits, and stone, iron and diamond axes take 1. TNT and fireballs also destroy them, and fireballs set them on fire, which spreads to other crops. Covering crops with ceramic or obsidian stops TNT, and only obsidian stops fireball burning. You can still harvest a crop through 1 layer of blocks. Breaking your own crop with an axe or pickaxe refunds what you paid for it, grown or not. Teammates can't break your crops.",
   "items": [
    {
-    "name": "Melon Seeds",
-    "img": "images/items/melon-seeds.png"
+    "name": "Carrot Seeds",
+    "img": "images/items/carrot-seeds.png",
+    "note": "Cost: 60 iron",
+    "desc": "Grows in 40 seconds, then gives 1 diamond every 45 seconds."
    },
    {
-    "name": "Carrot Seeds",
-    "img": "images/items/carrot-seeds.png"
+    "name": "Melon Seeds",
+    "img": "images/items/melon-seeds.png",
+    "note": "Cost: 2 emeralds",
+    "desc": "Grows in 50 seconds, then gives emeralds every 50 seconds: usually 1, sometimes 2 or 3."
    },
    {
     "name": "Pumpkin Seeds",
-    "img": "images/items/pumpkin-seeds.png"
+    "img": "images/items/pumpkin-seeds.png",
+    "note": "Cost: 60 iron",
+    "desc": "Grows in 15 seconds, then gives a Pumpkin Bomb every 15 seconds: usually normal, sometimes Big or Huge. Hold up to 8."
    }
   ],
   "abilities": [],
@@ -7484,7 +7490,159 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Endless Harvest",
+    "when": "Grown crops",
+    "desc": "Once grown, crops never need to grow again. Harvesting just resets the harvest timer."
+   },
+   {
+    "name": "Refund",
+    "when": "Breaking your own crop",
+    "desc": "Breaking it with an axe or pickaxe gives back what you paid for it, grown or not."
+   },
+   {
+    "name": "Protected From Teammates",
+    "when": "Always",
+    "desc": "Teammates can't break your crops."
+   },
+   {
+    "name": "Reach Through Blocks",
+    "when": "Harvesting",
+    "desc": "You can harvest a crop covered by 1 layer of blocks."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Crops",
+    "head": [
+     "Crop",
+     "Cost",
+     "Grow time",
+     "Harvest every",
+     "Gives"
+    ],
+    "rows": [
+     [
+      "img:images/items/carrot-seeds.png|Carrot",
+      "60 iron",
+      "40s",
+      "45s",
+      "1 diamond"
+     ],
+     [
+      "img:images/items/melon-seeds.png|Melon",
+      "2 emeralds",
+      "50s",
+      "50s",
+      "1 emerald (90%), 2 (10%), 3 (1%)"
+     ],
+     [
+      "img:images/items/pumpkin-seeds.png|Pumpkin",
+      "60 iron",
+      "15s",
+      "15s",
+      "Pumpkin Bomb (90%), Big (10%), Huge (1%)"
+     ]
+    ]
+   },
+   {
+    "title": "Pumpkin Bomb damage",
+    "head": [
+     "Bomb",
+     "First hit",
+     "Total (no armor)"
+    ],
+    "rows": [
+     [
+      "Pumpkin Bomb",
+      "17.5",
+      "63.69"
+     ],
+     [
+      "Big Pumpkin Bomb",
+      "26.5",
+      "72.15"
+     ],
+     [
+      "Huge Pumpkin Bomb",
+      "34.75",
+      "81.38"
+     ]
+    ],
+    "note": "Explodes 4 times in a 4×4 area, with burn damage included in the total. Damage drops off away from the center. No armor penetration (a normal bomb did 28.09 to iron armor)."
+   },
+   {
+    "title": "Breaking crops",
+    "head": [
+     "Tool",
+     "Hits"
+    ],
+    "rows": [
+     [
+      "Wood axe",
+      "2"
+     ],
+     [
+      "Stone, iron or diamond axe",
+      "1"
+     ],
+     [
+      "TNT",
+      "Destroys it unless covered by ceramic or obsidian"
+     ],
+     [
+      "Fireball",
+      "Destroys some and sets them on fire unless covered by obsidian"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Carrots early",
+    "text": "Buy carrots early game and ask teammates for iron. Stop at around 10-15."
+   },
+   {
+    "title": "Upgrade generators",
+    "text": "Get diamonds early for the tier 1 generator so you get iron faster."
+   },
+   {
+    "title": "Melons at tier 3",
+    "text": "Once you have tier 3, start buying melons and cover them in ceramic. At around 5-8 melons, replace the ceramic with obsidian."
+   },
+   {
+    "title": "Plant in rows",
+    "text": "Plant in rows so every side is covered: obsidian, crop (with obsidian above), obsidian, crop (with obsidian above), obsidian."
+   },
+   {
+    "title": "Static for pumpkins",
+    "text": "Static is the best enchant to pair with Pumpkin Bombs."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Fireballs, axes and TNT",
+    "text": "All three destroy crops fast. Fireballs also spread fire through the farm."
+   },
+   {
+    "title": "Jack",
+    "text": "Jack completely wipes out crops by throwing a match on his oil."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Spirit Skin",
+    "img": "images/skins/farmer-cletus-spirit.webp"
+   },
+   {
+    "name": "Loveseeker Skin",
+    "img": "images/skins/farmer-cletus-loveseeker.webp"
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "Crops are super easy to break. Even covered, some kits can still burn them, you need obsidian to fully stop fireballs, and protecting them costs a ton of resources."
  },
  {
   "name": "Fisherman",
