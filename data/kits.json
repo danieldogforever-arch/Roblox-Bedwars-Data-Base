@@ -6319,32 +6319,56 @@
     "title": "Damage per tick",
     "head": [
      "Stacks",
-     "Close (within about 3 blocks)",
-     "Far away"
+     "Close: first tick",
+     "Close: max tick",
+     "Far: first tick",
+     "Far: max tick"
     ],
     "rows": [
      [
-      "0",
-      "11 → 16",
-      "7 → 11"
+      "0 - 5",
+      "11 - 18",
+      "16 - 23",
+      "7 - 10",
+      "11 - 14"
      ],
      [
-      "1",
-      "up to 17",
-      "-"
+      "5 - 10",
+      "18 - 25",
+      "23 - 30",
+      "10 - 14",
+      "14 - 18"
      ],
      [
-      "5",
-      "18 → 23",
-      "-"
+      "10 - 15",
+      "25 - 32",
+      "30 - 37",
+      "14 - 18",
+      "18 - 21"
      ],
      [
-      "30",
-      "53 → 57",
-      "28 → 31"
+      "15 - 20",
+      "32 - 39",
+      "37 - 43",
+      "18 - 21",
+      "21 - 24"
+     ],
+     [
+      "20 - 25",
+      "39 - 46",
+      "43 - 50",
+      "21 - 24",
+      "24 - 28"
+     ],
+     [
+      "25 - 30",
+      "46 - 53",
+      "50 - 57",
+      "24 - 28",
+      "28 - 31"
      ]
     ],
-    "note": "From tests, before armor. Damage climbs each tick until it maxes out after about 8 ticks, and starts dropping past about 3 blocks."
+    "note": "Before armor. \"Close\" is within about 3 blocks; damage drops the farther you are. Each tick hits a little harder until it maxes out after about 8 ticks. 0, 5 and 30 stacks are from tests; the rest are estimated."
    },
    {
     "title": "Healing per tick",
