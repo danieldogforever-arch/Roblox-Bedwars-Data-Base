@@ -6499,7 +6499,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Dash through players to deal electric damage! Hold up to two stacks of dashes and regain all stacks if you kill an enemy with your dash.",
-  "adv": "Elektra can dash 8.75 blocks with Electric Dash. You hold up to 2 dashes, so you can travel 17.5 blocks in a row. Each dash recharges in 10 seconds, or 6 seconds if you dashed into an enemy.\nDashing into an enemy deals 15 electric damage to them and everyone within 8 blocks, with 20% armor penetration. You can't attack with your sword while dashing.",
+  "adv": "Elektra can dash 8.75 blocks with Electric Dash. You hold up to 2 dashes, so you can travel 17.5 blocks in a row. Each dash recharges in 10 seconds, or 6 seconds if you dashed into an enemy.\nDashing into an enemy deals 15 electric damage to them and everyone within 8 blocks, with 20% armor penetration. You can't attack with your sword while dashing.\nEnemies hit by the dash get Zapped 2: 60% less healing and shields for 10 seconds. If an enemy dies while Zapped from your dash, you get 1 dash back. Dashing right before you hit the ground cancels fall damage.",
   "items": [],
   "abilities": [
    {
@@ -6646,7 +6646,17 @@
    {
     "name": "Static Shock",
     "when": "Dashing into an enemy",
-    "desc": "15 damage to the target and everyone within 8 blocks, with 20% armor penetration. The next dash recharges in 6 seconds instead of 10."
+    "desc": "15 damage to the target and everyone within 8 blocks, with 20% armor penetration, plus Zapped 2 (60% less healing and shields for 10 seconds). The next dash recharges in 6 seconds instead of 10."
+   },
+   {
+    "name": "Dash Refund",
+    "when": "Killing a Zapped enemy",
+    "desc": "Get 1 dash back."
+   },
+   {
+    "name": "Soft Landing",
+    "when": "Dashing right before landing",
+    "desc": "Cancels fall damage."
    }
   ],
   "tables": [
@@ -6676,6 +6686,10 @@
      [
       "Armor penetration",
       "20%"
+     ],
+     [
+      "Effect",
+      "Zapped 2 (60% less healing and shields for 10s)"
      ]
     ]
    },
@@ -6713,7 +6727,7 @@
   "strategy": [
    {
     "title": "Escape when grounded",
-    "text": "If you get Grounded (like from Gloop), build up and stall out the timer, then jump down and dash to avoid fall damage. Your enemy is stuck up there while you escape."
+    "text": "If you get Grounded (like from Gloop), build up and stall out the timer, then jump down and dash right before you hit the ground to avoid fall damage. Your enemy is stuck up there while you escape."
    },
    {
     "title": "Dash into fights",
@@ -6749,11 +6763,17 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Charge the Blade of Fire to ignite in a deadly spin! Striking enemies OR killing Lumen will upgrade your ability to a much more powerful spin.",
-  "adv": "",
+  "adv": "Ember can buy the Infernal Saber for 3 emeralds. It hits like a diamond sword (42 damage, same cooldown), but you can also hold it to charge a fire spin. It takes 1 second to fully charge, but letting go at 0.5 seconds does the same damage, and you can start charging again right after a spin.\nThe base spin hits twice, 0.25 seconds apart, for 42 then 48 damage. Within 2 blocks both hits land; from 2 to 5 blocks only the 48 hit lands. Every hit sets the enemy on fire for 2 ticks of 3 damage.\nHit 10 spins (each enemy hit counts, so 2 enemies in one spin fill 20%) or kill a Lumen to upgrade the spin. The upgraded spin hits three times for 42, 48 and 48, and its fire does 5 damage for 6 ticks. Past 3 blocks you only get the two 48 hits. Spins deal 30% more damage when they only hit one enemy.\nYour upgrade bar stays when you die, but you lose the saber and have to buy it again. Ember can't buy diamond or emerald swords.",
   "items": [
    {
     "name": "Infernal Saber",
-    "img": "images/items/infernal-saber.png"
+    "img": "images/items/infernal-saber.png",
+    "note": "Cost: 3 emeralds",
+    "desc": "Hits like a diamond sword (42 damage). Hold to charge a fire spin: 0.5 seconds is enough for full damage. Lost on death.",
+    "dmg": 42,
+    "cd": 0.5,
+    "dmgText": "Spin: 42 + 48 (upgraded 42 + 48 + 48)",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -6918,7 +6938,83 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Fire Spin",
+    "when": "Releasing a charged spin",
+    "desc": "Base: 42 + 48 within 2 blocks, or just 48 from 2-5 blocks, plus fire (3 damage × 2 ticks). Upgraded: 42 + 48 + 48 within 3 blocks, or 48 + 48 farther out, plus fire (5 damage × 6 ticks)."
+   },
+   {
+    "name": "Upgrade Bar",
+    "when": "Spin hits or Lumen kills",
+    "desc": "Each enemy hit by a spin fills 10%. Killing a Lumen (with or without the saber) upgrades it instantly. The bar stays when you die."
+   },
+   {
+    "name": "Lone Target",
+    "when": "Spin hits one enemy",
+    "desc": "Spins deal 30% more damage when they only hit one enemy."
+   },
+   {
+    "name": "No Better Swords",
+    "when": "Always",
+    "desc": "Ember can't buy diamond or emerald swords."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Spin damage",
+    "head": [
+     "Spin",
+     "Within 2-3 blocks",
+     "Up to 5 blocks",
+     "Fire"
+    ],
+    "rows": [
+     [
+      "Base",
+      "42 + 48 = 90",
+      "48",
+      "3 × 2 ticks"
+     ],
+     [
+      "Upgraded",
+      "42 + 48 + 48 = 138",
+      "48 + 48 = 96",
+      "5 × 6 ticks"
+     ]
+    ],
+    "note": "Before armor. Base: both hits within 2 blocks. Upgraded: all three within 3 blocks."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Hit and run",
+    "text": "Make enemies afraid of your spins: run away to charge it, then run back at them once it's ready."
+   },
+   {
+    "title": "Open with a spin",
+    "text": "Spin once at the start of a fight, then fight normally. The saber has the same damage and cooldown as a diamond sword."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Keep your distance",
+    "text": "Stay away from it. If you dodge a charged spin, hit it while it charges again."
+   },
+   {
+    "title": "Ranged and resets",
+    "text": "Use ranged weapons, or kill it so it loses the saber and has to buy it again before it can keep upgrading."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Krampus Skin",
+    "img": "images/skins/ember-krampus.webp"
+   }
+  ],
+  "bal": "weak",
+  "balWhy": "Getting the upgrade is really hard since you're usually in iron armor, and the spin's DPS is worse than just using the sword. It has high armor penetration, but it needs a big rework: it's easy to counter with ranged weapons, or by killing it so it loses the saber and has to buy it again to keep upgrading."
  },
  {
   "name": "Evelynn",
