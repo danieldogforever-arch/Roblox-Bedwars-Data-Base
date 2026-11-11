@@ -6091,7 +6091,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Drain health from enemies or sacrifice your health to heal allies. Could be unlocked for FREE by completing Crypt's Coven during the Halloween 2023 event.",
-  "adv": "Eldric spawns with the Warlock Staff. Lock onto an enemy within 8 blocks to drain their HP every 0.75 seconds. The damage ramps up the longer you stay attached (+5 over about 8 ticks at 0 stacks) and is higher the closer you are: you deal full damage within about 3 blocks, and damage drops off the farther away you are. A yellow bar warns you between 8 and 10 blocks, and past 10 blocks you detach. The staff ignores 50% of armor.\nEvery hit heals you about 35% of the damage. If you're already at full HP, that healing turns into shield instead, up to 25.\nYou can also lock onto a teammate to heal them every tick (3 HP at 0 stacks, 27 at 30 stacks). It costs you some of your own HP, and they deal 25% more damage while linked.\nYou get a stack when you kill with the staff, when you get an assist (a teammate gets a kill while you're linked to them or to their target), or by killing NPCs like Diamond Guards. Each stack adds about 1.4 damage per tick and more healing, and the range grows too: at max stacks you can lock on from 12 blocks and stay attached up to 14. Max 30 stacks.",
+  "adv": "Eldric spawns with the Warlock Staff. Lock onto an enemy within 8 blocks to drain their HP every 0.75 seconds. The damage ramps up the longer you stay attached (+5 over about 8 ticks at 0 stacks) and is higher the closer you are: you deal full damage within about 3 blocks, and damage drops off the farther away you are. A yellow bar warns you between 8 and 10 blocks, and past 10 blocks you detach. The staff ignores 50% of armor.\nEvery hit heals you about 35% of the damage. If you're already at full HP, that healing turns into shield instead, up to 25.\nYou can also lock onto a teammate to heal them every tick (3 HP at 0 stacks, 27 at 30 stacks). It costs you 3.5 HP per tick, and they deal 25% more damage while linked.\nYou get a stack when you kill with the staff, when you get an assist (a teammate gets a kill while you're linked to them or to their target), or by killing NPCs like Diamond Guards. Each stack adds about 1.4 damage per tick and more healing, and the range grows too: at max stacks you can lock on from 12 blocks and stay attached up to 14. Max 30 stacks.",
   "items": [
    {
     "name": "Warlock Staff",
@@ -6281,7 +6281,7 @@
    {
     "name": "Life Link",
     "when": "Linked to a teammate",
-    "desc": "Heals your teammate every tick (3 per tick at 0 stacks, 27 at 30 stacks) at the cost of some of your HP (3.5 per tick at 30 stacks). They deal 25% more damage while linked."
+    "desc": "Heals your teammate every tick (3 per tick at 0 stacks, 27 at 30 stacks) at the cost of 3.5 of your own HP per tick. They deal 25% more damage while linked."
    },
    {
     "name": "Stacks",
@@ -6381,7 +6381,7 @@
      [
       "0",
       "3",
-      "-"
+      "3.5"
      ],
      [
       "30",
@@ -6389,7 +6389,7 @@
       "3.5"
      ]
     ],
-    "note": "Your linked teammate also deals 25% more damage."
+    "note": "Healing a teammate always costs you 3.5 HP per tick, no matter how many stacks you have. Your linked teammate also deals 25% more damage."
    },
    {
     "title": "Range",
