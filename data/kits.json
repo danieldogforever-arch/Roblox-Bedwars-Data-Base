@@ -6499,12 +6499,18 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Dash through players to deal electric damage! Hold up to two stacks of dashes and regain all stacks if you kill an enemy with your dash.",
-  "adv": "",
+  "adv": "Elektra can dash 8.75 blocks with Electric Dash. You hold up to 2 dashes, so you can travel 17.5 blocks in a row. Each dash recharges in 10 seconds, or 6 seconds if you dashed into an enemy.\nDashing into an enemy deals 15 electric damage to them and everyone within 8 blocks, with 20% armor penetration. You can't attack with your sword while dashing.",
   "items": [],
   "abilities": [
    {
     "name": "Electric Dash",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "2 charges",
+    "desc": "Dash 8.75 blocks. Dashing into an enemy deals 15 damage to them and everyone within 8 blocks (20% armor penetration). Recharges in 10 seconds, or 6 seconds after hitting an enemy. You can't swing your sword mid-dash.",
+    "cd": 10,
+    "dmg": 15,
+    "dmgText": "15 (8 block area)",
+    "nodps": true
    }
   ],
   "history": [
@@ -6630,7 +6636,107 @@
    "tier": "50 (paid)",
    "badge": "images/bp/s8.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Double Dash",
+    "when": "Always",
+    "desc": "Hold up to 2 dashes, for 17.5 blocks of movement in a row."
+   },
+   {
+    "name": "Static Shock",
+    "when": "Dashing into an enemy",
+    "desc": "15 damage to the target and everyone within 8 blocks, with 20% armor penetration. The next dash recharges in 6 seconds instead of 10."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Dash stats",
+    "head": [
+     "Stat",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Distance",
+      "8.75 blocks per dash (17.5 with both)"
+     ],
+     [
+      "Charges",
+      "2"
+     ],
+     [
+      "Recharge",
+      "10 seconds (6 after hitting an enemy)"
+     ],
+     [
+      "Damage",
+      "15 to the target and everyone within 8 blocks"
+     ],
+     [
+      "Armor penetration",
+      "20%"
+     ]
+    ]
+   },
+   {
+    "title": "Dash damage by armor",
+    "head": [
+     "Armor",
+     "Damage"
+    ],
+    "rows": [
+     [
+      "None",
+      "15"
+     ],
+     [
+      "Leather",
+      "about 10.6"
+     ],
+     [
+      "Iron",
+      "7.43"
+     ],
+     [
+      "Diamond",
+      "4.25"
+     ],
+     [
+      "Emerald",
+      "about 3"
+     ]
+    ],
+    "note": "Iron and diamond are from tests; the others are estimated."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Escape when grounded",
+    "text": "If you get Grounded (like from Gloop), build up and stall out the timer, then jump down and dash to avoid fall damage. Your enemy is stuck up there while you escape."
+   },
+   {
+    "title": "Dash into fights",
+    "text": "Dash into enemies when fighting, especially ones with healing or shields."
+   },
+   {
+    "title": "Travel and juke",
+    "text": "Dash twice to travel far, or dash twice into an enemy to throw off their tracking."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Ground it",
+    "text": "Kits with the Grounded effect, or Gloop, stop Elektra from using its movement."
+   },
+   {
+    "title": "Build up",
+    "text": "Build up 3-4 blocks to dodge the dash. Elektra can't hit you with its sword while dashing, so you can easily combo it."
+   }
+  ],
+  "skins": [],
+  "bal": "sup",
+  "balWhy": "Elektra used to be really great, but after the animation changes and constant nerfs it's become a bit bad for a Tier 50 kit. It doesn't need a big buff, but it needs something to keep up with much better movement kits."
  },
  {
   "name": "Ember",
