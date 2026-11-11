@@ -6091,11 +6091,17 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Drain health from enemies or sacrifice your health to heal allies. Could be unlocked for FREE by completing Crypt's Coven during the Halloween 2023 event.",
-  "adv": "",
+  "adv": "Eldric spawns with the Warlock Staff. Lock onto an enemy within 8 blocks to drain their HP every 0.75 seconds. The damage ramps up the longer you stay attached (+5 over about 8 ticks at 0 stacks) and is higher the closer you are: within 5 blocks you deal full damage, and every half block farther takes off about 1 damage. A yellow bar warns you between 8 and 10 blocks, and past 10 blocks you detach. The staff ignores 50% of armor.\nEvery hit heals you about 35% of the damage. If you're already at full HP, that healing turns into shield instead, up to 25.\nYou can also lock onto a teammate to heal them every tick. It costs you some of your own HP, and they deal 25% more damage while linked.\nYou get a stack when you kill with the staff, when a teammate gets a kill while you're linked to them or to their target, or by killing NPCs like Diamond Guards. Each stack adds about 1.4 damage per tick and more healing, and the range grows too: at max stacks you can lock on from 12 blocks and stay attached up to 14. Max 30 stacks.",
   "items": [
    {
     "name": "Warlock Staff",
-    "img": "images/items/warlock-staff.png"
+    "img": "images/items/warlock-staff.png",
+    "note": "Spawns with it",
+    "desc": "Lock onto an enemy to drain them, or a teammate to heal them. Ticks every 0.75 seconds. 8 block range (12 at max stacks), 50% armor penetration.",
+    "cd": 0.75,
+    "dmg": 11,
+    "dmgText": "11-16 per tick at 0 stacks, 53-57 at 30",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -6260,7 +6266,170 @@
    "event": "Crypt's Coven (Halloween 2023)",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Siphon",
+    "when": "Linked to an enemy",
+    "desc": "Drains HP every 0.75 seconds. Damage ramps up the longer you stay linked, and is highest within 5 blocks. Heals you about 35% of the damage dealt. 50% armor penetration."
+   },
+   {
+    "name": "Overflow Shield",
+    "when": "Siphoning at full HP",
+    "desc": "Your healing becomes shield instead, up to 25. It stays until it's broken."
+   },
+   {
+    "name": "Life Link",
+    "when": "Linked to a teammate",
+    "desc": "Heals your teammate every tick (27 per tick at 30 stacks) at the cost of some of your HP (3.5 per tick at 30 stacks). They deal 25% more damage while linked."
+   },
+   {
+    "name": "Stacks",
+    "when": "Kills",
+    "desc": "Kill with the staff, have a linked teammate get a kill, or kill NPCs like Diamond Guards. Each stack adds about 1.4 damage per tick, more healing and more range. Max 30."
+   },
+   {
+    "name": "Range",
+    "when": "While linked",
+    "desc": "Lock on within 8 blocks (12 at max stacks). A yellow bar shows when you're about to leave range, and you detach past 10 blocks (14 at max stacks)."
+   }
+  ],
+  "calc": {
+   "title": "Stack damage calculator",
+   "label": "Stacks",
+   "unitIn": "stacks",
+   "unitOut": "damage per tick",
+   "a": 1.367,
+   "p": 1,
+   "base": 16,
+   "prefix": "",
+   "dec": 0,
+   "max": 30,
+   "start": 10,
+   "hideTable": true,
+   "note": "Max damage per tick (fully ramped up, close to the enemy) before armor. 0, 1, 5 and 30 stacks are from tests; others use the formula 16 + 1.37 × stacks.",
+   "table": {
+    "1": 17,
+    "5": 23,
+    "30": 57
+   }
+  },
+  "tables": [
+   {
+    "title": "Damage per tick",
+    "head": [
+     "Stacks",
+     "Close (within 5 blocks)",
+     "Far away"
+    ],
+    "rows": [
+     [
+      "0",
+      "11 → 16",
+      "7 → 11"
+     ],
+     [
+      "1",
+      "up to 17",
+      "-"
+     ],
+     [
+      "5",
+      "18 → 23",
+      "-"
+     ],
+     [
+      "30",
+      "53 → 57",
+      "28 → 31"
+     ]
+    ],
+    "note": "From tests, before armor. Damage climbs each tick until it maxes out after about 8 ticks."
+   },
+   {
+    "title": "Healing per tick",
+    "head": [
+     "Damage",
+     "18",
+     "19",
+     "20",
+     "21",
+     "22",
+     "23"
+    ],
+    "rows": [
+     [
+      "You heal",
+      "6",
+      "7",
+      "7",
+      "7",
+      "8",
+      "8"
+     ]
+    ],
+    "note": "About 35% of the damage dealt. At full HP it becomes shield instead (up to 25)."
+   },
+   {
+    "title": "Range",
+    "head": [
+     "",
+     "Lock on",
+     "Yellow warning",
+     "Detach"
+    ],
+    "rows": [
+     [
+      "0 stacks",
+      "8 blocks",
+      "8-10 blocks",
+      "Past 10 blocks"
+     ],
+     [
+      "30 stacks",
+      "12 blocks",
+      "12-14 blocks",
+      "Past 14 blocks"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Link to a teammate early",
+    "text": "Attach to your teammate and let them get kills while you heal them."
+   },
+   {
+    "title": "Go solo at 8-10 stacks",
+    "text": "Once you have around 8-10 stacks you can fight people on your own."
+   },
+   {
+    "title": "Kite when low",
+    "text": "Fight normally, and when you drop under 50% HP, keep the staff attached and run away from the enemy. Chase them when they start running instead."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Focus the duo",
+    "text": "If you see an attacking kit with an Eldric teammate, target that team early so they can't get overpowered later."
+   },
+   {
+    "title": "Always target Eldric",
+    "text": "If you can't break their bed, always go after the Eldric so it can't keep stacking."
+   },
+   {
+    "title": "Late game",
+    "text": "Against a late game Eldric, bring coils and Execute, and use ranged damage as much as possible."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Christmas Spirit Skin",
+    "img": "images/skins/eldric-christmas-spirit.webp"
+   }
+  ],
+  "bal": "op",
+  "balWhy": "Early game Eldric is very easy to kill, but with a teammate it's really hard to kill both, and Eldric keeps feeding stacks until it can fight on its own. At 20+ stacks it's practically unkillable, even in group fights with Static lowering its HP, thanks to its healing and shield."
  },
  {
   "name": "Elektra",
