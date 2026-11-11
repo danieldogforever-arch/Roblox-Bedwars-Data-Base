@@ -180,11 +180,6 @@
   "note": ""
  },
  {
-  "a": "Void Knight",
-  "b": "Eldertree",
-  "note": ""
- },
- {
   "a": "Cobalt",
   "b": "Trinity",
   "note": ""
@@ -292,6 +287,11 @@
  {
   "a": "Drill",
   "b": "Grove",
+  "note": ""
+ },
+ {
+  "a": "Eldertree",
+  "b": "Void Knight",
   "note": ""
  }
 ]
