@@ -7051,16 +7051,16 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Damage enemies to attract nearby spirits. Consume spirits to instantly teleport and gain an attack buff for a short duration.",
-  "adv": "Deal 26 damage to an enemy within 40 blocks to unlock Assassinate on them. You have 10 seconds to use it. After you press it, you teleport 1 second later to the spot where you dealt the 26th damage (not to where the enemy is now), then slash everyone in a 2×2 area for 80% of your sword damage, with 100% armor penetration.\nAfter teleporting you get 20 shield and move 40% faster for 3 seconds.\nAssassinate has a 30 second cooldown that starts when you finish dealing the 26 damage, and it keeps going even after you respawn. You can't teleport while Grounded (like from Gloop).",
+  "adv": "Deal 26 damage to an enemy within 40 blocks to unlock Assassinate on them. You have 10 seconds to use it. After you press it, you teleport 1 second later to the spot where you dealt the 26th damage (not to where the enemy is now), then slash everyone in a 2×2 area for 10 + 30% of your sword damage, with 100% armor penetration.\nAfter teleporting you get 20 shield and move 40% faster for 3 seconds.\nAssassinate has a 30 second cooldown that starts when you finish dealing the 26 damage, and it keeps going even after you respawn. You can't teleport while Grounded (like from Gloop).",
   "items": [],
   "abilities": [
    {
     "name": "Assassinate",
     "img": "images/abilities/ability-template.png",
     "note": "After dealing 26 damage",
-    "desc": "Teleport (1 second delay) to where you dealt the 26th damage and slash a 2×2 area for 80% of your sword damage with 100% armor penetration. Then get 20 shield and +40% speed for 3 seconds. Available for 10 seconds.",
+    "desc": "Teleport (1 second delay) to where you dealt the 26th damage and slash a 2×2 area for 10 + 30% of your sword damage with 100% armor penetration. Then get 20 shield and +40% speed for 3 seconds. Available for 10 seconds.",
     "cd": 30,
-    "dmgText": "80% of sword damage",
+    "dmgText": "10 + 30% of sword damage",
     "nodps": true
    }
   ],
@@ -7128,7 +7128,7 @@
     "head": [
      "Sword",
      "Sword damage",
-     "Slash (80%)"
+     "Slash (10 + 30%)"
     ],
     "rows": [
      [
@@ -7139,25 +7139,25 @@
      [
       "img:images/items/stone-sword.png|Stone Sword",
       "25",
-      "20"
+      "17.5"
      ],
      [
       "img:images/items/iron-sword.png|Iron Sword",
       "30",
-      "24"
+      "19"
      ],
      [
       "img:images/items/diamond-sword.png|Diamond Sword",
       "42",
-      "33.6"
+      "22.6"
      ],
      [
       "img:images/items/emerald-sword.png|Emerald Sword",
       "55",
-      "44"
+      "26.5"
      ]
     ],
-    "note": "100% armor penetration, so armor doesn't reduce it."
+    "note": "Uses your best sword. 100% armor penetration, so armor doesn't reduce it. A diamond sword slash did 22 in tests."
    },
    {
     "title": "Assassinate stats",
