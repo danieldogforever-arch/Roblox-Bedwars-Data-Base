@@ -5650,7 +5650,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Collect tree orbs around the map to increase size and max HP. Cannot buy armor.",
-  "adv": "Eldertree can't buy armor. Instead, it grows by collecting tree orbs that spawn around the map, most often near the middle. Walk within 2 blocks of an orb to pick it up automatically. Orbs disappear after 2 minutes and 30 seconds.\nEvery orb gives you more max HP, makes you bigger, and makes you take less knockback. The HP gain shrinks a little with each orb: the first orb gives +30, and by 60 orbs each one gives about +11. You start at 100 HP and reach about 500 HP at 26 orbs and 1,000 HP at 70 orbs.",
+  "adv": "Eldertree can't buy armor. Instead, it grows by collecting tree orbs that spawn around the map, most often near the middle. Walk within 2 blocks of an orb to pick it up automatically. Orbs disappear after 2 minutes and 30 seconds.\nEvery orb gives you more max HP, makes you bigger, and makes you take 1% less knockback (up and sideways), up to 15% less at 15 orbs. You start at normal player size (2 blocks tall, 1.5 wide). The HP gain shrinks a little with each orb: the first orb gives +30, and by 60 orbs each one gives about +11. You start at 100 HP and reach about 500 HP at 26 orbs and 1,000 HP at 70 orbs.",
   "items": [],
   "abilities": [],
   "history": [
@@ -5830,7 +5830,7 @@
    {
     "name": "Growth",
     "when": "Each orb",
-    "desc": "More max HP (less per orb as you grow), a bigger body, and less knockback."
+    "desc": "More max HP (less per orb as you grow), a bigger body, and 1% less knockback per orb, up and sideways (max 15%)."
    },
    {
     "name": "No Armor",
@@ -5927,75 +5927,88 @@
   },
   "tables": [
    {
-    "title": "HP and size by orbs",
+    "title": "HP, knockback and size by orbs",
     "head": [
      "Orbs",
      "Max HP",
+     "Less knockback",
      "Size (tall × wide)"
     ],
     "rows": [
      [
       "0",
       "100",
-      "Normal"
+      "0%",
+      "2 × 1.5 blocks (normal)"
      ],
      [
       "1",
       "130",
+      "1%",
       ""
      ],
      [
       "5",
       "202",
+      "5%",
       ""
      ],
      [
       "10",
       "282",
+      "10%",
       ""
      ],
      [
       "15",
       "355",
+      "15%",
       ""
      ],
      [
       "20",
       "424",
+      "15%",
       ""
      ],
      [
       "26",
       "503",
+      "15%",
       "3.2 × 3 blocks"
      ],
      [
       "30",
       "554",
+      "15%",
       ""
      ],
      [
       "40",
       "674",
+      "15%",
       ""
      ],
      [
       "50",
       "789",
+      "15%",
       ""
      ],
      [
       "61",
       "909",
+      "15%",
       "4 × 3.5 blocks"
      ],
      [
       "70",
       "1004",
+      "15%",
       "4.5 × 3.65 blocks"
      ]
     ],
-    "note": "From tests. Width is measured left to right while facing forward. Use the orb calculator for any other number of orbs."
+    "note": "From tests. Width is measured left to right while facing forward. Knockback reduction maxes out at 15%. Use the orb calculator for any other number of orbs."
    }
   ],
   "strategy": [
