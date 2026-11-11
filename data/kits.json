@@ -7051,9 +7051,19 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Damage enemies to attract nearby spirits. Consume spirits to instantly teleport and gain an attack buff for a short duration.",
-  "adv": "",
+  "adv": "Deal 26 damage to an enemy within 40 blocks to unlock Assassinate on them. You have 10 seconds to use it. After you press it, you teleport 1 second later to the spot where you dealt the 26th damage (not to where the enemy is now), then slash everyone in a 2×2 area for 80% of your sword damage, with 100% armor penetration.\nAfter teleporting you get 20 shield and move 40% faster for 3 seconds.\nAssassinate has a 30 second cooldown that starts when you finish dealing the 26 damage, and it keeps going even after you respawn. You can't teleport while Grounded (like from Gloop).",
   "items": [],
-  "abilities": [],
+  "abilities": [
+   {
+    "name": "Assassinate",
+    "img": "images/abilities/ability-template.png",
+    "note": "After dealing 26 damage",
+    "desc": "Teleport (1 second delay) to where you dealt the 26th damage and slash a 2×2 area for 80% of your sword damage with 100% armor penetration. Then get 20 shield and +40% speed for 3 seconds. Available for 10 seconds.",
+    "cd": 30,
+    "dmgText": "80% of sword damage",
+    "nodps": true
+   }
+  ],
   "history": [
    {
     "type": "buff",
@@ -7094,7 +7104,151 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Mark",
+    "when": "Dealing 26 damage",
+    "desc": "Unlocks Assassinate on that enemy for 10 seconds, if they're within 40 blocks. Any damage works, including arrows."
+   },
+   {
+    "name": "Afterimage",
+    "when": "After teleporting",
+    "desc": "20 shield and +40% speed for 3 seconds."
+   },
+   {
+    "name": "Cooldown",
+    "when": "After marking",
+    "desc": "30 seconds, starting when you finish the 26 damage. Respawning doesn't reset it."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Slash damage",
+    "head": [
+     "Sword",
+     "Sword damage",
+     "Slash (80%)"
+    ],
+    "rows": [
+     [
+      "img:images/items/wood-sword.png|Wood Sword",
+      "20",
+      "16"
+     ],
+     [
+      "img:images/items/stone-sword.png|Stone Sword",
+      "25",
+      "20"
+     ],
+     [
+      "img:images/items/iron-sword.png|Iron Sword",
+      "30",
+      "24"
+     ],
+     [
+      "img:images/items/diamond-sword.png|Diamond Sword",
+      "42",
+      "33.6"
+     ],
+     [
+      "img:images/items/emerald-sword.png|Emerald Sword",
+      "55",
+      "44"
+     ]
+    ],
+    "note": "100% armor penetration, so armor doesn't reduce it."
+   },
+   {
+    "title": "Assassinate stats",
+    "head": [
+     "Stat",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Damage needed",
+      "26"
+     ],
+     [
+      "Max distance",
+      "40 blocks"
+     ],
+     [
+      "Time to use it",
+      "10 seconds"
+     ],
+     [
+      "Teleport delay",
+      "1 second"
+     ],
+     [
+      "Shield",
+      "20 for 3 seconds"
+     ],
+     [
+      "Speed",
+      "+40% for 3 seconds"
+     ],
+     [
+      "Cooldown",
+      "30 seconds"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Use a bow",
+    "text": "Get a bow and deal your 26 damage from range. You can sneak attack enemies who don't know an Evelynn is shooting them."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Ground it",
+    "text": "Grounded effects or Gloop stop Evelynn from teleporting."
+   },
+   {
+    "title": "Wait it out",
+    "text": "When you see it teleporting, build up and fight it after the 3 seconds of shield and speed are over."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Prismatic Skin",
+    "img": "images/skins/evelynn-prismatic.webp"
+   },
+   {
+    "name": "Silent Night Skin",
+    "img": "images/skins/evelynn-silent-night.webp"
+   },
+   {
+    "name": "Dodo Skin",
+    "img": "images/skins/evelynn-dodo.webp"
+   },
+   {
+    "name": "Darkheart Skin",
+    "img": "images/skins/evelynn-darkheart.webp"
+   },
+   {
+    "name": "Victorious Skin (Gold)",
+    "img": "images/skins/evelynn-victorious-gold.webp"
+   },
+   {
+    "name": "Victorious Skin (Platinum)",
+    "img": "images/skins/evelynn-victorious-platinum.webp"
+   },
+   {
+    "name": "Victorious Skin (Diamond)",
+    "img": "images/skins/evelynn-victorious-diamond.webp"
+   },
+   {
+    "name": "Victorious Skin (Nightmare)",
+    "img": "images/skins/evelynn-victorious-nightmare.webp"
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "You need to deal damage before you can use the ability, so early game you might die before you get to spin. 20 shield with a 3 second speed boost is fair, especially since you can get Glooped later in the game."
  },
  {
   "name": "Farmer Cletus",
