@@ -7655,7 +7655,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Why fight when you can fish? Catch resources and Fish Coins, upgrade your rod, and use bait to reel in rarer rewards.",
-  "adv": "",
+  "adv": "Fisherman fishes for resources and items. Cast your line into the void (about 1 second), then wait about 8 seconds for a bite. An icon shows what you hooked: Iron, Diamond, Emerald, Special (red), Shark or Gold Fish.\nReeling it in is a mini game with a 30 second limit: hold to raise the bar and let go to drop it, and keep the fish inside the bar for 4 seconds total. Letting it slip out only loses part of your progress.\nMost catches also give Fish Coins, which you spend on better fishing rods. Better rods and later match times give much bigger catches. Fishing in ponds gives better loot, and the middle pond is the best. With the top rod you can buy bait, which gives a chance to hook a Shark in the middle pond. Sharks drop lots of items like fireballs, a random forge weapon (Soaked Warfists, Rusty Nocturne, Sunken Paragon or Soggy Deathbloom), Banana Peels or a Frying Pan.",
   "items": [
    {
     "name": "Beginning Fishing Rod",
@@ -7671,31 +7671,38 @@
    },
    {
     "name": "Fish Coin",
-    "img": "images/items/fish-coin.png"
+    "img": "images/items/fish-coin.png",
+    "desc": "Caught alongside most fish. Spend them on fishing rod upgrades."
    },
    {
     "name": "Obsidian",
-    "img": "images/items/obsidian.png"
+    "img": "images/items/obsidian.png",
+    "desc": "From red fish. 8 hits with a diamond pickaxe, 12 iron, 19 stone, 31 wood. Takes 20 TNT. Siege TNT can't one shot it."
    },
    {
     "name": "Coral Blocks",
-    "img": "images/items/coral-block.png"
+    "img": "images/items/coral-block.png",
+    "desc": "From red fish. 11 hits with a diamond pickaxe, 17 iron, 27 stone, 42 wood. Takes 14 TNT, but Siege TNT breaks it instantly."
    },
    {
     "name": "Blastproof Ceramic",
-    "img": "images/items/blastproof-ceramic.png"
+    "img": "images/items/blastproof-ceramic.png",
+    "desc": "From red fish. Normal TNT can't break it; Siege TNT can."
    },
    {
     "name": "TNT",
-    "img": "images/items/tnt.png"
+    "img": "images/items/tnt.png",
+    "desc": "From red fish. About 60 damage point blank with falloff, 8 block radius. Breaks wool, stone and wood, but not ceramic."
    },
    {
     "name": "Siege TNT",
-    "img": "images/items/siege-tnt.png"
+    "img": "images/items/siege-tnt.png",
+    "desc": "From red fish. About 70 damage point blank with falloff, about 10 block radius. Breaks everything, including ceramic, but can't one shot obsidian."
    },
    {
     "name": "Balloons",
-    "img": "images/items/balloons.png"
+    "img": "images/items/balloons.png",
+    "desc": "From red fish. Each balloon makes you fall slower and jump higher: 1 is small, 2 is bigger, and 3 (max) lets you fly when you jump or fall into the void. Any damage pops them."
    },
    {
     "name": "Hair Dryer",
@@ -7703,11 +7710,19 @@
    },
    {
     "name": "Charge Shield",
-    "img": "images/items/charge-shield.png"
+    "img": "images/items/charge-shield.png",
+    "desc": "Charge forward fast (24 blocks in 1.88 seconds, about 1.85x speed) for 2 seconds. You can't jump while charging. Running into someone deals 5 damage and stops the charge. 7 second cooldown.",
+    "cd": 7,
+    "dmg": 5,
+    "nodps": true
    },
    {
     "name": "Rocket Launcher",
-    "img": "images/items/rocket-launcher.png"
+    "img": "images/items/rocket-launcher.png",
+    "desc": "Fires rockets for 118 damage point blank with falloff (about 17 to emerald armor). Breaks blocks except ceramic and obsidian. 2 second cooldown. Rockets cost 2 emeralds each.",
+    "cd": 2,
+    "dmg": 118,
+    "nodps": true
    },
    {
     "name": "Rockets",
@@ -7723,19 +7738,37 @@
    },
    {
     "name": "Soaked Warfists",
-    "img": "images/items/soaked-warfists.png"
+    "img": "images/items/soaked-warfists.png",
+    "desc": "A random forge weapon you can get from a Shark."
    },
    {
     "name": "Rusty Nocturne",
-    "img": "images/items/rusty-nocturne.png"
+    "img": "images/items/rusty-nocturne.png",
+    "desc": "A random forge weapon you can get from a Shark."
    },
    {
     "name": "Sunken Paragon",
-    "img": "images/items/sunken-paragon.png"
+    "img": "images/items/sunken-paragon.png",
+    "desc": "A random forge weapon you can get from a Shark."
    },
    {
     "name": "Soggy Deathbloom",
-    "img": "images/items/soggy-deathbloom.png"
+    "img": "images/items/soggy-deathbloom.png",
+    "desc": "A random forge weapon you can get from a Shark."
+   },
+   {
+    "name": "Banana Peel",
+    "img": "images/items/banana-peel.png",
+    "note": "From Sharks",
+    "desc": "Makes anyone who steps on it slip for 1 second."
+   },
+   {
+    "name": "Frying Pan",
+    "img": "images/abilities/ability-template.png",
+    "note": "From Sharks",
+    "desc": "Charge for 1 second to fling an enemy up to 5 blocks for 22 damage (no armor penetration). Spamming it does 18; partial charges do 19-21.",
+    "dmg": 22,
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -7877,7 +7910,227 @@
    "badge": "images/bp/s2.webp",
    "rent": 2000,
    "buy": 25000
-  }
+  },
+  "passives": [
+   {
+    "name": "Reeling",
+    "when": "After a bite",
+    "desc": "Keep the fish inside the bar for 4 seconds within 30 seconds. Slipping out only loses some progress."
+   },
+   {
+    "name": "Rod Upgrades",
+    "when": "Spending Fish Coins",
+    "desc": "Better rods give bigger catches. The top rod unlocks bait."
+   },
+   {
+    "name": "Pond Bonus",
+    "when": "Fishing in ponds",
+    "desc": "Ponds give better loot than the edge of the map, and the middle pond is the best. Gold Fish and Sharks are much more common there."
+   },
+   {
+    "name": "Shark Bait",
+    "when": "Top rod, middle pond",
+    "desc": "Bait gives a chance to hook a Shark, which drops lots of items or a random forge weapon."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Catch chances by spot",
+    "head": [
+     "Spot",
+     "Iron",
+     "Diamond",
+     "Emerald",
+     "Special",
+     "Gold Fish",
+     "Catches tested"
+    ],
+    "rows": [
+     [
+      "Base",
+      "37%",
+      "20%",
+      "12%",
+      "31%",
+      "0%",
+      "51"
+     ],
+     [
+      "Diamond gens",
+      "22%",
+      "28%",
+      "24%",
+      "26%",
+      "0%",
+      "87"
+     ],
+     [
+      "Side ponds",
+      "19%",
+      "38%",
+      "19%",
+      "19%",
+      "6%",
+      "16"
+     ],
+     [
+      "Middle pond",
+      "2%",
+      "0%",
+      "34%",
+      "52%",
+      "12%",
+      "64"
+     ]
+    ],
+    "note": "From four 20 minute tests. Chances shift with luck, so these are estimates. The middle pond was tested with an upgraded rod."
+   },
+   {
+    "title": "Loot from 20 minutes of fishing",
+    "head": [
+     "Where",
+     "Iron",
+     "Diamonds",
+     "Emeralds",
+     "Fish Coins",
+     "Gold Fish"
+    ],
+    "rows": [
+     [
+      "Base only",
+      "703",
+      "48",
+      "25",
+      "80",
+      "0"
+     ],
+     [
+      "Diamond gens only",
+      "587",
+      "129",
+      "56",
+      "118",
+      "0"
+     ],
+     [
+      "Diamond gens → middle pond",
+      "895",
+      "95",
+      "176",
+      "79",
+      "3"
+     ],
+     [
+      "Side ponds → middle pond",
+      "888",
+      "123",
+      "176",
+      "59",
+      "6"
+     ]
+    ],
+    "note": "From tests. Moving to the middle pond after the first rod upgrade gave the most loot."
+   },
+   {
+    "title": "Gold Fish",
+    "head": [
+     "When",
+     "Diamonds",
+     "Emeralds",
+     "Iron"
+    ],
+    "rows": [
+     [
+      "Early (about 4 min)",
+      "9",
+      "6",
+      "60"
+     ],
+     [
+      "Mid (about 7 min)",
+      "20",
+      "14",
+      "137"
+     ],
+     [
+      "Late (10+ min)",
+      "21-28",
+      "15-20",
+      "150-200"
+     ]
+    ],
+    "note": "From tests. Gold Fish only showed up in ponds."
+   },
+   {
+    "title": "Block durability",
+    "head": [
+     "Block",
+     "Wood pick",
+     "Stone pick",
+     "Iron pick",
+     "Diamond pick",
+     "TNT"
+    ],
+    "rows": [
+     [
+      "Coral",
+      "42",
+      "27",
+      "17",
+      "11",
+      "14 (Siege breaks it instantly)"
+     ],
+     [
+      "Obsidian",
+      "31",
+      "19",
+      "12",
+      "8",
+      "20 (Siege can't one shot it)"
+     ]
+    ]
+   },
+   {
+    "title": "Explosives",
+    "head": [
+     "",
+     "Damage (point blank)",
+     "Radius",
+     "Breaks"
+    ],
+    "rows": [
+     [
+      "TNT",
+      "About 60",
+      "8 blocks",
+      "Wool, stone, wood"
+     ],
+     [
+      "Siege TNT",
+      "About 70",
+      "About 10 blocks",
+      "Everything except obsidian in one shot"
+     ],
+     [
+      "Rocket",
+      "118",
+      "-",
+      "Everything except ceramic and obsidian"
+     ]
+    ],
+    "note": "All have damage falloff."
+   }
+  ],
+  "skins": [
+   {
+    "name": "OG Chroma Skin",
+    "img": "images/skins/fisherman-og-chroma.webp"
+   },
+   {
+    "name": "Spirit Skin",
+    "img": "images/skins/fisherman-spirit.webp"
+   }
+  ]
  },
  {
   "name": "Flora",
