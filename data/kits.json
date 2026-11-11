@@ -5839,7 +5839,7 @@
    }
   ],
   "calc": {
-   "title": "Orb calculator",
+   "title": "Orb HP calculator",
    "label": "Orbs collected",
    "unitIn": "orbs",
    "unitOut": "HP",
