@@ -6763,13 +6763,13 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Charge the Blade of Fire to ignite in a deadly spin! Striking enemies OR killing Lumen will upgrade your ability to a much more powerful spin.",
-  "adv": "Ember can buy the Infernal Saber for 3 emeralds. It hits like a diamond sword (42 damage, same cooldown), but you can also hold it to charge a fire spin. It takes 1 second to fully charge, but letting go at 0.5 seconds does the same damage, and you can start charging again right after a spin.\nThe base spin hits twice, 0.25 seconds apart, for 42 then 48 damage. Within 2 blocks both hits land; from 2 to 5 blocks only the 48 hit lands. Every hit sets the enemy on fire for 2 ticks of 3 damage.\nHit 10 spins (each enemy hit counts, so 2 enemies in one spin fill 20%) or kill a Lumen to upgrade the spin. The upgraded spin hits three times for 42, 48 and 48, and its fire does 5 damage for 6 ticks. Past 3 blocks you only get the two 48 hits. Spins deal 30% more damage when they only hit one enemy.\nYour upgrade bar stays when you die, but you lose the saber and have to buy it again. Ember can't buy diamond or emerald swords.",
+  "adv": "Ember can buy the Infernal Saber for 3 emeralds. It hits like a diamond sword (42 damage, same cooldown), but you can also hold it to charge a fire spin. It takes 1 second to fully charge, but letting go at 0.5 seconds does the same damage, and you can start charging again right after a spin.\nThe base spin hits twice, 0.25 seconds apart, for 42 then 48 damage. Within 2 blocks both hits land; from 2 to 5 blocks only the 48 hit lands. Every hit sets the enemy on fire for 2 ticks of 3 damage.\nHit 10 spins (each enemy hit counts, so 2 enemies in one spin fill 20%) or kill a Lumen to upgrade the spin. The upgraded spin hits three times for 42, 48 and 48, and its fire does 5 damage for 6 ticks. Past 3 blocks you only get the two 48 hits. The upgraded spin has 40% armor penetration and deals 30% more damage when it only hits one enemy; the base spin has no armor penetration.\nYour upgrade bar stays when you die, but you lose the saber and have to buy it again for the full 3 emeralds. Ember can't buy diamond or emerald swords.",
   "items": [
    {
     "name": "Infernal Saber",
     "img": "images/items/infernal-saber.png",
     "note": "Cost: 3 emeralds",
-    "desc": "Hits like a diamond sword (42 damage). Hold to charge a fire spin: 0.5 seconds is enough for full damage. Lost on death.",
+    "desc": "Hits like a diamond sword (42 damage). Hold to charge a fire spin: 0.5 seconds is enough for full damage. Lost on death, and buying it again costs the full 3 emeralds.",
     "dmg": 42,
     "cd": 0.5,
     "dmgText": "Spin: 42 + 48 (upgraded 42 + 48 + 48)",
@@ -6952,8 +6952,8 @@
    },
    {
     "name": "Lone Target",
-    "when": "Spin hits one enemy",
-    "desc": "Spins deal 30% more damage when they only hit one enemy."
+    "when": "Upgraded spin hits one enemy",
+    "desc": "The upgraded spin deals 30% more damage when it only hits one enemy."
    },
    {
     "name": "No Better Swords",
@@ -6968,23 +6968,47 @@
      "Spin",
      "Within 2-3 blocks",
      "Up to 5 blocks",
-     "Fire"
+     "Fire",
+     "Armor penetration"
     ],
     "rows": [
      [
       "Base",
       "42 + 48 = 90",
       "48",
-      "3 × 2 ticks"
+      "3 × 2 ticks",
+      "0%"
      ],
      [
       "Upgraded",
-      "42 + 48 + 48 = 138",
+      "42 + 48 + 48 = 138 (about 179 on one enemy)",
       "48 + 48 = 96",
-      "5 × 6 ticks"
+      "5 × 6 ticks",
+      "40%"
      ]
     ],
-    "note": "Before armor. Base: both hits within 2 blocks. Upgraded: all three within 3 blocks."
+    "note": "Before armor. Base: both hits within 2 blocks. Upgraded: all three within 3 blocks. Fire has no armor penetration."
+   },
+   {
+    "title": "Spin damage by armor (one enemy, close up, with fire)",
+    "head": [
+     "Spin",
+     "Diamond armor",
+     "Emerald armor"
+    ],
+    "rows": [
+     [
+      "Base",
+      "23.1",
+      "15.4"
+     ],
+     [
+      "Upgraded",
+      "67.22",
+      "46.43"
+     ]
+    ],
+    "note": "From tests."
    }
   ],
   "strategy": [
