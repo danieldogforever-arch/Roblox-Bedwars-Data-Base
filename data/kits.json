@@ -9641,13 +9641,13 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Place gargoyle statues and take control of them.",
-  "adv": "Gregory can buy 3 Gargoyle Statues: Small for 50 iron, Regular for 1 emerald and Giant for 2 emeralds. You can hold as many as you want, but only place 4 at a time, and the Giant takes up 2 of those slots. When you place one, it faces the way you're looking.\nHop into a placed statue to control it as a gargoyle. While you do, your real body turns into a statue that glows for nearby enemies. You can swap between any of your placed statues, and return to your real body whenever you want; the gargoyle you left turns back into a statue. Statues don't show a name tag unless you're in them.\nYour real body is weak while it's a statue: any explosion kills it instantly. Enemies can also mine it like a block (10 hits with a wood pickaxe, 3 with diamond). If someone is mining you, you get an alert and can jump back into your body to fight with whatever HP you have left. Placed statues can be mined too: Regular takes the same as your body, Giant takes 5 diamond pickaxe hits and Small takes 2.\nGargoyles wear the same armor you do, take no fall damage, and can only use tools, swords, blocks, bows and crossbows, arrows and TNT (no Fireballs, Telepearls or other items). Jumping has to be pressed each time; holding jump doesn't work. Gargoyles can pick up resources and loot enemies they kill. When you go back to your real body, everything they carried is deposited automatically within 5 blocks.\nIf your gargoyle dies, you go back to your real body, where you can take over another statue or buy a new one.",
+  "adv": "Gregory can buy 3 Gargoyle Statues: Small for 50 iron, Regular for 1 emerald and Giant for 2 emeralds. You can hold as many as you want, but only place 4 at a time, and the Giant takes up 2 of those slots. When you place one, it faces the way you're looking.\nHop into a placed statue to control it as a gargoyle. While you do, your real body turns into a statue that glows for nearby enemies. You can swap between any of your placed statues, and return to your real body whenever you want; the gargoyle you left turns back into a statue. Statues don't show a name tag unless you're in them. There's no range limit, so you can control a statue anywhere on the map.\nYour real body is weak while it's a statue: any explosion kills it instantly. Enemies can also mine it like a block (10 hits with a wood pickaxe, 3 with diamond). If someone is mining you, you get an alert and can jump back into your body to fight with whatever HP you have left. Placed statues can be mined too: Regular takes the same as your body, Giant takes 5 diamond pickaxe hits and Small takes 2.\nGargoyles wear the same armor you do, take no fall damage, and can only use tools, swords, blocks, bows and crossbows, arrows and TNT (no Fireballs, Telepearls or other items). Jumping has to be pressed each time; holding jump doesn't work. Gargoyles can pick up resources and loot enemies they kill. When you go back to your real body, everything they carried is deposited automatically within 5 blocks.\nGargoyles only heal while you're in them. Gargoyles can break beds. If your gargoyle dies, your real body doesn't lose any HP: you just go back to it, where you can take over another statue or buy a new one.\nThe Small gargoyle moves about 17.5% faster than normal, while the Giant is about a third slower (from tests).",
   "items": [
    {
     "name": "Small Gargoyle Statue",
     "img": "images/items/gargoyle-statue-small.png",
     "note": "50 iron, 1 slot",
-    "desc": "50 HP, 1 block tall. Swords deal 30% less damage and swing every 0.36s. Jumps 1 block. Small enough to get into tight spots like bed defenses. Breaks in 2 diamond pickaxe hits."
+    "desc": "50 HP, 1 block tall. Swords deal 30% less damage and swing every 0.36s. Jumps 1 block and moves about 17.5% faster than normal. Small enough to get into tight spots like bed defenses. Breaks in 2 diamond pickaxe hits."
    },
    {
     "name": "Regular Gargoyle Statue",
@@ -9659,7 +9659,7 @@
     "name": "Giant Gargoyle Statue",
     "img": "images/items/gargoyle-statue-giant.png",
     "note": "2 emeralds, 2 slots",
-    "desc": "200 HP, 3.5 blocks tall and 3.5 blocks wide. Normal sword damage, but swings only every 0.67s. Jumps 5 blocks. Breaks in 5 diamond pickaxe hits."
+    "desc": "200 HP, 3.5 blocks tall and 3.5 blocks wide. Normal sword damage, but swings only every 0.67s. Jumps 5 blocks and moves about a third slower than normal. Breaks in 5 diamond pickaxe hits."
    }
   ],
   "abilities": [],
@@ -9688,12 +9688,17 @@
    {
     "name": "Gargoyle Form",
     "when": "Controlling a gargoyle",
-    "desc": "Same armor as you, no fall damage, and only tools, swords, blocks, bows, crossbows, arrows and TNT can be used."
+    "desc": "Same armor as you, no fall damage, and only tools, swords, blocks, bows, crossbows, arrows and TNT can be used. Gargoyles only heal while you're in them, and can break beds."
    },
    {
     "name": "Loot Drop-off",
     "when": "Returning to your body",
     "desc": "Resources your gargoyle picked up are deposited automatically within 5 blocks."
+   },
+   {
+    "name": "Puppet",
+    "when": "Gargoyle dies",
+    "desc": "Your real body takes no damage. You go back to it and can take over another statue."
    }
   ],
   "tables": [
@@ -9706,6 +9711,7 @@
      "Sword damage",
      "Sword cooldown",
      "Jump",
+     "Speed",
      "Diamond sword DPS"
     ],
     "rows": [
@@ -9716,6 +9722,7 @@
       "100%",
       "0.3s",
       "Normal",
+      "Normal",
       "140"
      ],
      [
@@ -9725,6 +9732,7 @@
       "70%",
       "0.36s",
       "1 block",
+      "~17.5% faster",
       "~82"
      ],
      [
@@ -9734,6 +9742,7 @@
       "90%",
       "0.34s",
       "2 blocks",
+      "—",
       "~111"
      ],
      [
@@ -9743,6 +9752,7 @@
       "100%",
       "0.67s",
       "5 blocks",
+      "~33% slower",
       "~63"
      ]
     ],
