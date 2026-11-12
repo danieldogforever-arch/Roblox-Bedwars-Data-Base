@@ -7655,7 +7655,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Why fight when you can fish? Catch resources and Fish Coins, upgrade your rod, and use bait to reel in rarer rewards.",
-  "adv": "Fisherman fishes for resources and items. Cast your line into the void (about 1 second), then wait about 8 seconds for a bite. An icon shows what you hooked: Iron, Diamond, Emerald, Special (red), Shark or Gold Fish.\nReeling it in is a mini game with a 30 second limit: hold to raise the bar and let go to drop it, and keep the fish inside the bar for 4 seconds total. Letting it slip out only loses part of your progress.\nMost catches also give Fish Coins. Spend 15 on the second rod and 35 on the top rod. The second rod unlocks your fishing ponds: one appears at a random spot near each diamond generator, and one at an emerald generator. Each Fisherman sees their own ponds, and after you fish the emerald pond a few times it moves to a different emerald generator. Ponds give better loot than your base, and the emerald pond is the best.\nCatches get bigger as the match goes on, from 40% at the start up to 140% at 10 minutes.\nThe top rod unlocks bait (10 Fish Coins for 2). Bait improves your loot, and in the emerald pond each baited cast has a 25% chance to hook a Shark. Sharks give big piles of Siege TNT, TNT and fireballs, or one of 4 Shark weapons: Soaked Warfists, Rusty Nocturne, Sunken Paragon or Soggy Deathbloom. Red fish can give special items like Banana Peels, Charged Gloop, the Frying Pan and the Tornado Launcher, and those are more common in the emerald pond or with bait at a diamond pond.",
+  "adv": "Fisherman fishes for resources and items. Cast your line into the void (about 1 second), then wait about 8 seconds for a bite. An icon shows what you hooked: Iron, Diamond, Emerald, Special (it looks red while you reel it in), Shark or Gold Fish.\nReeling it in is a mini game with a 30 second limit: hold to raise the bar and let go to drop it, and keep the fish inside the bar for 4 seconds total. Letting it slip out only loses part of your progress.\nMost catches also give Fish Coins. Spend 15 on the second rod and 35 on the top rod; each rod upgrade gives bigger catches. Each Fisherman sees their own ponds. From the start of the match, a pond appears at a random spot near each diamond generator. The second rod adds an emerald pond at one emerald generator, which moves to a different emerald generator after you fish it a few times. Ponds give better loot than your base, and the emerald pond is the best.\nCatches get bigger with your rod and as the match goes on: from 40% at the start up to 140% at 10 minutes.\nThe top rod unlocks bait (10 Fish Coins for 2). Bait improves your loot, and in the emerald pond each baited cast has a 25% chance to hook a Shark. Special fish give items like TNT, Siege TNT, fireballs, blocks, Banana Peels, Charged Gloop, the Frying Pan and the Tornado Launcher; they're more common in the emerald pond or with bait at a diamond pond. Sharks can give big piles of those items too, and they're the only way to get the 4 Shark weapons: Soaked Warfists, Rusty Nocturne, Sunken Paragon and Soggy Deathbloom.",
   "items": [
    {
     "name": "Beginning Fishing Rod",
@@ -7665,12 +7665,12 @@
    {
     "name": "Novice Fishing Rod",
     "img": "images/items/fishing-rod.png",
-    "desc": "Costs 15 Fish Coins. Unlocks your fishing ponds."
+    "desc": "Costs 15 Fish Coins. Bigger catches, and unlocks your emerald pond."
    },
    {
     "name": "Master Fishing Rod",
     "img": "images/items/fishing-rod.png",
-    "desc": "Costs 35 Fish Coins. Unlocks bait."
+    "desc": "Costs 35 Fish Coins. Even bigger catches, and unlocks bait."
    },
    {
     "name": "Fish Coin",
@@ -7725,7 +7725,7 @@
    {
     "name": "Rocket Launcher",
     "img": "images/items/rocket-launcher.png",
-    "desc": "Fires rockets for 118 damage point blank with falloff (about 17 to emerald armor). Breaks blocks except ceramic and obsidian. 2 second cooldown. Comes with 10 rockets; more cost 2 emeralds each.",
+    "desc": "Fires rockets for 118 damage point blank with falloff. Breaks blocks except ceramic and obsidian. 2 second cooldown. Comes with 10 rockets; more cost 2 emeralds each.",
     "cd": 2,
     "dmg": 118,
     "nodps": true
@@ -7779,19 +7779,19 @@
    {
     "name": "Charged Gloop",
     "img": "images/items/charged-gloop.png",
-    "note": "From red fish",
+    "note": "From Special fish or Sharks",
     "desc": "Like a normal Gloop, but it chases the enemy until it Gloops them."
    },
    {
     "name": "Banana Peel",
     "img": "images/items/banana-peel.png",
-    "note": "From Sharks",
+    "note": "From Special fish or Sharks",
     "desc": "Makes anyone who steps on it slip for 1 second."
    },
    {
     "name": "Frying Pan",
     "img": "images/items/frying-pan.png",
-    "note": "From Sharks",
+    "note": "From Special fish or Sharks",
     "desc": "Charge for 1 second to fling an enemy up to 5 blocks for 22 damage (no armor penetration). Spamming it does 18; partial charges do 19-21.",
     "dmg": 22,
     "nodps": true
@@ -7952,17 +7952,17 @@
    {
     "name": "Rod Upgrades",
     "when": "Spending Fish Coins",
-    "desc": "15 coins for the second rod (unlocks ponds), 35 for the top rod (unlocks bait)."
+    "desc": "15 coins for the second rod (unlocks the emerald pond), 35 for the top rod (unlocks bait). Each upgrade gives bigger catches."
    },
    {
     "name": "Fishing Ponds",
-    "when": "Second rod and up",
-    "desc": "Your own ponds appear near the diamond generators and at one emerald generator. The emerald pond moves to another emerald generator after a few catches."
+    "when": "Always",
+    "desc": "Your own ponds appear near the diamond generators at the start of the match. The second rod adds an emerald pond, which moves to another emerald generator after a few catches."
    },
    {
     "name": "Growing Catches",
     "when": "As the match goes on",
-    "desc": "Loot grows from 40% at the start to 140% at 10 minutes."
+    "desc": "Catches grow with your rod and with match time: from 40% at the start to 140% at 10 minutes."
    },
    {
     "name": "Shark Bait",
@@ -8213,7 +8213,7 @@
    "max": 30,
    "start": 5,
    "hideTable": true,
-   "note": "How big your catches are compared to normal. Loot starts at 40% and grows 10% per minute until it caps at 140% at 10 minutes.",
+   "note": "How big your catches are from match time alone (your rod adds more on top). Loot starts at 40% and grows 10% per minute until it caps at 140% at 10 minutes.",
    "table": {
     "10": 140,
     "11": 140,
@@ -8241,7 +8241,7 @@
   "strategy": [
    {
     "title": "Diamond pond, then emerald pond",
-    "text": "Fish at the diamond generator ponds, then move to the emerald pond once you get the next rod."
+    "text": "Fish at the diamond generator ponds, then move to the emerald pond once you get the second rod."
    },
    {
     "title": "Coins for bait",
@@ -8254,8 +8254,8 @@
     "text": "Hitting a Fisherman with any projectile stops it from fishing, so use arrows or fireballs while it's fishing."
    },
    {
-    "title": "Steal the loot",
-    "text": "Pearl onto it and Gloop it, then take all its loot before it can teleport home."
+    "title": "Take the loot",
+    "text": "Pearl onto it and Gloop it, then kill it to take all its loot before it can teleport home."
    }
   ],
   "bal": "bal",
