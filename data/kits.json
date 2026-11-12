@@ -9170,11 +9170,16 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Passively create Frosted Snowballs for free. Frosted Snowballs are faster and larger.",
-  "adv": "",
+  "adv": "Frosty gets a free Frosted Snowball every 3 seconds, and can hold up to 64. Snowballs deal 3 to 5 damage depending on how long you charge them: 3 if you spam them, 4 if you hold for about 0.25 seconds, and 5 at about 0.5 seconds. They have 75% armor penetration.\nEvery hit slows the enemy by about 60% for 1 second (from tests). Snowballs also work with enchants.",
   "items": [
    {
     "name": "Frosted Snowball",
-    "img": "images/items/frosted-snowball.png"
+    "img": "images/items/frosted-snowball.png",
+    "note": "Free every 3s, up to 64",
+    "desc": "Deals 3 damage, 4 with a 0.25 second charge, or 5 with a 0.5 second charge, with 75% armor penetration. Slows the enemy by about 60% for 1 second. Works with enchants.",
+    "dmg": 5,
+    "dmgText": "3 – 5",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -9215,7 +9220,73 @@
    "tier": "40 (free)",
    "badge": "images/bp/s3.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Snowball Maker",
+    "when": "Every 3 seconds",
+    "desc": "Get a free Frosted Snowball, up to 64."
+   },
+   {
+    "name": "Chill",
+    "when": "Snowball hits",
+    "desc": "Slows the enemy by about 60% for 1 second."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Charge damage",
+    "head": [
+     "Charge time",
+     "Damage"
+    ],
+    "rows": [
+     [
+      "Spam (no charge)",
+      "3"
+     ],
+     [
+      "~0.25s",
+      "4"
+     ],
+     [
+      "~0.5s",
+      "5"
+     ]
+    ],
+    "note": "75% armor penetration."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Keep them slowed",
+    "text": "The slow lasts 1 second, so time your throws to keep the enemy slowed the whole time and deal full charged damage while saving snowballs."
+   },
+   {
+    "title": "Spam for damage",
+    "text": "For pure damage, spamming does more than charging, but it uses up your snowballs faster."
+   },
+   {
+    "title": "Get Fire",
+    "text": "Snowballs work with enchants. Fire enchant makes them shred even more."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Block the snowballs",
+    "text": "Build blocks behind you when running from Frosty, or in front of you when chasing it."
+   },
+   {
+    "title": "Drain its snowballs",
+    "text": "Make it waste its snowballs. Once it runs out, it can only throw one every 3 seconds."
+   },
+   {
+    "title": "Use your movement",
+    "text": "Snowballs don't ground or Gloop you, so you can still use movement abilities."
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "Frosty is pretty good early game since the slow helps you chase enemies, and the damage is okay early with high armor penetration. But there are much better ways to slow enemies, especially kits with area slows, so it's outclassed by other projectile slowers."
  },
  {
   "name": "Gingerbread Man",
