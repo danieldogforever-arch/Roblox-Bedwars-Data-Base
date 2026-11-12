@@ -7790,7 +7790,7 @@
    },
    {
     "name": "Frying Pan",
-    "img": "images/abilities/ability-template.png",
+    "img": "images/items/frying-pan.png",
     "note": "From Sharks",
     "desc": "Charge for 1 second to fling an enemy up to 5 blocks for 22 damage (no armor penetration). Spamming it does 18; partial charges do 19-21.",
     "dmg": 22,
@@ -7798,7 +7798,7 @@
    },
    {
     "name": "Fish Bait",
-    "img": "images/abilities/ability-template.png",
+    "img": "images/items/fish-bait.png",
     "note": "Cost: 10 Fish Coins for 2",
     "desc": "Unlocked with the top rod. Baited casts give better loot, and in the emerald pond they have a 25% chance to hook a Shark."
    }
@@ -8004,14 +8004,14 @@
      [
       "Emerald pond",
       "2%",
-      "0%",
-      "35%",
-      "53%",
+      "20%",
+      "27%",
+      "41%",
       "10%",
       "25% with bait"
      ]
     ],
-    "note": "Estimated from tests; chances also shift with luck. Emerald pond numbers are with an upgraded rod and no bait. The emerald pond's diamonds come from Gold Fish."
+    "note": "Estimated from tests; chances also shift with luck. Emerald pond numbers are with an upgraded rod and no bait."
    },
    {
     "title": "Loot from 20 minutes of fishing",
