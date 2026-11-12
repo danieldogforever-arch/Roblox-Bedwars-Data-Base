@@ -8900,17 +8900,28 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Dealing damage will apply stacks of Frost. At four stacks, Frost is consumed and applies Frostbite to the target, making them fragile. Emerald Sword is replaced by the Ice Sword, which applies two stacks per hit. Use your Frost Explosion ability to immediately deal damage to nearby targets with stacks of Frost.",
-  "adv": "",
+  "adv": "Every sword hit gives the enemy 1 Frost stack, up to 4. Use Detonate Ice Stacks to blow up the stacks on every enemy that has them, dealing damage based on how many stacks they have (see the table). Detonation has about 20% armor penetration (from tests) and a 10 second cooldown.\nDetonating also gives the enemy Frostbite: your hits on them deal 4 extra damage with high armor penetration. Frostbite lasts 2 seconds from 1 stack, 3 seconds from 2, and 4 seconds from 3 or 4 stacks. For example, a wood sword (20 damage) that normally deals 8.8 to iron armor deals 11.89 to a Frostbitten enemy.\nThe Ice Sword costs 5 emeralds and gives 2 stacks per hit, so you only need 2 hits to reach 4 stacks. Every hit deals 44 damage plus the same 4 Frostbite damage, for 48 total. Detonating while using the Ice Sword doesn't add any more on-hit damage.",
   "items": [
    {
     "name": "Ice Sword",
-    "img": "images/items/ice-sword.png"
+    "img": "images/items/ice-sword.png",
+    "note": "5 emeralds",
+    "desc": "Each hit gives 2 Frost stacks and deals 44 damage + 4 Frostbite damage (48 total). Detonating doesn't add extra on-hit damage while you use it.",
+    "dmg": 48,
+    "cd": 0.3,
+    "dmgText": "44 + 4"
    }
   ],
   "abilities": [
    {
-    "name": "Frost Explosion",
-    "img": "images/abilities/ability-template.png"
+    "name": "Detonate Ice Stacks",
+    "img": "images/abilities/ability-template.png",
+    "note": "Up to 4 stacks",
+    "desc": "Blow up the Frost stacks on every enemy that has them for 1.9 / 3.61 / 6.68 / 13.03 damage at 1–4 stacks, with about 20% armor penetration. Also applies Frostbite (+4 damage per hit) for 2–4 seconds.",
+    "cd": 10,
+    "dmg": 13.03,
+    "dmgText": "1.9 – 13.03",
+    "nodps": true
    }
   ],
   "history": [
@@ -9049,7 +9060,104 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Frost Stacks",
+    "when": "Sword hits",
+    "desc": "Each hit gives 1 Frost stack (2 with the Ice Sword), up to 4."
+   },
+   {
+    "name": "Frostbite",
+    "when": "After detonating",
+    "desc": "Your hits deal 4 extra damage with high armor penetration, for 2 seconds (1 stack), 3 seconds (2 stacks) or 4 seconds (3–4 stacks)."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Detonation damage",
+    "head": [
+     "Stacks",
+     "Damage",
+     "Frostbite"
+    ],
+    "rows": [
+     [
+      "1",
+      "1.9",
+      "2s"
+     ],
+     [
+      "2",
+      "3.61",
+      "3s"
+     ],
+     [
+      "3",
+      "6.68",
+      "4s"
+     ],
+     [
+      "4",
+      "13.03",
+      "4s"
+     ]
+    ],
+    "note": "From tests, no armor. About 20% armor penetration."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Early game",
+    "text": "Before you have the Ice Sword, detonate as soon as you can for extra early damage. It usually lets you kill an enemy in one less hit."
+   },
+   {
+    "title": "Once enemies have armor",
+    "text": "Detonate at around 3–4 stacks for the best damage over time."
+   },
+   {
+    "title": "With the Ice Sword",
+    "text": "Hit everyone until they have 4 stacks, then detonate."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Wait out the cooldown",
+    "text": "You can't stop Freiya from detonating, but once it has used the ability, build up and stall until the fight is safer. It has a 10 second cooldown."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Tiger Brawler Skin",
+    "img": "images/skins/freiya-tiger-brawler.webp"
+   },
+   {
+    "name": "Bunny Skin",
+    "img": "images/skins/freiya-bunny.webp"
+   },
+   {
+    "name": "Victorious Gold Skin",
+    "img": "images/skins/freiya-victorious-gold.webp"
+   },
+   {
+    "name": "Victorious Platinum Skin",
+    "img": "images/skins/freiya-victorious-platinum.webp"
+   },
+   {
+    "name": "Victorious Diamond Skin",
+    "img": "images/skins/freiya-victorious-diamond.webp"
+   },
+   {
+    "name": "Victorious Emerald Skin",
+    "img": "images/skins/freiya-victorious-emerald.webp"
+   },
+   {
+    "name": "Victorious Nightmare Skin",
+    "img": "images/skins/freiya-victorious-nightmare.webp"
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "Freiya deals great damage, and its focus on armor penetration is a nice touch. It takes more skill than before, since stacks used to detonate on their own and now you have to press the ability yourself after stacking everyone."
  },
  {
   "name": "Frosty",
