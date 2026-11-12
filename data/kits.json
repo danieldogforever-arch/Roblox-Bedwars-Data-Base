@@ -9797,14 +9797,14 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Consuming enemy souls grants health regen, movespeed and invulnerability for 2.5s. Combat is disabled while consuming.",
-  "adv": "When you get a kill or an assist, the enemy drops a soul. You have 10 seconds to collect it, and you can grab it from up to 21 blocks away.\nConsuming a soul heals 25 HP over 2.5 seconds (2.5 HP, 10 times). For those 2.5 seconds you're invincible, take no fall damage, and move about 75% faster (from tests), but you can't attack or mine anything.",
+  "adv": "When you get a kill or an assist, the enemy drops a soul. You have 10 seconds to consume it with your ability button from up to 21 blocks away. You can have several souls around at once, but you can only consume a new one after the current 2.5 seconds end.\nConsuming a soul heals 25 HP over 2.5 seconds (2.5 HP, 10 times). For those 2.5 seconds you're invincible, take no fall damage, and move about 75% faster (from tests), but you can't attack or mine anything.",
   "items": [],
   "abilities": [
    {
     "name": "Consume Soul",
     "img": "images/abilities/ability-template.png",
     "note": "Within 10s of a kill or assist",
-    "desc": "Collect a soul from up to 21 blocks away. Heals 25 HP over 2.5 seconds and makes you invincible and about 75% faster, with no fall damage. You can't attack or mine while it lasts."
+    "desc": "Press to consume a soul up to 21 blocks away. Heals 25 HP over 2.5 seconds and makes you invincible and about 75% faster, with no fall damage. You can't attack or mine while it lasts, and you can't consume another soul until it ends."
    }
   ],
   "history": [
@@ -9877,7 +9877,7 @@
    {
     "name": "Soul Harvest",
     "when": "Kills and assists",
-    "desc": "The enemy drops a soul that you can collect for 10 seconds."
+    "desc": "The enemy drops a soul that you can consume for 10 seconds. Several souls can be out at once."
    }
   ],
   "tables": [
@@ -9932,7 +9932,7 @@
    },
    {
     "title": "Cut its healing",
-    "text": "Use coils so it doesn't heal as much."
+    "text": "Use Tesla Coils: they apply Zapped 2, which cuts its healing."
    }
   ],
   "skins": [
