@@ -9312,11 +9312,13 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Place gumdrops bounce pads for extreme movement. Using a gumdrop bounce pad negates all fall damage and grants a shield.",
-  "adv": "",
+  "adv": "Gingerbread Man can buy Gumdrop Bounce Pads for 40 iron each, with no limit on how many you buy or place. You can break your own gumdrops in one hit with any tool. Teammates can't pick them up.\nStepping on a gumdrop launches you 19 blocks into the air and gives you a 30 HP shield for 5 seconds. You can't get the shield again for 15 seconds, counting from when you first got it. Teammates can bounce on your gumdrops too, but enemies can't.\nIf you keep bouncing on the same gumdrop, each bounce goes 1 block lower. Stay off it for 5 seconds to get the full height back. Gumdrops are weak to shears.",
   "items": [
    {
     "name": "Gumdrop Bounce Pad",
-    "img": "images/items/gumdrop-bounce-pad.png"
+    "img": "images/items/gumdrop-bounce-pad.png",
+    "note": "40 iron, no limit",
+    "desc": "Launches you and teammates 19 blocks up. Gives you a 30 HP shield for 5 seconds (15 second cooldown). Each bounce in a row goes 1 block lower; step off for 5 seconds to reset. You break it in one hit; enemies can break it quickly with shears."
    }
   ],
   "abilities": [],
@@ -9378,7 +9380,45 @@
    "tier": "20 (free)",
    "badge": "images/bp/s3.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Gumdrop Shield",
+    "when": "Bouncing on a gumdrop",
+    "desc": "Get a 30 HP shield for 5 seconds. You can't get it again for 15 seconds, counting from when you first got it."
+   },
+   {
+    "name": "Bounce Decay",
+    "when": "Bouncing again and again",
+    "desc": "Each bounce in a row is 1 block lower. Stay off the gumdrop for 5 seconds to get the full 19 blocks back."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Learn the Gingerbread technique",
+    "text": "Break the gumdrop the moment you bounce off it, then pick it back up and place it again. This lets you keep running and jumping with the same gumdrop."
+   },
+   {
+    "title": "Carry spares",
+    "text": "Always have 2–3 gumdrops on you, for your teammates and in case you leave one behind and forget to break it."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Buy shears",
+    "text": "When you see a Gingerbread Man, buy shears to break its gumdrops quickly."
+   },
+   {
+    "title": "Cover, then break",
+    "text": "Cover a gumdrop with blocks and then break it, so the Gingerbread Man can't bounce on it again."
+   },
+   {
+    "title": "Blow up the base",
+    "text": "If you see lots of gumdrops at a base, hit it with fireballs or rain TNT on it."
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "Gingerbread Man is a fun kit with its own counterplay, and it's a decent support kit. It may need a rework to lean more toward support and less toward stalling."
  },
  {
   "name": "Gompy",
