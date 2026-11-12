@@ -8272,13 +8272,13 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Use explosive beehives to deal high damage to your enemies or throw them at yourself for a massive launch.",
-  "adv": "Flora spawns with 1 Beehive Grenade, and gets another one on spawn the first time it respawns. You also get Beehive Grenades from kills and assists, and can buy them in the shop for 40 iron each. You can hold up to 5.\nA Beehive Grenade explodes 0.5 seconds after it lands on a player or the floor, dealing about 29.5 damage with falloff and no real armor penetration (from tests). 1 second after the explosion, 4 bees attack for about 5 damage per tick. If several enemies are hit, the bees spread out between them.\nThrow a Beehive Grenade at your own feet to launch yourself: it only deals 1 damage to you and resets your Glide cooldown. You can go up to 11 blocks high, or up to 25 blocks if you time your jump perfectly.\nGlide lasts 8 seconds. For the first 4 seconds you glide down slowly, and for the last 4 seconds you glide faster. If you haven't landed by the end, you take full fall damage from the height where you started gliding. Activating Glide at the top of a perfect launch carries you about another 25 blocks.",
+  "adv": "Flora spawns with 1 Beehive Grenade, and gets another on spawn the first time it respawns (but not on later respawns). You also get a free one every 45 seconds, 1 for each kill or assist, and you can buy them in the shop for 40 iron each. You can never hold more than 5.\nA Beehive Grenade explodes 0.5 seconds after it lands on a player or the floor, dealing about 29.5 damage with falloff and no real armor penetration (from tests). 1 second after the explosion, 4 bees attack for about 5 damage each, with some armor penetration. If several enemies are hit, the bees spread out between them.\nThrow a Beehive Grenade at your own feet to launch yourself: it only deals 1 damage to you and resets your Glide cooldown. You can go up to 11 blocks high, or up to 25 blocks if you time your jump perfectly.\nGlide lasts 7.5 seconds. You glide down slowly at first, then faster near the end. If you haven't landed when it ends, you take full fall damage from the highest point you reached. Activating Glide at the top of a perfect launch lets you slowly glide about another 25 blocks forward. Getting hit by a projectile while gliding stops your Glide, and Gloop stops you from gliding or launching with your grenades.",
   "items": [
    {
     "name": "Beehive Grenade",
     "img": "images/items/beehive-grenade.png",
-    "note": "Spawn, kills, assists, or 40 iron",
-    "desc": "Explodes 0.5 seconds after landing for about 29.5 damage with falloff. 1 second later, 4 bees attack for about 5 damage per tick, spreading out between enemies. Thrown at yourself it deals 1 damage, launches you up to 11 blocks (25 with a perfect jump) and resets Glide. Hold up to 5.",
+    "note": "Spawn, every 45s, kills, assists, or 40 iron",
+    "desc": "Explodes 0.5 seconds after landing for about 29.5 damage with falloff. 1 second later, 4 bees attack for about 5 damage each, spreading out between enemies. Thrown at yourself it deals 1 damage, launches you up to 11 blocks (25 with a perfect jump) and resets Glide. Hold up to 5.",
     "dmg": 29.5,
     "dmgText": "~29.5 + bees",
     "nodps": true
@@ -8288,8 +8288,8 @@
    {
     "name": "Glide",
     "img": "images/abilities/ability-template.png",
-    "note": "8 seconds",
-    "desc": "Glide slowly for 4 seconds, then faster for the last 4. If you haven't landed when it ends, you take full fall damage from where you started gliding. Getting hit by your own Beehive Grenade resets the cooldown.",
+    "note": "7.5 seconds",
+    "desc": "Glide slowly at first, then faster near the end, for 7.5 seconds. If you haven't landed when it ends, you take full fall damage from the highest point you reached. Getting shot stops your Glide, and Gloop stops you from gliding. Getting hit by your own Beehive Grenade resets the cooldown.",
     "cd": 30
    }
   ],
@@ -8400,12 +8400,17 @@
    {
     "name": "Spawn Hive",
     "when": "Spawning",
-    "desc": "Start the match with 1 Beehive Grenade, and get another on your first respawn."
+    "desc": "Start the match with 1 Beehive Grenade, and get another on your first respawn only."
+   },
+   {
+    "name": "Hive Timer",
+    "when": "Every 45 seconds",
+    "desc": "Get a free Beehive Grenade."
    },
    {
     "name": "Hive Rewards",
     "when": "Kills and assists",
-    "desc": "Get Beehive Grenades from kills and assists, up to 5 at a time."
+    "desc": "Get 1 Beehive Grenade for each kill or assist. You can never hold more than 5."
    },
    {
     "name": "Glide Reset",
@@ -8420,7 +8425,7 @@
    },
    {
     "title": "Save your iron",
-    "text": "Try not to spend iron on hives. Get them from kills, assists and spawning instead."
+    "text": "Try not to spend iron on hives. Get them from kills, assists and the free one every 45 seconds instead."
    },
    {
     "title": "Play high",
@@ -8433,12 +8438,16 @@
   ],
   "counter": [
    {
+    "title": "Shoot it down",
+    "text": "Hitting a gliding Flora with a projectile stops its Glide."
+   },
+   {
     "title": "Fight it on landing",
     "text": "A Flora gliding into your base has no other abilities left, so once it lands it's basically fighting with no kit."
    },
    {
     "title": "Gloop it",
-    "text": "Gloop stops Flora from gliding and from launching itself with knockback."
+    "text": "Gloop stops Flora from gliding and from launching itself with its grenades."
    }
   ],
   "bal": "sop",
