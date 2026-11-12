@@ -8900,13 +8900,13 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Dealing damage will apply stacks of Frost. At four stacks, Frost is consumed and applies Frostbite to the target, making them fragile. Emerald Sword is replaced by the Ice Sword, which applies two stacks per hit. Use your Frost Explosion ability to immediately deal damage to nearby targets with stacks of Frost.",
-  "adv": "Every sword hit gives the enemy 1 Frost stack, up to 4. Use Detonate Ice Stacks to blow up the stacks on every enemy that has them, dealing damage based on how many stacks they have (see the table). Detonation has about 20% armor penetration (from tests) and a 10 second cooldown.\nDetonating also gives the enemy Frostbite: your hits on them deal 4 extra damage with high armor penetration. Frostbite lasts 2 seconds from 1 stack, 3 seconds from 2, and 4 seconds from 3 or 4 stacks. For example, a wood sword (20 damage) that normally deals 8.8 to iron armor deals 11.89 to a Frostbitten enemy.\nThe Ice Sword costs 5 emeralds and gives 2 stacks per hit, so you only need 2 hits to reach 4 stacks. Every hit deals 44 damage plus the same 4 Frostbite damage, for 48 total. Detonating while using the Ice Sword doesn't add any more on-hit damage.",
+  "adv": "Every sword hit gives the enemy 1 Frost stack, up to 4. Only swords give stacks, and stacks last 10 seconds. Use Detonate Ice Stacks to blow up the stacks on every enemy within 9 blocks, dealing damage based on how many stacks they have (see the table). Detonation has about 20% armor penetration (from tests) and a 10 second cooldown.\nDetonating also gives the enemy Frostbite: for a short time your hits on them deal 4 extra damage, and that extra damage has high armor penetration. Frostbite lasts 2 seconds from 1 stack, 3 seconds from 2, and 4 seconds from 3 or 4 stacks. For example, a wood sword (20 damage) that normally deals 8.8 to iron armor deals 11.89 to a Frostbitten enemy.\nThe Ice Sword replaces the Diamond Sword and costs 5 emeralds. Freiya can't buy the Emerald Sword. The Ice Sword gives 2 stacks per hit, so you only need 2 hits to reach 4 stacks, and the 4 Frostbite damage is built into every hit: 44 + 4 = 48 damage. With the Ice Sword, detonating is just for the extra burst damage, since you already have Frostbite on every hit. Holding the Ice Sword doesn't change detonation damage.",
   "items": [
    {
     "name": "Ice Sword",
     "img": "images/items/ice-sword.png",
-    "note": "5 emeralds",
-    "desc": "Each hit gives 2 Frost stacks and deals 44 damage + 4 Frostbite damage (48 total). Detonating doesn't add extra on-hit damage while you use it.",
+    "note": "5 emeralds, replaces Diamond Sword",
+    "desc": "Replaces the Diamond Sword. Each hit gives 2 Frost stacks and deals 44 damage + 4 Frostbite damage (48 total). Detonating doesn't add more on-hit damage while you use it, and holding it doesn't change detonation damage.",
     "dmg": 48,
     "cd": 0.3,
     "dmgText": "44 + 4"
@@ -8916,8 +8916,8 @@
    {
     "name": "Detonate Ice Stacks",
     "img": "images/abilities/ability-template.png",
-    "note": "Up to 4 stacks",
-    "desc": "Blow up the Frost stacks on every enemy that has them for 1.9 / 3.61 / 6.68 / 13.03 damage at 1–4 stacks, with about 20% armor penetration. Also applies Frostbite (+4 damage per hit) for 2–4 seconds.",
+    "note": "9 block radius",
+    "desc": "Blow up the Frost stacks on every enemy within 9 blocks for 1.9 / 3.61 / 6.68 / 13.03 damage at 1–4 stacks, with about 20% armor penetration. Also applies Frostbite (+4 damage per hit) for 2–4 seconds.",
     "cd": 10,
     "dmg": 13.03,
     "dmgText": "1.9 – 13.03",
@@ -9065,7 +9065,7 @@
    {
     "name": "Frost Stacks",
     "when": "Sword hits",
-    "desc": "Each hit gives 1 Frost stack (2 with the Ice Sword), up to 4."
+    "desc": "Each sword hit gives 1 Frost stack (2 with the Ice Sword), up to 4. Stacks last 10 seconds. Other weapons don't give stacks."
    },
    {
     "name": "Frostbite",
