@@ -205,6 +205,7 @@ html,body{overflow-x:hidden}
 .ptable .ticon{width:22px;height:22px;object-fit:contain;vertical-align:-6px;margin-right:8px;image-rendering:pixelated}
 .ptable td:first-child{white-space:nowrap}
 .cond{display:inline-block;margin-top:6px;background:rgba(255,255,255,.14);border-radius:8px;padding:1px 10px;font-size:.9rem}
+.abhead{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px}.abhead .cond{margin-top:0;padding:3px 12px;line-height:1.35}
 .nums{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
 .nums span{background:rgba(0,0,0,.35);border-radius:8px;padding:2px 12px;color:var(--muted);font-size:.95rem}.nums b{color:#fff}
 .fus{background:var(--soft);border-radius:18px;padding:18px;margin-bottom:16px}
@@ -606,7 +607,7 @@ function tableHtml(tb){
 }
 function abCard(a,label){
   var v = a.nodps ? null : dps(a);
-  return '<div class="ab"><div class="aico">'+pic(a,a.name)+'</div><div><span class="nm">'+esc(a.name)+'</span>'+(a.note?costHtml(a.note):'')+(a.desc?'<p style="margin:6px 0 0;white-space:pre-line">'+esc(a.desc)+'</p>':'')+(a.cd==null&&a.dmg==null?'':'<div class="nums">'+
+  return '<div class="ab"><div class="aico">'+pic(a,a.name)+'</div><div>'+(a.note&&!/^Cost:/i.test(a.note)?'<div class="abhead"><span class="nm">'+esc(a.name)+'</span>'+costHtml(a.note)+'</div>':'<span class="nm">'+esc(a.name)+'</span>'+(a.note?costHtml(a.note):''))+(a.desc?'<p style="margin:6px 0 0;white-space:pre-line">'+esc(a.desc)+'</p>':'')+(a.cd==null&&a.dmg==null?'':'<div class="nums">'+
     (a.cd==null&&!a.cdText?'':'<span>Cooldown <b>'+(a.cdText?a.cdText:a.cd>0?a.cd+'s':'None')+'</b></span>')+(a.dmg==null?'':'<span>Damage <b>'+(a.dmgText?a.dmgText:a.dmg>0?a.dmg+((a.hits||1)>1?' × '+a.hits:''):'None')+'</b></span>')+(a.dpsText?'<span>DPS <b>'+esc(a.dpsText)+'</b></span>':v===null?'':'<span>DPS <b>'+v.toFixed(1)+'</b></span>')+'</div>')+'</div></div>';
 }
 function renderDetail(){
