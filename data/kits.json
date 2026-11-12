@@ -9645,19 +9645,19 @@
   "items": [
    {
     "name": "Small Gargoyle Statue",
-    "img": "images/items/gargoyle-statue-small.png",
+    "img": "images/items/gargoyle-statue-small.png?v=2",
     "note": "50 iron, 1 slot",
     "desc": "50 HP, 1 block tall. Swords deal 30% less damage and swing every 0.36s. Jumps 1 block and moves about 17.5% faster than normal. Small enough to get into tight spots like bed defenses. Breaks in 2 diamond pickaxe hits."
    },
    {
     "name": "Regular Gargoyle Statue",
-    "img": "images/items/gargoyle-statue-regular.png",
+    "img": "images/items/gargoyle-statue-regular.png?v=2",
     "note": "1 emerald, 1 slot",
     "desc": "90 HP, 2 blocks tall. Swords deal 10% less damage and swing every 0.34s. Jumps 2 blocks. Breaks in 10 wood or 3 diamond pickaxe hits."
    },
    {
     "name": "Giant Gargoyle Statue",
-    "img": "images/items/gargoyle-statue-giant.png",
+    "img": "images/items/gargoyle-statue-giant.png?v=2",
     "note": "2 emeralds, 2 slots",
     "desc": "200 HP, 3.5 blocks tall and 3.5 blocks wide. Normal sword damage, but swings only every 0.67s. Jumps 5 blocks and moves about a third slower than normal. Breaks in 5 diamond pickaxe hits."
    }
