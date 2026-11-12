@@ -9440,13 +9440,13 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Gompy the Ghost Hunter! Find ghosts around the map, vacuum them and fire them across the map.",
-  "adv": "Ghosts spawn around the map at about the same rate as Death Adder's collectibles, and also when someone dies (not to the void). Stand within 3 blocks of a ghost for 1 second to collect it. Each ghost fills 30% of your ectoplasm bar, up to 100%. Ghosts despawn after 3 minutes.\nBuy the Vacuum for 50 iron to shoot ghosts. Charging it for up to 2.5 seconds raises the damage, speed, knockback and ectoplasm cost:\nAn uncharged shot deals 36 damage, knocks back 2 blocks, travels 12 blocks per second and costs 10% ectoplasm.\nA full charge deals 72 damage, knocks back 12 blocks, travels 24 blocks per second and costs 40% ectoplasm.\nShots have 50% armor penetration (from tests) and a 1 second cooldown. You move about 40% slower while charging.",
+  "adv": "Ghosts spawn around the map at about the same rate as Death Adder's collectibles, and also when someone dies (not to the void). How many spawn depends on the map. Only Gompys can see ghosts. All Gompys in a match share the same ghosts, but each ghost can only be collected by one of them. Stand within 3 blocks of a ghost for 1 second to collect it. Each ghost fills 30% of your ectoplasm bar, up to 100%. Ghosts despawn after 3 minutes.\nBuy the Vacuum for 50 iron to shoot ghosts. Charging it for up to 2.5 seconds raises the damage, speed and knockback. Damage goes up evenly from 36 to 72 (about 50 at 1 second). Charges up to about 1 second still cost only 10% ectoplasm, and after that the cost climbs to 40% at full charge.\nAn uncharged shot deals 36 damage, knocks back 2 blocks and travels 12 blocks per second.\nA full charge deals 72 damage, knocks back 12 blocks and travels 24 blocks per second.\nYou can't shoot with less than 10% ectoplasm. With less than 40% you can still charge, but only partway. Shots have 50% armor penetration (from tests) and a 1 second cooldown. You move about 40% slower while charging.",
   "items": [
    {
     "name": "Vacuum",
     "img": "images/items/vacuum.png",
     "note": "50 iron",
-    "desc": "Shoots a ghost. Charge up to 2.5 seconds: 36 to 72 damage, 2 to 12 blocks of knockback, 12 to 24 blocks per second, and 10% to 40% ectoplasm. 50% armor penetration. 1 second cooldown. You move about 40% slower while charging.",
+    "desc": "Shoots a ghost. Charge up to 2.5 seconds: 36 to 72 damage, 2 to 12 blocks of knockback, and 12 to 24 blocks per second. Costs 10% ectoplasm for charges up to about 1 second, rising to 40% at full charge. Needs at least 10%. 50% armor penetration. 1 second cooldown. You move about 40% slower while charging.",
     "cd": 1,
     "dmg": 72,
     "dmgText": "36 – 72",
@@ -9529,7 +9529,7 @@
    {
     "name": "Ghost Hunting",
     "when": "Within 3 blocks of a ghost",
-    "desc": "Collect it in 1 second to fill 30% of your ectoplasm bar (max 100%)."
+    "desc": "Collect it in 1 second to fill 30% of your ectoplasm bar (max 100%). Ghosts are shared between Gompys, but only one can collect each ghost."
    },
    {
     "name": "Haunted Kills",
@@ -9539,58 +9539,65 @@
   ],
   "tables": [
    {
-    "title": "Uncharged vs full charge",
+    "title": "Charge levels",
     "head": [
      "",
      "Uncharged",
+     "1 second",
      "Full charge"
     ],
     "rows": [
      [
-      "Charge time",
-      "0s",
-      "2.5s"
-     ],
-     [
       "Damage",
       "36",
+      "~50",
       "72"
      ],
      [
-      "Knockback",
-      "2 blocks",
-      "12 blocks"
-     ],
-     [
-      "Speed",
-      "12 blocks/s",
-      "24 blocks/s"
-     ],
-     [
       "Ectoplasm",
+      "10%",
       "10%",
       "40%"
      ],
      [
       "Shots per full bar",
       "10",
+      "10",
       "2.5"
      ],
      [
       "Damage per full bar",
       "360",
+      "~500",
       "180"
      ],
      [
       "Damage per second",
       "36",
+      "~25",
       "~20.6"
+     ],
+     [
+      "Knockback",
+      "2 blocks",
+      "—",
+      "12 blocks"
+     ],
+     [
+      "Speed",
+      "12 blocks/s",
+      "—",
+      "24 blocks/s"
      ]
     ],
-    "note": "Damage per second includes the 1 second cooldown. Spamming deals twice as much damage per ghost, but you need to be close since slow shots are easy to dodge."
+    "note": "Damage per second includes the 1 second cooldown. Damage scales evenly with charge time."
    }
   ],
   "strategy": [
+   {
+    "title": "1 second charges",
+    "text": "Charging for about 1 second deals around 50 damage but still costs only 10% ectoplasm, so it gets the most damage out of each ghost."
+   },
    {
     "title": "Spam up close",
     "text": "Uncharged shots deal the most damage per ghost and per second. If someone is chasing you, spam them for steady chip damage."
