@@ -9641,19 +9641,25 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Place gargoyle statues and take control of them.",
-  "adv": "",
+  "adv": "Gregory can buy 3 Gargoyle Statues: Small for 50 iron, Regular for 1 emerald and Giant for 2 emeralds. You can hold as many as you want, but only place 4 at a time, and the Giant takes up 2 of those slots. When you place one, it faces the way you're looking.\nHop into a placed statue to control it as a gargoyle. While you do, your real body turns into a statue that glows for nearby enemies. You can swap between any of your placed statues, and return to your real body whenever you want; the gargoyle you left turns back into a statue. Statues don't show a name tag unless you're in them.\nYour real body is weak while it's a statue: any explosion kills it instantly. Enemies can also mine it like a block (10 hits with a wood pickaxe, 3 with diamond). If someone is mining you, you get an alert and can jump back into your body to fight with whatever HP you have left. Placed statues can be mined too: Regular takes the same as your body, Giant takes 5 diamond pickaxe hits and Small takes 2.\nGargoyles wear the same armor you do, take no fall damage, and can only use tools, swords, blocks, bows and crossbows, arrows and TNT (no Fireballs, Telepearls or other items). Jumping has to be pressed each time; holding jump doesn't work. Gargoyles can pick up resources and loot enemies they kill. When you go back to your real body, everything they carried is deposited automatically within 5 blocks.\nIf your gargoyle dies, you go back to your real body, where you can take over another statue or buy a new one.",
   "items": [
    {
     "name": "Small Gargoyle Statue",
-    "img": "images/items/gargoyle-statue-small.png"
+    "img": "images/items/gargoyle-statue-small.png",
+    "note": "50 iron, 1 slot",
+    "desc": "50 HP, 1 block tall. Swords deal 30% less damage and swing every 0.36s. Jumps 1 block. Small enough to get into tight spots like bed defenses. Breaks in 2 diamond pickaxe hits."
    },
    {
     "name": "Regular Gargoyle Statue",
-    "img": "images/items/gargoyle-statue-regular.png"
+    "img": "images/items/gargoyle-statue-regular.png",
+    "note": "1 emerald, 1 slot",
+    "desc": "90 HP, 2 blocks tall. Swords deal 10% less damage and swing every 0.34s. Jumps 2 blocks. Breaks in 10 wood or 3 diamond pickaxe hits."
    },
    {
     "name": "Giant Gargoyle Statue",
-    "img": "images/items/gargoyle-statue-giant.png"
+    "img": "images/items/gargoyle-statue-giant.png",
+    "note": "2 emeralds, 2 slots",
+    "desc": "200 HP, 3.5 blocks tall and 3.5 blocks wide. Normal sword damage, but swings only every 0.67s. Jumps 5 blocks. Breaks in 5 diamond pickaxe hits."
    }
   ],
   "abilities": [],
@@ -9672,7 +9678,103 @@
    "tier": "35",
    "badge": "images/bp/halloween-2026.webp",
    "note": "Cannot be rented yet"
-  }
+  },
+  "passives": [
+   {
+    "name": "Stone Body",
+    "when": "Controlling a gargoyle",
+    "desc": "Your real body becomes a glowing statue. Any explosion kills it instantly, and enemies can mine it. You get an alert when it's being mined."
+   },
+   {
+    "name": "Gargoyle Form",
+    "when": "Controlling a gargoyle",
+    "desc": "Same armor as you, no fall damage, and only tools, swords, blocks, bows, crossbows, arrows and TNT can be used."
+   },
+   {
+    "name": "Loot Drop-off",
+    "when": "Returning to your body",
+    "desc": "Resources your gargoyle picked up are deposited automatically within 5 blocks."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Gargoyle forms",
+    "head": [
+     "Form",
+     "HP",
+     "Size",
+     "Sword damage",
+     "Sword cooldown",
+     "Jump",
+     "Diamond sword DPS"
+    ],
+    "rows": [
+     [
+      "Your body",
+      "100",
+      "2 blocks",
+      "100%",
+      "0.3s",
+      "Normal",
+      "140"
+     ],
+     [
+      "Small",
+      "50",
+      "1 block",
+      "70%",
+      "0.36s",
+      "1 block",
+      "~82"
+     ],
+     [
+      "Regular",
+      "90",
+      "2 blocks",
+      "90%",
+      "0.34s",
+      "2 blocks",
+      "~111"
+     ],
+     [
+      "Giant",
+      "200",
+      "3.5 × 3.5 blocks",
+      "100%",
+      "0.67s",
+      "5 blocks",
+      "~63"
+     ]
+    ],
+    "note": "Diamond sword DPS = 42 damage × sword damage ÷ cooldown, with no armor."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Farm with the Small statue",
+    "text": "Use the Small gargoyle to collect diamonds and emeralds and save up for a crossbow and tier 3 upgrades."
+   },
+   {
+    "title": "Be a pest",
+    "text": "Use the Small gargoyle to shoot people with a crossbow and help your teammates at middle without being there yourself."
+   },
+   {
+    "title": "Protect your body",
+    "text": "If you know someone is coming for you, always leave the gargoyle and deal with them yourself."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Go for the real body",
+    "text": "Ignore the gargoyle, since it's very weak. Find Gregory's glowing statue and hit it with a fireball or TNT to kill it instantly."
+   },
+   {
+    "title": "Just fight it",
+    "text": "If you have to fight a gargoyle, just kill it. Gregory wastes 1–2 emeralds, and even the Giant can't beat you with the same gear."
+   }
+  ],
+  "bal": "weak",
+  "balWhy": "Every gargoyle form has bad damage and terrible sword cooldowns, and only the Giant has good HP. Its only real uses are taking no fall damage and getting into beds with the Small form. It's expensive and needs a stat rework to keep up."
  },
  {
   "name": "Grim Reaper",
