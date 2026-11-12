@@ -8753,12 +8753,12 @@
     "rows": [
      [
       "img:images/items/fortuna-oversized.png|Oversized",
-      "Throw 1 card at 4× damage. With Greater Draw, throw up to 3 cards at 3× damage each. Card count and multipliers apply before Volley.",
+      "Throw 1 card at 4× damage. With Greater Draw, throw up to 3 cards at 3× damage each. Card count and multipliers apply before Volley. Can't be combined with Minisized.",
       "Size"
      ],
      [
       "img:images/items/fortuna-minisized.png|Minisized",
-      "Throw 9 cards at 50% damage each (2.5 each, 22.5 total from tests). Greater Draw adds twice as many cards. Can't be combined with Volley.",
+      "Throw 9 cards at 50% damage each (2.5 each, 22.5 total from tests). Greater Draw adds twice as many cards. Can't be combined with Oversized or Volley.",
       "Size"
      ],
      [
