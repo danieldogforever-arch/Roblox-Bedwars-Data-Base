@@ -9440,15 +9440,17 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Gompy the Ghost Hunter! Find ghosts around the map, vacuum them and fire them across the map.",
-  "adv": "",
+  "adv": "Ghosts spawn around the map at about the same rate as Death Adder's collectibles, and also when someone dies (not to the void). Stand within 3 blocks of a ghost for 1 second to collect it. Each ghost fills 30% of your ectoplasm bar, up to 100%. Ghosts despawn after 3 minutes.\nBuy the Vacuum for 50 iron to shoot ghosts. Charging it for up to 2.5 seconds raises the damage, speed, knockback and ectoplasm cost:\nAn uncharged shot deals 36 damage, knocks back 2 blocks, travels 12 blocks per second and costs 10% ectoplasm.\nA full charge deals 72 damage, knocks back 12 blocks, travels 24 blocks per second and costs 40% ectoplasm.\nShots have 50% armor penetration (from tests) and a 1 second cooldown. You move about 40% slower while charging.",
   "items": [
    {
     "name": "Vacuum",
-    "img": "images/items/vacuum.png"
-   },
-   {
-    "name": "Ghost",
-    "img": "images/items/ghost.png"
+    "img": "images/items/vacuum.png",
+    "note": "50 iron",
+    "desc": "Shoots a ghost. Charge up to 2.5 seconds: 36 to 72 damage, 2 to 12 blocks of knockback, 12 to 24 blocks per second, and 10% to 40% ectoplasm. 50% armor penetration. 1 second cooldown. You move about 40% slower while charging.",
+    "cd": 1,
+    "dmg": 72,
+    "dmgText": "36 – 72",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -9522,7 +9524,104 @@
    "badge": "images/bp/s2.webp",
    "rent": 2000,
    "buy": 25000
-  }
+  },
+  "passives": [
+   {
+    "name": "Ghost Hunting",
+    "when": "Within 3 blocks of a ghost",
+    "desc": "Collect it in 1 second to fill 30% of your ectoplasm bar (max 100%)."
+   },
+   {
+    "name": "Haunted Kills",
+    "when": "Non-void deaths",
+    "desc": "A ghost spawns where someone died, unless there are already ghosts nearby or the map is full."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Uncharged vs full charge",
+    "head": [
+     "",
+     "Uncharged",
+     "Full charge"
+    ],
+    "rows": [
+     [
+      "Charge time",
+      "0s",
+      "2.5s"
+     ],
+     [
+      "Damage",
+      "36",
+      "72"
+     ],
+     [
+      "Knockback",
+      "2 blocks",
+      "12 blocks"
+     ],
+     [
+      "Speed",
+      "12 blocks/s",
+      "24 blocks/s"
+     ],
+     [
+      "Ectoplasm",
+      "10%",
+      "40%"
+     ],
+     [
+      "Shots per full bar",
+      "10",
+      "2.5"
+     ],
+     [
+      "Damage per full bar",
+      "360",
+      "180"
+     ],
+     [
+      "Damage per second",
+      "36",
+      "~20.6"
+     ]
+    ],
+    "note": "Damage per second includes the 1 second cooldown. Spamming deals twice as much damage per ghost, but you need to be close since slow shots are easy to dodge."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Spam up close",
+    "text": "Uncharged shots deal the most damage per ghost and per second. If someone is chasing you, spam them for steady chip damage."
+   },
+   {
+    "title": "Charge for the void",
+    "text": "Full charges knock enemies 12 blocks, which is great for knocking them into the void."
+   },
+   {
+    "title": "Charge when chasing",
+    "text": "When you're chasing someone, charge to the max so the ghost reaches them faster and hits harder."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Dodge it",
+    "text": "Ghosts are easy to dodge. Strafe if Gompy is shooting from the side, and build up if it's shooting straight at you."
+   },
+   {
+    "title": "Get close",
+    "text": "Low-charge ghosts are very slow, so get close and avoid them, where Gompy doesn't have time to charge."
+   }
+  ],
+  "skins": [
+   {
+    "name": "OG Chroma Skin",
+    "img": "images/skins/gompy-og-chroma.webp"
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "Gompy's damage and knockback are good across the board, but the rework made it much worse. Spamming does more damage, but you have to be very close and collect twice as many ghosts as before. To get damage like before the rework, you have to charge slowly while moving slower, when before you could just shoot instantly."
  },
  {
   "name": "Gregory",
