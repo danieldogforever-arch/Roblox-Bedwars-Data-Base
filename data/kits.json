@@ -8464,7 +8464,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Summon cards to attack players! Deal damage to enhance your cards with different effects.",
-  "adv": "Fortuna throws a fan of cards. With no upgrades it throws 4 cards that deal 4 damage each, with a 12 second cooldown.\nDealing damage fills your card meter, and kills add 60 to it. Each time it fills you pick a new card: you're shown 3 options and can reroll one of them. You start with 1 reroll and get another every 3 kills. You can have up to 5 cards.\nYou can only pick a II card if you already have its I card (for example, Greater Draw II needs Greater Draw I). Most cards are common. Moonlit, Aerodynamic, Volley and Sticky Cards are rarer, and Jack of All Trades is the rarest at about 1%. Explosive needs to be your 2nd card or later, and Scorched and Decay your 3rd or later.\n\"Final card\" effects only happen on the last card of each throw. Some cards are weaker together than they look: Oversized with Greater Draw I and II throws 3 cards for 21 damage each (63 total), and 77.6 total with Jack of All Trades (from tests).",
+  "adv": "Fortuna throws a fan of cards. With no upgrades it throws 4 cards that deal 4 damage each, with a 12 second cooldown.\nDealing damage fills your card meter, and kills add 60 to it. Each time it fills you pick a new card: you're shown 3 options and can reroll one of them. You start with 1 reroll and get another every 3 kills. You can have up to 5 cards.\nYou can only pick a II card if you already have its I card (for example, Greater Draw II needs Greater Draw I). Most cards are common. Moonlit, Aerodynamic, Volley and Sticky Cards are rarer, and Jack of All Trades is the rarest at about 1%. Explosive needs to be your 2nd card or later, and Scorched and Decay your 3rd or later.\n\"Final card\" effects only happen on the last card of each throw. Some cards are weaker together than they look: for example Oversized with Greater Draw I and II throws 3 cards for 21 damage each (63 total). See the tested damage table below.",
   "items": [],
   "abilities": [
    {
@@ -8666,6 +8666,72 @@
     "note": "Each kill counts as 60 damage."
    },
    {
+    "title": "Tested damage (no armor)",
+    "head": [
+     "Cards",
+     "Cards thrown",
+     "Damage each",
+     "Total"
+    ],
+    "rows": [
+     [
+      "No cards",
+      "4",
+      "4",
+      "16"
+     ],
+     [
+      "img:images/items/fortuna-oversized.png|Oversized",
+      "1",
+      "20",
+      "20"
+     ],
+     [
+      "Oversized + Greater Draw I",
+      "2",
+      "16",
+      "32"
+     ],
+     [
+      "Oversized + Greater Draw I + II",
+      "3",
+      "21",
+      "63"
+     ],
+     [
+      "Oversized + Greater Draw I + II + Jack of All Trades",
+      "3",
+      "~25.9",
+      "77.6"
+     ],
+     [
+      "img:images/items/fortuna-minisized.png|Minisized",
+      "9",
+      "2.5",
+      "22.5"
+     ],
+     [
+      "Minisized + Sharper Cards I",
+      "9",
+      "4",
+      "36"
+     ],
+     [
+      "img:images/items/fortuna-sharper-cards-1.png|Sharper Cards I",
+      "4",
+      "6",
+      "24"
+     ],
+     [
+      "img:images/items/fortuna-volley.png|Volley",
+      "36",
+      "1.4",
+      "50.4"
+     ]
+    ],
+    "note": "From tests."
+   },
+   {
     "title": "Cards",
     "head": [
      "Card",
@@ -8680,12 +8746,12 @@
      ],
      [
       "img:images/items/fortuna-minisized.png|Minisized",
-      "Throw 9 cards at 50% damage each. Greater Draw adds twice as many cards.",
+      "Throw 9 cards at 50% damage each (2.5 each, 22.5 total from tests). Greater Draw adds twice as many cards. Can't be combined with Volley.",
       "Size"
      ],
      [
       "img:images/items/fortuna-sharper-cards-1.png|Sharper Cards I",
-      "+2 base damage per card, before size and Volley.",
+      "+2 base damage per card, before size and Volley (+1.5 per card with Minisized).",
       "Damage"
      ],
      [
@@ -8725,22 +8791,22 @@
      ],
      [
       "img:images/items/fortuna-poisonous.png|Poisonous",
-      "The final card poisons the enemy for 3 seconds. Poison can't kill.",
+      "The final card poisons the enemy for 2 damage per second for 3 seconds (6 total), with about 70% armor penetration. Poison can't kill.",
       "Final card"
      ],
      [
       "img:images/items/fortuna-explosive.png|Explosive",
-      "The final card explodes for 10 base damage. Card 2 or later.",
+      "The final card explodes for 10 damage. Card 2 or later.",
       "Final card"
      ],
      [
       "img:images/items/fortuna-electrifying-1.png|Electrifying I",
-      "The final card chains static damage to up to 3 enemies and gives Zapped 1 (40% less healing and shields for 5 seconds).",
+      "The final card chains 8 static damage to up to 3 nearby enemies and gives Zapped 1 (40% less healing and shields for 5 seconds).",
       "Final card"
      ],
      [
       "img:images/items/fortuna-electrifying-2.png|Electrifying II",
-      "Stronger chained static damage, and gives Zapped 2 (60% less healing and shields for 10 seconds). Needs Electrifying I.",
+      "The chain does 14.4 damage instead, and gives Zapped 2 (60% less healing and shields for 10 seconds). Needs Electrifying I.",
       "Final card"
      ],
      [
