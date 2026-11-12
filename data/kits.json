@@ -9797,9 +9797,16 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Consuming enemy souls grants health regen, movespeed and invulnerability for 2.5s. Combat is disabled while consuming.",
-  "adv": "",
+  "adv": "When you get a kill or an assist, the enemy drops a soul. You have 10 seconds to collect it, and you can grab it from up to 21 blocks away.\nConsuming a soul heals 25 HP over 2.5 seconds (2.5 HP, 10 times). For those 2.5 seconds you're invincible, take no fall damage, and move about 75% faster (from tests), but you can't attack or mine anything.",
   "items": [],
-  "abilities": [],
+  "abilities": [
+   {
+    "name": "Consume Soul",
+    "img": "images/abilities/ability-template.png",
+    "note": "Within 10s of a kill or assist",
+    "desc": "Collect a soul from up to 21 blocks away. Heals 25 HP over 2.5 seconds and makes you invincible and about 75% faster, with no fall damage. You can't attack or mine while it lasts."
+   }
+  ],
   "history": [
    {
     "type": "bal",
@@ -9865,7 +9872,101 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Soul Harvest",
+    "when": "Kills and assists",
+    "desc": "The enemy drops a soul that you can collect for 10 seconds."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Consuming a soul",
+    "head": [
+     "Effect",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Healing",
+      "25 HP over 2.5s (2.5 × 10)"
+     ],
+     [
+      "Invincibility",
+      "2.5s"
+     ],
+     [
+      "Speed",
+      "~75% faster"
+     ],
+     [
+      "Fall damage",
+      "None while it lasts"
+     ],
+     [
+      "Range",
+      "21 blocks"
+     ],
+     [
+      "Time to collect",
+      "10s after the kill"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Save the soul",
+    "text": "Don't take a soul right after a kill. Wait until you're in danger, then use it: you get the 25 HP plus your normal regeneration, so you heal much more than 25."
+   },
+   {
+    "title": "Fusion kit",
+    "text": "Grim Reaper works best paired with a strong fighting kit in fusions, or as a stalling and support kit."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Jump into the void",
+    "text": "If you're about to die, jump into the void so Grim Reaper can't get your soul."
+   },
+   {
+    "title": "Cut its healing",
+    "text": "Use coils so it doesn't heal as much."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Blood Harvest Skin",
+    "img": "images/skins/grim-reaper-blood-harvest.webp"
+   },
+   {
+    "name": "Easter Rabbit Skin",
+    "img": "images/skins/grim-reaper-easter-rabbit.webp"
+   },
+   {
+    "name": "Victorious Gold Skin",
+    "img": "images/skins/grim-reaper-victorious-gold.webp"
+   },
+   {
+    "name": "Victorious Platinum Skin",
+    "img": "images/skins/grim-reaper-victorious-platinum.webp"
+   },
+   {
+    "name": "Victorious Diamond Skin",
+    "img": "images/skins/grim-reaper-victorious-diamond.webp"
+   },
+   {
+    "name": "Victorious Emerald Skin",
+    "img": "images/skins/grim-reaper-victorious-emerald.webp"
+   },
+   {
+    "name": "Victorious Nightmare Skin",
+    "img": "images/skins/grim-reaper-victorious-nightmare.webp"
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "Grim Reaper does nothing to help you win fights; it's only good once you've already killed someone or hit someone who then dies. It's more of a fusion kit, and a stalling kit with some support, than a good PvP kit."
  },
  {
   "name": "Grove",
