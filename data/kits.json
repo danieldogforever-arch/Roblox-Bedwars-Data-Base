@@ -8464,7 +8464,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Summon cards to attack players! Deal damage to enhance your cards with different effects.",
-  "adv": "Fortuna throws a fan of cards. With no upgrades it throws 4 cards that deal 4 damage each, with a 12 second cooldown.\nDealing damage fills your card meter, and kills add 60 to it. Each time it fills you pick a new card: you're shown 3 options and can reroll one of them. You start with 1 reroll and get another every 3 kills. You can have up to 5 cards.\nYou can only pick a II card if you already have its I card (for example, Greater Draw II needs Greater Draw I). Most cards are common. Moonlit, Aerodynamic, Volley and Sticky Cards are rarer, and Jack of All Trades is the rarest at about 1%. Explosive needs to be your 2nd card or later, and Scorched and Decay your 3rd or later.\n\"Final card\" effects only happen on the last card of each throw. Some cards are weaker together than they look: for example Oversized with Greater Draw I and II throws 3 cards for 21 damage each (63 total). See the tested damage table below.",
+  "adv": "Fortuna throws a fan of cards. With no upgrades it throws 4 cards that deal 4 damage each, with a 12 second cooldown.\nDealing damage fills your card meter, and kills add 60 to it. Each time it fills you pick a new card: you're shown 3 options and can reroll one of them. You start with 1 reroll and get another every 3 kills. You can have up to 5 cards.\nYou can only pick a II card if you already have its I card (for example, Greater Draw II needs Greater Draw I). Most cards are common. Moonlit, Aerodynamic and Sticky Cards are rarer, Volley is very rare (about 1–2%), and Jack of All Trades is the rarest at about 1%. Explosive needs to be your 2nd card or later. Scorched, Decay, Moonlit, Volley and Jack of All Trades only show up from your 3rd card on.\n\"Final card\" effects only happen on the last card of each throw. Some cards are weaker together than they look: for example Oversized with Greater Draw I and II throws 3 cards for 21 damage each (63 total). See the tested damage table below.",
   "items": [],
   "abilities": [
    {
@@ -8681,16 +8681,34 @@
       "16"
      ],
      [
+      "img:images/items/fortuna-sharper-cards-1.png|Sharper Cards I",
+      "4",
+      "6",
+      "24"
+     ],
+     [
+      "Sharper Cards I + II",
+      "4",
+      "15",
+      "60"
+     ],
+     [
       "img:images/items/fortuna-oversized.png|Oversized",
       "1",
       "20",
       "20"
      ],
      [
+      "Oversized + Sharper Cards I",
+      "1",
+      "32",
+      "32"
+     ],
+     [
       "Oversized + Greater Draw I",
       "2",
-      "16",
-      "32"
+      "27",
+      "54"
      ],
      [
       "Oversized + Greater Draw I + II",
@@ -8717,19 +8735,13 @@
       "36"
      ],
      [
-      "img:images/items/fortuna-sharper-cards-1.png|Sharper Cards I",
-      "4",
-      "6",
-      "24"
-     ],
-     [
       "img:images/items/fortuna-volley.png|Volley",
-      "36",
-      "1.4",
+      "16",
+      "~3.15",
       "50.4"
      ]
     ],
-    "note": "From tests."
+    "note": "From tests. Card combos don't always stack the way the card text says."
    },
    {
     "title": "Cards",
@@ -8821,7 +8833,7 @@
      ],
      [
       "img:images/items/fortuna-moonlit.png|Moonlit",
-      "Cards ramp from 90% to 120% damage and up to 20% armor penetration. Throws with only 1 card get the full bonus. Rare.",
+      "Cards ramp from 90% to 120% damage and up to 20% armor penetration. Throws with only 1 card get the full bonus. Card 3 or later. Rare.",
       "Damage"
      ],
      [
@@ -8836,12 +8848,12 @@
      ],
      [
       "img:images/items/fortuna-volley.png|Volley",
-      "Throw 4× as many cards, but each deals 65% less damage (40% more total damage). Electrifying damage isn't changed. Rare.",
+      "Throw 4× as many cards, but each deals 65% less damage (40% more total damage). Electrifying damage isn't changed. Card 3 or later. Very rare (about 1–2%).",
       "Cards"
      ],
      [
       "img:images/items/fortuna-jack-of-all-trades.png|Jack of All Trades",
-      "Get 20% versions of the damage, crit, healing, knockback and explosion cards you don't own. Doesn't stack with cards you have. Its explosions can't break blocks, and Volley blocks its knockback. Very rare (about 1%).",
+      "Get 20% versions of the damage, crit, healing, knockback and explosion cards you don't own. Doesn't stack with cards you have. Its explosions can't break blocks, and Volley blocks its knockback. Card 3 or later. Very rare (about 1%).",
       "Special"
      ]
     ]
@@ -8874,7 +8886,8 @@
    }
   ],
   "bal": "bal",
-  "balWhy": "Fortuna needs to upgrade before it gets good damage and perks. It's very versatile and has great damage for starting fights, and it's a good 1v1 kit but worse in group fights."
+  "balWhy": "Fortuna needs to upgrade before it gets good damage and perks. It's very versatile and has great damage for starting fights, and it's a good 1v1 kit but worse in group fights.",
+  "deck": true
  },
  {
   "name": "Freiya",
