@@ -9170,16 +9170,17 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Passively create Frosted Snowballs for free. Frosted Snowballs are faster and larger.",
-  "adv": "Frosty gets a free Frosted Snowball every 3 seconds, and can hold up to 64. Snowballs deal 3 to 5 damage depending on how long you charge them: 3 if you spam them, 4 if you hold for about 0.25 seconds, and 5 at about 0.5 seconds. They have 75% armor penetration.\nEvery hit slows the enemy by about 60% for 1 second (from tests). Snowballs also work with enchants.",
+  "adv": "Frosty gets a free Frosted Snowball every 3 seconds, and can hold up to 64. Snowballs deal 3 to 5 damage depending on how long you charge them: 3 if you spam them (one every 0.3 seconds), 4 with a 0.4 second charge, and 5 with a 0.5 second charge. Charging doesn't make them faster, but they fly a bit farther. They have 75% armor penetration.\nEvery hit slows the enemy by about 60% for 1 second (from tests). The slow doesn't stack, but each hit resets it, so you can keep an enemy slowed. Snowballs also work with enchants.",
   "items": [
    {
     "name": "Frosted Snowball",
     "img": "images/items/frosted-snowball.png",
     "note": "Free every 3s, up to 64",
-    "desc": "Deals 3 damage, 4 with a 0.25 second charge, or 5 with a 0.5 second charge, with 75% armor penetration. Slows the enemy by about 60% for 1 second. Works with enchants.",
+    "desc": "Deals 3 damage when spammed, 4 with a 0.4 second charge, or 5 with a 0.5 second charge, with 75% armor penetration. Charged snowballs fly a bit farther. Slows the enemy by about 60% for 1 second, and each hit resets the slow. Works with enchants.",
     "dmg": 5,
     "dmgText": "3 – 5",
-    "nodps": true
+    "cd": 0.5,
+    "dpsText": "10"
    }
   ],
   "abilities": [],
@@ -9230,31 +9231,43 @@
    {
     "name": "Chill",
     "when": "Snowball hits",
-    "desc": "Slows the enemy by about 60% for 1 second."
+    "desc": "Slows the enemy by about 60% for 1 second. It doesn't stack, but each hit resets it."
    }
   ],
   "tables": [
    {
     "title": "Charge damage",
     "head": [
-     "Charge time",
-     "Damage"
+     "Charge",
+     "Time per throw",
+     "Damage",
+     "DPS",
+     "Snowballs per 10s"
     ],
     "rows": [
      [
-      "Spam (no charge)",
-      "3"
+      "Spam",
+      "0.3s",
+      "3",
+      "10",
+      "33"
      ],
      [
-      "~0.25s",
-      "4"
+      "Short charge",
+      "0.4s",
+      "4",
+      "10",
+      "25"
      ],
      [
-      "~0.5s",
-      "5"
+      "Full charge",
+      "0.5s",
+      "5",
+      "10",
+      "20"
      ]
     ],
-    "note": "75% armor penetration."
+    "note": "75% armor penetration. Every charge level deals the same damage per second, but charging uses fewer snowballs and flies a bit farther."
    }
   ],
   "strategy": [
@@ -9263,8 +9276,8 @@
     "text": "The slow lasts 1 second, so time your throws to keep the enemy slowed the whole time and deal full charged damage while saving snowballs."
    },
    {
-    "title": "Spam for damage",
-    "text": "For pure damage, spamming does more than charging, but it uses up your snowballs faster."
+    "title": "Charge to save snowballs",
+    "text": "Spamming, short charges and full charges all deal about 10 damage per second, but full charges use the fewest snowballs and fly a bit farther. Only spam when you have plenty of snowballs to burn."
    },
    {
     "title": "Get Fire",
