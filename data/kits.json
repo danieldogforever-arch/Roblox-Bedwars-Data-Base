@@ -8272,17 +8272,25 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Use explosive beehives to deal high damage to your enemies or throw them at yourself for a massive launch.",
-  "adv": "",
+  "adv": "Flora spawns with 1 Beehive Grenade, and gets another one on spawn the first time it respawns. You also get Beehive Grenades from kills and assists, and can buy them in the shop for 40 iron each. You can hold up to 5.\nA Beehive Grenade explodes 0.5 seconds after it lands on a player or the floor, dealing about 29.5 damage with falloff and no real armor penetration (from tests). 1 second after the explosion, 4 bees attack for about 5 damage per tick. If several enemies are hit, the bees spread out between them.\nThrow a Beehive Grenade at your own feet to launch yourself: it only deals 1 damage to you and resets your Glide cooldown. You can go up to 11 blocks high, or up to 25 blocks if you time your jump perfectly.\nGlide lasts 8 seconds. For the first 4 seconds you glide down slowly, and for the last 4 seconds you glide faster. If you haven't landed by the end, you take full fall damage from the height where you started gliding. Activating Glide at the top of a perfect launch carries you about another 25 blocks.",
   "items": [
    {
     "name": "Beehive Grenade",
-    "img": "images/items/beehive-grenade.png"
+    "img": "images/items/beehive-grenade.png",
+    "note": "Spawn, kills, assists, or 40 iron",
+    "desc": "Explodes 0.5 seconds after landing for about 29.5 damage with falloff. 1 second later, 4 bees attack for about 5 damage per tick, spreading out between enemies. Thrown at yourself it deals 1 damage, launches you up to 11 blocks (25 with a perfect jump) and resets Glide. Hold up to 5.",
+    "dmg": 29.5,
+    "dmgText": "~29.5 + bees",
+    "nodps": true
    }
   ],
   "abilities": [
    {
     "name": "Glide",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "8 seconds",
+    "desc": "Glide slowly for 4 seconds, then faster for the last 4. If you haven't landed when it ends, you take full fall damage from where you started gliding. Getting hit by your own Beehive Grenade resets the cooldown.",
+    "cd": 30
    }
   ],
   "history": [
@@ -8387,7 +8395,54 @@
    "tier": "20 (paid)",
    "badge": "images/bp/s7.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Spawn Hive",
+    "when": "Spawning",
+    "desc": "Start the match with 1 Beehive Grenade, and get another on your first respawn."
+   },
+   {
+    "name": "Hive Rewards",
+    "when": "Kills and assists",
+    "desc": "Get Beehive Grenades from kills and assists, up to 5 at a time."
+   },
+   {
+    "name": "Glide Reset",
+    "when": "Hit by your own hive",
+    "desc": "Your own Beehive Grenade deals only 1 damage to you and resets Glide."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Rush from spawn",
+    "text": "As soon as you spawn, launch and glide straight to an enemy base and sneak attack them before they're ready. Kill them and break the bed. If you die, rush again: you get another hive on respawn and they'll still be low."
+   },
+   {
+    "title": "Save your iron",
+    "text": "Try not to spend iron on hives. Get them from kills, assists and spawning instead."
+   },
+   {
+    "title": "Play high",
+    "text": "When you're in trouble, build all the way up and make enemies deal with the fall. If they knock you off, just glide down safely."
+   },
+   {
+    "title": "Dump your hives",
+    "text": "Throw all your hives at one enemy for huge damage, then launch away to escape."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Fight it on landing",
+    "text": "A Flora gliding into your base has no other abilities left, so once it lands it's basically fighting with no kit."
+   },
+   {
+    "title": "Gloop it",
+    "text": "Gloop stops Flora from gliding and from launching itself with knockback."
+   }
+  ],
+  "bal": "sop",
+  "balWhy": "Flora has many ways to get Beehive Grenades and deals a lot of damage early game. Its movement is also very strong: it can rush and fly over enemy bases the second it spawns, which is a bit unbalanced."
  },
  {
   "name": "Fortuna",
