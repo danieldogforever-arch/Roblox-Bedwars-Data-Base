@@ -11450,13 +11450,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Lob bundles of poisonous pumpkin oil across the map.",
-  "adv": "Jack spawns with the Oil Blob and an Oil Bar that holds 60 oil. The bar refills 1 oil per second (a full minute from empty), and each kill gives 24 oil. You need at least 10 oil to throw.\nTap to throw a small blob for 10 oil, or charge for up to 3 seconds to make a bigger one. A full charge uses about 40 oil (two-thirds of the bar) and covers an 8 block radius. Blobs work on anyone up to 2 blocks above or below them and last 50 seconds, slowly shrinking before they disappear.\nA blob deals 5 damage when it lands. Enemies standing in oil are Grounded for 3 seconds (no pearls or movement abilities), slowed for 2 seconds and poisoned for 5 seconds. Poison deals 1 damage per second with about 70% armor penetration (from tests) and can't kill, but the 5 landing damage can.\nBuy Fire Matches for 8 iron each (no limit) to light a blob on fire. Burning oil instantly sets nearby flammable blocks like wool and wood on fire, then burns out after 10 seconds. While it burns, enemies in it take 8 fire damage per tick and are still Grounded and slowed, but the poison stops reapplying. Fire can kill. A fireball can also light the oil again.",
+  "adv": "Jack spawns with the Oil Blob and an Oil Bar that holds 60 oil. The bar refills 1 oil per second (a full minute from empty), and each kill gives 24 oil. You need at least 10 oil to throw.\nTap to throw a tiny blob (about 0.5 block radius) for 10 oil, or charge for up to 3 seconds to make a bigger one. A full charge uses about 40 oil (two-thirds of the bar) and covers an 8 block radius. Blobs work on anyone up to 2 blocks above or below them and last 50 seconds, slowly shrinking before they disappear.\nA blob deals 5 damage when it lands. Enemies standing in oil are Grounded for 3 seconds (no pearls or movement abilities), slowed by about a third for 2 seconds (from tests) and poisoned for 5 seconds. Poison deals 1 damage per second with about 70% armor penetration (from tests) and can't kill, but the 5 landing damage can.\nBuy Fire Matches for 8 iron each (no limit) to light a blob on fire. Burning oil instantly sets nearby flammable blocks like wool and wood on fire, then burns out after 10 seconds. While it burns, enemies in it take 8 fire damage per tick with no armor penetration (like the Fire enchant) and are still Grounded and slowed, but the poison stops reapplying. Fire can kill, and Jack heals for 30% of the fire damage it deals. A fireball can also light the oil again.",
   "items": [
    {
     "name": "Oil Blob",
     "img": "images/items/oil-blob.png",
     "note": "Spawns with it",
-    "desc": "Tap for a small blob (10 oil) or charge up to 3 seconds for an 8 block radius blob (about 40 oil). 5 damage on landing, then Grounds, slows and poisons enemies in it (1 damage per second, can't kill). Lasts 50 seconds.",
+    "desc": "Tap for a tiny blob (about 0.5 blocks, 10 oil) or charge up to 3 seconds for an 8 block radius blob (about 40 oil). 5 damage on landing, then Grounds, slows and poisons enemies in it (1 damage per second, can't kill). Lasts 50 seconds.",
     "dmg": 5,
     "dmgText": "5 + 1/s poison",
     "nodps": true
@@ -11465,7 +11465,7 @@
     "name": "Fire Match",
     "img": "images/items/fire-match.png",
     "note": "8 iron, no limit",
-    "desc": "Lights a blob on fire for 10 seconds: 8 fire damage per tick, burns nearby wool and wood instantly, and still Grounds and slows. Poison stops reapplying while it burns.",
+    "desc": "Lights a blob on fire for 10 seconds: 8 fire damage per tick with no armor penetration, and Jack heals 30% of it. Burns nearby wool and wood instantly, and still Grounds and slows. Poison stops reapplying while it burns.",
     "dmg": 8,
     "dmgText": "8 per tick",
     "nodps": true
@@ -11558,7 +11558,12 @@
    {
     "name": "Sticky Oil",
     "when": "Enemies in oil",
-    "desc": "Grounded for 3 seconds, slowed for 2 seconds and poisoned for 5 seconds."
+    "desc": "Grounded for 3 seconds, slowed by about a third for 2 seconds, and poisoned for 5 seconds."
+   },
+   {
+    "name": "Fire Feeding",
+    "when": "Burning oil hits enemies",
+    "desc": "Jack heals for 30% of the fire damage."
    }
   ],
   "tables": [
@@ -11583,7 +11588,7 @@
      ],
      [
       "Tap throw",
-      "10"
+      "10 (about 0.5 block radius)"
      ],
      [
       "Full 3 second charge",
@@ -11611,12 +11616,12 @@
      [
       "Standing in oil",
       "1 poison per second for 5s (can't kill, ~70% armor pen)",
-      "Grounded 3s, slowed 2s"
+      "Grounded 3s, ~33% slower for 2s"
      ],
      [
       "Burning oil (10s)",
-      "8 fire per tick (can kill)",
-      "Grounded, slowed, burns wool and wood"
+      "8 fire per tick (can kill, no armor pen)",
+      "Grounded, slowed, burns wool and wood, Jack heals 30%"
      ]
     ]
    }
