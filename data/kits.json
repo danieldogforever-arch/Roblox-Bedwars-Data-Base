@@ -10498,70 +10498,111 @@
   "diff": "moderate",
   "hp": "30",
   "desc": "Upgrade your Talos Mech to increase shield and damage! Activate Self-Destruct to deal massive damage.",
-  "adv": "",
+  "adv": "Hephaestus always has 30 HP and can't buy armor or swords, only mechs. You spawn in the Wood Mech, and each mech has a shield that takes the hits for you. Mechs are about 3 blocks wide and 2 blocks tall, take much less knockback, and take less damage from projectiles the higher the tier.\nEvery mech comes with its own chainsaw, which hits every 0.275 seconds with 5.5 block reach. Emerald and Void chainsaws also cause Bleed: 2 damage per second, lasting until 2 seconds after your last hit (hitting again resets it, but it never stacks).\nYour shield doesn't regenerate on its own. Use Self-Repair instead: it heals about 5% of your max shield per tick, with a bigger burst at the start, and takes about 15 seconds to go from empty to full. It has a 6 second cooldown, and using it again while it's still healing stacks with the healing already going. Getting hit stops the healing, you can't use your chainsaw for 1 second after pressing it, and Zapped reduces its healing.\nIf your shield breaks, you're knocked out of the mech, and it explodes 2 seconds later for about 48 damage, less the farther away you are. Out of the mech you only have 30 HP and the Tinker's Wrench. Use Summon Talos Mech to get back in: it has a 10 second cooldown and takes 3 seconds, during which you can't move.\nFrom the Diamond Mech up, you also get Self-Destruct (25 second cooldown). It launches the mech about 12 blocks in the direction you're facing and blows it up. The damage scales with your remaining shield: up to 275 with the Diamond Mech, 495 with Emerald and 695 with Void, or the same 48 as a broken mech if you're nearly out of shield.",
   "items": [
    {
     "name": "Wood Mech",
-    "img": "images/items/mech-wood.png"
+    "img": "images/items/mech-wood.png",
+    "note": "Free (spawn)",
+    "desc": "110 shield and 0% less projectile damage. Comes with the Wood Chainsaw (25 damage)."
    },
    {
     "name": "Iron Mech",
-    "img": "images/items/mech-iron.png"
+    "img": "images/items/mech-iron.png",
+    "note": "120 iron",
+    "desc": "180 shield and 15% less projectile damage. Comes with the Iron Chainsaw (33 damage)."
    },
    {
     "name": "Diamond Mech",
-    "img": "images/items/mech-diamond.png"
+    "img": "images/items/mech-diamond.png",
+    "note": "7 emeralds",
+    "desc": "270 shield and 25% less projectile damage. Comes with the Diamond Chainsaw (42 damage). Self-Destruct deals up to 275."
    },
    {
     "name": "Emerald Mech",
-    "img": "images/items/mech-emerald.png"
+    "img": "images/items/mech-emerald.png",
+    "note": "18 emeralds",
+    "desc": "410 shield and 30% less projectile damage. Comes with the Emerald Chainsaw (54 damage). Hits also cause Bleed. Self-Destruct deals up to 495."
    },
    {
     "name": "Void Mech",
-    "img": "images/items/mech-void.png"
+    "img": "images/items/mech-void.png",
+    "note": "40 emeralds",
+    "desc": "600 shield and 40% less projectile damage. Comes with the Void Chainsaw (65 damage). Hits also cause Bleed. Self-Destruct deals up to 695."
    },
    {
     "name": "Wood Chainsaw",
-    "img": "images/items/chainsaw-wood.png"
+    "img": "images/items/chainsaw-wood.png",
+    "note": "Wood Mech",
+    "desc": "25 damage every 0.275s with 5.5 block reach.",
+    "dmg": 25,
+    "cd": 0.275
    },
    {
     "name": "Iron Chainsaw",
-    "img": "images/items/chainsaw-iron.png"
+    "img": "images/items/chainsaw-iron.png",
+    "note": "Iron Mech",
+    "desc": "33 damage every 0.275s with 5.5 block reach.",
+    "dmg": 33,
+    "cd": 0.275
    },
    {
     "name": "Diamond Chainsaw",
-    "img": "images/items/chainsaw-diamond.png"
+    "img": "images/items/chainsaw-diamond.png",
+    "note": "Diamond Mech",
+    "desc": "42 damage every 0.275s with 5.5 block reach.",
+    "dmg": 42,
+    "cd": 0.275
    },
    {
     "name": "Emerald Chainsaw",
-    "img": "images/items/chainsaw-emerald.png"
+    "img": "images/items/chainsaw-emerald.png",
+    "note": "Emerald Mech",
+    "desc": "54 damage every 0.275s with 5.5 block reach. Each hit causes Bleed: 2 damage per second until 2 seconds after your last hit.",
+    "dmg": 54,
+    "cd": 0.275
    },
    {
     "name": "Void Chainsaw",
-    "img": "images/items/chainsaw-void.png"
+    "img": "images/items/chainsaw-void.png",
+    "note": "Void Mech",
+    "desc": "65 damage every 0.275s with 5.5 block reach. Each hit causes Bleed: 2 damage per second until 2 seconds after your last hit.",
+    "dmg": 65,
+    "cd": 0.275
    },
    {
     "name": "Tinker's Wrench",
-    "img": "images/items/tinker-s-wrench.png"
+    "img": "images/items/tinker-s-wrench.png",
+    "note": "Out of the mech",
+    "desc": "Replaces your chainsaw when you're out of the mech. 20 damage every 0.3s.",
+    "dmg": 20,
+    "cd": 0.3
    }
   ],
   "abilities": [
    {
-    "name": "Summon Talos Mech",
-    "note": "Only when out of the mech",
-    "img": "images/abilities/ability-template.png"
-   },
-   {
     "name": "Self-Repair",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "6s cooldown",
+    "desc": "Heals about 5% of your max shield per tick (bigger burst at the start), about 15 seconds from empty to full. Stacks if used again. Stops when you get hit, locks your chainsaw for 1 second, and is weakened by Zapped.",
+    "cd": 6
    },
    {
     "name": "Self-Destruct",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Diamond Mech and up",
+    "desc": "Launch the mech about 12 blocks forward and blow it up for up to 275 / 495 / 695 damage (Diamond / Emerald / Void), scaling with your remaining shield. Damage falls off with distance.",
+    "cd": 25,
+    "dmg": 695,
+    "dmgText": "up to 275 / 495 / 695",
+    "nodps": true
    },
    {
-    "name": "Whirling Death",
-    "img": "images/abilities/ability-template.png"
+    "name": "Summon Talos Mech",
+    "img": "images/abilities/ability-template.png",
+    "note": "Only when out of the mech",
+    "desc": "Takes 3 seconds, during which you can't move. Available 10 seconds after losing or self-destructing your mech.",
+    "cd": 10
    }
   ],
   "history": [
@@ -10684,7 +10725,150 @@
    "badge": "images/bp/s10.webp",
    "rent": 2000,
    "buy": 12000
-  }
+  },
+  "passives": [
+   {
+    "name": "Fragile Pilot",
+    "when": "Always",
+    "desc": "Always 30 HP. Can't buy armor or swords."
+   },
+   {
+    "name": "Mech Explosion",
+    "when": "Shield breaks",
+    "desc": "The mech explodes after 2 seconds for about 48 damage, less the farther away you are."
+   },
+   {
+    "name": "Heavy Frame",
+    "when": "In a mech",
+    "desc": "Takes much less knockback, and less projectile damage the higher the tier."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Mech tiers",
+    "head": [
+     "Mech",
+     "Cost",
+     "Shield",
+     "Chainsaw damage",
+     "Chainsaw DPS",
+     "Projectile reduction",
+     "Crossbow hit",
+     "Self-Destruct"
+    ],
+    "rows": [
+     [
+      "img:images/items/mech-wood.png|Wood",
+      "Free (spawn)",
+      "110",
+      "25",
+      "91",
+      "0%",
+      "34",
+      "—"
+     ],
+     [
+      "img:images/items/mech-iron.png|Iron",
+      "120 iron",
+      "180",
+      "33",
+      "120",
+      "15%",
+      "28.9",
+      "—"
+     ],
+     [
+      "img:images/items/mech-diamond.png|Diamond",
+      "7 emeralds",
+      "270",
+      "42",
+      "153",
+      "25%",
+      "25.5",
+      "275"
+     ],
+     [
+      "img:images/items/mech-emerald.png|Emerald",
+      "18 emeralds",
+      "410",
+      "54 + Bleed",
+      "196",
+      "30%",
+      "23.8",
+      "495"
+     ],
+     [
+      "img:images/items/mech-void.png|Void",
+      "40 emeralds",
+      "600",
+      "65 + Bleed",
+      "236",
+      "40%",
+      "20.4",
+      "695"
+     ]
+    ],
+    "note": "Crossbow hit is a 34 damage crossbow shot, from tests. Self-Destruct is at full shield, with no armor."
+   },
+   {
+    "title": "Self-Repair (from 1 shield)",
+    "head": [
+     "Mech",
+     "Healing ticks"
+    ],
+    "rows": [
+     [
+      "Wood (110)",
+      "12, 18, 23, 29, 34, 40, 45, 51, 56, 62, 67, 73, 78, 84, 89, 95, 100, 106, 110"
+     ],
+     [
+      "Iron (180)",
+      "28, 37, 46, 55, 64, 73, 82, 91, 100, 109, 118, 127, 136, 145, 154, 163, 172, 180"
+     ]
+    ],
+    "note": "From tests. About 5% of max shield per tick; about 15 seconds from empty to full."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Rush early",
+    "text": "Early game you're about as strong as a stone sword in leather armor. Rush an enemy base as soon as you have blocks, kill them and break the bed."
+   },
+   {
+    "title": "Heal up high",
+    "text": "When you get low, build up and repair, then drop back down once you're safer. Normal players need 5 seconds before they start regenerating."
+   },
+   {
+    "title": "Don't repair mid-fight",
+    "text": "Never repair while trading hits up close; it locks your chainsaw for a second and getting hit cancels it."
+   },
+   {
+    "title": "Self-Destruct",
+    "text": "Aim Self-Destruct carefully to one-shot enemies, even in diamond armor, then run away with pearls until you can summon the mech again."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Early game",
+    "text": "There isn't much you can do early unless your kit has tick damage on spawn. Buy a stone sword to fight it, and run from the explosion when the mech breaks."
+   },
+   {
+    "title": "Tick damage",
+    "text": "Fire and other damage over time keep hitting it, which stops Self-Repair from healing."
+   },
+   {
+    "title": "Static",
+    "text": "Static's Zapped cuts its repair healing by up to 60%. Spamming bows with Fire and Static shuts it down."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Fish Tank Skin",
+    "img": "images/skins/hephaestus-fish-tank.webp"
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "Its early game damage and tankiness are extremely unfair and make it almost impossible to kill, and the mech explosion makes wool or wood bed defenses useless. Later on, mechs only cost resources, so you can get destroyed by an Emerald Mech while you're still in iron armor. On the other hand, Zapped and tick damage like fire completely shut it down. Every mech needs nerfs, but it also needs changes that reward skill, since right now you can ignore damage mid-fight thanks to its huge shield and damage."
  },
  {
   "name": "Ignis",
