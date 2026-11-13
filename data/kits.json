@@ -11967,13 +11967,13 @@
   "diff": "extreme",
   "hp": "100",
   "desc": "Summon a powerful dragon's claw to swipe multiple enemies at once, or summon a dragon head through a rune below you to damage all surrounding enemies. Upgrade your claw and summon attack by damaging enemies with your summon spell.",
-  "adv": "Kaida spawns with Summoner Claw Tier I. Claws swipe everyone up to 7 blocks in front of you and 3 blocks wide, every 0.67 seconds. The more enemies you hit, the less each one takes.\nSummon calls a dragon anywhere you aim within 15 blocks. It strikes everyone in its radius after charging, and hits enemies up to 2 blocks above it. Each claw tier adds a charge bar: Tier I has 1 (3 block radius, 0.5 seconds), and every bar adds 1 block of radius, up to 4 bars and 6 blocks at Tier IV (2 seconds). Press the ability again to cast early at a smaller size. Summon has a 20 second cooldown after the dragon hits.\nHitting enemies with Summon fills your upgrade bar. Tier I needs 2 hits (50% each). Tier II gives 33% per enemy hit, up to 66% per cast (3 hits). Tier III gives 20% per enemy, up to 60% per cast (5 hits). Dying takes away one hit's worth of progress, and extra progress doesn't carry over when you upgrade. Tier IV is the max and can't be lost on death.\nClaws and Summon have no armor penetration (from tests).",
+  "adv": "Kaida spawns with Summoner Claw Tier I. Claws swipe everyone up to 7 blocks in front of you and 3 blocks wide, every 0.67 seconds. The more enemies you hit, the less each one takes.\nSummon calls a dragon anywhere you aim within 15 blocks. It strikes everyone in its radius after charging, and hits enemies up to 2 blocks above it. Each claw tier adds a charge bar and a bigger max radius: 3.5 blocks at Tier I (1 bar), 5 at Tier II, 6 at Tier III and 7 at Tier IV (4 bars, about 2 seconds to fully charge). Press the ability again to cast early at a smaller size. Summon has a 20 second cooldown after the dragon hits.\nHitting enemies with Summon fills your upgrade bar. Tier I needs 2 hits (50% each). Tier II gives 33% per enemy hit, up to 66% per cast (3 hits). Tier III gives 20% per enemy, up to 60% per cast (5 hits). Dying takes away one hit's worth of progress, but you never drop back a claw tier. Extra progress doesn't carry over when you upgrade. Tier IV is the max.\nClaws and Summon have no armor penetration (from tests).",
   "items": [
    {
     "name": "Summoner Claw Tier I (Stone)",
     "img": "images/items/summoner-claw-1.png",
     "note": "Spawn with it",
-    "desc": "Hits everyone in a 7 block reach, 3 blocks wide: 26 damage to 1 enemy, 23 each to 2, 22 each to 3 or more. Every 0.67s. Summon: 3 block radius, 35 / 27 / 25 damage.",
+    "desc": "Hits everyone in a 7 block reach, 3 blocks wide: 26 damage to 1 enemy, 23 each to 2, 22 each to 3 or more. Every 0.67s. Summon: 3.5 block radius, 35 / 27 / 25 damage.",
     "dmg": 26,
     "cd": 0.67,
     "dmgText": "26 (1) / 23 (2) / 22 (3+)"
@@ -11982,7 +11982,7 @@
     "name": "Summoner Claw Tier II (Iron)",
     "img": "images/items/summoner-claw-2.png",
     "note": "Upgrade 1→2",
-    "desc": "Hits everyone in a 7 block reach, 3 blocks wide: 32 damage to 1 enemy, 28 each to 2, 26 each to 3 or more. Every 0.67s. Summon: 4 block radius, 49 / 39 / 36 damage.",
+    "desc": "Hits everyone in a 7 block reach, 3 blocks wide: 32 damage to 1 enemy, 28 each to 2, 26 each to 3 or more. Every 0.67s. Summon: 5 block radius, 49 / 39 / 36 damage.",
     "dmg": 32,
     "cd": 0.67,
     "dmgText": "32 (1) / 28 (2) / 26 (3+)"
@@ -11991,7 +11991,7 @@
     "name": "Summoner Claw Tier III (Diamond)",
     "img": "images/items/summoner-claw-3.png",
     "note": "Upgrade 2→3",
-    "desc": "Hits everyone in a 7 block reach, 3 blocks wide: 46 damage to 1 enemy, 40 each to 2, 38 each to 3 or more. Every 0.67s. Summon: 5 block radius, 60 / 50 / 36 damage.",
+    "desc": "Hits everyone in a 7 block reach, 3 blocks wide: 46 damage to 1 enemy, 40 each to 2, 38 each to 3 or more. Every 0.67s. Summon: 6 block radius, 60 / 50 / 46 damage.",
     "dmg": 46,
     "cd": 0.67,
     "dmgText": "46 (1) / 40 (2) / 38 (3+)"
@@ -12000,7 +12000,7 @@
     "name": "Summoner Claw Tier IV (Emerald)",
     "img": "images/items/summoner-claw-4.png",
     "note": "Upgrade 3→4",
-    "desc": "Hits everyone in a 7 block reach, 3 blocks wide: 59 damage to 1 enemy, 52 each to 2, 49 each to 3 or more. Every 0.67s. Summon: 6 block radius, 75 / 65 / 61 damage.",
+    "desc": "Hits everyone in a 7 block reach, 3 blocks wide: 59 damage to 1 enemy, 52 each to 2, 49 each to 3 or more. Every 0.67s. Summon: 7 block radius, 75 / 65 / 61 damage.",
     "dmg": 59,
     "cd": 0.67,
     "dmgText": "59 (1) / 52 (2) / 49 (3+)"
@@ -12011,7 +12011,7 @@
     "name": "Summon",
     "img": "images/abilities/ability-template.png",
     "note": "Within 15 blocks",
-    "desc": "Summon a dragon where you aim. 3 / 4 / 5 / 6 block radius by tier, hits up to 2 blocks above it. Fills your upgrade bar. 20 second cooldown after it hits.",
+    "desc": "Summon a dragon where you aim. 3.5 / 5 / 6 / 7 block max radius by tier, hits up to 2 blocks above it. Fills your upgrade bar. 20 second cooldown after it hits.",
     "cd": 20,
     "dmg": 75,
     "dmgText": "35 / 49 / 60 / 75 (1 enemy)",
@@ -12225,7 +12225,7 @@
    {
     "name": "Draconic Growth",
     "when": "Summon hits",
-    "desc": "Fills your upgrade bar toward the next claw tier. Dying loses one hit's worth of progress."
+    "desc": "Fills your upgrade bar toward the next claw tier. Dying loses one hit's worth of progress, but never a claw tier."
    }
   ],
   "tables": [
@@ -12285,7 +12285,7 @@
     "rows": [
      [
       "I (Stone)",
-      "3 blocks",
+      "3.5 blocks",
       "1",
       "35",
       "27",
@@ -12295,7 +12295,7 @@
      ],
      [
       "II (Iron)",
-      "4 blocks",
+      "5 blocks",
       "2",
       "49",
       "39",
@@ -12305,26 +12305,26 @@
      ],
      [
       "III (Diamond)",
-      "5 blocks",
+      "6 blocks",
       "3",
       "60",
       "50",
-      "36",
+      "46",
       "20% per enemy, max 60% per cast (5 hits)",
       "−20%"
      ],
      [
       "IV (Emerald)",
-      "6 blocks",
+      "7 blocks",
       "4",
       "75",
       "65",
       "61",
       "Max tier",
-      "Can't be lost"
+      "—"
      ]
     ],
-    "note": "No armor penetration. Hits up to 2 blocks above the dragon."
+    "note": "Max radius from the Aug 2026 patch notes. No armor penetration. Hits up to 2 blocks above the dragon. Dying only loses progress, never a claw tier."
    }
   ],
   "strategy": [
