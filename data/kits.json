@@ -11450,7 +11450,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Lob bundles of poisonous pumpkin oil across the map.",
-  "adv": "Jack spawns with the Oil Blob and an Oil Bar that holds 60 oil. The bar refills 1 oil per second (a full minute from empty), and each kill gives 24 oil. You need at least 10 oil to throw.\nTap to throw a tiny blob (about 0.5 block radius) for 10 oil, or charge for up to 3 seconds to make a bigger one. A full charge uses about 40 oil (two-thirds of the bar) and covers an 8 block radius. Blobs work on anyone up to 2 blocks above or below them and last 50 seconds, slowly shrinking before they disappear.\nA blob deals 5 damage when it lands. Enemies standing in oil are Grounded for 3 seconds (no pearls or movement abilities), slowed by about a third for 2 seconds (from tests) and poisoned for 5 seconds. Poison deals 1 damage per second with about 70% armor penetration (from tests) and can't kill, but the 5 landing damage can.\nBuy Fire Matches for 8 iron each (no limit) to light a blob on fire. Burning oil instantly sets nearby flammable blocks like wool and wood on fire, then burns out after 10 seconds. While it burns, enemies in it take 8 fire damage per tick with no armor penetration (like the Fire enchant) and are still Grounded and slowed, but the poison stops reapplying. Fire can kill, and Jack heals for 30% of the fire damage it deals. A fireball can also light the oil again.",
+  "adv": "Jack spawns with the Oil Blob and an Oil Bar that holds 60 oil. The bar refills 1 oil per second (a full minute from empty), and each kill gives 24 oil. You need at least 10 oil to throw.\nTap to throw a tiny blob (about 0.5 block radius) for 10 oil, or charge for up to 3 seconds to make a bigger one. A full charge uses about 40 oil (two-thirds of the bar) and covers an 8 block radius. Blobs work on anyone up to 2 blocks above or below them and last 50 seconds, slowly shrinking before they disappear.\nA blob deals 5 damage when it lands. Enemies standing in oil are Grounded for 3 seconds (no pearls or movement abilities), slowed by about a third for 2 seconds (from tests) and poisoned for 5 seconds. Poison deals 1 damage per second with about 70% armor penetration (from tests) and can't kill, but the 5 landing damage can.\nBuy Fire Matches for 8 iron each (no limit) to light a blob on fire. Burning oil instantly sets nearby flammable blocks like wool and wood on fire, then burns out after 10 seconds. While it burns, enemies in it take 8 fire damage per tick with no armor penetration (like the Fire enchant) and are still Grounded and slowed, but the poison stops reapplying. Fire can kill, and Jack heals 3 HP for every fire tick on every enemy (2 HP in 16v16), so 5 burning enemies heal 15 per tick. A fireball can also light the oil again.",
   "items": [
    {
     "name": "Oil Blob",
@@ -11465,7 +11465,7 @@
     "name": "Fire Match",
     "img": "images/items/fire-match.png",
     "note": "8 iron, no limit",
-    "desc": "Lights a blob on fire for 10 seconds: 8 fire damage per tick with no armor penetration, and Jack heals 30% of it. Burns nearby wool and wood instantly, and still Grounds and slows. Poison stops reapplying while it burns.",
+    "desc": "Lights a blob on fire for 10 seconds: 8 fire damage per tick with no armor penetration, and Jack heals 3 HP per tick for each burning enemy (2 in 16v16). Burns nearby wool and wood instantly, and still Grounds and slows. Poison stops reapplying while it burns.",
     "dmg": 8,
     "dmgText": "8 per tick",
     "nodps": true
@@ -11563,7 +11563,7 @@
    {
     "name": "Fire Feeding",
     "when": "Burning oil hits enemies",
-    "desc": "Jack heals for 30% of the fire damage."
+    "desc": "Jack heals 3 HP for every fire tick on every enemy (2 HP in 16v16)."
    }
   ],
   "tables": [
@@ -11621,7 +11621,7 @@
      [
       "Burning oil (10s)",
       "8 fire per tick (can kill, no armor pen)",
-      "Grounded, slowed, burns wool and wood, Jack heals 30%"
+      "Grounded, slowed, burns wool and wood, Jack heals 3 per tick per enemy"
      ]
     ]
    }
