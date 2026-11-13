@@ -9979,25 +9979,33 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Purchase seeds and grow them into flowers that buff allies and enhance generator production. Keep your flowers alive by providing them with spirit energy gathered around the map to prevent them from withering.",
-  "adv": "",
+  "adv": "Grove spawns with 1 Soulvine Seed and 1 Tearbloom Seed. You can buy more for 50 iron each, and Crystalheart Seeds for 1 emerald each, with no limit on how many you buy or plant.\nPlants need spirit energy. You start with 50%. Spirit energy orbs spawn around the map at about the same rate as Gompy's ghosts and despawn after 1 minute 30 seconds. Walk within 2 blocks of one to collect it automatically for 20% energy.\nUse Spirit Transfer to grow plants within 7 blocks of you. It takes 8 ticks (8 seconds) to grow a plant. The more plants you're growing, the more energy it uses: about 30% for 10 plants, 60% for 15 and 80% for 20 (from tests). Crystalheart plants use twice as much energy as the other two, so 10 of them use about 80%.\nEach plant lives for 1 minute 30 seconds, then withers. Using Spirit Transfer on a living plant adds 10 seconds of life per tick, up to the 1 minute 30 second max. Using it on a withered plant brings it back.\nSoulvine and Tearbloom only work while you're within 7 blocks of them, and only 10 of each count:\nSoulvine: +3% damage each, up to +30%.\nTearbloom: heals 1.25 HP per second each, up to 12.5 HP per second.\nCrystalheart: makes a generator 8% faster, or 30% for a global generator. There's no limit on how many count.\nPlants are easy to destroy. Mining a plant with anything takes 20 seconds off its life, and mining a withered plant breaks it for good. Plants can catch fire, and the fire spreads to nearby plants.",
   "items": [
    {
-    "name": "Crystalheart Seed",
-    "img": "images/items/crystalheart-seed.png"
-   },
-   {
     "name": "Soulvine Seed",
-    "img": "images/items/soulvine-seed.png"
+    "img": "images/items/soulvine-seed.png",
+    "note": "Spawn with 1, 50 iron",
+    "desc": "+3% damage for each grown Soulvine within 7 blocks, up to 10 (+30%)."
    },
    {
     "name": "Tearbloom Seed",
-    "img": "images/items/tearbloom-seed.png"
+    "img": "images/items/tearbloom-seed.png",
+    "note": "Spawn with 1, 50 iron",
+    "desc": "Heals 1.25 HP per second for each grown Tearbloom within 7 blocks, up to 10 (12.5 HP per second)."
+   },
+   {
+    "name": "Crystalheart Seed",
+    "img": "images/items/crystalheart-seed.png",
+    "note": "1 emerald",
+    "desc": "Makes a generator 8% faster, or 30% for a global generator. No limit. Uses twice as much spirit energy as other plants."
    }
   ],
   "abilities": [
    {
-    "name": "Spirit Transfer Start/Stop",
-    "img": "images/abilities/ability-template.png"
+    "name": "Spirit Transfer",
+    "img": "images/abilities/ability-template.png",
+    "note": "7 block radius",
+    "desc": "Uses spirit energy to grow plants around you (8 seconds), add 10 seconds of life per tick to living plants, or bring withered plants back."
    }
   ],
   "history": [
@@ -10101,7 +10109,121 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Spirit Energy",
+    "when": "Within 2 blocks of an orb",
+    "desc": "Collect it for 20% energy. Start with 50%. Orbs despawn after 1 minute 30 seconds."
+   },
+   {
+    "name": "Withering",
+    "when": "After 1 minute 30 seconds",
+    "desc": "Plants wither and stop working until you use Spirit Transfer on them again."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Plant effects",
+    "head": [
+     "Plant",
+     "Cost",
+     "Effect",
+     "Max that count"
+    ],
+    "rows": [
+     [
+      "img:images/items/soulvine-seed.png|Soulvine",
+      "50 iron",
+      "+3% damage",
+      "10 (+30%)"
+     ],
+     [
+      "img:images/items/tearbloom-seed.png|Tearbloom",
+      "50 iron",
+      "+1.25 HP/s",
+      "10 (12.5 HP/s)"
+     ],
+     [
+      "img:images/items/crystalheart-seed.png|Crystalheart",
+      "1 emerald",
+      "+8% generator speed (30% global)",
+      "No limit"
+     ]
+    ],
+    "note": "Soulvine and Tearbloom only work within 7 blocks."
+   },
+   {
+    "title": "Energy used to grow plants",
+    "head": [
+     "Plants growing",
+     "Energy used"
+    ],
+    "rows": [
+     [
+      "10",
+      "~30%"
+     ],
+     [
+      "15",
+      "~60%"
+     ],
+     [
+      "20",
+      "~80%"
+     ],
+     [
+      "10 Crystalheart",
+      "~80%"
+     ]
+    ],
+    "note": "From tests. Crystalheart counts as 2 plants."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Plant at base",
+    "text": "Plant the two seeds you spawn with at your base. Anywhere else, they'll just get destroyed."
+   },
+   {
+    "title": "Tier 3 first",
+    "text": "Cycle diamonds until you have tier 3, then start buying Crystalheart Seeds."
+   },
+   {
+    "title": "7–8 Crystalhearts",
+    "text": "7–8 Crystalheart plants is the sweet spot. After that, the extra generator speed isn't worth collecting the orbs for."
+   },
+   {
+    "title": "Skip global generators",
+    "text": "Don't waste seeds on global generators; the boost there is weak and not needed."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Blow them up",
+    "text": "Fireballs and explosions delete plants quickly, and fire spreads between them."
+   },
+   {
+    "title": "Cut the healing",
+    "text": "Use the Static enchant or a kit with static to counter Tearbloom's healing."
+   },
+   {
+    "title": "Siege the ceramic",
+    "text": "If the plants are covered with ceramic, place Siege TNT to blow it open."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Easter Egg Skin",
+    "img": "images/skins/grove-easter-egg.webp"
+   },
+   {
+    "name": "Sanctum of Elysium Skin",
+    "img": "images/skins/grove-sanctum-of-elysium.webp"
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "The generator boost is pretty good, but the plants are extremely easy for other teams to break, and you have to plant them near the generator, so you can't hide or protect them. It also costs a ton: all 20 support plants need 1,000 iron, and a good Crystalheart setup needs lots of emeralds, just for it to be easy to destroy."
  },
  {
   "name": "Hannah",
