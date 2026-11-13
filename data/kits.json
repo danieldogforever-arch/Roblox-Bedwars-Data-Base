@@ -8272,15 +8272,15 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Use explosive beehives to deal high damage to your enemies or throw them at yourself for a massive launch.",
-  "adv": "Flora spawns with 1 Beehive Grenade, and gets another on spawn the first time it respawns (but not on later respawns). You also get a free one every 45 seconds, 1 for each kill or assist, and you can buy them in the shop for 40 iron each. You can never hold more than 5.\nA Beehive Grenade explodes 0.5 seconds after it lands on a player or the floor, dealing about 29.5 damage with falloff and no real armor penetration (from tests). 1 second after the explosion, 4 bees attack for about 5 damage each, with some armor penetration. If several enemies are hit, the bees spread out between them.\nThrow a Beehive Grenade at your own feet to launch yourself: it only deals 1 damage to you and resets your Glide cooldown. You can go up to 11 blocks high, or up to 25 blocks if you time your jump perfectly.\nGlide lasts 7.5 seconds. You glide down slowly at first, then faster near the end. If you haven't landed when it ends, you take full fall damage from the highest point you reached. Activating Glide at the top of a perfect launch lets you slowly glide about another 25 blocks forward. Getting hit by a projectile while gliding stops your Glide, and Gloop stops you from gliding or launching with your grenades.",
+  "adv": "Flora spawns with 1 Beehive Grenade, and gets another on spawn the first time it respawns (but not on later respawns). You also get a free one every 45 seconds, 1 for each kill or assist, and you can buy them in the shop for 40 iron each. You can never hold more than 5.\nA Beehive Grenade explodes 0.5 seconds after it lands on a player or the floor, dealing about 29.5 damage with falloff and no real armor penetration (from tests). 1 second after the explosion, 4 bees attack for 5 damage each (20 total), with no armor penetration. If several enemies are hit, the bees spread out between them.\nThrow a Beehive Grenade at your own feet to launch yourself: it only deals 1 damage to you and resets your Glide cooldown. You can go up to 11 blocks high, or up to 25 blocks if you time your jump perfectly.\nGlide lasts 7.5 seconds. You glide down slowly at first, then faster near the end. If you haven't landed when it ends, you take full fall damage from the highest point you reached. Activating Glide at the top of a perfect launch lets you slowly glide about another 25 blocks forward. Getting hit by a projectile while gliding stops your Glide, and Gloop stops you from gliding or launching with your grenades.",
   "items": [
    {
     "name": "Beehive Grenade",
     "img": "images/items/beehive-grenade.png",
     "note": "Spawn, every 45s, kills, assists, or 40 iron",
-    "desc": "Explodes 0.5 seconds after landing for about 29.5 damage with falloff. 1 second later, 4 bees attack for about 5 damage each, spreading out between enemies. Thrown at yourself it deals 1 damage, launches you up to 11 blocks (25 with a perfect jump) and resets Glide. Hold up to 5.",
+    "desc": "Explodes 0.5 seconds after landing for about 29.5 damage with falloff. 1 second later, 4 bees attack for 5 damage each (20 total, no armor penetration), spreading out between enemies. Thrown at yourself it deals 1 damage, launches you up to 11 blocks (25 with a perfect jump) and resets Glide. Hold up to 5.",
     "dmg": 29.5,
-    "dmgText": "~29.5 + bees",
+    "dmgText": "~29.5 + 20 bees",
     "nodps": true
    }
   ],
