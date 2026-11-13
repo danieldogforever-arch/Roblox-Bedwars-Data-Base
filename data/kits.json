@@ -147,7 +147,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Start with a powerful Frosty Hammer. Hitting enemies has a chance to drop Frost Crystals, which you can spend to upgrade your hammer.",
-  "adv": "You spawn with a Frosty Hammer, which has a 4.5 block reach, the same as a sword. Every hit on an enemy has an 80% chance to give you a Frost Crystal. Crystals are spent on hammer upgrades, can be stored in your Personal Chest, and are all lost when you die.\nTier 1 costs 3 crystals (9 in total), Tier 2 costs 7 crystals (21 in total), and Tier 3 costs 15. The upgrades are Speed, Shield and Damage, and you can only pick one Tier 3 upgrade. Every time you upgrade, you are frozen in place for 2 seconds.\nShield is capped at 50. If you have not hit anyone for 2 seconds, it drops by 5 every 0.75 seconds.\nThe Tier 3 upgrade you pick gives you something special: Damage unlocks the Arctic Slam ability, Shield unlocks the Permafrost Shield ability, and Speed (cooldown) unlocks the Blizzard Storm passive.",
+  "adv": "You spawn with a Frosty Hammer, which has a 4.5 block reach, the same as a sword. Every hit on an enemy has an 80% chance to give you a Frost Crystal. Crystals are spent on hammer upgrades, can be stored in your Personal Chest, and are all lost when you die.\nTier 1 costs 3 crystals (9 in total), Tier 2 costs 6 crystals (18 in total), and Tier 3 costs 15. The upgrades are Speed, Shield and Damage, and you can only pick one Tier 3 upgrade. Every time you upgrade, you are frozen in place for 2 seconds.\nShield is capped at 50. If you have not hit anyone for 2 seconds, it drops by 5 every 0.75 seconds.\nThe Tier 3 upgrade you pick gives you something special: Damage unlocks the Arctic Slam ability, Shield unlocks the Permafrost Shield ability, and Speed (cooldown) unlocks the Blizzard Storm passive.",
   "items": [
    {
     "name": "Frosty Hammer",
@@ -250,6 +250,14 @@
    }
   ],
   "history": [
+   {
+    "type": "buff",
+    "date": "Nov 13, 2026",
+    "title": "",
+    "changes": [
+     "Level 2 upgrade cost 7 → 6 crystals on all three paths"
+    ]
+   },
    {
     "type": "bal",
     "date": "Oct 30, 2026",
@@ -1940,7 +1948,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Build rage by damaging enemies. Instead of buying swords, your sword is upgraded when you reach enough rage. You lose all your rage on death. The Emerald Sword is replaced by the Rageblade.",
-  "adv": "Barbarian cannot buy swords. You start with a wooden sword and upgrade it by building rage, which you get from dealing damage and from kills. Once upgraded, your sword never goes back to the previous one when you die.\nDamage needed for each upgrade:\nStone sword: 85\nIron sword: 210\nDiamond sword: 430\nRageblade: 650\nYour rage resets each time you upgrade, so you need 1375 damage in total.\nRanged damage gives 2x less rage than other damage. Killing an enemy gives you around 40 damage worth of rage. You cannot get rage from enemies who respawned within the last 9 seconds.\nWhen you die you lose all your rage and restart the tier you are on.",
+  "adv": "Barbarian cannot buy swords. You start with a wooden sword and upgrade it by building rage, which you get from dealing damage and from kills. Once upgraded, your sword never goes back to the previous one when you die.\nDamage needed for each upgrade:\nStone sword: 80\nIron sword: 260\nDiamond sword: 430\nRageblade: 650\nYour rage resets each time you upgrade, so you need 1420 damage in total.\nRanged damage gives 2x less rage than other damage. Killing an enemy gives you around 40 damage worth of rage. You cannot get rage from enemies who respawned within the last 9 seconds.\nWhen you die you lose all your rage and restart the tier you are on.",
   "items": [
    {
     "name": "Rageblade",
@@ -1967,8 +1975,8 @@
    },
    {
     "name": "Sword Upgrades",
-    "when": "At 85, 210, 430 and 650 rage",
-    "desc": "Reaching each rage amount upgrades your sword: stone, iron, diamond, then Rageblade. Rage resets on every upgrade, and you need 1375 damage in total."
+    "when": "At 80, 260, 430 and 650 rage",
+    "desc": "Reaching each rage amount upgrades your sword: stone, iron, diamond, then Rageblade. Rage resets on every upgrade, and you need 1420 damage in total."
    },
    {
     "name": "Death Penalty",
@@ -2023,6 +2031,15 @@
    }
   ],
   "history": [
+   {
+    "type": "buff",
+    "date": "Nov 13, 2026",
+    "title": "",
+    "changes": [
+     "Stone sword rage requirement 85 → 80",
+     "Iron sword rage requirement 270 → 260"
+    ]
+   },
    {
     "type": "buff",
     "date": "Sep 18, 2026",
@@ -3430,10 +3447,18 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Every time you take damage you have a chance of dropping a battery on the ground. Once the battery activates you can pick it up for a small shield. After collecting 3 batteries you will overload, gaining movement speed!",
-  "adv": "Whenever you take damage, you have a 33% chance to drop a battery. Picking one up gives you 16 shield.\nAfter picking up 3 batteries, you go into Overcharge for 8 seconds. You get 20% more speed, and anyone who hits you with a melee weapon takes 25% of that damage back as mirror damage, with 0% armor penetration. They also get Zapped, so they heal and gain shields 60% less for 10 seconds.\nYou can still drop batteries during Overcharge, but you can't pick them up. When Overcharge ends, you lose any shield you have left.",
+  "adv": "Whenever you take damage, you have a 33% chance to drop a battery. Picking one up gives you 14 shield.\nAfter picking up 3 batteries, you go into Overcharge for 8 seconds. You get 20% more speed, and anyone who hits you with a melee weapon takes 25% of that damage back as mirror damage, with 0% armor penetration. They also get Zapped, so they heal and gain shields 60% less for 10 seconds.\nYou can still drop batteries during Overcharge, but you can't pick them up. When Overcharge ends, you lose any shield you have left.",
   "items": [],
   "abilities": [],
   "history": [
+   {
+    "type": "nerf",
+    "date": "Nov 13, 2026",
+    "title": "",
+    "changes": [
+     "Shield per battery 16 → 14"
+    ]
+   },
    {
     "type": "buff",
     "date": "Oct 30, 2026",
@@ -3491,7 +3516,7 @@
    {
     "name": "Batteries",
     "when": "When you take damage",
-    "desc": "33% chance to drop a battery. Pick it up for 16 shield. You can drop batteries during Overcharge, but you can't pick them up."
+    "desc": "33% chance to drop a battery. Pick it up for 14 shield. You can drop batteries during Overcharge, but you can't pick them up."
    },
    {
     "name": "Overcharge",
@@ -3518,7 +3543,7 @@
      ],
      [
       "Shield per battery",
-      "16"
+      "14"
      ],
      [
       "Batteries for Overcharge",
@@ -6107,7 +6132,7 @@
     "name": "Warlock Staff",
     "img": "images/items/warlock-staff.png",
     "note": "Spawns with it",
-    "desc": "Lock onto an enemy to drain them, or a teammate to heal them. Ticks every 0.75 seconds. 8 block range (12 at max stacks), 50% armor penetration.",
+    "desc": "Lock onto an enemy to drain them, or a teammate to heal them. Ticks every 0.75 seconds. 9 block range (12 at max stacks), 50% armor penetration.",
     "cd": 0.75,
     "dmg": 11,
     "dmgText": "11-16 per tick at 0 stacks, 53-57 at 30",
@@ -6116,6 +6141,14 @@
   ],
   "abilities": [],
   "history": [
+   {
+    "type": "buff",
+    "date": "Nov 13, 2026",
+    "title": "",
+    "changes": [
+     "Initial link targeting range 24 → 27 studs"
+    ]
+   },
    {
     "type": "buff",
     "date": "Oct 30, 2026",
@@ -6301,7 +6334,7 @@
    {
     "name": "Range",
     "when": "While linked",
-    "desc": "Lock on from 8 blocks at 0 stacks, up to 12 at 30 stacks. A yellow bar shows when you're within 2 blocks of leaving range, and you detach 2 blocks past your lock-on range."
+    "desc": "Lock on from 9 blocks at 0 stacks, up to 12 at 30 stacks. A yellow bar shows when you're within 2 blocks of leaving range, and you detach 2 blocks past your lock-on range."
    }
   ],
   "calc": {
@@ -9538,7 +9571,8 @@
    "tier": "20 (free)",
    "badge": "images/bp/s2.webp",
    "rent": 2000,
-   "buy": 25000
+   "buy": 25000,
+   "note": "Now in the store for 25,000 BedCoins or 599 Robux"
   },
   "passives": [
    {
@@ -10514,7 +10548,7 @@
   "diff": "moderate",
   "hp": "30",
   "desc": "Upgrade your Talos Mech to increase shield and damage! Activate Self-Destruct to deal massive damage.",
-  "adv": "Hephaestus always has 30 HP and can't buy armor or swords, only mechs. You spawn in the Wood Mech, and each mech has a shield that takes the hits for you. Hephaestus himself is only 1 block tall, but mechs are about 3 blocks wide and 2 blocks tall. Mechs take much less knockback, and take less damage from projectiles the higher the tier (melee damage isn't reduced).\nEvery mech comes with its own chainsaw, which hits every 0.275 seconds with 5.5 block reach. Emerald and Void chainsaws also cause Bleed: 2 damage per second, lasting until 2 seconds after your last hit (hitting again resets it, but it never stacks).\nYour shield doesn't regenerate on its own. Use Self-Repair instead: it heals about 5% of your max shield per tick, with a bigger burst at the start, and takes about 15 seconds to go from empty to full. It has a 6 second cooldown, and using it again while it's still healing stacks with the healing already going. Getting hit stops the healing, you can't use your chainsaw for 1 second after pressing it, and Zapped reduces its healing.\nIf your shield breaks, you're knocked out of the mech, and it explodes 2 seconds later for about 48 damage, less the farther away you are. Out of the mech you only have 30 HP and the Tinker's Wrench. Use Summon Talos Mech to get back in: it has a 10 second cooldown and takes 3 seconds, during which you can't move.\nFrom the Diamond Mech up, you also get Self-Destruct (25 second cooldown). It launches the mech about 12 blocks in the direction you're facing and blows it up. The damage scales with your remaining shield: up to 275 with the Diamond Mech, 495 with Emerald and 695 with Void, or the same 48 as a broken mech if you're nearly out of shield.\nThe Emerald and Void Mechs also get Whirling Death (10 second cooldown): it hits every enemy within 7 blocks, even through walls, for the same damage as your chainsaw, and launches them 2 blocks into the air. It doesn't cause Bleed.",
+  "adv": "Hephaestus always has 30 HP and can't buy armor or swords, only mechs. You spawn in the Wood Mech, and each mech has a shield that takes the hits for you. Hephaestus himself is only 1 block tall, but mechs are about 3 blocks wide and 2 blocks tall. Mechs take much less knockback, and take less damage from projectiles the higher the tier (melee damage isn't reduced).\nEvery mech comes with its own chainsaw, which hits every 0.275 seconds with 5.5 block reach. Emerald and Void chainsaws also cause Bleed: 2 damage per second, lasting until 2 seconds after your last hit (hitting again resets it, but it never stacks).\nYour shield doesn't regenerate on its own. Use Self-Repair instead: it heals about 5% of your max shield per tick, with a bigger burst at the start, and takes about 15 seconds to go from empty to full. It has a 6 second cooldown, and can't be used again while a repair is still going. Getting hit stops the healing, you can't use your chainsaw for 1 second after pressing it, and Zapped reduces its healing.\nIf your shield breaks, you're knocked out of the mech, and it explodes 2 seconds later for about 48 damage, less the farther away you are. Out of the mech you only have 30 HP and the Tinker's Wrench. Use Summon Talos Mech to get back in: it has a 10 second cooldown and takes 3 seconds, during which you can't move.\nFrom the Diamond Mech up, you also get Self-Destruct (25 second cooldown). It launches the mech about 12 blocks in the direction you're facing and blows it up. The damage scales with your remaining shield: up to 275 with the Diamond Mech, 495 with Emerald and 695 with Void, or the same 48 as a broken mech if you're nearly out of shield.\nThe Emerald and Void Mechs also get Whirling Death (10 second cooldown): it hits every enemy within 7 blocks, even through walls, for the same damage as your chainsaw, and launches them 2 blocks into the air. It doesn't cause Bleed.",
   "items": [
    {
     "name": "Wood Mech",
@@ -10600,7 +10634,7 @@
     "name": "Self-Repair",
     "img": "images/abilities/ability-template.png",
     "note": "6s cooldown",
-    "desc": "Heals about 5% of your max shield per tick (bigger burst at the start), about 15 seconds from empty to full. Stacks if used again. Stops when you get hit, locks your chainsaw for 1 second, and is weakened by Zapped.",
+    "desc": "Heals about 5% of your max shield per tick (bigger burst at the start), about 15 seconds from empty to full. Can't be used again during a repair. Stops when you get hit, locks your chainsaw for 1 second, and is weakened by Zapped.",
     "cd": 6
    },
    {
@@ -10632,6 +10666,14 @@
    }
   ],
   "history": [
+   {
+    "type": "nerf",
+    "date": "Nov 13, 2026",
+    "title": "",
+    "changes": [
+     "Self-repair can no longer be used again during an existing repair to trigger another instant heal"
+    ]
+   },
    {
     "type": "nerf",
     "date": "Mar 13, 2026",
@@ -11695,15 +11737,15 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Launch into the air with a giant war hammer. Higher launches deal more slam damage, and the hammer can be upgraded throughout the match.",
-  "adv": "Jade buys hammers in the shop: Hammer I for 40 iron, Hammer II for 80 iron and Hammer III for 4 emeralds. Each has a 5 second cooldown.\nUsing the hammer launches you into the air and gives you a speed boost until you land: 2.5 blocks up and about a 7 block dash with Hammer I, 3.5 and 9 with Hammer II, and 4.5 and 11 with Hammer III. When you land, you slam enemies within 4 blocks and launch them up to 5 blocks into the air.\nThe higher you fall from, the more the slam deals, up to 40 blocks: Hammer I deals 15 on the ground and 82.5 from 40 blocks, Hammer II 24 to 114, and Hammer III 33 to 150 (111.3 from 20 blocks). Hitting several enemies splits the damage evenly: 2 enemies take half each, 3 take a third each. Higher hammer tiers also have more armor penetration: 0% for Hammer I, 20% for Hammer II and 40% for Hammer III (from tests).\nHitting someone with the slam means you take no fall damage. If you miss, you still take some, but much less: a 40 block fall that would deal 99 only dealt 20 with a missed slam (from tests).",
+  "adv": "Jade spawns with Hammer I, and buys upgrades in the shop: Hammer II for 80 iron and Hammer III for 4 emeralds. Each has a 5 second cooldown.\nUsing the hammer launches you into the air and gives you a speed boost until you land: 2.5 blocks up and about a 7 block dash with Hammer I, 3.5 and 9 with Hammer II, and 4.5 and 11 with Hammer III. When you land, you slam enemies within 4 blocks and launch them up to 5 blocks into the air.\nThe higher you fall from, the more the slam deals, up to 40 blocks: Hammer I deals 10 on the ground and up to about 82.5 from 40 blocks, Hammer II 24 to 114, and Hammer III 33 to 150 (111.3 from 20 blocks). Slam damage is highest at the point of impact and falls off the farther away an enemy is. Hitting several enemies splits the damage evenly: 2 enemies take half each, 3 take a third each. Higher hammer tiers also have more armor penetration: 0% for Hammer I, 20% for Hammer II and 40% for Hammer III (from tests).\nHitting someone with the slam means you take no fall damage. If you miss, you still take some, but much less: a 40 block fall that would deal 99 only dealt 20 with a missed slam (from tests).",
   "items": [
    {
     "name": "Jade Hammer I",
     "img": "images/items/jade-hammer.png",
-    "note": "40 iron",
-    "desc": "Slam for 15 damage on the ground, up to 82.5 from 40 blocks up. Launches you 2.5 blocks up and about 7 blocks forward. No armor penetration. 5 second cooldown.",
+    "note": "Spawn with it",
+    "desc": "Slam for 10 damage on the ground, up to 82.5 from 40 blocks up. Launches you 2.5 blocks up and about 7 blocks forward. No armor penetration. 5 second cooldown.",
     "dmg": 82.5,
-    "dmgText": "15 – 82.5",
+    "dmgText": "10 – 82.5",
     "cd": 5,
     "nodps": true
    },
@@ -11730,6 +11772,16 @@
   ],
   "abilities": [],
   "history": [
+   {
+    "type": "bal",
+    "date": "Nov 13, 2026",
+    "title": "",
+    "changes": [
+     "Now starts with the Tier 1 hammer",
+     "Tier 1 base slam damage 15 → 10",
+     "Slam damage now decreases with distance from impact"
+    ]
+   },
    {
     "type": "buff",
     "date": "Oct 2, 2026",
@@ -11864,11 +11916,11 @@
     "rows": [
      [
       "img:images/items/jade-hammer.png|Hammer I",
-      "40 iron",
-      "15",
-      "45.2",
-      "60.2",
-      "72.1",
+      "Spawn with it",
+      "10",
+      "42.4",
+      "58.5",
+      "71.4",
       "82.5",
       "0%"
      ],
@@ -11893,7 +11945,7 @@
       "40%"
      ]
     ],
-    "note": "Ground, 40 blocks and Hammer III at 20 blocks are from tests; the rest are estimated. No armor."
+    "note": "Hammer I's ground damage is from the Nov 13 patch (15 → 10); its other heights are estimated. Damage falls off with distance from the impact. No armor."
    },
    {
     "title": "Hammer movement",
@@ -11971,7 +12023,7 @@
    }
   ],
   "bal": "adj",
-  "balWhy": "Having to buy hammers for so much iron is a big nerf compared to before the rework. The mechanic itself is great, maybe a little too good in 1v1s, since Gloop barely matters when Jade spends most of its time in the air. Hammer tiers should come from kills instead of resources, and Jade should spawn with its first hammer."
+  "balWhy": "Having to buy hammers for so much iron is a big nerf compared to before the rework. The mechanic itself is great, maybe a little too good in 1v1s, since Gloop barely matters when Jade spends most of its time in the air. Hammer tiers should come from kills instead of resources. (As of Nov 13, 2026, Jade spawns with its first hammer.)"
  },
  {
   "name": "Kaida",
@@ -12678,6 +12730,14 @@
   "history": [
    {
     "type": "nerf",
+    "date": "Nov 13, 2026",
+    "title": "",
+    "changes": [
+     "Dodge cooldown 10 → 12 seconds"
+    ]
+   },
+   {
+    "type": "nerf",
     "date": "Sep 18, 2026",
     "title": "",
     "changes": [
@@ -13023,6 +13083,14 @@
   ],
   "abilities": [],
   "history": [
+   {
+    "type": "nerf",
+    "date": "Nov 13, 2026",
+    "title": "",
+    "changes": [
+     "Damage-to-candy conversion 45% → 40%"
+    ]
+   },
    {
     "type": "nerf",
     "date": "May 8, 2026",
@@ -13993,6 +14061,15 @@
   "history": [
    {
     "type": "nerf",
+    "date": "Nov 13, 2026",
+    "title": "",
+    "changes": [
+     "Reduced treasure reward scaling as the match progresses",
+     "Starting rewards are unchanged"
+    ]
+   },
+   {
+    "type": "nerf",
     "date": "May 29, 2026",
     "title": "",
     "changes": [
@@ -14174,14 +14251,14 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Disguise as a block and pickpocket from other players!",
-  "adv": "Milo can disguise as any block except see-through ones. You move at normal walking speed while disguised. Up close, the disguise is a slightly different color from the real block. A bar shows how long you can stay disguised: about 2 minutes standing still, or 26 seconds while moving. It takes 40 seconds to fully recharge. You can't disguise while Grounded or Glooped, and walking near Gloop on the ground reveals you.\nStay disguised for 4.25 seconds, then reveal yourself to get 25 shield for 5 seconds and about 22.5% more speed for 3 seconds (from tests).\nWhile disguised and standing still, you can pickpocket enemies within 9 blocks. Each steal takes about 0.5 seconds and takes 10–25% of one of their resources (usually around 15%), going for emeralds and diamonds before iron.",
+  "adv": "Milo can disguise as any block except see-through ones. You move at normal walking speed while disguised. Up close, the disguise is a slightly different color from the real block. A bar shows how long you can stay disguised: about 2 minutes standing still, or 26 seconds while moving. It takes 40 seconds to fully recharge. You can't disguise while Grounded or Glooped, and walking near Gloop on the ground reveals you.\nStay disguised for 4.25 seconds, then reveal yourself to get 25 shield for 5 seconds and about 22.5% more speed for 3 seconds (from tests). The reveal rewards have a 10 second cooldown, shared across all your disguises.\nWhile disguised and standing still, you can pickpocket enemies within 9 blocks. Each steal takes about 0.5 seconds and takes 10–25% of one of their resources (usually around 15%), going for emeralds and diamonds before iron.",
   "items": [],
   "abilities": [
    {
     "name": "Block Disguise",
     "img": "images/abilities/ability-template.png",
     "note": "About 2 min still, 26s moving",
-    "desc": "Disguise as any non-see-through block; you move at normal speed. Lasts about 2 minutes standing still or 26 seconds moving, and recharges fully in 40 seconds. After 4.25 seconds disguised, revealing gives 25 shield (5 seconds) and about 22.5% more speed (3 seconds). Gloop reveals you and stops you from disguising."
+    "desc": "Disguise as any non-see-through block; you move at normal speed. Lasts about 2 minutes standing still or 26 seconds moving, and recharges fully in 40 seconds. After 4.25 seconds disguised, revealing gives 25 shield (5 seconds) and about 22.5% more speed (3 seconds). Gloop reveals you and stops you from disguising. Reveal rewards have a 10 second cooldown."
    },
    {
     "name": "Pickpocket",
@@ -14191,6 +14268,14 @@
    }
   ],
   "history": [
+   {
+    "type": "nerf",
+    "date": "Nov 13, 2026",
+    "title": "",
+    "changes": [
+     "Reveal shield and speed rewards now share a 10 second cooldown across transformations"
+    ]
+   },
    {
     "type": "nerf",
     "date": "Oct 2, 2026",
@@ -14283,7 +14368,7 @@
    {
     "name": "Surprise",
     "when": "Revealing after 4.25 seconds disguised",
-    "desc": "25 shield for 5 seconds and about 22.5% more speed for 3 seconds."
+    "desc": "25 shield for 5 seconds and about 22.5% more speed for 3 seconds. 10 second cooldown, shared across disguises."
    }
   ],
   "tables": [
@@ -14325,6 +14410,10 @@
      [
       "Pickpocket",
       "10–25% of one resource (usually ~15%), about 0.5s each"
+     ],
+     [
+      "Reveal reward cooldown",
+      "10 seconds"
      ]
     ],
     "note": "From tests and patch notes."
@@ -15365,6 +15454,14 @@
   ],
   "history": [
    {
+    "type": "nerf",
+    "date": "Nov 13, 2026",
+    "title": "",
+    "changes": [
+     "Rage cooldown 36 → 40 seconds"
+    ]
+   },
+   {
     "type": "bal",
     "date": "Oct 2, 2026",
     "title": "",
@@ -16010,6 +16107,14 @@
   "history": [
    {
     "type": "nerf",
+    "date": "Nov 13, 2026",
+    "title": "",
+    "changes": [
+     "Charge cooldown 15 → 17 seconds"
+    ]
+   },
+   {
+    "type": "nerf",
     "date": "Sep 18, 2026",
     "title": "",
     "changes": [
@@ -16651,7 +16756,8 @@
    "tier": "45 (free)",
    "badge": "images/bp/s1.webp",
    "rent": 2000,
-   "buy": 25000
+   "buy": 25000,
+   "note": "Now in the store for 25,000 BedCoins or 599 Robux"
   }
  },
  {
@@ -19409,6 +19515,15 @@
   ],
   "history": [
    {
+    "type": "nerf",
+    "date": "Nov 13, 2026",
+    "title": "",
+    "changes": [
+     "Pounce now uses 35 stamina, shared with wall climbing",
+     "Pounce keeps its 5 second cooldown"
+    ]
+   },
+   {
     "type": "bal",
     "date": "Jan 2, 2026",
     "title": "",
@@ -19675,6 +19790,15 @@
    }
   ],
   "history": [
+   {
+    "type": "buff",
+    "date": "Nov 13, 2026",
+    "title": "",
+    "changes": [
+     "Grounded gun hits cause 50% less horizontal self-recoil",
+     "Restored normal jumping, falling and climbing animations"
+    ]
+   },
    {
     "type": "buff",
     "date": "Oct 30, 2026",
