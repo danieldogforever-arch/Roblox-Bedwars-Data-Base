@@ -1948,7 +1948,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Build rage by damaging enemies. Instead of buying swords, your sword is upgraded when you reach enough rage. You lose all your rage on death. The Emerald Sword is replaced by the Rageblade.",
-  "adv": "Barbarian cannot buy swords. You start with a wooden sword and upgrade it by building rage, which you get from dealing damage and from kills. Once upgraded, your sword never goes back to the previous one when you die.\nDamage needed for each upgrade:\nStone sword: 80\nIron sword: 260\nDiamond sword: 430\nRageblade: 650\nYour rage resets each time you upgrade, so you need 1420 damage in total.\nRanged damage gives 2x less rage than other damage. Killing an enemy gives you around 40 damage worth of rage. You cannot get rage from enemies who respawned within the last 9 seconds.\nWhen you die you lose all your rage and restart the tier you are on.",
+  "adv": "Barbarian cannot buy swords. You start with a wooden sword and upgrade it by building rage, which you get from dealing damage and from kills. Once upgraded, your sword never goes back to the previous one when you die.\nDamage needed for each upgrade:\nStone sword: 85\nIron sword: 210\nDiamond sword: 430\nRageblade: 650\nYour rage resets each time you upgrade, so you need 1375 damage in total (from tests). Rage and damage aren't exactly the same: the Nov 13, 2026 patch lowered the stone sword's rage requirement from 85 to 80 and the iron sword's from 270 to 260, so these damage numbers may now be a little lower.\nRanged damage gives 2x less rage than other damage. Killing an enemy gives you around 40 damage worth of rage. You cannot get rage from enemies who respawned within the last 9 seconds.\nWhen you die you lose all your rage and restart the tier you are on.",
   "items": [
    {
     "name": "Rageblade",
@@ -1975,8 +1975,8 @@
    },
    {
     "name": "Sword Upgrades",
-    "when": "At 80, 260, 430 and 650 rage",
-    "desc": "Reaching each rage amount upgrades your sword: stone, iron, diamond, then Rageblade. Rage resets on every upgrade, and you need 1420 damage in total."
+    "when": "At 85, 210, 430 and 650 rage",
+    "desc": "Reaching each rage amount upgrades your sword: stone, iron, diamond, then Rageblade. Rage resets on every upgrade, and you need 1375 damage in total."
    },
    {
     "name": "Death Penalty",
@@ -11737,15 +11737,15 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Launch into the air with a giant war hammer. Higher launches deal more slam damage, and the hammer can be upgraded throughout the match.",
-  "adv": "Jade spawns with Hammer I, and buys upgrades in the shop: Hammer II for 80 iron and Hammer III for 4 emeralds. Each has a 5 second cooldown.\nUsing the hammer launches you into the air and gives you a speed boost until you land: 2.5 blocks up and about a 7 block dash with Hammer I, 3.5 and 9 with Hammer II, and 4.5 and 11 with Hammer III. When you land, you slam enemies within 4 blocks and launch them up to 5 blocks into the air.\nThe higher you fall from, the more the slam deals, up to 40 blocks: Hammer I deals 10 on the ground and up to about 82.5 from 40 blocks, Hammer II 24 to 114, and Hammer III 33 to 150 (111.3 from 20 blocks). Slam damage is highest at the point of impact and falls off the farther away an enemy is. Hitting several enemies splits the damage evenly: 2 enemies take half each, 3 take a third each. Higher hammer tiers also have more armor penetration: 0% for Hammer I, 20% for Hammer II and 40% for Hammer III (from tests).\nHitting someone with the slam means you take no fall damage. If you miss, you still take some, but much less: a 40 block fall that would deal 99 only dealt 20 with a missed slam (from tests).",
+  "adv": "Jade spawns with Hammer I, and buys upgrades in the shop: Hammer II for 80 iron and Hammer III for 4 emeralds. Each has a 5 second cooldown.\nUsing the hammer launches you into the air and gives you a speed boost until you land: 2.5 blocks up and about a 7 block dash with Hammer I, 3.5 and 9 with Hammer II, and 4.5 and 11 with Hammer III. When you land, you slam enemies within 4 blocks and launch them up to 5 blocks into the air.\nThe higher you fall from, the more the slam deals, up to 40 blocks: Hammer I deals 10 on the ground and 77.5 from 40 blocks, Hammer II 24 to 114, and Hammer III 33 to 150 (111.3 from 20 blocks). Slam damage is highest at the point of impact and falls off the farther away an enemy is, so pearling in from far away deals less than landing right on someone. Hitting several enemies splits the damage evenly: 2 enemies take half each, 3 take a third each. Higher hammer tiers also have more armor penetration: 0% for Hammer I, 20% for Hammer II and 40% for Hammer III (from tests).\nHitting someone with the slam means you take no fall damage. If you miss, you still take some, but much less: a 40 block fall that would deal 99 only dealt 20 with a missed slam (from tests).",
   "items": [
    {
     "name": "Jade Hammer I",
     "img": "images/items/jade-hammer.png",
     "note": "Spawn with it",
-    "desc": "Slam for 10 damage on the ground, up to 82.5 from 40 blocks up. Launches you 2.5 blocks up and about 7 blocks forward. No armor penetration. 5 second cooldown.",
-    "dmg": 82.5,
-    "dmgText": "10 – 82.5",
+    "desc": "Slam for 10 damage on the ground, up to 77.5 from 40 blocks up. Launches you 2.5 blocks up and about 7 blocks forward. No armor penetration. 5 second cooldown.",
+    "dmg": 77.5,
+    "dmgText": "10 – 77.5",
     "cd": 5,
     "nodps": true
    },
@@ -11918,10 +11918,10 @@
       "img:images/items/jade-hammer.png|Hammer I",
       "Spawn with it",
       "10",
-      "42.4",
-      "58.5",
-      "71.4",
-      "82.5",
+      "40.2",
+      "55.2",
+      "67.1",
+      "77.5",
       "0%"
      ],
      [
@@ -11945,7 +11945,7 @@
       "40%"
      ]
     ],
-    "note": "Hammer I's ground damage is from the Nov 13 patch (15 → 10); its other heights are estimated. Damage falls off with distance from the impact. No armor."
+    "note": "Ground and 40 block damage are from tests and patch notes; the other heights are estimated. Damage falls off with distance from the impact. No armor."
    },
    {
     "title": "Hammer movement",
@@ -11991,7 +11991,7 @@
   "strategy": [
    {
     "title": "Pearl slam",
-    "text": "From 40 blocks up, pearl onto someone and slam right away for max damage without falling the whole way. It catches them off guard, it's safer, and it works on enemies far away who can't see your tower."
+    "text": "From 40 blocks up, pearl onto someone and slam right away without falling the whole way. It catches them off guard and it's safer. Since the Nov 13, 2026 patch, damage falls off with distance from the impact, so land as close to them as you can."
    },
    {
     "title": "Sky bridges",
