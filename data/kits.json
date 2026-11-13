@@ -11450,15 +11450,25 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Lob bundles of poisonous pumpkin oil across the map.",
-  "adv": "",
+  "adv": "Jack spawns with the Oil Blob and an Oil Bar that holds 60 oil. The bar refills 1 oil per second (a full minute from empty), and each kill gives 24 oil. You need at least 10 oil to throw.\nTap to throw a small blob for 10 oil, or charge for up to 3 seconds to make a bigger one. A full charge uses about 40 oil (two-thirds of the bar) and covers an 8 block radius. Blobs work on anyone up to 2 blocks above or below them and last 50 seconds, slowly shrinking before they disappear.\nA blob deals 5 damage when it lands. Enemies standing in oil are Grounded for 3 seconds (no pearls or movement abilities), slowed for 2 seconds and poisoned for 5 seconds. Poison deals 1 damage per second with about 70% armor penetration (from tests) and can't kill, but the 5 landing damage can.\nBuy Fire Matches for 8 iron each (no limit) to light a blob on fire. Burning oil instantly sets nearby flammable blocks like wool and wood on fire, then burns out after 10 seconds. While it burns, enemies in it take 8 fire damage per tick and are still Grounded and slowed, but the poison stops reapplying. Fire can kill. A fireball can also light the oil again.",
   "items": [
    {
     "name": "Oil Blob",
-    "img": "images/items/oil-blob.png"
+    "img": "images/items/oil-blob.png",
+    "note": "Spawns with it",
+    "desc": "Tap for a small blob (10 oil) or charge up to 3 seconds for an 8 block radius blob (about 40 oil). 5 damage on landing, then Grounds, slows and poisons enemies in it (1 damage per second, can't kill). Lasts 50 seconds.",
+    "dmg": 5,
+    "dmgText": "5 + 1/s poison",
+    "nodps": true
    },
    {
     "name": "Fire Match",
-    "img": "images/items/fire-match.png"
+    "img": "images/items/fire-match.png",
+    "note": "8 iron, no limit",
+    "desc": "Lights a blob on fire for 10 seconds: 8 fire damage per tick, burns nearby wool and wood instantly, and still Grounds and slows. Poison stops reapplying while it burns.",
+    "dmg": 8,
+    "dmgText": "8 per tick",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -11538,7 +11548,119 @@
    "badge": "images/bp/s2.webp",
    "rent": 2000,
    "buy": 25000
-  }
+  },
+  "passives": [
+   {
+    "name": "Oil Bar",
+    "when": "Always",
+    "desc": "Holds 60 oil. Refills 1 oil per second and 24 oil per kill. Needs 10 oil to throw."
+   },
+   {
+    "name": "Sticky Oil",
+    "when": "Enemies in oil",
+    "desc": "Grounded for 3 seconds, slowed for 2 seconds and poisoned for 5 seconds."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Oil Bar",
+    "head": [
+     "",
+     "Oil"
+    ],
+    "rows": [
+     [
+      "Max",
+      "60"
+     ],
+     [
+      "Refill",
+      "1 per second (60 seconds to fill)"
+     ],
+     [
+      "Kill",
+      "+24"
+     ],
+     [
+      "Tap throw",
+      "10"
+     ],
+     [
+      "Full 3 second charge",
+      "~40 (8 block radius)"
+     ],
+     [
+      "Minimum to throw",
+      "10"
+     ]
+    ]
+   },
+   {
+    "title": "Oil effects",
+    "head": [
+     "Oil",
+     "Damage",
+     "Effects"
+    ],
+    "rows": [
+     [
+      "Landing",
+      "5 (can kill)",
+      "—"
+     ],
+     [
+      "Standing in oil",
+      "1 poison per second for 5s (can't kill, ~70% armor pen)",
+      "Grounded 3s, slowed 2s"
+     ],
+     [
+      "Burning oil (10s)",
+      "8 fire per tick (can kill)",
+      "Grounded, slowed, burns wool and wood"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Poison their base",
+    "text": "For constant poison damage, throw oil at their base and don't light it."
+   },
+   {
+    "title": "Burn for burst",
+    "text": "For quick damage instead of slow poison, light the oil with a match."
+   },
+   {
+    "title": "Melt defenses",
+    "text": "Light oil on wool and wood bed defenses or bridges to delete them and keep enemies stalled."
+   },
+   {
+    "title": "Tap up close",
+    "text": "If someone is right next to you, just tap the Oil Blob: they take 5 damage and get every effect for a moment, and you save your big blobs for area damage."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Don't feed it kills",
+    "text": "Kills refill 24 oil. Jack can't throw with less than 10 oil."
+   },
+   {
+    "title": "Play around the ground",
+    "text": "Otherwise you'll have to deal with not being able to pearl or use movement abilities in its oil."
+   }
+  ],
+  "skins": [
+   {
+    "name": "OG Chroma Skin",
+    "img": "images/skins/jack-og-chroma.webp"
+   },
+   {
+    "name": "Void Skin",
+    "img": "images/skins/jack-void.webp"
+   }
+  ],
+  "bal": "op",
+  "balWhy": "Jack can turn off every movement kit for free, which alone would make a great kit. On top of that it slows, deals a lot of damage, can stall with poison for a full minute, and deletes wool bridges and bed defenses. It has too few counters and takes too little skill."
  },
  {
   "name": "Jade",
