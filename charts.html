@@ -9,7 +9,7 @@
 <style>
 :root{--bg:#0a0418;--card:#150b38;--soft:rgba(255,255,255,.07);--muted:#b9aee0;--accent:#a98bff;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box;font-weight:400}
-body{margin:0;min-height:100vh;color:#fff;font:400 1.05rem/1.5 "Jua","Trebuchet MS",system-ui,sans-serif;background:radial-gradient(circle at 15% 8%,rgba(110,60,220,.35),transparent 40%),radial-gradient(circle at 85% 92%,rgba(120,50,230,.3),transparent 45%),radial-gradient(circle,rgba(255,255,255,.4) 1px,transparent 1.6px) 0 0/87px 87px,radial-gradient(circle,rgba(180,156,255,.32) 2px,transparent 2.8px) 37px 51px/131px 131px,var(--bg);background-attachment:fixed}
+body{margin:0;min-height:100vh;color:#fff;font:400 1.05rem/1.5 "Jua","Trebuchet MS",system-ui,sans-serif;background:linear-gradient(rgba(10,4,24,.25),rgba(10,4,24,.25)),url(images/tierlist-bg.jpg) center/cover fixed,var(--bg)}
 .wrap{max-width:1180px;margin:0 auto;padding:22px 18px 56px}
 a{color:inherit}
 .nav{display:flex;gap:18px;font-size:.95rem;margin-bottom:14px}
@@ -36,6 +36,7 @@ h1{font-size:2.8rem;margin:0;line-height:1.1}
 .lab{width:120px;flex:none;border-right:4px solid #fff;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:10px 6px;font-size:2.8rem;line-height:1}
 .lab small{font-size:.85rem;color:var(--muted);margin-top:8px}
 .kits{flex:1;min-width:0;display:flex;flex-wrap:wrap;align-content:flex-start;gap:10px;padding:12px}
+.rdesc{flex:0 0 100%;margin:0 0 2px;color:#d9d0ff;font-size:.98rem;line-height:1.35}
 .kit{position:relative;display:block;width:72px;height:72px;border:3px solid #fff;border-radius:12px;background:#0d0626;text-decoration:none;transition:transform .12s,border-color .12s}
 .kit img{width:100%;height:100%;object-fit:contain;display:block;border-radius:9px}
 .kit .dot{position:absolute;top:-5px;right:-5px}
@@ -129,7 +130,7 @@ function render(){
         '<img src="'+esc(k.i)+'" alt="" loading="lazy">'+(k.d?'<i class="dot '+k.d+'"></i>':'')+(mv?mvIcon(mv.dir):'')+'</a>';
     }).join("");
     return '<div class="row"><div class="lab">'+esc(r.label)+'<small>'+r.kits.length+' kit'+(r.kits.length===1?'':'s')+'</small></div>'+
-      '<div class="kits">'+(ks || '<span class="empty">No kits</span>')+'</div></div>';
+      '<div class="kits">'+(r.desc?'<p class="rdesc">'+esc(r.desc)+'</p>':'')+(ks || '<span class="empty">No kits</span>')+'</div></div>';
   }).join("");
   applyFind(false);
 }
@@ -172,18 +173,25 @@ function makeCanvas(){
   var L = LISTS[cur], F = '"Jua","Trebuchet MS",sans-serif';
   var W = 1600, PAD = 48, LAB = 170, TILE = 92, GAP = 14, IN = 18, BW = 6;
   var area = W - PAD*2 - BW*2 - LAB - BW - IN*2, per = Math.max(1, Math.floor((area + GAP) / (TILE + GAP)));
-  var rowsH = L.rows.map(function(r){ var lines = Math.max(1, Math.ceil(r.kits.length / per)); return Math.max(150, IN*2 + lines*TILE + (lines-1)*GAP); });
+  var DF = 28, DLH = 36, DW = area;
+  var mc = document.createElement("canvas").getContext("2d"); mc.font = DF+"px "+F;
+  function wrap(t){ var out = [], line = ""; String(t||"").split(/\s+/).forEach(function(w){ var tst = line ? line+" "+w : w; if(mc.measureText(tst).width > DW && line){ out.push(line); line = w; } else line = tst; }); if(line) out.push(line); return out; }
+  var dl = L.rows.map(function(r){ return r.desc ? wrap(r.desc) : []; });
+  var rowsH = L.rows.map(function(r,ri){ var lines = Math.max(1, Math.ceil(r.kits.length / per)), dh = dl[ri].length ? dl[ri].length*DLH + 14 : 0; return Math.max(150, IN*2 + dh + lines*TILE + (lines-1)*GAP); });
   var HEAD = 190, FOOT = 70, H = PAD + HEAD + BW + rowsH.reduce(function(a,b){return a+b+BW;},0) + FOOT;
   var names = []; L.rows.forEach(function(r){ r.kits.forEach(function(n){ if(KITS[n]) names.push(n); }); });
-  return Promise.all([document.fonts ? document.fonts.load('40px "Jua"').catch(function(){}) : null].concat(names.map(function(n){ return loadImg(KITS[n].i); }))).then(function(res){
-    var imgs = {}; names.forEach(function(n,i){ imgs[n] = res[i+1]; });
+  return Promise.all([document.fonts ? document.fonts.load('40px "Jua"').catch(function(){}) : null, loadImg("images/tierlist-bg.jpg")].concat(names.map(function(n){ return loadImg(KITS[n].i); }))).then(function(res){
+    var imgs = {}, bg = res[1]; names.forEach(function(n,i){ imgs[n] = res[i+2]; });
+    mc.font = DF+"px "+F; dl = L.rows.map(function(r){ return r.desc ? wrap(r.desc) : []; });
     var cv = document.createElement("canvas"); cv.width = W; cv.height = H; var c = cv.getContext("2d");
     // background with stars
     c.fillStyle = "#0a0418"; c.fillRect(0,0,W,H);
+    if(bg){ var bs = Math.max(W/bg.width, H/bg.height), bw = bg.width*bs, bh = bg.height*bs; c.drawImage(bg, (W-bw)/2, (H-bh)/2, bw, bh); }
+    else {
     [[.15*W,.08*H,"rgba(110,60,220,.35)",.45],[.85*W,.92*H,"rgba(120,50,230,.3)",.5]].forEach(function(g){
       var gr = c.createRadialGradient(g[0],g[1],0,g[0],g[1],Math.max(W,H)*g[3]); gr.addColorStop(0,g[2]); gr.addColorStop(1,"rgba(0,0,0,0)"); c.fillStyle = gr; c.fillRect(0,0,W,H); });
     function dots(step,ox,oy,r,col){ c.fillStyle = col; for(var y=oy+step/2;y<H;y+=step) for(var x=ox+step/2;x<W;x+=step){ c.beginPath(); c.arc(x,y,r,0,7); c.fill(); } }
-    dots(87,0,0,1.3,"rgba(255,255,255,.4)"); dots(131,37,51,2.4,"rgba(180,156,255,.32)");
+    dots(87,0,0,1.3,"rgba(255,255,255,.4)"); dots(131,37,51,2.4,"rgba(180,156,255,.32)"); }
     // header
     c.textBaseline = "alphabetic"; c.fillStyle = "#fff"; c.font = "72px "+F; c.fillText(L.title || "Bedwars User Guide", PAD, PAD+68);
     c.font = "40px "+F; c.fillText(L.subt || (L.name+" tier list"), PAD, PAD+122);
@@ -202,9 +210,11 @@ function makeCanvas(){
       c.fillStyle = "#fff"; c.textAlign = "center";
       var fs = r.label.length > 3 ? 44 : 84; c.font = fs+"px "+F; c.fillText(r.label, PAD+BW+LAB/2, y + h/2 + fs*0.32);
       c.textAlign = "left";
+      var dh = 0;
+      if(dl[ri].length){ c.fillStyle = "#d9d0ff"; c.font = DF+"px "+F; dl[ri].forEach(function(t,li){ c.fillText(t, PAD + BW + LAB + BW + IN, y + IN + DF + li*DLH); }); dh = dl[ri].length*DLH + 14; }
       r.kits.forEach(function(n,i){
         var col = i % per, line = Math.floor(i / per);
-        var x = PAD + BW + LAB + BW + IN + col*(TILE+GAP), ty = y + IN + line*(TILE+GAP);
+        var x = PAD + BW + LAB + BW + IN + col*(TILE+GAP), ty = y + IN + dh + line*(TILE+GAP);
         c.fillStyle = "#0d0626"; rr(c,x,ty,TILE,TILE,14); c.fill();
         var im = imgs[n];
         if(im){ c.save(); rr(c,x+3,ty+3,TILE-6,TILE-6,11); c.clip(); var s = Math.min((TILE-6)/im.width,(TILE-6)/im.height), iw = im.width*s, ih = im.height*s; c.drawImage(im, x+3+(TILE-6-iw)/2, ty+3+(TILE-6-ih)/2, iw, ih); c.restore(); }
