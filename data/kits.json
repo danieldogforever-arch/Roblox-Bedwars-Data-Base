@@ -12387,12 +12387,18 @@
   "diff": "easy",
   "hp": "100",
   "desc": "A fearsome warrior with a fiery punch!",
-  "adv": "",
+  "adv": "Every hit you land gives the enemy a dragon stack, up to 3. Stacks last 12 seconds after your last hit. Use Dragon Punch within 4 blocks to punch the closest marked enemy, using up all their stacks. More stacks means more damage and knockback: 5 damage at 1 stack, 8 at 2 and 10 at 3.\nIf the punch knocks them into a wall, it deals much more instead: 10, 20 or 30 damage, and sets them on fire for 2 ticks of 3 damage. Punches have 70% armor penetration (from tests); the fire has none.\nDragon Punch has a 4, 5 or 6 second cooldown at 1, 2 or 3 stacks. Each enemy can only be punched once every 8 seconds, and they don't get new stacks until then.",
   "items": [],
   "abilities": [
    {
     "name": "Dragon Punch",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Within 4 blocks",
+    "desc": "Punch the closest marked enemy, using all their stacks: 5 / 8 / 10 damage and 5 / 7 / 10 knockback at 1 / 2 / 3 stacks, or 10 / 20 / 30 plus 2 ticks of 3 fire if they hit a wall. 70% armor penetration. 4 / 5 / 6 second cooldown; each enemy can only be punched every 8 seconds.",
+    "cd": 6,
+    "dmg": 30,
+    "dmgText": "5 / 8 / 10 (wall 10 / 20 / 30 + fire)",
+    "nodps": true
    }
   ],
   "history": [
@@ -12541,7 +12547,89 @@
    "tier": "50 (paid)",
    "badge": "images/bp/s6.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Dragon Stacks",
+    "when": "Hitting enemies",
+    "desc": "Each hit adds a stack, up to 3. Stacks last 12 seconds after your last hit."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Dragon Punch",
+    "head": [
+     "Stacks",
+     "Damage",
+     "Knockback",
+     "Into a wall",
+     "Cooldown"
+    ],
+    "rows": [
+     [
+      "1",
+      "5",
+      "5",
+      "10 + 3 × 2 fire",
+      "4s"
+     ],
+     [
+      "2",
+      "8",
+      "7",
+      "20 + 3 × 2 fire",
+      "5s"
+     ],
+     [
+      "3",
+      "10",
+      "10",
+      "30 + 3 × 2 fire",
+      "6s"
+     ]
+    ],
+    "note": "70% armor penetration on the punch, none on the fire (from tests). Each enemy can only be punched every 8 seconds."
+   },
+   {
+    "title": "Tested vs iron armor",
+    "head": [
+     "Stacks",
+     "Open field",
+     "Into a wall (with fire)"
+    ],
+    "rows": [
+     [
+      "1",
+      "3.62",
+      "9.94"
+     ],
+     [
+      "2",
+      "5.79",
+      "17.19"
+     ],
+     [
+      "3",
+      "7.24",
+      "24.43"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Wait for 3 stacks",
+    "text": "Don't spam the punch. Build up 3 stacks, then punch the enemy into the void or a wall, whichever is closer."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Watch your back",
+    "text": "Don't stand with your back to a wall or the void, so Kaliyah can't push you off or slam you for big damage."
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "For a tier 50 battle pass kit, the damage is pretty mid. It helps in PvP, but other kits deal that much or more early game, and it's not good compared to other tier 50 kits."
  },
  {
   "name": "Krystal",
