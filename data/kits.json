@@ -12387,14 +12387,14 @@
   "diff": "easy",
   "hp": "100",
   "desc": "A fearsome warrior with a fiery punch!",
-  "adv": "Every hit you land gives the enemy a dragon stack, up to 3. Stacks last 12 seconds after your last hit. Use Dragon Punch within 4 blocks to punch the closest marked enemy, using up all their stacks. More stacks means more damage and knockback: 5 damage at 1 stack, 8 at 2 and 10 at 3.\nIf the punch knocks them into a wall, it deals much more instead: 10, 20 or 30 damage, and sets them on fire for 2 ticks of 3 damage. Punches have 70% armor penetration (from tests); the fire has none.\nDragon Punch has a 4, 5 or 6 second cooldown at 1, 2 or 3 stacks. Each enemy can only be punched once every 8 seconds, and they don't get new stacks until then.",
+  "adv": "Every sword hit gives the enemy a dragon stack, up to 3. Fire and Static enchant damage also add stacks; bows and other weapons don't. Stacks last 12 seconds after your last hit. Use Dragon Punch within 4 blocks to punch the closest marked enemy, using up all their stacks. More stacks means more damage and knockback: 5 damage and 5 blocks of knockback at 1 stack, 8 and 7 blocks at 2, and 10 and 10 blocks at 3.\nIf the punch knocks them into a wall, it deals much more instead: 10, 20 or 30 damage, and sets them on fire for 2 ticks of 3 damage. Punches have 70% armor penetration (from tests); the fire has none.\nDragon Punch has a 4, 5 or 6 second cooldown at 1, 2 or 3 stacks. Each enemy can only be punched once every 8 seconds, and they don't get new stacks until then.",
   "items": [],
   "abilities": [
    {
     "name": "Dragon Punch",
     "img": "images/abilities/ability-template.png",
     "note": "Within 4 blocks",
-    "desc": "Punch the closest marked enemy, using all their stacks: 5 / 8 / 10 damage and 5 / 7 / 10 knockback at 1 / 2 / 3 stacks, or 10 / 20 / 30 plus 2 ticks of 3 fire if they hit a wall. 70% armor penetration. 4 / 5 / 6 second cooldown; each enemy can only be punched every 8 seconds.",
+    "desc": "Punch the closest marked enemy, using all their stacks: 5 / 8 / 10 damage and 5 / 7 / 10 blocks of knockback at 1 / 2 / 3 stacks, or 10 / 20 / 30 plus 2 ticks of 3 fire if they hit a wall. 70% armor penetration. 4 / 5 / 6 second cooldown; each enemy can only be punched every 8 seconds.",
     "cd": 6,
     "dmg": 30,
     "dmgText": "5 / 8 / 10 (wall 10 / 20 / 30 + fire)",
@@ -12552,7 +12552,7 @@
    {
     "name": "Dragon Stacks",
     "when": "Hitting enemies",
-    "desc": "Each hit adds a stack, up to 3. Stacks last 12 seconds after your last hit."
+    "desc": "Each sword hit adds a stack (Fire and Static enchant damage count too), up to 3. Stacks last 12 seconds after your last hit."
    }
   ],
   "tables": [
@@ -12561,7 +12561,7 @@
     "head": [
      "Stacks",
      "Damage",
-     "Knockback",
+     "Knockback (blocks)",
      "Into a wall",
      "Cooldown"
     ],
@@ -14148,20 +14148,20 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Disguise as a block and pickpocket from other players!",
-  "adv": "Milo can disguise as any block except see-through ones. Up close, the disguise is a slightly different color from the real block. A bar shows how long you can stay disguised: about 2 minutes standing still, or 26 seconds while moving. It takes 40 seconds to fully recharge. You can't disguise while Grounded or Glooped, and walking near Gloop on the ground reveals you.\nStay disguised for 5 seconds, then reveal yourself to get 25 shield for 5 seconds and a speed boost for 3 seconds.\nWhile disguised and standing still, you can pickpocket enemies within 9 blocks. Each steal takes part of one of their resources, about 16% on average (from 10% up to about 30%), going for emeralds and diamonds before iron.",
+  "adv": "Milo can disguise as any block except see-through ones. You move at normal walking speed while disguised. Up close, the disguise is a slightly different color from the real block. A bar shows how long you can stay disguised: about 2 minutes standing still, or 26 seconds while moving. It takes 40 seconds to fully recharge. You can't disguise while Grounded or Glooped, and walking near Gloop on the ground reveals you.\nStay disguised for 4.25 seconds, then reveal yourself to get 25 shield for 5 seconds and about 22.5% more speed for 3 seconds (from tests).\nWhile disguised and standing still, you can pickpocket enemies within 9 blocks. Each steal takes about 0.5 seconds and takes 10–25% of one of their resources (usually around 15%), going for emeralds and diamonds before iron.",
   "items": [],
   "abilities": [
    {
     "name": "Block Disguise",
     "img": "images/abilities/ability-template.png",
     "note": "About 2 min still, 26s moving",
-    "desc": "Disguise as any non-see-through block. Lasts about 2 minutes standing still or 26 seconds moving, and recharges fully in 40 seconds. After 5 seconds disguised, revealing gives 25 shield (5 seconds) and a speed boost (3 seconds). Gloop reveals you and stops you from disguising."
+    "desc": "Disguise as any non-see-through block; you move at normal speed. Lasts about 2 minutes standing still or 26 seconds moving, and recharges fully in 40 seconds. After 4.25 seconds disguised, revealing gives 25 shield (5 seconds) and about 22.5% more speed (3 seconds). Gloop reveals you and stops you from disguising."
    },
    {
     "name": "Pickpocket",
     "img": "images/abilities/ability-template.png",
     "note": "Within 9 blocks, standing still",
-    "desc": "Steal part of one of an enemy's resources (about 16%, up to about 30%), emeralds and diamonds first."
+    "desc": "Takes about 0.5 seconds. Steals 10–25% (usually around 15%) of one of an enemy's resources, emeralds and diamonds first."
    }
   ],
   "history": [
@@ -14256,8 +14256,8 @@
   "passives": [
    {
     "name": "Surprise",
-    "when": "Revealing after 5 seconds disguised",
-    "desc": "25 shield for 5 seconds and a speed boost for 3 seconds."
+    "when": "Revealing after 4.25 seconds disguised",
+    "desc": "25 shield for 5 seconds and about 22.5% more speed for 3 seconds."
    }
   ],
   "tables": [
@@ -14282,7 +14282,7 @@
      ],
      [
       "Time disguised for reveal buff",
-      "5 seconds"
+      "4.25 seconds"
      ],
      [
       "Reveal shield",
@@ -14290,14 +14290,18 @@
      ],
      [
       "Reveal speed boost",
-      "3 seconds"
+      "~22.5% faster for 3 seconds"
      ],
      [
       "Pickpocket range",
       "9 blocks"
+     ],
+     [
+      "Pickpocket",
+      "10–25% of one resource (usually ~15%), about 0.5s each"
      ]
     ],
-    "note": "From tests."
+    "note": "From tests and patch notes."
    }
   ],
   "strategy": [
