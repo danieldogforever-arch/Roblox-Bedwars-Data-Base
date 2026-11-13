@@ -9979,25 +9979,25 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Purchase seeds and grow them into flowers that buff allies and enhance generator production. Keep your flowers alive by providing them with spirit energy gathered around the map to prevent them from withering.",
-  "adv": "Grove spawns with 1 Soulvine Seed and 1 Tearbloom Seed. You can buy more for 50 iron each, and Crystalheart Seeds for 1 emerald each, with no limit on how many you buy or plant.\nPlants need spirit energy. You start with 50%. Spirit energy orbs spawn around the map at about the same rate as Gompy's ghosts and despawn after 1 minute 30 seconds. Walk within 2 blocks of one to collect it automatically for 20% energy.\nUse Spirit Transfer to grow plants within 7 blocks of you. It takes 8 ticks (8 seconds) to grow a plant. The more plants you're growing, the more energy it uses: about 30% for 10 plants, 60% for 15 and 80% for 20 (from tests). Crystalheart plants use twice as much energy as the other two, so 10 of them use about 80%.\nEach plant lives for 1 minute 30 seconds, then withers. Using Spirit Transfer on a living plant adds 10 seconds of life per tick, up to the 1 minute 30 second max. Using it on a withered plant brings it back.\nSoulvine and Tearbloom only work while you're within 7 blocks of them, and only 10 of each count:\nSoulvine: +3% damage each, up to +30%.\nTearbloom: heals 1.25 HP per second each, up to 12.5 HP per second.\nCrystalheart: makes a generator 8% faster, or 30% for a global generator. There's no limit on how many count.\nPlants are easy to destroy. Mining a plant with anything takes 20 seconds off its life, and mining a withered plant breaks it for good. Plants can catch fire, and the fire spreads to nearby plants.",
+  "adv": "Grove spawns with 1 Soulvine Seed and 1 Tearbloom Seed. You can buy more for 50 iron each, and Crystalheart Seeds for 1 emerald each, with no limit on how many you buy or plant.\nPlants need spirit energy. You start with 50%. Spirit energy orbs spawn around the map at about the same rate as Gompy's ghosts and despawn after 1 minute 30 seconds. Walk within 2 blocks of one to collect it automatically for 20% energy.\nUse Spirit Transfer to grow plants within 7 blocks of you. It takes 8 ticks (8 seconds) to grow a plant. The more plants you're growing at once, the more energy it uses in total over those 8 seconds: about 30% for 10 plants, 60% for 15 and 80% for 20 (from tests). Crystalheart plants use twice as much energy as the other two, so 10 of them use about 80%.\nEach plant lives for 1 minute 30 seconds, then withers. Using Spirit Transfer on a living plant adds 10 seconds of life per tick, up to the 1 minute 30 second max. Using it on a withered plant brings it back.\nSoulvine and Tearbloom work for you and teammates within 7 blocks of them, and only 10 of each count:\nSoulvine: +3% damage each, up to +30%.\nTearbloom: heals 1.25 HP per second each, up to 12.5 HP per second.\nCrystalheart: makes a generator 8% faster each, or 30% for a global generator. It has to be planted within the same radius of the generator. There's no limit on how many count, and the boosts add up evenly: 7 seeds make it 56% faster, 10 make it 80% faster.\nPlants are easy to destroy. Mining a plant with anything takes 20 seconds off its life, and mining a withered plant breaks it for good. Plants can catch fire, and the fire spreads to nearby plants.",
   "items": [
    {
     "name": "Soulvine Seed",
     "img": "images/items/soulvine-seed.png",
     "note": "Spawn with 1, 50 iron",
-    "desc": "+3% damage for each grown Soulvine within 7 blocks, up to 10 (+30%)."
+    "desc": "+3% damage for you and teammates for each grown Soulvine within 7 blocks, up to 10 (+30%)."
    },
    {
     "name": "Tearbloom Seed",
     "img": "images/items/tearbloom-seed.png",
     "note": "Spawn with 1, 50 iron",
-    "desc": "Heals 1.25 HP per second for each grown Tearbloom within 7 blocks, up to 10 (12.5 HP per second)."
+    "desc": "Heals you and teammates 1.25 HP per second for each grown Tearbloom within 7 blocks, up to 10 (12.5 HP per second)."
    },
    {
     "name": "Crystalheart Seed",
     "img": "images/items/crystalheart-seed.png",
     "note": "1 emerald",
-    "desc": "Makes a generator 8% faster, or 30% for a global generator. No limit. Uses twice as much spirit energy as other plants."
+    "desc": "Makes a nearby generator 8% faster each (30% for a global generator), with no limit. Uses twice as much spirit energy as other plants."
    }
   ],
   "abilities": [
@@ -10154,6 +10154,90 @@
     "note": "Soulvine and Tearbloom only work within 7 blocks."
    },
    {
+    "title": "Crystalheart generator speed (tier 3)",
+    "head": [
+     "Crystalhearts",
+     "Iron every",
+     "Emerald every",
+     "Emeralds per minute"
+    ],
+    "rows": [
+     [
+      "0",
+      "0.30s",
+      "20.00s",
+      "3.00"
+     ],
+     [
+      "1",
+      "0.28s",
+      "18.52s",
+      "3.24"
+     ],
+     [
+      "2",
+      "0.26s",
+      "17.24s",
+      "3.48"
+     ],
+     [
+      "3",
+      "0.24s",
+      "16.13s",
+      "3.72"
+     ],
+     [
+      "4",
+      "0.23s",
+      "15.15s",
+      "3.96"
+     ],
+     [
+      "5",
+      "0.21s",
+      "14.29s",
+      "4.20"
+     ],
+     [
+      "6",
+      "0.20s",
+      "13.51s",
+      "4.44"
+     ],
+     [
+      "7",
+      "0.19s",
+      "12.82s",
+      "4.68"
+     ],
+     [
+      "8",
+      "0.18s",
+      "12.20s",
+      "4.92"
+     ],
+     [
+      "10",
+      "0.17s",
+      "11.11s",
+      "5.40"
+     ],
+     [
+      "12",
+      "0.15s",
+      "10.20s",
+      "5.88"
+     ],
+     [
+      "15",
+      "0.14s",
+      "9.09s",
+      "6.60"
+     ]
+    ],
+    "note": "Each Crystalheart adds +8% speed. Tested: 1 seed 0.28s / 18.52s, 7 seeds 0.19s / 12.82s, 10 seeds 11.11s. Each seed also uses spirit energy and needs upkeep, which is why 7–8 is the sweet spot."
+   },
+   {
     "title": "Energy used to grow plants",
     "head": [
      "Plants growing",
@@ -10177,7 +10261,7 @@
       "~80%"
      ]
     ],
-    "note": "From tests. Crystalheart counts as 2 plants."
+    "note": "From tests. Total energy over the 8 second grow. Crystalheart counts as 2 plants."
    }
   ],
   "strategy": [
@@ -10191,7 +10275,7 @@
    },
    {
     "title": "7–8 Crystalhearts",
-    "text": "7–8 Crystalheart plants is the sweet spot. After that, the extra generator speed isn't worth collecting the orbs for."
+    "text": "7–8 Crystalheart plants is the sweet spot. Each extra seed still adds the same +8%, but the time saved per emerald gets smaller, and more plants cost more spirit energy and upkeep."
    },
    {
     "title": "Skip global generators",
@@ -10223,7 +10307,54 @@
    }
   ],
   "bal": "sup",
-  "balWhy": "The generator boost is pretty good, but the plants are extremely easy for other teams to break, and you have to plant them near the generator, so you can't hide or protect them. It also costs a ton: all 20 support plants need 1,000 iron, and a good Crystalheart setup needs lots of emeralds, just for it to be easy to destroy."
+  "balWhy": "The generator boost is pretty good, but the plants are extremely easy for other teams to break, and you have to plant them near the generator, so you can't hide or protect them. It also costs a ton: all 20 support plants need 1,000 iron, and a good Crystalheart setup needs lots of emeralds, just for it to be easy to destroy.",
+  "calc": {
+   "title": "Crystalheart calculator",
+   "label": "Crystalhearts",
+   "unitIn": "seeds",
+   "unitOut": "seconds per emerald (tier 3)",
+   "table": {
+    "0": 20.0,
+    "1": 18.52,
+    "2": 17.24,
+    "3": 16.13,
+    "4": 15.15,
+    "5": 14.29,
+    "6": 13.51,
+    "7": 12.82,
+    "8": 12.2,
+    "9": 11.63,
+    "10": 11.11,
+    "11": 10.64,
+    "12": 10.2,
+    "13": 9.8,
+    "14": 9.43,
+    "15": 9.09,
+    "16": 8.77,
+    "17": 8.47,
+    "18": 8.2,
+    "19": 7.94,
+    "20": 7.69,
+    "21": 7.46,
+    "22": 7.25,
+    "23": 7.04,
+    "24": 6.85,
+    "25": 6.67,
+    "26": 6.49,
+    "27": 6.33,
+    "28": 6.17,
+    "29": 6.02,
+    "30": 5.88
+   },
+   "a": 0,
+   "p": 1,
+   "max": 30,
+   "start": 7,
+   "dec": 2,
+   "hideTable": true,
+   "note": "Time between emeralds at a tier 3 generator: 20 ÷ (1 + 0.08 × seeds).",
+   "prefix": ""
+  }
  },
  {
   "name": "Hannah",
