@@ -11079,18 +11079,24 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Spawn with a massive shield. Gain energy while holding your shield, and raise your shield to deflect incoming projectiles.",
-  "adv": "",
+  "adv": "Infernal Shielder always takes 10% less damage, and spawns with the Infernal Shield. Holding the shield adds another 30% (40% in total), deflects every projectile, and gives teammates within 6.5 blocks 15% damage reduction. Teammates can also hide behind it. You can't attack while holding it.\nThe shield runs on energy. A full bar lasts about 1 minute 20 seconds of holding, and refills in about 15 seconds when you put it away. Every hit you block gives back about 2 seconds of energy.\nHolding the shield also fills your Leap charge. It fills after 350 seconds of holding, or after blocking 350 damage in total (deflected arrows and sword hits both count). Leap launches you up to 75 blocks. Where you land, enemies within 5 blocks take 30 damage and are set on fire for 2 ticks of 5 damage.",
   "items": [
    {
     "name": "Infernal Shield",
-    "img": "images/items/infernal-shield.png"
+    "img": "images/items/infernal-shield.png",
+    "note": "Spawns with it",
+    "desc": "Hold it for 40% damage reduction (30% on top of your 10%), to deflect every projectile, and to give teammates within 6.5 blocks 15% damage reduction. Lasts about 1 minute 20 seconds of holding and refills in about 15 seconds. You can't attack while holding it."
    }
   ],
   "abilities": [
    {
     "name": "Leap",
+    "img": "images/abilities/ability-template.png",
     "note": "Only while holding the Infernal Shield",
-    "img": "images/abilities/ability-template.png"
+    "desc": "Charges after 350 seconds of holding the shield or 350 damage blocked. Launches you up to 75 blocks, dealing 30 damage and 2 ticks of 5 fire damage to enemies within 5 blocks of where you land.",
+    "dmg": 40,
+    "dmgText": "30 + 5 × 2 fire",
+    "nodps": true
    }
   ],
   "history": [
@@ -11243,7 +11249,79 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Tough Skin",
+    "when": "Always",
+    "desc": "Take 10% less damage."
+   },
+   {
+    "name": "Shield Wall",
+    "when": "Holding the shield",
+    "desc": "40% damage reduction for you, 15% for teammates within 6.5 blocks. Deflects every projectile."
+   },
+   {
+    "name": "Shield Energy",
+    "when": "Holding the shield",
+    "desc": "About 1 minute 20 seconds of holding, refilled in about 15 seconds. Each blocked hit gives back about 2 seconds."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Damage reduction",
+    "head": [
+     "Situation",
+     "You",
+     "Teammates within 6.5 blocks"
+    ],
+    "rows": [
+     [
+      "Shield put away",
+      "10%",
+      "—"
+     ],
+     [
+      "Holding the shield",
+      "40%",
+      "15%"
+     ]
+    ],
+    "note": "Projectiles are deflected while holding the shield."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Cover your bridge",
+    "text": "If projectile spammers are outside your base, keep your teammates next to you while you walk out on the bridge, so nobody can hit you or them."
+   },
+   {
+    "title": "Win the 1v1",
+    "text": "In a 1v1, use projectiles yourself and hold your shield whenever they shoot back so they can't play long range. When they're low, Leap in to finish them off."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Use explosives",
+    "text": "The shield can't deflect TNT and other explosives."
+   },
+   {
+    "title": "Just fight it",
+    "text": "If it's alone, fight it up close: it can't attack while holding the shield, and with the shield down it only has 10% damage reduction."
+   },
+   {
+    "title": "Splash damage",
+    "text": "Kits like Umeko and splash-damage projectiles like Ares's can still hit it through the shield."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Surfer Skin",
+    "img": "images/skins/infernal-shielder-surfer.webp"
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "It's great in ranked, where lots of kits rely on projectile spam. But 15% damage reduction for teammates is too niche to make it a real support, and kits like Umeko and splash-damage projectiles like Ares can still hit it, even though it's meant to fully counter projectiles. The Leap is good but rarely used, since you have to tank a lot of hits first and its damage isn't worth it on its own. It needs changes for the kits that get around the shield, and maybe a buff to its protective side."
  },
  {
   "name": "Isabel",
