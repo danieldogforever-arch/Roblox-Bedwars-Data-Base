@@ -10891,13 +10891,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Use a spirit bridge to travel around the map healing your allies and providing them with armor buffs.",
-  "adv": "Ignis can buy Spirit Bridges for 35 iron each and hold up to 2. Charge one and throw it where you're aiming: with no charge the bridge is 24 blocks long, and a full 1 second charge makes it 45 blocks. You move about 60% slower while charging (from tests).\nOn the bridge you move about twice as fast as normal, take 50% less damage and much less knockback. You can't hit, break or place blocks, or do anything except run along it, and teammates can't use it. The bridge disappears when you get off, or after 30 seconds. If you hold 2, you can use the second one right away.\nGetting off gives you 1 shield for every block you traveled, up to 40. Teammates within 12 blocks of where you get off get the same shield. The shield decays by 1 every second, so 40 shield lasts 40 seconds.\nRunning through a teammate on the bridge heals them for 50 HP. You can only heal one teammate per bridge, and healing has a 1 minute cooldown.",
+  "adv": "Ignis can buy Spirit Bridges for 35 iron each and hold up to 2. Charge one and throw it where you're aiming: with no charge the bridge is 24 blocks long, and a full 1 second charge makes it 45 blocks. You move about 60% slower while charging (from tests).\nOn the bridge you move about twice as fast as normal, take 50% less damage and much less knockback. You can't hit, break or place blocks, or do anything except run along it, and teammates can't use it. The bridge disappears when you get off, or after 30 seconds. If you hold 2, you can use the second one right away.\nGetting off gives you 1 shield for every block you traveled, up to 40. Teammates within 12 blocks of where you get off get the same shield. The shield decays by 1 every second, so 40 shield lasts 40 seconds.\nRunning through a teammate on the bridge heals them for 50 HP. You can heal several teammates on the same bridge, but each teammate can only be healed once per minute.",
   "items": [
    {
     "name": "Spirit Bridge",
     "img": "images/items/spirit-bridge.png",
     "note": "35 iron, hold up to 2",
-    "desc": "Charge up to 1 second to make a 24–45 block bridge. On it you're about twice as fast, take 50% less damage and much less knockback, but can't do anything else. Disappears when you get off, or after 30 seconds. No cooldown between bridges. Gives 1 shield per block traveled (max 40) to you and teammates within 12 blocks when you get off."
+    "desc": "Charge up to 1 second to make a 24–45 block bridge. On it you're about twice as fast, take 50% less damage and much less knockback, but can't do anything else. Disappears when you get off, or after 30 seconds. No cooldown between bridges. Gives 1 shield per block traveled (max 40) to you and teammates within 12 blocks when you get off. Running through teammates heals them 50 HP (1 minute cooldown per teammate)."
    }
   ],
   "abilities": [],
@@ -10993,7 +10993,7 @@
    {
     "name": "Spirit Heal",
     "when": "Running through a teammate",
-    "desc": "Heals them for 50 HP. One teammate per bridge, with a 1 minute cooldown."
+    "desc": "Heals them for 50 HP. Works on several teammates, but each one has its own 1 minute cooldown."
    },
    {
     "name": "Spirit Form",
@@ -11035,7 +11035,7 @@
      ],
      [
       "Teammate heal",
-      "50 HP, one teammate per bridge, 1 minute cooldown"
+      "50 HP each, 1 minute cooldown per teammate"
      ],
      [
       "Bridge lasts",
