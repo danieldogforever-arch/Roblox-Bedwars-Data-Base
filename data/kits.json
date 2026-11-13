@@ -11334,7 +11334,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Upgrade her shield by purchasing better swords. Each upgraded shield will block more damage before breaking. The final upgrade, the Emerald Shield, will block all damage from the first hit. Shields reactivate after 30 [sic] seconds.",
-  "adv": "Isabel gets a shield on her sword that blocks a set amount of damage from the next hit, instead of reducing damage by a percent. Any damage you take while holding a melee weapon breaks the shield, and it comes back 10 seconds later. The shield's tier goes by the best sword you own, so a better sword blocks more:\nWood: 10, Stone: 15, Iron: 20, Diamond: 30, Emerald: the whole hit.",
+  "adv": "Isabel gets a shield on her sword that blocks a set amount of damage from the next hit, instead of reducing damage by a percent. Any damage you take while holding a melee weapon breaks the shield (it still blocks its amount from projectiles too), and it comes back 10 seconds later. The shield's tier goes by the best sword you own, so a better sword blocks more:\nWood: 10, Stone: 15, Iron: 20, Diamond: 30, Emerald: the whole hit.",
   "items": [],
   "abilities": [],
   "history": [
@@ -11433,7 +11433,7 @@
   "counter": [
    {
     "title": "Pop the shield",
-    "text": "Shoot Isabel with a bow while it's holding its sword to break the shield before you fight. It's weak enough that it barely matters if you don't."
+    "text": "Shoot Isabel with a bow while it's holding its sword to break the shield before you fight (the shield still blocks part of that arrow). It's weak enough that it barely matters if you don't."
    }
   ],
   "bal": "weak",
