@@ -11334,7 +11334,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Upgrade her shield by purchasing better swords. Each upgraded shield will block more damage before breaking. The final upgrade, the Emerald Shield, will block all damage from the first hit. Shields reactivate after 30 [sic] seconds.",
-  "adv": "",
+  "adv": "Isabel gets a shield on her sword that blocks a set amount of damage from the next hit, instead of reducing damage by a percent. Any damage you take while holding a melee weapon breaks the shield, and it comes back 10 seconds later. The shield's tier goes by the best sword you own, so a better sword blocks more:\nWood: 10, Stone: 15, Iron: 20, Diamond: 30, Emerald: the whole hit.",
   "items": [],
   "abilities": [],
   "history": [
@@ -11378,7 +11378,66 @@
   ],
   "obtain": {
    "src": "Free kit"
-  }
+  },
+  "passives": [
+   {
+    "name": "Sword Shield",
+    "when": "Holding a melee weapon",
+    "desc": "Blocks a set amount of the next hit: 10 / 15 / 20 / 30 damage with a wood / stone / iron / diamond sword, or the whole hit with an emerald sword. Breaks on any damage and comes back after 10 seconds."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Shield by sword",
+    "head": [
+     "Best sword owned",
+     "Damage blocked",
+     "Test"
+    ],
+    "rows": [
+     [
+      "img:images/items/wood-sword.png|Wood",
+      "10",
+      "Wood sword (20) → 10"
+     ],
+     [
+      "img:images/items/stone-sword.png|Stone",
+      "15",
+      "Wood sword (20) → 5"
+     ],
+     [
+      "img:images/items/iron-sword.png|Iron",
+      "20",
+      "Stone sword (25) → 5"
+     ],
+     [
+      "img:images/items/diamond-sword.png|Diamond",
+      "30",
+      "Diamond sword (42) → 12"
+     ],
+     [
+      "img:images/items/emerald-sword.png|Emerald",
+      "Whole first hit",
+      "Diamond sword (42) → 0"
+     ]
+    ],
+    "note": "Blocks one hit, then takes 10 seconds to come back. Matches the Sep 2026 patch values."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Hide the sword",
+    "text": "You're basically no kit with a little less damage taken in fights. Don't hold your sword out when you're not fighting, so enemies can't shoot your shield off first."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Pop the shield",
+    "text": "Shoot Isabel with a bow while it's holding its sword to break the shield before you fight. It's weak enough that it barely matters if you don't."
+   }
+  ],
+  "bal": "weak",
+  "balWhy": "The shield doesn't block a full hit until late game with an emerald sword, and not many people even buy one. Most of the time the whole kit is taking a bit less damage on one hit. It saves you one extra hit early game, but other free kits like Ragnar already do that and more."
  },
  {
   "name": "Jack",
