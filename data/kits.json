@@ -11079,13 +11079,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Spawn with a massive shield. Gain energy while holding your shield, and raise your shield to deflect incoming projectiles.",
-  "adv": "Infernal Shielder always takes 10% less damage, and spawns with the Infernal Shield. Holding the shield adds another 30% (40% in total), deflects every projectile, and gives teammates within 6.5 blocks 15% damage reduction. Teammates can also hide behind it. You can't attack while holding it.\nThe shield runs on energy. A full bar lasts about 1 minute 20 seconds of holding, and refills in about 15 seconds when you put it away. Every hit you block gives back about 2 seconds of energy.\nHolding the shield also fills your Leap charge. It fills after 350 seconds of holding, or after blocking 350 damage in total (deflected arrows and sword hits both count). Leap launches you up to 75 blocks. Where you land, enemies within 5 blocks take 30 damage and are set on fire for 2 ticks of 5 damage.",
+  "adv": "Infernal Shielder always takes 10% less damage, and spawns with the Infernal Shield. Holding the shield adds another 30% (40% in total), deflects every projectile back at whoever shot it, and gives teammates within 6.5 blocks 15% damage reduction. Teammates can also hide behind it. You can't attack while holding it.\nThe shield runs on energy. A full bar lasts about 1 minute 20 seconds of holding, and refills in about 15 seconds when you put it away. Getting hit while holding it gives back about 2 seconds of energy (projectiles you deflect don't). TNT and other explosions ignore the damage reduction.\nHolding the shield also fills your Leap charge. It fills after 350 seconds of holding, or after blocking 350 damage in total (deflected arrows and sword hits both count). Leap can only be used while holding the shield, and launches you up to 75 blocks. Where you land, enemies within 5 blocks take 30 damage and are set on fire for 2 ticks of 5 damage.",
   "items": [
    {
     "name": "Infernal Shield",
     "img": "images/items/infernal-shield.png",
     "note": "Spawns with it",
-    "desc": "Hold it for 40% damage reduction (30% on top of your 10%), to deflect every projectile, and to give teammates within 6.5 blocks 15% damage reduction. Lasts about 1 minute 20 seconds of holding and refills in about 15 seconds. You can't attack while holding it."
+    "desc": "Hold it for 40% damage reduction (30% on top of your 10%), to deflect every projectile back at the shooter, and to give teammates within 6.5 blocks 15% damage reduction. Lasts about 1 minute 20 seconds of holding and refills in about 15 seconds. You can't attack while holding it."
    }
   ],
   "abilities": [
@@ -11259,12 +11259,12 @@
    {
     "name": "Shield Wall",
     "when": "Holding the shield",
-    "desc": "40% damage reduction for you, 15% for teammates within 6.5 blocks. Deflects every projectile."
+    "desc": "40% damage reduction for you, 15% for teammates within 6.5 blocks. Deflects every projectile back at the shooter. Explosions ignore the reduction."
    },
    {
     "name": "Shield Energy",
     "when": "Holding the shield",
-    "desc": "About 1 minute 20 seconds of holding, refilled in about 15 seconds. Each blocked hit gives back about 2 seconds."
+    "desc": "About 1 minute 20 seconds of holding, refilled in about 15 seconds. Getting hit while holding it gives back about 2 seconds; deflected projectiles don't."
    }
   ],
   "tables": [
@@ -11287,7 +11287,7 @@
       "15%"
      ]
     ],
-    "note": "Projectiles are deflected while holding the shield."
+    "note": "Reductions add together: a 42 damage diamond sword hit does 37.8 normally and 25.2 while holding the shield (from tests). Projectiles are deflected while holding the shield. Explosions ignore the reduction."
    }
   ],
   "strategy": [
@@ -11303,7 +11303,7 @@
   "counter": [
    {
     "title": "Use explosives",
-    "text": "The shield can't deflect TNT and other explosives."
+    "text": "The shield can't deflect TNT and other explosives, and its damage reduction doesn't apply to them."
    },
    {
     "title": "Just fight it",

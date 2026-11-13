@@ -174,6 +174,7 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
 
       <div id="hmWrap" class="hidden"><div class="lab">Mech <small>sets its shield</small></div><div class="seg" id="hmech"></div></div>
       <div id="gdWrap" class="hidden"><div class="lab">Gargoyle form <small>sets its HP</small></div><div class="seg" id="gdform"></div></div>
+      <div id="isWrap" class="hidden"><label class="tog"><input type="checkbox" id="ish"><span>Holding the shield</span><em>40% instead of 10%</em></label></div>
       <div id="axWrap" class="hidden">
         <label class="tog"><input type="checkbox" id="axs"><span>Shield Axolotl</span><em>+15 shield</em></label>
         <label class="tog"><input type="checkbox" id="axr"><span>Health Regen Axolotl</span><em>heals ~9% HP</em></label>
@@ -209,6 +210,7 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
       <li>Crit stars aren't included. Use "Extra damage" to add them.</li>
       <li>Hephaestus mechs only reduce projectile damage: Wood 0%, Iron 15%, Diamond 25%, Emerald 30%, Void 40%. Melee hits do full damage to the shield.</li>
       <li>Gregory's gargoyles change sword damage and speed: Small 70% every 0.36s, Regular 90% every 0.34s, Giant 100% every 0.67s. As a target they have 50, 90 or 200 HP and wear the same armor as Gregory.</li>
+      <li>Infernal Shielder takes 10% less damage, or 40% while holding its shield, which also deflects projectiles.</li>
       <li>Health Regen Axolotl's healing (about 9% HP over 5 seconds) is counted as extra shield.</li>
     </ul>
   </div>
@@ -246,7 +248,7 @@ function swordSvg(c){return '<svg width="36" height="36" viewBox="0 0 32 32" ari
 function xbowSvg(c){return '<svg width="36" height="36" viewBox="0 0 32 32" aria-hidden="true"><path d="M4 9c6-6 18-6 24 0" fill="none" stroke="'+c+'" stroke-width="3" stroke-linecap="round"/><path d="M5 9l11 7 11-7" fill="none" stroke="#fff" stroke-width="1.2"/><rect x="14.5" y="8" width="3" height="20" rx="1.2" fill="#7a4b2a" stroke="#12082e"/><path d="M16 2l2.5 5h-5z" fill="#e4e7ee"/></svg>';}
 function helmSvg(c){return '<svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 11a7 7 0 0114 0v5h-4v-4H7v4H3z" fill="'+c+'" stroke="#12082e" stroke-width="1.4" stroke-linejoin="round"/></svg>';}
 
-var S={ak:"",w:"g:Diamond Sword",wv:0,wn:null,gf:0,gd:0,hm:1,axs:false,axr:false,head:false,asc:0,du:0,extra:0,pen:null,en:[],cm:0,bhp:10,ss:0,dk:"",vt:4,dasc:false,dfor:false,orbs:0,ar:"iron",au:0,hp:null,sh:null};
+var S={ish:false,ak:"",w:"g:Diamond Sword",wv:0,wn:null,gf:0,gd:0,hm:1,axs:false,axr:false,head:false,asc:0,du:0,extra:0,pen:null,en:[],cm:0,bhp:10,ss:0,dk:"",vt:4,dasc:false,dfor:false,orbs:0,ar:"iron",au:0,hp:null,sh:null};
 var $=function(id){return document.getElementById(id);};
 var ORBHP=[100, 130, 149, 167, 185, 202, 219, 235, 251, 266, 282, 297, 312, 327, 341, 355, 369, 383, 397, 411, 424, 438, 451, 464, 477, 490, 503, 516, 529, 541, 554, 566, 578, 591, 603, 615, 627, 639, 651, 663, 674, 686, 698, 709, 721, 732, 744, 755, 766, 778, 789, 800, 811, 822, 833, 844, 855, 866, 877, 888, 899, 909, 920, 931, 941, 952, 962, 973, 983, 994, 1004];
 function orbHp(n){ n=Math.max(0,Math.floor(n)); return n<ORBHP.length?ORBHP[n]:Math.round(100+27.8657*Math.pow(n,0.8196)); }
@@ -305,6 +307,7 @@ function compute(){
   if(kd){ d*=1-kd; out.push({x:"Void Knight "+vk.t+" Form -"+Math.round(kd*100)+"%",v:fmt(d),c:"down"}); }
   var mech=S.dk==="Hephaestus"?MECH[S.hm]||MECH[0]:null;
   if(mech&&w.proj&&mech.pr){ kd=1-(1-kd)*(1-mech.pr); d*=1-mech.pr; out.push({x:mech.t+" Mech -"+Math.round(mech.pr*100)+"% projectile damage",v:fmt(d),c:"down"}); }
+  if(S.dk==="Infernal Shielder"){ if(S.ish&&w.proj){ d=0; out.push({x:"Deflected by the Infernal Shield",v:"0",c:"down"}); } else { var isr=S.ish?.4:.1; kd=1-(1-kd)*(1-isr); d*=1-isr; out.push({x:"Infernal Shielder -"+Math.round(isr*100)+"%"+(S.ish?" (holding shield)":""),v:fmt(d),c:"down"}); } }
   var bon=0;
   if(w.bonus){ var bp=(w.bonus.pen||0)/100, bm=1; if(arm.dr){ var br=arm.dr/(1-arm.dr); bm=1/(1+br*(1-bp)); } bon=w.bonus.dmg*bm*(1-au)*(1-kd); d+=bon; out.push({x:"+ "+w.bonus.label+" ("+fmt(w.bonus.dmg)+(w.bonus.pen?", "+w.bonus.pen+"% pen)":", no armor penetration)"),v:fmt(d),c:"up"}); }
   var hp=+S.hp||1, sh=+S.sh||0, tot=hp+sh;
@@ -385,6 +388,7 @@ function render(){
   $("hmWrap").classList.toggle("hidden",!hmOn); $("gdWrap").classList.toggle("hidden",!gdOn); $("axWrap").classList.toggle("hidden",!axOn);
   $("hmech").querySelectorAll("button").forEach(function(b){ b.setAttribute("aria-pressed", +b.getAttribute("data-v")===S.hm); });
   $("gdform").querySelectorAll("button").forEach(function(b){ b.setAttribute("aria-pressed", +b.getAttribute("data-v")===(S.gd||0)); });
+  $("isWrap").classList.toggle("hidden",S.dk!=="Infernal Shielder"); $("ish").checked=!!S.ish;
   $("axs").checked=!!S.axs; $("axr").checked=!!S.axr;
   var dk=kitByName(S.dk), baseHp=etOn?orbHp(S.orbs||0):(gdOn?GARG[S.gd||0].hp:(dk?+dk.hp:100));
   if(vkOn && S.dasc) baseHp=Math.round(baseHp*1.3*100)/100;
@@ -420,10 +424,10 @@ function render(){
 }
 function saveHash(){ var p=[]; ["ak","w","wv","wn","gf","gd","hm","asc","du","extra","pen","cm","bhp","ss","dk","vt","orbs","ar","au","hp","sh"].forEach(function(k){ if(S[k]!=null&&S[k]!==""&&S[k]!==0) p.push(k+"="+encodeURIComponent(S[k])); });
   if(S.hm===0) p.push("hm=0");
-  ["head","dasc","dfor","axs","axr"].forEach(function(k){ if(S[k]) p.push(k+"=1"); }); if(S.en.length) p.push("en="+S.en.join(","));
+  ["head","dasc","dfor","axs","axr","ish"].forEach(function(k){ if(S[k]) p.push(k+"=1"); }); if(S.en.length) p.push("en="+S.en.join(","));
   try{ history.replaceState(null,"","#"+p.join("&")); }catch(e){} }
 function loadHash(){ var h=location.hash.slice(1); if(!h) return; h.split("&").forEach(function(kv){ var i=kv.indexOf("="), k=kv.slice(0,i), v=decodeURIComponent(kv.slice(i+1));
-  if(!(k in S)) return; if(k==="en"){ S.en=v.split(",").filter(function(x){return ENCH.some(function(e){return e.id===x&&x!=="none";});}); return; } if(k==="head"||k==="dasc"||k==="dfor"||k==="axs"||k==="axr") S[k]=v==="1"; else if(["du","vt","au","cm","wv","wn","gf","gd","hm","asc"].indexOf(k)>=0) S[k]=+v; else if(["extra","pen","hp","sh","bhp","ss","orbs"].indexOf(k)>=0) S[k]=+v; else S[k]=v; }); }
+  if(!(k in S)) return; if(k==="en"){ S.en=v.split(",").filter(function(x){return ENCH.some(function(e){return e.id===x&&x!=="none";});}); return; } if(k==="head"||k==="dasc"||k==="dfor"||k==="axs"||k==="axr"||k==="ish") S[k]=v==="1"; else if(["du","vt","au","cm","wv","wn","gf","gd","hm","asc"].indexOf(k)>=0) S[k]=+v; else if(["extra","pen","hp","sh","bhp","ss","orbs"].indexOf(k)>=0) S[k]=+v; else S[k]=v; }); }
 
 function init(){
   fillKits();
@@ -442,7 +446,7 @@ function init(){
   setKitImg($("akimg"),S.ak); setKitImg($("dkimg"),S.dk);
   renderWeapons(); render();
   $("akit").addEventListener("change",function(){ S.ak=this.value; S.asc=0; S.gf=0; S.wv=0; S.wn=null; var k=kitByName(S.ak); if(k&&k.w&&k.w.length) S.w="k:"+k.w[k.w.length-1].name; S.pen=null; S.head=false; setKitImg($("akimg"),S.ak); renderWeapons(); render(); });
-  $("dkit").addEventListener("change",function(){ S.dk=this.value; S.hp=null; S.sh=null; S.dasc=false; S.gd=0; S.hm=1; S.axs=false; S.axr=false; setKitImg($("dkimg"),S.dk); render(); });
+  $("dkit").addEventListener("change",function(){ S.dk=this.value; S.hp=null; S.sh=null; S.dasc=false; S.gd=0; S.hm=1; S.axs=false; S.axr=false; S.ish=false; setKitImg($("dkimg"),S.dk); render(); });
   $("weapons").addEventListener("click",function(e){ var b=e.target.closest(".wpn"); if(!b) return; S.w=b.getAttribute("data-w"); S.pen=null; S.head=false; S.wv=0; S.wn=null; render(); });
   [["dmgup","du"],["armup","au"],["vktier","vt"],["critm","cm"]].forEach(function(p){ $(p[0]).addEventListener("click",function(e){ var b=e.target.closest("button"); if(!b) return; S[p[1]]=+b.getAttribute("data-v"); if(p[0]==="vktier") S.sh=null; render(); }); });
   $("armor").addEventListener("click",function(e){ var b=e.target.closest("button"); if(!b) return; S.ar=ARMOR[+b.getAttribute("data-v")].id; render(); });
@@ -453,6 +457,7 @@ function init(){
   $("head").addEventListener("change",function(){ S.head=this.checked; render(); });
   [["ascseg","asc"],["wvar","wv"],["gform","gf"],["gdform","gd"],["hmech","hm"]].forEach(function(p){ $(p[0]).addEventListener("click",function(e){ var b=e.target.closest("button"); if(!b) return; S[p[1]]=+b.getAttribute("data-v"); if(p[0]==="gdform"){ S.hp=null; } if(p[0]==="hmech") S.sh=null; render(); }); });
   $("wn").addEventListener("input",function(){ S.wn=this.value===""?null:+this.value; render(); });
+  $("ish").addEventListener("change",function(){ S.ish=this.checked; render(); });
   $("axs").addEventListener("change",function(){ S.axs=this.checked; S.sh=null; render(); });
   $("axr").addEventListener("change",function(){ S.axr=this.checked; S.sh=null; render(); });
   $("orbs").addEventListener("input",function(){ S.orbs=Math.max(0,Math.min(300,Math.floor(+this.value||0))); S.hp=null; render(); });
