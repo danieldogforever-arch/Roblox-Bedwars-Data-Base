@@ -10367,9 +10367,16 @@
   "diff": "easy",
   "hp": "90",
   "desc": "Activate your Execute ability to defeat a nearby enemy with low health! Hannah's base health is reduced by 10%.",
-  "adv": "",
+  "adv": "Hannah has only 90 HP. Use Execute to instantly kill an enemy within 9 blocks whose HP is below a threshold. You can't execute while Grounded.\nEach execute adds a combo, which raises the threshold: 25% with no combo, then 31%, 37% and 43% at 3 combos or more. Combos reset if you go 8 seconds without executing anyone.",
   "items": [],
-  "abilities": [],
+  "abilities": [
+   {
+    "name": "Execute",
+    "img": "images/abilities/ability-template.png",
+    "note": "9 blocks",
+    "desc": "Instantly kill an enemy within 9 blocks below 25% HP (up to 43% with combos). Can't be used while Grounded."
+   }
+  ],
   "history": [
    {
     "type": "bal",
@@ -10386,7 +10393,99 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Frail",
+    "when": "Always",
+    "desc": "Hannah has 90 HP instead of 100."
+   },
+   {
+    "name": "Combo",
+    "when": "Executing enemies",
+    "desc": "Each execute raises the threshold by 6%, up to 43% at 3 combos. Combos reset after 8 seconds without an execute."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Execute threshold",
+    "head": [
+     "Combo",
+     "Execute below"
+    ],
+    "rows": [
+     [
+      "0",
+      "25% HP"
+     ],
+     [
+      "1",
+      "31% HP"
+     ],
+     [
+      "2",
+      "37% HP"
+     ],
+     [
+      "3+",
+      "43% HP"
+     ]
+    ],
+    "note": "Combos reset after 8 seconds without an execute."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Stone sword early",
+    "text": "Early game, buy a stone sword so you only need 3 hits to bring an enemy into execute range."
+   },
+   {
+    "title": "Let teammates hit",
+    "text": "Later on, when people carry Gloop, let your teammates deal the damage while you finish enemies off, so you don't get Glooped."
+   },
+   {
+    "title": "Let them fight",
+    "text": "Playing solo, let enemies fight each other, then execute the low ones."
+   },
+   {
+    "title": "Don't spam it",
+    "text": "Don't spam Execute near edges, in case the enemy jumps off and takes you with them."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Know it's there",
+    "text": "Check if there's a Hannah in the match, and always keep it in mind during fights."
+   },
+   {
+    "title": "Gloop it",
+    "text": "Gloop Hannah so it's basically no kit with 90 HP."
+   },
+   {
+    "title": "Take it with you",
+    "text": "If you're low with loot and about to be executed, jump off the edge. If Hannah executes you, it goes off the edge with you."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Ghost Skin",
+    "img": "images/skins/hannah-ghost.webp"
+   },
+   {
+    "name": "Exeggutor Skin",
+    "img": "images/skins/hannah-exeggutor.webp"
+   },
+   {
+    "name": "Lunar Skin",
+    "img": "images/skins/hannah-lunar.webp"
+   },
+   {
+    "name": "Victorious Skin",
+    "img": "images/skins/hannah-victorious.webp"
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "Executing takes no effort, but Gloop or any kit with the Grounded effect shuts Hannah down. It can come in clutch if the enemy team isn't prepared."
  },
  {
   "name": "Hephaestus",
