@@ -10367,14 +10367,14 @@
   "diff": "easy",
   "hp": "90",
   "desc": "Activate your Execute ability to defeat a nearby enemy with low health! Hannah's base health is reduced by 10%.",
-  "adv": "Hannah has only 90 HP. Use Execute to instantly kill an enemy within 9 blocks whose HP is below a threshold. You can't execute while Grounded.\nEach execute adds a combo, which raises the threshold: 25% with no combo, then 31%, 37% and 43% at 3 combos or more. Combos reset if you go 8 seconds without executing anyone.",
+  "adv": "Hannah has only 90 HP. Use Execute to teleport to an enemy within 9 blocks and instantly kill them, as long as they're at or below a percent of their max HP. It has no cooldown, but you can't execute while Grounded. The threshold goes by max HP, so an enemy with 200 max HP (like an Eldertree or someone with the Forest enchant) can be executed at 50 HP. Gregory's gargoyles can't be executed.\nEach execute adds a combo, which raises the threshold: 25% with no combo, then 31%, 37% and 43% at 3 combos or more. Combos reset if you go 8 seconds without executing anyone.",
   "items": [],
   "abilities": [
    {
     "name": "Execute",
     "img": "images/abilities/ability-template.png",
-    "note": "9 blocks",
-    "desc": "Instantly kill an enemy within 9 blocks below 25% HP (up to 43% with combos). Can't be used while Grounded."
+    "note": "9 blocks, no cooldown",
+    "desc": "Teleport to an enemy within 9 blocks at or below 25% of their max HP (up to 43% with combos) and instantly kill them. No cooldown. Can't be used while Grounded."
    }
   ],
   "history": [
@@ -10411,7 +10411,7 @@
     "title": "Execute threshold",
     "head": [
      "Combo",
-     "Execute below"
+     "Execute at or below"
     ],
     "rows": [
      [
@@ -10437,7 +10437,7 @@
   "strategy": [
    {
     "title": "Stone sword early",
-    "text": "Early game, buy a stone sword so you only need 3 hits to bring an enemy into execute range."
+    "text": "Early game, buy a stone sword: 3 hits leaves a 100 HP enemy at exactly 25 HP, which is enough to execute."
    },
    {
     "title": "Let teammates hit",
@@ -10449,7 +10449,7 @@
    },
    {
     "title": "Don't spam it",
-    "text": "Don't spam Execute near edges, in case the enemy jumps off and takes you with them."
+    "text": "Don't spam Execute near edges. It pulls you to the enemy, so if they jump off, you go with them."
    }
   ],
   "counter": [
