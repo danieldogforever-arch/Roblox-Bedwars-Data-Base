@@ -11678,19 +11678,37 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Launch into the air with a giant war hammer. Higher launches deal more slam damage, and the hammer can be upgraded throughout the match.",
-  "adv": "",
+  "adv": "Jade buys hammers in the shop: Hammer I for 40 iron, Hammer II for 80 iron and Hammer III for 4 emeralds. Each has a 5 second cooldown.\nUsing the hammer launches you into the air and gives you a speed boost until you land: 2.5 blocks up and about a 7 block dash with Hammer I, 3.5 and 9 with Hammer II, and 4.5 and 11 with Hammer III. When you land, you slam enemies within 4 blocks and launch them up to 5 blocks into the air.\nThe higher you fall from, the more the slam deals, up to 40 blocks: Hammer I deals 15 on the ground and 82.5 from 40 blocks, Hammer II 24 to 114, and Hammer III 33 to 150 (111.3 from 20 blocks). Hitting several enemies splits the damage between them. Higher hammer tiers also have more armor penetration: Hammer III's is about 40% (from tests).\nHitting someone with the slam means you take no fall damage. If you miss, you still take some, but much less: a 40 block fall that would deal 99 only dealt 20 with a missed slam (from tests).",
   "items": [
    {
     "name": "Jade Hammer I",
-    "img": "images/items/jade-hammer.png"
+    "img": "images/items/jade-hammer.png",
+    "note": "40 iron",
+    "desc": "Slam for 15 damage on the ground, up to 82.5 from 40 blocks up. Launches you 2.5 blocks up and about 7 blocks forward. 5 second cooldown.",
+    "dmg": 82.5,
+    "dmgText": "15 – 82.5",
+    "cd": 5,
+    "nodps": true
    },
    {
     "name": "Jade Hammer II",
-    "img": "images/items/jade-hammer.png"
+    "img": "images/items/jade-hammer.png",
+    "note": "80 iron",
+    "desc": "Slam for 24 damage on the ground, up to 114 from 40 blocks up. Launches you 3.5 blocks up and about 9 blocks forward. 5 second cooldown.",
+    "dmg": 114,
+    "dmgText": "24 – 114",
+    "cd": 5,
+    "nodps": true
    },
    {
     "name": "Jade Hammer III",
-    "img": "images/items/jade-hammer.png"
+    "img": "images/items/jade-hammer.png",
+    "note": "4 emeralds",
+    "desc": "Slam for 33 damage on the ground, up to 150 from 40 blocks up. Launches you 4.5 blocks up and about 11 blocks forward. 5 second cooldown.",
+    "dmg": 150,
+    "dmgText": "33 – 150",
+    "cd": 5,
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -11800,7 +11818,139 @@
    "badge": "images/bp/s1.webp",
    "rent": 2000,
    "buy": 25000
-  }
+  },
+  "passives": [
+   {
+    "name": "Soft Landing",
+    "when": "Slamming",
+    "desc": "No fall damage if the slam hits someone. If it misses, you take much less fall damage than normal (20 instead of 99 from 40 blocks)."
+   },
+   {
+    "name": "Splash",
+    "when": "Hitting several enemies",
+    "desc": "The slam's damage is split between everyone it hits within 4 blocks."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Slam damage by height",
+    "head": [
+     "Hammer",
+     "Cost",
+     "Ground",
+     "10 blocks",
+     "20 blocks",
+     "30 blocks",
+     "40 blocks"
+    ],
+    "rows": [
+     [
+      "img:images/items/jade-hammer.png|Hammer I",
+      "40 iron",
+      "15",
+      "45.2",
+      "60.2",
+      "72.1",
+      "82.5"
+     ],
+     [
+      "img:images/items/jade-hammer.png|Hammer II",
+      "80 iron",
+      "24",
+      "64.3",
+      "84.2",
+      "100.2",
+      "114"
+     ],
+     [
+      "img:images/items/jade-hammer.png|Hammer III",
+      "4 emeralds",
+      "33",
+      "85.4",
+      "111.3",
+      "132.0",
+      "150"
+     ]
+    ],
+    "note": "Ground, 40 blocks and Hammer III at 20 blocks are from tests; the rest are estimated. No armor."
+   },
+   {
+    "title": "Hammer movement",
+    "head": [
+     "Hammer",
+     "Jump",
+     "Dash"
+    ],
+    "rows": [
+     [
+      "Hammer I",
+      "2.5 blocks",
+      "~7 blocks"
+     ],
+     [
+      "Hammer II",
+      "3.5 blocks",
+      "~9 blocks"
+     ],
+     [
+      "Hammer III",
+      "4.5 blocks",
+      "~11 blocks"
+     ]
+    ]
+   }
+  ],
+  "calc": {
+   "title": "Hammer III slam calculator",
+   "label": "Height",
+   "unitIn": "blocks",
+   "unitOut": "damage (no armor)",
+   "base": 33,
+   "a": 13.77,
+   "p": 0.58,
+   "prefix": "",
+   "dec": 1,
+   "max": 40,
+   "start": 20,
+   "hideTable": true,
+   "note": "Estimated from tests: 33 on the ground, 111.3 from 20 blocks and 150 from 40 blocks."
+  },
+  "strategy": [
+   {
+    "title": "Pearl slam",
+    "text": "From 40 blocks up, pearl onto someone and slam right away for max damage without falling the whole way. It catches them off guard, it's safer, and it works on enemies far away who can't see your tower."
+   },
+   {
+    "title": "Sky bridges",
+    "text": "Build long bridges high in the sky to each base or key spot on the map, so you can drop on specific players."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Build a roof",
+    "text": "Put blocks above you so the slam can't reach you."
+   },
+   {
+    "title": "Stick together",
+    "text": "Stay close to teammates or other enemies so the slam's damage gets split."
+   },
+   {
+    "title": "Dodge it",
+    "text": "If you see a Jade lining up a slam, dash or move away with your movement kit."
+   }
+  ],
+  "skins": [
+   {
+    "name": "OG Chroma Skin",
+    "img": "images/skins/jade-og-chroma.webp"
+   },
+   {
+    "name": "Fallen Angel Skin",
+    "img": "images/skins/jade-fallen-angel.webp"
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "Having to buy hammers for so much iron is a big nerf compared to before the rework. The mechanic itself is great, maybe a little too good in 1v1s, since Gloop barely matters when Jade spends most of its time in the air. Hammer tiers should come from kills instead of resources, and Jade should spawn with its first hammer."
  },
  {
   "name": "Kaida",
