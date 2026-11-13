@@ -10498,7 +10498,7 @@
   "diff": "moderate",
   "hp": "30",
   "desc": "Upgrade your Talos Mech to increase shield and damage! Activate Self-Destruct to deal massive damage.",
-  "adv": "Hephaestus always has 30 HP and can't buy armor or swords, only mechs. You spawn in the Wood Mech, and each mech has a shield that takes the hits for you. Mechs are about 3 blocks wide and 2 blocks tall, take much less knockback, and take less damage from projectiles the higher the tier.\nEvery mech comes with its own chainsaw, which hits every 0.275 seconds with 5.5 block reach. Emerald and Void chainsaws also cause Bleed: 2 damage per second, lasting until 2 seconds after your last hit (hitting again resets it, but it never stacks).\nYour shield doesn't regenerate on its own. Use Self-Repair instead: it heals about 5% of your max shield per tick, with a bigger burst at the start, and takes about 15 seconds to go from empty to full. It has a 6 second cooldown, and using it again while it's still healing stacks with the healing already going. Getting hit stops the healing, you can't use your chainsaw for 1 second after pressing it, and Zapped reduces its healing.\nIf your shield breaks, you're knocked out of the mech, and it explodes 2 seconds later for about 48 damage, less the farther away you are. Out of the mech you only have 30 HP and the Tinker's Wrench. Use Summon Talos Mech to get back in: it has a 10 second cooldown and takes 3 seconds, during which you can't move.\nFrom the Diamond Mech up, you also get Self-Destruct (25 second cooldown). It launches the mech about 12 blocks in the direction you're facing and blows it up. The damage scales with your remaining shield: up to 275 with the Diamond Mech, 495 with Emerald and 695 with Void, or the same 48 as a broken mech if you're nearly out of shield.",
+  "adv": "Hephaestus always has 30 HP and can't buy armor or swords, only mechs. You spawn in the Wood Mech, and each mech has a shield that takes the hits for you. Hephaestus himself is only 1 block tall, but mechs are about 3 blocks wide and 2 blocks tall. Mechs take much less knockback, and take less damage from projectiles the higher the tier (melee damage isn't reduced).\nEvery mech comes with its own chainsaw, which hits every 0.275 seconds with 5.5 block reach. Emerald and Void chainsaws also cause Bleed: 2 damage per second, lasting until 2 seconds after your last hit (hitting again resets it, but it never stacks).\nYour shield doesn't regenerate on its own. Use Self-Repair instead: it heals about 5% of your max shield per tick, with a bigger burst at the start, and takes about 15 seconds to go from empty to full. It has a 6 second cooldown, and using it again while it's still healing stacks with the healing already going. Getting hit stops the healing, you can't use your chainsaw for 1 second after pressing it, and Zapped reduces its healing.\nIf your shield breaks, you're knocked out of the mech, and it explodes 2 seconds later for about 48 damage, less the farther away you are. Out of the mech you only have 30 HP and the Tinker's Wrench. Use Summon Talos Mech to get back in: it has a 10 second cooldown and takes 3 seconds, during which you can't move.\nFrom the Diamond Mech up, you also get Self-Destruct (25 second cooldown). It launches the mech about 12 blocks in the direction you're facing and blows it up. The damage scales with your remaining shield: up to 275 with the Diamond Mech, 495 with Emerald and 695 with Void, or the same 48 as a broken mech if you're nearly out of shield.\nThe Emerald and Void Mechs also get Whirling Death (10 second cooldown): it hits every enemy within 7 blocks, even through walls, for the same damage as your chainsaw, and launches them 2 blocks into the air. It doesn't cause Bleed.",
   "items": [
    {
     "name": "Wood Mech",
@@ -10522,13 +10522,13 @@
     "name": "Emerald Mech",
     "img": "images/items/mech-emerald.png",
     "note": "18 emeralds",
-    "desc": "410 shield and 30% less projectile damage. Comes with the Emerald Chainsaw (54 damage). Hits also cause Bleed. Self-Destruct deals up to 495."
+    "desc": "410 shield and 30% less projectile damage. Comes with the Emerald Chainsaw (54 damage). Hits also cause Bleed. Unlocks Whirling Death. Self-Destruct deals up to 495."
    },
    {
     "name": "Void Mech",
     "img": "images/items/mech-void.png",
     "note": "40 emeralds",
-    "desc": "600 shield and 40% less projectile damage. Comes with the Void Chainsaw (65 damage). Hits also cause Bleed. Self-Destruct deals up to 695."
+    "desc": "600 shield and 40% less projectile damage. Comes with the Void Chainsaw (65 damage). Hits also cause Bleed. Unlocks Whirling Death. Self-Destruct deals up to 695."
    },
    {
     "name": "Wood Chainsaw",
@@ -10595,6 +10595,16 @@
     "cd": 25,
     "dmg": 695,
     "dmgText": "up to 275 / 495 / 695",
+    "nodps": true
+   },
+   {
+    "name": "Whirling Death",
+    "img": "images/abilities/ability-template.png",
+    "note": "Emerald and Void Mech",
+    "desc": "Hits every enemy within 7 blocks, even through walls, for your chainsaw's damage (54 or 65) and launches them 2 blocks up. Doesn't cause Bleed.",
+    "cd": 10,
+    "dmg": 65,
+    "dmgText": "54 / 65",
     "nodps": true
    },
    {
@@ -10740,7 +10750,7 @@
    {
     "name": "Heavy Frame",
     "when": "In a mech",
-    "desc": "Takes much less knockback, and less projectile damage the higher the tier."
+    "desc": "Takes much less knockback, and less projectile damage the higher the tier. Melee damage isn't reduced."
    }
   ],
   "tables": [
@@ -10808,7 +10818,7 @@
       "695"
      ]
     ],
-    "note": "Crossbow hit is a 34 damage crossbow shot, from tests. Self-Destruct is at full shield, with no armor."
+    "note": "Crossbow hit is a 34 damage crossbow shot, from tests. Only projectiles are reduced; melee hits do full damage. Self-Destruct is at full shield, with no armor."
    },
    {
     "title": "Self-Repair (from 1 shield)",
