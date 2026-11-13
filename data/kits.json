@@ -14148,12 +14148,20 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Disguise as a block and pickpocket from other players!",
-  "adv": "",
+  "adv": "Milo can disguise as any block except see-through ones. Up close, the disguise is a slightly different color from the real block. A bar shows how long you can stay disguised: about 2 minutes standing still, or 26 seconds while moving. It takes 40 seconds to fully recharge. You can't disguise while Grounded or Glooped, and walking near Gloop on the ground reveals you.\nStay disguised for 5 seconds, then reveal yourself to get 25 shield for 5 seconds and a speed boost for 3 seconds.\nWhile disguised and standing still, you can pickpocket enemies within 9 blocks. Each steal takes part of one of their resources, about 16% on average (from 10% up to about 30%), going for emeralds and diamonds before iron.",
   "items": [],
   "abilities": [
    {
     "name": "Block Disguise",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "About 2 min still, 26s moving",
+    "desc": "Disguise as any non-see-through block. Lasts about 2 minutes standing still or 26 seconds moving, and recharges fully in 40 seconds. After 5 seconds disguised, revealing gives 25 shield (5 seconds) and a speed boost (3 seconds). Gloop reveals you and stops you from disguising."
+   },
+   {
+    "name": "Pickpocket",
+    "img": "images/abilities/ability-template.png",
+    "note": "Within 9 blocks, standing still",
+    "desc": "Steal part of one of an enemy's resources (about 16%, up to about 30%), emeralds and diamonds first."
    }
   ],
   "history": [
@@ -14244,7 +14252,90 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Surprise",
+    "when": "Revealing after 5 seconds disguised",
+    "desc": "25 shield for 5 seconds and a speed boost for 3 seconds."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Block Disguise",
+    "head": [
+     "",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Disguise time standing still",
+      "~2 minutes"
+     ],
+     [
+      "Disguise time moving",
+      "~26 seconds"
+     ],
+     [
+      "Full recharge",
+      "40 seconds"
+     ],
+     [
+      "Time disguised for reveal buff",
+      "5 seconds"
+     ],
+     [
+      "Reveal shield",
+      "25 for 5 seconds"
+     ],
+     [
+      "Reveal speed boost",
+      "3 seconds"
+     ],
+     [
+      "Pickpocket range",
+      "9 blocks"
+     ]
+    ],
+    "note": "From tests."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Sneak into fights",
+    "text": "Use the disguise for movement and the speed boost. Before a fight, sneak up and reveal yourself so the shield tanks hits and the speed boost makes you hard to track."
+   },
+   {
+    "title": "Hide, pearl, hide",
+    "text": "Before pearling to a bed, hide nearby, pearl in and hide again (unless someone saw you). Wait until nobody's around, then break the bed."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Stay alert",
+    "text": "Always look out for Milos and anything sneaking up on you."
+   },
+   {
+    "title": "Gloop the paths",
+    "text": "Place Gloop on your bridge and base. Milo can't cross it disguised, and it reveals Milo."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Grinch Skin",
+    "img": "images/skins/milo-grinch.webp"
+   },
+   {
+    "name": "Aquatic Skin",
+    "img": "images/skins/milo-aquatic.webp"
+   },
+   {
+    "name": "Vampire Skin",
+    "img": "images/skins/milo-vampire.webp"
+   }
+  ],
+  "bal": "sop",
+  "balWhy": "Milo gets a lot of shield for practically nothing, and the speed boost is huge early game for sneaking up on enemies. The pickpocket is nice, but it's barely worth it for a kit labeled as economy. It needs a nerf to its PvP and movement, and a buff to its economy."
  },
  {
   "name": "Miner",
