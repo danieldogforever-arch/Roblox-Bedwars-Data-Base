@@ -660,7 +660,8 @@
   "cls": "Fighter",
   "tiers": {
    "casual": "B",
-   "ranked": "C"
+   "ranked": "C",
+   "duels": "A"
   },
   "diff": "easy",
   "hp": "100",
@@ -802,7 +803,8 @@
   "cls": "Support",
   "tiers": {
    "casual": "S",
-   "ranked": "S"
+   "ranked": "S",
+   "duels": "A"
   },
   "diff": "extreme",
   "hp": "100",
@@ -1003,7 +1005,8 @@
   "cls": "Movement",
   "tiers": {
    "casual": "B",
-   "ranked": "C"
+   "ranked": "C",
+   "duels": "A"
   },
   "diff": "easy",
   "hp": "100",
@@ -1329,7 +1332,8 @@
   "cls": "Ranged",
   "tiers": {
    "casual": "A",
-   "ranked": "A"
+   "ranked": "A",
+   "duels": "A"
   },
   "diff": "hard",
   "hp": "100",
@@ -2676,7 +2680,8 @@
   "cls": "Economy",
   "tiers": {
    "casual": "S",
-   "ranked": "A"
+   "ranked": "A",
+   "duels": "S"
   },
   "diff": "moderate",
   "hp": "100",
@@ -2920,7 +2925,8 @@
   "cls": "Defender",
   "tiers": {
    "casual": "B",
-   "ranked": "B"
+   "ranked": "B",
+   "duels": "A"
   },
   "diff": "easy",
   "hp": "100",
@@ -3418,7 +3424,8 @@
   "cls": "Tank",
   "tiers": {
    "casual": "S",
-   "ranked": "A"
+   "ranked": "A",
+   "duels": "S"
   },
   "diff": "easy",
   "hp": "100",
@@ -4855,7 +4862,8 @@
   "cls": "Destroyer",
   "tiers": {
    "casual": "B",
-   "ranked": "A"
+   "ranked": "A",
+   "duels": "A"
   },
   "diff": "moderate",
   "hp": "100",
@@ -5354,7 +5362,8 @@
   "cls": "Economy",
   "tiers": {
    "casual": "A",
-   "ranked": "B"
+   "ranked": "B",
+   "duels": "A"
   },
   "diff": "easy",
   "hp": "100",
@@ -5645,7 +5654,8 @@
   "cls": "Tank",
   "tiers": {
    "casual": "A",
-   "ranked": "OP"
+   "ranked": "OP",
+   "duels": "S"
   },
   "diff": "easy",
   "hp": "100",
@@ -6494,9 +6504,10 @@
   "cls": "Movement",
   "tiers": {
    "casual": "B",
-   "ranked": "B"
+   "ranked": "B",
+   "duels": "S"
   },
-  "diff": "easy",
+  "diff": "moderate",
   "hp": "100",
   "desc": "Dash through players to deal electric damage! Hold up to two stacks of dashes and regain all stacks if you kill an enemy with your dash.",
   "adv": "Elektra can dash 8.75 blocks with Electric Dash. You hold up to 2 dashes, so you can travel 17.5 blocks in a row. Each dash recharges in 10 seconds, or 6 seconds if you dashed into an enemy.\nDashing into an enemy deals 15 electric damage to them and everyone within 8 blocks, with 20% armor penetration. You can't attack with your sword while dashing.\nEnemies hit by the dash get Zapped 2: 60% less healing and shields for 10 seconds. If an enemy dies while Zapped from your dash, you get 1 dash back. Dashing right before you hit the ground cancels fall damage.",
@@ -7046,7 +7057,8 @@
   "cls": "Fighter",
   "tiers": {
    "casual": "S",
-   "ranked": "B"
+   "ranked": "B",
+   "duels": "A"
   },
   "diff": "easy",
   "hp": "100",
@@ -8267,7 +8279,8 @@
   "cls": "Movement",
   "tiers": {
    "casual": "A",
-   "ranked": "A"
+   "ranked": "A",
+   "duels": "S"
   },
   "diff": "hard",
   "hp": "100",
@@ -9165,7 +9178,8 @@
   "cls": "Ranged",
   "tiers": {
    "casual": "B",
-   "ranked": "B"
+   "ranked": "B",
+   "duels": "S"
   },
   "diff": "moderate",
   "hp": "100",
@@ -9307,7 +9321,8 @@
   "cls": "Support",
   "tiers": {
    "casual": "A",
-   "ranked": "A"
+   "ranked": "A",
+   "duels": "A"
   },
   "diff": "hard",
   "hp": "100",
@@ -10493,7 +10508,8 @@
   "cls": "Tank",
   "tiers": {
    "casual": "A",
-   "ranked": "S"
+   "ranked": "S",
+   "duels": "OP"
   },
   "diff": "moderate",
   "hp": "30",
@@ -11445,7 +11461,8 @@
   "cls": "Ranged",
   "tiers": {
    "casual": "S",
-   "ranked": "S"
+   "ranked": "S",
+   "duels": "OP"
   },
   "diff": "easy",
   "hp": "100",
@@ -11962,7 +11979,8 @@
   "cls": "Fighter",
   "tiers": {
    "casual": "B",
-   "ranked": "B"
+   "ranked": "B",
+   "duels": "S"
   },
   "diff": "extreme",
   "hp": "100",
@@ -12382,7 +12400,8 @@
   "cls": "Fighter",
   "tiers": {
    "casual": "A",
-   "ranked": "B"
+   "ranked": "B",
+   "duels": "A"
   },
   "diff": "easy",
   "hp": "100",
@@ -12637,7 +12656,8 @@
   "cls": "Movement",
   "tiers": {
    "casual": "B",
-   "ranked": "S"
+   "ranked": "S",
+   "duels": "A"
   },
   "diff": "moderate",
   "hp": "100",
@@ -12840,7 +12860,8 @@
   "cls": "Fighter",
   "tiers": {
    "casual": "A",
-   "ranked": "OP"
+   "ranked": "OP",
+   "duels": "S"
   },
   "diff": "moderate",
   "hp": "100",
@@ -12926,7 +12947,8 @@
   "cls": "Fighter",
   "tiers": {
    "casual": "C",
-   "ranked": "C"
+   "ranked": "C",
+   "duels": "A"
   },
   "diff": "moderate",
   "hp": "100",
@@ -13538,7 +13560,8 @@
   "cls": "Miscellaneous",
   "tiers": {
    "casual": "B",
-   "ranked": "C"
+   "ranked": "C",
+   "duels": "S"
   },
   "diff": "easy",
   "hp": "100",
@@ -13653,7 +13676,8 @@
   "cls": "Support",
   "tiers": {
    "casual": "S",
-   "ranked": "A"
+   "ranked": "A",
+   "duels": "A"
   },
   "diff": "easy",
   "hp": "100",
@@ -13839,7 +13863,8 @@
   "cls": "Economy",
   "tiers": {
    "casual": "B",
-   "ranked": "B"
+   "ranked": "B",
+   "duels": "A"
   },
   "diff": "easy",
   "hp": "100",
@@ -14143,7 +14168,8 @@
   "cls": "Economy",
   "tiers": {
    "casual": "S",
-   "ranked": "S"
+   "ranked": "S",
+   "duels": "S"
   },
   "diff": "easy",
   "hp": "100",
@@ -14560,7 +14586,8 @@
   "cls": "Fighter",
   "tiers": {
    "casual": "S",
-   "ranked": "S"
+   "ranked": "S",
+   "duels": "S"
   },
   "diff": "hard",
   "hp": "100",
@@ -15050,7 +15077,8 @@
   "cls": "Destroyer",
   "tiers": {
    "casual": "A",
-   "ranked": "OP"
+   "ranked": "OP",
+   "duels": "A"
   },
   "diff": "extreme",
   "hp": "100",
@@ -15321,7 +15349,8 @@
   "cls": "Destroyer",
   "tiers": {
    "casual": "B",
-   "ranked": "C"
+   "ranked": "C",
+   "duels": "A"
   },
   "diff": "easy",
   "hp": "100",
@@ -15425,7 +15454,8 @@
   "cls": "Fighter",
   "tiers": {
    "casual": "B",
-   "ranked": "A"
+   "ranked": "A",
+   "duels": "S"
   },
   "diff": "easy",
   "hp": "100",
@@ -15953,7 +15983,8 @@
   "cls": "Movement",
   "tiers": {
    "casual": "A",
-   "ranked": "S"
+   "ranked": "S",
+   "duels": "OP"
   },
   "diff": "moderate",
   "hp": "100",
@@ -16134,7 +16165,8 @@
   "cls": "Support",
   "tiers": {
    "casual": "A",
-   "ranked": "S"
+   "ranked": "S",
+   "duels": "A"
   },
   "diff": "moderate",
   "hp": "100",
@@ -16241,7 +16273,8 @@
   "cls": "Fighter",
   "tiers": {
    "casual": "A",
-   "ranked": "B"
+   "ranked": "B",
+   "duels": "A"
   },
   "diff": "moderate",
   "hp": "100",
@@ -16453,7 +16486,8 @@
   "cls": "Ranged",
   "tiers": {
    "casual": "S",
-   "ranked": "A"
+   "ranked": "A",
+   "duels": "S"
   },
   "diff": "easy",
   "hp": "100",
@@ -17080,7 +17114,8 @@
   "cls": "Fighter",
   "tiers": {
    "casual": "S",
-   "ranked": "S"
+   "ranked": "S",
+   "duels": "S"
   },
   "diff": "hard",
   "hp": "100",
@@ -17802,7 +17837,8 @@
   "cls": "Ranged",
   "tiers": {
    "casual": "A",
-   "ranked": "A"
+   "ranked": "A",
+   "duels": "S"
   },
   "diff": "moderate",
   "hp": "100",
@@ -18264,7 +18300,8 @@
   "cls": "Movement",
   "tiers": {
    "casual": "A",
-   "ranked": "S"
+   "ranked": "S",
+   "duels": "A"
   },
   "diff": "moderate",
   "hp": "100",
@@ -18754,7 +18791,8 @@
   "cls": "Fighter",
   "tiers": {
    "casual": "A",
-   "ranked": "S"
+   "ranked": "S",
+   "duels": "A"
   },
   "diff": "moderate",
   "hp": "100",
@@ -19355,7 +19393,8 @@
   "cls": "Movement",
   "tiers": {
    "casual": "A",
-   "ranked": "B"
+   "ranked": "B",
+   "duels": "A"
   },
   "diff": "easy",
   "hp": "100",
@@ -19491,7 +19530,8 @@
   "cls": "Movement",
   "tiers": {
    "casual": "A",
-   "ranked": "B"
+   "ranked": "B",
+   "duels": "A"
   },
   "diff": "easy",
   "hp": "100",
@@ -19599,7 +19639,8 @@
   "cls": "Fighter",
   "tiers": {
    "casual": "A",
-   "ranked": "A"
+   "ranked": "A",
+   "duels": "S"
   },
   "diff": "hard",
   "hp": "100",
@@ -20116,7 +20157,8 @@
   "cls": "Support",
   "tiers": {
    "casual": "S",
-   "ranked": "S"
+   "ranked": "S",
+   "duels": "A"
   },
   "diff": "moderate",
   "hp": "100",

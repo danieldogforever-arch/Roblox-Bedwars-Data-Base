@@ -152,7 +152,8 @@
       "Zenith"
      ]
     }
-   ]
+   ],
+   "prev": {}
   },
   {
    "id": "ranked",
@@ -306,7 +307,76 @@
       "Isabel"
      ]
     }
-   ]
+   ],
+   "prev": {}
+  },
+  {
+   "id": "duels",
+   "name": "Duels",
+   "sub": "Ranked Blitz",
+   "title": "Bedwars User Guide",
+   "subt": "Duels (Ranked Blitz)",
+   "note": "Only the best kits for Duels are ranked.",
+   "rows": [
+    {
+     "label": "OP",
+     "kits": [
+      "Jack",
+      "Sigrid",
+      "Hephaestus"
+     ]
+    },
+    {
+     "label": "S",
+     "kits": [
+      "Cobalt",
+      "Marrow",
+      "Milo",
+      "Bounty Hunter",
+      "Flora",
+      "Zarrah",
+      "Kaida",
+      "Lassy",
+      "Nazar",
+      "Spirit Catcher",
+      "Elektra",
+      "Eldertree",
+      "Frosty",
+      "Umeko",
+      "Ramil",
+      "Terra"
+     ]
+    },
+    {
+     "label": "A",
+     "kits": [
+      "Void Regent",
+      "Krystal",
+      "Pirate Davey",
+      "Arachne",
+      "Lian",
+      "Builder",
+      "Alchemist",
+      "Agni",
+      "Gingerbread Man",
+      "Drill",
+      "Kaliyah",
+      "Silas",
+      "Whim",
+      "Ares",
+      "Death Adder",
+      "Melody",
+      "Evelynn",
+      "Merchant Marco",
+      "Ragnar",
+      "Zola",
+      "Skoll",
+      "Yamini",
+      "Yuzi"
+     ]
+    }
+   ],
+   "prev": {}
   }
  ]
 }
