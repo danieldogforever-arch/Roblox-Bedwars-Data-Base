@@ -10891,11 +10891,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Use a spirit bridge to travel around the map healing your allies and providing them with armor buffs.",
-  "adv": "",
+  "adv": "Ignis can buy Spirit Bridges for 35 iron each and hold up to 2. Charge one to aim it: with no charge the bridge is 24 blocks long, and a full 1 second charge makes it 45 blocks. You move about 60% slower while charging (from tests).\nOn the bridge you move about twice as fast as normal, take 50% less damage and much less knockback. You can't hit, break or place blocks, or do anything except run along it, and teammates can't use it. The bridge disappears after 30 seconds.\nGetting off gives you 1 shield for every block you traveled, up to 40. Teammates within 12 blocks of where you get off get the shield too. The shield decays by 1 every second, so 40 shield lasts 40 seconds.\nRunning through a teammate on the bridge heals them for 50 HP. You can only heal once per bridge, and each heal has a 1 minute cooldown.",
   "items": [
    {
     "name": "Spirit Bridge",
-    "img": "images/items/spirit-bridge.png"
+    "img": "images/items/spirit-bridge.png",
+    "note": "35 iron, hold up to 2",
+    "desc": "Charge up to 1 second to make a 24–45 block bridge. On it you're about twice as fast, take 50% less damage and much less knockback, but can't do anything else. Lasts 30 seconds. Gives 1 shield per block traveled (max 40) to you and teammates within 12 blocks when you get off."
    }
   ],
   "abilities": [],
@@ -10981,7 +10983,90 @@
    "tier": "25 (paid)",
    "badge": "images/bp/s8.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Spirit Shield",
+    "when": "Getting off the bridge",
+    "desc": "1 shield per block traveled, up to 40, for you and teammates within 12 blocks. Decays by 1 every second."
+   },
+   {
+    "name": "Spirit Heal",
+    "when": "Running through a teammate",
+    "desc": "Heals them for 50 HP. Once per bridge, with a 1 minute cooldown."
+   },
+   {
+    "name": "Spirit Form",
+    "when": "On the bridge",
+    "desc": "About twice as fast, 50% less damage and much less knockback. You can't attack, break or place blocks."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Spirit Bridge",
+    "head": [
+     "",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Length",
+      "24 blocks (no charge) to 45 blocks (1s charge)"
+     ],
+     [
+      "Speed while charging",
+      "~60% slower"
+     ],
+     [
+      "Speed on the bridge",
+      "~2× normal"
+     ],
+     [
+      "Damage taken on the bridge",
+      "50% less"
+     ],
+     [
+      "Shield",
+      "1 per block traveled, max 40, −1 per second"
+     ],
+     [
+      "Teammate shield range",
+      "12 blocks"
+     ],
+     [
+      "Teammate heal",
+      "50 HP, once per bridge, 1 minute cooldown"
+     ],
+     [
+      "Bridge lasts",
+      "30 seconds"
+     ]
+    ],
+    "note": "Speeds from tests."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Support a fight",
+    "text": "When your teammates go to fight, throw a bridge toward them from afar, run through them to heal them, then get off nearby so they get the shield too."
+   },
+   {
+    "title": "Bed rush",
+    "text": "Throw a bridge to an enemy base and get there before they have time to react, then break the bed."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Shoot it off",
+    "text": "Ignis can't fight back on the bridge, so shoot it while it's low and force it to get off."
+   },
+   {
+    "title": "Chase it",
+    "text": "An Ignis running from you can't go far unless it stops to charge the bridge, and it's slowed while charging."
+   }
+  ],
+  "bal": "weak",
+  "balWhy": "The movement is good for Ignis itself, but other kits move farther for less or for free. Its support is really bad: you have to throw the bridge far and hope your teammates are where you're going. The healing rarely happens in real games, and many players don't even know it can heal. It has some niches, but it's weak compared to other kits and doesn't feel like a support kit."
  },
  {
   "name": "Infernal Shielder",
