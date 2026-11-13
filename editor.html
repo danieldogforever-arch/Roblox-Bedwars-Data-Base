@@ -111,6 +111,21 @@ button[disabled]{opacity:.45;cursor:not-allowed}
 .tray .top input{width:170px}
 button[disabled]{opacity:.45;cursor:not-allowed}
 #rows.few .zone{height:calc(var(--rh,170px)*1.45)}
+
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px}
+.tabb{font-size:1rem;padding:9px 16px;border-radius:10px}
+.tabb small{opacity:.7;margin-left:4px}
+.tabb.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.bar input[type=text]{width:130px}
+.brush{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.brush button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+.bd{display:inline-block;width:11px;height:11px;border:2px solid currentColor;border-radius:3px;transform:rotate(45deg);background:var(--c);margin:0 6px 0 2px;vertical-align:0}
+#prog{color:var(--muted);font-size:.9rem;margin-left:4px}
+.tray .top{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-bottom:8px}
+.tray .top h2{margin:0}
+.tray .top input{width:170px}
+button[disabled]{opacity:.45;cursor:not-allowed}
+#rows.few .zone{height:calc(var(--rh,170px)*1.45)}
 </style>
 </head>
 <body>
@@ -212,7 +227,12 @@ function ensureList(id){
   var i = -1; state.lists.forEach(function(l,j){ if(l.id===id) i = j; });
   var empty = i>-1 && !state.lists[i].rows.some(function(r){return r.kits.length;});
   var fresh = JSON.parse(JSON.stringify(seed));
-  if(i<0) state.lists.push(fresh); else if(empty && state.lists[i].rows.length!==fresh.rows.length) state.lists[i] = fresh;
+  if(i<0){ state.lists.push(fresh); return; }
+  var cur = state.lists[i], labs = cur.rows.map(function(r){return r.label;}).join(",");
+  if(empty && cur.rows.length!==fresh.rows.length){ state.lists[i] = fresh; return; }
+  if(labs==="OP,S,A,B,C,F"){ // old 6-tier Duels: keep OP/S/A placements, send B/C/F kits back to the tray
+    cur.rows = cur.rows.slice(0,3); if(!cur.note) cur.note = fresh.note;
+  }
 }
 function isPartial(l){ return l.id==="duels" || l.rows.length<=3; }
 var brush = "cycle", dragging = false, armDelete = false, armReset = false;
