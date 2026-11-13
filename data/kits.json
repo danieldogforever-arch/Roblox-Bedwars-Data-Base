@@ -11678,13 +11678,13 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Launch into the air with a giant war hammer. Higher launches deal more slam damage, and the hammer can be upgraded throughout the match.",
-  "adv": "Jade buys hammers in the shop: Hammer I for 40 iron, Hammer II for 80 iron and Hammer III for 4 emeralds. Each has a 5 second cooldown.\nUsing the hammer launches you into the air and gives you a speed boost until you land: 2.5 blocks up and about a 7 block dash with Hammer I, 3.5 and 9 with Hammer II, and 4.5 and 11 with Hammer III. When you land, you slam enemies within 4 blocks and launch them up to 5 blocks into the air.\nThe higher you fall from, the more the slam deals, up to 40 blocks: Hammer I deals 15 on the ground and 82.5 from 40 blocks, Hammer II 24 to 114, and Hammer III 33 to 150 (111.3 from 20 blocks). Hitting several enemies splits the damage between them. Higher hammer tiers also have more armor penetration: Hammer III's is about 40% (from tests).\nHitting someone with the slam means you take no fall damage. If you miss, you still take some, but much less: a 40 block fall that would deal 99 only dealt 20 with a missed slam (from tests).",
+  "adv": "Jade buys hammers in the shop: Hammer I for 40 iron, Hammer II for 80 iron and Hammer III for 4 emeralds. Each has a 5 second cooldown.\nUsing the hammer launches you into the air and gives you a speed boost until you land: 2.5 blocks up and about a 7 block dash with Hammer I, 3.5 and 9 with Hammer II, and 4.5 and 11 with Hammer III. When you land, you slam enemies within 4 blocks and launch them up to 5 blocks into the air.\nThe higher you fall from, the more the slam deals, up to 40 blocks: Hammer I deals 15 on the ground and 82.5 from 40 blocks, Hammer II 24 to 114, and Hammer III 33 to 150 (111.3 from 20 blocks). Hitting several enemies splits the damage evenly: 2 enemies take half each, 3 take a third each. Higher hammer tiers also have more armor penetration: 0% for Hammer I, 20% for Hammer II and 40% for Hammer III (from tests).\nHitting someone with the slam means you take no fall damage. If you miss, you still take some, but much less: a 40 block fall that would deal 99 only dealt 20 with a missed slam (from tests).",
   "items": [
    {
     "name": "Jade Hammer I",
     "img": "images/items/jade-hammer.png",
     "note": "40 iron",
-    "desc": "Slam for 15 damage on the ground, up to 82.5 from 40 blocks up. Launches you 2.5 blocks up and about 7 blocks forward. 5 second cooldown.",
+    "desc": "Slam for 15 damage on the ground, up to 82.5 from 40 blocks up. Launches you 2.5 blocks up and about 7 blocks forward. No armor penetration. 5 second cooldown.",
     "dmg": 82.5,
     "dmgText": "15 – 82.5",
     "cd": 5,
@@ -11694,7 +11694,7 @@
     "name": "Jade Hammer II",
     "img": "images/items/jade-hammer.png",
     "note": "80 iron",
-    "desc": "Slam for 24 damage on the ground, up to 114 from 40 blocks up. Launches you 3.5 blocks up and about 9 blocks forward. 5 second cooldown.",
+    "desc": "Slam for 24 damage on the ground, up to 114 from 40 blocks up. Launches you 3.5 blocks up and about 9 blocks forward. 20% armor penetration. 5 second cooldown.",
     "dmg": 114,
     "dmgText": "24 – 114",
     "cd": 5,
@@ -11704,7 +11704,7 @@
     "name": "Jade Hammer III",
     "img": "images/items/jade-hammer.png",
     "note": "4 emeralds",
-    "desc": "Slam for 33 damage on the ground, up to 150 from 40 blocks up. Launches you 4.5 blocks up and about 11 blocks forward. 5 second cooldown.",
+    "desc": "Slam for 33 damage on the ground, up to 150 from 40 blocks up. Launches you 4.5 blocks up and about 11 blocks forward. 40% armor penetration. 5 second cooldown.",
     "dmg": 150,
     "dmgText": "33 – 150",
     "cd": 5,
@@ -11828,7 +11828,7 @@
    {
     "name": "Splash",
     "when": "Hitting several enemies",
-    "desc": "The slam's damage is split between everyone it hits within 4 blocks."
+    "desc": "The slam's damage is split evenly between everyone it hits within 4 blocks (half each for 2, a third each for 3)."
    }
   ],
   "tables": [
@@ -11841,7 +11841,8 @@
      "10 blocks",
      "20 blocks",
      "30 blocks",
-     "40 blocks"
+     "40 blocks",
+     "Armor penetration"
     ],
     "rows": [
      [
@@ -11851,7 +11852,8 @@
       "45.2",
       "60.2",
       "72.1",
-      "82.5"
+      "82.5",
+      "0%"
      ],
      [
       "img:images/items/jade-hammer.png|Hammer II",
@@ -11860,7 +11862,8 @@
       "64.3",
       "84.2",
       "100.2",
-      "114"
+      "114",
+      "20%"
      ],
      [
       "img:images/items/jade-hammer.png|Hammer III",
@@ -11869,7 +11872,8 @@
       "85.4",
       "111.3",
       "132.0",
-      "150"
+      "150",
+      "40%"
      ]
     ],
     "note": "Ground, 40 blocks and Hammer III at 20 blocks are from tests; the rest are estimated. No armor."
