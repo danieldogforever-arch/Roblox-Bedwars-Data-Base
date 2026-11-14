@@ -12714,7 +12714,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Keep moving (especially on frozen blocks!) to increase your momentum and movement speed. At high momentum, trigger jumps to dodge.",
-  "adv": "Krystal builds momentum by moving. Her momentum bar has 4 sections, and each one takes 3.75 seconds of moving to fill, so you reach top speed after about 15 seconds. Standing still for 4 seconds empties the whole bar. Each jump costs a fifth of a section, and so does taking damage.\nFreeze turns the blocks under you to ice in a 5×5 area (one layer deep) for 7 seconds, with a 14 second cooldown. Skating on ice builds momentum 150% faster, for 2 seconds or as long as you stay on the ice. Frozen blocks are also brittle and 80% easier to break while they last: with a wooden pickaxe, you can break obsidian in 6 hits.\nSpin & Dodge makes you do a short jump and become invulnerable to attacks for 0.5 seconds. It has a 12 second cooldown.",
+  "adv": "Krystal builds momentum by moving. Her momentum bar has 4 sections, and each one takes 3.75 seconds of moving to fill, so you reach top speed after about 15 seconds. Standing still for 4 seconds empties the whole bar. Each jump costs a fifth of a section, and so does taking damage.\nFreeze turns the blocks under you to ice in a 5×5 area (one layer deep) for 7 seconds, with a 14 second cooldown. Skating on ice builds momentum 150% faster, for 2 seconds or as long as you stay on the ice. Frozen blocks are also brittle and 80% easier to break while they last: with a wooden pickaxe, you can break obsidian in 6 hits.\nOnce you have 3.5 sections of momentum, Spin & Dodge makes you do a short jump and become invulnerable to attacks for 0.5 seconds. You can't attack during it. It has a 12 second cooldown.",
   "items": [],
   "abilities": [
    {
@@ -12726,9 +12726,9 @@
    },
    {
     "name": "Spin & Dodge",
-    "note": "Only at high speeds",
+    "note": "Needs 3.5 momentum sections",
     "img": "images/abilities/ability-template.png",
-    "desc": "A short jump that makes you invulnerable to attacks for 0.5 seconds.",
+    "desc": "A short jump that makes you invulnerable to attacks for 0.5 seconds. You can't attack during it.",
     "cd": 12
    }
   ],
@@ -12830,30 +12830,31 @@
     "head": [
      "Momentum",
      "Blocks per second",
-     "Compared to normal sprinting"
+     "Compared to normal walking"
     ],
     "rows": [
      [
       "1",
       "5.35",
-      "5% slower"
+      "~22.5% slower"
      ],
      [
       "2",
       "6.2",
-      "10% faster"
+      "~10% slower"
      ],
      [
       "3",
       "7",
-      "25% faster"
+      "~2.5% faster"
      ],
      [
       "4 (max)",
       "7.5",
-      "33% faster"
+      "~10% faster"
      ]
-    ]
+    ],
+    "note": "Compared to normal walking speed (6.86 blocks per second, from tests)."
    }
   ],
   "strategy": [
