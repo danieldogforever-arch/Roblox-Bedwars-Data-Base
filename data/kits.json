@@ -12714,17 +12714,22 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Keep moving (especially on frozen blocks!) to increase your momentum and movement speed. At high momentum, trigger jumps to dodge.",
-  "adv": "",
+  "adv": "Krystal builds momentum by moving. Her momentum bar has 4 sections, and each one takes 3.75 seconds of moving to fill, so you reach top speed after about 15 seconds. Standing still for 4 seconds empties the whole bar. Each jump costs a fifth of a section, and so does taking damage.\nFreeze turns the blocks under you to ice in a 5×5 area (one layer deep) for 7 seconds, with a 14 second cooldown. Skating on ice builds momentum 150% faster, for 2 seconds or as long as you stay on the ice. Frozen blocks are also brittle and 80% easier to break while they last: with a wooden pickaxe, you can break obsidian in 6 hits.\nSpin & Dodge makes you do a short jump and become invulnerable to attacks for 0.5 seconds. It has a 12 second cooldown.",
   "items": [],
   "abilities": [
    {
     "name": "Freeze",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "5×5 area, 1 layer",
+    "desc": "Freezes the blocks under you for 7 seconds. Skating on them builds momentum 150% faster, and frozen blocks are 80% easier to break (obsidian in 6 wooden pickaxe hits).",
+    "cd": 14
    },
    {
     "name": "Spin & Dodge",
     "note": "Only at high speeds",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "A short jump that makes you invulnerable to attacks for 0.5 seconds.",
+    "cd": 12
    }
   ],
   "history": [
@@ -12811,7 +12816,72 @@
   "obtain": {
    "src": "Holiday Bundle 2024",
    "rent": 2500
-  }
+  },
+  "passives": [
+   {
+    "name": "Momentum",
+    "when": "Moving",
+    "desc": "4 sections, 3.75 seconds of moving each. Emptied after 4 seconds standing still. Jumping or taking damage costs a fifth of a section."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Ice skating speed",
+    "head": [
+     "Momentum",
+     "Blocks per second",
+     "Compared to normal sprinting"
+    ],
+    "rows": [
+     [
+      "1",
+      "5.35",
+      "5% slower"
+     ],
+     [
+      "2",
+      "6.2",
+      "10% faster"
+     ],
+     [
+      "3",
+      "7",
+      "25% faster"
+     ],
+     [
+      "4 (max)",
+      "7.5",
+      "33% faster"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Bed breaking",
+    "text": "Don't buy break speed upgrades: they can bug the brittle effect and sometimes give blocks infinite health. Save Freeze for the last layer of the bed, like obsidian, to break it really fast."
+   },
+   {
+    "title": "Build speed fast",
+    "text": "Use Freeze on the floor to build momentum quickly. If you're being chased, just press it and keep running."
+   },
+   {
+    "title": "Juke and combo",
+    "text": "Use Spin & Dodge to juke enemies or to set up combos."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Shoot it",
+    "text": "Every hit costs Krystal momentum, so shoot it to slow it down."
+   },
+   {
+    "title": "Gloop it",
+    "text": "Gloop slows it down heavily and drains its momentum. Then finish it off."
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "Krystal is extremely busted with kits that give extra speed, like Baker and Wren. Its abilities keep getting nerfed, but not its speed. You can't catch up to a Krystal, since Freeze lets it regain its momentum. The brittle effect is also extremely strong: you can break obsidian in 6 hits with a wooden pickaxe."
  },
  {
   "name": "Lani",
