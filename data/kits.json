@@ -12830,31 +12830,30 @@
     "head": [
      "Momentum",
      "Blocks per second",
-     "Compared to normal walking"
+     "Compared to normal sprinting"
     ],
     "rows": [
      [
       "1",
       "5.35",
-      "~22.5% slower"
+      "5% slower"
      ],
      [
       "2",
       "6.2",
-      "~10% slower"
+      "10% faster"
      ],
      [
       "3",
       "7",
-      "~2.5% faster"
+      "25% faster"
      ],
      [
       "4 (max)",
       "7.5",
-      "~10% faster"
+      "33% faster"
      ]
-    ],
-    "note": "Compared to normal walking speed (6.86 blocks per second, from tests)."
+    ]
    }
   ],
   "strategy": [
