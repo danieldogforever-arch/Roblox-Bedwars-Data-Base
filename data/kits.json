@@ -13168,7 +13168,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "A mysterious warrior gifted by the dragon. Control swords to fight your enemy",
-  "adv": "Lian spawns with 3 dragon swords hovering behind it. A new sword regenerates every 15 seconds.\nDragon Sword sends 1 sword at an enemy within 9 blocks, dealing 30% less than the sword you're holding. It takes about 1 second to reach them, and you can keep attacking meanwhile. 2 second cooldown.\nDragon Sword Ultimate sends every sword you have (at least 1) crashing into the ground up to 9 blocks away, in a triangle: with 3 swords they spread out in front of you, with 2 one goes in front and one to the left, and with 1 it lands in front. Each sword hits everyone within its area for 35% more than the sword you're holding, and burns them for 3 damage per second for 5 seconds. The swords land after 1 second, and you can't attack during that second. 15 second cooldown.",
+  "adv": "Lian spawns with 3 dragon swords hovering behind it. A new sword regenerates every 12 seconds.\nDragon Sword sends 1 sword at an enemy within 9 blocks, dealing 30% less than the sword you're holding. It takes about 1 second to reach them, and you can keep attacking meanwhile. 2 second cooldown.\nDragon Sword Ultimate sends every sword you have (at least 1) crashing into the ground up to 9 blocks away, in a triangle: with 3 swords they spread out in front of you, with 2 one goes in front and one to the left, and with 1 it lands in front. Each sword hits everyone within its area for 35% more than the sword you're holding, and burns them for 3 damage per second for 5 seconds. An enemy can only be hit by one sword per Ultimate. The swords land after 1 second, and you can't attack during that second. 15 second cooldown.\nNeither ability has armor penetration (from tests).",
   "items": [],
   "abilities": [
    {
@@ -13182,7 +13182,7 @@
     "name": "Dragon Sword Ultimate",
     "img": "images/abilities/ability-template.png",
     "note": "Uses all swords",
-    "desc": "Slams every sword you have into the ground up to 9 blocks away in a triangle, each hitting an area for 135% of your held sword's damage plus 3 burn per second for 5 seconds. Lands after 1 second; you can't attack until then.",
+    "desc": "Slams every sword you have into the ground up to 9 blocks away in a triangle, each hitting an area for 135% of your held sword's damage plus 3 burn per second for 5 seconds. An enemy can only be hit by one sword. Lands after 1 second; you can't attack until then.",
     "cd": 15
    }
   ],
@@ -13223,7 +13223,7 @@
    {
     "name": "Floating Swords",
     "when": "Always",
-    "desc": "Up to 3 swords hover behind you. One regenerates every 15 seconds."
+    "desc": "Up to 3 swords hover behind you. One regenerates every 12 seconds."
    }
   ],
   "tables": [
@@ -13267,7 +13267,7 @@
       "74.25 + 15 burn"
      ]
     ],
-    "note": "Burn is 3 damage per second for 5 seconds. No armor."
+    "note": "Burn is 3 damage per second for 5 seconds. No armor penetration: with a wood sword, iron armor takes 6.16 from Dragon Sword and 18.67 from an Ultimate sword with burn (from tests)."
    }
   ],
   "strategy": [
