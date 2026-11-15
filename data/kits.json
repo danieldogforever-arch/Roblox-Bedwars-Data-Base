@@ -13649,13 +13649,13 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Charge the Sword of Light to shoot powerful waves at enemies! Hitting light waves OR killing Ember will upgrade your ability to shoot many powerful beams at once.",
-  "adv": "Lumen can buy the Light Sword for 3 emeralds. It replaces the Diamond Sword, and Lumen can't buy the Emerald Sword. It hits for 47 every 0.3 seconds. If you lose it when you die, buying it again costs only 2 emeralds.\nCharge the Light Sword to fire light waves. A half charge fires 1 wave for 21 damage; a full charge fires 2 waves in an X for 34. Light waves have 80% armor penetration (from tests), travel 55 blocks in about 2.35 seconds, and can pass through thin walls. You move about 22.5% slower while charging.\nHit enemies wearing armor with 10 light waves (or kill an Ember) to upgrade the Light Sword. The upgrade progress isn't lost when you die. Once upgraded, a 0.5 second charge fires 1 wave, 0.75 seconds fires the X, and a full 1 second charge fires 3 waves one after another, 0.3 seconds apart, ending with the X. You can't charge again until the X has been fired.",
+  "adv": "Lumen can buy the Light Sword for 3 emeralds. It replaces the Diamond Sword, and Lumen can't buy the Emerald Sword. It hits for 47 every 0.3 seconds, with no armor penetration. If you lose it when you die, buying it again costs only 2 emeralds.\nCharge the Light Sword to fire light waves. A half charge fires 1 wave for 21 damage; a full charge fires the X, a single X-shaped wave, for 34. Light waves have 80% armor penetration (from tests), travel 55 blocks in about 2.35 seconds, and can pass through thin walls. You move about 22.5% slower while charging.\nHit enemies wearing armor with 10 light waves (or kill an Ember) to upgrade the Light Sword. The upgrade progress isn't lost when you die. Once upgraded, a 0.5 second charge fires 1 wave, 0.75 seconds fires the X, and a full 1 second charge fires 3 single waves one after another, 0.3 seconds apart, and then the X: 21 + 21 + 21 + 34 = 97 damage if they all hit. You can't charge again until the X has been fired.",
   "items": [
    {
     "name": "Light Sword",
     "img": "images/items/light-sword.png",
     "note": "3 emeralds, replaces Diamond Sword",
-    "desc": "47 damage every 0.3 seconds. Charge to fire light waves: 1 wave for 21, or 2 in an X for 34, with 80% armor penetration and 55 block range. Repurchase costs 2 emeralds.",
+    "desc": "47 damage every 0.3 seconds, no armor penetration. Charge to fire light waves: 1 wave for 21, or the X (one X-shaped wave) for 34, with 80% armor penetration and 55 block range. Repurchase costs 2 emeralds.",
     "dmg": 47,
     "cd": 0.3
    }
@@ -13821,10 +13821,10 @@
      [
       "Full (1s)",
       "X: 34",
-      "3 waves, 0.3s apart, ending with the X"
+      "3 waves + the X, 0.3s apart: 21 + 21 + 21 + 34 = 97"
      ]
     ],
-    "note": "80% armor penetration: 21 → 16.71 and 34 → 27.1 against iron (from tests). Waves travel 55 blocks in about 2.35 seconds."
+    "note": "The X is a single X-shaped wave. Light waves have 80% armor penetration: 21 → 16.71 and 34 → 27.1 against iron (from tests). Waves travel 55 blocks in about 2.35 seconds. Normal sword swings have none."
    }
   ],
   "strategy": [
