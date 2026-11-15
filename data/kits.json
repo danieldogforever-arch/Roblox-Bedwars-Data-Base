@@ -12894,11 +12894,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "An ascended healer, Lani can purchase the Scepter of Light. Use this Scepter to fly to your low health allies, providing healing and damage reduction!",
-  "adv": "",
+  "adv": "Lani can buy the Scepter of Light for 55 iron and carry 1 at a time. Hold it for 1.25 seconds to fly 18 blocks into the air, then pick any teammate on the map to teleport to. You float down over 6 seconds and take no fall damage. You can't use it while Grounded.\nWhen you land, you, the teammate and every teammate around you heal 8% of max HP every second for 8 seconds (64% in total). Since it's a percent, it heals more on kits with lots of HP, like Eldertree.\nThe healing is halved if more than one Lani heals the same player, or if you teleport to a teammate (or yourself) who was healed by Lani in the last 25 seconds.",
   "items": [
    {
     "name": "Scepter of Light",
-    "img": "images/items/scepter-of-light.png"
+    "img": "images/items/scepter-of-light.png",
+    "note": "55 iron, carry 1",
+    "desc": "Hold for 1.25 seconds to fly 18 blocks up and teleport to any teammate. You float down over 6 seconds with no fall damage, then heal yourself and nearby teammates 8% max HP per second for 8 seconds (64%). Half as much if they were healed by Lani in the last 25 seconds. Can't be used while Grounded."
    }
   ],
   "abilities": [],
@@ -12982,7 +12984,36 @@
    "tier": "15 (free)",
    "badge": "images/bp/s6.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Light's Blessing",
+    "when": "Landing from the Scepter",
+    "desc": "You and nearby teammates heal 8% of max HP per second for 8 seconds. Halved for anyone healed by Lani in the last 25 seconds, or by more than one Lani."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Void save",
+    "text": "Use the Scepter when you're falling into the void. It saves you and heals you and nearby teammates, which makes it a great escape tool."
+   },
+   {
+    "title": "Back up pushes",
+    "text": "Use it when your teammates are pushing a fight or trying to break a bed."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Tesla Coil",
+    "text": "Keep a Tesla Coil at your base to cut the healing by 60%."
+   },
+   {
+    "title": "Static",
+    "text": "Later on, use the Static enchant so the healing barely does anything."
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "The healing is nice but expensive. Healing by percent makes it great on high-HP kits like Eldertree, but it's buggy and ends up more of an iron sink than a healer. It needs a small rework, like buying the Scepter once for 1–2 emeralds and keeping it with a cooldown, plus some changes to the Scepter."
  },
  {
   "name": "Lassy",
