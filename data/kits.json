@@ -13871,7 +13871,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Your bow is replaced with the Floral Bow! Shooting an enemy twice will bloom a flower on their head, attracting a swarm of bees!",
-  "adv": "Lyla buys Floral versions of every ranged weapon: the Floral Bow, Floral Crossbow and Floral Headhunter. They deal the same damage as the normal ones, plus a flower effect.\nHitting an enemy blooms a flower on their head (2 hits with the Floral Bow, 1 with the Crossbow or Headhunter), and bees swarm them for tick damage once per second. A new bloom ticks 3 times. Hitting them again while the bees are still going adds a stack and 1 more tick. Each stack raises the damage per tick: 2, 5, 8, 11, 14, 17, 20, 23, 26 and 29 at 10 stacks (the max). The Floral Headhunter starts stronger: 5 damage and 4 ticks. Bee damage has no armor penetration (from tests).\nArrows that hit the ground grow a flower there, up to 7 at a time (a new one replaces the oldest). They last 8 minutes. An enemy who already has bees and walks into a ground flower gets another stack.",
+  "adv": "Lyla buys Floral versions of every ranged weapon: the Floral Bow, Floral Crossbow and Floral Headhunter. They deal the same damage as the normal ones, plus a flower effect.\nHitting an enemy blooms a flower on their head (2 hits with the Floral Bow, 1 with the Crossbow or Headhunter), and bees swarm them for tick damage once per second. A new bloom ticks 3 times. Each hit while the bees are still going adds a stack and 1 more tick, and every tick left uses the new damage: for example, 2 quick hits right after a bloom give 4 ticks at 8 damage. You get about 0.6 seconds of leeway after the last tick, so a hit just after it still counts (1 tick at 5 damage). Each stack raises the damage per tick: 2, 5, 8, 11, 14, 17, 20, 23, 26 and 29 at 10 stacks (the max). The Floral Headhunter starts stronger: 5 damage and 4 ticks. Bee damage has no armor penetration (from tests) and doesn't trigger enchants, so Static won't proc and Fire won't ramp up from bee ticks.\nArrows that hit the ground grow a flower there, up to 7 at a time (a new one replaces the oldest). They last 8 minutes. Ground flowers only work on enemies who already have a Lyla flower on their head: walking into one uses it up and adds a stack and a tick.",
   "items": [
    {
     "name": "Floral Bow",
@@ -13986,12 +13986,12 @@
    {
     "name": "Bee Swarm",
     "when": "Flower on an enemy's head",
-    "desc": "Bees tick once per second: 2 damage at 1 stack, +3 per stack, up to 29 at 10 stacks. More hits or ground flowers add stacks and ticks."
+    "desc": "Bees tick once per second: 2 damage at 1 stack, +3 per stack, up to 29 at 10 stacks. Each hit (or ground flower) adds a stack and a tick. No armor penetration, and doesn't trigger enchants."
    },
    {
     "name": "Flower Field",
     "when": "Arrows hit the ground",
-    "desc": "Grows a flower that lasts 8 minutes, up to 7 at a time. Enemies with bees who touch one gain a stack."
+    "desc": "Grows a flower that lasts 8 minutes, up to 7 at a time. An enemy who already has a flower on their head picks it up by touching it, gaining a stack and a tick."
    }
   ],
   "tables": [
