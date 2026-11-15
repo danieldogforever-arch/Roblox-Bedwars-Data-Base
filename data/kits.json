@@ -14420,14 +14420,14 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Defy death and hop around as a skull after taking mortal damage. Survive long enough in this form and you will revive! Use your ability to create poison clouds that damage and slow enemies (this ability also triggers while in skull form).",
-  "adv": "Toxic Escape leaves a trail of poison behind you for 5 seconds, with a 15 second cooldown. Each patch of poison lasts 4 seconds. Enemies in it take 3 damage every 0.5 seconds (it can kill), are slowed by about 25–30% (24 blocks took 5 seconds in tests), and stay poisoned for 0.5 seconds after leaving it. Enemies can't place blocks on the poison.\nWhen Marrow would die, it turns into a skull instead. The skull is 1 block tall with 50 HP, ignores your armor, and can only run and jump, no items. It moves at 95% of normal speed and leaves the same poison trail. For the first 2 seconds you can't be damaged. Survive 8 seconds to revive: you're locked in place but can't be killed for the last second. After reviving, you need 20 seconds before you can turn into a skull again; dying before then is a real death.",
+  "adv": "Toxic Escape leaves a trail of poison behind you for 5 seconds, with a 15 second cooldown. Each patch of poison lasts 4 seconds. Enemies in it take 3 damage every 0.5 seconds with no armor penetration (it can kill), are slowed by about 25–30% (24 blocks took 5 seconds in tests), and stay poisoned for 0.5 seconds after leaving it. Enemies can't place blocks on the poison.\nWhen Marrow would die, it turns into a skull instead. The skull is 1 block tall with 50 HP, ignores your armor, and can only run and jump, no items. It moves at 95% of normal speed and leaves the same poison trail. For the first 2 seconds you can't be damaged. Survive 8 seconds to revive with full 100 HP: you're locked in place but can't be killed for the last second. After reviving, you need 20 seconds before you can turn into a skull again; dying before then is a real death.",
   "items": [],
   "abilities": [
    {
     "name": "Toxic Escape",
     "img": "images/abilities/ability-template.png",
     "note": "Also works in skull form",
-    "desc": "Leave a poison trail for 5 seconds. Each patch lasts 4 seconds and deals 3 damage every 0.5 seconds (can kill), slows enemies by about 25–30% and stops them from placing blocks on it.",
+    "desc": "Leave a poison trail for 5 seconds. Each patch lasts 4 seconds and deals 3 damage every 0.5 seconds (can kill, no armor penetration), slows enemies by about 25–30% and stops them from placing blocks on it.",
     "cd": 15,
     "dmg": 6,
     "dmgText": "3 every 0.5s",
@@ -14465,7 +14465,7 @@
    {
     "name": "Skull Form",
     "when": "Taking a killing blow",
-    "desc": "Become a 50 HP skull (armor doesn't count) at 95% speed, invulnerable for 2 seconds. Survive 8 seconds to revive. 20 second cooldown after reviving."
+    "desc": "Become a 50 HP skull (armor doesn't count) at 95% speed, invulnerable for 2 seconds. Survive 8 seconds to revive with 100 HP. Dying again within 20 seconds of reviving is a real death."
    }
   ],
   "tables": [
@@ -14494,11 +14494,36 @@
      ],
      [
       "Time to revive",
-      "8 seconds (can't be killed during the last second)"
+      "8 seconds (can't be killed during the last second), back to 100 HP"
      ],
      [
       "Cooldown after reviving",
       "20 seconds"
+     ]
+    ]
+   },
+   {
+    "title": "Poison",
+    "head": [
+     "",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Damage",
+      "3 every 0.5 seconds (6 per second)"
+     ],
+     [
+      "Armor penetration",
+      "None: 5 ticks did 6.6 to iron (from tests)"
+     ],
+     [
+      "Slow",
+      "~25–30%"
+     ],
+     [
+      "Trail",
+      "5 seconds, each patch lasts 4 seconds"
      ]
     ]
    }
