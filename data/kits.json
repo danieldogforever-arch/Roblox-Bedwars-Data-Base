@@ -13314,15 +13314,19 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Use the candy you get from damaging players to fill up your piñata. When you're ready, smash it for lots of loot!",
-  "adv": "",
+  "adv": "Lucía spawns with a Piñata. You can only carry one and have one placed at a time. Dealing damage gives you candy: 40% of the damage you deal, so 20 damage gives 8 candy. Put your candy into your placed Piñata, then break it for loot. Dying loses all the candy you're carrying.\nThe more candy is inside, the better the loot, and it's always the same for the same amount (see the table and calculator). Iron is always 65% of the candy. The Piñata shows 1 star at 50 candy, 2 stars at 200 and 3 stars at 400.\nAnyone can break a Piñata with a pickaxe, fireballs or TNT, and enemies who break it steal the loot inside.",
   "items": [
    {
     "name": "Piñata",
-    "img": "images/items/pi-ata.png"
+    "img": "images/items/pi-ata.png",
+    "note": "Spawn with it, 1 at a time",
+    "desc": "Fill it with candy, then break it for loot: from 32 iron and 2 diamonds at 50 candy up to 1625 iron, 67 diamonds and 85 emeralds at 2,500. Enemies can break it and take the loot."
    },
    {
     "name": "Candy",
-    "img": "images/items/candy.png"
+    "img": "images/items/candy.png",
+    "note": "40% of damage dealt",
+    "desc": "Earned by dealing damage (20 damage = 8 candy). Lost when you die."
    }
   ],
   "abilities": [],
@@ -13430,7 +13434,209 @@
    "tier": "5 (paid)",
    "badge": "images/bp/s5.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Sweet Tooth",
+    "when": "Dealing damage",
+    "desc": "Gain candy equal to 40% of your damage."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Piñata loot",
+    "head": [
+     "Candy",
+     "Stars",
+     "Damage needed",
+     "Iron",
+     "Diamonds",
+     "Emeralds"
+    ],
+    "rows": [
+     [
+      "50",
+      "★",
+      "125",
+      "32",
+      "2",
+      "0"
+     ],
+     [
+      "100",
+      "★",
+      "250",
+      "65",
+      "2",
+      "0"
+     ],
+     [
+      "150",
+      "★",
+      "375",
+      "97",
+      "2",
+      "0"
+     ],
+     [
+      "200",
+      "★★",
+      "500",
+      "130",
+      "7",
+      "4"
+     ],
+     [
+      "250",
+      "★★",
+      "625",
+      "162",
+      "8",
+      "6"
+     ],
+     [
+      "300",
+      "★★",
+      "750",
+      "195",
+      "10",
+      "7"
+     ],
+     [
+      "350",
+      "★★",
+      "875",
+      "227",
+      "11",
+      "7"
+     ],
+     [
+      "400",
+      "★★★",
+      "1,000",
+      "260",
+      "12",
+      "8"
+     ],
+     [
+      "500",
+      "★★★",
+      "1,250",
+      "325",
+      "15",
+      "12"
+     ],
+     [
+      "600",
+      "★★★",
+      "1,500",
+      "390",
+      "17",
+      "16"
+     ],
+     [
+      "700",
+      "★★★",
+      "1,750",
+      "455",
+      "20",
+      "19"
+     ],
+     [
+      "800",
+      "★★★",
+      "2,000",
+      "520",
+      "23",
+      "23"
+     ],
+     [
+      "900",
+      "★★★",
+      "2,250",
+      "585",
+      "25",
+      "26"
+     ],
+     [
+      "1,000",
+      "★★★",
+      "2,500",
+      "650",
+      "28",
+      "30"
+     ],
+     [
+      "1,250",
+      "★★★",
+      "3,125",
+      "812",
+      "34",
+      "39"
+     ],
+     [
+      "1,500",
+      "★★★",
+      "3,750",
+      "975",
+      "41",
+      "49"
+     ],
+     [
+      "1,750",
+      "★★★",
+      "4,375",
+      "1,137",
+      "47",
+      "58"
+     ],
+     [
+      "2,000",
+      "★★★",
+      "5,000",
+      "1,300",
+      "54",
+      "67"
+     ],
+     [
+      "2,500",
+      "★★★",
+      "6,250",
+      "1,625",
+      "67",
+      "85"
+     ]
+    ],
+    "note": "From tests. The loot is always the same for the same amount of candy."
+   }
+  ],
+  "candy": true,
+  "strategy": [
+   {
+    "title": "Farm early",
+    "text": "Damage means candy, so make the most of early game when nobody has armor. Have some support and don't die."
+   },
+   {
+    "title": "Cash out at 300",
+    "text": "Break the Piñata at 300 candy to get a crossbow, then earn candy safely from range."
+   },
+   {
+    "title": "Protect it",
+    "text": "In later tiers, cover the Piñata in obsidian so nobody can blow it up."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Raid the Piñata",
+    "text": "Lucía usually won't break its Piñata after the first rush. When you see it leave base, break the Piñata with a pickaxe, or TNT if it's unguarded."
+   },
+   {
+    "title": "Deny the loot",
+    "text": "Put everything you get from it in your chest, or throw it off the map if teammates are guarding it and you can't reach a chest alive."
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "Miner, its successor, is much less risky and gets better as the match goes on: a kill gives about the same loot as a 300 candy Piñata, while Lucía needs 750 damage for that. Lucía needs a buff to compete with Miner, and Miner also needs a nerf. Right now Lucía is just outclassed."
  },
  {
   "name": "Lumen",
