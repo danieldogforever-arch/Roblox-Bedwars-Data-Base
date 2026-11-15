@@ -13871,19 +13871,25 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Your bow is replaced with the Floral Bow! Shooting an enemy twice will bloom a flower on their head, attracting a swarm of bees!",
-  "adv": "",
+  "adv": "Lyla buys Floral versions of every ranged weapon: the Floral Bow, Floral Crossbow and Floral Headhunter. They deal the same damage as the normal ones, plus a flower effect.\nHitting an enemy blooms a flower on their head (2 hits with the Floral Bow, 1 with the Crossbow or Headhunter), and bees swarm them for tick damage once per second. A new bloom ticks 3 times. Hitting them again while the bees are still going adds a stack and 1 more tick. Each stack raises the damage per tick: 2, 5, 8, 11, 14, 17, 20, 23, 26 and 29 at 10 stacks (the max). The Floral Headhunter starts stronger: 5 damage and 4 ticks. Bee damage has no armor penetration (from tests).\nArrows that hit the ground grow a flower there, up to 7 at a time (a new one replaces the oldest). They last 8 minutes. An enemy who already has bees and walks into a ground flower gets another stack.",
   "items": [
    {
-    "name": "Floral Headhunter",
-    "img": "images/items/floral-headhunter.png"
+    "name": "Floral Bow",
+    "img": "images/items/floral-bow.png",
+    "note": "Same as a normal bow",
+    "desc": "Normal bow damage. 2 hits bloom a flower on an enemy's head. Arrows that hit the ground grow flowers."
    },
    {
     "name": "Floral Crossbow",
-    "img": "images/items/floral-crossbow.png"
+    "img": "images/items/floral-crossbow.png",
+    "note": "Same as a normal crossbow",
+    "desc": "Normal crossbow damage. 1 hit blooms a flower on an enemy's head. Arrows that hit the ground grow flowers."
    },
    {
-    "name": "Floral Bow",
-    "img": "images/items/floral-bow.png"
+    "name": "Floral Headhunter",
+    "img": "images/items/floral-headhunter.png",
+    "note": "Same as a normal Headhunter",
+    "desc": "Normal Headhunter damage. 1 hit blooms a flower that starts at 5 damage per tick with 4 ticks."
    }
   ],
   "abilities": [],
@@ -13975,7 +13981,97 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Bee Swarm",
+    "when": "Flower on an enemy's head",
+    "desc": "Bees tick once per second: 2 damage at 1 stack, +3 per stack, up to 29 at 10 stacks. More hits or ground flowers add stacks and ticks."
+   },
+   {
+    "name": "Flower Field",
+    "when": "Arrows hit the ground",
+    "desc": "Grows a flower that lasts 8 minutes, up to 7 at a time. Enemies with bees who touch one gain a stack."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Bee damage per tick",
+    "head": [
+     "Stacks",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10"
+    ],
+    "rows": [
+     [
+      "Damage",
+      "2",
+      "5",
+      "8",
+      "11",
+      "14",
+      "17",
+      "20",
+      "23",
+      "26",
+      "29"
+     ]
+    ],
+    "note": "No armor penetration: the 29 tick does 4.64 to emerald and the 2 tick does 0.88 to iron (from tests). The Floral Headhunter starts at 2 stacks (5 damage)."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Set a trap",
+    "text": "Shoot arrows into the ground where you expect enemies to push. Hit someone with a flower first, and if they walk through your field they pick up every flower, taking huge damage they didn't see coming."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Don't let it stack",
+    "text": "Never let Lyla get more than 3 stacks on you, or the bees will deal huge damage."
+   },
+   {
+    "title": "Avoid the flowers",
+    "text": "Don't walk through flowers on the ground, especially ones Lyla shoots in front of you."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Frost Queen Skin",
+    "img": "images/skins/lyla-frost-queen.webp"
+   },
+   {
+    "name": "Victorious Gold Skin",
+    "img": "images/skins/lyla-victorious-gold.webp"
+   },
+   {
+    "name": "Victorious Platinum Skin",
+    "img": "images/skins/lyla-victorious-platinum.webp"
+   },
+   {
+    "name": "Victorious Diamond Skin",
+    "img": "images/skins/lyla-victorious-diamond.webp"
+   },
+   {
+    "name": "Victorious Emerald Skin",
+    "img": "images/skins/lyla-victorious-emerald.webp"
+   },
+   {
+    "name": "Victorious Nightmare Skin",
+    "img": "images/skins/lyla-victorious-nightmare.webp"
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "The bees and tick damage are unique, but the ground flowers rarely matter, since enemies have to be hit by the bow first before flowers do anything. If ground flowers could add stacks without a bow hit first, Lyla could be a great trapping ranged kit."
  },
  {
   "name": "Marcel",
