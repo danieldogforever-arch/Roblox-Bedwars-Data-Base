@@ -12894,13 +12894,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "An ascended healer, Lani can purchase the Scepter of Light. Use this Scepter to fly to your low health allies, providing healing and damage reduction!",
-  "adv": "Lani can buy the Scepter of Light for 55 iron and carry 1 at a time. Hold it for 1.25 seconds to fly 18 blocks into the air, then pick any teammate on the map to teleport to. You float down over 6 seconds and take no fall damage. You can't use it while Grounded.\nWhen you land, you, the teammate and every teammate around you heal 8% of max HP every second for 8 seconds (64% in total). Since it's a percent, it heals more on kits with lots of HP, like Eldertree.\nThe healing is halved if more than one Lani heals the same player, or if you teleport to a teammate (or yourself) who was healed by Lani in the last 25 seconds.",
+  "adv": "Lani can buy the Scepter of Light for 55 iron and carry 1 at a time. It's used up after one teleport. Hold it for 1.25 seconds to fly 18 blocks into the air, then pick any teammate on the map to teleport to. You float down over 6 seconds and take no fall damage. You can't use it while Grounded.\nAs soon as you teleport, you, the teammate and every teammate within 14 blocks heal 8% of max HP every second for 8 seconds (64% in total) and take 20% less damage. Since the healing is a percent, it heals more on kits with lots of HP, like Eldertree.\nThe healing is halved if more than one Lani heals the same player, or if you teleport to a teammate (or yourself) who was healed by Lani in the last 25 seconds.",
   "items": [
    {
     "name": "Scepter of Light",
     "img": "images/items/scepter-of-light.png",
-    "note": "55 iron, carry 1",
-    "desc": "Hold for 1.25 seconds to fly 18 blocks up and teleport to any teammate. You float down over 6 seconds with no fall damage, then heal yourself and nearby teammates 8% max HP per second for 8 seconds (64%). Half as much if they were healed by Lani in the last 25 seconds. Can't be used while Grounded."
+    "note": "55 iron, one use",
+    "desc": "Hold for 1.25 seconds to fly 18 blocks up and teleport to any teammate. You float down over 6 seconds with no fall damage. From the teleport, you and teammates within 14 blocks heal 8% max HP per second for 8 seconds (64%) and take 20% less damage. Half the healing if they were healed by Lani in the last 25 seconds. Used up after one teleport. Can't be used while Grounded."
    }
   ],
   "abilities": [],
@@ -12988,8 +12988,8 @@
   "passives": [
    {
     "name": "Light's Blessing",
-    "when": "Landing from the Scepter",
-    "desc": "You and nearby teammates heal 8% of max HP per second for 8 seconds. Halved for anyone healed by Lani in the last 25 seconds, or by more than one Lani."
+    "when": "Teleporting with the Scepter",
+    "desc": "You and teammates within 14 blocks heal 8% of max HP per second for 8 seconds and take 20% less damage. Halved for anyone healed by Lani in the last 25 seconds, or by more than one Lani."
    }
   ],
   "strategy": [
@@ -13027,11 +13027,14 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Wrangle enemies towards you using a lasso.",
-  "adv": "",
+  "adv": "Lassy can buy the Lasso for 30 iron and keeps it forever. Throw it at an enemy to pull them all the way to you. Aim a little above where your target is standing: the lowest throw reaches 26 blocks, and aiming higher reaches farther. Charging for 0.5 seconds makes the throw faster and adds 2 blocks of range.\nA lassoed enemy is stunned for 1 second, unable to move, and Grounded for 10 seconds, so they can't use pearls or movement abilities. The Lasso has an 8 second cooldown, shorter than the Grounded effect.",
   "items": [
    {
     "name": "Lasso",
-    "img": "images/items/lasso.png"
+    "img": "images/items/lasso.png",
+    "note": "30 iron, keep forever",
+    "desc": "Pull an enemy all the way to you. Stuns them for 1 second and Grounds them for 10 seconds. Reaches 26 blocks at the lowest aim and farther when aimed higher; a 0.5 second charge throws faster with 2 more blocks of range.",
+    "cd": 8
    }
   ],
   "abilities": [],
@@ -13100,7 +13103,44 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Roped",
+    "when": "Lassoing an enemy",
+    "desc": "Stunned for 1 second and Grounded for 10 seconds, longer than the 8 second Lasso cooldown."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Charge or snap",
+    "text": "Fully charge the Lasso for faster, easier aiming, or tap it to catch someone quickly while you're chasing them."
+   },
+   {
+    "title": "Void lasso",
+    "text": "Lasso someone over the void, then build up a few blocks so they have nowhere to build to save themselves."
+   },
+   {
+    "title": "Bed's gone? Jump",
+    "text": "If their bed is broken, jump into the void, lasso them, then reset right away to skip the fall."
+   },
+   {
+    "title": "On land",
+    "text": "Do the same on solid ground: pull them up to where they can't hit you back."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Block the pull",
+    "text": "Place blocks while running from a Lassy. You'll get stuck on them instead of being pulled all the way."
+   },
+   {
+    "title": "Dodge it",
+    "text": "Build up or place blocks to dodge the Lasso."
+   }
+  ],
+  "bal": "op",
+  "balWhy": "30 iron is never a problem in almost any mode, and you can beat enemies even without armor. Lassoed players can't escape the void since they're Grounded, and the Grounded effect lasts longer than the Lasso's cooldown, so you can never truly get away. The hitbox is huge: it can catch you even when you're high up with blocks below you. It's broken in casual and ranked, and needs to cost much more with a much longer cooldown."
  },
  {
   "name": "Lian",
