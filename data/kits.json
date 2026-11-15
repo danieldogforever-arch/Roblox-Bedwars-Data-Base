@@ -13314,7 +13314,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Use the candy you get from damaging players to fill up your piñata. When you're ready, smash it for lots of loot!",
-  "adv": "Lucía spawns with a Piñata. You can only carry one and have one placed at a time. Dealing damage gives you candy: 40% of the damage you deal, so 20 damage gives 8 candy. Put your candy into your placed Piñata, then break it for loot. Dying loses all the candy you're carrying.\nThe more candy is inside, the better the loot, and it's always the same for the same amount (see the table and calculator). Iron is always 65% of the candy. The Piñata shows 1 star at 50 candy, 2 stars at 200 and 3 stars at 400.\nAnyone can break a Piñata with a pickaxe, fireballs or TNT, and enemies who break it steal the loot inside.",
+  "adv": "Lucía spawns with a Piñata. You can only carry one and have one placed at a time. Dealing damage gives you candy: 40% of the damage you deal, so 20 damage gives 8 candy. Each kill gives 25 more. Put your candy into your placed Piñata, then break it yourself: the loot goes straight into your inventory. Dying loses all the candy you're carrying.\nThe more candy is inside, the better the loot, and it's always the same for the same amount (see the table and calculator). Iron is always 65% of the candy. The Piñata shows 1 star at 50 candy, 2 stars at 200 and 3 stars at 400.\nAnyone can break a Piñata with a pickaxe, fireballs or TNT, and enemies who break it steal the loot inside.",
   "items": [
    {
     "name": "Piñata",
@@ -13326,7 +13326,7 @@
     "name": "Candy",
     "img": "images/items/candy.png",
     "note": "40% of damage dealt",
-    "desc": "Earned by dealing damage (20 damage = 8 candy). Lost when you die."
+    "desc": "Earned by dealing damage (20 damage = 8 candy) and 25 per kill. Lost when you die."
    }
   ],
   "abilities": [],
@@ -13439,7 +13439,7 @@
    {
     "name": "Sweet Tooth",
     "when": "Dealing damage",
-    "desc": "Gain candy equal to 40% of your damage."
+    "desc": "Gain candy equal to 40% of your damage, plus 25 per kill."
    }
   ],
   "tables": [
@@ -13649,11 +13649,15 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Charge the Sword of Light to shoot powerful waves at enemies! Hitting light waves OR killing Ember will upgrade your ability to shoot many powerful beams at once.",
-  "adv": "",
+  "adv": "Lumen can buy the Light Sword for 3 emeralds. It replaces the Diamond Sword, and Lumen can't buy the Emerald Sword. It hits for 47 every 0.3 seconds. If you lose it when you die, buying it again costs only 2 emeralds.\nCharge the Light Sword to fire light waves. A half charge fires 1 wave for 21 damage; a full charge fires 2 waves in an X for 34. Light waves have 80% armor penetration (from tests), travel 55 blocks in about 2.35 seconds, and can pass through thin walls. You move about 22.5% slower while charging.\nHit enemies wearing armor with 10 light waves (or kill an Ember) to upgrade the Light Sword. The upgrade progress isn't lost when you die. Once upgraded, a 0.5 second charge fires 1 wave, 0.75 seconds fires the X, and a full 1 second charge fires 3 waves one after another, 0.3 seconds apart, ending with the X. You can't charge again until the X has been fired.",
   "items": [
    {
     "name": "Light Sword",
-    "img": "images/items/light-sword.png"
+    "img": "images/items/light-sword.png",
+    "note": "3 emeralds, replaces Diamond Sword",
+    "desc": "47 damage every 0.3 seconds. Charge to fire light waves: 1 wave for 21, or 2 in an X for 34, with 80% armor penetration and 55 block range. Repurchase costs 2 emeralds.",
+    "dmg": 47,
+    "cd": 0.3
    }
   ],
   "abilities": [],
@@ -13787,7 +13791,74 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Radiance",
+    "when": "Hitting armored enemies with light waves",
+    "desc": "10 hits (or killing an Ember) upgrade the Light Sword to fire up to 3 waves in one charge. Progress is kept on death."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Light waves",
+    "head": [
+     "Charge",
+     "Before upgrade",
+     "After upgrade"
+    ],
+    "rows": [
+     [
+      "Half / 0.5s",
+      "1 wave: 21",
+      "1 wave: 21"
+     ],
+     [
+      "0.75s",
+      "—",
+      "X: 34"
+     ],
+     [
+      "Full (1s)",
+      "X: 34",
+      "3 waves, 0.3s apart, ending with the X"
+     ]
+    ],
+    "note": "80% armor penetration: 21 → 16.71 and 34 → 27.1 against iron (from tests). Waves travel 55 blocks in about 2.35 seconds."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Charge to 0.75s",
+    "text": "After upgrading, don't fully charge: the X comes last and is harder to aim. A 0.75 second charge fires the X right away and lets you charge again sooner, which makes it better than a full charge."
+   },
+   {
+    "title": "Up close",
+    "text": "If someone wants to fight up close, fire one charge, then switch to swinging. The Light Sword beats a Diamond Sword by a good margin."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Thick walls",
+    "text": "Light waves pass through thin walls, so build a bigger defense."
+   },
+   {
+    "title": "Dodge from range",
+    "text": "Light waves aren't very fast. From far away, just dodge them."
+   },
+   {
+    "title": "Pearl in",
+    "text": "Pearl onto Lumen to force a close fight, where it can't use its big light wave damage."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Festive Skin",
+    "img": "images/skins/lumen-festive.webp"
+   }
+  ],
+  "bal": "sop",
+  "balWhy": "Its light waves have such high armor penetration that Lumen keeps up the whole game while being this cheap. You can spam them, and there are few counters."
  },
  {
   "name": "Lyla",
