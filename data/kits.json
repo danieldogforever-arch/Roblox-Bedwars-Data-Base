@@ -14202,13 +14202,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Deploy jellyfish and electrify them with your Electric Pulse ability, causing them to zap nearby enemies. Connect jellyfish to increase the range and power of your ability.",
-  "adv": "Marina spawns with 2 Jellyfish and gets another every 35 seconds, up to 4 in total between placed and in your inventory. Jellyfish are 1 block wide and 3 blocks tall, so you can't place blocks inside them, and they can't be placed within 5 blocks of each other. They have 70 HP and can be blown up by TNT and fireballs. They show a different color to teammates and enemies.\nUse Electric Jellyfish within 15 blocks of a jellyfish to make it zap every enemy within 9 blocks. Jellyfish within 11 blocks of each other connect, and every connected jellyfish fires too. More connected jellyfish hit harder and zap more times: see the table. Zaps have 40% armor penetration (from tests) and give enemies Zapped 2 (60% less healing and shields).",
+  "adv": "Marina spawns with 2 Jellyfish and gets another every 35 seconds, up to 4 in total between placed and in your inventory. Jellyfish are 1 block wide and 3 blocks tall, so you can't place blocks inside them, and they can't be placed within 5 blocks of each other. They have 70 HP and can be blown up by TNT and fireballs. They show a different color to teammates and enemies. You can pick up undamaged jellyfish to move them, but not damaged ones.\nUse Electric Jellyfish within 15 blocks of a jellyfish to make it zap every enemy within 9 blocks. Jellyfish within 11 blocks of each other connect, and every connected jellyfish fires too. More connected jellyfish hit harder and zap more times: see the table, which shows the most one enemy can take. The ability has a 9 second cooldown. Zaps have 40% armor penetration (from tests) and give enemies Zapped 2 (60% less healing and shields).",
   "items": [
    {
     "name": "Jellyfish",
     "img": "images/items/jellyfish.png",
     "note": "Spawn with 2, +1 every 35s (max 4)",
-    "desc": "Place it at least 5 blocks from other jellyfish. 70 HP, 1×3 blocks. Connects to jellyfish within 11 blocks."
+    "desc": "Place it at least 5 blocks from other jellyfish. 70 HP, 1×3 blocks. Connects to jellyfish within 11 blocks. Undamaged jellyfish can be picked up and moved."
    }
   ],
   "abilities": [
@@ -14360,7 +14360,7 @@
       "72"
      ]
     ],
-    "note": "40% armor penetration: 14 → 10.47 against leather (from tests). Each hit applies Zapped 2."
+    "note": "The most one enemy can take from one activation. 40% armor penetration: 14 → 10.47 against leather (from tests). Each hit applies Zapped 2."
    }
   ],
   "strategy": [
@@ -14420,12 +14420,18 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Defy death and hop around as a skull after taking mortal damage. Survive long enough in this form and you will revive! Use your ability to create poison clouds that damage and slow enemies (this ability also triggers while in skull form).",
-  "adv": "",
+  "adv": "Toxic Escape leaves a trail of poison behind you for 5 seconds, with a 15 second cooldown. Each patch of poison lasts 4 seconds. Enemies in it take 3 damage every 0.5 seconds (it can kill), are slowed by about 25–30% (24 blocks took 5 seconds in tests), and stay poisoned for 0.5 seconds after leaving it. Enemies can't place blocks on the poison.\nWhen Marrow would die, it turns into a skull instead. The skull is 1 block tall with 50 HP, ignores your armor, and can only run and jump, no items. It moves at 95% of normal speed and leaves the same poison trail. For the first 2 seconds you can't be damaged. Survive 8 seconds to revive: you're locked in place but can't be killed for the last second. After reviving, you need 20 seconds before you can turn into a skull again; dying before then is a real death.",
   "items": [],
   "abilities": [
    {
     "name": "Toxic Escape",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Also works in skull form",
+    "desc": "Leave a poison trail for 5 seconds. Each patch lasts 4 seconds and deals 3 damage every 0.5 seconds (can kill), slows enemies by about 25–30% and stops them from placing blocks on it.",
+    "cd": 15,
+    "dmg": 6,
+    "dmgText": "3 every 0.5s",
+    "nodps": true
    }
   ],
   "history": [
@@ -14454,7 +14460,71 @@
    "event": "Marrow's Madness (Halloween 2025)",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Skull Form",
+    "when": "Taking a killing blow",
+    "desc": "Become a 50 HP skull (armor doesn't count) at 95% speed, invulnerable for 2 seconds. Survive 8 seconds to revive. 20 second cooldown after reviving."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Skull Form",
+    "head": [
+     "",
+     "Value"
+    ],
+    "rows": [
+     [
+      "HP",
+      "50 (armor doesn't count)"
+     ],
+     [
+      "Speed",
+      "95% of normal"
+     ],
+     [
+      "Size",
+      "1 block tall"
+     ],
+     [
+      "Invulnerable",
+      "First 2 seconds"
+     ],
+     [
+      "Time to revive",
+      "8 seconds (can't be killed during the last second)"
+     ],
+     [
+      "Cooldown after reviving",
+      "20 seconds"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Poison the fight",
+    "text": "Use Toxic Escape when going into a fight or escaping one, for damage and to slow enemies down."
+   },
+   {
+    "title": "Run as a skull",
+    "text": "In skull form, keep running and jumping when enemies chase you."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Movement and range",
+    "text": "Use movement and ranged attacks to kill the skull."
+   },
+   {
+    "title": "Don't chase on foot",
+    "text": "Without movement or range, don't chase the skull: you'll take poison damage and get killed by the fully revived Marrow."
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "Marrow is super strong early game against kits without movement: you have to take poison damage to kill it, and the skull is pretty fast while you're slowed. But movement and ranged kits counter it very easily, so it's useless late game unless teammates protect the skull. Not a bad kit, just overpowered in some areas and weak in others."
  },
  {
   "name": "Martin",
