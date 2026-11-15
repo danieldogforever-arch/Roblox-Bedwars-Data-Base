@@ -13168,16 +13168,22 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "A mysterious warrior gifted by the dragon. Control swords to fight your enemy",
-  "adv": "",
+  "adv": "Lian spawns with 3 dragon swords hovering behind it. A new sword regenerates every 15 seconds.\nDragon Sword sends 1 sword at an enemy within 9 blocks, dealing 30% less than the sword you're holding. It takes about 1 second to reach them, and you can keep attacking meanwhile. 2 second cooldown.\nDragon Sword Ultimate sends every sword you have (at least 1) crashing into the ground up to 9 blocks away, in a triangle: with 3 swords they spread out in front of you, with 2 one goes in front and one to the left, and with 1 it lands in front. Each sword hits everyone within its area for 35% more than the sword you're holding, and burns them for 3 damage per second for 5 seconds. The swords land after 1 second, and you can't attack during that second. 15 second cooldown.",
   "items": [],
   "abilities": [
    {
     "name": "Dragon Sword",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Uses 1 sword, within 9 blocks",
+    "desc": "Sends 1 sword at an enemy within 9 blocks for 70% of your held sword's damage. Reaches them in about 1 second; you can still attack meanwhile.",
+    "cd": 2
    },
    {
     "name": "Dragon Sword Ultimate",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Uses all swords",
+    "desc": "Slams every sword you have into the ground up to 9 blocks away in a triangle, each hitting an area for 135% of your held sword's damage plus 3 burn per second for 5 seconds. Lands after 1 second; you can't attack until then.",
+    "cd": 15
    }
   ],
   "history": [
@@ -13212,7 +13218,90 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Floating Swords",
+    "when": "Always",
+    "desc": "Up to 3 swords hover behind you. One regenerates every 15 seconds."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Damage by sword",
+    "head": [
+     "Sword held",
+     "Normal hit",
+     "Dragon Sword (70%)",
+     "Ultimate, per sword (135%)"
+    ],
+    "rows": [
+     [
+      "img:images/items/wood-sword.png|Wood",
+      "20",
+      "14",
+      "27 + 15 burn"
+     ],
+     [
+      "img:images/items/stone-sword.png|Stone",
+      "25",
+      "17.5",
+      "33.75 + 15 burn"
+     ],
+     [
+      "img:images/items/iron-sword.png|Iron",
+      "30",
+      "21",
+      "40.5 + 15 burn"
+     ],
+     [
+      "img:images/items/diamond-sword.png|Diamond",
+      "42",
+      "29.4",
+      "56.7 + 15 burn"
+     ],
+     [
+      "img:images/items/emerald-sword.png|Emerald",
+      "55",
+      "38.5",
+      "74.25 + 15 burn"
+     ]
+    ],
+    "note": "Burn is 3 damage per second for 5 seconds. No armor."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Chip, then ult",
+    "text": "Land 1–2 Dragon Swords, then use the Ultimate for more damage."
+   },
+   {
+    "title": "Don't get baited",
+    "text": "Don't use your swords when enemies are 7–9 blocks away. They can easily step out and make you waste them all."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Bait the Ultimate",
+    "text": "Step into Lian's range, then quickly step back out to make it waste its Ultimate."
+   },
+   {
+    "title": "Punish the ult",
+    "text": "If you're going to get hit anyway, rush the Lian: it can't attack for 1 second after using its Ultimate."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Jiangshi Skin",
+    "img": "images/skins/lian-jiangshi.webp"
+   },
+   {
+    "name": "Dragon Sword Skin",
+    "img": "images/skins/lian-dragon-sword.webp"
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "Its damage is good, but Dragon Sword's tiny range holds it back. Nobody uses it, because the Ultimate has the same range and hits an area. With a 12 or 15 block range, Dragon Sword would be much more useful."
  },
  {
   "name": "Lucía",
