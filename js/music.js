@@ -160,20 +160,32 @@
       layer.appendChild(el);
       B.push({el:el, x:Math.random(), y:0.15+Math.random()*0.7, a:Math.random()*6.28, sp:0.025+Math.random()*0.02, ph:Math.random()*6.28, fl:9+Math.random()*4, s:s, wob:Math.random()*100});
     }
+    function reset(b, first){
+      b.x = first ? Math.random()*0.9 : -0.06 - Math.random()*0.25;   // start off the left edge (spread out at first load)
+      b.y0 = 0.2 + Math.random()*0.6; b.amp = 0.06 + Math.random()*0.1;
+      b.sp = 0.018 + Math.random()*0.012;                               // share of the header width per second
+      b.bob = 0.6 + Math.random()*0.5; b.bp = Math.random()*6.28;
+    }
+    B.forEach(function(b){ reset(b, true); });
     var last = performance.now();
     function tick(now){
       var dt = Math.min(0.05,(now-last)/1000); last = now;
-      flight += (flightTarget-flight)*Math.min(1,dt*1.5);
+      flight += (flightTarget-flight)*Math.min(1,dt*1.2);
+      var live = (flight-1)/0.9;                                          // 0 = calm, 1 = music playing
       var W = head.clientWidth, H = head.clientHeight;
       B.forEach(function(b){
-        b.wob += dt; b.a += (Math.sin(b.wob*0.9)+Math.sin(b.wob*0.37+b.s*5))*0.6*dt*flight;
-        var v = b.sp*flight;
-        b.x += Math.cos(b.a)*v*dt*(H/W)*3; b.y += Math.sin(b.a)*v*dt*3 + Math.sin(b.ph)*0.002*flight;
-        if(b.x<-0.05) b.x = 1.05; if(b.x>1.05) b.x = -0.05;
-        if(b.y<0.08){ b.y = 0.08; b.a = Math.abs(b.a)%6.28; } if(b.y>0.92){ b.y = 0.92; b.a = -Math.abs(b.a)%6.28; }
-        b.ph += dt*b.fl*(0.75+0.45*flight);
-        var f = 0.25+0.75*Math.abs(Math.cos(b.ph)), dir = Math.cos(b.a)<0 ? -1 : 1, tilt = Math.sin(b.a)*20;
-        b.el.style.transform = "translate("+(b.x*W-14)+"px,"+(b.y*H-11)+"px) scale("+(b.s*dir)+","+b.s+") rotate("+(tilt*dir)+"deg)";
+        b.x += b.sp*(1+0.6*live)*dt;
+        b.bp += dt*b.bob*(1+0.8*live);
+        var amp = b.amp*(1+0.6*live);
+        var y = b.y0 + Math.sin(b.bp)*amp + Math.sin(b.bp*2.3+b.s*7)*amp*0.25;
+        y = Math.max(0.08, Math.min(0.92, y));
+        if(b.x > 1.04) reset(b, false);
+        var op = b.x < 0 ? 0 : b.x < 0.08 ? b.x/0.08 : b.x > 0.8 ? Math.max(0,(1-b.x)/0.2) : 1;
+        var vy = Math.cos(b.bp)*amp*b.bob, tilt = Math.max(-25, Math.min(25, vy*160));
+        b.ph += dt*b.fl*(0.8+0.6*live);
+        var f = 0.25+0.75*Math.abs(Math.cos(b.ph));
+        b.el.style.opacity = (op*0.9).toFixed(3);
+        b.el.style.transform = "translate("+(b.x*W-17)+"px,"+(y*H-13)+"px) scale("+b.s+") rotate("+(90+tilt)+"deg)";
         b.el.style.setProperty("--f", f.toFixed(3));
       });
       requestAnimationFrame(tick);
