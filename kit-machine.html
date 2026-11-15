@@ -165,6 +165,8 @@ html,body{overflow-x:hidden}
 .cost.emerald b{background-image:linear-gradient(90deg,#b6ffd2,#4be08a 55%,#1fa862)}
 .cost.iron{background:rgba(220,225,235,.1);border-color:rgba(230,235,245,.3)}
 .cost.iron b{background-image:linear-gradient(90deg,#ffffff,#d5d9e0 55%,#9aa1ac)}
+.cost.diamond{background:rgba(90,170,230,.12);border-color:rgba(130,200,245,.38)}
+.cost.diamond b{background-image:linear-gradient(90deg,#e2f4ff,#7cc4f2 55%,#3e8fd0)}
 .calc input{width:96px;background:var(--soft);color:inherit;font:inherit;border:1px solid rgba(255,255,255,.2);border-radius:10px;padding:6px 10px}
 .calc .cres{font-size:1.4rem;margin-left:6px}
 .calc .cnote{font-size:.85rem;opacity:.7;margin-left:6px}
@@ -514,10 +516,10 @@ function obtainHtml(k){
   return '<div class="stat wide obtain"><span>Obtain</span><div class="osrc">'+(o.badge?'<img src="'+esc(o.badge)+'" alt="">':'')+'<b>'+src+'</b></div>'+lines+'</div>';
 }
 function costHtml(n){
-  var m = /^Cost:\s*(\d+)\s*(iron|emeralds?)\s*$/i.exec(n);
+  var m = /^Cost:\s*(\d+)\s*(iron|emeralds?|diamonds?)\s*$/i.exec(n);
   if(!m) return '<div class="cond">'+esc(n)+'</div>';
-  var cur = m[2].toLowerCase().charAt(0)==='e' ? 'emerald' : 'iron';
-  return '<div class="cost '+cur+'"><img src="images/currency/'+cur+'.png" alt=""><b>Cost: '+m[1]+' '+(cur==='emerald'?(m[1]==='1'?'emerald':'emeralds'):'iron')+'</b></div>';
+  var c0 = m[2].toLowerCase().charAt(0), cur = c0==='e' ? 'emerald' : c0==='d' ? 'diamond' : 'iron';
+  return '<div class="cost '+cur+'"><img src="images/currency/'+cur+'.png" alt=""><b>Cost: '+m[1]+' '+(cur==='iron'?'iron':cur+(m[1]==='1'?'':'s'))+'</b></div>';
 }
 function calcVal(c,n){
   if(!(n>0)) return {v:c.base||0,exact:true};
