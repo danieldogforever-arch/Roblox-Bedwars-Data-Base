@@ -14084,11 +14084,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Use your Defense Scanner to instantly purchase blocks in the Defense Schematic shown around your team's bed. Can place two Tesla Traps.",
-  "adv": "",
+  "adv": "Marcel is free for everyone. It spawns with the Defense Scanner, which outlines a bed defense around your bed and builds it for you. Press Z to switch between its 3 modes: Place, Upgrade and Refund. It always starts in Place mode when you switch back to it.\nPlace: costs 1 iron to place 1–3 wool blocks in the outline. Once the first layer is done, you can keep placing more layers.\nUpgrade: turns up to 4 blocks at a time into the next tier. Wool to stone costs 2 iron for 1 block, 4 for 2, 5 for 3 and 7 for 4. Stone to obsidian always costs 1 emerald, however many blocks you upgrade.\nRefund: removes blocks and gives back resources: 1 iron for every 5 wool, 1 iron for every stone block, and 1 emerald for every 8 obsidian.\nYou can upgrade or refund any blocks you placed, so you can delete one of your bridges instantly. Marcel can also place 1 extra Tesla Coil (2 in total), and they cost 50 iron instead of 65.",
   "items": [
    {
     "name": "Defense Scanner",
-    "img": "images/items/defense-scanner.png"
+    "img": "images/items/defense-scanner.png",
+    "note": "Spawn with it, Z to switch modes",
+    "desc": "Place: 1 iron for 1–3 wool blocks in the outline. Upgrade: wool to stone (2 / 4 / 5 / 7 iron for 1–4 blocks), stone to obsidian (1 emerald). Refund: 1 iron per 5 wool or per stone block, 1 emerald per 8 obsidian."
    }
   ],
   "abilities": [],
@@ -14117,7 +14119,77 @@
   ],
   "obtain": {
    "src": "Free kit"
-  }
+  },
+  "passives": [
+   {
+    "name": "Tesla Expert",
+    "when": "Always",
+    "desc": "Place 1 extra Tesla Coil, and buy them for 50 iron instead of 65."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Defense Scanner costs",
+    "head": [
+     "Action",
+     "Cost or refund"
+    ],
+    "rows": [
+     [
+      "Place 1–3 wool",
+      "1 iron"
+     ],
+     [
+      "Wool → stone (1 / 2 / 3 / 4 blocks)",
+      "2 / 4 / 5 / 7 iron"
+     ],
+     [
+      "Stone → obsidian (up to 4 blocks)",
+      "1 emerald"
+     ],
+     [
+      "Refund wool",
+      "1 iron per 5 blocks"
+     ],
+     [
+      "Refund stone",
+      "1 iron per block"
+     ],
+     [
+      "Refund obsidian",
+      "1 emerald per 8 blocks"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Obsidian first layer",
+    "text": "Always make the first layer obsidian, then upgrade the rest of the defense to stone."
+   },
+   {
+    "title": "Delete the bridge",
+    "text": "Fight on your own bridge and refund it to instantly drop enemies standing on it."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Expect more Teslas",
+    "text": "There isn't much to counter, but Marcel's base will have more Tesla Coils than usual."
+   },
+   {
+    "title": "Watch your footing",
+    "text": "Be careful walking on bridges Marcel built, since it can delete them instantly."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Sub-Zero Expedition Skin",
+    "img": "images/skins/marcel-sub-zero-expedition.webp"
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "Everyone gets Marcel for free. It teaches players how to defend a bed and gives some perks to go with it. Not every kit needs to be great: it's a strong beginner kit, and good lobbies use it for an early bed defense without spending much time or resources."
  },
  {
   "name": "Marina",
