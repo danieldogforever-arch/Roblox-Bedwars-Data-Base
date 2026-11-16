@@ -14562,12 +14562,18 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Absorb life essence from nearby enemies and convert it to max hp! Attack is slower but passively reflects damage for melee hits to the enemy.",
-  "adv": "",
+  "adv": "Martin swings every sword a little slower than normal: every 0.33 seconds instead of 0.3.\nWild Growth (17 second cooldown) drains every enemy within 10 blocks. It ticks 10 times, 0.3 seconds apart, for 1 damage each (10 total, no armor penetration). On ticks 4, 7, 9 and 10 you heal 3, 3, 3 and 5 HP. Each enemy you drain also steals max HP for you, but the gain gets smaller the higher you go: +5 per enemy at first, down to +1 or nothing near the cap. Your max HP from Wild Growth tops out just under 150 (149 in tests); the Forest enchant can still push it past that. Dying doesn't lower your max HP.\nUsing Wild Growth on players also builds up Thorns, which hits back anyone who melees you: 1 damage after 1 player hit, 2 after 2, 3 after 5, 4 after 8, and 5 (the max) after 12. Each player you hit counts, so draining 12 players at once gets max Thorns right away.",
   "items": [],
   "abilities": [
    {
     "name": "Wild Growth",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "10 block radius",
+    "desc": "Drain enemies within 10 blocks: 10 ticks of 1 damage (no armor penetration), healing 14 HP in total and stealing max HP (up to just under 150). Builds up Thorns.",
+    "cd": 17,
+    "dmg": 10,
+    "dmgText": "1 × 10 ticks",
+    "nodps": true
    }
   ],
   "history": [
@@ -14617,7 +14623,126 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Heavy Swings",
+    "when": "Always",
+    "desc": "All swords swing every 0.33 seconds instead of 0.3."
+   },
+   {
+    "name": "Thorns",
+    "when": "Getting hit in melee",
+    "desc": "Hits back for 1–5 damage, growing as you use Wild Growth on players (5 at 12 player hits)."
+   },
+   {
+    "name": "Life Steal",
+    "when": "Wild Growth hits a player",
+    "desc": "Gain max HP (+5 at first, less as you go), up to just under 150. Kept when you die."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Max HP growth (one enemy per cast)",
+    "head": [
+     "Casts",
+     "0",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8",
+     "9",
+     "10",
+     "11",
+     "12",
+     "13",
+     "14",
+     "15",
+     "16"
+    ],
+    "rows": [
+     [
+      "Max HP",
+      "100",
+      "105",
+      "110",
+      "115",
+      "119",
+      "122",
+      "126",
+      "128",
+      "131",
+      "133",
+      "135",
+      "137",
+      "139",
+      "140",
+      "142",
+      "142",
+      "143"
+     ]
+    ],
+    "note": "From tests. It keeps slowing down and caps at 149."
+   },
+   {
+    "title": "Thorns",
+    "head": [
+     "Player hits with Wild Growth",
+     "1",
+     "2–4",
+     "5–7",
+     "8–11",
+     "12+"
+    ],
+    "rows": [
+     [
+      "Thorn damage",
+      "1",
+      "2",
+      "3",
+      "4",
+      "5"
+     ]
+    ]
+   }
+  ],
+  "ehp": {
+   "title": "True HP calculator",
+   "start": 140,
+   "note": "How much damage it takes to kill you, with no armor penetration. Martin can reach about 149 max HP with Wild Growth (more with Forest)."
+  },
+  "strategy": [
+   {
+    "title": "Use it when pushing",
+    "text": "Use Wild Growth when pushing enemies: more max HP, plus free healing and damage during the fight."
+   },
+   {
+    "title": "Big groups",
+    "text": "Use it on big groups of enemies. Each one drained counts, and dying doesn't lower your max HP."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Leave its range",
+    "text": "Back up or build up out of its 10 block range, so it doesn't get the extra HP and healing."
+   },
+   {
+    "title": "Fight it early",
+    "text": "Fight it before it builds up its max HP. Its slower sword makes it hard for Martin to win early."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Day of the Dead Skin",
+    "img": "images/skins/martin-day-of-the-dead.webp"
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "The slower sword makes it a pain to use and it's bad early game. But late game, with around 140 HP, Thorns and the extra healing, it's pretty good. Not as good as other tanks, but still good."
  },
  {
   "name": "Melody",
