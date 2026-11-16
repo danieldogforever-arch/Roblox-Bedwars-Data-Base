@@ -87,3 +87,30 @@
 .site-foot p{margin:4px 0}
 .site-foot a{color:#cbb8ff}
 @media print{.site-foot{padding-bottom:18px}}
+
+/* ===== Modern box style (overrides the old thick white outlines) ===== */
+:root{--mb-line:rgba(196,178,255,.18);--mb-line-hi:rgba(196,178,255,.55);--mb-bg:linear-gradient(180deg,rgba(44,26,98,.62),rgba(18,9,50,.72));--mb-shadow:0 12px 32px rgba(4,0,22,.38),inset 0 1px 0 rgba(255,255,255,.07)}
+html body .box,html body .stage,html body .side,html body .res,html body .intro,html body a.tool,
+html body .controls,html body .up,html body main>section,html body .skpanel,html body .bwm-card{
+  border:1px solid var(--mb-line);border-radius:20px;background:var(--mb-bg);box-shadow:var(--mb-shadow);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+html body .tile,html body .steps,html body .mini,html body .reel{border:1px solid var(--mb-line);border-radius:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)}
+html body a.tool{transition:transform .15s ease,border-color .15s ease,box-shadow .15s ease}
+html body a.tool:hover{transform:translateY(-3px);border-color:var(--mb-line-hi);box-shadow:0 16px 38px rgba(4,0,22,.5),0 0 0 1px var(--mb-line-hi)}
+/* pictures */
+html body .pic{border:1px solid var(--mb-line);border-radius:20px;overflow:hidden;box-shadow:var(--mb-shadow);background:radial-gradient(circle at 50% 35%,rgba(120,80,230,.35),rgba(18,9,50,.9) 70%)}
+html body .th,html body .sk .th{border:1px solid var(--mb-line);border-radius:12px;overflow:hidden}
+html body .sk.on .th{border-color:var(--mb-line-hi);box-shadow:0 0 0 2px var(--mb-line-hi)}
+/* search boxes */
+html body #q,html body #find{border:1px solid var(--mb-line);border-radius:14px;background:rgba(18,9,50,.75);box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+html body #q:focus,html body #find:focus{outline:none;border-color:var(--mb-line-hi);box-shadow:0 0 0 3px rgba(169,139,255,.25)}
+/* small buttons and tips */
+html body .wbtn,html body .go,html body .bwm-fab{border:1px solid var(--mb-line-hi)}
+html body .baltip{border:1px solid var(--mb-line);border-radius:12px;box-shadow:var(--mb-shadow)}
+/* hovers that used to flash pure white borders */
+html body .sitem:hover,html body .card:hover,html body .btn:hover,html body .mbtn:hover,html body .tbtn:hover,html body .songbtn:hover,
+html body .pctrl button:hover,html body .toc a:hover,html body .done a:hover,html body .sbtn:hover,html body .more:hover,html body .bwm-ctl button:hover{border-color:var(--mb-line-hi)}
+html body .card{transition:transform .15s ease,border-color .15s ease}
+html body .card:hover{transform:translateY(-2px)}
+html body .latest{border:1px solid rgba(255,209,102,.55);border-radius:20px;box-shadow:0 12px 32px rgba(4,0,22,.38),inset 0 1px 0 rgba(255,255,255,.07)}
+html body .latest:hover{border-color:rgba(255,209,102,.9)}
