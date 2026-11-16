@@ -12830,31 +12830,37 @@
     "title": "Ice skating speed",
     "head": [
      "Momentum",
-     "Blocks per second",
-     "Compared to normal sprinting"
+     "24 blocks in",
+     "Compared to normal walking"
     ],
     "rows": [
      [
-      "1",
-      "5.35",
-      "5% slower"
+      "0 → 1 bar",
+      "3.75s",
+      "~7.5% slower"
      ],
      [
-      "2",
-      "6.2",
-      "10% faster"
+      "1 → 2 bars",
+      "3.25s",
+      "~7.5% faster"
      ],
      [
-      "3",
-      "7",
-      "25% faster"
+      "2 → 3 bars",
+      "2.9s",
+      "~20% faster"
      ],
      [
-      "4 (max)",
-      "7.5",
-      "33% faster"
+      "3 → 4 bars",
+      "2.75s",
+      "~27.5% faster"
+     ],
+     [
+      "Max (4 bars)",
+      "2.5s (96 blocks in 10s)",
+      "~40% faster"
      ]
-    ]
+    ],
+    "note": "From tests. Normal walking covers 24 blocks in about 3.5 seconds."
    }
   ],
   "strategy": [
