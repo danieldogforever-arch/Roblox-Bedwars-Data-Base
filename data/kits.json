@@ -17554,22 +17554,30 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Summon your mount, charge at your enemies and send them flying! Cannot use weapons while riding the Elk.",
-  "adv": "",
+  "adv": "Sigrid's energy bar has 3 sections, and each takes 10 seconds to refill. You start the match with the first section 70% full.\nSummon the Elk to ride it. On the Elk you move about 47.5% faster than walking (from tests), take less knockback and can still break blocks, but you can't attack. Riding drains energy: one section every 5 seconds while moving (15 seconds for all 3), or every 9 seconds while standing still. After dismounting, you have to wait 5 seconds before mounting again. Grounded and Silence effects (like Gloop) stop you from mounting.\nCharge Attack (17 second cooldown) sends the Elk charging forward, starting fast and getting faster, up to about twice normal walking speed. A charge lasts up to 5 seconds and uses about half a section. Hitting an enemy deals 8 to 34 damage depending on how long you've been charging, and always knocks them 6 blocks up.",
   "items": [],
   "abilities": [
    {
     "name": "Elk Summon",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Ride the Elk: about 47.5% faster, less knockback, can break blocks but can't attack. Drains a section every 5 seconds moving or 9 seconds standing still."
    },
    {
     "name": "Dismount Elk",
     "note": "Only while on the Elk",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Get off the Elk. You have to wait 5 seconds to mount again.",
+    "cd": 5
    },
    {
     "name": "Charge Attack",
     "note": "Only while on the Elk",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Charge forward for up to 5 seconds, speeding up to about twice normal speed. Hits for 8 to 34 damage depending on charge time and knocks enemies 6 blocks up. Uses about half a section.",
+    "cd": 17,
+    "dmg": 34,
+    "dmgText": "8 – 34",
+    "nodps": true
    }
   ],
   "history": [
@@ -17730,7 +17738,101 @@
   "obtain": {
    "src": "Holiday Bundle 2023",
    "rent": 2500
-  }
+  },
+  "passives": [
+   {
+    "name": "Elk Energy",
+    "when": "Always",
+    "desc": "3 sections, 10 seconds each to refill. Start the match with the first one 70% full."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Sigrid speed",
+    "head": [
+     "",
+     "96 blocks",
+     "48 blocks",
+     "Speed"
+    ],
+    "rows": [
+     [
+      "Walking",
+      "14s",
+      "7s",
+      "Normal"
+     ],
+     [
+      "Riding the Elk",
+      "9.5–9.6s",
+      "—",
+      "~47.5% faster"
+     ],
+     [
+      "Charging",
+      "—",
+      "3.5–3.6s",
+      "~2× normal"
+     ]
+    ],
+    "note": "From tests."
+   },
+   {
+    "title": "Elk energy",
+    "head": [
+     "",
+     "Time"
+    ],
+    "rows": [
+     [
+      "Refill one section",
+      "10 seconds"
+     ],
+     [
+      "Drain while moving",
+      "5 seconds per section (15 for all 3)"
+     ],
+     [
+      "Drain standing still",
+      "9 seconds per section"
+     ],
+     [
+      "Charge",
+      "Up to 5 seconds, about half a section"
+     ],
+     [
+      "Remount after dismounting",
+      "5 seconds"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Charge for speed",
+    "text": "Early game, use Charge Attack from far away to build momentum: it takes you from good speed to insane speed. Remember a charge only lasts 5 seconds."
+   },
+   {
+    "title": "Axe and Elk",
+    "text": "Buy an axe and stay on the Elk while breaking beds, so you take less knockback."
+   },
+   {
+    "title": "Save blocks",
+    "text": "Sigrid can clear lots of gaps with a charge, so use it to save blocks."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Stay home early",
+    "text": "Stay near your base early in case a Sigrid rushes you."
+   },
+   {
+    "title": "Gloop it",
+    "text": "Throw Gloop so it can't mount and charge straight into your base."
+   }
+  ],
+  "bal": "sop",
+  "balWhy": "It's insanely fast, the fastest kit in the game on its own, and from spawn it can cross the map almost instantly. Early game its only real counter is Jack, which is broken itself; even Krystal has more counterplay. If it gets Glooped it can just wait it out and ride again, and a charged hit does good damage."
  },
  {
   "name": "Silas",
