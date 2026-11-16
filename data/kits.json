@@ -14562,7 +14562,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Absorb life essence from nearby enemies and convert it to max hp! Attack is slower but passively reflects damage for melee hits to the enemy.",
-  "adv": "Martin swings every sword a little slower than normal: every 0.33 seconds instead of 0.3.\nWild Growth (17 second cooldown) drains every enemy within 10 blocks. It ticks 10 times, 0.3 seconds apart, for 1 damage each (10 total, no armor penetration). On ticks 4, 7, 9 and 10 you heal 3, 3, 3 and 5 HP. Each enemy you drain also steals max HP for you, but the gain gets smaller the higher you go: +5 per enemy at first, down to +1 or nothing near the cap. Your max HP from Wild Growth tops out just under 150 (149 in tests); the Forest enchant can still push it past that. Dying doesn't lower your max HP.\nUsing Wild Growth on players also builds up Thorns, which hits back anyone who melees you: 1 damage after 1 player hit, 2 after 2, 3 after 5, 4 after 8, and 5 (the max) after 12. Each player you hit counts, so draining 12 players at once gets max Thorns right away.",
+  "adv": "Martin swings every sword a little slower than normal: every 0.33 seconds instead of 0.3.\nWild Growth (17 second cooldown) drains every enemy within 10 blocks. It ticks 10 times, 0.3 seconds apart, for 1 damage each (10 total, no armor penetration). On ticks 4, 7, 9 and 10 you heal 3, 3, 3 and 5 HP. Each enemy you drain also steals max HP for you, but the gain gets smaller the higher you go: +5 per enemy at first, down to +1 or nothing near the cap. Your max HP from Wild Growth tops out just under 150 (149 in tests); the Forest enchant can still push it past that. Dying doesn't lower your max HP.\nUsing Wild Growth on players also builds up Thorns, which hits back anyone who melees you: 1 damage after 1 player hit, 2 after 2, 3 after 5, 4 after 8, and 5 (the max) after 12. Each player you hit counts, so draining 12 players at once gets max Thorns right away. Thorns progress is kept when you die. (Whether armor reduces Thorns hasn't been tested yet.)",
   "items": [],
   "abilities": [
    {
@@ -14633,7 +14633,7 @@
    {
     "name": "Thorns",
     "when": "Getting hit in melee",
-    "desc": "Hits back for 1–5 damage, growing as you use Wild Growth on players (5 at 12 player hits)."
+    "desc": "Hits back for 1–5 damage, growing as you use Wild Growth on players (5 at 12 player hits). Kept when you die."
    },
    {
     "name": "Life Steal",
