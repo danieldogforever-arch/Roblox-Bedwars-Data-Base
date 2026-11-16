@@ -11435,7 +11435,8 @@
    }
   ],
   "obtain": {
-   "src": "Free kit"
+   "src": "Free kit",
+   "note": "Free for everyone. No BedCoins or renting needed."
   },
   "passives": [
    {
@@ -14118,7 +14119,8 @@
    }
   ],
   "obtain": {
-   "src": "Free kit"
+   "src": "Free kit",
+   "note": "Free for everyone. No BedCoins or renting needed."
   },
   "passives": [
    {
@@ -16808,12 +16810,15 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Use your Berserker Rage ability to increase break speed, reduce incoming damage and prevent incoming knockback to rush in on an enemy's bed defense.",
-  "adv": "",
+  "adv": "Ragnar is free for everyone and spawns with a Wooden Axe. Axes and pickaxes cost the same for Ragnar: Stone 15 iron, Iron 20 iron and Diamond 45 iron.\nBerserker's Rage lasts 7 seconds and has a 40 second cooldown. While it's active you deal 10% more damage, take 10% less damage and break blocks 25% faster. You also get 5 stacks of knockback resistance: each hit you take removes a stack, and once they're gone you take normal knockback.",
   "items": [],
   "abilities": [
    {
     "name": "Berserker's Rage",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Lasts 7 seconds",
+    "desc": "+10% damage, 10% less damage taken, 25% faster block breaking, and 5 stacks of knockback resistance (each hit you take removes one).",
+    "cd": 40
    }
   ],
   "history": [
@@ -16906,8 +16911,107 @@
    }
   ],
   "obtain": {
-   "src": "Free kit"
-  }
+   "src": "Free kit",
+   "note": "Free for everyone. No BedCoins or renting needed."
+  },
+  "passives": [
+   {
+    "name": "Free Axe",
+    "when": "Spawning",
+    "desc": "Start with a Wooden Axe."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Tool costs",
+    "head": [
+     "Tier",
+     "Axe",
+     "Pickaxe"
+    ],
+    "rows": [
+     [
+      "Wood",
+      "Spawn with it",
+      "—"
+     ],
+     [
+      "Stone",
+      "15 iron",
+      "15 iron"
+     ],
+     [
+      "Iron",
+      "20 iron",
+      "20 iron"
+     ],
+     [
+      "Diamond",
+      "45 iron",
+      "45 iron"
+     ]
+    ]
+   },
+   {
+    "title": "Berserker's Rage",
+    "head": [
+     "",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Duration",
+      "7 seconds"
+     ],
+     [
+      "Cooldown",
+      "40 seconds"
+     ],
+     [
+      "Damage dealt",
+      "+10%"
+     ],
+     [
+      "Damage taken",
+      "−10%"
+     ],
+     [
+      "Break speed",
+      "+25%"
+     ],
+     [
+      "Knockback resistance",
+      "5 stacks, −1 per hit taken"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Wooden axe rush",
+    "text": "Use the free Wooden Axe with Berserker's Rage to break beds early, and spend the 15 iron you'd use on a stone axe on blocks or a sword instead."
+   },
+   {
+    "title": "Skip the upgrades",
+    "text": "The ability barely helps after the Wooden Axe, so buy shears or more blocks instead of better axes."
+   },
+   {
+    "title": "Not a PvP kit",
+    "text": "Don't use Ragnar as a fighting kit."
+   }
+  ],
+  "counter": [
+   {
+    "title": "No real break boost",
+    "text": "Ragnar's ability doesn't help much with bed breaking past the Wooden Axe, unless it has break speed upgrades."
+   },
+   {
+    "title": "Wait out the rage",
+    "text": "If it tries to fight you, stall until its 7 seconds run out, then take it down."
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "New players don't use it much, but sweaty players do, and it's more of a fighting kit than Isabel: 7 seconds of extra damage, less knockback and more defense, compared to Isabel's shield that blocks part of one hit. It needs a rework."
  },
  {
   "name": "Ramil",
@@ -18575,7 +18679,8 @@
    }
   ],
   "obtain": {
-   "src": "Player Level 15 reward"
+   "src": "Player Level 15 reward",
+   "note": "Free at Player Level 15. Can't be rented."
   }
  },
  {
@@ -20599,7 +20704,8 @@
    }
   ],
   "obtain": {
-   "src": "Player Level reward"
+   "src": "Player Level 10 reward",
+   "note": "Free at Player Level 10. Can't be rented."
   }
  },
  {
