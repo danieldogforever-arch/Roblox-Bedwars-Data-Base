@@ -199,8 +199,15 @@
     open = true; ls("bwMusicOpen",true); var w = $("bwm"); if(w){ w.className = "open"; $("bwmFab").setAttribute("aria-expanded",true); }
     wantPlay = true; if(i===cur && playing){ fadeTo(0,.4,function(){ audio.currentTime=0; fadeTo(1,1.2); }); } else go(i);
   } };
+  function footer(){
+    if(document.querySelector(".site-foot")) return;
+    var f = document.createElement("footer"); f.className = "site-foot";
+    f.innerHTML = '<p>Bedwars User Guide is an unofficial fan site, not affiliated with or endorsed by Roblox Corporation or Easy.gg. Game content belongs to its owners.</p>'+
+      '<p>© 2026 Bedwars User Guide · <a href="legal.html">Terms, Privacy &amp; Credits</a> · Music by <a href="'+LINK+'" target="_blank" rel="noopener noreferrer">'+ARTIST+'</a></p>';
+    document.body.appendChild(f);
+  }
   function init(){
-    build(); butterflies();
+    build(); butterflies(); footer();
     if(sess.i!=null){ cur = Math.min(sess.i, TRACKS.length-1); }
     render();
     if(wantPlay){ load(cur, sess.t||0); play(); }
