@@ -193,6 +193,12 @@
     if(N) requestAnimationFrame(tick);
   }
 
+  window.BWMusic = { playTitle: function(t){
+    var i = -1; TRACKS.forEach(function(x,j){ if(x.t===t) i = j; }); if(i<0) return;
+    var k = off.indexOf(t); if(k>=0){ off.splice(k,1); ls("bwMusicOff",off); renderList(); }
+    open = true; ls("bwMusicOpen",true); var w = $("bwm"); if(w){ w.className = "open"; $("bwmFab").setAttribute("aria-expanded",true); }
+    wantPlay = true; if(i===cur && playing){ fadeTo(0,.4,function(){ audio.currentTime=0; fadeTo(1,1.2); }); } else go(i);
+  } };
   function init(){
     build(); butterflies();
     if(sess.i!=null){ cur = Math.min(sess.i, TRACKS.length-1); }

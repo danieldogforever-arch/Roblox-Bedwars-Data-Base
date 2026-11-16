@@ -14756,11 +14756,14 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Use a guitar and the power of music to heal nearby teammates. Heal yourself for 50% [sic] of the heal given.",
-  "adv": "",
+  "adv": "Melody can buy the Guitar for 16 iron and keeps it forever. Hold it out for at least 0.25 seconds to heal one teammate within 18 blocks for 13 HP, once per second. It heals through walls, and you heal yourself for 90% of what you heal them. You can still attack while healing, and the Guitar plays a song that depends on your skin.",
   "items": [
    {
     "name": "Guitar",
-    "img": "images/items/guitar.png"
+    "img": "images/items/guitar.png",
+    "note": "16 iron, keep forever",
+    "desc": "Heals one teammate within 18 blocks for 13 HP every second, through walls. You heal 90% of that too. Hold it out at least 0.25 seconds to heal.",
+    "cd": 1
    }
   ],
   "abilities": [],
@@ -14929,7 +14932,57 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Encore",
+    "when": "Healing a teammate",
+    "desc": "You heal yourself for 90% of the healing (about 11.7 HP)."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Fight and heal",
+    "text": "Don't hang back healing. Fight alongside your teammates and heal them at the same time."
+   },
+   {
+    "title": "Flick between items",
+    "text": "Swap between your sword and the Guitar every second, holding the Guitar a little longer (at least 0.25 seconds) so the heal goes through."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Cut the healing",
+    "text": "Use Static damage or Tesla Coils to cut Melody's healing."
+   },
+   {
+    "title": "Target Melody",
+    "text": "Go for the Melody first so the main attacker loses its healing."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Rockstar Skin",
+    "img": "images/skins/melody-rockstar.webp"
+   },
+   {
+    "name": "Holiday Cozy Skin",
+    "img": "images/skins/melody-holiday-cozy.webp",
+    "song": "Festive Melody"
+   },
+   {
+    "name": "Siren Skin",
+    "img": "images/skins/melody-siren.webp",
+    "song": "Siren Melody"
+   },
+   {
+    "name": "Scarecrow Skin",
+    "img": "images/skins/melody-scarecrow.webp",
+    "song": "Scarecrow Melody"
+   }
+  ],
+  "bal": "sop",
+  "balWhy": "16 iron for a Guitar you never lose is crazy with everything it gives: you can fight with it, heal yourself while healing teammates, and heal through walls."
  },
  {
   "name": "Merchant Marco",
