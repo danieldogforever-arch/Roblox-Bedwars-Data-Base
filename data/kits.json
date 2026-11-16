@@ -21970,12 +21970,20 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Connect enemies with soul links! Damage dealt to linked enemies incurs bonus damage to any other linked enemies. Allies can also be linked, allowing you to take damage in their place.",
-  "adv": "",
+  "adv": "Soul Link (1 second cooldown) attaches you to a teammate or an enemy within 17 blocks. You can link up to 8 teammates and 8 enemies at once. Links break if they get more than 66 blocks away, and Clear All Links removes them all.\nLinked teammates take 50% less damage, and you take the other half. For example, a wood sword hit (20) on a linked teammate deals 10 to them and 10 to you. Your half is reduced by your own armor, and effects like Fire also spread to you. Every linked teammate always gets the full 50%, no matter how many you link.\nLinked enemies share damage: when one gets hit, the damage is split evenly between all of them. With 2 linked, a 20 damage hit deals 10 to each; with 8 linked, it deals 2.5 to each.",
   "items": [],
   "abilities": [
    {
     "name": "Soul Link",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Within 17 blocks",
+    "desc": "Link a teammate (they take 50% less damage, you take the other half) or an enemy (damage is split between all linked enemies). Up to 8 of each. Breaks past 66 blocks.",
+    "cd": 1
+   },
+   {
+    "name": "Clear All Links",
+    "img": "images/abilities/ability-template.png",
+    "desc": "Remove every link at once."
    }
   ],
   "obtain": {
@@ -21984,6 +21992,67 @@
    "badge": "images/bp/easter-2026.webp",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Shared Burden",
+    "when": "Linked teammate takes damage",
+    "desc": "They take half, you take half (reduced by your armor). Effects like Fire spread to you too."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Damage split between linked enemies",
+    "head": [
+     "Enemies linked",
+     "2",
+     "3",
+     "4",
+     "5",
+     "6",
+     "7",
+     "8"
+    ],
+    "rows": [
+     [
+      "Each takes (20 damage hit)",
+      "10",
+      "6.67",
+      "5",
+      "4",
+      "3.33",
+      "2.86",
+      "2.5"
+     ]
+    ],
+    "note": "From tests with a wood sword on enemies with no armor. The hit's damage is split evenly between everyone linked."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "One teammate, many enemies",
+    "text": "Only link 1 teammate, and link enemies whenever you can, unless you're in danger."
+   },
+   {
+    "title": "Stay back",
+    "text": "Stay far back, and unlink when you get low so you don't die from your teammate's hits."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Focus Zola",
+    "text": "If Zola is far back, go after it."
+   },
+   {
+    "title": "Don't fight the linked teammate",
+    "text": "A teammate linked to Zola takes half damage, so you'll probably just feed it. Go for Zola instead."
+   },
+   {
+    "title": "Fire and Static",
+    "text": "Fire and Static enchants stop it from regenerating HP."
+   }
+  ],
+  "bal": "sop",
+  "balWhy": "Doubling a teammate's tankiness is insane, you get it for free, and there's no real counter like Static has for healing kits."
  }
 ]
