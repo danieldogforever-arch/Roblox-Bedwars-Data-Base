@@ -14996,12 +14996,14 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Get resources back on certain item shop purchases! This refund is randomized each game!",
-  "adv": "",
+  "adv": "Merchant Marco starts the match with 15 iron. Every match, 12 shop items get a coin, and your sword is always one of them on top of that. Each coin has a 50/50 chance to be silver or gold:\nSilver coin: get 25% of the price back when you buy it.\nGold coin: get 50% back. For example, an 8 emerald item with a gold coin gives you 4 emeralds back.\nSword and armor tiers can each roll their own coin, so diamond could be silver while emerald armor is gold. Tools are never discounted, and neither are obsidian, Telepearls or other kits' items (like Farmer Cletus's crops). Your teammates also get the discounts, but their sword isn't always included.\nUse Reroll to shuffle which items have coins. It has a 180 second cooldown.",
   "items": [],
   "abilities": [
    {
     "name": "Reroll",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Shuffle which 12 items have silver or gold coins.",
+    "cd": 180
    }
   ],
   "history": [
@@ -15096,7 +15098,60 @@
    "tier": "10 (free)",
    "badge": "images/bp/s5.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Head Start",
+    "when": "Match start",
+    "desc": "Start with 15 iron."
+   },
+   {
+    "name": "Coin Discounts",
+    "when": "Buying a coin item",
+    "desc": "12 items (plus your sword) give back 25% (silver) or 50% (gold) of their price. Teammates get the discounts too."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Coins",
+    "head": [
+     "Coin",
+     "Refund",
+     "Chance"
+    ],
+    "rows": [
+     [
+      "Silver",
+      "25% of the price",
+      "50%"
+     ],
+     [
+      "Gold",
+      "50% of the price",
+      "50%"
+     ]
+    ],
+    "note": "Never discounted: tools, obsidian, Telepearls and other kits' items."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Use the starting iron",
+    "text": "Early on, give your 15 iron to a teammate (if you know them), or spend it on extra blocks for a head start."
+   },
+   {
+    "title": "Reroll for what you need",
+    "text": "Reroll until the items you want, like a diamond sword or crossbow, have gold coins. Gold on blocks is the best, since you'll buy those the most."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Be ready early",
+    "text": "There's no real counter. Just expect a Merchant Marco to fight early, thanks to its starting iron."
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "It's mainly used in modes where games end quickly, since it can feed iron to teammates or rush teams faster. It's okay, but it doesn't bring anything special to a team, and it needs a rework."
  },
  {
   "name": "Metal Detector",
