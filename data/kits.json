@@ -17554,13 +17554,13 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Summon your mount, charge at your enemies and send them flying! Cannot use weapons while riding the Elk.",
-  "adv": "Sigrid's energy bar has 3 sections, and each takes 10 seconds to refill. You start the match with the first section 70% full.\nSummon the Elk to ride it. On the Elk you move about 47.5% faster than walking (from tests), take less knockback and can still break blocks, but you can't attack. Riding drains energy: one section every 5 seconds while moving (15 seconds for all 3), or every 9 seconds while standing still. After dismounting, you have to wait 5 seconds before mounting again. Grounded and Silence effects (like Gloop) stop you from mounting.\nCharge Attack (17 second cooldown) sends the Elk charging forward, starting fast and getting faster, up to about twice normal walking speed. A charge lasts up to 5 seconds and uses about half a section. Hitting an enemy deals 8 to 34 damage depending on how long you've been charging, and always knocks them 6 blocks up.",
+  "adv": "Sigrid's energy has 3 bars, and each takes 10 seconds to refill. You start the match with the first bar 70% full.\nSummon the Elk to ride it. On the Elk you move about 47.5% faster than walking (from tests), take less knockback and can still break blocks, but you can't attack. Riding drains 1 bar every 5 seconds while moving (15 seconds for all 3), or 1 bar every 9 seconds while standing still. After dismounting, you have to wait 5 seconds before mounting again. Grounded and Silence effects (like Gloop) stop you from mounting.\nCharge Attack (17 second cooldown) sends the Elk charging forward, starting fast and getting faster, up to about 100% faster than walking. A charge lasts up to 5 seconds and drains 50% of all 3 bars (1.5 bars). Hitting an enemy deals 8 to 35 damage, rising the longer you've been charging, and always knocks them 6 blocks up. The charge has about 60% armor penetration (from tests).",
   "items": [],
   "abilities": [
    {
     "name": "Elk Summon",
     "img": "images/abilities/ability-template.png",
-    "desc": "Ride the Elk: about 47.5% faster, less knockback, can break blocks but can't attack. Drains a section every 5 seconds moving or 9 seconds standing still."
+    "desc": "Ride the Elk: about 47.5% faster, less knockback, can break blocks but can't attack. Drains 1 bar every 5 seconds while moving, or every 9 seconds standing still."
    },
    {
     "name": "Dismount Elk",
@@ -17573,10 +17573,10 @@
     "name": "Charge Attack",
     "note": "Only while on the Elk",
     "img": "images/abilities/ability-template.png",
-    "desc": "Charge forward for up to 5 seconds, speeding up to about twice normal speed. Hits for 8 to 34 damage depending on charge time and knocks enemies 6 blocks up. Uses about half a section.",
+    "desc": "Charge forward for up to 5 seconds, speeding up to about 100% faster than walking. Hits for 8 to 35 damage depending on charge time (about 60% armor penetration) and knocks enemies 6 blocks up. Drains 50% of all 3 bars in 5 seconds.",
     "cd": 17,
-    "dmg": 34,
-    "dmgText": "8 – 34",
+    "dmg": 35,
+    "dmgText": "8 – 35",
     "nodps": true
    }
   ],
@@ -17743,7 +17743,7 @@
    {
     "name": "Elk Energy",
     "when": "Always",
-    "desc": "3 sections, 10 seconds each to refill. Start the match with the first one 70% full."
+    "desc": "3 bars, 10 seconds each to refill. Start the match with the first one 70% full."
    }
   ],
   "tables": [
@@ -17765,46 +17765,70 @@
      [
       "Riding the Elk",
       "9.5–9.6s",
-      "—",
+      "4.75s",
       "~47.5% faster"
      ],
      [
       "Charging",
-      "—",
+      "7–7.2s",
       "3.5–3.6s",
-      "~2× normal"
+      "~100% faster"
      ]
     ],
     "note": "From tests."
    },
    {
-    "title": "Elk energy",
+    "title": "Elk energy (3 bars)",
     "head": [
-     "",
-     "Time"
+     "Doing",
+     "Energy"
     ],
     "rows": [
      [
-      "Refill one section",
-      "10 seconds"
+      "Not riding",
+      "Refills 1 bar every 10 seconds"
      ],
      [
-      "Drain while moving",
-      "5 seconds per section (15 for all 3)"
+      "Riding while moving",
+      "Drains 1 bar in 5 seconds"
      ],
      [
-      "Drain standing still",
-      "9 seconds per section"
+      "Riding while standing still",
+      "Drains 1 bar in 9 seconds"
      ],
      [
-      "Charge",
-      "Up to 5 seconds, about half a section"
+      "Charging",
+      "Drains 50% of all 3 bars (1.5 bars) in 5 seconds"
      ],
      [
-      "Remount after dismounting",
-      "5 seconds"
+      "After dismounting",
+      "Can't mount again for 5 seconds"
      ]
     ]
+   },
+   {
+    "title": "Charge damage",
+    "head": [
+     "Charging for",
+     "0s",
+     "1s",
+     "2s",
+     "3s",
+     "4s",
+     "5s"
+    ],
+    "rows": [
+     [
+      "Damage",
+      "8",
+      "~13.4",
+      "~18.8",
+      "~24.2",
+      "~29.6",
+      "35"
+     ]
+    ],
+    "note": "8 at the start and 35 at a full 5 second charge (from tests); the in-between values assume it rises evenly. About 60% armor penetration: a full charge did 23.38 to iron armor."
    }
   ],
   "strategy": [
