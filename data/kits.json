@@ -21970,14 +21970,14 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Connect enemies with soul links! Damage dealt to linked enemies incurs bonus damage to any other linked enemies. Allies can also be linked, allowing you to take damage in their place.",
-  "adv": "Soul Link (1 second cooldown) attaches you to a teammate or an enemy within 17 blocks. You can link up to 8 teammates and 8 enemies at once. Links break if they get more than 66 blocks away, and Clear All Links removes them all.\nLinked teammates take 50% less damage, and you take the other half. For example, a wood sword hit (20) on a linked teammate deals 10 to them and 10 to you. Your half is reduced by your own armor, and effects like Fire also spread to you. Every linked teammate always gets the full 50%, no matter how many you link.\nLinked enemies share damage: when one gets hit, the damage is split evenly between all of them. With 2 linked, a 20 damage hit deals 10 to each; with 8 linked, it deals 2.5 to each.",
+  "adv": "Soul Link (1 second cooldown) attaches you to a teammate or an enemy within 17 blocks. You can't link yourself. You can link up to 8 teammates and 8 enemies at once. Links last 2 minutes before you have to link again, break if they get more than 66 blocks away, and Clear All Links removes them all.\nLinked teammates take 50% less damage, and you take the other half. For example, a wood sword hit (20) on a linked teammate deals 10 to them and 10 to you. Your half is reduced by your own armor, it can kill you, and effects like Fire spread to you too. Every linked teammate always gets the full 50%, no matter how many you link.\nLinked enemies share damage: when anyone hits one of them (you, a teammate or even another enemy), that enemy takes the normal damage, and every other linked enemy takes bonus damage equal to the hit divided by how many are linked. With 2 linked, a 20 damage hit gives the others 10 each; with 8 linked, 2.5 each.",
   "items": [],
   "abilities": [
    {
     "name": "Soul Link",
     "img": "images/abilities/ability-template.png",
     "note": "Within 17 blocks",
-    "desc": "Link a teammate (they take 50% less damage, you take the other half) or an enemy (damage is split between all linked enemies). Up to 8 of each. Breaks past 66 blocks.",
+    "desc": "Link a teammate (they take 50% less damage, you take the other half) or an enemy (hits on one deal bonus damage to the other linked enemies). Up to 8 of each. Lasts 2 minutes, breaks past 66 blocks. Can't link yourself.",
     "cd": 1
    },
    {
@@ -21997,12 +21997,12 @@
    {
     "name": "Shared Burden",
     "when": "Linked teammate takes damage",
-    "desc": "They take half, you take half (reduced by your armor). Effects like Fire spread to you too."
+    "desc": "They take half, you take half (reduced by your armor). Your half can kill you, and effects like Fire spread to you too."
    }
   ],
   "tables": [
    {
-    "title": "Damage split between linked enemies",
+    "title": "Bonus damage to other linked enemies",
     "head": [
      "Enemies linked",
      "2",
@@ -22015,7 +22015,7 @@
     ],
     "rows": [
      [
-      "Each takes (20 damage hit)",
+      "Each other linked enemy takes (20 damage hit)",
       "10",
       "6.67",
       "5",
@@ -22025,7 +22025,7 @@
       "2.5"
      ]
     ],
-    "note": "From tests with a wood sword on enemies with no armor. The hit's damage is split evenly between everyone linked."
+    "note": "From tests with a wood sword on enemies with no armor. The enemy that's hit takes the normal 20; every other linked enemy takes 20 divided by how many are linked. Anyone's hits count, not just Zola's."
    }
   ],
   "strategy": [
