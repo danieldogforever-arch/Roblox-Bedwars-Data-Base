@@ -15584,7 +15584,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Killing enemies turns them into stone. The Miner can break down the stone for valuables[sic]'’ resources (scaled by the price of enemy's armor + sword). Unable to purchase Axes.",
-  "adv": "",
+  "adv": "When Miner kills an enemy, they turn into a stone statue. Mine it for 2 seconds to get loot based on the enemy's armor and sword: the better their gear, the bigger the reward. Rewards are a little random, so the same gear can give a bit more or less. Each enemy can only become a statue again 20 seconds after they respawn. Miner can't buy axes.\nArmor and sword rewards add up: an enemy in emerald armor with an emerald sword gives about the same as both rewards together (see the table). Void Knights, Hephaestus and Eldertrees also give extra loot, and Void Knights give a lot, since they spawn with strong gear.",
   "items": [],
   "abilities": [],
   "history": [
@@ -15677,7 +15677,144 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Petrify",
+    "when": "Killing an enemy",
+    "desc": "They turn into a statue. Mine it for 2 seconds for loot based on their armor and sword. 20 seconds before the same enemy can become a statue again after respawning."
+   },
+   {
+    "name": "No Axes",
+    "when": "Always",
+    "desc": "Miner can't buy axes."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Statue loot by sword",
+    "head": [
+     "Enemy's sword",
+     "Iron",
+     "Diamonds",
+     "Emeralds"
+    ],
+    "rows": [
+     [
+      "No gear",
+      "0–1",
+      "0–1",
+      "0"
+     ],
+     [
+      "Stone",
+      "~13",
+      "1–2",
+      "0"
+     ],
+     [
+      "Iron",
+      "~30",
+      "2–3",
+      "1"
+     ],
+     [
+      "Diamond",
+      "62–86",
+      "3–5",
+      "2–4"
+     ],
+     [
+      "Emerald",
+      "~200",
+      "~8",
+      "~8"
+     ]
+    ]
+   },
+   {
+    "title": "Statue loot by armor",
+    "head": [
+     "Enemy's armor",
+     "Iron",
+     "Diamonds",
+     "Emeralds"
+    ],
+    "rows": [
+     [
+      "Leather (with wood sword)",
+      "~34",
+      "1–3",
+      "1"
+     ],
+     [
+      "Iron",
+      "~64",
+      "3–5",
+      "2–3"
+     ],
+     [
+      "Diamond",
+      "~91",
+      "~5",
+      "4–6"
+     ],
+     [
+      "Emerald",
+      "~182",
+      "~11",
+      "~8"
+     ],
+     [
+      "Emerald armor + emerald sword",
+      "341–350",
+      "17–18",
+      "16–18"
+     ]
+    ],
+    "note": "From 2–3 kills each, so real rewards can be a bit higher or lower. Armor and sword rewards roughly add together."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Stop them escaping",
+    "text": "Bring pearls and Gloop so enemies can't jump into the void to deny you a statue."
+   },
+   {
+    "title": "Sneak and third party",
+    "text": "Sneak attacks and third-partying fights are the best ways to get kills."
+   },
+   {
+    "title": "Hunt Void Knights",
+    "text": "Void Knights, Hephaestus and Eldertrees give extra loot. Void Knights give a lot, since they spawn with strong gear, so target them."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Deny the statue",
+    "text": "If you're low against a Miner, jump into the void instead of feeding it a statue."
+   },
+   {
+    "title": "Steal the loot",
+    "text": "If you see a Miner mining a statue, jump it when it's almost done and kill it to take the loot."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Space Skin",
+    "img": "images/skins/miner-space.webp"
+   },
+   {
+    "name": "Winter Skin",
+    "img": "images/skins/miner-winter.webp"
+   },
+   {
+    "name": "Beachday Skin",
+    "img": "images/skins/miner-beachday.webp"
+   }
+  ],
+  "bal": "op",
+  "balWhy": "Normal players get nothing for kills, but Miner gets a ton of loot, which turns into faster diamond upgrades for the whole team. It gets resources faster than anyone else, so it dominates more the longer the game goes."
  },
  {
   "name": "Nahla",
