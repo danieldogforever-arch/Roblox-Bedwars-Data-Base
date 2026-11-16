@@ -16810,14 +16810,14 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Use your Berserker Rage ability to increase break speed, reduce incoming damage and prevent incoming knockback to rush in on an enemy's bed defense.",
-  "adv": "Ragnar is free for everyone and spawns with a Wooden Axe. Axes and pickaxes cost the same for Ragnar: Stone 15 iron, Iron 20 iron and Diamond 45 iron.\nBerserker's Rage lasts 7 seconds and has a 40 second cooldown. While it's active you deal 10% more damage, take 10% less damage and break blocks 25% faster. You also get 5 stacks of knockback resistance: each hit you take removes a stack, and once they're gone you take normal knockback.",
+  "adv": "Ragnar is free for everyone and spawns with a Wooden Axe. Axes and pickaxes cost the same for Ragnar: Stone 15 iron, Iron 20 iron and Diamond 45 iron.\nBerserker's Rage lasts 7 seconds and has a 40 second cooldown. While it's active you deal 10% more damage, take 10% less damage and break blocks 35% faster. You also get 5 stacks of knockback resistance: each hit you take removes a stack, and once they're gone you take normal knockback.",
   "items": [],
   "abilities": [
    {
     "name": "Berserker's Rage",
     "img": "images/abilities/ability-template.png",
     "note": "Lasts 7 seconds",
-    "desc": "+10% damage, 10% less damage taken, 25% faster block breaking, and 5 stacks of knockback resistance (each hit you take removes one).",
+    "desc": "+10% damage, 10% less damage taken, 35% faster block breaking, and 5 stacks of knockback resistance (each hit you take removes one).",
     "cd": 40
    }
   ],
@@ -16977,7 +16977,7 @@
      ],
      [
       "Break speed",
-      "+25%"
+      "+35%"
      ],
      [
       "Knockback resistance",
