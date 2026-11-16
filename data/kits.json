@@ -15584,7 +15584,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Killing enemies turns them into stone. The Miner can break down the stone for valuables[sic]'’ resources (scaled by the price of enemy's armor + sword). Unable to purchase Axes.",
-  "adv": "When Miner kills an enemy, they turn into a stone statue. Mine it for 2 seconds to get loot based on the enemy's armor and sword: the better their gear, the bigger the reward. Rewards are a little random, so the same gear can give a bit more or less. Each enemy can only become a statue again 20 seconds after they respawn. Miner can't buy axes.\nArmor and sword rewards add up: an enemy in emerald armor with an emerald sword gives about the same as both rewards together (see the table). Void Knights, Hephaestus and Eldertrees also give extra loot, and Void Knights give a lot, since they spawn with strong gear.",
+  "adv": "When Miner kills an enemy, they turn into a stone statue. Mine it for 2 seconds to get loot based on the enemy's armor and weapons (swords, crossbows and Headhunters): the better their gear, the bigger the reward. Rewards are a little random, so the same gear can give a bit more or less. Each enemy can only become a statue again 20 seconds after they respawn. Miner can't buy axes.\nArmor and sword rewards add up: an enemy in emerald armor with an emerald sword gives about the same as both rewards together (see the table). Void Knights, Hephaestus and Eldertrees also give extra loot, and Void Knights give a lot, since they spawn with strong gear.",
   "items": [],
   "abilities": [],
   "history": [
@@ -15692,9 +15692,9 @@
   ],
   "tables": [
    {
-    "title": "Statue loot by sword",
+    "title": "Statue loot by weapon",
     "head": [
-     "Enemy's sword",
+     "Enemy's weapon",
      "Iron",
      "Diamonds",
      "Emeralds"
@@ -15729,6 +15729,18 @@
       "~200",
       "~8",
       "~8"
+     ],
+     [
+      "Crossbow",
+      "~34",
+      "2–5",
+      "1–3"
+     ],
+     [
+      "Headhunter",
+      "~125",
+      "2–5",
+      "3–5"
      ]
     ]
    },
