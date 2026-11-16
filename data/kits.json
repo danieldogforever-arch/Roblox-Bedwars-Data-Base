@@ -14756,13 +14756,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Use a guitar and the power of music to heal nearby teammates. Heal yourself for 50% [sic] of the heal given.",
-  "adv": "Melody can buy the Guitar for 16 iron and keeps it forever. Hold it out for at least 0.25 seconds to heal one teammate within 18 blocks for 13 HP, once per second. It heals through walls, and you heal yourself for 90% of what you heal them. You can still attack while healing, and the Guitar plays a song that depends on your skin.",
+  "adv": "Melody can buy the Guitar for 16 iron and keeps it forever. Hold it out for at least 0.25 seconds to heal one teammate within 18 blocks for 13 HP, once per second. It's always 13, even on teammates with extra max HP. It heals through walls, and you heal yourself for 90% of what you heal them. You can still attack while healing, and the Guitar plays a song that depends on your skin.",
   "items": [
    {
     "name": "Guitar",
     "img": "images/items/guitar.png",
     "note": "16 iron, keep forever",
-    "desc": "Heals one teammate within 18 blocks for 13 HP every second, through walls. You heal 90% of that too. Hold it out at least 0.25 seconds to heal.",
+    "desc": "Heals one teammate within 18 blocks for a flat 13 HP every second, through walls. You heal 90% of that too. Hold it out at least 0.25 seconds to heal.",
     "cd": 1
    }
   ],
