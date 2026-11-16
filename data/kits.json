@@ -21645,7 +21645,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Killing enemies gives you a stack of wind, decaying a short while after. Each stack of wind gives you more speed and adds a second wind strike to your attack. At 5 stacks you can triple jump!",
-  "adv": "",
+  "adv": "Zephyr gains a wind stack for every kill, or for an assist within 3 seconds of the kill, up to 5. Stacks expire after 50 seconds without a kill.\nEach stack makes you faster and adds a wind strike to your hits: +2 damage at 1 stack, up to +6 at 5 stacks, and up to about 27.5% more speed (see the table). The wind strike has 50% armor penetration (from tests); the sword hit itself doesn't. At 5 stacks you can also triple jump.",
   "items": [],
   "abilities": [],
   "history": [
@@ -21743,7 +21743,88 @@
    "tier": "50 (paid)",
    "badge": "images/bp/s5.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Wind Stacks",
+    "when": "Kills and assists",
+    "desc": "+1 stack per kill or assist (3 second assist window), up to 5. Expire after 50 seconds without a kill."
+   },
+   {
+    "name": "Wind Strike",
+    "when": "Hitting with stacks",
+    "desc": "+2 to +6 damage per hit, with 50% armor penetration."
+   },
+   {
+    "name": "Triple Jump",
+    "when": "At 5 stacks",
+    "desc": "Jump up to three times in the air."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Wind stacks",
+    "head": [
+     "Stacks",
+     "Extra damage",
+     "Speed",
+     "96 blocks in"
+    ],
+    "rows": [
+     [
+      "1",
+      "+2",
+      "~12.5%",
+      "12.5s"
+     ],
+     [
+      "2",
+      "+3",
+      "~15%",
+      "12.25s"
+     ],
+     [
+      "3",
+      "+4",
+      "~20%",
+      "11.75s"
+     ],
+     [
+      "4",
+      "+5",
+      "~25%",
+      "11.25s"
+     ],
+     [
+      "5",
+      "+6",
+      "~27.5%",
+      "11s"
+     ]
+    ],
+    "note": "Speed compared to normal walking, from tests. The extra damage has 50% armor penetration: a wood sword at 5 stacks does 12.47 to iron (from tests)."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Snowball early",
+    "text": "Get kills and assists early game, then take over middle, grab all the emeralds and stack up to go for every bed. Zephyr isn't a late-game kit."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Don't feed it",
+    "text": "Don't let you or your team fight a 5 stack Zephyr. It's better to wait out the 50 seconds than give it another stack."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Celestial Skin",
+    "img": "images/skins/zephyr-celestial.webp"
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "It's such a fusion and Warrior-style kit that it's not even funny: it's made to beat bad players, which is why it'll never be ranked meta. Unlike similar kits like Barbarian, it can still support, but Aery and Baker do basically the same thing. The only unique part is the triple jump, and stacks lasting 50 seconds only carry you until about 6 minutes, when kills get harder."
  },
  {
   "name": "Zola",
