@@ -1019,13 +1019,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "The Spider Queen uses web bridges to traverse the map and can summon spiderlings from her webs to attack enemies. Enemies are slowed if they run into her webs.",
-  "adv": "Arachne shoots webs that slow enemies down and double as a bridge only you and your Arachne teammates can use. Enemies who touch cobwebs are slowed by 15% for each cobweb they touch, so the more webs they run through, the slower they get (from tests).\nYou can summon spiders while you have webs placed. You get 1 to 4 spiders depending on how many cobwebs are up, so 1 cobweb gives 1 spider and 4 or more cobwebs give 4. Spiders disappear after 6 seconds. Each spider spawns with 30 HP and deals 4 damage every 0.5 seconds. When a spider kills or assists on an enemy, its damage and HP go up, to a max of 80 HP and 15 damage.",
+  "adv": "Arachne shoots webs that slow enemies down and double as a bridge only you and your Arachne teammates can use. Each cobweb an enemy touches gives them a webbed stack that slows them by 15%, up to 3 stacks (45%). Each touch lasts 6 seconds (from tests).\nYou can summon spiders while you have webs placed. You get 1 to 4 spiders depending on how many cobwebs are up, so 1 cobweb gives 1 spider and 4 or more cobwebs give 4. Spiders disappear after 6 seconds. Each spider spawns with 30 HP and deals 4 damage every 0.5 seconds. When a spider kills or assists on an enemy, its damage and HP go up, to a max of 80 HP and 15 damage.",
   "items": [],
   "abilities": [
    {
     "name": "Aim Web Bridge",
     "img": "images/abilities/ability-template.png",
-    "desc": "Shoots a web in any direction with a 17 block line radius. Enemies who touch the cobwebs are slowed by 15% per cobweb touched. You can jump onto the cobwebs and use them as a bridge, but only you and other Arachne teammates can use it.",
+    "desc": "Shoots a web in any direction with a 17 block line radius. Enemies who touch the cobwebs are slowed by 15% per webbed stack, up to 3 stacks (45%) for 6 seconds. You can jump onto the cobwebs and use them as a bridge, but only you and other Arachne teammates can use it.",
     "cd": 8
    },
    {
@@ -1043,7 +1043,7 @@
    {
     "name": "Sticky Webs",
     "when": "When enemies touch cobwebs",
-    "desc": "Enemies are slowed by 15% for each cobweb they touch."
+    "desc": "Each cobweb touched adds a webbed stack: 15% slower per stack, up to 3 (45%). Lasts 6 seconds from each touch."
    },
    {
     "name": "Spider Growth",
@@ -1948,12 +1948,12 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Build rage by damaging enemies. Instead of buying swords, your sword is upgraded when you reach enough rage. You lose all your rage on death. The Emerald Sword is replaced by the Rageblade.",
-  "adv": "Barbarian cannot buy swords. You start with a wooden sword and upgrade it by building rage, which you get from dealing damage and from kills. Once upgraded, your sword never goes back to the previous one when you die.\nDamage needed for each upgrade:\nStone sword: 85\nIron sword: 210\nDiamond sword: 430\nRageblade: 650\nYour rage resets each time you upgrade, so you need 1375 damage in total (from tests). Rage and damage aren't exactly the same: the Nov 13, 2026 patch lowered the stone sword's rage requirement from 85 to 80 and the iron sword's from 270 to 260, so these damage numbers may now be a little lower.\nRanged damage gives 2x less rage than other damage. Killing an enemy gives you around 40 damage worth of rage. You cannot get rage from enemies who respawned within the last 9 seconds.\nWhen you die you lose all your rage and restart the tier you are on.",
+  "adv": "Barbarian cannot buy swords. You start with a wooden sword and upgrade it by building rage, which you get from dealing damage and from kills. Once upgraded, your sword never goes back to the previous one when you die.\nDamage needed for each upgrade:\nStone sword: 90\nIron sword: 205\nDiamond sword: 445\nRageblade: 660\nYour rage resets each time you upgrade, so you need 1400 damage in total (from tests, after the Nov 13, 2026 patch). Rage and damage aren't exactly the same, which is why these numbers don't match the rage values in patch notes.\nRanged damage gives 2x less rage than other damage. Killing an enemy gives you around 40 damage worth of rage. You cannot get rage from enemies who respawned within the last 9 seconds.\nWhen you die you lose all your rage and restart the tier you are on.",
   "items": [
    {
     "name": "Rageblade",
     "img": "images/items/rageblade.png",
-    "note": "Rage needed: 650 damage",
+    "note": "Rage needed: 660 damage",
     "desc": "Replaces the Emerald Sword. Deals 70 damage with a 0.25 second cooldown.",
     "cd": 0.25,
     "dmg": 70
@@ -1975,8 +1975,8 @@
    },
    {
     "name": "Sword Upgrades",
-    "when": "At 85, 210, 430 and 650 rage",
-    "desc": "Reaching each rage amount upgrades your sword: stone, iron, diamond, then Rageblade. Rage resets on every upgrade, and you need 1375 damage in total."
+    "when": "At 90, 205, 445 and 660 damage",
+    "desc": "Reaching each rage amount upgrades your sword: stone, iron, diamond, then Rageblade. Rage resets on every upgrade, and you need 1400 damage in total."
    },
    {
     "name": "Death Penalty",
@@ -4846,10 +4846,10 @@
      ],
      [
       "Speed Boost",
-      "About 10.8 blocks/s for 4 seconds (12s cooldown)"
+      "About 8.6 blocks/s for 4 seconds (12s cooldown): 24 blocks in 2.8s, about 25% faster than walking"
      ]
     ],
-    "note": "Speed Boost makes the drone about 23% faster than its normal speed."
+    "note": "From tests."
    }
   ],
   "strategy": [
@@ -8318,13 +8318,13 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Use explosive beehives to deal high damage to your enemies or throw them at yourself for a massive launch.",
-  "adv": "Flora spawns with 1 Beehive Grenade, and gets another on spawn the first time it respawns (but not on later respawns). You also get a free one every 45 seconds, 1 for each kill or assist, and you can buy them in the shop for 40 iron each. You can never hold more than 5.\nA Beehive Grenade explodes 0.5 seconds after it lands on a player or the floor, dealing about 29.5 damage with falloff and no real armor penetration (from tests). 1 second after the explosion, 4 bees attack for 5 damage each (20 total), with no armor penetration. If several enemies are hit, the bees spread out between them.\nThrow a Beehive Grenade at your own feet to launch yourself: it only deals 1 damage to you and resets your Glide cooldown. You can go up to 11 blocks high, or up to 25 blocks if you time your jump perfectly.\nGlide lasts 7.5 seconds. You glide down slowly at first, then faster near the end. If you haven't landed when it ends, you take full fall damage from the highest point you reached. Activating Glide at the top of a perfect launch lets you slowly glide about another 25 blocks forward. Getting hit by a projectile while gliding stops your Glide, and Gloop stops you from gliding or launching with your grenades.",
+  "adv": "Flora spawns with 1 Beehive Grenade, and gets another on spawn the first time it respawns (but not on later respawns). You also get a free one every 45 seconds, 1 for each kill or assist, and you can buy them in the shop for 40 iron each. You can never hold more than 5.\nA Beehive Grenade explodes 0.5 seconds after it lands on a player or the floor, dealing about 29.5 damage with falloff and no real armor penetration (from tests). 1 second after the explosion, 4 bees attack for 5 damage each (20 total), with about 35% armor penetration (from tests). If several enemies are hit, the bees spread out between them.\nThrow a Beehive Grenade at your own feet to launch yourself: it only deals 1 damage to you and resets your Glide cooldown. You can go up to 11 blocks high, or up to 25 blocks if you time your jump perfectly.\nGlide lasts 7.5 seconds. You glide down slowly at first, then faster near the end. If you haven't landed when it ends, you take full fall damage from the highest point you reached. Activating Glide at the top of a perfect launch lets you slowly glide about another 25 blocks forward. Getting hit by a projectile while gliding stops your Glide, and Gloop stops you from gliding or launching with your grenades.",
   "items": [
    {
     "name": "Beehive Grenade",
     "img": "images/items/beehive-grenade.png",
     "note": "Spawn, every 45s, kills, assists, or 40 iron",
-    "desc": "Explodes 0.5 seconds after landing for about 29.5 damage with falloff. 1 second later, 4 bees attack for 5 damage each (20 total, no armor penetration), spreading out between enemies. Thrown at yourself it deals 1 damage, launches you up to 11 blocks (25 with a perfect jump) and resets Glide. Hold up to 5.",
+    "desc": "Explodes 0.5 seconds after landing for about 29.5 damage with falloff. 1 second later, 4 bees attack for 5 damage each (20 total, about 35% armor penetration), spreading out between enemies. Thrown at yourself it deals 1 damage, launches you up to 11 blocks (25 with a perfect jump) and resets Glide. Hold up to 5.",
     "dmg": 29.5,
     "dmgText": "~29.5 + 20 bees",
     "nodps": true
@@ -8946,13 +8946,13 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Dealing damage will apply stacks of Frost. At four stacks, Frost is consumed and applies Frostbite to the target, making them fragile. Emerald Sword is replaced by the Ice Sword, which applies two stacks per hit. Use your Frost Explosion ability to immediately deal damage to nearby targets with stacks of Frost.",
-  "adv": "Every sword hit gives the enemy 1 Frost stack, up to 4. Only swords give stacks, and stacks last 10 seconds. Use Detonate Ice Stacks to blow up the stacks on every enemy within 9 blocks, dealing damage based on how many stacks they have (see the table). Detonation has about 20% armor penetration (from tests) and a 10 second cooldown.\nDetonating also gives the enemy Frostbite: for a short time your hits on them deal 4 extra damage, and that extra damage has high armor penetration. Frostbite lasts 2 seconds from 1 stack, 3 seconds from 2, and 4 seconds from 3 or 4 stacks. For example, a wood sword (20 damage) that normally deals 8.8 to iron armor deals 11.89 to a Frostbitten enemy.\nThe Ice Sword replaces the Diamond Sword and costs 5 emeralds. Freiya can't buy the Emerald Sword. The Ice Sword gives 2 stacks per hit, so you only need 2 hits to reach 4 stacks, and the 4 Frostbite damage is built into every hit: 44 + 4 = 48 damage. With the Ice Sword, detonating is just for the extra burst damage, since you already have Frostbite on every hit. Holding the Ice Sword doesn't change detonation damage.",
+  "adv": "Every sword hit gives the enemy 1 Frost stack, up to 4. Only swords give stacks, and stacks last 10 seconds. Use Detonate Ice Stacks to blow up the stacks on every enemy within 9 blocks, dealing damage based on how many stacks they have (see the table). Detonation has about 20% armor penetration (from tests) and a 10 second cooldown.\nDetonating also gives the enemy Frostbite: for a short time your hits on them deal 4 extra damage, and that extra damage has high armor penetration. Frostbite lasts 2 seconds from 1 stack, 3 seconds from 2, and 4 seconds from 3 or 4 stacks. For example, a wood sword (20 damage) that normally deals 8.8 to iron armor deals 11.89 to a Frostbitten enemy.\nThe Ice Sword replaces the Diamond Sword and costs 5 emeralds. Freiya can't buy the Emerald Sword. The Ice Sword gives 2 stacks per hit, so you only need 2 hits to reach 4 stacks, and every hit deals 44 + 4 frost damage (48 total). The 44 has no armor penetration and the built-in 4 has about 20%, so a hit does 21.34 to iron armor. Detonating still adds Frostbite on top: an Ice Sword hit on a Frostbitten enemy in iron armor did 23.78 (from tests). Holding the Ice Sword doesn't change detonation damage.",
   "items": [
    {
     "name": "Ice Sword",
     "img": "images/items/ice-sword.png",
     "note": "5 emeralds, replaces Diamond Sword",
-    "desc": "Replaces the Diamond Sword. Each hit gives 2 Frost stacks and deals 44 damage + 4 Frostbite damage (48 total). Detonating doesn't add more on-hit damage while you use it, and holding it doesn't change detonation damage.",
+    "desc": "Replaces the Diamond Sword. Each hit gives 2 Frost stacks and deals 44 damage + 4 frost damage (48 total, 21.34 to iron armor). Frostbite from detonating still adds more on top (23.78 to iron). Holding it doesn't change detonation damage.",
     "dmg": 48,
     "cd": 0.3,
     "dmgText": "44 + 4"
@@ -9488,13 +9488,13 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Gompy the Ghost Hunter! Find ghosts around the map, vacuum them and fire them across the map.",
-  "adv": "Ghosts spawn around the map at about the same rate as Death Adder's collectibles, and also when someone dies (not to the void). How many spawn depends on the map. Only Gompys can see ghosts. All Gompys in a match share the same ghosts, but each ghost can only be collected by one of them. Stand within 3 blocks of a ghost for 1 second to collect it. Each ghost fills 30% of your ectoplasm bar, up to 100%. Ghosts despawn after 3 minutes.\nBuy the Vacuum for 50 iron to shoot ghosts. Charging it for up to 2.5 seconds raises the damage, speed and knockback. Damage goes up evenly from 36 to 72 (about 50 at 1 second). Charges up to about 1 second still cost only 10% ectoplasm, and after that the cost climbs to 40% at full charge.\nAn uncharged shot deals 36 damage, knocks back 2 blocks and travels 12 blocks per second.\nA full charge deals 72 damage, knocks back 12 blocks and travels 24 blocks per second.\nYou can't shoot with less than 10% ectoplasm. With less than 40% you can still charge, but only partway. Shots have 50% armor penetration (from tests) and a 1 second cooldown. You move about 40% slower while charging.",
+  "adv": "Ghosts spawn around the map at about the same rate as Death Adder's collectibles, and also when someone dies (not to the void). How many spawn depends on the map. Only Gompys can see ghosts. All Gompys in a match share the same ghosts, but each ghost can only be collected by one of them. Stand within 3 blocks of a ghost for 1 second to collect it. Each ghost fills 30% of your ectoplasm bar, up to 100%. Ghosts despawn after 3 minutes.\nBuy the Vacuum for 50 iron to shoot ghosts. Charging it for up to about 2.25 seconds raises the damage, speed and knockback. Damage goes up evenly from 36 to 72 (about 50 at 1 second). Charges up to about 0.75 seconds still cost only 10% ectoplasm, and after that the cost climbs to 40% at full charge.\nAn uncharged shot deals 36 damage, knocks back 2 blocks and travels 12 blocks per second.\nA full charge deals 72 damage, knocks back 12 blocks and travels 24 blocks per second.\nYou can't shoot with less than 10% ectoplasm. With less than 40% you can still charge, but only partway. Shots have 50% armor penetration (from tests) and a 1 second cooldown. You move about 40% slower while charging.",
   "items": [
    {
     "name": "Vacuum",
     "img": "images/items/vacuum.png",
     "note": "50 iron",
-    "desc": "Shoots a ghost. Charge up to 2.5 seconds: 36 to 72 damage, 2 to 12 blocks of knockback, and 12 to 24 blocks per second. Costs 10% ectoplasm for charges up to about 1 second, rising to 40% at full charge. Needs at least 10%. 50% armor penetration. 1 second cooldown. You move about 40% slower while charging.",
+    "desc": "Shoots a ghost. Charge up to about 2.25 seconds: 36 to 72 damage, 2 to 12 blocks of knockback, and 12 to 24 blocks per second. Costs 10% ectoplasm for charges up to about 0.75 seconds, rising to 40% at full charge. Needs at least 10%. 50% armor penetration. 1 second cooldown. You move about 40% slower while charging.",
     "cd": 1,
     "dmg": 72,
     "dmgText": "36 – 72",
@@ -11920,7 +11920,7 @@
       "Spawn with it",
       "10",
       "40.2",
-      "55.2",
+      "55.26",
       "67.1",
       "77.5",
       "0%"
@@ -11946,7 +11946,7 @@
       "40%"
      ]
     ],
-    "note": "Ground and 40 block damage are from tests and patch notes; the other heights are estimated. Damage falls off with distance from the impact. No armor."
+    "note": "Hammer I at the ground, 20 and 40 blocks, and the other hammers' ground and 40 block damage, are from tests; the rest are estimated. Damage falls off with distance from the impact. No armor."
    },
    {
     "title": "Hammer movement",
@@ -14570,7 +14570,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Absorb life essence from nearby enemies and convert it to max hp! Attack is slower but passively reflects damage for melee hits to the enemy.",
-  "adv": "Martin swings every sword a little slower than normal: every 0.33 seconds instead of 0.3.\nWild Growth (17 second cooldown) drains every enemy within 10 blocks. It ticks 10 times, 0.3 seconds apart, for 1 damage each (10 total, no armor penetration). On ticks 4, 7, 9 and 10 you heal 3, 3, 3 and 5 HP. Each enemy you drain also steals max HP for you, but the gain gets smaller the higher you go: +5 per enemy at first, down to +1 or nothing near the cap. Your max HP from Wild Growth tops out just under 150 (149 in tests); the Forest enchant can still push it past that. Dying doesn't lower your max HP.\nUsing Wild Growth on players also builds up Thorns, which hits back anyone who melees you: 1 damage after 1 player hit, 2 after 2, 3 after 5, 4 after 8, and 5 (the max) after 12. Each player you hit counts, so draining 12 players at once gets max Thorns right away. Thorns progress is kept when you die. (Whether armor reduces Thorns hasn't been tested yet.)",
+  "adv": "Martin swings every sword a little slower than normal: every 0.33 seconds instead of 0.3.\nWild Growth (17 second cooldown) drains every enemy within 10 blocks. It ticks 10 times, 0.3 seconds apart, for 1 damage each (10 total, no armor penetration). On ticks 4, 7, 9 and 10 you heal 3, 3, 3 and 5 HP. Each enemy you drain also steals max HP for you, but the gain gets smaller the higher you go: +5 per enemy at first, down to +1 or nothing near the cap. Your max HP from Wild Growth tops out just under 150 (149 in tests); the Forest enchant can still push it past that. Dying doesn't lower your max HP.\nUsing Wild Growth on players also builds up Thorns, which hits back anyone who melees you: 1 damage after 1 player hit, 2 after 2, 3 after 5, 4 after 8, and 5 (the max) after 12. Each player you hit counts, so draining 12 players at once gets max Thorns right away. Thorns progress is kept when you die. Thorns has no armor penetration: 2 thorn damage did 0.88 to iron armor (from tests).",
   "items": [],
   "abilities": [
    {
@@ -20119,8 +20119,9 @@
    }
   ],
   "obtain": {
-   "src": "Limited kit (2021)",
-   "rent": 2500
+   "src": "2021 Holiday Bundle",
+   "rent": 2500,
+   "note": "Can only be rented now."
   }
  },
  {
@@ -21874,7 +21875,8 @@
    "src": "Season 5 Battle Pass",
    "tier": "50 (paid)",
    "badge": "images/bp/s5.webp",
-   "rent": 2000
+   "rent": 2000,
+   "note": "Can only be rented now."
   },
   "passives": [
    {
