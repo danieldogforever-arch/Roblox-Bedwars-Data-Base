@@ -2176,7 +2176,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Catch bees around the map to upgrade your Bee Hive. Upgrading your Bee Hive will return additional iron and emeralds.",
-  "adv": "Bees spawn around the map, similar to Alchemist's ingredients but not as many, and the amount depends on the map. A bee on the ground disappears 3 minutes after it spawns, and bees pulse every 7 seconds so they are easier to find. Hold the Bee Net to pick a bee up: it goes into your inventory as a separate item, then you put it in a Beehive. You lose your bees when you die, but you keep the net. Bees inside a hive never despawn.\nYou can place up to 5 Beehives. A hive with 0 bees only produces iron, 1 iron every 10 seconds. The more bees inside, the faster it drops loot, and from 3 bees it can drop diamonds, and from 4 bees it can drop emeralds. Each drop is only 1 resource at a time: either 1 iron, 1 diamond or 1 emerald. After 10 bees a hive doesn't drop any faster. There are no hive upgrades.\nHives have normal block HP and are weak to pickaxes: they break in 5 hits with a wooden pickaxe, 4 with stone, and 2 with iron or diamond. They can also be broken by TNT and fireballs if they aren't covered with ceramic or obsidian.",
+  "adv": "Bees spawn around the map, similar to Alchemist's ingredients but not as many, and the amount depends on the map. A bee on the ground disappears 3 minutes after it spawns, and bees pulse every 7 seconds so they are easier to find. Hold the Bee Net to pick a bee up: it goes into your inventory as a separate item, then you put it in a Beehive. You lose your bees when you die, but you keep the net. Bees inside a hive never despawn.\nYou can place up to 5 Beehives. A hive with 0 bees only produces iron, 1 iron every 10 seconds. The more bees inside, the faster it drops loot, and from 3 bees it can drop diamonds, and from 4 bees it can drop emeralds. Each drop is only 1 resource at a time: either 1 iron, 1 diamond or 1 emerald. After 10 bees a hive doesn't drop any faster, and extra bees only raise the emerald chance by about 1–2% each (while lowering diamonds), so you get about the same total loot. There are no hive upgrades.\nHives have normal block HP and are weak to pickaxes: they break in 5 hits with a wooden pickaxe, 4 with stone, and 2 with iron or diamond. They can also be broken by TNT and fireballs if they aren't covered with ceramic or obsidian.",
   "items": [
    {
     "name": "Bee",
@@ -2281,30 +2281,68 @@
       "10",
       "2s",
       "75%",
-      "13%",
-      "12%"
+      "16%",
+      "9%"
      ],
      [
       "11 - 14",
       "2s",
       "74%",
-      "13%",
-      "13%"
+      "15.5%",
+      "10.5%"
      ],
      [
       "15",
       "2s",
-      "74%",
-      "12%",
-      "14%"
+      "77%",
+      "10.5%",
+      "13%"
      ]
     ],
-    "note": "These are approximate chances. Each drop is 1 iron, 1 diamond or 1 emerald, and a hive doesn't drop any faster after 10 bees. Going past 10 bees may raise the emerald chance a little, up to 15 bees."
+    "note": "Approximate chances. Each drop is 1 iron, 1 diamond or 1 emerald, and a hive doesn't drop any faster after 10 bees. Past 10, extra bees only swap some diamond drops for emerald drops."
+   },
+   {
+    "title": "Tested: bees past 10",
+    "head": [
+     "Bees per hive",
+     "Drops (5 hives, 5 min)",
+     "Iron",
+     "Diamonds",
+     "Emeralds"
+    ],
+    "rows": [
+     [
+      "10",
+      "500",
+      "377 (75%)",
+      "80 (16%)",
+      "43 (8.6%)"
+     ],
+     [
+      "12",
+      "549",
+      "407 (74%)",
+      "85 (15.5%)",
+      "57 (10.4%)"
+     ],
+     [
+      "15",
+      "500",
+      "383 (77%)",
+      "53 (10.6%)",
+      "64 (12.8%)"
+     ]
+    ],
+    "note": "From tests. Total loot stays about the same past 10 bees; the emerald chance only goes up by about 1–2% per extra bee, while diamonds go down. In these tests each hive dropped about once every 3 seconds."
    }
   ],
   "bal": "bal",
   "balWhy": "It gives a lot of loot, but it's risky to use because the hive can be found and broken if you or your teammates aren't there to protect it.",
   "strategy": [
+   {
+    "title": "Start a new hive",
+    "text": "Fill each hive to 10 bees, then start a new one. Going past 10 barely helps: it only swaps a few diamonds for emeralds. For example, if one hive has 10 bees and you have 8 more, put them in a new hive instead of making the first one 15 or even 12."
+   },
    {
     "title": "Fill hives to 10 bees first",
     "text": "Get each hive to 10 bees before adding more, because making a new hive is more beneficial than going past 10. Once all 5 hives have 10 bees, you can add extra bees up to 15 per hive, which may slightly raise your emerald chance."
