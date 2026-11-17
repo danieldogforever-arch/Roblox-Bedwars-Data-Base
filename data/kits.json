@@ -1019,13 +1019,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "The Spider Queen uses web bridges to traverse the map and can summon spiderlings from her webs to attack enemies. Enemies are slowed if they run into her webs.",
-  "adv": "Arachne shoots webs that slow enemies down and double as a bridge only you and your Arachne teammates can use. Enemies who touch cobwebs are slowed by a lot, and the more cobwebs they touch, the slower they get.\nYou can summon spiders while you have webs placed. You get 1 to 4 spiders depending on how many cobwebs are up, so 1 cobweb gives 1 spider and 4 or more cobwebs give 4. Spiders disappear after 6 seconds. Each spider spawns with 30 HP and deals 4 damage every 0.5 seconds. When a spider kills or assists on an enemy, its damage and HP go up, to a max of 80 HP and 15 damage.",
+  "adv": "Arachne shoots webs that slow enemies down and double as a bridge only you and your Arachne teammates can use. Enemies who touch cobwebs are slowed by 15% for each cobweb they touch, so the more webs they run through, the slower they get (from tests).\nYou can summon spiders while you have webs placed. You get 1 to 4 spiders depending on how many cobwebs are up, so 1 cobweb gives 1 spider and 4 or more cobwebs give 4. Spiders disappear after 6 seconds. Each spider spawns with 30 HP and deals 4 damage every 0.5 seconds. When a spider kills or assists on an enemy, its damage and HP go up, to a max of 80 HP and 15 damage.",
   "items": [],
   "abilities": [
    {
     "name": "Aim Web Bridge",
     "img": "images/abilities/ability-template.png",
-    "desc": "Shoots a web in any direction with a 17 block line radius. Enemies who touch the cobwebs are slowed by a lot, and the slow builds up the more cobwebs they touch. You can jump onto the cobwebs and use them as a bridge, but only you and other Arachne teammates can use it.",
+    "desc": "Shoots a web in any direction with a 17 block line radius. Enemies who touch the cobwebs are slowed by 15% per cobweb touched. You can jump onto the cobwebs and use them as a bridge, but only you and other Arachne teammates can use it.",
     "cd": 8
    },
    {
@@ -1043,7 +1043,7 @@
    {
     "name": "Sticky Webs",
     "when": "When enemies touch cobwebs",
-    "desc": "Enemies are slowed by a lot, and the slow gets stronger the more cobwebs they touch."
+    "desc": "Enemies are slowed by 15% for each cobweb they touch."
    },
    {
     "name": "Spider Growth",
