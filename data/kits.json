@@ -16582,13 +16582,13 @@
   "diff": "extreme",
   "hp": "100",
   "desc": "Use a TNT Cannon to bombard your enemies.",
-  "adv": "Pirate Davey spawns with 1 TNT and buys TNT for 30 iron instead of 35. It can buy the Cannon for 50 iron. Place the Cannon, then use it to fire TNT or launch yourself. If you break your own Cannon, you get it back; you can also drop it for a teammate, but if they place and break it, it's gone. The Cannon breaks in 2 hits with a wooden pickaxe, 1 hit with stone or better, and to TNT and fireballs.\nFire TNT: while holding TNT or Siege TNT, Aim Cannon becomes Shoot TNT. Load 1 at a time, and every shot fires 2, so each TNT you buy becomes two. That makes Davey's TNT cost about 15 iron each, roughly 57% cheaper than normal (35).\nLaunch Self: you fly through the air at about 28 blocks per second, around 4× walking speed, with no fall damage on a normal launch (see the table for distances). You can still launch from a Cannon that's boxed in by blocks, just not fire TNT.\nEach launch gives you a Powdered stack for 7 seconds. The first launch is free; launching again while Powdered deals 20 damage per stack (40 at 2 stacks, up to 60 at 3), with no armor penetration (about 9 to iron at 1 stack, from tests). Each launch resets the 7 seconds. Teammates who use your Cannon get 2 stacks per launch.",
+  "adv": "Pirate Davey spawns with 1 TNT and buys TNT for 30 iron instead of 35. It can buy the Cannon for 50 iron. Place the Cannon, then use it to fire TNT or launch yourself. If you break your own Cannon, you get it back; you can also drop it for a teammate, but if they place and break it, it's gone. The Cannon breaks in 2 hits with a wooden pickaxe, 1 hit with stone or better, and to TNT and fireballs.\nFire TNT: while holding TNT or Siege TNT, Aim Cannon becomes Shoot TNT. Load 1 at a time, and every shot fires 2, so each TNT you buy becomes two. That makes Davey's TNT cost about 15 iron each, roughly 57% cheaper than normal (35). Siege TNT doubles too, at its normal price of 350 iron.\nLaunch Self: you fly through the air at about 28 blocks per second, around 4× walking speed, with no fall damage from a launch at the Cannon's default angle (see the table for distances). Other launches only hurt if you land from a height that would normally deal fall damage. You can still launch from a Cannon that's boxed in by blocks, just not fire TNT.\nEach launch gives you a Powdered stack for 7 seconds. The first launch is free; launching again while Powdered deals 20 damage per stack (40 at 2 stacks, up to 60 at 3), with no armor penetration (about 9 to iron at 1 stack, from tests). Each launch resets the 7 seconds. Teammates who use your Cannon get 2 stacks per launch.",
   "items": [
    {
     "name": "Cannon",
     "img": "images/items/cannon.png",
     "note": "50 iron",
-    "desc": "Place it to Aim Cannon and Launch Self. Holding TNT turns Aim Cannon into Shoot TNT, which fires 2 TNT per load. Breaks in 2 wooden pickaxe hits or 1 stone+, and to TNT and fireballs. You get it back if you break your own."
+    "desc": "Place it to Aim Cannon and Launch Self. Holding TNT turns Aim Cannon into Shoot TNT, which fires 2 TNT or 2 Siege TNT per load. Breaks in 2 wooden pickaxe hits or 1 stone+, and to TNT and fireballs. You get it back if you break your own."
    }
   ],
   "abilities": [
@@ -16759,25 +16759,25 @@
     ],
     "rows": [
      [
-      "Not aimed (default)",
-      "28 blocks (no fall damage)",
-      "37 blocks (a little fall damage)",
+      "Default (flat, —)",
+      "28 blocks",
+      "37 blocks",
       "46 blocks"
      ],
      [
-      "Turned 90° from default",
+      "Angled up (/)",
       "22 blocks",
       "30 blocks",
       "41 blocks"
      ],
      [
-      "Straight up",
+      "Straight up (|)",
       "33 blocks up",
       "45 blocks up",
       "—"
      ]
     ],
-    "note": "From tests. In the air you travel about 28 blocks per second (about 4× walking speed)."
+    "note": "From tests. Launching at the default angle never deals fall damage. In the air you travel about 28 blocks per second (about 4× walking speed)."
    },
    {
     "title": "Powdered damage",
@@ -16819,6 +16819,12 @@
       "30 iron",
       "2",
       "15 iron (~57% cheaper)"
+     ],
+     [
+      "Siege TNT (Davey)",
+      "350 iron",
+      "2",
+      "175 iron (50% cheaper)"
      ]
     ]
    }
