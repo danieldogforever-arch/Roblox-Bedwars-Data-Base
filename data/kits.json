@@ -16582,14 +16582,28 @@
   "diff": "extreme",
   "hp": "100",
   "desc": "Use a TNT Cannon to bombard your enemies.",
-  "adv": "",
+  "adv": "Pirate Davey spawns with 1 TNT and buys TNT for 30 iron instead of 35. It can buy the Cannon for 50 iron. Place the Cannon, then use it to fire TNT or launch yourself. If you break your own Cannon, you get it back; you can also drop it for a teammate, but if they place and break it, it's gone. The Cannon breaks in 2 hits with a wooden pickaxe, 1 hit with stone or better, and to TNT and fireballs.\nFire TNT: while holding TNT or Siege TNT, Aim Cannon becomes Shoot TNT. Load 1 at a time, and every shot fires 2, so each TNT you buy becomes two. That makes Davey's TNT cost about 15 iron each, roughly 57% cheaper than normal (35).\nLaunch Self: you fly through the air at about 28 blocks per second, around 4× walking speed, with no fall damage on a normal launch (see the table for distances). You can still launch from a Cannon that's boxed in by blocks, just not fire TNT.\nEach launch gives you a Powdered stack for 7 seconds. The first launch is free; launching again while Powdered deals 20 damage per stack (40 at 2 stacks, up to 60 at 3), with no armor penetration (about 9 to iron at 1 stack, from tests). Each launch resets the 7 seconds. Teammates who use your Cannon get 2 stacks per launch.",
   "items": [
    {
     "name": "Cannon",
-    "img": "images/items/cannon.png"
+    "img": "images/items/cannon.png",
+    "note": "50 iron",
+    "desc": "Place it to Aim Cannon and Launch Self. Holding TNT turns Aim Cannon into Shoot TNT, which fires 2 TNT per load. Breaks in 2 wooden pickaxe hits or 1 stone+, and to TNT and fireballs. You get it back if you break your own."
    }
   ],
-  "abilities": [],
+  "abilities": [
+   {
+    "name": "Aim Cannon",
+    "img": "images/abilities/ability-template.png",
+    "note": "Shoot TNT while holding TNT",
+    "desc": "Aim the Cannon. While holding TNT or Siege TNT, it fires 2 of them per load (1 load at a time)."
+   },
+   {
+    "name": "Launch Self",
+    "img": "images/abilities/ability-template.png",
+    "desc": "Fly up to 46 blocks at about 28 blocks per second. Gives a Powdered stack for 7 seconds; launching again while Powdered deals 20 damage per stack (max 60)."
+   }
+  ],
   "history": [
    {
     "type": "nerf",
@@ -16721,7 +16735,120 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Cheap Powder",
+    "when": "Always",
+    "desc": "Spawn with 1 TNT, and buy TNT for 30 iron instead of 35."
+   },
+   {
+    "name": "Powdered",
+    "when": "Launching yourself",
+    "desc": "7 seconds, resets on each launch. 20 damage per stack on your next launch (max 60), no armor penetration. Teammates get 2 stacks per launch."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Launch distance",
+    "head": [
+     "Cannon aim",
+     "Just launch",
+     "Launch + jump",
+     "Run + jump"
+    ],
+    "rows": [
+     [
+      "Not aimed (default)",
+      "28 blocks (no fall damage)",
+      "37 blocks (a little fall damage)",
+      "46 blocks"
+     ],
+     [
+      "Turned 90° from default",
+      "22 blocks",
+      "30 blocks",
+      "41 blocks"
+     ],
+     [
+      "Straight up",
+      "33 blocks up",
+      "45 blocks up",
+      "—"
+     ]
+    ],
+    "note": "From tests. In the air you travel about 28 blocks per second (about 4× walking speed)."
+   },
+   {
+    "title": "Powdered damage",
+    "head": [
+     "Stacks when you launch",
+     "0",
+     "1",
+     "2",
+     "3+"
+    ],
+    "rows": [
+     [
+      "Damage",
+      "0",
+      "20",
+      "40",
+      "60 (max)"
+     ]
+    ],
+    "note": "No armor penetration: 1 stack did about 9 to iron (from tests). Lasts 7 seconds, reset by each launch."
+   },
+   {
+    "title": "TNT cost",
+    "head": [
+     "",
+     "Cost",
+     "TNT fired",
+     "Cost per TNT"
+    ],
+    "rows": [
+     [
+      "Normal",
+      "35 iron",
+      "1",
+      "35 iron"
+     ],
+     [
+      "Pirate Davey",
+      "30 iron",
+      "2",
+      "15 iron (~57% cheaper)"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Emergency launch",
+    "text": "If an enemy is chasing you, place the Cannon and launch without aiming: the default angle already gives the best distance. Break the Cannon right as you jump to take it with you. This only works facing straight north, south, east or west."
+   },
+   {
+    "title": "Aim low for TNT",
+    "text": "Raining TNT is harder than the movement. Shots tend to go up even when you aim slightly down, so to shoot far, keep the aim pretty low."
+   },
+   {
+    "title": "Carry teammates",
+    "text": "Drop the Cannon for teammates so they can launch too. Almost no other kit can move teammates like this."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Gloop",
+    "text": "Keep Gloop on hand, and place some in your base, or Davey will steal your generator resources and launch away."
+   },
+   {
+    "title": "Break the Cannon",
+    "text": "Carry a stone pickaxe to break the Cannon in 1 hit while Davey aims, or fireball it when it's shooting TNT at your bed."
+   }
+  ],
+  "bal": "sop",
+  "balWhy": "It takes skill to aim quickly and learn to fire TNT, but once you do, you're almost unstoppable: it's basically the best movement kit disguised as a Destroyer. TNT works out to about 57% cheaper per TNT, so enemies can't stop the TNT rain, and teammates can use the Cannon for movement too, which only a couple of kits can offer."
  },
  {
   "name": "Pyro",
