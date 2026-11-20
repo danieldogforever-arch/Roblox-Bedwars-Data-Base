@@ -18368,18 +18368,25 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Carry a jar of regenerating spirits. Catch wisps from damaged enemies to recharge faster, and recall unused spirits. Place idle spirits together to fuse them into a larger spirit with a chain of shrinking explosions.",
-  "adv": "",
+  "adv": "Spirit Catcher spawns with the Spirit Jar, which holds up to 4 spirits. You start with 1, and the jar makes another every 23 seconds. Damaging or killing enemies drops wisps; catching one speeds up your next spirit by 7 seconds.\nThrow a spirit up to 42 blocks (charge to throw farther). Spirits chase enemies within 11 blocks and explode for 30 damage, with about 20% armor penetration (15 to iron, from tests). After being hit by a spirit, an enemy takes 30% less damage from other spirit explosions for 5 seconds.\nPlace idle spirits within 3 blocks of each other and they fuse after 2 seconds, up to 4. Bigger fusions hit harder (see the table) and last longer before they fade: 1 minute for a single spirit, 2 for 2, and 3 for 3 or 4. Spirits turn more see-through as they're about to disappear.\nA fused spirit's explosion haunts the enemy for 6 seconds: they get a blue outline with 1–3 small spirits orbiting them. Each of your hits on them uses one orbiting spirit for a guaranteed critical hit, stronger for bigger fusions (direct arrow hits give half). When the haunt ends or the enemy dies, every unused orbiting spirit refunds 13 seconds of recharge.\nRecall Spirits (10 second cooldown) pulls back your placed spirits within 20 blocks.",
   "items": [
    {
     "name": "Spirit Jar",
-    "img": "images/items/spirit-jar.png"
+    "img": "images/items/spirit-jar.png",
+    "note": "Spawn with it",
+    "desc": "Holds up to 4 spirits; makes 1 every 23 seconds (7 seconds faster per wisp caught). Throw a spirit up to 42 blocks; it chases enemies within 11 blocks and explodes for 30 damage (about 20% armor penetration).",
+    "dmg": 30,
+    "dmgText": "30 / 38 / 46 / 54",
+    "nodps": true
    }
   ],
   "abilities": [
    {
     "name": "Recall Spirits",
     "note": "Only when a spirit is placed",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Pull back your placed spirits within 20 blocks.",
+    "cd": 10
    }
   ],
   "history": [
@@ -18529,7 +18536,90 @@
    "rent": 2000,
    "buy": 25000,
    "note": "Now in the store for 25,000 BedCoins or 599 Robux"
-  }
+  },
+  "passives": [
+   {
+    "name": "Wisps",
+    "when": "Damaging or killing enemies",
+    "desc": "They drop wisps. Each one you catch makes your next spirit 7 seconds faster."
+   },
+   {
+    "name": "Haunt",
+    "when": "A fused spirit explodes",
+    "desc": "The enemy is haunted for 6 seconds with 1–3 orbiting spirits. Each of your hits uses one for a guaranteed crit (half for direct arrows). Unused ones refund 13 seconds each."
+   },
+   {
+    "name": "Spirit Resistance",
+    "when": "Hit by a spirit explosion",
+    "desc": "The enemy takes 30% less damage from other spirit explosions for 5 seconds."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Spirit fusions",
+    "head": [
+     "Spirits fused",
+     "Explosion damage",
+     "Lasts",
+     "Haunt crit bonus"
+    ],
+    "rows": [
+     [
+      "1",
+      "30",
+      "1 min",
+      "—"
+     ],
+     [
+      "2",
+      "38",
+      "2 min",
+      "22–42%"
+     ],
+     [
+      "3",
+      "46",
+      "3 min",
+      "32–52%"
+     ],
+     [
+      "4",
+      "54",
+      "3 min",
+      "42–62%"
+     ]
+    ],
+    "note": "Damage with no armor, from tests. About 20% armor penetration (30 → 15 against iron). Crit bonuses are from the Nov 6, 2026 patch; direct arrow hits get half."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Free early damage",
+    "text": "You'll have 2 spirits early in the match. Use both for big free explosion damage on enemies."
+   },
+   {
+    "title": "Farm wisps",
+    "text": "Wait for enemies to fight, then catch all the wisps to get more spirits faster."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Spread out",
+    "text": "Dodging doesn't really work since spirits chase you and can be recalled. Stay away from teammates so only one of you gets hit."
+   }
+  ],
+  "skins": [
+   {
+    "name": "Siren Skin",
+    "img": "images/skins/spirit-catcher-siren.webp"
+   },
+   {
+    "name": "OG Chroma Skin",
+    "img": "images/skins/spirit-catcher-og-chroma.webp"
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "It used to be Spirit Buyer, where you spent lots of iron and could just spam it. Now you get spirits early for free and it still holds up late game. The homing balances out the low damage and the 4 spirit cap: very good early, balanced later on."
  },
  {
   "name": "Star Collector Stella",
