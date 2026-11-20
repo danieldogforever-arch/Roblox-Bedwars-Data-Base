@@ -20617,16 +20617,17 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Use a Void Axe to dash forward while slashing at enemies, healing for a portion of the damage dealt.",
-  "adv": "Void Regent buys the Void Axe in the shop for 40 iron and keeps it when it dies. Using the axe leaps you forward about 5 blocks, or about 9 if you're running and jumping and switch off the axe right after using it.\nWhen you land, it hits every enemy within 8 blocks for 18 damage with 40% armor penetration, and knocks them about 2 blocks away. You heal from every enemy you hit, but each extra enemy heals you less than the one before: about 24 HP from 2 enemies and 30 HP from 3. The enemies' armor doesn't seem to lower the healing.",
+  "adv": "Void Regent buys the Void Axe in the shop for 40 iron and keeps it when it dies. It has a 6 second cooldown. Using the axe leaps you forward about 5 blocks, or about 9 if you're running and jumping and switch off the axe right after using it.\nWhen you land, it hits every enemy within 8 blocks for 18 damage with 40% armor penetration, and knocks them about 2 blocks away. You heal from every enemy you hit, but each extra enemy heals you less than the one before: about 24 HP from 2 enemies and 30 HP from 3. The enemies' armor doesn't seem to lower the healing.",
   "items": [
    {
     "name": "Void Axe",
     "img": "images/items/void-axe.png",
     "note": "Cost: 40 iron",
-    "desc": "Leap about 5 blocks (about 9 if running, jumping and unequipping right after) and hit every enemy within 8 blocks for 18 damage, 40% armor penetration. Knocks them about 2 blocks away and heals you. Kept on death.",
+    "desc": "Leap about 5 blocks (about 9 if running, jumping and unequipping right after) and hit every enemy within 8 blocks for 18 damage, 40% armor penetration. Knocks them about 2 blocks away and heals you. 6 second cooldown. Kept on death.",
     "dmg": 18,
     "dmgText": "18 per enemy",
-    "nodps": true
+    "nodps": true,
+    "cd": 6
    }
   ],
   "abilities": [],
@@ -20780,8 +20781,8 @@
     "rows": [
      [
       "1",
-      "~14.4 (80%)",
-      ""
+      "15 (80%)",
+      "No armor"
      ],
      [
       "2",
