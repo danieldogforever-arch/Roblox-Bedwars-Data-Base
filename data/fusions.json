@@ -561,11 +561,6 @@
  },
  {
   "a": "Infernal Shielder",
-  "b": "Silas",
-  "note": ""
- },
- {
-  "a": "Infernal Shielder",
   "b": "Cobalt",
   "note": ""
  },
@@ -967,6 +962,31 @@
  {
   "a": "Sheep Herder",
   "b": "Umeko",
+  "note": ""
+ },
+ {
+  "a": "Silas",
+  "b": "Eldric",
+  "note": ""
+ },
+ {
+  "a": "Silas",
+  "b": "Void Knight",
+  "note": ""
+ },
+ {
+  "a": "Silas",
+  "b": "Warrior",
+  "note": ""
+ },
+ {
+  "a": "Silas",
+  "b": "Infernal Shielder",
+  "note": ""
+ },
+ {
+  "a": "Silas",
+  "b": "Hephaestus",
   "note": ""
  }
 ]

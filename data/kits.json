@@ -18121,16 +18121,23 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "The leader of the citizens' rebellion, who encourages and buffs his allies with healing and damage auras!",
-  "adv": "",
+  "adv": "Silas has a 6-block aura that either heals or adds damage, and teammates inside it get double the effect. The healing aura gives you 1 HP every second and teammates 2. The damage aura gives you +5% damage and teammates +10%. You start with the healing aura and can swap whenever it's off cooldown.\nYou earn Triumph stacks when you get a kill, or when a teammate gets a kill inside your aura. Each stack makes you take 1% less damage, up to 20% at 20 stacks. You lose 30% of your stacks when you die.",
   "items": [],
   "abilities": [
    {
     "name": "Swap Aura",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 7,
+    "desc": "Switches between the healing aura and the damage aura. You spawn with the healing one.",
+    "nodps": true
    },
    {
     "name": "Press the Attack!",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 18,
+    "desc": "For 7 seconds, you and teammates in your aura get a shield, and your aura's effect is doubled: healing becomes 2 HP a second for you and 4 for teammates, or damage becomes +10% for you and +20% for teammates. The shield is 10 at 0 stacks and 20 at 20 stacks. You can't attack for 1 second after using it.",
+    "note": "Only the aura you have on gets doubled.",
+    "nodps": true
    }
   ],
   "history": [
@@ -18215,7 +18222,150 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Aura",
+    "when": "Always, 6-block radius",
+    "desc": "Healing: 1 HP/s for you, 2 HP/s for teammates. Damage: +5% for you, +10% for teammates."
+   },
+   {
+    "name": "Triumph",
+    "when": "You or a teammate in your aura gets a kill",
+    "desc": "+1 stack. Each stack is 1% damage reduction, up to 20 stacks (20%). You lose 30% of your stacks on death."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Aura effects",
+    "head": [
+     "Aura",
+     "You",
+     "Teammates",
+     "You (Press the Attack)",
+     "Teammates (Press the Attack)"
+    ],
+    "rows": [
+     [
+      "Healing",
+      "1 HP/s",
+      "2 HP/s",
+      "2 HP/s",
+      "4 HP/s"
+     ],
+     [
+      "Damage",
+      "+5%",
+      "+10%",
+      "+10%",
+      "+20%"
+     ]
+    ],
+    "note": "Only one aura is on at a time."
+   },
+   {
+    "title": "Triumph stacks",
+    "head": [
+     "Stacks",
+     "0",
+     "1",
+     "2",
+     "3",
+     "10",
+     "15",
+     "20"
+    ],
+    "rows": [
+     [
+      "Damage reduction",
+      "0%",
+      "1%",
+      "2%",
+      "3%",
+      "10%",
+      "15%",
+      "20%"
+     ],
+     [
+      "Wooden sword (20) on Silas",
+      "20",
+      "19.8",
+      "19.6",
+      "19.4",
+      "18",
+      "17",
+      "16"
+     ],
+     [
+      "Press the Attack shield",
+      "10",
+      "10.5",
+      "11",
+      "11.5",
+      "15",
+      "17.5",
+      "20"
+     ]
+    ],
+    "note": "Wooden sword values are tested with no armor. The shield is 10 at 0 stacks and 20 at 20; the values in between assume it grows evenly."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Stay on healing",
+    "text": "Use the healing aura most of the time. The damage aura is only worth it when a teammate stays in one spot and shoots, like a Raven or Bekzat."
+   },
+   {
+    "title": "Press the Attack before fights",
+    "text": "Use it with your teammates right before a fight so everyone starts with a shield. If you're being chased, use it for the extra healing."
+   },
+   {
+    "title": "Stick with your team",
+    "text": "Teammates' kills in your aura give you stacks, so stay close to them. More stacks means you take less damage and get a bigger shield."
+   },
+   {
+    "title": "Early support",
+    "text": "The healing is okay for you but great for teammates, which makes Silas a strong early game support. Later, with stacks, you can tank up to 20% of incoming damage and heal yourself."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Don't die near Silas",
+    "text": "Any kill in Silas's aura gives it a stack, so avoid dying to its teammates when it's close by."
+   },
+   {
+    "title": "Reset it early",
+    "text": "Kill Silas often in the early game. It loses 30% of its stacks each death, so it won't have many later on."
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "The healing is okay for Silas but great for teammates, so it's a good early game support. It can also jugg a bit, taking up to 20% less damage with stacks and healing itself. But it needs kills to build stacks and loses 30% of them each death.",
+  "skins": [
+   {
+    "name": "Great Wolf Skin",
+    "img": "images/skins/silas-great-wolf.webp"
+   },
+   {
+    "name": "Victorious Gold Skin",
+    "img": "images/skins/silas-victorious-gold.webp"
+   },
+   {
+    "name": "Victorious Platinum Skin",
+    "img": "images/skins/silas-victorious-platinum.webp"
+   },
+   {
+    "name": "Victorious Diamond Skin",
+    "img": "images/skins/silas-victorious-diamond.webp"
+   },
+   {
+    "name": "Victorious Emerald Skin",
+    "img": "images/skins/silas-victorious-emerald.webp"
+   },
+   {
+    "name": "Victorious Nightmare Skin",
+    "img": "images/skins/silas-victorious-nightmare.webp"
+   }
+  ]
  },
  {
   "name": "Skoll",
