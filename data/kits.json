@@ -20861,7 +20861,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Gain grit in battle and can keep fighting after taken fatal damage.",
-  "adv": "Warrior builds Grit by fighting. Every sword hit you land adds 10% (10 hits to fill the bar), and every hit you take adds 2% (50 hits). In Warrior or Emerald armor, hits you take add 5% instead (20 hits). After 6 seconds without attacking or being attacked, Grit starts draining, slowly at first and then faster, and takes about 25 seconds to empty from full.\nWarrior armor replaces diamond armor and is stronger: a wood sword does 4 damage to it, so it blocks 80% (diamond blocks 76%).\nWhen you take a killing hit with any Grit, you go into Last Stand instead of dying. You drop to 1 HP and get a shield that drains every 0.5 seconds, slowly at first and then faster. In Warrior or Emerald armor, getting a kill during Last Stand revives you with the shield you have left. If you have 0 Grit, you just die.",
+  "adv": "Warrior builds Grit by fighting. Every sword hit you land adds 10% (10 hits to fill the bar), and every hit you take adds 2% (50 hits). In Warrior or Emerald armor, hits you take add 5% instead (20 hits). After 6 seconds without attacking or being attacked, Grit starts draining, slowly at first and then faster, and takes about 25 seconds to empty from full.\nWarrior armor replaces diamond armor and is stronger: a wood sword does 4 damage to it, so it blocks 80% (diamond blocks 76%).\nWhen you take a killing hit with any Grit, you go into Last Stand instead of dying. You drop to 1 HP and your Grit becomes a shield: the more Grit, the bigger the shield (half Grit gives half the shield). It drains every 0.5 seconds, slowly at first and then faster. Last Stand also automatically fires the 100% Warrior's Strike with extra damage, but it doesn't heal. In Warrior or Emerald armor, getting a kill during Last Stand revives you, and the shield you have left turns into health. If you have 0 Grit, you just die.\nStatic (Zapped) counters Warrior, since it cuts its shields and healing.",
   "items": [
    {
     "name": "Warrior Armor",
@@ -20873,9 +20873,9 @@
     "name": "Warrior's Strike",
     "img": "images/abilities/ability-template.png",
     "cd": 8,
-    "desc": "An area attack that changes with your Grit. Under 50%: 14 damage in a 5-block radius, and +10% Grit for each enemy hit. Uses no Grit. 50–99%: 24 damage in an 8-block radius and +5 shield for each enemy hit. Uses 50% Grit. 100%: two hits, 14 then 28 damage, 0.5 seconds apart, in a 10-block radius. Each hit heals you 5 per enemy hit (25 per hit with 5 enemies). Uses all your Grit.",
-    "note": "Sword out only. Damage values are with a wood sword.",
-    "dmgText": "14 / 24 / 14 + 28"
+    "desc": "An area attack that changes with your Grit, and scales with your sword. Under 50%: 70% of your sword damage in a 5-block radius, and +10% Grit for each enemy hit. Uses no Grit. 50–99%: 120% of your sword damage in an 8-block radius and +5 shield for each enemy hit. Uses 50% Grit. 100%: two hits, 70% then 140% of your sword damage, 0.5 seconds apart, in a 10-block radius. Each hit heals you 5 per enemy hit (25 per hit with 5 enemies). Uses all your Grit.",
+    "note": "Sword out only. While using it, you ignore knockback and take 30% less damage. Last Stand fires the 100% version automatically, with extra damage and no healing.",
+    "dmgText": "70% / 120% / 70% + 140% of sword"
    }
   ],
   "history": [
@@ -20990,7 +20990,7 @@
    {
     "name": "Last Stand",
     "when": "Taking a killing hit with Grit",
-    "desc": "Drop to 1 HP with a shield based on your Grit and armor. The shield drains every 0.5 seconds. In Warrior or Emerald armor, a kill revives you with the shield you have left."
+    "desc": "Drop to 1 HP with a shield based on your Grit and armor (half Grit, half the shield). The shield drains every 0.5 seconds and the 100% Strike fires with extra damage, no healing. In Warrior or Emerald armor, a kill revives you and turns the leftover shield into health."
    }
   ],
   "tables": [
@@ -21028,7 +21028,7 @@
       "50, 48 … 40, 37 … 25, 21 … 5, 1"
      ]
     ],
-    "note": "The shield drops 2 per tick for the first 5 ticks, then 3 for the next 5, then 4 after that."
+    "note": "The shield drops 2 per tick for the first 5 ticks, then 3 for the next 5, then 4 after that. With less Grit the shield is smaller: half Grit gives half the shield."
    },
    {
     "title": "Grit gain",
@@ -21094,7 +21094,12 @@
     "title": "Warrior's Strike",
     "head": [
      "Grit",
-     "Damage (wood sword)",
+     "Damage",
+     "Wood",
+     "Stone",
+     "Iron",
+     "Diamond",
+     "Emerald",
      "Radius",
      "Bonus",
      "Grit used"
@@ -21102,26 +21107,42 @@
     "rows": [
      [
       "Under 50%",
+      "70%",
       "14",
+      "17.5",
+      "21",
+      "29.4",
+      "38.5",
       "5 blocks",
       "+10% Grit per enemy",
       "None"
      ],
      [
       "50–99%",
+      "120%",
       "24",
+      "30",
+      "36",
+      "50.4",
+      "66",
       "8 blocks",
       "+5 shield per enemy",
       "50%"
      ],
      [
       "100%",
+      "70% + 140%",
       "14 + 28",
+      "17.5 + 35",
+      "21 + 42",
+      "29.4 + 58.8",
+      "38.5 + 77",
       "10 blocks",
       "Heals 5 per enemy, each hit",
       "All"
      ]
-    ]
+    ],
+    "note": "Percent of your sword damage, with no armor. Wood sword values are tested; the others are worked out from them. While using it, Warrior ignores knockback and takes 30% less damage."
    }
   ],
   "strategy": [
@@ -21150,10 +21171,14 @@
    {
     "title": "Stall Last Stand",
     "text": "Don't let it get a kill during Last Stand when it has Warrior armor, or it revives. Back off and let the shield run out instead of risking a fight."
+   },
+   {
+    "title": "Use Static",
+    "text": "Static (Zapped) cuts Warrior's shields and healing, including its Last Stand shield."
    }
   ],
   "bal": "bal",
-  "balWhy": "Its real power comes with Warrior armor. Before that it's basically a semi-fighter heal kit that gets extra shield before it dies. Static also hurts it a bit.",
+  "balWhy": "Its real power comes with Warrior armor. Before that it's basically a semi-fighter heal kit that gets extra shield before it dies. Static (Zapped) also hurts it a bit, since it counters its shields and healing.",
   "skins": [
    {
     "name": "Ice Viking Skin",
