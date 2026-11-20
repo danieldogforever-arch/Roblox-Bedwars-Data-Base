@@ -19744,12 +19744,14 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Ascend into an angelic form and switch freely between Light and Void. When you melee attack, Light form grants shield for you and allies, and Void form inflicts max health decay on your target.",
-  "adv": "",
+  "adv": "Trinity starts at level 0 with a bar that fills as you deal sword damage. It takes 100 damage to reach level 1, then 150 for level 2, 200 for level 3 and 250 for level 4 (700 in total). Dying loses up to 20% of your current level's progress, but you can never drop a level.\nUse Inversion to swap between Light and Void form.\nLight form: every sword hit gives you and teammates within 17 blocks a shield, once every 0.6 seconds: 2 at level 1, 3 at level 2, 4 at level 3 and 6 at level 4. The shield stacks up to 30 and disappears after 5 seconds without getting more.\nVoid form: every sword hit lowers your target's max HP, up to 25% / 35% / 45% / 60% at levels 1–4. It takes 6 hits to reach the max, and you can stack it once every 0.4 seconds. It lasts 15 seconds.",
   "items": [],
   "abilities": [
    {
     "name": "Inversion",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Swap between Light form (shields) and Void form (max HP decay).",
+    "nodps": true
    }
   ],
   "history": [
@@ -19841,7 +19843,134 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Angel Levels",
+    "when": "Dealing sword damage",
+    "desc": "Level up at 100 / 150 / 200 / 250 damage. Dying loses up to 20% of your level progress, never a level."
+   },
+   {
+    "name": "Light Form",
+    "when": "Sword hit (every 0.6s)",
+    "desc": "Shield for you and teammates within 17 blocks: 2 / 3 / 4 / 6 per hit by level, up to 30. Fades after 5 seconds without more."
+   },
+   {
+    "name": "Void Form",
+    "when": "Sword hit (every 0.4s)",
+    "desc": "Lowers the target's max HP, up to 25 / 35 / 45 / 60% by level after 6 hits. Lasts 15 seconds."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Levels",
+    "head": [
+     "Level",
+     "Damage to reach",
+     "Light shield per hit",
+     "Hits to 30 shield",
+     "Void max HP loss per hit",
+     "Void max (6 hits)"
+    ],
+    "rows": [
+     [
+      "1",
+      "100",
+      "2",
+      "15",
+      "~4.2%",
+      "25%"
+     ],
+     [
+      "2",
+      "150",
+      "3",
+      "10",
+      "~5.8%",
+      "35%"
+     ],
+     [
+      "3",
+      "200",
+      "4",
+      "8",
+      "7.5%",
+      "45%"
+     ],
+     [
+      "4",
+      "250",
+      "6",
+      "5",
+      "10%",
+      "60%"
+     ]
+    ],
+    "note": "Light shield can be gained once every 0.6 seconds, so 30 shield takes 9s / 6s / 4.8s / 3s by level. Void can stack once every 0.4 seconds. Level 4's 10% per hit is tested; the others are the max split evenly over 6 hits."
+   },
+   {
+    "title": "Void form on a 100 HP enemy",
+    "head": [
+     "Level",
+     "Max HP after 6 hits"
+    ],
+    "rows": [
+     [
+      "1",
+      "75"
+     ],
+     [
+      "2",
+      "65"
+     ],
+     [
+      "3",
+      "55"
+     ],
+     [
+      "4",
+      "40"
+     ]
+    ],
+    "note": "Lasts 15 seconds."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Stay in Light form",
+    "text": "Light form is almost always the right choice. Fight near your teammates so they get the shield too."
+   },
+   {
+    "title": "Void only vs healers",
+    "text": "Only switch to Void form against kits that rely on healing, like Sheila or Baker."
+   },
+   {
+    "title": "Don't die",
+    "text": "Dying loses up to 20% of your level progress, so play safe while you level up."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Static",
+    "text": "Static (Zapped) counters the shields Trinity gives itself and its teammates."
+   },
+   {
+    "title": "Stall out Void",
+    "text": "Void form doesn't really affect you. Stall until it runs out."
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "Light form is fine, but Void form is never a good idea to use since it does no damage. You use it knowing you won't be able to kill them, or even hit them while they stall to heal. Void form needs a rework.",
+  "skins": [
+   {
+    "name": "Fallen Angel Skin",
+    "img": "images/skins/trinity-fallen-angel.webp"
+   },
+   {
+    "name": "Trini-Treat Skin",
+    "img": "images/skins/trinity-trini-treat.webp"
+   }
+  ]
  },
  {
   "name": "Triton",
