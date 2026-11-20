@@ -22576,12 +22576,17 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Climb and pounce with feline dexterity! Fall damage is reduced since you always land on your feet.",
-  "adv": "",
+  "adv": "Yamini has a stamina bar that's used for wall climbing and pouncing. You can climb any wall, which drains 12% stamina every 1.5 seconds, so a full bar lasts about 12 seconds of climbing. Stamina comes back at 5% every 1.5 seconds (about 30 seconds from empty to full).\nPounce (5 second cooldown) uses 35% stamina, and you can't pounce below 35%. That means you get 2 pounces from a full bar. It leaps you 3 blocks standing still, 6 if you're running, or 8 if you run and jump first. If you land on someone, it deals 10 damage plus a bleed that ticks twice (6.93 total). It has no armor penetration.\nYamini takes about half as much fall damage: a 40 block fall did 34 instead of 69.",
   "items": [],
   "abilities": [
    {
     "name": "Pouncing",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 5,
+    "dmg": 10,
+    "dmgText": "10 + 6.93 bleed",
+    "desc": "Uses 35% stamina (needs at least 35%). Leap 3 blocks, 6 while running, or 8 if you run and jump first. Landing on someone deals 10 damage, then bleeds twice for 6.93 total. No armor penetration.",
+    "nodps": true
    }
   ],
   "history": [
@@ -22643,7 +22648,130 @@
    "tier": "20 (paid)",
    "badge": "images/bp/s9.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Wall Climb",
+    "when": "Touching a wall",
+    "desc": "Climb walls, draining 12% stamina every 1.5 seconds (about 12 seconds from full). At 0 stamina you drop off."
+   },
+   {
+    "name": "Stamina",
+    "when": "Always",
+    "desc": "Regenerates 5% every 1.5 seconds. Shared by climbing and pouncing."
+   },
+   {
+    "name": "Land on Your Feet",
+    "when": "Falling",
+    "desc": "Takes about half the fall damage: 34 instead of 69 from a 40 block fall."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Pounce",
+    "head": [
+     "",
+     "No armor",
+     "Iron armor"
+    ],
+    "rows": [
+     [
+      "Hit",
+      "10",
+      "4.4"
+     ],
+     [
+      "Bleed (2 ticks)",
+      "6.93",
+      "3.05"
+     ],
+     [
+      "Total",
+      "16.93",
+      "7.45"
+     ]
+    ],
+    "note": "Totals are tested; the iron split is worked out. 16.93 → 7.45 on iron means no armor penetration."
+   },
+   {
+    "title": "Pounce distance",
+    "head": [
+     "How",
+     "Distance"
+    ],
+    "rows": [
+     [
+      "Standing",
+      "3 blocks"
+     ],
+     [
+      "Running",
+      "6 blocks"
+     ],
+     [
+      "Running + jumping",
+      "8 blocks"
+     ]
+    ]
+   },
+   {
+    "title": "Stamina",
+    "head": [
+     "Action",
+     "Stamina"
+    ],
+    "rows": [
+     [
+      "Wall climbing",
+      "-12% every 1.5s (~12s from full)"
+     ],
+     [
+      "Pounce",
+      "-35% (can't use under 35%)"
+     ],
+     [
+      "Regeneration",
+      "+5% every 1.5s (~30s from empty)"
+     ]
+    ],
+    "note": "A full bar gives 2 pounces. Getting 35% back for another pounce takes about 10.5 seconds."
+   },
+   {
+    "title": "Fall damage (40 blocks)",
+    "head": [
+     "Kit",
+     "Damage"
+    ],
+    "rows": [
+     [
+      "Normal",
+      "69"
+     ],
+     [
+      "Yamini",
+      "34"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Save your stamina",
+    "text": "Since the stamina nerf, don't pounce constantly like before. Use it when you're in danger, chasing someone, or running away."
+   },
+   {
+    "title": "Climb to stall",
+    "text": "Climb walls to stall, chase people who are building up, and escape."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Gloop it",
+    "text": "A Gloop or the Grounded effect shuts Yamini down. Once it's glooped, it's a goner."
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "The movement is fine, but it has no damage besides its pounce and bleed, which rarely hit. One Gloop and it's completely kitless. You can still build up to abuse the low fall damage, but it's not as strong as Hephaestus or Eldertree. It's not bad, but it's outclassed by kits that have both movement and damage."
  },
  {
   "name": "Yeti",

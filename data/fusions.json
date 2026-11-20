@@ -111,11 +111,6 @@
  },
  {
   "a": "Beekeeper Beatrix",
-  "b": "Yamini",
-  "note": ""
- },
- {
-  "a": "Beekeeper Beatrix",
   "b": "Triton",
   "note": ""
  },
@@ -811,11 +806,6 @@
  },
  {
   "a": "Metal Detector",
-  "b": "Yamini",
-  "note": ""
- },
- {
-  "a": "Metal Detector",
   "b": "Jade",
   "note": ""
  },
@@ -892,11 +882,6 @@
  {
   "a": "Pirate Davey",
   "b": "Noelle",
-  "note": ""
- },
- {
-  "a": "Pirate Davey",
-  "b": "Yamini",
   "note": ""
  },
  {
@@ -1082,6 +1067,31 @@
  {
   "a": "Vanessa",
   "b": "Bounty Hunter",
+  "note": ""
+ },
+ {
+  "a": "Yamini",
+  "b": "Yuzi",
+  "note": ""
+ },
+ {
+  "a": "Yamini",
+  "b": "Beekeeper Beatrix",
+  "note": ""
+ },
+ {
+  "a": "Yamini",
+  "b": "Jade",
+  "note": ""
+ },
+ {
+  "a": "Yamini",
+  "b": "Metal Detector",
+  "note": ""
+ },
+ {
+  "a": "Yamini",
+  "b": "Pirate Davey",
   "note": ""
  }
 ]
