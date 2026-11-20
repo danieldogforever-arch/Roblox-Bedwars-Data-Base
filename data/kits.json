@@ -17296,21 +17296,30 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Buy ravens and fly at enemies to deliver deadly doses of poison.",
-  "adv": "",
+  "adv": "Raven gets a free raven every 45 seconds, unless it already has 2 or more. You can also buy ravens in the shop for 50 iron and hold as many as you want. Launching a raven takes 1 second, then you fly it for up to 7 seconds. It's fast: about 24 blocks in 1.5 seconds. You can explode it anywhere, and it poisons every enemy within 6 blocks: 4 damage every 0.5 seconds for 4 seconds (32 total), with 70% armor penetration. Killing someone with a raven gives you a raven back.\nYou also have a bar with 4 sections. Each time your raven hits a player you fill one section, and your two abilities, Avian Call and Raven Storm, use them. Both scale with your sword.\nRaven's poison doesn't work with enchants, except Critical Strike.",
   "items": [
    {
     "name": "Ravens",
-    "img": "images/items/ravens.png"
+    "img": "images/items/ravens.png",
+    "note": "Cost: 50 iron",
+    "desc": "Fly it for up to 7 seconds (1 second to launch), about 24 blocks in 1.5 seconds. Explode it anywhere to poison enemies within 6 blocks: 4 damage every 0.5 seconds for 4 seconds (32 total), 70% armor penetration. Free one every 45 seconds if you have fewer than 2. No limit on how many you hold.",
+    "dmg": 32,
+    "dmgText": "4 every 0.5s (32 total)",
+    "nodps": true
    }
   ],
   "abilities": [
    {
-    "name": "Homing Ravens",
-    "img": "images/abilities/ability-template.png"
+    "name": "Avian Call",
+    "img": "images/abilities/ability-template.png",
+    "desc": "Uses 1 section of your bar. Ravens fly to the nearest enemy and attack. Damage goes up with your sword, and goes up more as the enemy loses HP (see the Avian Call table).",
+    "nodps": true
    },
    {
     "name": "Raven Storm",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "A storm of ravens in a 14 block radius for 12 seconds, hitting up to 3 enemies at a time. Damage per tick goes up with your sword: 6–8 with wood up to 14–16 with emerald.",
+    "nodps": true
    }
   ],
   "history": [
@@ -17417,7 +17426,149 @@
    "badge": "images/bp/s1.webp",
    "rent": 2000,
    "buy": 25000
-  }
+  },
+  "passives": [
+   {
+    "name": "Raven Supply",
+    "when": "Every 45 seconds",
+    "desc": "Get a free raven if you have fewer than 2. Killing someone with a raven also gives you one back."
+   },
+   {
+    "name": "Raven Bar",
+    "when": "Your raven hits a player",
+    "desc": "+1 section, up to 4. Used by Avian Call and Raven Storm."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Raven poison",
+    "head": [
+     "Armor",
+     "Per tick",
+     "Total (4s)"
+    ],
+    "rows": [
+     [
+      "None",
+      "4",
+      "32"
+     ],
+     [
+      "img:images/armor/leather.png|Leather",
+      "3.42",
+      "27.38"
+     ],
+     [
+      "img:images/armor/iron.png|Iron",
+      "2.89",
+      "23.16"
+     ],
+     [
+      "img:images/armor/diamond.png|Diamond",
+      "2.05",
+      "16.41"
+     ],
+     [
+      "img:images/armor/emerald.png|Emerald",
+      "1.55",
+      "12.43"
+     ]
+    ],
+    "note": "No armor and iron are tested. That works out to 70% armor penetration; the rest is worked out from it."
+   },
+   {
+    "title": "Avian Call damage",
+    "head": [
+     "Sword",
+     "First hit (full HP)",
+     "Then"
+    ],
+    "rows": [
+     [
+      "Wood",
+      "2",
+      "3 down to 50% HP, 4 below 50%"
+     ],
+     [
+      "Stone",
+      "2",
+      "3 down to 50% HP, 4 below 50%"
+     ],
+     [
+      "Iron",
+      "3",
+      "4 down to 65%, 5 down to 30%, 6 below 30%"
+     ],
+     [
+      "Diamond",
+      "4",
+      "5 down to 75%, 6 down to 50%, 7 below 50%"
+     ],
+     [
+      "Emerald",
+      "5",
+      "6 down to 80%, 7 down to 60%, 8 down to 40%, 9 below 40%"
+     ]
+    ],
+    "note": "Damage goes up by 1 at each HP step. Better swords hit harder and have more steps."
+   },
+   {
+    "title": "Raven Storm damage per tick",
+    "head": [
+     "Sword",
+     "Wood",
+     "Stone",
+     "Iron",
+     "Diamond",
+     "Emerald"
+    ],
+    "rows": [
+     [
+      "Damage",
+      "6–8",
+      "7–9",
+      "8–10",
+      "11–13",
+      "14–16"
+     ]
+    ],
+    "note": "14 block radius, up to 3 enemies at a time, lasts 12 seconds."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Chip, then finish",
+    "text": "Use ravens to chip enemies down, then finish them with a raven to get one back."
+   },
+   {
+    "title": "Support from base",
+    "text": "Once you have tier 2–3, sit back in base and support your teammates by sending ravens out for extra damage."
+   },
+   {
+    "title": "Storm when needed",
+    "text": "Use Raven Storm when there are enemies around to hit."
+   },
+   {
+    "title": "Critical Strike",
+    "text": "Raven's poison doesn't work with enchants, but Critical Strike does work with it."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Block in",
+    "text": "If you're fully blocked in, the poison can't hit you."
+   },
+   {
+    "title": "Bait the explosion",
+    "text": "Build up when you see a raven coming at you, to bait the Raven into exploding it early."
+   },
+   {
+    "title": "Pearl the controller",
+    "text": "Late game, when Raven has 10+ ravens, pearl onto it while it's flying a raven and kill it to get rid of all its birds."
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "It can shred enemies if you keep hitting them, but you can't get many ravens early game, and late game it can be killed by ranged weapons or a surprise pearl."
  },
  {
   "name": "Santa",

@@ -331,11 +331,6 @@
  },
  {
   "a": "Evelynn",
-  "b": "Raven",
-  "note": ""
- },
- {
-  "a": "Evelynn",
   "b": "Bekzat",
   "note": ""
  },
@@ -1052,6 +1047,26 @@
  {
   "a": "Void Regent",
   "b": "Kaliyah",
+  "note": ""
+ },
+ {
+  "a": "Raven",
+  "b": "Evelynn",
+  "note": ""
+ },
+ {
+  "a": "Raven",
+  "b": "Sheep Herder",
+  "note": ""
+ },
+ {
+  "a": "Raven",
+  "b": "Bounty Hunter",
+  "note": ""
+ },
+ {
+  "a": "Raven",
+  "b": "Barbarian",
   "note": ""
  }
 ]
