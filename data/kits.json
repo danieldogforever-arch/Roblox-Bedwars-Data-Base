@@ -20861,7 +20861,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Gain grit in battle and can keep fighting after taken fatal damage.",
-  "adv": "",
+  "adv": "Warrior builds Grit by fighting. Every sword hit you land adds 10% (10 hits to fill the bar), and every hit you take adds 2% (50 hits). In Warrior or Emerald armor, hits you take add 5% instead (20 hits). After 6 seconds without attacking or being attacked, Grit starts draining, slowly at first and then faster, and takes about 25 seconds to empty from full.\nWarrior armor replaces diamond armor and is stronger: a wood sword does 4 damage to it, so it blocks 80% (diamond blocks 76%).\nWhen you take a killing hit with any Grit, you go into Last Stand instead of dying. You drop to 1 HP and get a shield that drains every 0.5 seconds, slowly at first and then faster. In Warrior or Emerald armor, getting a kill during Last Stand revives you with the shield you have left. If you have 0 Grit, you just die.",
   "items": [
    {
     "name": "Warrior Armor",
@@ -20871,7 +20871,11 @@
   "abilities": [
    {
     "name": "Warrior's Strike",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 8,
+    "desc": "An area attack that changes with your Grit. Under 50%: 14 damage in a 5-block radius, and +10% Grit for each enemy hit. Uses no Grit. 50–99%: 24 damage in an 8-block radius and +5 shield for each enemy hit. Uses 50% Grit. 100%: two hits, 14 then 28 damage, 0.5 seconds apart, in a 10-block radius. Each hit heals you 5 per enemy hit (25 per hit with 5 enemies). Uses all your Grit.",
+    "note": "Sword out only. Damage values are with a wood sword.",
+    "dmgText": "14 / 24 / 14 + 28"
    }
   ],
   "history": [
@@ -20976,7 +20980,190 @@
    "badge": "images/bp/s1.webp",
    "rent": 2000,
    "buy": 25000
-  }
+  },
+  "passives": [
+   {
+    "name": "Grit",
+    "when": "Hitting or getting hit",
+    "desc": "+10% per sword hit you land. +2% per hit you take, or +5% in Warrior or Emerald armor. Starts draining after 6 seconds out of combat."
+   },
+   {
+    "name": "Last Stand",
+    "when": "Taking a killing hit with Grit",
+    "desc": "Drop to 1 HP with a shield based on your Grit and armor. The shield drains every 0.5 seconds. In Warrior or Emerald armor, a kill revives you with the shield you have left."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Last Stand shield (full Grit)",
+    "head": [
+     "Armor",
+     "Shield",
+     "Lasts about",
+     "Shield each tick (0.5s)"
+    ],
+    "rows": [
+     [
+      "img:images/armor/leather.png|Leather",
+      "15",
+      "3.5s",
+      "15, 13, 11, 9, 7, 5, 2"
+     ],
+     [
+      "img:images/armor/iron.png|Iron",
+      "20",
+      "4.5s",
+      "20, 18, 16, 14, 12, 10, 7, 4, 1"
+     ],
+     [
+      "img:images/items/warrior-armor.png|Warrior",
+      "40",
+      "7s",
+      "40, 38 … 30, 27 … 15, 11, 7, 3"
+     ],
+     [
+      "img:images/armor/emerald.png|Emerald",
+      "50",
+      "8.5s",
+      "50, 48 … 40, 37 … 25, 21 … 5, 1"
+     ]
+    ],
+    "note": "The shield drops 2 per tick for the first 5 ticks, then 3 for the next 5, then 4 after that."
+   },
+   {
+    "title": "Grit gain",
+    "head": [
+     "Source",
+     "Grit per hit",
+     "Hits to fill"
+    ],
+    "rows": [
+     [
+      "Your sword hits",
+      "10%",
+      "10"
+     ],
+     [
+      "Hits you take",
+      "2%",
+      "50"
+     ],
+     [
+      "Hits you take (Warrior or Emerald armor)",
+      "5%",
+      "20"
+     ],
+     [
+      "Warrior's Strike under 50%",
+      "10% per enemy",
+      "5 enemies = 50%"
+     ]
+    ]
+   },
+   {
+    "title": "Grit drain (from full)",
+    "head": [
+     "Seconds draining",
+     "1–6",
+     "7–12",
+     "13–18",
+     "19–24",
+     "25"
+    ],
+    "rows": [
+     [
+      "Grit lost per second",
+      "~1%",
+      "~2%",
+      "~4%",
+      "~8%",
+      "~10%"
+     ],
+     [
+      "Grit left after",
+      "~94%",
+      "~82%",
+      "~58%",
+      "~10%",
+      "0%"
+     ]
+    ],
+    "note": "Starts after 6 seconds without attacking or being attacked. Estimated from about 1% doubling up to about 10%, over 25 seconds."
+   },
+   {
+    "title": "Warrior's Strike",
+    "head": [
+     "Grit",
+     "Damage (wood sword)",
+     "Radius",
+     "Bonus",
+     "Grit used"
+    ],
+    "rows": [
+     [
+      "Under 50%",
+      "14",
+      "5 blocks",
+      "+10% Grit per enemy",
+      "None"
+     ],
+     [
+      "50–99%",
+      "24",
+      "8 blocks",
+      "+5 shield per enemy",
+      "50%"
+     ],
+     [
+      "100%",
+      "14 + 28",
+      "10 blocks",
+      "Heals 5 per enemy, each hit",
+      "All"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Rush Warrior armor",
+    "text": "Head to middle early and save emeralds for Warrior armor. That's when Warrior gets really strong."
+   },
+   {
+    "title": "Pick the right Strike",
+    "text": "Use it at under 50% Grit when 3 or more enemies are bunched up. In a 1v1, use it at 50% or more (5+ hits). Save the 100% version for when you have Warrior armor and there's a big group."
+   },
+   {
+    "title": "Keep Grit for Last Stand",
+    "text": "If you're about to die, don't spend all your Grit. Keep some so Last Stand gives you a shield, then get a kill to revive. Spending it for extra damage means you die right away."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Bait the ability",
+    "text": "Get Warrior to waste Warrior's Strike, then fight it while it's on cooldown."
+   },
+   {
+    "title": "Coils at base",
+    "text": "Put Tesla Coils around your base. With Warrior armor it can easily spawn kill."
+   },
+   {
+    "title": "Stall Last Stand",
+    "text": "Don't let it get a kill during Last Stand when it has Warrior armor, or it revives. Back off and let the shield run out instead of risking a fight."
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "Its real power comes with Warrior armor. Before that it's basically a semi-fighter heal kit that gets extra shield before it dies. Static also hurts it a bit.",
+  "skins": [
+   {
+    "name": "Ice Viking Skin",
+    "img": "images/skins/warrior-ice-viking.webp"
+   },
+   {
+    "name": "OG Chroma Skin",
+    "img": "images/skins/warrior-og-chroma.webp"
+   }
+  ]
  },
  {
   "name": "Whim",

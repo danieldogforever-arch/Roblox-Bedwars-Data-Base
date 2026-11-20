@@ -976,17 +976,37 @@
  },
  {
   "a": "Silas",
-  "b": "Warrior",
-  "note": ""
- },
- {
-  "a": "Silas",
   "b": "Infernal Shielder",
   "note": ""
  },
  {
   "a": "Silas",
   "b": "Hephaestus",
+  "note": ""
+ },
+ {
+  "a": "Warrior",
+  "b": "Silas",
+  "note": ""
+ },
+ {
+  "a": "Warrior",
+  "b": "Marrow",
+  "note": ""
+ },
+ {
+  "a": "Warrior",
+  "b": "Bounty Hunter",
+  "note": ""
+ },
+ {
+  "a": "Warrior",
+  "b": "Miner",
+  "note": ""
+ },
+ {
+  "a": "Warrior",
+  "b": "Barbarian",
   "note": ""
  }
 ]
