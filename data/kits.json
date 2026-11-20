@@ -17296,7 +17296,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Buy ravens and fly at enemies to deliver deadly doses of poison.",
-  "adv": "Raven gets a free raven every 45 seconds, unless it already has 2 or more. You can also buy ravens in the shop for 50 iron and hold as many as you want. Launching a raven takes 1 second, then you fly it for up to 7 seconds. It's fast: about 24 blocks in 1.5 seconds. You can explode it anywhere, and it poisons every enemy within 6 blocks: 4 damage every 0.5 seconds for 4 seconds (32 total), with 70% armor penetration. Killing someone with a raven gives you a raven back.\nYou also have a bar with 4 sections. Each time your raven hits a player you fill one section, and your two abilities, Avian Call and Raven Storm, use them. Both scale with your sword.\nRaven's poison doesn't work with enchants, except Critical Strike.",
+  "adv": "Raven gets a free raven every 45 seconds, unless it already has 2 or more. You can also buy ravens in the shop for 50 iron and hold as many as you want. Launching a raven takes 1 second, then you fly it for up to 7 seconds. It's fast: about 24 blocks in 1.5 seconds. You can explode it anywhere, and it poisons every enemy within 6 blocks: 4 damage every 0.5 seconds for 4 seconds (32 total), with 70% armor penetration. Killing someone with a raven gives you a raven back.\nYou also have a bar with 4 sections. Each raven that hits a player fills one section (only 1 per raven, no matter how many it hits), and your two abilities, Avian Call and Raven Storm, use them. Both scale with your sword.\nRaven's poison doesn't work with enchants, except Critical Strike.",
   "items": [
    {
     "name": "Ravens",
@@ -17318,7 +17318,7 @@
    {
     "name": "Raven Storm",
     "img": "images/abilities/ability-template.png",
-    "desc": "A storm of ravens in a 14 block radius for 12 seconds, hitting up to 3 enemies at a time. Damage per tick goes up with your sword: 6–8 with wood up to 14–16 with emerald.",
+    "desc": "Uses all 4 sections. A storm of ravens in a 14 block radius, hitting up to 3 enemies at a time. Ticks every 0.5 seconds, 22 ticks in total (about 11–12 seconds). Damage per tick goes up with your sword: 6–8 with wood up to 14–16 with emerald.",
     "nodps": true
    }
   ],
@@ -17436,7 +17436,7 @@
    {
     "name": "Raven Bar",
     "when": "Your raven hits a player",
-    "desc": "+1 section, up to 4. Used by Avian Call and Raven Storm."
+    "desc": "+1 section per raven that hits a player (max 1 per raven), up to 4. Avian Call uses 1, Raven Storm uses all 4."
    }
   ],
   "tables": [
@@ -17516,23 +17516,37 @@
     "title": "Raven Storm damage per tick",
     "head": [
      "Sword",
-     "Wood",
-     "Stone",
-     "Iron",
-     "Diamond",
-     "Emerald"
+     "Per tick",
+     "Total (22 ticks)"
     ],
     "rows": [
      [
-      "Damage",
+      "Wood",
       "6–8",
+      "132–176"
+     ],
+     [
+      "Stone",
       "7–9",
+      "154–198"
+     ],
+     [
+      "Iron",
       "8–10",
+      "176–220"
+     ],
+     [
+      "Diamond",
       "11–13",
-      "14–16"
+      "242–286"
+     ],
+     [
+      "Emerald",
+      "14–16",
+      "308–352"
      ]
     ],
-    "note": "14 block radius, up to 3 enemies at a time, lasts 12 seconds."
+    "note": "Per enemy, with no armor, if they stay in it the whole time. Ticks every 0.5 seconds, 14 block radius, up to 3 enemies at a time."
    }
   ],
   "strategy": [
@@ -17568,7 +17582,17 @@
    }
   ],
   "bal": "bal",
-  "balWhy": "It can shred enemies if you keep hitting them, but you can't get many ravens early game, and late game it can be killed by ranged weapons or a surprise pearl."
+  "balWhy": "It can shred enemies if you keep hitting them, but you can't get many ravens early game, and late game it can be killed by ranged weapons or a surprise pearl.",
+  "skins": [
+   {
+    "name": "Recon Skin",
+    "img": "images/skins/raven-recon.webp"
+   },
+   {
+    "name": "OG Chroma Skin",
+    "img": "images/skins/raven-og-chroma.webp"
+   }
+  ]
  },
  {
   "name": "Santa",
