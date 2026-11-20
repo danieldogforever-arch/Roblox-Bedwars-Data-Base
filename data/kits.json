@@ -20568,7 +20568,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Super charge your bow to perform a triple shot.",
-  "adv": "",
+  "adv": "Vanessa buys arrows for 10 iron instead of 16. Once your bow, crossbow or headhunter is fully charged, keep holding to charge a triple shot: 1 more second for the bow, 1.5 for the crossbow and 2 for the headhunter. The bow takes about 0.6 seconds to fully charge first, and the triple shot bar only shows up after that.\nThe triple shot fires 3 arrows. The first does normal damage, the second about 78% more, and the third about a third as much, so landing all 3 does about 3.1x a normal shot. Each arrow knocks enemies back about 6 blocks. The arrows have no armor penetration.",
   "items": [],
   "abilities": [],
   "history": [
@@ -20644,7 +20644,99 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Cheap Arrows",
+    "when": "Shop",
+    "desc": "Arrows cost 10 iron instead of 16."
+   },
+   {
+    "name": "Triple Shot",
+    "when": "Keep charging after a full charge",
+    "desc": "Fires 3 arrows: normal damage, ~178%, then ~33%. 1s extra charge for the bow, 1.5s for the crossbow, 2s for the headhunter. 6 blocks of knockback."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Triple shot damage",
+    "head": [
+     "Weapon",
+     "1st arrow",
+     "2nd arrow",
+     "3rd arrow",
+     "All 3",
+     "Extra charge"
+    ],
+    "rows": [
+     [
+      "img:images/items/bow.png|Bow",
+      "18",
+      "32",
+      "6",
+      "56",
+      "1s"
+     ],
+     [
+      "img:images/items/crossbow.png|Crossbow",
+      "34",
+      "61",
+      "12",
+      "107",
+      "1.5s"
+     ],
+     [
+      "img:images/items/headhunter.png|Headhunter (body)",
+      "55",
+      "98",
+      "18",
+      "171",
+      "2s"
+     ],
+     [
+      "img:images/items/headhunter.png|Headhunter (headshot)",
+      "83",
+      "147",
+      "27",
+      "257",
+      "2s"
+     ]
+    ],
+    "note": "With no armor. Against iron armor, all 3 bow arrows did 24.64 in total, which means no armor penetration (56 ÷ 2.27)."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Cheap arrows, bridge kills",
+    "text": "Buy the cheap arrows and try to knock people off bridges. The knockback is the best thing about Vanessa."
+   },
+   {
+    "title": "Triple shot, then pearl",
+    "text": "Land a triple shot, then pearl onto the enemy to finish them off."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Wall up",
+    "text": "Watch out for Vanessas near your base, and build a wall so they can't hit you with a big triple shot."
+   },
+   {
+    "title": "Careful on bridges",
+    "text": "Be careful walking on bridges, since the triple shot's knockback can send you into the void."
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "The damage is nice, but hitting all the shots is really hard, even the second one. It's completely countered by placing a couple of blocks, and you can't PvP with it since it's no kit at all in close fights. It's a ranged kit for a reason, but other ranged kits do more damage faster and can still fight.",
+  "skins": [
+   {
+    "name": "Demon Empress Skin",
+    "img": "images/skins/vanessa-demon-empress.webp"
+   },
+   {
+    "name": "Valentines Skin",
+    "img": "images/skins/vanessa-valentines.webp"
+   }
+  ]
  },
  {
   "name": "Void Knight",
