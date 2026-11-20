@@ -17605,20 +17605,22 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Play as Santa and call in high-explosive sleigh strafe runs!",
-  "adv": "Santa buys presents in the shop: the Santa Strafe for 60 iron (hold up to 3) and the Santa Siege for 200 iron (hold 1). Hold for 1 second to charge a throw to max range, which reaches up to 18 blocks.\nWhere a present lands, Santa's sleigh flies over after 1 second. A Strafe drops 4 TNT and a Siege drops 1 Siege TNT, each with a 2.5 second fuse. From the moment you throw it, it takes about 5.75 seconds for the TNT to drop and explode.",
+  "adv": "Santa buys presents in the shop: the Santa Strafe for 60 iron (hold up to 3) and the Santa Siege for 200 iron (hold 1). Hold for 1 second to charge a throw to max range, which reaches up to 18 blocks.\nWhere a present lands, Santa's sleigh flies over after 1 second. A Strafe drops 4 TNT and a Siege drops 1 Siege TNT, each with a 2.5 second fuse. From the moment you throw it, it takes about 5.75 seconds for the TNT to drop and explode.\nThe TNT is normal TNT: up to 63 damage to a player, less the farther they are from the blast. The Siege is the normal Siege TNT, just dropped by the sleigh.",
   "items": [
    {
     "name": "Santa Strafe",
     "img": "images/items/santa-strafe.png",
     "note": "Cost: 60 iron",
-    "desc": "Hold up to 3. Throw up to 18 blocks (1 second to fully charge). The sleigh drops 4 TNT with a 2.5 second fuse, about 5.75 seconds after the throw.",
-    "nodps": true
+    "desc": "Hold up to 3. Throw up to 18 blocks (1 second to fully charge). The sleigh drops 4 TNT with a 2.5 second fuse, about 5.75 seconds after the throw. Each TNT does up to 63 damage, less farther from the blast.",
+    "nodps": true,
+    "dmg": 63,
+    "dmgText": "Up to 63 per TNT"
    },
    {
     "name": "Santa Siege",
     "img": "images/items/siege-tnt.png",
     "note": "Cost: 200 iron",
-    "desc": "Hold 1. Throw up to 18 blocks (1 second to fully charge). The sleigh drops 1 Siege TNT with a 2.5 second fuse, about 5.75 seconds after the throw.",
+    "desc": "Hold 1. Throw up to 18 blocks (1 second to fully charge). The sleigh drops 1 Siege TNT with a 2.5 second fuse, about 5.75 seconds after the throw. Same as the normal Siege TNT.",
     "nodps": true
    }
   ],
@@ -17709,7 +17711,7 @@
       "2.5s"
      ]
     ],
-    "note": "1 second to charge a max range throw (18 blocks), 1 second before the sleigh arrives, about 5.75 seconds from throw to explosion."
+    "note": "1 second to charge a max range throw (18 blocks), 1 second before the sleigh arrives, about 5.75 seconds from throw to explosion. Each TNT does up to 63 damage to players, with falloff over distance."
    }
   ],
   "strategy": [
