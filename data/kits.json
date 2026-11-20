@@ -17844,7 +17844,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Start the game with an egg on your shoulder. Get kills to hatch and evolve your Seahorse, increasing its damage and unlocking passive abilities.",
-  "adv": "Sheila spawns with an egg and earns points (stacks) to hatch and grow a seahorse. You get 5 points every 13 seconds and up to 100 for a kill. Killing the same enemy again gives less: it takes 25 seconds for that enemy to be worth the full 100 again (waiting 12.5 seconds gives 50).\nThe egg hatches at 215 stacks (stage 1), evolves at 625 (stage 2), and reaches its max form at 1240 (stage 3). That's around 12 kills without dying. When you die you lose 40 + 15% of your stacks, but you never lose a stage.\nThe seahorse works within 11 blocks. If you're above 50% HP and someone damages you, it attacks them. If you're under 50% HP, or you took damage without attacking anyone, it heals you instead. It always heals you before teammates, can only heal one of you at a time, and can't heal and attack at the same time. Every hit from it slows the enemy a little, like Umeko's chakrams.\nIts damage and healing both grow with your stacks. Each damage tick does 3 + 0.08 × √stacks in stages 2 and 3, a bit less in stage 1, with no armor penetration. Each heal tick is about 23.5% of a damage tick (about 20% in stage 1). What changes between stages is how many ticks each attack has.",
+  "adv": "Sheila spawns with an egg and earns points (stacks) to hatch and grow a seahorse. You get 5 points every 13 seconds and up to 100 for a kill. Killing the same enemy again gives less: it takes 30 seconds for that enemy to be worth the full 100 again (waiting 15 seconds gives 50).\nThe egg hatches at 215 stacks (stage 1), evolves at 625 (stage 2), and reaches its max form at 1240 (stage 3). That's around 12 kills without dying. When you die you lose 40 + 15% of your stacks, but you never lose a stage.\nThe seahorse works within 11 blocks. If you're above 50% HP and someone damages you, it attacks them. If you're under 50% HP, or you took damage without attacking anyone, it heals you instead. It always heals you before teammates, can only heal one of you at a time, and can't heal and attack at the same time. Every hit from it slows the enemy a little, like Umeko's chakrams.\nIts damage and healing both grow with your stacks. Each damage tick does 3 + 0.08 × √stacks in stages 2 and 3, a bit less in stage 1, with no armor penetration. Each heal tick is about 23.5% of a damage tick (about 20% in stage 1). What changes between stages is how many ticks each attack has.",
   "items": [],
   "abilities": [],
   "history": [
@@ -17972,7 +17972,7 @@
    {
     "name": "Seahorse Egg",
     "when": "Earning stacks",
-    "desc": "+5 every 13 seconds, up to +100 per kill (full again after 25 seconds on the same enemy). Hatches at 215, evolves at 625 and 1240."
+    "desc": "+5 every 13 seconds, up to +100 per kill (full again after 30 seconds on the same enemy). Hatches at 215, evolves at 625 and 1240."
    },
    {
     "name": "Seahorse",
