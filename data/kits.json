@@ -21155,14 +21155,14 @@
   "diff": "extreme",
   "hp": "100",
   "desc": "Transform into Dragon Form, unlocking a decaying dragon breath and the ability to fly. Items can't be used while in dragon form and damage scales with the highest tier sword obtained.",
-  "adv": "Xu'rot has an energy bar that fills 1% per second, 30% per kill and 25% per Telepearl. Dying loses half of it.\nTransform into Dragon Form to fly and breathe fire. You can't use items as a dragon, but you take 30% less damage. Energy drains about 3% per second, each Dragon Breath costs 5%, and each flap costs about 7%. Energy doesn't refill as a dragon, and kills don't give energy while transformed. With a full bar, breathing every second lasts about 12 seconds, and flapping every second lasts about 10 (from tests). You have to stay transformed for 3.5 seconds before you can leave, and leaving early costs 15% of the bar.\nFlap (1 second cooldown) lifts you 5 blocks. Dragon Breath (1 second cooldown) hits everything in an 8 block long, 3 block wide cone over 3 ticks. Its damage scales with the best sword you own: the 3 ticks deal your sword's damage plus 15, with 30% armor penetration. Each hit applies Void Decay, lowering the enemy's max HP by 10% for 10 seconds (refreshed by every hit). Each breath also instantly burns away up to 3 wool or wood blocks.",
+  "adv": "Xu'rot has an energy bar that fills 1% per second, 30% per kill and 25% per Telepearl. Dying loses half of it.\nYou need a full bar (100%) to transform into Dragon Form, where you can fly and breathe fire. You can't use items as a dragon, but you take 30% less damage. Energy drains about 3% per second, each Dragon Breath costs 5%, and each flap costs about 7%. Energy doesn't refill as a dragon, and kills don't give energy while transformed. With a full bar, breathing every second lasts about 12 seconds, and flapping every second lasts about 10 (from tests). You have to stay transformed for 3.5 seconds before you can leave, and leaving costs a flat 15% of the bar on top of what you've used.\nFlap (1 second cooldown) lifts you 5 blocks. Dragon Breath (1 second cooldown) hits everything in an 8 block long, 3 block wide cone over 3 ticks. Its damage scales with the best sword you own: the 3 ticks deal your sword's damage plus 15, with 30% armor penetration. Each hit applies Void Decay, lowering the enemy's max HP by 10% for 10 seconds. It doesn't stack: more hits just reset the 10 seconds. Each breath also instantly burns away up to 3 wool or wood blocks.",
   "items": [],
   "abilities": [
    {
     "name": "Dragon Form",
     "img": "images/abilities/ability-template.png",
-    "note": "Uses energy",
-    "desc": "Transform to fly and breathe fire, with 30% damage reduction. No items. Drains about 3% energy per second. Stay 3.5 seconds before you can leave; leaving costs 15%."
+    "note": "Needs a full bar",
+    "desc": "Needs 100% energy. Transform to fly and breathe fire, with 30% damage reduction. No items. Drains about 3% energy per second. Stay 3.5 seconds before you can leave; leaving costs a flat 15%."
    },
    {
     "name": "Dragon Breath",
@@ -21294,7 +21294,7 @@
    {
     "name": "Void Decay",
     "when": "Dragon Breath hits",
-    "desc": "The enemy's max HP is 10% lower for 10 seconds, refreshed by every hit."
+    "desc": "The enemy's max HP is 10% lower for 10 seconds. Doesn't stack; each hit resets the timer."
    }
   ],
   "tables": [
@@ -21342,6 +21342,10 @@
     ],
     "rows": [
      [
+      "Needed to transform",
+      "100%"
+     ],
+     [
       "Every second (not transformed)",
       "+1%"
      ],
@@ -21367,7 +21371,7 @@
      ],
      [
       "Leaving Dragon Form",
-      "−15%"
+      "−15% (flat)"
      ],
      [
       "Dying",
