@@ -500,11 +500,6 @@
   "note": ""
  },
  {
-  "a": "Hannah",
-  "b": "Sheila",
-  "note": ""
- },
- {
   "a": "Hephaestus",
   "b": "Bounty Hunter",
   "note": ""
@@ -1092,6 +1087,31 @@
  {
   "a": "Yamini",
   "b": "Pirate Davey",
+  "note": ""
+ },
+ {
+  "a": "Sheila",
+  "b": "Hannah",
+  "note": ""
+ },
+ {
+  "a": "Sheila",
+  "b": "Silas",
+  "note": ""
+ },
+ {
+  "a": "Sheila",
+  "b": "Grim Reaper",
+  "note": ""
+ },
+ {
+  "a": "Sheila",
+  "b": "Void Knight",
+  "note": ""
+ },
+ {
+  "a": "Sheila",
+  "b": "Aery",
   "note": ""
  }
 ]

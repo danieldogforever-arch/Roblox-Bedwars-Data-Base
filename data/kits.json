@@ -17844,7 +17844,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Start the game with an egg on your shoulder. Get kills to hatch and evolve your Seahorse, increasing its damage and unlocking passive abilities.",
-  "adv": "",
+  "adv": "Sheila spawns with an egg and earns points (stacks) to hatch and grow a seahorse. You get 5 points every 13 seconds and up to 100 for a kill. Killing the same enemy again gives less: it takes 25 seconds for that enemy to be worth the full 100 again (waiting 12.5 seconds gives 50).\nThe egg hatches at 215 stacks (stage 1), evolves at 625 (stage 2), and reaches its max form at 1240 (stage 3). That's around 12 kills without dying. When you die you lose 40 + 15% of your stacks, but you never lose a stage.\nThe seahorse works within 11 blocks. If you're above 50% HP and someone damages you, it attacks them. If you're under 50% HP, or you took damage without attacking anyone, it heals you instead. It always heals you before teammates, can only heal one of you at a time, and can't heal and attack at the same time. Every hit from it slows the enemy a little, like Umeko's chakrams.\nIts damage and healing both grow with your stacks. Each damage tick does 3 + 0.08 × √stacks in stages 2 and 3, a bit less in stage 1, with no armor penetration. Each heal tick is about 23.5% of a damage tick (about 20% in stage 1). What changes between stages is how many ticks each attack has.",
   "items": [],
   "abilities": [],
   "history": [
@@ -17966,7 +17966,217 @@
   "obtain": {
    "src": "Holiday Bundle 2022",
    "rent": 2500
-  }
+  },
+  "sea": true,
+  "passives": [
+   {
+    "name": "Seahorse Egg",
+    "when": "Earning stacks",
+    "desc": "+5 every 13 seconds, up to +100 per kill (full again after 25 seconds on the same enemy). Hatches at 215, evolves at 625 and 1240."
+   },
+   {
+    "name": "Seahorse",
+    "when": "Within 11 blocks",
+    "desc": "Above 50% HP and taking damage: attacks. Under 50% HP, or hurt without attacking: heals you first, then teammates. One target at a time, never heals and attacks at once. Hits slow enemies a little."
+   },
+   {
+    "name": "Lost Stacks",
+    "when": "Dying",
+    "desc": "Lose 40 + 15% of your stacks. You keep your stage."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Seahorse stages",
+    "head": [
+     "Stage",
+     "Stacks",
+     "Attack pattern",
+     "Ticks",
+     "Damage per attack",
+     "Heal per attack"
+    ],
+    "rows": [
+     [
+      "Egg",
+      "0–214",
+      "None",
+      "–",
+      "–",
+      "–"
+     ],
+     [
+      "1",
+      "215",
+      "6 hits, 1.5s apart",
+      "6",
+      "18.5 → 22.2",
+      "3.7 → 4.4"
+     ],
+     [
+      "2",
+      "625",
+      "4 rounds of 2 (0.5s apart, 1.5s between rounds)",
+      "8",
+      "40 → 46.5",
+      "9.4 → 10.9"
+     ],
+     [
+      "3",
+      "1240",
+      "Burst of 8 in 1.5s, then 3 rounds of 3",
+      "17",
+      "98.9 → 111.8 (at 2000)",
+      "23.2 → 26.3 (at 2000)"
+     ]
+    ],
+    "note": "No armor. Damage per tick: stage 1 ≈ 2.2 + 0.06 × √stacks, stages 2–3 = 3 + 0.08 × √stacks. Healing per tick is about 23.5% of that (20% in stage 1). Ranges go from the start of the stage to the next one."
+   },
+   {
+    "title": "Tested damage",
+    "head": [
+     "Stacks",
+     "Per tick",
+     "Formula"
+    ],
+    "rows": [
+     [
+      "215",
+      "3.09",
+      "3.08"
+     ],
+     [
+      "425",
+      "3.42",
+      "3.44"
+     ],
+     [
+      "550",
+      "3.57",
+      "3.61"
+     ],
+     [
+      "625",
+      "5",
+      "5.00"
+     ],
+     [
+      "730",
+      "5.16",
+      "5.16"
+     ],
+     [
+      "930",
+      "5.45",
+      "5.44"
+     ],
+     [
+      "1150",
+      "5.71",
+      "5.71"
+     ],
+     [
+      "1240",
+      "5.82",
+      "5.82"
+     ],
+     [
+      "1350",
+      "5.95",
+      "5.94"
+     ],
+     [
+      "1475",
+      "6.07",
+      "6.07"
+     ],
+     [
+      "2000",
+      "6.58",
+      "6.58"
+     ]
+    ],
+    "note": "No armor. Against iron armor it does about 45% (108.93 → 48.74), so no armor penetration."
+   },
+   {
+    "title": "Tested healing",
+    "head": [
+     "Stacks",
+     "Heal per tick",
+     "Healing per second"
+    ],
+    "rows": [
+     [
+      "215",
+      "~0.62",
+      "~0.4"
+     ],
+     [
+      "625",
+      "~1.14",
+      "~1.1"
+     ],
+     [
+      "1270",
+      "~1.38",
+      "~2.2"
+     ]
+    ],
+    "note": "Read from whole-number HP changes, so each value is off by a few hundredths."
+   },
+   {
+    "title": "Stacks lost on death",
+    "head": [
+     "Before",
+     "After"
+    ],
+    "rows": [
+     [
+      "560",
+      "436"
+     ],
+     [
+      "1240",
+      "1014"
+     ],
+     [
+      "2090",
+      "1737"
+     ]
+    ],
+    "note": "40 + 15% of your stacks. You keep your stage even if you drop below it."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Leather and 2 early kills",
+    "text": "Buy leather armor first so you don't die and lose stacks, and try to get 2 kills early."
+   },
+   {
+    "title": "Don't rely on the early seahorse",
+    "text": "Once it hatches it's still weak, practically useless. Gear up first: crossbows and iron armor, then level the seahorse to max."
+   },
+   {
+    "title": "Diamond armor",
+    "text": "Prioritize diamond armor so the healing becomes useful."
+   },
+   {
+    "title": "Stall and heal",
+    "text": "It's a stalling kit. Run away to heal up, then go back in to fight."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Don't feed it",
+    "text": "Don't give Sheila stacks. Try to let a different enemy get the kill on you, and keep resetting it before it gets the max seahorse."
+   },
+   {
+    "title": "Static",
+    "text": "If it does get the max seahorse, Static (Zapped) completely obliterates it."
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "Early game the healing and damage are so low they're basically nonexistent. Grinding for the stage 3 seahorse isn't worth it, since a kit like Barbarian gives a much better reward, and needing around 12 kills without dying is crazy; you might as well use Aery. It needs a big overhaul."
  },
  {
   "name": "Sigrid",
