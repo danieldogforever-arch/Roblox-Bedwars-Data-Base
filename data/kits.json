@@ -18368,13 +18368,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Carry a jar of regenerating spirits. Catch wisps from damaged enemies to recharge faster, and recall unused spirits. Place idle spirits together to fuse them into a larger spirit with a chain of shrinking explosions.",
-  "adv": "Spirit Catcher spawns with the Spirit Jar, which holds up to 4 spirits. You start with 1, and the jar makes another every 23 seconds. Damaging or killing enemies drops wisps; catching one speeds up your next spirit by 7 seconds.\nThrow a spirit up to 42 blocks (charge to throw farther). Spirits chase enemies within 11 blocks and explode for 30 damage, with about 20% armor penetration (15 to iron, from tests). After being hit by a spirit, an enemy takes 30% less damage from other spirit explosions for 5 seconds.\nPlace idle spirits within 3 blocks of each other and they fuse after 2 seconds, up to 4. Bigger fusions hit harder (see the table) and last longer before they fade: 1 minute for a single spirit, 2 for 2, and 3 for 3 or 4. Spirits turn more see-through as they're about to disappear.\nA fused spirit's explosion haunts the enemy for 6 seconds: they get a blue outline with 1–3 small spirits orbiting them. Each of your hits on them uses one orbiting spirit for a guaranteed critical hit, stronger for bigger fusions (direct arrow hits give half). When the haunt ends or the enemy dies, every unused orbiting spirit refunds 13 seconds of recharge.\nRecall Spirits (10 second cooldown) pulls back your placed spirits within 20 blocks.",
+  "adv": "Spirit Catcher spawns with the Spirit Jar, which holds up to 4 spirits. You start with 1, and the jar makes another every 23 seconds, so you'll usually have 2 by the time you reach middle. Damaging or killing enemies drops wisps; catching one speeds up your next spirit by 7 seconds.\nThrow a spirit up to 42 blocks; a full charge takes 1.5 seconds. Spirits chase enemies within 11 blocks and explode for 30 damage, with about 20% armor penetration (15 to iron, from tests). After being hit by a spirit, an enemy takes 30% less damage from other spirit explosions for 5 seconds.\nPlace idle spirits within 3 blocks of each other and they fuse after 2 seconds, up to 4. Bigger fusions hit harder (see the table) and last longer before they fade: 1 minute for a single spirit, 2 for 2, and 3 for 3 or more (3 minutes is the cap). Spirits turn more see-through as they're about to disappear.\nA fused spirit's explosion haunts the enemy for 6 seconds: they get a blue outline with 1–3 small spirits orbiting them. Each of your hits on them uses one orbiting spirit for a guaranteed critical hit, stronger for bigger fusions (direct arrow hits give half). When the haunt ends or the enemy dies, every unused orbiting spirit refunds 13 seconds of recharge.\nRecall Spirits (10 second cooldown) pulls back your placed spirits within 20 blocks.",
   "items": [
    {
     "name": "Spirit Jar",
     "img": "images/items/spirit-jar.png",
     "note": "Spawn with it",
-    "desc": "Holds up to 4 spirits; makes 1 every 23 seconds (7 seconds faster per wisp caught). Throw a spirit up to 42 blocks; it chases enemies within 11 blocks and explodes for 30 damage (about 20% armor penetration).",
+    "desc": "Holds up to 4 spirits; makes 1 every 23 seconds (7 seconds faster per wisp caught). Throw a spirit up to 42 blocks (1.5 seconds for a full charge); it chases enemies within 11 blocks and explodes for 30 damage (about 20% armor penetration).",
     "dmg": 30,
     "dmgText": "30 / 38 / 46 / 54",
     "nodps": true
@@ -18585,7 +18585,7 @@
      [
       "4",
       "54",
-      "3 min",
+      "3 min (cap)",
       "42–62%"
      ]
     ],
@@ -18595,7 +18595,7 @@
   "strategy": [
    {
     "title": "Free early damage",
-    "text": "You'll have 2 spirits early in the match. Use both for big free explosion damage on enemies."
+    "text": "You spawn with 1 spirit and get a 2nd after 23 seconds, so you'll have 2 by the time you reach middle. Use both for big free explosion damage on enemies."
    },
    {
     "title": "Farm wisps",
