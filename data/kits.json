@@ -17605,15 +17605,21 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Play as Santa and call in high-explosive sleigh strafe runs!",
-  "adv": "",
+  "adv": "Santa buys presents in the shop: the Santa Strafe for 60 iron (hold up to 3) and the Santa Siege for 200 iron (hold 1). Hold for 1 second to charge a throw to max range, which reaches up to 18 blocks.\nWhere a present lands, Santa's sleigh flies over after 1 second. A Strafe drops 4 TNT and a Siege drops 1 Siege TNT, each with a 2.5 second fuse. From the moment you throw it, it takes about 5.75 seconds for the TNT to drop and explode.",
   "items": [
    {
     "name": "Santa Strafe",
-    "img": "images/items/santa-strafe.png"
+    "img": "images/items/santa-strafe.png",
+    "note": "Cost: 60 iron",
+    "desc": "Hold up to 3. Throw up to 18 blocks (1 second to fully charge). The sleigh drops 4 TNT with a 2.5 second fuse, about 5.75 seconds after the throw.",
+    "nodps": true
    },
    {
     "name": "Santa Siege",
-    "img": "images/items/santa-strafe.png"
+    "img": "images/items/siege-tnt.png",
+    "note": "Cost: 200 iron",
+    "desc": "Hold 1. Throw up to 18 blocks (1 second to fully charge). The sleigh drops 1 Siege TNT with a 2.5 second fuse, about 5.75 seconds after the throw.",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -17676,7 +17682,54 @@
    "tier": "10 (paid)",
    "badge": "images/bp/s3.webp",
    "rent": 2000
-  }
+  },
+  "tables": [
+   {
+    "title": "Presents",
+    "head": [
+     "Present",
+     "Cost",
+     "Max held",
+     "Drops",
+     "Fuse"
+    ],
+    "rows": [
+     [
+      "img:images/items/santa-strafe.png|Santa Strafe",
+      "60 iron",
+      "3",
+      "4 TNT",
+      "2.5s"
+     ],
+     [
+      "img:images/items/siege-tnt.png|Santa Siege",
+      "200 iron",
+      "1",
+      "1 Siege TNT",
+      "2.5s"
+     ]
+    ],
+    "note": "1 second to charge a max range throw (18 blocks), 1 second before the sleigh arrives, about 5.75 seconds from throw to explosion."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Not just beds",
+    "text": "Use presents for more than bed breaking: throw them into fights at middle, or at Diamond Guardians when enemies are there, to support your teammates."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Roof your bed",
+    "text": "Build a 1-layer wool or ceramic roof over your bed."
+   },
+   {
+    "title": "Watch the sky",
+    "text": "Watch out for TNT dropping near you."
+   }
+  ],
+  "bal": "weak",
+  "balWhy": "It's completely horrible. The throw range is really bad, and there's no reason to use it over Pirate Davey: Davey's range is at least triple Santa's, and 4 TNT costs the same (60 iron for a Strafe, or 2 TNT purchases at 30 iron each, which double to 4). It needs a complete rework."
  },
  {
   "name": "Sheep Herder",
