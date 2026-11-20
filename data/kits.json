@@ -17514,7 +17514,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Find and tame wild sheep around the map. Each tamed sheep amplifies your damage.",
-  "adv": "",
+  "adv": "5 wild sheep spawn around the map. Walk within 2 blocks of one to tame it. Each tamed sheep gives you 9% more damage from every source, including bows and other ranged weapons, up to 45% with all 5.\nUp to 2 sheep glow at a time, so they're easier to find, starting about 10–15 seconds after they spawn. There are only ever 5 sheep: when you die, you lose 2, and 2 new sheep spawn back on the map.",
   "items": [],
   "abilities": [],
   "history": [
@@ -17582,7 +17582,81 @@
    "tier": "20 (free)",
    "badge": "images/bp/s4.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Flock",
+    "when": "Taming a sheep",
+    "desc": "+9% damage from all sources per sheep, up to +45% with 5."
+   },
+   {
+    "name": "Lost Sheep",
+    "when": "Dying",
+    "desc": "Lose 2 sheep. 2 new sheep spawn on the map."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Damage per sheep",
+    "head": [
+     "Sheep",
+     "1",
+     "2",
+     "3",
+     "4",
+     "5"
+    ],
+    "rows": [
+     [
+      "Bonus damage",
+      "+9%",
+      "+18%",
+      "+27%",
+      "+36%",
+      "+45%"
+     ],
+     [
+      "Diamond sword (42)",
+      "45.8",
+      "49.6",
+      "53.3",
+      "57.1",
+      "60.9"
+     ],
+     [
+      "Crossbow (34)",
+      "37.1",
+      "40.1",
+      "43.2",
+      "46.2",
+      "49.3"
+     ]
+    ],
+    "note": "With no armor. The bonus applies to every damage source."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Blocks first",
+    "text": "Get lots of blocks early and collect every sheep. They can spawn in awkward spots, even near enemy bases."
+   },
+   {
+    "title": "Crossbow or diamond armor",
+    "text": "Next, get a crossbow to play aggressive, or diamond armor to play safe so you don't have to keep re-collecting sheep."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Catch it collecting",
+    "text": "Go after Sheep Herder while it's out collecting sheep. It'll be focused on running, not fighting, so it's easy to kill."
+   },
+   {
+    "title": "Deny the 5th sheep",
+    "text": "Don't let it get all 5 sheep, or it gets really strong."
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "You can get a ton of damage and rival Aery without even getting kills, and since it's a percentage, it boosts ranged damage too, making it better than most bow kits. But finding and collecting sheep is hard: it costs lots of blocks, and they can spawn near enemy bases."
  },
  {
   "name": "Sheila",

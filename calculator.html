@@ -227,7 +227,8 @@ var KITS=[{"name":"Abaddon","img":"images/kits/abaddon.webp","hp":"100","w":[{"n
 var ARMOR=[{id:"none",name:"None",dr:0,c:"#6c6488"},{id:"leather",name:"Leather",dr:.36,c:"#b5703c"},{id:"iron",name:"Iron",dr:.56,c:"#d9dde6"},{id:"diamond",name:"Diamond",dr:.76,c:"#54e0ff"},{id:"emerald",name:"Emerald",dr:.84,c:"#3fe37d"}];
 var KITBUFF={"Void Knight":{lab:"Void Ascension",o:[{n:"Void Ascension",m:1.2,note:"Chosen Form only, +20% damage"}]},"Crocowolf":{lab:"Beast Form",o:[{n:"Beast Form",m:1.25,note:"+25% damage on everything"}]},
  "Bounty Hunter":{lab:"Hunting Time <small>on your target</small>",o:[{n:"Level 1",m:1.1,note:"+10%"},{n:"Level 2+",m:1.2,note:"+20%"}]},
- "Axolotl Amy":{lab:"Damage Axolotl",o:[{n:"Damage Axolotl",m:1.16,note:"+16%"}]}};
+ "Axolotl Amy":{lab:"Damage Axolotl",o:[{n:"Damage Axolotl",m:1.16,note:"+16%"}]},
+ "Sheep Herder":{lab:"Tamed sheep",o:[1,2,3,4,5].map(function(n){return {n:n+" sheep",m:1+0.09*n,note:"+"+(9*n)+"%"};})}};
 var MECH=[{t:"Out of mech",sh:0,pr:0},{t:"Wood",sh:110,pr:0},{t:"Iron",sh:180,pr:.15},{t:"Diamond",sh:270,pr:.25},{t:"Emerald",sh:410,pr:.30},{t:"Void",sh:600,pr:.40}];
 var ISAB=[{t:"None",b:0},{t:"Wood",b:10},{t:"Stone",b:15},{t:"Iron",b:20},{t:"Diamond",b:30},{t:"Emerald",b:-1}];
 var GARG=[{t:"Body",m:1,cd:.3,hp:100},{t:"Small",m:.7,cd:.36,hp:50},{t:"Regular",m:.9,cd:.34,hp:90},{t:"Giant",m:1,cd:.67,hp:200}];
