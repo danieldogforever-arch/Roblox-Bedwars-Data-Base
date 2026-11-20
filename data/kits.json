@@ -20617,7 +20617,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Use a Void Axe to dash forward while slashing at enemies, healing for a portion of the damage dealt.",
-  "adv": "Void Regent buys the Void Axe in the shop for 40 iron and keeps it when it dies. It has a 6 second cooldown. Using the axe leaps you forward about 5 blocks, or about 9 if you're running and jumping and switch off the axe right after using it.\nWhen you land, it hits every enemy within 8 blocks for 18 damage with 40% armor penetration, and knocks them about 2 blocks away. You heal from every enemy you hit, but each extra enemy heals you less than the one before: about 24 HP from 2 enemies and 30 HP from 3. The enemies' armor doesn't seem to lower the healing.",
+  "adv": "Void Regent buys the Void Axe in the shop for 40 iron and keeps it when it dies. It has a 6 second cooldown. Using the axe leaps you forward about 5 blocks, or about 9 if you're running and jumping and switch off the axe right after using it.\nWhen you land, it hits every enemy within 8 blocks for 18 damage with 40% armor penetration, and knocks them about 2 blocks away. You heal from every enemy you hit, and their armor doesn't lower it. The first enemy heals you 15 (80% of 18), the second 9, and the third 6, so 24 HP from 2 enemies and 30 HP from 3.",
   "items": [
    {
     "name": "Void Axe",
@@ -20737,7 +20737,7 @@
    {
     "name": "Void Heal",
     "when": "Hitting enemies with the Void Axe",
-    "desc": "Heals you for each enemy hit. Each extra enemy heals less: about 24 HP from 2 enemies, 30 HP from 3."
+    "desc": "Heals 15 from the first enemy hit, 9 from the second and 6 from the third (30 total). Armor doesn't reduce it."
    }
   ],
   "tables": [
@@ -20775,27 +20775,31 @@
     "title": "Healing by enemies hit",
     "head": [
      "Enemies hit",
+     "Heal from that enemy",
      "Total healing",
      "Tested on"
     ],
     "rows": [
      [
       "1",
-      "15 (80%)",
+      "15",
+      "15",
       "No armor"
      ],
      [
       "2",
+      "9",
       "24",
       "No armor + leather"
      ],
      [
       "3",
+      "6",
       "30",
       "Leather + iron + diamond"
      ]
     ],
-    "note": "Hitting more enemies heals more in total, but less per enemy (about 12 each with 2, 10 each with 3). The 3-enemy test healed more even with diamond armor in it, so armor doesn't seem to reduce the healing."
+    "note": "Healing is based on the axe's 18 damage, not the damage after armor: the leather/iron/diamond test healed the same pattern as no armor. Each extra enemy heals less (100%, 60%, then 40% of the first). 4 or more enemies is untested."
    },
    {
     "title": "Leap distance",
