@@ -19744,14 +19744,15 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Ascend into an angelic form and switch freely between Light and Void. When you melee attack, Light form grants shield for you and allies, and Void form inflicts max health decay on your target.",
-  "adv": "Trinity starts at level 0 with a bar that fills as you deal sword damage. It takes 100 damage to reach level 1, then 150 for level 2, 200 for level 3 and 250 for level 4 (700 in total). Dying loses up to 20% of your current level's progress, but you can never drop a level.\nUse Inversion to swap between Light and Void form.\nLight form: every sword hit gives you and teammates within 17 blocks a shield, once every 0.6 seconds: 2 at level 1, 3 at level 2, 4 at level 3 and 6 at level 4. The shield stacks up to 30 and disappears after 5 seconds without getting more.\nVoid form: every sword hit lowers your target's max HP, up to 25% / 35% / 45% / 60% at levels 1–4. It takes 6 hits to reach the max, and you can stack it once every 0.4 seconds. It lasts 15 seconds.",
+  "adv": "Trinity starts at level 0 with a bar that fills as you deal sword damage. It takes 100 damage to reach level 1, then 150 for level 2, 200 for level 3 and 250 for level 4 (700 in total). Dying loses up to 20% of your current level's progress, but you can never drop a level.\nAt level 0 Trinity has no form and does nothing. When you reach level 1, you switch into Light form automatically. After that, use Inversion (30 second cooldown) to swap between Light and Void form.\nLight form: every sword hit gives you and teammates within 17 blocks a shield, once every 0.6 seconds: 2 at level 1, 3 at level 2, 4 at level 3 and 6 at level 4. The shield stacks up to 30 and disappears after 5 seconds without getting more.\nVoid form: every sword hit lowers your target's max HP, up to 25% / 35% / 45% / 60% at levels 1–4. It takes 6 hits to reach the max, and you can stack it once every 0.4 seconds. It lasts 15 seconds, and every new hit resets the timer.",
   "items": [],
   "abilities": [
    {
     "name": "Inversion",
     "img": "images/abilities/ability-template.png",
-    "desc": "Swap between Light form (shields) and Void form (max HP decay).",
-    "nodps": true
+    "desc": "Swap between Light form (shields) and Void form (max HP decay). Unlocks at level 1, when you switch into Light form automatically.",
+    "nodps": true,
+    "cd": 30
    }
   ],
   "history": [
@@ -19858,7 +19859,7 @@
    {
     "name": "Void Form",
     "when": "Sword hit (every 0.4s)",
-    "desc": "Lowers the target's max HP, up to 25 / 35 / 45 / 60% by level after 6 hits. Lasts 15 seconds."
+    "desc": "Lowers the target's max HP, up to 25 / 35 / 45 / 60% by level after 6 hits. Lasts 15 seconds, reset by every hit."
    }
   ],
   "tables": [
@@ -19932,7 +19933,7 @@
       "40"
      ]
     ],
-    "note": "Lasts 15 seconds."
+    "note": "Lasts 15 seconds, and every hit resets the timer."
    }
   ],
   "strategy": [

@@ -6,11 +6,6 @@
  },
  {
   "a": "Adetunde",
-  "b": "Trinity",
-  "note": ""
- },
- {
-  "a": "Adetunde",
   "b": "Grim Reaper",
   "note": ""
  },
@@ -177,11 +172,6 @@
  {
   "a": "Void Knight",
   "b": "Martin",
-  "note": ""
- },
- {
-  "a": "Cobalt",
-  "b": "Trinity",
   "note": ""
  },
  {
@@ -1067,6 +1057,26 @@
  {
   "a": "Raven",
   "b": "Barbarian",
+  "note": ""
+ },
+ {
+  "a": "Trinity",
+  "b": "Adetunde",
+  "note": ""
+ },
+ {
+  "a": "Trinity",
+  "b": "Cobalt",
+  "note": ""
+ },
+ {
+  "a": "Trinity",
+  "b": "Warrior",
+  "note": ""
+ },
+ {
+  "a": "Trinity",
+  "b": "Silas",
   "note": ""
  }
 ]
