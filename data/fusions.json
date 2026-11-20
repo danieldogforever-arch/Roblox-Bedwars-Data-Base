@@ -960,11 +960,6 @@
   "note": ""
  },
  {
-  "a": "Sheep Herder",
-  "b": "Umeko",
-  "note": ""
- },
- {
   "a": "Silas",
   "b": "Eldric",
   "note": ""
@@ -1007,6 +1002,26 @@
  {
   "a": "Warrior",
   "b": "Barbarian",
+  "note": ""
+ },
+ {
+  "a": "Umeko",
+  "b": "Barbarian",
+  "note": ""
+ },
+ {
+  "a": "Umeko",
+  "b": "Spirit Catcher",
+  "note": ""
+ },
+ {
+  "a": "Umeko",
+  "b": "Sheep Herder",
+  "note": ""
+ },
+ {
+  "a": "Umeko",
+  "b": "Caitlyn",
   "note": ""
  }
 ]

@@ -20035,23 +20035,43 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Use chakrams to fight at mid-range. You can turn invisible and escape from battle if you get attacked by a melee attack.",
-  "adv": "",
+  "adv": "Umeko fights with chakrams, throwable blades you buy in the shop for the same price as swords of the same tier. A chakram flies up to 22 blocks and comes back. It deals 75% of its damage on the way out and 25% on the way back, so a Stone Chakram does 18.75 and then 6.25 (25 total, the same as a stone sword). The chakram itself is the hitbox, it hits everyone in its path, and each hit slows the enemy down a little. You keep your chakrams when you die.\nIf an enemy is against a wall or at max range, the chakram may only hit once, since it can't pass back through them.\nWhen you get hit, you turn invisible for 5 seconds. This has a 12 second cooldown.",
   "items": [
    {
     "name": "Stone Chakram",
-    "img": "images/items/stone-chakram.png"
+    "img": "images/items/stone-chakram.png",
+    "note": "Cost: 20 iron",
+    "desc": "18.75 on the throw, 6.25 on the way back (25 total). 22 block range.",
+    "dmg": 18.75,
+    "dmgText": "18.75 + 6.25",
+    "nodps": true
    },
    {
     "name": "Iron Chakram",
-    "img": "images/items/iron-chakram.png"
+    "img": "images/items/iron-chakram.png",
+    "note": "Cost: 70 iron",
+    "desc": "22.5 on the throw, 7.5 on the way back (30 total). 22 block range.",
+    "dmg": 22.5,
+    "dmgText": "22.5 + 7.5",
+    "nodps": true
    },
    {
     "name": "Diamond Chakram",
-    "img": "images/items/diamond-chakram.png"
+    "img": "images/items/diamond-chakram.png",
+    "note": "Cost: 4 emeralds",
+    "desc": "31.5 on the throw, 10.5 on the way back (42 total). 22 block range.",
+    "dmg": 31.5,
+    "dmgText": "31.5 + 10.5",
+    "nodps": true
    },
    {
     "name": "Emerald Chakram",
-    "img": "images/items/emerald-chakram.png"
+    "img": "images/items/emerald-chakram.png",
+    "note": "Cost: 20 emeralds",
+    "desc": "41.25 on the throw, 13.75 on the way back (55 total). 22 block range.",
+    "dmg": 41.25,
+    "dmgText": "41.25 + 13.75",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -20131,7 +20151,92 @@
    "tier": "15 (paid)",
    "badge": "images/bp/s9.webp",
    "rent": 2000
-  }
+  },
+  "bal": "op",
+  "passives": [
+   {
+    "name": "Vanish",
+    "when": "Getting hit (12s cooldown)",
+    "desc": "Turn invisible for 5 seconds."
+   },
+   {
+    "name": "Chakrams",
+    "when": "Always",
+    "desc": "Same price as swords, 75% damage out and 25% back, hits through multiple enemies, slows a little, and you never lose them on death."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Chakram damage",
+    "head": [
+     "Chakram",
+     "Cost",
+     "Throw (75%)",
+     "Return (25%)",
+     "Total"
+    ],
+    "rows": [
+     [
+      "img:images/items/stone-chakram.png|Stone",
+      "20 iron",
+      "18.75",
+      "6.25",
+      "25"
+     ],
+     [
+      "img:images/items/iron-chakram.png|Iron",
+      "70 iron",
+      "22.5",
+      "7.5",
+      "30"
+     ],
+     [
+      "img:images/items/diamond-chakram.png|Diamond",
+      "4 emeralds",
+      "31.5",
+      "10.5",
+      "42"
+     ],
+     [
+      "img:images/items/emerald-chakram.png|Emerald",
+      "20 emeralds",
+      "41.25",
+      "13.75",
+      "55"
+     ]
+    ],
+    "note": "With no armor. The total matches the sword of the same tier. Stone is tested; the others are worked out from the same 75/25 split."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Stone Chakram first",
+    "text": "Buy the Stone Chakram and use it as your main weapon. Play ranged."
+   },
+   {
+    "title": "Use invisibility",
+    "text": "If you have to go in close, use your invisibility and jump over enemies, since they can't see you. It's also great for breaking beds or running away."
+   },
+   {
+    "title": "Line them up",
+    "text": "Try to catch enemies on bridges. The chakram hits everyone in a straight line."
+   },
+   {
+    "title": "Hit through walls",
+    "text": "If enemies block themselves in, throw at them anyway. The chakram has a big hitbox and can hit through walls."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Block it off",
+    "text": "Place blocks around you so the chakram can't reach you, then throw a Gloop to trigger its invisibility early."
+   },
+   {
+    "title": "Fight up close",
+    "text": "Fight Umeko close range, not long range. Chasing it is no good."
+   }
+  ],
+  "balWhy": "Chakrams are basically throwable swords that you never lose, for the same price as a sword. Going invisible for 5 seconds is insane for tracking, and great for breaking beds if the enemy doesn't expect it."
  },
  {
   "name": "Vanessa",
