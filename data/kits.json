@@ -22994,12 +22994,15 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Let out a Glacier Roar to temporarily freeze nearby blocks. Frozen blocks can be destroyed extremely fast.",
-  "adv": "",
+  "adv": "Yeti's Glacial Roar freezes the blocks around you in every direction, 2 layers deep: in front, behind, above and below. Frozen blocks are brittle and 80% easier to break, the same effect as Krystal's Freeze. With a wooden pickaxe you can break obsidian in about 6 hits. The ice lasts about 7 seconds, and the ability has a 35 second cooldown.",
   "items": [],
   "abilities": [
    {
     "name": "Glacial Roar",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 35,
+    "desc": "Freezes blocks around you 2 layers deep in every direction. Frozen blocks are 80% easier to break (obsidian in about 6 hits with a wooden pickaxe) for about 7 seconds.",
+    "nodps": true
    }
   ],
   "history": [
@@ -23046,7 +23049,57 @@
    "tier": "30 (free)",
    "badge": "images/bp/s3.webp",
    "rent": 2000
-  }
+  },
+  "tables": [
+   {
+    "title": "Yeti vs Krystal freeze",
+    "head": [
+     "",
+     "Yeti (Glacial Roar)",
+     "Krystal (Freeze)"
+    ],
+    "rows": [
+     [
+      "Area",
+      "2 layers in every direction",
+      "5×5 under you, 1 layer"
+     ],
+     [
+      "Easier to break",
+      "80%",
+      "80%"
+     ],
+     [
+      "Lasts",
+      "~7s",
+      "7s"
+     ],
+     [
+      "Cooldown",
+      "35s",
+      "14s"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Roar, then Siege",
+    "text": "Place down a Siege right after using Glacial Roar. It instantly destroys layers of frozen bed defense better than any other kit."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Builder",
+    "text": "Builder counters Yeti with reinforced blocks."
+   },
+   {
+    "title": "Lots of wool",
+    "text": "Use a lot of wool in your bed defense, so the roar can't reach the obsidian underneath."
+   }
+  ],
+  "bal": "weak",
+  "balWhy": "Its only purpose is bed breaking, and plenty of kits do that better while also having abilities that help with fighting or movement. Yeti can only break beds, and its ability isn't even unique anymore."
  },
  {
   "name": "Yuzi",
