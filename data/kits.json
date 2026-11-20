@@ -21155,12 +21155,31 @@
   "diff": "extreme",
   "hp": "100",
   "desc": "Transform into Dragon Form, unlocking a decaying dragon breath and the ability to fly. Items can't be used while in dragon form and damage scales with the highest tier sword obtained.",
-  "adv": "",
+  "adv": "Xu'rot has an energy bar that fills 1% per second, 30% per kill and 25% per Telepearl. Dying loses half of it.\nTransform into Dragon Form to fly and breathe fire. You can't use items as a dragon, but you take 30% less damage. Energy drains about 3% per second, each Dragon Breath costs 5%, and each flap costs about 7%. Energy doesn't refill as a dragon, and kills don't give energy while transformed. With a full bar, breathing every second lasts about 12 seconds, and flapping every second lasts about 10 (from tests). You have to stay transformed for 3.5 seconds before you can leave, and leaving early costs 15% of the bar.\nFlap (1 second cooldown) lifts you 5 blocks. Dragon Breath (1 second cooldown) hits everything in an 8 block long, 3 block wide cone over 3 ticks. Its damage scales with the best sword you own: the 3 ticks deal your sword's damage plus 15, with 30% armor penetration. Each hit applies Void Decay, lowering the enemy's max HP by 10% for 10 seconds (refreshed by every hit). Each breath also instantly burns away up to 3 wool or wood blocks.",
   "items": [],
   "abilities": [
    {
     "name": "Dragon Form",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Uses energy",
+    "desc": "Transform to fly and breathe fire, with 30% damage reduction. No items. Drains about 3% energy per second. Stay 3.5 seconds before you can leave; leaving costs 15%."
+   },
+   {
+    "name": "Dragon Breath",
+    "note": "Dragon Form only",
+    "img": "images/abilities/ability-template.png",
+    "desc": "An 8 block long, 3 block wide cone over 3 ticks: your best sword's damage + 15 in total, 30% armor penetration. Applies Void Decay (−10% max HP for 10 seconds) and burns up to 3 wool or wood blocks. Costs 5% energy.",
+    "cd": 1,
+    "dmg": 70,
+    "dmgText": "sword + 15 (3 ticks)",
+    "nodps": true
+   },
+   {
+    "name": "Flap",
+    "note": "Dragon Form only",
+    "img": "images/abilities/ability-template.png",
+    "desc": "Fly 5 blocks up. Costs about 7% energy.",
+    "cd": 1
    }
   ],
   "history": [
@@ -21265,7 +21284,121 @@
    "tier": "35 (paid)",
    "badge": "images/bp/s6.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Dragon Energy",
+    "when": "Not transformed",
+    "desc": "+1% per second, +30% per kill, +25% per Telepearl. Lose half on death."
+   },
+   {
+    "name": "Void Decay",
+    "when": "Dragon Breath hits",
+    "desc": "The enemy's max HP is 10% lower for 10 seconds, refreshed by every hit."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Dragon Breath damage (3 ticks)",
+    "head": [
+     "Best sword",
+     "No armor",
+     "Iron armor"
+    ],
+    "rows": [
+     [
+      "Wood",
+      "35",
+      "18.51"
+     ],
+     [
+      "Stone",
+      "40",
+      "21.15"
+     ],
+     [
+      "Iron",
+      "45",
+      "23.8"
+     ],
+     [
+      "Diamond",
+      "57",
+      "30.14"
+     ],
+     [
+      "Emerald",
+      "70",
+      "37.02"
+     ]
+    ],
+    "note": "Wood and diamond are from tests (35 / 18.51 and 57 / 30.14); the rest follow the same pattern. 30% armor penetration."
+   },
+   {
+    "title": "Energy",
+    "head": [
+     "",
+     "Energy"
+    ],
+    "rows": [
+     [
+      "Every second (not transformed)",
+      "+1%"
+     ],
+     [
+      "Kill (not transformed)",
+      "+30%"
+     ],
+     [
+      "Telepearl",
+      "+25%"
+     ],
+     [
+      "Every second (Dragon Form)",
+      "−3%"
+     ],
+     [
+      "Dragon Breath",
+      "−5%"
+     ],
+     [
+      "Flap",
+      "~−7%"
+     ],
+     [
+      "Leaving Dragon Form",
+      "−15%"
+     ],
+     [
+      "Dying",
+      "Lose half"
+     ]
+    ],
+    "note": "Drain amounts are worked out from tests and patch notes."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Save it for clutches",
+    "text": "Wait until you have enough energy, then use Dragon Form in clutch moments: flying away when you'd fall into the void, catching someone building up, or winning a 1v1."
+   },
+   {
+    "title": "Escape more than fight",
+    "text": "Use it to get out of fights more than to fight. It's easier for enemies to hit you than for you to hit them."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Keep your distance",
+    "text": "Stay away from Xu'rot and stall until its energy runs out."
+   },
+   {
+    "title": "Don't build up",
+    "text": "Building up is exactly what it wants, since it can fly up and breathe on you."
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "Getting Dragon Form is fair, but you have to get much closer to enemies than you'd like, and the damage isn't that good. Kaida has a slow cooldown too but much longer range, and it's actually pretty good."
  },
  {
   "name": "Yamini",
