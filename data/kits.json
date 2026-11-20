@@ -18307,7 +18307,7 @@
       "20"
      ]
     ],
-    "note": "Wooden sword values are tested with no armor. The shield is 10 at 0 stacks and 20 at 20; the values in between assume it grows evenly."
+    "note": "Wooden sword values are tested with no armor. The shield grows 0.5 per stack, from 10 at 0 stacks to 20 at 20. In game it's shown rounded up, so 10.5 shows as 11."
    }
   ],
   "strategy": [
