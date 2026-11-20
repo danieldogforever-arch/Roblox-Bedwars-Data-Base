@@ -9884,14 +9884,14 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Consuming enemy souls grants health regen, movespeed and invulnerability for 2.5s. Combat is disabled while consuming.",
-  "adv": "When you get a kill or an assist, the enemy drops a soul. You have 10 seconds to consume it with your ability button from up to 21 blocks away. You can have several souls around at once, but you can only consume a new one after the current 2.5 seconds end.\nConsuming a soul heals 25 HP over 2.5 seconds (2.5 HP, 10 times). For those 2.5 seconds you're invincible, take no fall damage, and move about 75% faster (from tests), but you can't attack or mine anything.",
+  "adv": "When you get a kill or an assist, the enemy drops a soul. You have 10 seconds to consume it with your ability button from up to 40 blocks away. You can have several souls around at once, but you can only consume a new one after the current 2.5 seconds end.\nConsuming a soul heals 25 HP over 2.5 seconds (2.5 HP, 10 times). For those 2.5 seconds you're invincible, take no fall damage, and move about 75% faster (from tests), but you can't attack or mine anything.",
   "items": [],
   "abilities": [
    {
     "name": "Consume Soul",
     "img": "images/abilities/ability-template.png",
     "note": "Within 10s of a kill or assist",
-    "desc": "Press to consume a soul up to 21 blocks away. Heals 25 HP over 2.5 seconds and makes you invincible and about 75% faster, with no fall damage. You can't attack or mine while it lasts, and you can't consume another soul until it ends."
+    "desc": "Press to consume a soul up to 40 blocks away. Heals 25 HP over 2.5 seconds and makes you invincible and about 75% faster, with no fall damage. You can't attack or mine while it lasts, and you can't consume another soul until it ends."
    }
   ],
   "history": [
@@ -9993,7 +9993,7 @@
      ],
      [
       "Range",
-      "21 blocks"
+      "40 blocks"
      ],
      [
       "Time to collect",
@@ -20156,7 +20156,7 @@
    "badge": "images/bp/s9.webp",
    "rent": 2000
   },
-  "bal": "sop",
+  "bal": "adj",
   "passives": [
    {
     "name": "Vanish",
@@ -20617,11 +20617,16 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Use a Void Axe to dash forward while slashing at enemies, healing for a portion of the damage dealt.",
-  "adv": "",
+  "adv": "Void Regent buys the Void Axe in the shop for 40 iron and keeps it when it dies. Using the axe leaps you forward about 5 blocks, or about 9 if you're running and jumping and switch off the axe right after using it.\nWhen you land, it hits every enemy within 8 blocks for 18 damage with 40% armor penetration, and knocks them about 2 blocks away. You heal from every enemy you hit, but each extra enemy heals you less than the one before: about 24 HP from 2 enemies and 30 HP from 3. The enemies' armor doesn't seem to lower the healing.",
   "items": [
    {
     "name": "Void Axe",
-    "img": "images/items/void-axe.png"
+    "img": "images/items/void-axe.png",
+    "note": "Cost: 40 iron",
+    "desc": "Leap about 5 blocks (about 9 if running, jumping and unequipping right after) and hit every enemy within 8 blocks for 18 damage, 40% armor penetration. Knocks them about 2 blocks away and heals you. Kept on death.",
+    "dmg": 18,
+    "dmgText": "18 per enemy",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -20726,7 +20731,115 @@
    "src": "2021 Holiday Bundle",
    "rent": 2500,
    "note": "Can only be rented now."
-  }
+  },
+  "passives": [
+   {
+    "name": "Void Heal",
+    "when": "Hitting enemies with the Void Axe",
+    "desc": "Heals you for each enemy hit. Each extra enemy heals less: about 24 HP from 2 enemies, 30 HP from 3."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Void Axe damage",
+    "head": [
+     "Armor",
+     "Damage"
+    ],
+    "rows": [
+     [
+      "None",
+      "18"
+     ],
+     [
+      "img:images/armor/leather.png|Leather",
+      "13.46"
+     ],
+     [
+      "img:images/armor/iron.png|Iron",
+      "10.21"
+     ],
+     [
+      "img:images/armor/diamond.png|Diamond",
+      "6.21"
+     ],
+     [
+      "img:images/armor/emerald.png|Emerald",
+      "4.34"
+     ]
+    ],
+    "note": "Iron is tested. It works out to 40% armor penetration, which matches the June 2025 patch; the other armor values are worked out from that."
+   },
+   {
+    "title": "Healing by enemies hit",
+    "head": [
+     "Enemies hit",
+     "Total healing",
+     "Tested on"
+    ],
+    "rows": [
+     [
+      "1",
+      "~14.4 (80%)",
+      ""
+     ],
+     [
+      "2",
+      "24",
+      "No armor + leather"
+     ],
+     [
+      "3",
+      "30",
+      "Leather + iron + diamond"
+     ]
+    ],
+    "note": "Hitting more enemies heals more in total, but less per enemy (about 12 each with 2, 10 each with 3). The 3-enemy test healed more even with diamond armor in it, so armor doesn't seem to reduce the healing."
+   },
+   {
+    "title": "Leap distance",
+    "head": [
+     "How",
+     "Distance"
+    ],
+    "rows": [
+     [
+      "Normal",
+      "~5 blocks"
+     ],
+     [
+      "Running + jumping, unequip right after",
+      "~9 blocks"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Use it when you get hit",
+    "text": "Use the axe as soon as you take damage so you get the most out of the healing."
+   },
+   {
+    "title": "Stall from walls",
+    "text": "Hide on the sides of walls and hit enemies as they come, knocking them into the void."
+   },
+   {
+    "title": "Heal off groups",
+    "text": "When you're low, use it on groups of enemies to heal a good chunk of HP."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Ground it",
+    "text": "Apply the Grounded effect. Throwing a Gloop at it works."
+   },
+   {
+    "title": "Just fight it",
+    "text": "You can't dodge the axe with its huge range, so don't try. Fight it head on."
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "The 8-block radius makes it completely busted. Hitting that many enemies and knocking them all back while you heal is just unfair. It's listed as a movement kit, but it's really more of a knockback stalling kit."
  },
  {
   "name": "Vulcan",
