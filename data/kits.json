@@ -20035,43 +20035,47 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Use chakrams to fight at mid-range. You can turn invisible and escape from battle if you get attacked by a melee attack.",
-  "adv": "Umeko fights with chakrams, throwable blades you buy in the shop for the same price as swords of the same tier. A chakram flies up to 22 blocks and comes back. It deals 75% of its damage on the way out and 25% on the way back, so a Stone Chakram does 18.75 and then 6.25 (25 total, the same as a stone sword). The chakram itself is the hitbox, it hits everyone in its path, and each hit slows the enemy down a little. You keep your chakrams when you die.\nIf an enemy is against a wall or at max range, the chakram may only hit once, since it can't pass back through them.\nWhen you get hit, you turn invisible for 5 seconds. This has a 12 second cooldown.",
+  "adv": "Umeko fights with chakrams, throwable blades you buy in the shop for the same price as swords of the same tier. A chakram flies up to 22 blocks and comes back. It deals 75% of its damage on the way out and 25% on the way back, so a Stone Chakram does 18.75 and then 6.25 (25 total, the same as a stone sword). The chakram itself is the hitbox, it hits everyone in its path, and each hit slows the enemy down a little. You keep your chakrams when you die. It has to come back to you before you can throw it again: about 0.4 seconds up close, and 1 second at max range. Better chakrams have more armor penetration: 5% / 10% / 15% / 25% from stone to emerald.\nIf an enemy is against a wall or at max range, the chakram may only hit once, since it can't pass back through them.\nWhen you get hit, you turn invisible for 5 seconds. This has a 12 second cooldown.",
   "items": [
    {
     "name": "Stone Chakram",
     "img": "images/items/stone-chakram.png",
     "note": "Cost: 20 iron",
-    "desc": "18.75 on the throw, 6.25 on the way back (25 total). 22 block range.",
+    "desc": "18.75 on the throw, 6.25 on the way back (25 total). 22 block range, 5% armor penetration.",
     "dmg": 18.75,
     "dmgText": "18.75 + 6.25",
-    "nodps": true
+    "nodps": true,
+    "cdText": "0.4s - 1s"
    },
    {
     "name": "Iron Chakram",
     "img": "images/items/iron-chakram.png",
     "note": "Cost: 70 iron",
-    "desc": "22.5 on the throw, 7.5 on the way back (30 total). 22 block range.",
+    "desc": "22.5 on the throw, 7.5 on the way back (30 total). 22 block range, 10% armor penetration.",
     "dmg": 22.5,
     "dmgText": "22.5 + 7.5",
-    "nodps": true
+    "nodps": true,
+    "cdText": "0.4s - 1s"
    },
    {
     "name": "Diamond Chakram",
     "img": "images/items/diamond-chakram.png",
     "note": "Cost: 4 emeralds",
-    "desc": "31.5 on the throw, 10.5 on the way back (42 total). 22 block range.",
+    "desc": "31.5 on the throw, 10.5 on the way back (42 total). 22 block range, 15% armor penetration.",
     "dmg": 31.5,
     "dmgText": "31.5 + 10.5",
-    "nodps": true
+    "nodps": true,
+    "cdText": "0.4s - 1s"
    },
    {
     "name": "Emerald Chakram",
     "img": "images/items/emerald-chakram.png",
     "note": "Cost: 20 emeralds",
-    "desc": "41.25 on the throw, 13.75 on the way back (55 total). 22 block range.",
+    "desc": "41.25 on the throw, 13.75 on the way back (55 total). 22 block range, 25% armor penetration.",
     "dmg": 41.25,
     "dmgText": "41.25 + 13.75",
-    "nodps": true
+    "nodps": true,
+    "cdText": "0.4s - 1s"
    }
   ],
   "abilities": [],
@@ -20152,7 +20156,7 @@
    "badge": "images/bp/s9.webp",
    "rent": 2000
   },
-  "bal": "op",
+  "bal": "sop",
   "passives": [
    {
     "name": "Vanish",
@@ -20173,7 +20177,9 @@
      "Cost",
      "Throw (75%)",
      "Return (25%)",
-     "Total"
+     "Total",
+     "On iron armor",
+     "Armor pen"
     ],
     "rows": [
      [
@@ -20181,31 +20187,39 @@
       "20 iron",
       "18.75",
       "6.25",
-      "25"
+      "25",
+      "11.32",
+      "5%"
      ],
      [
       "img:images/items/iron-chakram.png|Iron",
       "70 iron",
       "22.5",
       "7.5",
-      "30"
+      "30",
+      "13.98",
+      "10%"
      ],
      [
       "img:images/items/diamond-chakram.png|Diamond",
       "4 emeralds",
       "31.5",
       "10.5",
-      "42"
+      "42",
+      "20.17",
+      "15%"
      ],
      [
       "img:images/items/emerald-chakram.png|Emerald",
       "20 emeralds",
       "41.25",
       "13.75",
-      "55"
+      "55",
+      "28.14",
+      "25%"
      ]
     ],
-    "note": "With no armor. The total matches the sword of the same tier. Stone is tested; the others are worked out from the same 75/25 split."
+    "note": "Total with no armor matches the sword of the same tier. Stone is tested, the other no-armor values are worked out from the 75/25 split. Iron armor values are tested (both hits), and armor penetration is worked out from them."
    }
   ],
   "strategy": [
