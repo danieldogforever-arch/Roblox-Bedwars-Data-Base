@@ -20568,7 +20568,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Super charge your bow to perform a triple shot.",
-  "adv": "Vanessa buys arrows for 10 iron instead of 16. Once your bow, crossbow or headhunter is fully charged, keep holding to charge a triple shot: 1 more second for the bow, 1.5 for the crossbow and 2 for the headhunter. The bow takes about 0.6 seconds to fully charge first, and the triple shot bar only shows up after that.\nThe triple shot fires 3 arrows. The first does normal damage, the second about 78% more, and the third about a third as much, so landing all 3 does about 3.1x a normal shot. Each arrow knocks enemies back about 6 blocks. The arrows have no armor penetration.",
+  "adv": "Vanessa buys arrows for 10 iron instead of 16. Once your bow, crossbow or headhunter is fully charged, keep holding to charge a triple shot: 0.85 seconds more for the bow, 1.5 for the crossbow and 2 for the headhunter. The bow takes about 0.6 seconds to fully charge first, and the triple shot bar only shows up after that.\nThe triple shot fires 3 arrows. The first does normal damage, the second about 78% more, and the third about a third as much, so landing all 3 does about 3.1x a normal shot. Each arrow knocks enemies back about 6 blocks. The arrows have no armor penetration.",
   "items": [],
   "abilities": [],
   "history": [
@@ -20654,7 +20654,7 @@
    {
     "name": "Triple Shot",
     "when": "Keep charging after a full charge",
-    "desc": "Fires 3 arrows: normal damage, ~178%, then ~33%. 1s extra charge for the bow, 1.5s for the crossbow, 2s for the headhunter. 6 blocks of knockback."
+    "desc": "Fires 3 arrows: normal damage, ~178%, then ~33%. 0.85s extra charge for the bow, 1.5s for the crossbow, 2s for the headhunter. 6 blocks of knockback."
    }
   ],
   "tables": [
@@ -20675,7 +20675,7 @@
       "32",
       "6",
       "56",
-      "1s"
+      "0.85s"
      ],
      [
       "img:images/items/crossbow.png|Crossbow",
