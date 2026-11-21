@@ -18887,13 +18887,13 @@
   "diff": "easy",
   "hp": "100",
   "desc": "A stealth-focused kit that uses smoke charges to grant invisibility.",
-  "adv": "Smoke buys Smoke Bombs for 25 iron (hold 1 at a time) and Smoke Blocks for 15 iron per 8. You can hold as many Smoke Blocks as you want, but only 20 can be placed at once. You can't drop either item.\nSmoke Blocks can be walked through. While you're inside one, enemies can't hit you unless they're inside the smoke too.\nA Smoke Bomb takes 0.5 seconds to use and makes you invisible for 15 seconds. Breaking a block, getting hit or swinging your sword ends it early. You still leave footsteps, and a poof of smoke when you jump. Using another Smoke Bomb while invisible resets the 15 second timer.",
+  "adv": "Smoke buys Smoke Bombs for 25 iron (hold 1 at a time) and Smoke Blocks for 15 iron per 8. You can hold as many Smoke Blocks as you want, but only 20 can be placed at once. You can't drop either item.\nSmoke Blocks can be walked through. While you're inside one, enemies can't hit you unless they're inside the smoke too.\nA Smoke Bomb takes 0.5 seconds to use and makes you invisible for 15 seconds. For the first 1.5 seconds nothing breaks it. After that, breaking a block, getting hit or swinging your sword ends it early. It also hides you from mobs and traps, like Tesla Coils and Diamond Guardians. You still leave footsteps, and a poof of smoke when you jump. Using another Smoke Bomb while invisible resets the 15 second timer.",
   "items": [
    {
     "name": "Smoke Bomb",
     "img": "images/items/smoke-bomb.png",
     "note": "Cost: 25 iron",
-    "desc": "Hold 1 at a time. 0.5 seconds to use. Invisible for 15 seconds, until you break a block, get hit or swing your sword. Using another while invisible resets the timer. Can't be dropped.",
+    "desc": "Hold 1 at a time. 0.5 seconds to use. Invisible for 15 seconds (also to mobs and traps). After a 1.5 second grace window, it ends if you break a block, get hit or swing your sword. Using another while invisible resets the timer. Can't be dropped.",
     "nodps": true
    },
    {
@@ -18949,7 +18949,7 @@
    {
     "name": "Invisibility",
     "when": "Smoke Bomb",
-    "desc": "15 seconds. Ends if you break a block, get hit or swing your sword. Footsteps and a poof when you jump still show where you are."
+    "desc": "15 seconds, and it hides you from mobs and traps too. Nothing breaks it for the first 1.5 seconds; after that it ends if you break a block, get hit or swing your sword. Footsteps and a poof when you jump still show where you are."
    }
   ],
   "tables": [
@@ -18981,6 +18981,14 @@
    {
     "title": "Bed's gone? Keep buying bombs",
     "text": "If your bed is broken, use the enemy's shop to keep buying Smoke Bombs until everyone has left, then break their bed."
+   },
+   {
+    "title": "Use the grace window",
+    "text": "Nothing breaks your invisibility for the first 1.5 seconds, so pop a bomb right before you start breaking or need to get out of a hit."
+   },
+   {
+    "title": "Sneak past defenses",
+    "text": "Invisibility hides you from Tesla Coils, Diamond Guardians and other traps, so you can walk past bed defenses that would normally catch you."
    },
    {
     "title": "Stay out of the way",
