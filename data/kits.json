@@ -18887,15 +18887,21 @@
   "diff": "easy",
   "hp": "100",
   "desc": "A stealth-focused kit that uses smoke charges to grant invisibility.",
-  "adv": "",
+  "adv": "Smoke buys Smoke Bombs for 25 iron (hold 1 at a time) and Smoke Blocks for 15 iron per 8. You can hold as many Smoke Blocks as you want, but only 20 can be placed at once. You can't drop either item.\nSmoke Blocks can be walked through. While you're inside one, enemies can't hit you unless they're inside the smoke too.\nA Smoke Bomb takes 0.5 seconds to use and makes you invisible for 15 seconds. Breaking a block, getting hit or swinging your sword ends it early. You still leave footsteps, and a poof of smoke when you jump. Using another Smoke Bomb while invisible resets the 15 second timer.",
   "items": [
    {
     "name": "Smoke Bomb",
-    "img": "images/items/smoke-bomb.png"
+    "img": "images/items/smoke-bomb.png",
+    "note": "Cost: 25 iron",
+    "desc": "Hold 1 at a time. 0.5 seconds to use. Invisible for 15 seconds, until you break a block, get hit or swing your sword. Using another while invisible resets the timer. Can't be dropped.",
+    "nodps": true
    },
    {
     "name": "Smoke Block",
-    "img": "images/items/smoke-block.png"
+    "img": "images/items/smoke-block.png",
+    "note": "Cost: 15 iron for 8",
+    "desc": "No holding limit, up to 20 placed. Can be walked through, and enemies can't hit you inside it unless they're inside too. Can't be dropped.",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -18938,7 +18944,65 @@
    "tier": "25 (paid)",
    "badge": "images/bp/s3.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Invisibility",
+    "when": "Smoke Bomb",
+    "desc": "15 seconds. Ends if you break a block, get hit or swing your sword. Footsteps and a poof when you jump still show where you are."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Items",
+    "head": [
+     "Item",
+     "Cost",
+     "Holding limit",
+     "Effect"
+    ],
+    "rows": [
+     [
+      "img:images/items/smoke-bomb.png|Smoke Bomb",
+      "25 iron",
+      "1",
+      "Invisible for 15s (0.5s to use)"
+     ],
+     [
+      "img:images/items/smoke-block.png|Smoke Block",
+      "15 iron for 8",
+      "No limit (20 placed)",
+      "Walk through it; can only be hit by enemies inside it"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Bed's gone? Keep buying bombs",
+    "text": "If your bed is broken, use the enemy's shop to keep buying Smoke Bombs until everyone has left, then break their bed."
+   },
+   {
+    "title": "Stay out of the way",
+    "text": "Don't swing your sword or walk where people are fighting, since you never know if someone will hit you by accident."
+   },
+   {
+    "title": "Be sneaky",
+    "text": "Don't walk in front of people, since they can see your footsteps."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Watch for footsteps",
+    "text": "Gloops won't knock Smoke out of invisibility, so keep an eye out for footsteps."
+   },
+   {
+    "title": "Anti-block defense",
+    "text": "Add an anti-block layer to your bed defense so Smoke can't appear out of nowhere and block itself in with wood, stone or obsidian."
+   }
+  ],
+  "bal": "weak",
+  "balWhy": "There are 2 kits that do the same thing better and have more abilities. Like other Season 3 kits, pure bed breaking kits are outclassed by kits that can do more than break beds. Wren's invisibility potion lasts longer and teammates can use it. Milo blends in better and also has a shield and speed boost on top of bed breaking. It needs a complete rework."
  },
  {
   "name": "Sophia",
