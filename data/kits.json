@@ -16329,7 +16329,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Charge your Mending Canopy to shine healing light on your allies.",
-  "adv": "Nyoka heals teammates with the Mending Canopy staff. You spawn with Mending Canopy I, and can buy II for 4 emeralds and III for 8. While you hold the staff it heals teammates around you, and you heal 25% of what they do, even when nobody is near you.\nYou can charge the staff from 0% to 100%, which grows its radius, heals more and heals faster. Charging gains 3% every 0.3 seconds and drains an energy bar: a full charge uses 75% / 50% / 40% of the bar on Canopy I / II / III, and you lose about 5% every time you start charging. The bar refills in 60 / 50 / 40 seconds. When you stop, the charge drops 4% every second, and unequipping the staff resets it to 0%. Starting or stopping takes 0.3 seconds, and the charge keeps going even if you swap off the staff.\nAt 20% or more you can glide and take no fall damage. Canopy II and III also knock back nearby enemies with a small nudge, faster the more you're charged, and the knockback triggers your enchants. Canopy III adds Overcharge Staff (60 second cooldown), which instantly charges you to 100% without using any energy.",
+  "adv": "Nyoka heals teammates with the Mending Canopy staff. You spawn with Mending Canopy I, and can buy II for 4 emeralds and III for 8. While you hold the staff it heals teammates around you, and you heal 25% of what they do, even when nobody is near you.\nYou can charge the staff from 0% to 100%, which grows its radius, heals more and heals faster. The radius and heal speed grow slowly up to 50%, then pick up and max out at 100%. A full charge takes 10 seconds. Charging gains 3% every 0.3 seconds and drains an energy bar: a full charge uses 75% / 50% / 40% of the bar on Canopy I / II / III, and you lose about 5% every time you start charging. The bar refills in 60 / 50 / 40 seconds. When you stop, the charge drops 4% every second, and unequipping the staff resets it to 0%. Starting or stopping takes 0.3 seconds, and the charge keeps going even if you swap off the staff.\nAt 20% or more you can glide and take no fall damage. Canopy II and III also knock back nearby enemies with a small nudge, faster the more you're charged, and the knockback triggers your enchants, like Fire, Static and Execute (all except Forest and Plunder). Canopy III adds Overcharge Staff (60 second cooldown), which instantly charges you to 100% without using any energy.",
   "items": [
    {
     "name": "Mending Canopy I",
@@ -16349,7 +16349,7 @@
     "name": "Mending Canopy III",
     "img": "images/items/mending-canopy-3.png",
     "note": "Cost: 8 emeralds",
-    "desc": "0%: heals 7 every 0.9s in 4.5 blocks. 100%: heals 9 every 0.4s in 12 blocks. A full charge uses 40% of the bar, which refills in 40s. Unlocks Overcharge Staff.",
+    "desc": "0%: heals 7 every 0.85s in 4.5 blocks. 100%: heals 9 every 0.4s in 12 blocks. A full charge uses 40% of the bar, which refills in 40s. Unlocks Overcharge Staff.",
     "nodps": true
    }
   ],
@@ -16357,7 +16357,7 @@
    {
     "name": "Charge Staff",
     "img": "images/abilities/ability-template.png",
-    "desc": "Charge 3% every 0.3 seconds, using energy. About 5% of the bar is lost each time you start. The charge drops 4% a second when you stop.",
+    "desc": "Charge 3% every 0.3 seconds (10 seconds to 100%), using energy. About 5% of the bar is lost each time you start. The charge drops 4% a second when you stop.",
     "nodps": true
    },
    {
@@ -16456,7 +16456,7 @@
    {
     "name": "Canopy Knockback",
     "when": "Canopy II and III, 20%+ charge",
-    "desc": "Nudges nearby enemies every 1.25s (20%+), 1s (50%+) or 0.75s (100%). Triggers your enchants."
+    "desc": "Nudges nearby enemies every 1.25s (20%+), 1s (50%+) or 0.75s (100%). Triggers your enchants, like Fire, Static and Execute, but not Forest or Plunder."
    }
   ],
   "tables": [
@@ -16494,12 +16494,13 @@
       "III",
       "8 emeralds",
       "4.5 → 12",
-      "0.9s → 0.4s",
+      "0.85s → 0.4s",
       "7 / 8 / 9 (0% / 1–49% / 50%+)",
       "40%",
       "40s"
      ]
-    ]
+    ],
+    "note": "Radius and heal speed grow slowly up to 50%, then much faster up to 100%."
    },
    {
     "title": "Healing per second",
@@ -16527,8 +16528,8 @@
      ],
      [
       "III",
-      "7.8",
-      "1.9",
+      "8.2",
+      "2.1",
       "22.5",
       "5.6"
      ]
@@ -16586,7 +16587,7 @@
    }
   ],
   "bal": "adj",
-  "balWhy": "Healing 9 every 0.4 seconds (22.5 HP a second) in a 12 block radius is absurd. It's expensive, but very much worth the price. The knockback makes it disgusting to fight, since it triggers any enchant you have."
+  "balWhy": "Healing 9 every 0.4 seconds (22.5 HP a second) in a 12 block radius is absurd. It's expensive, but very much worth the price. The knockback makes it disgusting to fight, since it triggers almost any enchant you have, like Fire, Static and Execute."
  },
  {
   "name": "Nyx",
