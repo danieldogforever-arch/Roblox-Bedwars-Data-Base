@@ -23420,41 +23420,41 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Swords are replaced by traditional Dao Swords. Hold attack to execute a forward dash AOE attack.",
-  "adv": "Yuzi's swords are replaced by Daos. They hit the same as the matching sword, but cost more, and they can dash. You spawn with the Wood Dao.\nHold attack for 0.75 seconds to dash: 6 blocks standing, 10 if you're running, or 13 if you run and jump first. Each dash has a 3 second cooldown. Enemies within 11 blocks along your dash and inside a 3 block wide path take damage, even through walls. With the Wood Dao a dash does 16.5 damage, with 20% armor penetration.\nDashes use a movement bar with 4 sections. Each dash uses 1 section, except the last, which only uses half, so you get 4 dashes from a full bar. You can dash as long as the first section has something in it. After 6 seconds without dashing the bar starts refilling, about 2 seconds per section, so an empty bar is full again 13 seconds after your last dash.",
+  "adv": "Yuzi's swords are replaced by Daos. They hit the same as the matching sword, but cost more, and they can dash. You spawn with the Wood Dao.\nHold attack for 0.75 seconds to dash: 6 blocks standing, 10 if you're running, or 13 if you run and jump first. Each dash has a 3 second cooldown. Enemies within 11 blocks along your dash and inside a 3 block wide path take damage, even through walls. Dash damage goes up with each Dao, from 16.5 with the Wood Dao to 30.8 with the Emerald Dao, and the Diamond and Emerald Daos get more armor penetration (20% / 20% / 20% / 25% / 30%).\nDashes use a movement bar with 4 sections. Each dash uses 1 section, except the last, which only uses half, so you get 4 dashes from a full bar. You can dash as long as the first section has something in it. After 6 seconds without dashing the bar starts refilling, about 2 seconds per section, so an empty bar is full again 13 seconds after your last dash.",
   "items": [
    {
     "name": "Wood Dao",
     "img": "images/items/wood-dao.png",
     "note": "Cost: Spawn with it",
-    "desc": "Hits like a wood sword (20 damage) and can dash. Replaces the Wood Sword.",
+    "desc": "Hits like a wood sword (20 damage). Dash: 16.5 damage, 20% armor penetration. Replaces the Wood Sword.",
     "nodps": true
    },
    {
     "name": "Stone Dao",
     "img": "images/items/stone-dao.png",
     "note": "Cost: 28 iron",
-    "desc": "Hits like a stone sword (25 damage) and can dash.",
+    "desc": "Hits like a stone sword (25 damage). Dash: 19.8 damage, 20% armor penetration.",
     "nodps": true
    },
    {
     "name": "Iron Dao",
     "img": "images/items/iron-dao.png",
     "note": "Cost: 85 iron",
-    "desc": "Hits like a iron sword (30 damage) and can dash.",
+    "desc": "Hits like a iron sword (30 damage). Dash: 23.1 damage, 20% armor penetration.",
     "nodps": true
    },
    {
     "name": "Diamond Dao",
     "img": "images/items/diamond-dao.png",
     "note": "Cost: 6 emeralds",
-    "desc": "Hits like a diamond sword (42 damage) and can dash.",
+    "desc": "Hits like a diamond sword (42 damage). Dash: 27.5 damage, 25% armor penetration.",
     "nodps": true
    },
    {
     "name": "Emerald Dao",
     "img": "images/items/emerald-dao.png",
     "note": "Cost: 24 emeralds",
-    "desc": "Hits like a emerald sword (55 damage) and can dash.",
+    "desc": "Hits like a emerald sword (55 damage). Dash: 30.8 damage, 30% armor penetration.",
     "nodps": true
    }
   ],
@@ -23535,7 +23535,7 @@
    {
     "name": "Dash",
     "when": "Hold attack for 0.75s",
-    "desc": "6 / 10 / 13 blocks (standing / running / running + jumping). Hits enemies within 11 blocks in a 3 block wide path, through walls. 16.5 damage with the Wood Dao, 20% armor penetration. 3 second cooldown."
+    "desc": "6 / 10 / 13 blocks (standing / running / running + jumping). Hits enemies within 11 blocks in a 3 block wide path, through walls. 16.5 to 30.8 damage depending on your Dao. 3 second cooldown."
    },
    {
     "name": "Movement Bar",
@@ -23586,6 +23586,66 @@
     ]
    },
    {
+    "title": "Dash damage",
+    "head": [
+     "Dao",
+     "No armor",
+     "Leather",
+     "Iron",
+     "Diamond",
+     "Emerald",
+     "Armor pen"
+    ],
+    "rows": [
+     [
+      "img:images/items/wood-dao.png|Wood",
+      "16.5",
+      "11.38",
+      "8.18",
+      "4.67",
+      "3.17",
+      "20%"
+     ],
+     [
+      "img:images/items/stone-dao.png|Stone",
+      "19.8",
+      "13.66",
+      "9.81",
+      "5.6",
+      "3.81",
+      "20%"
+     ],
+     [
+      "img:images/items/iron-dao.png|Iron",
+      "23.1",
+      "15.93",
+      "11.45",
+      "6.54",
+      "4.44",
+      "20%"
+     ],
+     [
+      "img:images/items/diamond-dao.png|Diamond",
+      "27.5",
+      "19.34",
+      "14.07",
+      "8.15",
+      "5.57",
+      "25%"
+     ],
+     [
+      "img:images/items/emerald-dao.png|Emerald",
+      "30.8",
+      "22.1",
+      "16.29",
+      "9.58",
+      "6.59",
+      "30%"
+     ]
+    ],
+    "note": "No armor is tested for every Dao. Leather is tested for Stone to Emerald and iron for Wood; armor penetration is worked out from those, and the rest from that."
+   },
+   {
     "title": "Dash",
     "head": [
      "How",
@@ -23605,7 +23665,7 @@
       "13 blocks"
      ]
     ],
-    "note": "0.75 seconds to charge, 3 second cooldown. Wood Dao dash: 16.5 with no armor, 8.18 on iron (20% armor penetration)."
+    "note": "0.75 seconds to charge, 3 second cooldown."
    },
    {
     "title": "Movement bar",
