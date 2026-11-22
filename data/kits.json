@@ -23420,27 +23420,42 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Swords are replaced by traditional Dao Swords. Hold attack to execute a forward dash AOE attack.",
-  "adv": "",
+  "adv": "Yuzi's swords are replaced by Daos. They hit the same as the matching sword, but cost more, and they can dash. You spawn with the Wood Dao.\nHold attack for 0.75 seconds to dash: 6 blocks standing, 10 if you're running, or 13 if you run and jump first. Each dash has a 3 second cooldown. Enemies within 11 blocks along your dash and inside a 3 block wide path take damage, even through walls. With the Wood Dao a dash does 16.5 damage, with 20% armor penetration.\nDashes use a movement bar with 4 sections. Each dash uses 1 section, except the last, which only uses half, so you get 4 dashes from a full bar. You can dash as long as the first section has something in it. After 6 seconds without dashing the bar starts refilling, about 2 seconds per section, so an empty bar is full again 13 seconds after your last dash.",
   "items": [
    {
     "name": "Wood Dao",
-    "img": "images/items/wood-dao.png"
+    "img": "images/items/wood-dao.png",
+    "note": "Cost: Spawn with it",
+    "desc": "Hits like a wood sword (20 damage) and can dash. Replaces the Wood Sword.",
+    "nodps": true
    },
    {
     "name": "Stone Dao",
-    "img": "images/items/stone-dao.png"
+    "img": "images/items/stone-dao.png",
+    "note": "Cost: 28 iron",
+    "desc": "Hits like a stone sword (25 damage) and can dash.",
+    "nodps": true
    },
    {
     "name": "Iron Dao",
-    "img": "images/items/iron-dao.png"
+    "img": "images/items/iron-dao.png",
+    "note": "Cost: 85 iron",
+    "desc": "Hits like a iron sword (30 damage) and can dash.",
+    "nodps": true
    },
    {
     "name": "Diamond Dao",
-    "img": "images/items/diamond-dao.png"
+    "img": "images/items/diamond-dao.png",
+    "note": "Cost: 6 emeralds",
+    "desc": "Hits like a diamond sword (42 damage) and can dash.",
+    "nodps": true
    },
    {
     "name": "Emerald Dao",
-    "img": "images/items/emerald-dao.png"
+    "img": "images/items/emerald-dao.png",
+    "note": "Cost: 24 emeralds",
+    "desc": "Hits like a emerald sword (55 damage) and can dash.",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -23515,7 +23530,153 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Dash",
+    "when": "Hold attack for 0.75s",
+    "desc": "6 / 10 / 13 blocks (standing / running / running + jumping). Hits enemies within 11 blocks in a 3 block wide path, through walls. 16.5 damage with the Wood Dao, 20% armor penetration. 3 second cooldown."
+   },
+   {
+    "name": "Movement Bar",
+    "when": "Always",
+    "desc": "4 sections, 1 per dash (the last dash uses half). Starts refilling 6 seconds after your last dash, about 2 seconds per section."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Daos",
+    "head": [
+     "Dao",
+     "Cost",
+     "Normal sword cost",
+     "Hit damage"
+    ],
+    "rows": [
+     [
+      "img:images/items/wood-dao.png|Wood",
+      "Spawn with it",
+      "Spawn with it",
+      "20"
+     ],
+     [
+      "img:images/items/stone-dao.png|Stone",
+      "28 iron",
+      "20 iron",
+      "25"
+     ],
+     [
+      "img:images/items/iron-dao.png|Iron",
+      "85 iron",
+      "70 iron",
+      "30"
+     ],
+     [
+      "img:images/items/diamond-dao.png|Diamond",
+      "6 emeralds",
+      "4 emeralds",
+      "42"
+     ],
+     [
+      "img:images/items/emerald-dao.png|Emerald",
+      "24 emeralds",
+      "20 emeralds",
+      "55"
+     ]
+    ]
+   },
+   {
+    "title": "Dash",
+    "head": [
+     "How",
+     "Distance"
+    ],
+    "rows": [
+     [
+      "Standing",
+      "6 blocks"
+     ],
+     [
+      "Running",
+      "10 blocks"
+     ],
+     [
+      "Running + jumping",
+      "13 blocks"
+     ]
+    ],
+    "note": "0.75 seconds to charge, 3 second cooldown. Wood Dao dash: 16.5 with no armor, 8.18 on iron (20% armor penetration)."
+   },
+   {
+    "title": "Movement bar",
+    "head": [
+     "",
+     "Time"
+    ],
+    "rows": [
+     [
+      "Dashes from a full bar",
+      "4"
+     ],
+     [
+      "Delay before refilling",
+      "6s after your last dash"
+     ],
+     [
+      "Refill per section",
+      "~2s"
+     ],
+     [
+      "Empty to full",
+      "13s after your last dash"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Hit and hold",
+    "text": "To combo people, hit and keep holding. Your first hit starts charging a dash, so you can easily follow up with more damage."
+   },
+   {
+    "title": "Dash in, then fight",
+    "text": "Dash into a fight, then switch to normal hits."
+   },
+   {
+    "title": "Save dashes",
+    "text": "Once you've dashed, don't waste more if you don't need them, especially with only 1–2 left. Let the bar recharge."
+   },
+   {
+    "title": "Hit through walls",
+    "text": "Dashes hit through walls, so abuse it. Hide behind a wall and dash-hit enemies on the other side for extra damage."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Bait the dash",
+    "text": "If you see a Yuzi charging, build up to bait the dash, then fight it. Without dashes it's no kit, unless you don't ground it or it runs away."
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "Daos are very expensive compared to kits that have cheaper swords or no extra costs at all. It's an older kit, and its concept is outdated since other kits do it better. The damage is okay and the movement is good, but getting Grounded makes it no kit. If all you get is a bit more damage and mediocre movement, be ready to play no kit half the time.",
+  "skins": [
+   {
+    "name": "Year of the Tiger Skin",
+    "img": "images/skins/yuzi-year-of-the-tiger.webp"
+   },
+   {
+    "name": "Hexed Skin",
+    "img": "images/skins/yuzi-hexed.webp"
+   },
+   {
+    "name": "Snow Rabbit Skin",
+    "img": "images/skins/yuzi-snow-rabbit.webp"
+   },
+   {
+    "name": "Victorious Skin",
+    "img": "images/skins/yuzi-victorious.webp"
+   }
+  ]
  },
  {
   "name": "Zarrah",
