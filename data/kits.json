@@ -22365,12 +22365,12 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Control a Spirit Owl to support ally players. Unlocked at Player Level 10.",
-  "adv": "Whisper spawns with the Spirit Owl. Use it on any teammate within 20 blocks to sit on their shoulder as an owl. You basically spectate them while your real body stays where you left it, standing still. You can turn the owl off at any time.\nAs the owl, you can shoot a projectile from your teammate about once a second. Its damage depends on your sword: 5 / 7 / 10 / 14 / 18 from wood to emerald, with 20% armor penetration.\nHeal + Speed (8 second cooldown) heals your teammate 2 HP every 0.5 seconds, 7 times (14 total), and gives them a speed boost while it lasts (24 blocks in about 3 seconds, roughly 17% faster than walking). If your teammate is over the void, Owl Lift (85 second cooldown) flies them for up to 15 seconds. It ends once they're over land, and they take no fall damage.",
+  "adv": "Whisper spawns with the Spirit Owl. Use it on any teammate within 20 blocks to sit on their shoulder as an owl. You basically spectate them while your real body stays where you left it, standing still. You can turn the owl off at any time.\nAs the owl, you can shoot a projectile from your teammate every 0.85 seconds. Its damage depends on your sword: 5 / 7 / 10 / 14 / 18 from wood to emerald, with 20% armor penetration.\nHeal + Speed (8 second cooldown) heals your teammate 2 HP every 0.5 seconds, 7 times (14 total), and gives them a speed boost while it lasts (24 blocks in about 3 seconds, 20% faster). If your teammate is over the void, Owl Lift (85 second cooldown) flies them for up to 15 seconds. It ends once they're over land, and they take no fall damage.",
   "items": [
    {
     "name": "Spirit Owl",
     "img": "images/items/spirit-owl.png",
-    "desc": "Attach to a teammate within 20 blocks. Shoot a projectile about once a second: 5 / 7 / 10 / 14 / 18 damage by sword tier, 20% armor penetration.",
+    "desc": "Attach to a teammate within 20 blocks. Shoot a projectile every 0.85 seconds: 5 / 7 / 10 / 14 / 18 damage by sword tier, 20% armor penetration.",
     "nodps": true
    }
   ],
@@ -22380,7 +22380,7 @@
     "img": "images/abilities/ability-template.png",
     "cd": 8,
     "note": "Only while using the owl on a teammate",
-    "desc": "Heals your teammate 2 HP every 0.5 seconds, 7 times (14 total), and gives them a speed boost (about 17% faster).",
+    "desc": "Heals your teammate 2 HP every 0.5 seconds, 7 times (14 total), and gives them a speed boost (20% faster).",
     "nodps": true
    },
    {
@@ -22584,7 +22584,7 @@
      [
       "Heal + Speed",
       "8s",
-      "2 HP every 0.5s × 7 = 14 HP, ~17% faster"
+      "2 HP every 0.5s × 7 = 14 HP, 20% faster"
      ],
      [
       "Owl Lift",
