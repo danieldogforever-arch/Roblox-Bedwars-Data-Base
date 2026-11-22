@@ -30,15 +30,26 @@ a.tool:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
 a.tool h3{margin:0 0 4px;font-size:1.4rem}
 a.tool p{margin:0;color:var(--muted);font-size:.98rem}
 .art{width:120px;height:110px;position:relative;display:grid;place-items:center;border-radius:18px;background:radial-gradient(circle at 50% 40%,rgba(169,139,255,.35),rgba(21,11,56,.9) 72%)}
-.art .k{position:absolute;width:64px;height:64px;object-fit:contain}
-.art .k1{left:-6px;top:30px;transform:rotate(-10deg)}.art .k2{left:25px;top:6px;z-index:2;width:70px;height:70px}.art .k3{right:-6px;top:32px;transform:rotate(10deg)}
+.art .k{position:absolute;width:64px;height:64px;object-fit:contain;transition:left .9s ease,top .9s ease,transform .9s ease,opacity .9s ease}
+.art .k.p0{left:-34px;top:30px;transform:rotate(-14deg) scale(.7);opacity:0}
+.art .k.p1{left:-6px;top:30px;transform:rotate(-10deg);opacity:1}
+.art .k.p2{left:25px;top:6px;z-index:2;transform:scale(1.1);opacity:1}
+.art .k.p3{left:62px;top:32px;transform:rotate(10deg);opacity:1}
+.art .k.p4{left:92px;top:32px;transform:rotate(14deg) scale(.7);opacity:0}
+.art .k.jump{transition:none}
+.art.km{overflow:hidden}
+.ups{position:relative;width:110px;height:90px}
+.ups img{position:absolute;object-fit:contain}
+.ups .u1{width:44px;height:44px;left:0;top:34px;transform:rotate(-10deg)}.ups .u2{width:54px;height:54px;left:28px;top:4px;z-index:2}.ups .u3{width:44px;height:44px;right:0;top:36px;transform:rotate(10deg)}
 .tiers{display:grid;grid-template-columns:repeat(3,26px);gap:6px}
 .tiers i{font-style:normal;display:grid;place-items:center;height:26px;border-radius:7px;color:#12082e;font-size:.85rem}
 .calc{display:flex;flex-direction:column;align-items:center;gap:4px}
 .calc img{width:56px;height:56px;object-fit:contain}
 .calc span{font-size:.95rem;color:var(--gold)}
 .rand{display:flex;align-items:center;gap:2px}
-.rand img{width:48px;height:48px;object-fit:contain;background:rgba(255,255,255,.08);border-radius:12px;border:2px solid var(--gold)}
+.rand .slot{width:52px;height:52px;overflow:hidden;background:rgba(255,255,255,.08);border-radius:12px;border:2px solid var(--gold)}
+.rand .reel{display:flex;flex-direction:column}
+.rand .reel img{width:48px;height:48px;flex:none;object-fit:contain;display:block}
 .rand b{color:var(--gold);font-weight:400}
 .prog{height:14px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden;border:2px solid rgba(255,255,255,.35);margin-bottom:14px}
 .prog i{display:block;height:100%;background:linear-gradient(90deg,#a98bff,#ffd166)}
@@ -80,11 +91,12 @@ a.tool p{margin:0;color:var(--muted);font-size:.98rem}
   <a class="latest" href="updates.html"><span class="lt">Latest update · Nov 13, 2026</span><b>Spirit Catcher and Gompy in the store</b><span class="ls">The Battle Pass is extended by a week, Spirit Catcher and Gompy join the store, Jade now spawns with its hammer, and new Duels, 5v5, Squads, Doubles and Gun Game maps arrive. Balance changes for 14 kits.</span></a>
   <h2 class="sec">Tools</h2>
   <div class="tools">
-    <a class="tool" href="kit-machine.html"><span class="art"><img class="k k1" src="images/kits/void-knight.webp" alt=""><img class="k k2" src="images/kits/crocowolf.webp" alt=""><img class="k k3" src="images/kits/cobalt.webp" alt=""></span><span><h3>Kit Machine</h3><p>Look up any kit: stats, tier, class, skins, abilities, best fusions and balance history.</p></span></a>
+    <a class="tool" href="kit-machine.html"><span class="art km" id="kmArt"><img class="k p0" data-p="0" src="images/kits/eldertree.webp" alt=""><img class="k p1" data-p="1" src="images/kits/void-knight.webp" alt=""><img class="k p2" data-p="2" src="images/kits/crocowolf.webp" alt=""><img class="k p3" data-p="3" src="images/kits/cobalt.webp" alt=""><img class="k p4" data-p="4" src="images/kits/zephyr.webp" alt=""></span><span><h3>Kit Machine</h3><p>Look up any kit: stats, tier, class, skins, abilities, best fusions and balance history.</p></span></a>
     <a class="tool" href="charts.html"><span class="art"><span class="tiers"><i style="background:#ff4d6d">OP</i><i style="background:#ff8a5c">S</i><i style="background:#ffd166">A</i><i style="background:#5fe3a1">B</i><i style="background:#5cc8ff">C</i><i style="background:#a98bff">F</i></span></span><span><h3>Tier Lists</h3><p>Casual, Ranked and Duels tier lists. Search for a kit, or download the list as an image.</p></span></a>
     <a class="tool" href="calculator.html"><span class="art"><span class="calc"><img src="images/items/diamond-sword.png" alt=""><span>42 → 18.48</span></span></span><span><h3>Damage Calculator</h3><p>Pick a weapon, buffs, enchants, armor and a target kit to see damage per hit, hits to kill and true HP.</p></span></a>
     <a class="tool" href="updates.html"><span class="art"><span class="calc"><span style="font-size:2.2rem;line-height:1">📜</span><span>505 updates</span></span></span><span><h3>Update Log</h3><p>Every update since 2021 with a short summary, plus all the details, balance changes and bug fixes.</p></span></a>
-    <a class="tool" href="randomizer.html"><span class="art"><span class="rand"><img src="images/kits/cogsworth.webp" alt=""><b>+</b><img src="images/kits/farmer-cletus.webp" alt=""></span></span><span><h3>Kit Randomizer</h3><p>Can't decide? Spin for a random kit or a random fusion, with filters for class, tier and difficulty.</p></span></a>
+    <a class="tool" href="randomizer.html"><span class="art"><span class="rand"><span class="slot"><span class="reel"><img src="images/kits/cogsworth.webp" alt=""></span></span><b>+</b><span class="slot"><span class="reel"><img src="images/kits/farmer-cletus.webp" alt=""></span></span></span></span><span><h3>Kit Randomizer</h3><p>Can't decide? Spin for a random kit or a random fusion, with filters for class, tier and difficulty.</p></span></a>
+    <a class="tool" href="guides.html"><span class="art"><span class="ups"><img class="u1" src="images/upgrades/armor.png" alt=""><img class="u2" src="images/upgrades/team-gen.png" alt=""><img class="u3" src="images/upgrades/break-speed.png" alt=""></span></span><span><h3>Guides</h3><p>Tested guides for everything outside kits, like which team upgrades to buy and in what order.</p></span></a>
   </div>
 
   <h2 class="sec">Finished kit guides <small>89 of 114 kits</small></h2>
@@ -93,5 +105,42 @@ a.tool p{margin:0;color:var(--muted);font-size:.98rem}
 
   <p class="foot">Kit descriptions and item names from the <a href="https://robloxbedwars.fandom.com/wiki/Kit">Roblox Bedwars Wiki</a>.</p>
 </main>
+<script>
+(function(){
+  var IMGS=["images/kits/abaddon.webp", "images/kits/adetunde.webp", "images/kits/aery.webp", "images/kits/agni.webp", "images/kits/alchemist.webp", "images/kits/arachne.webp", "images/kits/archer.webp", "images/kits/ares.webp", "images/kits/axolotl-amy.webp", "images/kits/baker.webp", "images/kits/barbarian.webp", "images/kits/beekeeper-beatrix.webp", "images/kits/bekzat.webp", "images/kits/bounty-hunter.webp", "images/kits/builder.webp", "images/kits/caitlyn.webp", "images/kits/cobalt.webp", "images/kits/cogsworth.webp", "images/kits/conqueror.webp", "images/kits/crocowolf.webp", "images/kits/crypt.webp", "images/kits/cyber.webp", "images/kits/death-adder.webp", "images/kits/dino-tamer-dom.webp", "images/kits/drill.webp", "images/kits/eldertree.webp", "images/kits/eldric.webp", "images/kits/elektra.webp", "images/kits/ember.webp", "images/kits/evelynn.webp", "images/kits/farmer-cletus.webp", "images/kits/fisherman.webp", "images/kits/flora.webp", "images/kits/fortuna.webp", "images/kits/freiya.webp", "images/kits/frosty.webp", "images/kits/gingerbread-man.webp", "images/kits/gompy.webp", "images/kits/gregory.webp", "images/kits/grim-reaper.webp", "images/kits/grove.webp", "images/kits/hannah.webp", "images/kits/hephaestus.webp", "images/kits/ignis.webp", "images/kits/infernal-shielder.webp", "images/kits/isabel.webp", "images/kits/jack.webp", "images/kits/jade.webp", "images/kits/kaida.webp", "images/kits/kaliyah.webp", "images/kits/krystal.webp", "images/kits/lani.webp", "images/kits/lassy.webp", "images/kits/lian.webp", "images/kits/lucia.webp", "images/kits/lumen.webp", "images/kits/lyla.webp", "images/kits/marcel.webp", "images/kits/marina.webp", "images/kits/marrow.webp", "images/kits/martin.webp", "images/kits/melody.webp", "images/kits/merchant-marco.webp", "images/kits/metal-detector.webp", "images/kits/milo.webp", "images/kits/miner.webp", "images/kits/nahla.webp", "images/kits/nazar.webp", "images/kits/noelle.webp", "images/kits/nyoka.webp", "images/kits/nyx.webp", "images/kits/pirate-davey.webp", "images/kits/pyro.webp", "images/kits/ragnar.webp", "images/kits/ramil.webp", "images/kits/raven.webp", "images/kits/santa.webp", "images/kits/sheep-herder.webp", "images/kits/sheila.webp", "images/kits/sigrid.webp", "images/kits/silas.webp", "images/kits/skoll.webp", "images/kits/smoke.webp", "images/kits/sophia.webp", "images/kits/spirit-catcher.webp", "images/kits/star-collector-stella.webp", "images/kits/styx.webp", "images/kits/taliyah.webp", "images/kits/terra.webp", "images/kits/trapper.webp", "images/kits/trinity.webp", "images/kits/triton.webp", "images/kits/trixie.webp", "images/kits/uma.webp", "images/kits/umbra.webp", "images/kits/umeko.webp", "images/kits/vanessa.webp", "images/kits/void-knight.webp", "images/kits/void-regent.webp", "images/kits/vulcan.webp", "images/kits/warden.webp", "images/kits/warrior.webp", "images/kits/whim.webp", "images/kits/whisper.webp", "images/kits/wren.webp", "images/kits/xu-rot.webp", "images/kits/yamini.webp", "images/kits/yeti.webp", "images/kits/yuzi.webp", "images/kits/zarrah.webp", "images/kits/zenith.webp", "images/kits/zeno.webp", "images/kits/zephyr.webp", "images/kits/zola.webp"];
+  if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  function pick(){ return IMGS[Math.floor(Math.random()*IMGS.length)]; }
+  function pre(n){ var a=[]; for(var i=0;i<n;i++){ var s=pick(); var im=new Image(); im.src=s; a.push(s);} return a; }
+  /* Kit Machine: kits move left -> middle -> right */
+  var km=document.getElementById('kmArt'), kk=km?[].slice.call(km.querySelectorAll('.k')):[];
+  var nextKm=pre(1)[0];
+  function kmStep(){
+    kk.forEach(function(el){
+      var p=+el.getAttribute('data-p')+1;
+      if(p>4){ el.className='k jump p0'; el.src=nextKm; nextKm=pre(1)[0]; p=0; void el.offsetWidth; el.className='k p0'; }
+      else el.className='k p'+p;
+      el.setAttribute('data-p',p);
+    });
+  }
+  /* Randomizer: two reels roll down like a spinner */
+  var slots=[].slice.call(document.querySelectorAll('.rand .reel'));
+  function spin(reel,delay){
+    setTimeout(function(){
+      var n=7, srcs=pre(n-1), cur=reel.querySelector('img').src, h=48;
+      reel.innerHTML=srcs.map(function(s){return '<img src="'+s+'" alt="">';}).join('')+'<img src="'+cur+'" alt="">';
+      reel.style.transition='none'; reel.style.transform='translateY(-'+((n-1)*h)+'px)'; void reel.offsetWidth;
+      reel.style.transition='transform 1.6s cubic-bezier(.15,.7,.25,1)'; reel.style.transform='translateY(0)';
+      setTimeout(function(){ reel.style.transition='none'; reel.innerHTML='<img src="'+srcs[0]+'" alt="">'; reel.style.transform='translateY(0)'; },1700);
+    },delay);
+  }
+  /* Take turns: Kit Machine moves, then the Randomizer spins */
+  var turn=0;
+  function loop(){
+    if(!document.hidden){ if(turn%2===0){ if(kk.length) kmStep(); } else { slots.forEach(function(r,i){ spin(r,i*250); }); } }
+    turn++; setTimeout(loop,2600);
+  }
+  setTimeout(loop,1500);
+})();
+</script>
 </body>
 </html>
