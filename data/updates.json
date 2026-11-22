@@ -39494,5 +39494,83 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-20",
+  "title": "Cornucopia Event",
+  "summary": "The Cornucopia community event starts: earn food, donate it, and unlock personal and community rewards like a Turkey Mount and Pet. Ranked Blitz: Duels ends next week, Hot Potato replaces Bed Royale, and a new matchmaking system rolls out.",
+  "tags": [
+   "event",
+   "ranked"
+  ],
+  "newkits": [],
+  "major": true,
+  "secs": [
+   {
+    "h": "Cornucopia Event",
+    "e": "🦃",
+    "items": [
+     "A giant Cornucopia has arrived in the lobby, and it's hungry. Earn Food, donate it, and work together with the community to fill it up and unlock rewards!"
+    ]
+   },
+   {
+    "h": "How to Get Food",
+    "e": "🍇",
+    "items": [
+     "You can earn food from daily missions and winning matches."
+    ]
+   },
+   {
+    "h": "Personal Milestone Rewards",
+    "e": "🎁",
+    "items": [
+     "Every bit of food you donate counts towards personal milestone rewards. Reach milestones to unlock rewards along the way.",
+     "Rewards include Diamond Lucky Crates, Kit Skin Fragments, BedCoins and more."
+    ]
+   },
+   {
+    "h": "Community Milestone Rewards",
+    "e": "👥",
+    "items": [
+     "Every donation also counts towards the community's progress. Reach community milestones together to unlock rewards for everyone to claim when the event ends.",
+     "Rewards include a Turkey Mount, Turkey Pet, Kit Skin Crate, BedCoins and more."
+    ]
+   },
+   {
+    "h": "Ranked Blitz Ending Next Week",
+    "e": "⚡",
+    "items": [
+     "Ranked Blitz: Duels ends on Friday, November 27th at 3pm PST.",
+     "Top 200 leaderboard players earn a title.",
+     "Diamond 1 or higher earns a Golden Crossbow item skin.",
+     "Gold 1 or higher earns BedCoins, with more the higher your rank."
+    ]
+   },
+   {
+    "h": "Playlist Changes",
+    "e": "🎮",
+    "items": [
+     "Removed Bed Royale",
+     "Added Hot Potato"
+    ]
+   },
+   {
+    "h": "Free Kits",
+    "e": "🆓",
+    "items": [
+     "Beekeeper",
+     "Lumen",
+     "Cogsworth",
+     "Wren (Player Level 20 Unlock)"
+    ]
+   },
+   {
+    "h": "Other Changes",
+    "e": "⚖️",
+    "items": [
+     "A new matchmaking system is gradually rolling out over the weekend. If you run into any issues, report them in the bug reports channel."
+    ]
+   }
+  ]
  }
 ]
