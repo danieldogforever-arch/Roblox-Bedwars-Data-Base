@@ -22520,33 +22520,62 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Summon a secret black market offering powerful potions and random deals. Earn a cut from every sale, and use shadow coins gathered from fallen players to upgrade your shop.",
-  "adv": "",
+  "adv": "Wren spawns with Open Black Market (20 second cooldown), which places a shop that every player can use, enemies included. Press it again to close the shop. Whenever anyone buys from it, Wren gets about 20% of the price back.\nThe Black Market always sells potions. It also has random slots for blocks (ceramic, wool, stone, wood, Tesla Coils, TNT, Siege TNT), tools (pickaxes, axes, shears) and combat items (arrows, Gloops, Fireballs), all discounted. You can reroll the random items for 1 Shadow Coin, as many times as you want.\nShadow Coins drop where an enemy dies, whether you or a teammate killed them. Stand on the block to pick it up within 20 seconds. You keep your coins when you die. Spend them to upgrade the market for more slots, bigger discounts and new potions.\nAll potions take 0.75 seconds to drink, and you can hold up to 2 of each.",
   "items": [
    {
+    "name": "Shadow Coin",
+    "img": "images/items/shadow-coin.png",
+    "desc": "Drops where an enemy dies (your kill or a teammate's). Stand on it within 20 seconds to pick it up. Kept on death. Used for upgrades and rerolls.",
+    "nodps": true
+   },
+   {
+    "name": "Speed Potion",
+    "note": "Cost: 75 iron",
+    "desc": "Lasts 20 seconds. 96 blocks took 13.21 seconds instead of 14. Available from the start.",
+    "nodps": true
+   },
+   {
+    "name": "Jump Potion",
+    "note": "Cost: 100 iron",
+    "desc": "Lasts 20 seconds. Jump 6 blocks high instead of 3, and take about half the fall damage. Available from the start.",
+    "nodps": true
+   },
+   {
     "name": "Fury Potion",
-    "img": "images/items/fury-potion.png"
+    "img": "images/items/fury-potion.png",
+    "note": "Cost: 1 emerald (upgrade 1)",
+    "desc": "Lasts 30 seconds. Swing 20% faster: a stone sword (25 damage, 0.3s) goes from 100 to 120 hits in 30 seconds, 2500 → 3000 damage.",
+    "nodps": true
    },
    {
     "name": "Serpent's Touch",
-    "img": "images/items/serpent-s-touch.png"
-   },
-   {
-    "name": "Shadow Coin",
-    "img": "images/items/shadow-coin.png"
+    "img": "images/items/serpent-s-touch.png",
+    "note": "Cost: 1 emerald (upgrade 1)",
+    "desc": "Lasts 30 seconds. Every hit poisons for 2 damage every 0.5 seconds, 5 ticks (10 total), starting right away. Hitting again resets it. About 80% armor penetration.",
+    "nodps": true
    },
    {
     "name": "Mini Shield",
-    "img": "images/items/mini-shield.png"
+    "img": "images/items/mini-shield.png",
+    "note": "Cost: 75 iron (upgrade 2)",
+    "desc": "Gives 20 shield.",
+    "nodps": true
    },
    {
     "name": "Invisibility Potion",
-    "img": "images/items/invisibility-potion.png"
+    "img": "images/items/invisibility-potion.png",
+    "note": "Cost: 1 emerald (upgrade 3)",
+    "desc": "Lasts 30 seconds. Same as Smoke's invisibility (footsteps still show), but with no grace window: breaking a block, getting hit or swinging ends it right away.",
+    "nodps": true
    }
   ],
   "abilities": [
    {
     "name": "Open/Close Black Market",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 20,
+    "desc": "Place or remove the Black Market. Anyone can buy from it, and Wren gets about 20% of every purchase.",
+    "nodps": true
    }
   ],
   "history": [
@@ -22639,7 +22668,158 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Kickback",
+    "when": "Anyone buys from your market",
+    "desc": "Wren gets about 20% of the price paid."
+   },
+   {
+    "name": "Shadow Coins",
+    "when": "An enemy dies",
+    "desc": "A coin drops where they died. Pick it up within 20 seconds. Kept on death."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Black Market upgrades",
+    "head": [
+     "Upgrade",
+     "Shadow Coins",
+     "Random slots",
+     "Unlocks",
+     "Fireball (75)",
+     "Wren gets"
+    ],
+    "rows": [
+     [
+      "0",
+      "–",
+      "4",
+      "Speed, Jump potions",
+      "64 (~15% off)",
+      "13"
+     ],
+     [
+      "1",
+      "2",
+      "5",
+      "Fury, Serpent's Touch",
+      "60 (20% off)",
+      "12"
+     ],
+     [
+      "2",
+      "4",
+      "6",
+      "Mini Shield",
+      "60 (20% off)",
+      "12"
+     ],
+     [
+      "3",
+      "10",
+      "7",
+      "Invisibility Potion",
+      "56 (25% off)",
+      "11"
+     ]
+    ],
+    "note": "16 Shadow Coins in total to max it. Siege TNT at upgrade 3 costs 263 instead of 350 (25% off), and Wren gets 53. Wren's cut is about 20% of what the buyer pays."
+   },
+   {
+    "title": "Potions",
+    "head": [
+     "Potion",
+     "Cost",
+     "Unlocked at",
+     "Lasts",
+     "Effect"
+    ],
+    "rows": [
+     [
+      "Speed",
+      "75 iron",
+      "0",
+      "20s",
+      "96 blocks in 13.21s (~6% faster)"
+     ],
+     [
+      "Jump",
+      "100 iron",
+      "0",
+      "20s",
+      "2x jump height (6 blocks), ~half fall damage"
+     ],
+     [
+      "img:images/items/fury-potion.png|Fury",
+      "1 emerald",
+      "1",
+      "30s",
+      "20% faster swings"
+     ],
+     [
+      "img:images/items/serpent-s-touch.png|Serpent's Touch",
+      "1 emerald",
+      "1",
+      "30s",
+      "+10 poison per hit (2 every 0.5s), ~80% pen"
+     ],
+     [
+      "img:images/items/mini-shield.png|Mini Shield",
+      "75 iron",
+      "2",
+      "–",
+      "20 shield"
+     ],
+     [
+      "img:images/items/invisibility-potion.png|Invisibility",
+      "1 emerald",
+      "3",
+      "30s",
+      "Invisible, no grace window"
+     ]
+    ],
+    "note": "All potions take 0.75 seconds to drink, and you can hold 2 of each. Serpent's Touch: a wood sword hit plus the poison did 11.13 to diamond armor, which works out to about 80% armor penetration on the poison."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Rush upgrade 2",
+    "text": "Go out and collect Shadow Coins until you have upgrade 2. Upgrade 3 is optional and very situational. Then fight or defend your bed."
+   },
+   {
+    "title": "Open it for your team only",
+    "text": "Put the market down when your team is there, and close it when you're done so enemies can't use it and steal your potions."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Raid the market",
+    "text": "If you see a Wren and don't have one on your team, pearl onto its market, buy all the potions and put them in your personal chest. You get its advantages without using a kit slot."
+   },
+   {
+    "title": "Bed then Wren",
+    "text": "If its bed is gone and the Wren dies, break the market with explosions or a pickaxe."
+   }
+  ],
+  "bal": "sop",
+  "balWhy": "It doesn't do much early game, but late game its potions are extremely busted with how cheap and easy to get they are. Your team only needs 2 kills for the best potions in the game, and another 4 for Mini Shields that make your whole team 20 shield tankier.",
+  "skins": [
+   {
+    "name": "Halloween Skin",
+    "img": "images/skins/wren-halloween.webp"
+   },
+   {
+    "name": "Jovial Skin",
+    "img": "images/skins/wren-jovial.webp"
+   },
+   {
+    "name": "Tidal Skin",
+    "img": "images/skins/wren-tidal.webp"
+   }
+  ]
  },
  {
   "name": "Xu'rot",
