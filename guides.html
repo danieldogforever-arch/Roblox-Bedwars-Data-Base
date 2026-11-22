@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Guides · Bedwars User Guide</title>
+<meta name="description" content="BedWars guides: which team upgrades are worth buying, in what order, and how many hits every block takes.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0418;--card:#150b38;--muted:#b9aee0;--accent:#a98bff;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:#fff;font:400 1.05rem/1.5 "Jua","Trebuchet MS",system-ui,sans-serif;background:radial-gradient(circle at 15% 30%,rgba(110,60,220,.3),transparent 40%),radial-gradient(circle at 85% 92%,rgba(120,50,230,.28),transparent 45%),radial-gradient(circle,rgba(255,255,255,.4) 1px,transparent 1.6px) 0 0/87px 87px,radial-gradient(circle,rgba(180,156,255,.32) 2px,transparent 2.8px) 37px 51px/131px 131px,var(--bg);background-attachment:fixed;padding-bottom:env(safe-area-inset-bottom,0)}
+
+main{max-width:980px;margin:0 auto;padding:28px 18px 60px}
+h1{font-weight:400;font-size:2rem;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 20px}
+.glist{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px;margin:0 0 26px}
+.gcard{display:flex;gap:12px;align-items:center;text-decoration:none;color:#fff;background:rgba(21,11,56,.88);border:2px solid rgba(255,255,255,.85);border-radius:16px;padding:12px 14px}
+.gcard:hover{border-color:var(--accent)}
+.gcard img{width:44px;height:44px;object-fit:contain}
+.gcard b{display:block;font-weight:400;font-size:1.1rem}.gcard small{color:var(--muted)}
+.gcard.soon{opacity:.55;pointer-events:none;border-style:dashed}
+h2.gt{font-weight:400;font-size:1.7rem;margin:10px 0 6px}
+.toc{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.toc a{color:#fff;text-decoration:none;border:2px solid rgba(255,255,255,.3);border-radius:999px;padding:4px 14px;font-size:.92rem}
+.toc a:hover{border-color:#fff}
+section{background:rgba(21,11,56,.88);border:2px solid rgba(255,255,255,.85);border-radius:18px;padding:18px 22px;margin:0 0 16px;overflow-x:auto}
+h3{font-weight:400;font-size:1.35rem;margin:0 0 8px;color:#e3d8ff}
+h4{font-weight:400;font-size:1.08rem;margin:16px 0 6px;color:#e3d8ff}
+p,li{color:#e9e4ff;font-size:.98rem;line-height:1.55}
+ul,ol{padding-left:22px;margin:6px 0}
+.note{color:var(--muted);font-size:.9rem}
+table{border-collapse:collapse;width:100%;margin:6px 0 4px;font-size:.95rem}
+th,td{padding:7px 10px;border-bottom:1px solid rgba(255,255,255,.12);text-align:left;vertical-align:middle}
+th{font-weight:400;color:var(--muted);background:rgba(255,255,255,.05)}
+td.num,th.num{text-align:center}
+td small{color:var(--muted)}
+td.upn{white-space:nowrap}
+td.upn img{width:34px;height:34px;object-fit:contain;vertical-align:middle;margin-right:8px}
+td.upn b{font-weight:400}td.upn small{display:block;margin-left:42px}
+ol.order{counter-reset:o;list-style:none;padding:0}
+ol.order li{counter-increment:o;display:flex;align-items:center;gap:10px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+ol.order li::before{content:counter(o);min-width:28px;height:28px;border-radius:50%;background:var(--accent);color:#150b38;display:grid;place-items:center;font-size:.9rem}
+ol.order img{width:26px;height:26px;object-fit:contain}
+ol.order .c{margin-left:auto;color:var(--muted);white-space:nowrap}
+.tag{font-size:.8rem;border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:1px 8px;color:var(--muted)}
+.seg{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+.seg button{font:inherit;color:#fff;background:transparent;border:2px solid rgba(255,255,255,.3);border-radius:999px;padding:4px 14px;cursor:pointer}
+.seg button.on{background:#fff;color:#150b38;border-color:#fff}
+td.best{color:#9dffb0}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:700px){.two{grid-template-columns:1fr}}
+</style>
+<link rel="icon" href="images/favicon.png">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<header class="site-head"><a class="brand" href="index.html"><img src="images/logo.png" alt="" width="96" height="96"><span><b>Bedwars User Guide</b><small>Kits, tiers, damage and more</small></span></a></header>
+<nav class="site-nav" aria-label="Pages"><div class="in"><a href="index.html">Home</a><a href="kit-machine.html">Kit Machine</a><a href="charts.html">Tier Lists</a><a href="calculator.html">Damage Calculator</a><a href="randomizer.html">Kit Randomizer</a><a href="guides.html" aria-current="page">Guides</a><a href="updates.html">Update Log</a></div></nav>
+<script src="js/music.js" defer></script>
+<main>
+<h1>Guides</h1>
+<p class="sub">Tested breakdowns of the parts of BedWars that aren't kits.</p>
+<div class="glist">
+ <a class="gcard" href="#team-upgrades"><img src="images/upgrades/team-gen.png" alt=""><span><b>Team Upgrade Guide</b><small>Every upgrade, what's worth it, and in what order</small></span></a>
+ <span class="gcard soon"><img src="images/upgrades/break-speed.png" alt=""><span><b>More guides</b><small>Coming soon</small></span></span>
+</div>
+
+<h2 class="gt" id="team-upgrades">Team Upgrade Guide</h2>
+<nav class="toc" aria-label="On this page"><a href="#all">All upgrades</a><a href="#order">Best order</a><a href="#gens">Generators</a><a href="#combat">Armor &amp; Damage</a><a href="#break">Break Speed</a></nav>
+
+<section id="all"><h3>All upgrades</h3>
+<p>Team upgrades are bought with diamonds and apply to your whole team. Each one has 3 tiers that you buy in order.</p>
+<table><thead><tr><th>Upgrade</th><th>Tier</th><th>Effect</th><th class="num">Cost</th></tr></thead><tbody><tr><td rowspan="3" class="upn"><img src="images/upgrades/break-speed.png" alt=""><b>Break Speed</b><small>24 diamonds total</small></td><td>T1</td><td>+25% break damage</td><td class="num">3</td></tr><tr><td>T2</td><td>+50% break damage</td><td class="num">6</td></tr><tr><td>T3</td><td>+75% break damage</td><td class="num">15</td></tr><tr><td rowspan="3" class="upn"><img src="images/upgrades/armor.png" alt=""><b>Armor</b><small>32 diamonds total</small></td><td>T1</td><td>10% less damage taken</td><td class="num">4</td></tr><tr><td>T2</td><td>20% less damage taken</td><td class="num">8</td></tr><tr><td>T3</td><td>30% less damage taken</td><td class="num">20</td></tr><tr><td rowspan="3" class="upn"><img src="images/upgrades/damage.png" alt=""><b>Damage</b><small>33 diamonds total</small></td><td>T1</td><td>+5% damage</td><td class="num">5</td></tr><tr><td>T2</td><td>+10% damage</td><td class="num">10</td></tr><tr><td>T3</td><td>+20% damage</td><td class="num">18</td></tr><tr><td rowspan="3" class="upn"><img src="images/upgrades/diamond-gen.png" alt=""><b>Diamond Gen</b><small>19 diamonds total</small></td><td>T1</td><td>Your base spawns diamonds (every 45s)</td><td class="num">3</td></tr><tr><td>T2</td><td>Faster: every 34s</td><td class="num">6</td></tr><tr><td>T3</td><td>Faster: every 23s</td><td class="num">10</td></tr><tr><td rowspan="3" class="upn"><img src="images/upgrades/team-gen.png" alt=""><b>Team Gen</b><small>28 diamonds total</small></td><td>T1</td><td>+50% generator speed</td><td class="num">4</td></tr><tr><td>T2</td><td>+100% generator speed</td><td class="num">8</td></tr><tr><td>T3</td><td>+200% generator speed, spawns emeralds</td><td class="num">16</td></tr></tbody></table>
+<p class="note">Armor tiers don't stack: with all 3 you take 30% less damage, not 60%. Diamond Gen times are tested, so they're a little different from the shop's "+25% / +50%".</p>
+</section>
+
+<section id="order"><h3>Best order</h3>
+<p>For a normal match, starting with no upgrades:</p>
+<ol class="order">
+ <li><img src="images/upgrades/diamond-gen.png" alt="">Diamond Gen T1<span class="c">3</span></li>
+ <li><img src="images/upgrades/team-gen.png" alt="">Team Gen T1<span class="c">4</span></li>
+ <li><img src="images/upgrades/armor.png" alt="">Armor T1<span class="c">4</span></li>
+ <li><img src="images/upgrades/team-gen.png" alt="">Team Gen T2<span class="c">8</span></li>
+ <li><img src="images/upgrades/team-gen.png" alt="">Team Gen T3<span class="c">16</span></li>
+ <li><img src="images/upgrades/diamond-gen.png" alt="">Diamond Gen T2<span class="c">6</span></li>
+ <li><img src="images/upgrades/diamond-gen.png" alt="">Diamond Gen T3<span class="c">10</span></li>
+ <li><img src="images/upgrades/armor.png" alt="">Armor T2<span class="c">8</span></li>
+</ol>
+<p>After that, buy what your team needs: <b>Break Speed T1</b> (3) when you're going for beds, then <b>Damage</b>, then the expensive T3s (Armor 20, Damage 18, Break Speed 15) in long games.</p>
+<h4>Why this order</h4>
+<ul>
+ <li><b>Diamond Gen T1 always comes first.</b> Your base makes no diamonds without it, so Team Gen upgrades do nothing for diamonds until you have it. It pays itself back in about 2 minutes.</li>
+ <li><b>Rush Team Gen.</b> It speeds up iron for everyone and makes your diamond gen faster. Diamond Gen T1 → Team Gen T1 → T2 → T3 is the fastest way to Team Gen T3 (see Generators).</li>
+ <li><b>Diamond Gen T2 and T3 wait until Team Gen T3.</b> Before that they take 8–14 minutes to pay back. After it, about 2.5 and 3 minutes.</li>
+ <li><b>Armor T1 is the best fighting upgrade.</b> 4 diamonds for 10% less damage on your whole team. It's the most value per diamond of any combat upgrade.</li>
+ <li><b>If the game will be short,</b> skip the slow ones (Diamond Gen T2/T3 and every T3) and spend on gear instead.</li>
+</ul>
+</section>
+
+<section id="gens"><h3>Generators</h3>
+<p>Tested time for your base to spawn one diamond, with every mix of Diamond Gen and Team Gen:</p>
+<table><thead><tr><th></th><th class="num">No Team Gen</th><th class="num">Team Gen T1</th><th class="num">Team Gen T2</th><th class="num">Team Gen T3</th></tr></thead><tbody><tr><td>Diamond Gen T1</td><td class="num">45s</td><td class="num">35s</td><td class="num">25s</td><td class="num">20s</td></tr><tr><td>Diamond Gen T2</td><td class="num">34s</td><td class="num">27s</td><td class="num">19s</td><td class="num">11s</td></tr><tr><td>Diamond Gen T3</td><td class="num">23s</td><td class="num">18s</td><td class="num">12s</td><td class="num">7s</td></tr></tbody></table>
+<p class="note">Team Gen also speeds up iron: from one every 0.9 seconds to every 0.3 seconds at T3.</p>
+<h4>Fastest way to Team Gen T3</h4>
+<p>Diamond Gen T1 → Team Gen T1 → Team Gen T2 → Team Gen T3, skipping Diamond Gen T2 and T3 until after. Assuming you get one Diamond Guardian at 3:00 and 8:00 (3 diamonds each):</p>
+<table><thead><tr><th>Upgrade</th><th class="num">Getting 75% of mid diamonds</th><th class="num">Getting 50%</th></tr></thead><tbody>
+<tr><td>Diamond Gen T1</td><td class="num">1:10</td><td class="num">1:45</td></tr>
+<tr><td>Team Gen T1</td><td class="num">2:20</td><td class="num">3:00</td></tr>
+<tr><td>Team Gen T2</td><td class="num">3:30</td><td class="num">4:40</td></tr>
+<tr><td>Team Gen T3</td><td class="num">6:45</td><td class="num">8:00</td></tr>
+</tbody></table>
+<p class="note">75% means 3 diamonds every 70 seconds from the 2 mid generators, 50% means 1 every 35 seconds. This is the fastest of every possible order.</p>
+<h4>When Diamond Gen T2 and T3 pay back</h4>
+<table><thead><tr><th>Your Team Gen</th><th class="num">Diamond Gen T2 (6)</th><th class="num">Diamond Gen T3 (10)</th></tr></thead><tbody><tr><td>No Team Gen</td><td class="num">13.9 min</td><td class="num">11.8 min</td></tr><tr><td>Team Gen T1</td><td class="num">11.8 min</td><td class="num">9.0 min</td></tr><tr><td>Team Gen T2</td><td class="num">7.9 min</td><td class="num">5.4 min</td></tr><tr><td>Team Gen T3</td><td class="num">2.4 min</td><td class="num">3.2 min</td></tr></tbody></table>
+<p class="note">Time for the extra diamonds to add up to what the upgrade cost.</p>
+</section>
+
+<section id="combat"><h3>Armor &amp; Damage</h3>
+<div class="two">
+<div><h4>Value per diamond</h4>
+<table><thead><tr><th>Upgrade</th><th class="num">Cost</th><th class="num">Gain</th></tr></thead><tbody>
+<tr><td>Armor T1</td><td class="num">4</td><td class="num">+11% effective HP</td></tr>
+<tr><td>Armor T2</td><td class="num">8</td><td class="num">+12.5% more</td></tr>
+<tr><td>Armor T3</td><td class="num">20</td><td class="num">+14% more</td></tr>
+<tr><td>Damage T1</td><td class="num">5</td><td class="num">+5% damage</td></tr>
+<tr><td>Damage T2</td><td class="num">10</td><td class="num">+5% more</td></tr>
+<tr><td>Damage T3</td><td class="num">18</td><td class="num">+9% more</td></tr>
+</tbody></table>
+<p class="note">Armor T1 gives the most per diamond. Taking 10% less damage means you survive about 11% more damage.</p></div>
+<div><h4>Diamond sword vs iron armor</h4>
+<p class="note" style="margin-top:0">Hits to kill a 100 HP enemy (damage per hit in small text). Rows are your Damage upgrade, columns are their Armor upgrade.</p>
+<table><thead><tr><th></th><th class="num">No Armor</th><th class="num">Armor T1</th><th class="num">Armor T2</th><th class="num">Armor T3</th></tr></thead><tbody><tr><td>No Damage</td><td class="num">6 <small>18.48</small></td><td class="num">7 <small>16.63</small></td><td class="num">7 <small>14.78</small></td><td class="num">8 <small>12.94</small></td></tr><tr><td>Damage T1</td><td class="num">6 <small>19.4</small></td><td class="num">6 <small>17.46</small></td><td class="num">7 <small>15.52</small></td><td class="num">8 <small>13.58</small></td></tr><tr><td>Damage T2</td><td class="num">5 <small>20.33</small></td><td class="num">6 <small>18.3</small></td><td class="num">7 <small>16.26</small></td><td class="num">8 <small>14.23</small></td></tr><tr><td>Damage T3</td><td class="num">5 <small>22.18</small></td><td class="num">6 <small>19.96</small></td><td class="num">6 <small>17.74</small></td><td class="num">7 <small>15.52</small></td></tr></tbody></table></div>
+</div>
+</section>
+
+<section id="break"><h3>Break Speed</h3>
+<p>Hits to break each block with every tool. Pick a Break Speed tier:</p>
+<div class="seg" id="bsSeg"><button data-t="0" class="on">No upgrade</button><button data-t="1">T1 +25%</button><button data-t="2">T2 +50%</button><button data-t="3">T3 +75%</button></div>
+<table id="bsT"></table>
+<p class="note">Green is the fastest tool for each block. Pickaxes are for Stone Brick, Ceramic and Obsidian, axes for Oak Plank and Beds, and Shears for Wool. Any other tool does the same small amount (1) to every block, whatever its tier.</p>
+<div class="two">
+<div><h4>Block health</h4><table><thead><tr><th>Block</th><th class="num">Health</th></tr></thead><tbody><tr><td>Wool</td><td class="num">4</td></tr><tr><td>Oak Plank</td><td class="num">18</td></tr><tr><td>Blastproof Ceramic</td><td class="num">~9.1</td></tr><tr><td>Stone Brick</td><td class="num">37.5</td></tr><tr><td>Obsidian</td><td class="num">75</td></tr><tr><td>Bed</td><td class="num">12</td></tr></tbody></table></div>
+<div><h4>Tool damage</h4><table><thead><tr><th>Tool</th><th class="num">Damage</th><th>Strong against</th></tr></thead><tbody><tr><td>Wood Pickaxe</td><td class="num">2.5</td><td>Stone Brick, Ceramic, Obsidian</td></tr><tr><td>Stone Pickaxe</td><td class="num">4</td><td>Stone Brick, Ceramic, Obsidian</td></tr><tr><td>Iron Pickaxe</td><td class="num">6.5</td><td>Stone Brick, Ceramic, Obsidian</td></tr><tr><td>Diamond Pickaxe</td><td class="num">10</td><td>Stone Brick, Ceramic, Obsidian</td></tr><tr><td>Wood Axe</td><td class="num">2</td><td>Oak Plank, Bed</td></tr><tr><td>Stone Axe</td><td class="num">4</td><td>Oak Plank, Bed</td></tr><tr><td>Iron Axe</td><td class="num">8.75</td><td>Oak Plank, Bed</td></tr><tr><td>Diamond Axe</td><td class="num">8.75</td><td>Oak Plank, Bed</td></tr><tr><td>Shears</td><td class="num">2.5</td><td>Wool</td></tr></tbody></table></div>
+</div>
+<p class="note">Health is in "wrong tool hits": 1 = one hit from a tool that isn't made for that block. Worked out from the in-game health bars and hit counts. Iron Axe is assumed to match the Diamond Axe.</p>
+<h4>Explosives on Obsidian</h4>
+<p>Obsidian takes <b>20 TNT</b> or <b>4 Siege TNT</b> to break. After 3 Siege TNT it's so low that Shears break it in one hit.</p>
+</section>
+</main>
+<script>
+(function(){
+var D={"tools": ["Wood Pickaxe", "Stone Pickaxe", "Iron Pickaxe", "Diamond Pickaxe", "Wood Axe", "Stone Axe", "Iron Axe", "Diamond Axe", "Shears"], "blocks": ["Wool", "Oak Plank", "Blastproof Ceramic", "Stone Brick", "Obsidian", "Bed"], "h": {"0": [[4, 18, 4, 15, 30, 12], [4, 18, 3, 10, 19, 12], [4, 18, 2, 6, 12, 12], [4, 18, 1, 4, 8, 12], [4, 9, 10, 38, 75, 6], [4, 5, 10, 38, 75, 3], [4, 3, 10, 38, 75, 2], [4, 3, 10, 38, 75, 2], [2, 18, 10, 38, 75, 12]], "1": [[4, 15, 3, 12, 24, 10], [4, 15, 2, 8, 15, 10], [4, 15, 2, 5, 10, 10], [4, 15, 1, 3, 6, 10], [4, 8, 8, 30, 60, 5], [4, 4, 8, 30, 60, 3], [4, 2, 8, 30, 60, 2], [4, 2, 8, 30, 60, 2], [2, 15, 8, 30, 60, 10]], "2": [[3, 12, 3, 10, 20, 8], [3, 12, 2, 7, 13, 8], [3, 12, 1, 4, 8, 8], [3, 12, 1, 3, 5, 8], [3, 6, 7, 25, 50, 4], [3, 3, 7, 25, 50, 2], [3, 2, 7, 25, 50, 1], [3, 2, 7, 25, 50, 1], [2, 12, 7, 25, 50, 8]], "3": [[3, 11, 3, 9, 18, 7], [3, 11, 2, 6, 11, 7], [3, 11, 1, 4, 7, 7], [3, 11, 1, 3, 5, 7], [3, 6, 6, 22, 43, 4], [3, 3, 6, 22, 43, 2], [3, 2, 6, 22, 43, 1], [3, 2, 6, 22, 43, 1], [1, 11, 6, 22, 43, 7]]}},t=0;
+function draw(){
+  var h=D.h[t],best=D.blocks.map(function(_,j){return Math.min.apply(null,h.map(function(r){return r[j];}));});
+  var s='<thead><tr><th>Tool</th>'+D.blocks.map(function(b){return '<th class="num">'+b+'</th>';}).join('')+'</tr></thead><tbody>';
+  D.tools.forEach(function(tl,i){ s+='<tr><td>'+tl+'</td>'+h[i].map(function(v,j){return '<td class="num'+(v===best[j]?' best':'')+'">'+v+'</td>';}).join('')+'</tr>'; });
+  document.getElementById('bsT').innerHTML=s+'</tbody>';
+  document.querySelectorAll('#bsSeg button').forEach(function(b){b.classList.toggle('on',+b.getAttribute('data-t')===t);});
+}
+document.getElementById('bsSeg').addEventListener('click',function(e){var b=e.target.closest('button');if(!b)return;t=+b.getAttribute('data-t');draw();});
+draw();
+})();
+</script>
+</body>
+</html>
