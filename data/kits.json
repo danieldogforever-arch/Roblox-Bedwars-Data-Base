@@ -22365,28 +22365,38 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Control a Spirit Owl to support ally players. Unlocked at Player Level 10.",
-  "adv": "",
+  "adv": "Whisper spawns with the Spirit Owl. Use it on any teammate within 20 blocks to sit on their shoulder as an owl. You basically spectate them while your real body stays where you left it, standing still. You can turn the owl off at any time.\nAs the owl, you can shoot a projectile from your teammate about once a second. Its damage depends on your sword: 5 / 7 / 10 / 14 / 18 from wood to emerald, with 20% armor penetration.\nHeal + Speed (8 second cooldown) heals your teammate 2 HP every 0.5 seconds, 7 times (14 total), and gives them a speed boost while it lasts (24 blocks in about 3 seconds, roughly 17% faster than walking). If your teammate is over the void, Owl Lift (85 second cooldown) flies them for up to 15 seconds. It ends once they're over land, and they take no fall damage.",
   "items": [
    {
     "name": "Spirit Owl",
-    "img": "images/items/spirit-owl.png"
+    "img": "images/items/spirit-owl.png",
+    "desc": "Attach to a teammate within 20 blocks. Shoot a projectile about once a second: 5 / 7 / 10 / 14 / 18 damage by sword tier, 20% armor penetration.",
+    "nodps": true
    }
   ],
   "abilities": [
    {
     "name": "Heal + Speed",
-    "note": "Only while using the owl on another player",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 8,
+    "note": "Only while using the owl on a teammate",
+    "desc": "Heals your teammate 2 HP every 0.5 seconds, 7 times (14 total), and gives them a speed boost (about 17% faster).",
+    "nodps": true
    },
    {
     "name": "Deactivate",
-    "note": "Only while using the owl on another player",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Only while using the owl on a teammate",
+    "desc": "Turn the owl off and go back to your body.",
+    "nodps": true
    },
    {
     "name": "Fly",
-    "note": "Only while using the owl on another player",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 85,
+    "note": "Only while using the owl on a teammate",
+    "desc": "Owl Lift: if your teammate is over the void, fly them for up to 15 seconds. Ends once they're over land, with no fall damage.",
+    "nodps": true
    }
   ],
   "history": [
@@ -22507,7 +22517,119 @@
   "obtain": {
    "src": "Player Level 10 reward",
    "note": "Free at Player Level 10. Can't be rented."
-  }
+  },
+  "tables": [
+   {
+    "title": "Owl projectile",
+    "head": [
+     "Sword",
+     "No armor",
+     "Leather",
+     "Iron",
+     "Diamond",
+     "Emerald"
+    ],
+    "rows": [
+     [
+      "Wood",
+      "5",
+      "3.45",
+      "2.48",
+      "1.42",
+      "0.96"
+     ],
+     [
+      "Stone",
+      "7",
+      "4.83",
+      "3.47",
+      "1.98",
+      "1.35"
+     ],
+     [
+      "Iron",
+      "10",
+      "6.9",
+      "4.95",
+      "2.83",
+      "1.92"
+     ],
+     [
+      "Diamond",
+      "14",
+      "9.66",
+      "6.94",
+      "3.96",
+      "2.69"
+     ],
+     [
+      "Emerald",
+      "18",
+      "12.41",
+      "8.92",
+      "5.09",
+      "3.46"
+     ]
+    ],
+    "note": "About one shot a second. Emerald on iron (8.92) is tested, which works out to 20% armor penetration; the rest is worked out from that."
+   },
+   {
+    "title": "Abilities",
+    "head": [
+     "Ability",
+     "Cooldown",
+     "Effect"
+    ],
+    "rows": [
+     [
+      "Heal + Speed",
+      "8s",
+      "2 HP every 0.5s × 7 = 14 HP, ~17% faster"
+     ],
+     [
+      "Owl Lift",
+      "85s",
+      "Fly a teammate over the void for up to 15s, no fall damage"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Pick a fighter",
+    "text": "Attach your owl to fighter kits that need kills and damage. You give them great support to get kills."
+   },
+   {
+    "title": "Help them escape",
+    "text": "Use the speed and Owl Lift to get your teammate out of bad fights or back from the void."
+   },
+   {
+    "title": "Chip from the shoulder",
+    "text": "Shoot enemies to chip them down and stop them from regenerating HP."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Find the body",
+    "text": "If someone is being whispered, go kill the Whisper at its base. It has no protection besides any teammates who stayed home."
+   },
+   {
+    "title": "Double kill",
+    "text": "Knock the whispered player into the void, then kill the Whisper before it can lift them. You get a double kill since they fall into the void."
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "It's really great support for your team, at the cost of being vulnerable and not out on the field with your teammate. It's not great late game, since you can easily get jumped, and fighting is better than healing 14 HP when people have Zapped.",
+  "skins": [
+   {
+    "name": "Infernal Skin",
+    "img": "images/skins/whisper-infernal.webp"
+   },
+   {
+    "name": "Dodo Skin",
+    "img": "images/skins/whisper-dodo.webp"
+   }
+  ]
  },
  {
   "name": "Wren",
