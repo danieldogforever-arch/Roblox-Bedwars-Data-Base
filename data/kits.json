@@ -20133,6 +20133,7 @@
     "title": "Chicken nests",
     "head": [
      "Nest",
+     "Nest cost",
      "Chicken damage",
      "Leather",
      "Iron",
@@ -20143,6 +20144,7 @@
     "rows": [
      [
       "No upgrade",
+      "–",
       "8",
       "5.98",
       "4.54",
@@ -20152,6 +20154,7 @@
      ],
      [
       "Iron",
+      "60 iron",
       "9",
       "6.73",
       "5.1",
@@ -20161,6 +20164,7 @@
      ],
      [
       "Diamond",
+      "2 emeralds",
       "11",
       "8.22",
       "6.24",
@@ -20170,6 +20174,7 @@
      ],
      [
       "Emerald",
+      "4 emeralds",
       "13",
       "9.72",
       "7.37",
@@ -20179,6 +20184,7 @@
      ],
      [
       "Void",
+      "6 emeralds",
       "16",
       "11.96",
       "9.07",
@@ -20256,7 +20262,9 @@
     "name": "Penguin Queen Skin",
     "img": "images/skins/taliyah-penguin-queen.webp"
    }
-  ]
+  ],
+  "bal": "adj",
+  "balWhy": "Prices change every minute and chickens hatch in about a minute. That's not enough time for enemies to stop Taliyah from making insane bank, and nobody should have to rush it every minute just to check. It can get way too much loot within the first 10 minutes."
  },
  {
   "name": "Terra",
