@@ -15983,29 +15983,43 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Use water veil to temporally boost the health regen of nearby allies. Purchase upgrades for your oasis vessel to strengthen your healing and buffing abilities!",
-  "adv": "",
+  "adv": "Nahla supports one teammate at a time with the Oasis Vessel. You spawn with Oasis Vessel I, and can buy II for 4 emeralds and III for 8. Each use fires water orbs at a teammate within 14 blocks, with a 0.5 second cooldown between uses. Use Oasis Swap Staff to switch between Healing and Damage support.\nHealing orbs heal your teammate. Damage orbs give them extra damage, up to +20%. Each batch of damage lasts 15 seconds on its own, so if you give +8% and another +8% 10 seconds later, the first +8% runs out 5 seconds after that.\nOasis Heal Veil (20 second cooldown) heals you 15% right away and makes your HP regenerate twice as fast, without waiting the usual 5 seconds after getting hit. Teammates within 13 blocks get it too.",
   "items": [
    {
     "name": "Oasis Vessel I",
-    "img": "images/items/oasis-vessel.png"
+    "img": "images/items/oasis-vessel.png",
+    "note": "Spawn with it",
+    "desc": "3 orbs per use: 1 HP or +1% damage each (3 HP or +3% per use). Heals about 4 HP a second.",
+    "nodps": true
    },
    {
     "name": "Oasis Vessel II",
-    "img": "images/items/oasis-vessel-2.png"
+    "img": "images/items/oasis-vessel-2.png",
+    "note": "Cost: 4 emeralds",
+    "desc": "4 orbs per use: 2 HP or +2% damage each (8 HP or +8% per use). Heals about 10 HP a second.",
+    "nodps": true
    },
    {
     "name": "Oasis Vessel III",
-    "img": "images/items/oasis-vessel-3.png"
+    "img": "images/items/oasis-vessel-3.png",
+    "note": "Cost: 8 emeralds",
+    "desc": "5 orbs per use: 3 HP or +3% damage each (15 HP or +15% per use). Heals about 20 HP a second.",
+    "nodps": true
    }
   ],
   "abilities": [
    {
     "name": "Oasis Heal Veil",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 20,
+    "desc": "Heals 15% right away, then doubles your HP regeneration and skips the 5 second wait after getting hit. Teammates within 13 blocks get it too.",
+    "nodps": true
    },
    {
     "name": "Oasis Swap Staff",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Switch the Vessel between Healing and Damage support.",
+    "nodps": true
    }
   ],
   "history": [
@@ -16077,7 +16091,84 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Damage Support",
+    "when": "Damage mode",
+    "desc": "Each orb adds damage to your teammate, up to +20%. Each use's bonus lasts 15 seconds on its own."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Oasis Vessel tiers",
+    "head": [
+     "Vessel",
+     "Cost",
+     "Orbs per use",
+     "Heal per use",
+     "Damage per use",
+     "Healing per second",
+     "Tested"
+    ],
+    "rows": [
+     [
+      "I",
+      "Spawn with it",
+      "3",
+      "3",
+      "+3%",
+      "~4",
+      "90 HP in ~22s"
+     ],
+     [
+      "II",
+      "4 emeralds",
+      "4",
+      "8",
+      "+8%",
+      "~10",
+      "100 HP in ~10s"
+     ],
+     [
+      "III",
+      "8 emeralds",
+      "5",
+      "15",
+      "+15%",
+      "~20",
+      "100 HP in ~5s"
+     ]
+    ],
+    "note": "All three tests line up with one use about every 0.75 seconds (the 0.5 second cooldown plus the time to fire the orbs). Damage support maxes at +20%: 7 uses on Vessel I, 3 on II, 2 on III."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Damage first, then heal",
+    "text": "Before your teammate goes into a fight, swap to Damage and get them to +20%, then swap to Healing. The damage lasts 15 seconds, so you get the best of both."
+   },
+   {
+    "title": "Veil together",
+    "text": "Use Oasis Heal Veil when your team is huddled together and not being attacked, or as an emergency heal."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Don't rush supported enemies",
+    "text": "Don't rush an enemy that a Nahla is supporting. Plan on getting Static (Zapped) later in the game."
+   },
+   {
+    "title": "Coil your base",
+    "text": "Place a Tesla Coil in your base so they can't rush in and spawn kill."
+   },
+   {
+    "title": "Target the Nahla",
+    "text": "Nahla has little self-sustain besides its long Veil cooldown, so hit it with projectiles and spam Fireballs if it's hiding."
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "Without Static, Nahla's support gets out of hand really quickly: everyone on its team can have +20% damage and insane heals, and the Veil is great self-sustain when low. Like Nyoka, it's really hard to balance."
  },
  {
   "name": "Nazar",
