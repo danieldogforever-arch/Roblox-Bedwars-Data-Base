@@ -15983,7 +15983,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Use water veil to temporally boost the health regen of nearby allies. Purchase upgrades for your oasis vessel to strengthen your healing and buffing abilities!",
-  "adv": "Nahla supports one teammate at a time with the Oasis Vessel. You spawn with Oasis Vessel I, and can buy II for 4 emeralds and III for 8. Each use fires water orbs at a teammate within 14 blocks, with a 0.5 second cooldown between uses. Use Oasis Swap Staff to switch between Healing and Damage support.\nHealing orbs heal your teammate. Damage orbs give them extra damage, up to +20%. Each batch of damage lasts 15 seconds on its own, so if you give +8% and another +8% 10 seconds later, the first +8% runs out 5 seconds after that.\nOasis Heal Veil (20 second cooldown) heals you 15% right away and makes your HP regenerate twice as fast, without waiting the usual 5 seconds after getting hit. Teammates within 13 blocks get it too.",
+  "adv": "Nahla supports one teammate at a time with the Oasis Vessel. You spawn with Oasis Vessel I, and can buy II for 4 emeralds and III for 8. Each use fires water orbs at a teammate within 14 blocks, with a 0.5 second cooldown between uses. Use Oasis Swap Staff to switch between Healing and Damage support.\nHealing orbs heal your teammate. Damage orbs give them extra damage, up to +20%. Each batch of damage lasts 15 seconds on its own, so if you give +8% and another +8% 10 seconds later, the first +8% runs out 5 seconds after that.\nOasis Heal Veil (20 second cooldown) instantly heals 15% of your current HP (6 HP at 40/100), then makes your HP regenerate twice as fast, without waiting the usual 5 seconds after getting hit. Up to 3 teammates within 13 blocks get it too. On Nahla itself the regeneration is 20% weaker, but the instant heal is the same.",
   "items": [
    {
     "name": "Oasis Vessel I",
@@ -16012,7 +16012,7 @@
     "name": "Oasis Heal Veil",
     "img": "images/abilities/ability-template.png",
     "cd": 20,
-    "desc": "Heals 15% right away, then doubles your HP regeneration and skips the 5 second wait after getting hit. Teammates within 13 blocks get it too.",
+    "desc": "Instantly heals 15% of your current HP, then doubles HP regeneration and skips the 5 second wait after getting hit. Up to 3 teammates within 13 blocks get it too. The regeneration is 20% weaker on Nahla.",
     "nodps": true
    },
    {
@@ -16141,6 +16141,35 @@
      ]
     ],
     "note": "All three tests line up with one use about every 0.75 seconds (the 0.5 second cooldown plus the time to fire the orbs). Damage support maxes at +20%: 7 uses on Vessel I, 3 on II, 2 on III."
+   },
+   {
+    "title": "Oasis Heal Veil",
+    "head": [
+     "",
+     "Effect"
+    ],
+    "rows": [
+     [
+      "Cooldown",
+      "20s"
+     ],
+     [
+      "Instant heal",
+      "15% of current HP (6 at 40 HP, 13.5 at 90 HP)"
+     ],
+     [
+      "Regeneration",
+      "2x, with no 5 second wait after getting hit"
+     ],
+     [
+      "On Nahla",
+      "Regeneration 20% weaker, same instant heal"
+     ],
+     [
+      "Teammates",
+      "Up to 3 within 13 blocks"
+     ]
+    ]
    }
   ],
   "strategy": [
