@@ -233,6 +233,7 @@ var KITBUFF={"Void Knight":{lab:"Void Ascension",o:[{n:"Void Ascension",m:1.2,no
  "Bounty Hunter":{lab:"Hunting Time <small>on your target</small>",o:[{n:"Level 1",m:1.1,note:"+10%"},{n:"Level 2+",m:1.2,note:"+20%"}]},
  "Axolotl Amy":{lab:"Damage Axolotl",o:[{n:"Damage Axolotl",m:1.16,note:"+16%"}]},
  "Silas":{lab:"Damage aura",o:[{n:"Aura",m:1.05,note:"+5%"},{n:"With Press the Attack",m:1.1,note:"+10%"}]},
+ "Nyx":{lab:"Midnight hits",o:[1,2,3,4,5].map(function(n){return {n:(n===5?"5+ hits":n+(n>1?" hits":" hit")),m:1+0.012*n*n,pen:0.6*n*n,note:"+"+(1.2*n*n).toFixed(1).replace(".0","")+"% damage, +"+(0.6*n*n).toFixed(1).replace(".0","")+"% pen"};})},
  "Sheep Herder":{lab:"Tamed sheep",o:[1,2,3,4,5].map(function(n){return {n:n+" sheep",m:1+0.09*n,note:"+"+(9*n)+"%"};})}};
 var MECH=[{t:"Out of mech",sh:0,pr:0},{t:"Wood",sh:110,pr:0},{t:"Iron",sh:180,pr:.15},{t:"Diamond",sh:270,pr:.25},{t:"Emerald",sh:410,pr:.30},{t:"Void",sh:600,pr:.40}];
 var ISAB=[{t:"None",b:0},{t:"Wood",b:10},{t:"Stone",b:15},{t:"Iron",b:20},{t:"Diamond",b:30},{t:"Emerald",b:-1}];
@@ -310,6 +311,7 @@ function compute(){
   if(has("berserker")){ berB=(105-bh)/300; d*=1+berB; out.push({x:"Berserker at "+fmt(bh)+" HP +"+fmt(berB*100)+"%",v:fmt(d),c:"up"}); }
   var raw=d;
   var pen=S.pen==null?(w.pen||0):S.pen; pen=Math.max(0,Math.min(100,+pen||0))/100;
+  if(asc&&KB.pen){ pen=Math.min(1,pen+KB.pen/100); }
   var arm=ARMOR.filter(function(a){return a.id===tArm();})[0]||ARMOR[0];
   function armMult(p){ if(!arm.dr) return 1; var r=arm.dr/(1-arm.dr); return 1/(1+r*(1-p)); }
   var am=armMult(pen); d*=am;

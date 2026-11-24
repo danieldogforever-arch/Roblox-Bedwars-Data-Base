@@ -16720,12 +16720,14 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Trigger the darkness of Midnight to deal ramping increased damage and armor pen.",
-  "adv": "",
+  "adv": "Nyx charges Midnight by dealing damage: 120 damage unlocks it. While Midnight is active (12 seconds), you get a speed boost (72 blocks in 9.83 seconds, about 7% faster than walking), and every sword hit makes you stronger. Your damage goes up by 1.2% × hits² and you get 0.6% × hits² armor penetration, maxing at +30% damage and 15% armor penetration on the 5th hit.\nThe bonus applies to all your damage, but only sword hits build it up. You also take more damage while in Midnight if you're wearing armor, since enemies ignore about 10% of it. Without armor, you take normal damage.\nAfter Midnight ends, you need another 120 damage to charge it again, and damage only starts counting 10 seconds later. You can't charge it during Midnight.",
   "items": [],
   "abilities": [
    {
     "name": "Midnight",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Needs 120 damage to charge. For 12 seconds: about 7% faster, and each sword hit adds damage and armor penetration (+30% and 15% at 5 hits). Enemies ignore about 10% of your armor. Damage only counts toward the next charge 10 seconds after it ends.",
+    "nodps": true
    }
   ],
   "history": [
@@ -16849,7 +16851,112 @@
    "tier": "50 (paid)",
    "badge": "images/bp/s4.webp",
    "rent": 2000
-  }
+  },
+  "tables": [
+   {
+    "title": "Midnight hits",
+    "head": [
+     "Hit",
+     "Damage bonus",
+     "Armor pen",
+     "Wood sword (no armor)",
+     "Wood sword (iron armor)"
+    ],
+    "rows": [
+     [
+      "1",
+      "+1.2%",
+      "0.6%",
+      "20.24",
+      "8.94"
+     ],
+     [
+      "2",
+      "+4.8%",
+      "2.4%",
+      "20.96",
+      "9.35"
+     ],
+     [
+      "3",
+      "+10.8%",
+      "5.4%",
+      "22.16",
+      "10.05"
+     ],
+     [
+      "4",
+      "+19.2%",
+      "9.6%",
+      "23.84",
+      "11.09"
+     ],
+     [
+      "5+",
+      "+30%",
+      "15%",
+      "26",
+      "12.49"
+     ]
+    ],
+    "note": "Damage is 1.2% × hits² and armor penetration is 0.6% × hits², maxing on the 5th hit. Both sword columns are tested and fit exactly."
+   },
+   {
+    "title": "Midnight",
+    "head": [
+     "",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Charge",
+      "120 damage"
+     ],
+     [
+      "Lasts",
+      "12s"
+     ],
+     [
+      "Speed",
+      "~7% faster (72 blocks in 9.83s)"
+     ],
+     [
+      "Max bonus",
+      "+30% damage, 15% armor pen"
+     ],
+     [
+      "Downside",
+      "Enemies ignore ~10% of your armor (iron sword on iron: 13.98 instead of 13.2)"
+     ],
+     [
+      "After it ends",
+      "10s before damage counts again"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Charge, then shred",
+    "text": "Get your 120 damage in, then turn on Midnight during fights to shred enemies."
+   },
+   {
+    "title": "Escape",
+    "text": "You can also use Midnight to run away, since it gives you a speed boost."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Run from Midnight",
+    "text": "If a Nyx turns on Midnight, run away to stall it so it can't stack hits."
+   },
+   {
+    "title": "Jump in after",
+    "text": "Once Midnight ends, jump in. It's no kit for 10 seconds before its damage starts counting again."
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "The damage and armor penetration are good, but other kits have an easier requirement and a better speed boost with damage, without the waiting, like Crocowolf. Like Aery, it's outclassed, another level 50 kit stuck in the shadows."
  },
  {
   "name": "Pirate Davey",
