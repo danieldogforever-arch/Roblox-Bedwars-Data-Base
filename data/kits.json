@@ -20492,16 +20492,24 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Stomp the ground to gather protective blocks, then kick them at your enemies. Each successful hit permanently increases kick damage!",
-  "adv": "",
+  "adv": "Terra fights with blocks. Block Stomp (30 second cooldown) stomps the ground, dealing 10 damage to enemies within 3 blocks and pulling up 5 map blocks that orbit around you. If you're too far from map blocks (player-placed blocks don't count), it makes 5 gray blocks instead.\nWhile at least one block is orbiting you, hits on you do 15% less damage (or 3 less, whichever is more), but each hit knocks a block out of the orbit. It doesn't stack: 5 blocks still give 15%.\nBlock Kick sends one block flying to where you aim. A direct hit deals 22 damage, and enemies near where it lands take 10–15 depending on how close they are, all with 50% armor penetration. Every kick that damages someone gives you a permanent Empowered Kicks stack (only 1 per kick, no matter how many it hits), and you keep them when you die. Each stack adds 1 damage to kicks and 1% to the block damage reduction, up to 35%. A kick that lands also takes 4 seconds off Block Stomp's cooldown.",
   "items": [],
   "abilities": [
    {
     "name": "Block Stomp",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 30,
+    "dmg": 10,
+    "desc": "10 damage to enemies within 3 blocks (no armor penetration), and pulls up 5 blocks to orbit you. While you have one, you take 15% less damage (or 3 less), +1% per stack up to 35%. Each hit knocks a block away.",
+    "nodps": true
    },
    {
     "name": "Block Kick",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "dmg": 22,
+    "dmgText": "22 + stacks (10–15 + stacks nearby)",
+    "desc": "Kick an orbiting block where you aim: 22 on a direct hit, 10–15 nearby, 50% armor penetration. Each kick that hits gives +1 permanent stack and takes 4 seconds off Block Stomp.",
+    "nodps": true
    }
   ],
   "history": [
@@ -20584,7 +20592,143 @@
    "tier": "50 (paid)",
    "badge": "images/bp/s9.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Empowered Kicks",
+    "when": "A kick damages an enemy",
+    "desc": "+1 stack (1 per kick), kept on death. +1 kick damage and +1% block damage reduction per stack (max 35%)."
+   },
+   {
+    "name": "Block Aura",
+    "when": "Blocks orbiting you",
+    "desc": "15% less damage taken (or 3 less), +1% per stack up to 35%. Each hit knocks a block out."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Block Kick damage by stacks",
+    "head": [
+     "Stacks",
+     "Direct hit",
+     "Leather",
+     "Iron",
+     "Diamond",
+     "Emerald",
+     "Nearby hit"
+    ],
+    "rows": [
+     [
+      "0",
+      "22",
+      "17.17",
+      "13.44",
+      "8.52",
+      "6.07",
+      "10–15"
+     ],
+     [
+      "5",
+      "27",
+      "21.07",
+      "16.5",
+      "10.45",
+      "7.45",
+      "15–20"
+     ],
+     [
+      "10",
+      "32",
+      "24.98",
+      "19.56",
+      "12.39",
+      "8.83",
+      "20–25"
+     ],
+     [
+      "20",
+      "42",
+      "32.78",
+      "25.67",
+      "16.26",
+      "11.59",
+      "30–35"
+     ],
+     [
+      "30",
+      "52",
+      "40.59",
+      "31.78",
+      "20.13",
+      "14.34",
+      "40–45"
+     ],
+     [
+      "50",
+      "72",
+      "56.2",
+      "44.0",
+      "27.87",
+      "19.86",
+      "60–65"
+     ]
+    ],
+    "note": "Direct hit with no armor and on iron (13.44) is tested, which works out to exactly 50% armor penetration. Stacks have no limit."
+   },
+   {
+    "title": "Block Aura damage reduction",
+    "head": [
+     "Stacks",
+     "Damage reduction"
+    ],
+    "rows": [
+     [
+      "0",
+      "15% (or 3)"
+     ],
+     [
+      "10",
+      "25%"
+     ],
+     [
+      "20+",
+      "35% (max)"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Learn to aim",
+    "text": "Get good at aiming kicks. At the start of the match, kick blocks at where opponents are landing to deal lots of damage and get free early stacks."
+   },
+   {
+    "title": "Damage early, tank later",
+    "text": "Use your blocks for damage early on. Once you have 20 stacks (35% reduction), keep them around you to tank hits."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Damage over time",
+    "text": "Fire, Poison and Static ticks knock Terra's blocks away one by one."
+   },
+   {
+    "title": "Wall up",
+    "text": "Kicks hit an area, so build a wall and avoid the blocks."
+   },
+   {
+    "title": "Watch the sky early",
+    "text": "Look up at the start of the game if there's a Terra, so you don't feed it stacks."
+   }
+  ],
+  "bal": "sop",
+  "balWhy": "Spamming that many blocks for that much damage, while also using them to tank hits, is pretty busted. With enough stacks, 5 blocks can kill a player in emerald armor. It needs a slight tone down, but it's a fun, skillful kit.",
+  "skins": [
+   {
+    "name": "Void Skin",
+    "img": "images/skins/terra-void.webp"
+   }
+  ]
  },
  {
   "name": "Trapper",
