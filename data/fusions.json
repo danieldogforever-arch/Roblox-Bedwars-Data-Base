@@ -705,11 +705,6 @@
   "note": ""
  },
  {
-  "a": "Lumen",
-  "b": "Nazar",
-  "note": ""
- },
- {
   "a": "Lyla",
   "b": "Vanessa",
   "note": ""
@@ -1387,6 +1382,31 @@
  {
   "a": "Terra",
   "b": "Infernal Shielder",
+  "note": ""
+ },
+ {
+  "a": "Nazar",
+  "b": "Sheep Herder",
+  "note": ""
+ },
+ {
+  "a": "Nazar",
+  "b": "Lumen",
+  "note": ""
+ },
+ {
+  "a": "Nazar",
+  "b": "Whim",
+  "note": ""
+ },
+ {
+  "a": "Nazar",
+  "b": "Ares",
+  "note": ""
+ },
+ {
+  "a": "Nazar",
+  "b": "Cobalt",
   "note": ""
  }
 ]

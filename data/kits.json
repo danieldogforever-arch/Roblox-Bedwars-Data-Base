@@ -16211,29 +16211,41 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Give up out-of-combat health regeneration to manipulate your life force and empower your attacks or heal. Gain life force by landing shots with life arrows and attacking.",
-  "adv": "",
+  "adv": "Nazar runs on Life Force, a 150 point bar above the hotbar, and doesn't regenerate health normally. You gain Life Force by dealing damage (about 1 point per 4 damage after armor, at most once every 0.75 seconds), and passively 10 every 7–8 seconds, but passive gain stops at 50%. Healing from other sources is turned into Life Force too.\nConsume Life Force (3 second cooldown) instantly heals you, using up to 35 Life Force for up to 28 HP (1.25 Life Force per HP).\nEnable Empowered Attacks (1 second to switch on or off) gives your hits +40% damage, up to +10, plus extra armor penetration: +8% on swords, +17.5% on the Life Bow, +21.5% on the Life Crossbow and +26.5% on the Life Headhunter. Each empowered hit uses about 8–10 Life Force, and it stays on until you turn it off.\nNazar can buy Life versions of the bow, crossbow and headhunter instead of the normal ones. They shoot using your HP instead of arrows (5 / 10 / 12 per shot), won't fire if the shot would kill you, and refill Life Force quickly when they hit.",
   "items": [
    {
-    "name": "Life Headhunter",
-    "img": "images/items/life-headhunter.png"
+    "name": "Life Bow",
+    "img": "images/items/life-bow.png",
+    "desc": "A bow that costs 5 HP per shot instead of arrows.",
+    "nodps": true
    },
    {
     "name": "Life Crossbow",
-    "img": "images/items/life-crossbow.png"
+    "img": "images/items/life-crossbow.png",
+    "desc": "A crossbow that costs 10 HP per shot instead of arrows.",
+    "nodps": true
    },
    {
-    "name": "Life Bow",
-    "img": "images/items/life-bow.png"
+    "name": "Life Headhunter",
+    "img": "images/items/life-headhunter.png",
+    "desc": "A headhunter that costs 12 HP per shot instead of arrows.",
+    "nodps": true
    }
   ],
   "abilities": [
    {
     "name": "Consume Life Force",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 3,
+    "desc": "Instantly heal up to 28 HP, using up to 35 Life Force.",
+    "nodps": true
    },
    {
     "name": "Enable/Disable Empowered Attacks",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 1,
+    "desc": "+40% damage (max +10) and extra armor penetration (+8% swords, +17.5% / +21.5% / +26.5% Life Bow / Crossbow / Headhunter). Uses ~8–10 Life Force per hit until turned off.",
+    "nodps": true
    }
   ],
   "history": [
@@ -16286,7 +16298,122 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Life Force",
+    "when": "Dealing damage, and passively",
+    "desc": "150 max. ~1 per 4 damage dealt (0.75s cooldown), +10 every 7–8 seconds up to 50%. No normal health regeneration."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Empowered sword hits",
+    "head": [
+     "Sword",
+     "Normal",
+     "Empowered",
+     "Empowered on iron"
+    ],
+    "rows": [
+     [
+      "Wood",
+      "20",
+      "28",
+      "12.9"
+     ],
+     [
+      "Stone",
+      "25",
+      "35",
+      "16.12"
+     ],
+     [
+      "Iron",
+      "30",
+      "40",
+      "18.43"
+     ],
+     [
+      "Diamond",
+      "42",
+      "52",
+      "23.95"
+     ],
+     [
+      "Emerald",
+      "55",
+      "65",
+      "29.94"
+     ]
+    ],
+    "note": "+40% capped at +10, so it's full strength up to a stone sword. Wood on iron (12.9) is tested, which matches the +8% sword armor penetration."
+   },
+   {
+    "title": "Life Force",
+    "head": [
+     "",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Max",
+      "150"
+     ],
+     [
+      "From damage",
+      "~1 per 4 damage dealt (0.75s cooldown)"
+     ],
+     [
+      "Passive",
+      "+10 every 7–8s, only up to 50%"
+     ],
+     [
+      "Max heal",
+      "35 Life Force → 28 HP (3s cooldown)"
+     ],
+     [
+      "Empowered hit",
+      "~8–10 Life Force"
+     ],
+     [
+      "Life weapons",
+      "5 / 10 / 12 HP per shot"
+     ]
+    ],
+    "note": "Measured from the Life Force bar: one passive tick is 6.8% (10 of 150), and a max heal is 23.3% (35 of 150)."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Bow up early",
+    "text": "Early game, buy the Life Bow and deal damage until you have lots of Life Force."
+   },
+   {
+    "title": "Empower and heal mid-fight",
+    "text": "Turn on Empowered Attacks in fights, and heal in the middle of them so you effectively have much more HP than your bar shows."
+   },
+   {
+    "title": "Pick a style",
+    "text": "It's very versatile: you can mix both, or go full damage or full healing."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Always bring Static",
+    "text": "Have Static (Zapped) on you. You need all the help you can get to kill a Nazar."
+   },
+   {
+    "title": "Make it miss",
+    "text": "Don't let it hit shots. Let it chip its own HP down with Life weapons until it can't heal and it's low, then jump in once it's around 50% HP."
+   },
+   {
+    "title": "Don't let it run",
+    "text": "Nazar heals quickly, so don't let it get away."
+   }
+  ],
+  "bal": "op",
+  "balWhy": "You get Sheep Herder level damage with armor penetration from the start, plus healing. The Life weapons shoot for free, so it's very cost efficient. Even under Static it still heals 20 at a time."
  },
  {
   "name": "Noelle",
