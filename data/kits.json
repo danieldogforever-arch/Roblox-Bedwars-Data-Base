@@ -23297,9 +23297,17 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Imprison the souls of recently killed enemies to increase their respawn time. For each actively imprisoned soul you gain Break Speed and Shield Regeneration.",
-  "adv": "",
+  "adv": "When Warden gets a kill or an assist, it can Imprison the Soul of that enemy if it's within 4 blocks. This adds to the enemy's respawn time (+2 seconds if they died near their bed, +4 seconds if they died at mid or away from it).\nEach imprisoned soul gives Warden a shield, 4 every 0.5 seconds up to 12, and +10% break speed, up to 25%. The effects last until that enemy respawns. Imprisoning several souls stacks the effects.",
   "items": [],
-  "abilities": [],
+  "abilities": [
+   {
+    "name": "Imprison Soul",
+    "img": "images/abilities/ability-template.png",
+    "note": "After a kill or assist, within 4 blocks",
+    "desc": "Adds 2–4 seconds to the enemy's respawn. Until they respawn: up to 12 shield (4 every 0.5s) and +10% break speed per soul (max 25%).",
+    "nodps": true
+   }
+  ],
   "history": [
    {
     "type": "nerf",
@@ -23394,7 +23402,75 @@
    "tier": "45 (free)",
    "badge": "images/bp/s6.webp",
    "rent": 2000
-  }
+  },
+  "tables": [
+   {
+    "title": "Imprisoned souls",
+    "head": [
+     "Souls",
+     "Break speed",
+     "Wood pickaxe on wool (per hit)"
+    ],
+    "rows": [
+     [
+      "0",
+      "Normal",
+      "25%"
+     ],
+     [
+      "1",
+      "+10%",
+      "~27%"
+     ],
+     [
+      "2",
+      "+20%",
+      "30%"
+     ],
+     [
+      "3+",
+      "+25% (max)",
+      "~31%"
+     ]
+    ],
+    "note": "Wool hits measured from the health bar. The shield is 4 every 0.5 seconds, up to 12."
+   },
+   {
+    "title": "Extra respawn time",
+    "head": [
+     "Where they died",
+     "Added"
+    ],
+    "rows": [
+     [
+      "Near their bed",
+      "+2s"
+     ],
+     [
+      "Mid or away from their bed",
+      "+4s"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Kill, then break",
+    "text": "Kill enemies and imprison their souls, then go for their bed. You get a couple of extra seconds before they respawn."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Jump in the void",
+    "text": "If you're about to die to a Warden, jump into the void so it can't reach your soul."
+   },
+   {
+    "title": "Don't get hit",
+    "text": "Warden needs to hit you to get the kill or assist, so avoid trading hits with it."
+   }
+  ],
+  "bal": "weak",
+  "balWhy": "It barely gives any shield, the break speed boost is laughable, and the extra respawn time was mostly used for bypass strategies. As a bed breaker, which is its real purpose, it's a terrible kit."
  },
  {
   "name": "Warrior",
