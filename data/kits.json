@@ -20492,7 +20492,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Stomp the ground to gather protective blocks, then kick them at your enemies. Each successful hit permanently increases kick damage!",
-  "adv": "Terra fights with blocks. Block Stomp (30 second cooldown) stomps the ground, dealing 10 damage to enemies within 3 blocks and pulling up 5 map blocks that orbit around you. If you're too far from map blocks (player-placed blocks don't count), it makes 5 gray blocks instead.\nWhile at least one block is orbiting you, hits on you do 15% less damage (or 3 less, whichever is more), but each hit knocks a block out of the orbit. It doesn't stack: 5 blocks still give 15%.\nBlock Kick sends one block flying to where you aim. A direct hit deals 22 damage, and enemies near where it lands take 10–15 depending on how close they are, all with 50% armor penetration. Every kick that damages someone gives you a permanent Empowered Kicks stack (only 1 per kick, no matter how many it hits), and you keep them when you die. Each stack adds 1 damage to kicks and 1% to the block damage reduction, up to 35%. A kick that lands also takes 4 seconds off Block Stomp's cooldown.",
+  "adv": "Terra fights with blocks. Block Stomp (30 second cooldown) stomps the ground, dealing 10 damage to enemies in a 6×6 area around you and pulling up 5 map blocks that orbit around you. If you're too far from map blocks (player-placed blocks don't count), it makes 5 gray blocks instead.\nWhile at least one block is orbiting you, hits on you do 15% less damage (or 3 less, whichever is more), but each hit knocks a block out of the orbit. It doesn't stack: 5 blocks still give 15%.\nBlock Kick (0.5 second cooldown) sends one block flying to where you aim. A direct hit deals 22 damage, and enemies in the 3×3 area where it lands take 10–15 depending on how close they are, all with 50% armor penetration. Every kick that damages someone gives you a permanent Empowered Kicks stack (only 1 per kick, no matter how many it hits), and you keep them when you die. Each stack adds 1 damage to kicks and 1% to the block damage reduction, up to 35%. A kick that lands also takes 4 seconds off Block Stomp's cooldown.",
   "items": [],
   "abilities": [
    {
@@ -20500,7 +20500,7 @@
     "img": "images/abilities/ability-template.png",
     "cd": 30,
     "dmg": 10,
-    "desc": "10 damage to enemies within 3 blocks (no armor penetration), and pulls up 5 blocks to orbit you. While you have one, you take 15% less damage (or 3 less), +1% per stack up to 35%. Each hit knocks a block away.",
+    "desc": "10 damage to enemies in a 6×6 area (no armor penetration), and pulls up 5 blocks to orbit you. While you have one, you take 15% less damage (or 3 less), +1% per stack up to 35%. Each hit knocks a block away.",
     "nodps": true
    },
    {
@@ -20508,8 +20508,9 @@
     "img": "images/abilities/ability-template.png",
     "dmg": 22,
     "dmgText": "22 + stacks (10–15 + stacks nearby)",
-    "desc": "Kick an orbiting block where you aim: 22 on a direct hit, 10–15 nearby, 50% armor penetration. Each kick that hits gives +1 permanent stack and takes 4 seconds off Block Stomp.",
-    "nodps": true
+    "desc": "Kick an orbiting block where you aim: 22 on a direct hit, 10–15 in a 3×3 area, 50% armor penetration. Each kick that hits gives +1 permanent stack and takes 4 seconds off Block Stomp.",
+    "nodps": true,
+    "cd": 0.5
    }
   ],
   "history": [
