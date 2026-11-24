@@ -17723,16 +17723,26 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Create sandstorms to control the battlefield, move enemies, and protect allies.",
-  "adv": "",
+  "adv": "Ramil summons sandstorms that pull enemies in and hurt them. Every sandstorm is 6 blocks wide and deals 4 damage every 0.5 seconds to enemies inside, with 50% armor penetration.\nSandstorm (17 second cooldown) surrounds you for 6 seconds and follows you as you move, pulling enemies toward you. Moving Sandstorm (20 second cooldown) travels the way you're facing at about 2.5 blocks a second for 8 seconds, pulling enemies to its center. Using one puts the other on a short cooldown: Moving Sandstorm can't be used for 6 seconds after Sandstorm, and Sandstorm can't be used for 8 seconds after Moving Sandstorm.\nWhile inside any of your sandstorms, you and your teammates can't take projectile damage (it blocks them, but doesn't send them back like Infernal Shielder). Enemies also can't mine a bed or any block that a sandstorm is covering.",
   "items": [],
   "abilities": [
    {
     "name": "Sandstorm",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 17,
+    "dmg": 4,
+    "dmgText": "4 every 0.5s",
+    "desc": "A 6 block wide storm around you for 6 seconds that follows you, pulls enemies in and deals 4 every 0.5 seconds (up to 48). Blocks projectiles. Moving Sandstorm goes on a 6 second cooldown.",
+    "nodps": true
    },
    {
     "name": "Moving Sandstorm",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 20,
+    "dmg": 4,
+    "dmgText": "4 every 0.5s",
+    "desc": "A 6 block wide storm that travels the way you face (~2.5 blocks/s) for 8 seconds, pulling enemies to its center and dealing 4 every 0.5 seconds (up to 64). Blocks projectiles. Sandstorm goes on an 8 second cooldown.",
+    "nodps": true
    }
   ],
   "history": [
@@ -17804,7 +17814,102 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Sand Shield",
+    "when": "Inside your sandstorm",
+    "desc": "You and teammates take no projectile damage, and enemies can't mine blocks or beds it covers."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Sandstorm damage",
+    "head": [
+     "",
+     "No armor",
+     "Leather",
+     "Iron",
+     "Diamond",
+     "Emerald"
+    ],
+    "rows": [
+     [
+      "Per tick (0.5s)",
+      "4",
+      "3.12",
+      "2.44",
+      "1.55",
+      "1.1"
+     ],
+     [
+      "Sandstorm, full 6s",
+      "48",
+      "37.4",
+      "29.3",
+      "18.6",
+      "13.2"
+     ],
+     [
+      "Moving Sandstorm, full 8s",
+      "64",
+      "49.9",
+      "39.0",
+      "24.8",
+      "17.6"
+     ]
+    ],
+    "note": "Iron is tested (2.44 per tick), which works out to 50% armor penetration. Full durations assume the enemy stays inside the whole time."
+   },
+   {
+    "title": "Cooldowns",
+    "head": [
+     "Ability",
+     "Cooldown",
+     "Locks the other for"
+    ],
+    "rows": [
+     [
+      "Sandstorm",
+      "17s",
+      "6s"
+     ],
+     [
+      "Moving Sandstorm",
+      "20s",
+      "8s"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Pull in campers",
+    "text": "If a projectile spammer is camping your base, use Moving Sandstorm to pull them toward you without getting hit."
+   },
+   {
+    "title": "Trap and escape",
+    "text": "Use it to trap enemies while you get away."
+   },
+   {
+    "title": "Sandstorm for fights",
+    "text": "Use the normal Sandstorm for combos and damage, and to block projectiles for your team at your own pace."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Bait, then fight",
+    "text": "Bait Ramil into using Moving Sandstorm, then ignore the storm and fight Ramil. It doesn't do much damage; it's mostly there to slow you down."
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "It's a nice blend of defender, support, attacker and breaker. Very versatile, and neither the damage nor the pull is too broken.",
+  "skins": [
+   {
+    "name": "Tiger Shark Skin",
+    "img": "images/skins/ramil-tiger-shark.webp"
+   }
+  ]
  },
  {
   "name": "Raven",
