@@ -20989,11 +20989,15 @@
   "diff": "easy",
   "hp": "100",
   "desc": "An agile warrior with a Trident! Hurl your trident towards a wall, or your opponents, to quickly travel and dominate the battlefield.",
-  "adv": "",
+  "adv": "Triton buys a Trident for 40 iron and throws it to travel or attack. It has an 8 second cooldown and reaches 25 blocks (27 when aimed at an enemy).\nThrown at a wall or ceiling, it pulls you there and you hang on for up to 10 seconds (5 if you're under the map). Jump to let go any time. It can go through 1 block thick walls and ceilings. If you throw it into a 2 block thick ceiling, it moves you to the side if there's room, or you hang there for up to 5 seconds.\nThrown at an enemy, it stuns them for 0.5 seconds, then deals 23 damage with 50% armor penetration. During the stun they're also Grounded, even though it doesn't show, so they can't use movement abilities.",
   "items": [
    {
     "name": "Trident",
-    "img": "images/items/trident.png"
+    "img": "images/items/trident.png",
+    "note": "Cost: 40 iron",
+    "desc": "8 second cooldown, 25 block range (27 at enemies). Pulls you to walls and ceilings and lets you hang for up to 10 seconds. On an enemy: 0.5 second stun (with a hidden Grounded), then 23 damage with 50% armor penetration.",
+    "dmg": 23,
+    "cd": 8
    }
   ],
   "abilities": [],
@@ -21066,7 +21070,124 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "tables": [
+   {
+    "title": "Trident damage",
+    "head": [
+     "Armor",
+     "Damage"
+    ],
+    "rows": [
+     [
+      "None",
+      "23"
+     ],
+     [
+      "img:images/armor/leather.png|Leather",
+      "17.95"
+     ],
+     [
+      "img:images/armor/iron.png|Iron",
+      "14.06"
+     ],
+     [
+      "img:images/armor/diamond.png|Diamond",
+      "8.9"
+     ],
+     [
+      "img:images/armor/emerald.png|Emerald",
+      "6.34"
+     ]
+    ],
+    "note": "No armor and iron are tested, which works out to exactly 50% armor penetration; the rest is worked out from that."
+   },
+   {
+    "title": "Trident",
+    "head": [
+     "",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Cost",
+      "40 iron"
+     ],
+     [
+      "Cooldown",
+      "8s"
+     ],
+     [
+      "Range",
+      "25 blocks (27 at enemies)"
+     ],
+     [
+      "Hang time",
+      "10s (5s under the map)"
+     ],
+     [
+      "Goes through",
+      "1 block walls and ceilings"
+     ],
+     [
+      "Stun",
+      "0.5s, Grounded during it"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Movement first",
+    "text": "Use the Trident to get around, then throw it at enemies in fights."
+   },
+   {
+    "title": "Counter movement kits",
+    "text": "The stun Grounds them, so throw it at movement kits to stop their abilities and start a combo."
+   },
+   {
+    "title": "If you get Grounded",
+    "text": "Build up, and throw the Trident somewhere safe once the cooldown is over."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Gloops",
+    "text": "Throw Gloops at Triton to Ground it."
+   },
+   {
+    "title": "Block it off",
+    "text": "If you can't Ground it, build 2 blocks behind, below or above you so the Trident can't attach and stun you."
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "Great for PvP and travel, though the range is a bit short. It could use a slight buff, like a stronger, longer range Trident upgrade that costs emeralds.",
+  "skins": [
+   {
+    "name": "Demon Skin",
+    "img": "images/skins/triton-demon.webp"
+   },
+   {
+    "name": "Victorious Gold Skin",
+    "img": "images/skins/triton-victorious-gold.webp"
+   },
+   {
+    "name": "Victorious Platinum Skin",
+    "img": "images/skins/triton-victorious-platinum.webp"
+   },
+   {
+    "name": "Victorious Diamond Skin",
+    "img": "images/skins/triton-victorious-diamond.webp"
+   },
+   {
+    "name": "Victorious Emerald Skin",
+    "img": "images/skins/triton-victorious-emerald.webp"
+   },
+   {
+    "name": "Victorious Nightmare Skin",
+    "img": "images/skins/triton-victorious-nightmare.webp"
+   }
+  ]
  },
  {
   "name": "Trixie",
