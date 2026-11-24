@@ -20301,11 +20301,14 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Connect your Confluence Portal to a slain enemy to teleport you and your allies to that location.",
-  "adv": "",
+  "adv": "Styx buys a Confluence Portal for 30 iron and places it anywhere. When you or a teammate kills an enemy, you can connect the portal to where they died, opening a second portal there for 30 seconds. Only one connection can be open at a time, with a 15 second cooldown between connections, and up to 5 players can go through before it closes.\nTraveling through the portal is fast, about 24 blocks a second. Coming out, you get 10 shield and a small speed boost for 5 seconds (24 blocks in about 3.2 seconds, around 9% faster than walking).\nWhen Styx dies, it stays as a ghost for up to 7 seconds and can still connect portals during that time. Pressing teleport home ends it early.\nThe portal's health grows over the match, from 30 to 90 over 20 minutes, and grows faster in modes with faster team generators, like Duels and 16v16.",
   "items": [
    {
     "name": "Confluence Portal",
-    "img": "images/items/confluence-portal.png"
+    "img": "images/items/confluence-portal.png",
+    "note": "Cost: 30 iron",
+    "desc": "Place anywhere, then connect it to where an enemy died. The link lasts 30 seconds (15 second cooldown), up to 5 players. Health grows from 30 to 90 over 20 minutes.",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -20427,7 +20430,68 @@
    "badge": "images/bp/s10.webp",
    "rent": 2000,
    "buy": 12000
-  }
+  },
+  "tables": [
+   {
+    "title": "Confluence Portal",
+    "head": [
+     "",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Cost",
+      "30 iron"
+     ],
+     [
+      "Connect",
+      "After you or a teammate kills an enemy"
+     ],
+     [
+      "Link lasts",
+      "30s (15s cooldown, 1 at a time)"
+     ],
+     [
+      "Uses",
+      "5 players"
+     ],
+     [
+      "Travel speed",
+      "~24 blocks a second"
+     ],
+     [
+      "On exit",
+      "10 shield + ~9% speed for 5s"
+     ],
+     [
+      "Health",
+      "30 → 90 over 20 minutes (faster in Duels and 16v16)"
+     ],
+     [
+      "Ghost form",
+      "Up to 7s after dying, can still connect"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Set it and wait",
+    "text": "Place a portal, then wait for teammates to get kills so you can connect it."
+   },
+   {
+    "title": "Ghost connects",
+    "text": "If you die, wait in ghost form for a teammate to get a kill, then connect a portal."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Break the portal",
+    "text": "Break it with a pickaxe or explosives when you see it. It's very easy to mine early game."
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "Another kit that relies on bypass strategies. It's very bad support, and the movement is bad because the portal is so easy to break. It's like what Ignis should be, but fails at being both."
  },
  {
   "name": "Taliyah",
