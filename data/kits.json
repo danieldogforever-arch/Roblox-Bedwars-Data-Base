@@ -24865,11 +24865,14 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Deploy a satellite to disrupt enemy team economies. Enemy shop prices are increased and you get a cut of each purchase!",
-  "adv": "",
+  "adv": "Zenith buys a Satellite Dish for 2 emeralds and can upgrade it to level 2 for 4 emeralds and level 3 for 8. Place it, pick an enemy team to target, and turn it on. While it's on, that team's shop is more expensive (a tax of 20% / 25% / 30% by level), and Zenith gets the extra they pay. Emerald items like Telepearls and Obsidian cost 1 more emerald.\nThe dish runs off a charge bar: 1 minute at level 1, 1:30 at level 2 and 2:00 at level 3. You can turn it off any time, and the bar refills 1 second per second while it's off. If it runs all the way out, the dish is disabled for 30 seconds. Each kill adds 15 seconds of charge.\nEnemies can break the dish (it has the same health as Blastproof Ceramic) or blow it up with Fireballs and TNT, which forces Zenith to buy it again. In 16v16, prices don't go up for the enemy, but Zenith still gets the same loot.",
   "items": [
    {
     "name": "Satellite Dish",
-    "img": "images/items/satellite-dish.png"
+    "img": "images/items/satellite-dish.png",
+    "note": "Cost: 2 emeralds (level 2: 4, level 3: 8)",
+    "desc": "Target an enemy team to tax their shop 20% / 25% / 30% by level. You get the extra. Charge lasts 1:00 / 1:30 / 2:00 and refills while off. Breaks like Blastproof Ceramic.",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -24982,7 +24985,61 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "tables": [
+   {
+    "title": "Satellite Dish levels",
+    "head": [
+     "Level",
+     "Cost",
+     "Charge",
+     "Tax",
+     "Stone Brick (normally 40 iron)"
+    ],
+    "rows": [
+     [
+      "1",
+      "2 emeralds",
+      "1:00",
+      "20%",
+      "48 iron"
+     ],
+     [
+      "2",
+      "4 emeralds",
+      "1:30",
+      "25%",
+      "50 iron"
+     ],
+     [
+      "3",
+      "8 emeralds",
+      "2:00",
+      "30%",
+      "52 iron"
+     ]
+    ],
+    "note": "Emerald items cost 1 more emerald. The bar refills 1 second per second while the dish is off. Running out disables it for 30 seconds. Kills add 15 seconds."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "16v16 only",
+    "text": "Don't use this kit outside of 16v16, where there are lots of enemies buying from the shop."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Wait it out",
+    "text": "Don't buy anything for the 1–2 minutes the dish is on."
+   },
+   {
+    "title": "Break the dish",
+    "text": "Break the Satellite Dish so Zenith has to waste emeralds buying it again."
+   }
+  ],
+  "bal": "weak",
+  "balWhy": "It's one of the most expensive kits in the game for very little reward. Nobody has to buy anything while it's on; they can just wait the 1–2 minutes, or break the dish. Playing Zenith wastes your emeralds and resources instead of gaining any. It needs a full rework."
  },
  {
   "name": "Zeno",
