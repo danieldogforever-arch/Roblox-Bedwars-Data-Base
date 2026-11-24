@@ -1225,16 +1225,6 @@
   "note": ""
  },
  {
-  "a": "Nahla",
-  "b": "Silas",
-  "note": ""
- },
- {
-  "a": "Nahla",
-  "b": "Cobalt",
-  "note": ""
- },
- {
   "a": "Taliyah",
   "b": "Hephaestus",
   "note": ""
@@ -1352,6 +1342,16 @@
  {
   "a": "Uma",
   "b": "Grove",
+  "note": ""
+ },
+ {
+  "a": "Nahla",
+  "b": "Silas",
+  "note": ""
+ },
+ {
+  "a": "Nahla",
+  "b": "Cobalt",
   "note": ""
  }
 ]

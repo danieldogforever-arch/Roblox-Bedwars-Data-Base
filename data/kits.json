@@ -15996,14 +15996,14 @@
     "name": "Oasis Vessel II",
     "img": "images/items/oasis-vessel-2.png",
     "note": "Cost: 4 emeralds",
-    "desc": "4 orbs per use: 2 HP or +2% damage each (8 HP or +8% per use). Heals about 10 HP a second.",
+    "desc": "4 orbs per use: 2 HP or +2% damage each (8 HP or +8% per use). Heals about 9–10 HP a second.",
     "nodps": true
    },
    {
     "name": "Oasis Vessel III",
     "img": "images/items/oasis-vessel-3.png",
     "note": "Cost: 8 emeralds",
-    "desc": "5 orbs per use: 3 HP or +3% damage each (15 HP or +15% per use). Heals about 20 HP a second.",
+    "desc": "5 orbs per use: 3 HP or +3% damage each (15 HP or +15% per use). Heals about 16–20 HP a second.",
     "nodps": true
    }
   ],
@@ -16127,7 +16127,7 @@
       "4",
       "8",
       "+8%",
-      "~10",
+      "~9–10",
       "100 HP in ~10s"
      ],
      [
@@ -16136,11 +16136,11 @@
       "5",
       "15",
       "+15%",
-      "~20",
-      "100 HP in ~5s"
+      "~16–20",
+      "100 HP in ~5s, 90 HP in ~5.5–6s"
      ]
     ],
-    "note": "All three tests line up with one use about every 0.75 seconds (the 0.5 second cooldown plus the time to fire the orbs). Damage support maxes at +20%: 7 uses on Vessel I, 3 on II, 2 on III."
+    "note": "Even though the cooldown is 0.5 seconds, the tests line up with about one use every 0.75–1 second, whether you hold or spam click. Damage support maxes at +20%: 7 uses on Vessel I, 3 on II, 2 on III."
    },
    {
     "title": "Oasis Heal Veil",
