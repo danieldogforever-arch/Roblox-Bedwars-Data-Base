@@ -21231,17 +21231,17 @@
     ],
     "rows": [
      [
-      "Snap Trap",
+      "img:images/items/snap-trap.png|Snap Trap",
       "12 iron",
       "Stun 1.75s, Grounded 2s, Snapped 5s (next sword hit +60% damage, 2x knockback)"
      ],
      [
-      "Venom Trap",
+      "img:images/items/venom-trap.png|Venom Trap",
       "16 iron",
       "5 poison a second for 5s (25 total), 100% armor penetration, 3×3, can't kill"
      ],
      [
-      "Explosive Trap",
+      "img:images/items/explosive-trap.png|Explosive Trap",
       "18 iron",
       "30 damage, 0% armor penetration, breaks wool, planks and stone easily"
      ]
