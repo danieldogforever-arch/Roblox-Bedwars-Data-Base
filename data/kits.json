@@ -26166,34 +26166,55 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Use a magical staff to cast lightning spells.",
-  "adv": "",
+  "adv": "Zeno spawns with a Magic Wand (12 damage) instead of a wood sword, and its stone sword costs 40 iron. Its real weapon is the Wizard Staff, which calls lightning strikes on a spot up to 16.5 blocks away. Each strike deals 12 damage with 50% armor penetration in a 5 block radius, and applies Zapped (Static) for 10 seconds.\nEach strike uses 1 bar of mana. Wizard Staff I has 4 bars and regains one every 6 seconds. Staff II (4 emeralds) has 5 bars, regains one every 4 seconds, and adds Shockwave: 8 damage in a 2 block radius with huge knockback that can fling enemies 10+ blocks. Staff III (6 emeralds) has 6 bars, regains one every 3.25 seconds, and adds Lightning Storm: it uses 4 bars to strike one spot 10 times, 24 damage on the first strike and 12 on the other 9 (132 total).",
   "items": [
    {
+    "name": "Magic Wand",
+    "img": "images/items/magic-wand.png",
+    "note": "Spawn with it",
+    "desc": "Replaces the Wood Sword. 12 damage.",
+    "nodps": true
+   },
+   {
     "name": "Wizard Staff I",
-    "img": "images/items/wizard-staff-1.png"
+    "img": "images/items/wizard-staff-1.png",
+    "note": "Spawn with it",
+    "desc": "Lightning strikes up to 16.5 blocks away: 12 damage, 50% armor penetration, 5 block radius, Zapped for 10 seconds. 4 mana bars, 1 back every 6 seconds.",
+    "dmg": 12,
+    "nodps": true
    },
    {
     "name": "Wizard Staff II",
-    "img": "images/items/wizard-staff-2.png"
+    "img": "images/items/wizard-staff-2.png",
+    "note": "Cost: 4 emeralds",
+    "desc": "Same strikes, 5 mana bars, 1 back every 4 seconds. Unlocks Shockwave.",
+    "dmg": 12,
+    "nodps": true
    },
    {
     "name": "Wizard Staff III",
-    "img": "images/items/wizard-staff-3.png"
-   },
-   {
-    "name": "Magic Wand",
-    "img": "images/items/magic-wand.png"
+    "img": "images/items/wizard-staff-3.png",
+    "note": "Cost: 6 emeralds",
+    "desc": "Same strikes, 6 mana bars, 1 back every 3.25 seconds. Unlocks Lightning Storm.",
+    "dmg": 12,
+    "nodps": true
    }
   ],
   "abilities": [
    {
     "name": "Ability Swap",
-    "desc": "Switch between Normal Lightning and Lightning Storm.",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Wizard Staff III",
+    "desc": "Switch between normal lightning and Lightning Storm, which uses 4 mana bars to strike one spot 10 times: 24 damage, then 12 nine more times (132 total).",
+    "nodps": true
    },
    {
     "name": "Shockwave",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "note": "Wizard Staff II and up",
+    "dmg": 8,
+    "desc": "8 damage in a 2 block radius (no armor penetration) with huge knockback, flinging enemies 10+ blocks.",
+    "nodps": true
    }
   ],
   "history": [
@@ -26317,7 +26338,140 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "tables": [
+   {
+    "title": "Wizard Staff",
+    "head": [
+     "Staff",
+     "Cost",
+     "Mana bars",
+     "Regen per bar",
+     "Strikes per minute (steady)",
+     "New ability"
+    ],
+    "rows": [
+     [
+      "img:images/items/wizard-staff-1.png|I",
+      "Spawn with it",
+      "4",
+      "6s",
+      "10",
+      "–"
+     ],
+     [
+      "img:images/items/wizard-staff-2.png|II",
+      "4 emeralds",
+      "5",
+      "4s",
+      "15",
+      "Shockwave"
+     ],
+     [
+      "img:images/items/wizard-staff-3.png|III",
+      "6 emeralds",
+      "6",
+      "3.25s",
+      "~18",
+      "Lightning Storm"
+     ]
+    ]
+   },
+   {
+    "title": "Damage",
+    "head": [
+     "Attack",
+     "No armor",
+     "Leather",
+     "Iron",
+     "Diamond",
+     "Emerald"
+    ],
+    "rows": [
+     [
+      "Lightning strike",
+      "12",
+      "9.37",
+      "7.33",
+      "4.65",
+      "3.31"
+     ],
+     [
+      "Shockwave",
+      "8",
+      "5.12",
+      "3.52",
+      "1.92",
+      "1.28"
+     ],
+     [
+      "Lightning Storm (total)",
+      "132",
+      "103.1",
+      "80.6",
+      "51.2",
+      "36.4"
+     ]
+    ],
+    "note": "Iron is tested: lightning 7.33 (50% armor penetration) and Shockwave 3.52 (no armor penetration). Lightning Storm is 24 + 12 × 9, all with 50% armor penetration. Every strike also applies Zapped."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Pace your strikes",
+    "text": "Don't spam. Strike about every 3 seconds to keep enemies from healing while you save mana."
+   },
+   {
+    "title": "Add ticks",
+    "text": "Get Fire or Static on Zeno for even more damage over time, or insane Static damage on groups."
+   },
+   {
+    "title": "Storm the campers",
+    "text": "Use Lightning Storm on people camping in their base or bunched up in groups."
+   },
+   {
+    "title": "Shockwave escape",
+    "text": "Shockwave makes a great escape."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Bait the Shockwave",
+    "text": "Bait Zeno into using Shockwave, then go for the kill."
+   },
+   {
+    "title": "Spread out",
+    "text": "Don't stand in groups, or you'll take tons of Static damage."
+   }
+  ],
+  "bal": "sop",
+  "balWhy": "You get a ton of chip damage, and the only real weakness is a slightly bad early game. Combined with Fire you slowly chip enemies down, and Shockwave makes a nice escape.",
+  "skins": [
+   {
+    "name": "Anniversary Skin",
+    "img": "images/skins/zeno-anniversary.webp"
+   },
+   {
+    "name": "Victorious Gold Skin",
+    "img": "images/skins/zeno-victorious-gold.webp"
+   },
+   {
+    "name": "Victorious Platinum Skin",
+    "img": "images/skins/zeno-victorious-platinum.webp"
+   },
+   {
+    "name": "Victorious Diamond Skin",
+    "img": "images/skins/zeno-victorious-diamond.webp"
+   },
+   {
+    "name": "Victorious Emerald Skin",
+    "img": "images/skins/zeno-victorious-emerald.webp"
+   },
+   {
+    "name": "Victorious Nightmare Skin",
+    "img": "images/skins/zeno-victorious-nightmare.webp"
+   }
+  ]
  },
  {
   "name": "Zephyr",
