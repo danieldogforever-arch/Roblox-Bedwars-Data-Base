@@ -15983,27 +15983,27 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Use water veil to temporally boost the health regen of nearby allies. Purchase upgrades for your oasis vessel to strengthen your healing and buffing abilities!",
-  "adv": "Nahla supports one teammate at a time with the Oasis Vessel. You spawn with Oasis Vessel I, and can buy II for 4 emeralds and III for 8. Each use fires water orbs at a teammate within 14 blocks, with a 0.5 second cooldown between uses. Use Oasis Swap Staff to switch between Healing and Damage support.\nHealing orbs heal your teammate. Damage orbs give them extra damage, up to +20%. Each batch of damage lasts 15 seconds on its own, so if you give +8% and another +8% 10 seconds later, the first +8% runs out 5 seconds after that.\nOasis Heal Veil (20 second cooldown) instantly heals 15% of your current HP (6 HP at 40/100), then makes your HP regenerate twice as fast, without waiting the usual 5 seconds after getting hit. Up to 3 teammates within 13 blocks get it too. On Nahla itself the regeneration is 20% weaker, but the instant heal is the same.",
+  "adv": "Nahla supports one teammate at a time with the Oasis Vessel. You spawn with Oasis Vessel I, and can buy II for 4 emeralds and III for 8. Each use fires water orbs at a teammate within 14 blocks, about every 0.75–0.85 seconds. Use Oasis Swap Staff to switch between Healing and Damage support.\nHealing orbs heal your teammate. Damage orbs give them extra damage, up to +20%. Each batch of damage lasts 15 seconds on its own, so if you give +8% and another +8% 10 seconds later, the first +8% runs out 5 seconds after that.\nOasis Heal Veil (20 second cooldown) instantly heals 15% of your current HP (6 HP at 40/100), then makes your HP regenerate twice as fast, without waiting the usual 5 seconds after getting hit. Up to 3 teammates within 13 blocks get it too. On Nahla itself the regeneration is 20% weaker, but the instant heal is the same.",
   "items": [
    {
     "name": "Oasis Vessel I",
     "img": "images/items/oasis-vessel.png",
     "note": "Spawn with it",
-    "desc": "3 orbs per use: 1 HP or +1% damage each (3 HP or +3% per use). Heals about 4 HP a second.",
+    "desc": "3 orbs per use: 1 HP or +1% damage each (3 HP or +3% per use). Heals about 3.5–4 HP a second.",
     "nodps": true
    },
    {
     "name": "Oasis Vessel II",
     "img": "images/items/oasis-vessel-2.png",
     "note": "Cost: 4 emeralds",
-    "desc": "4 orbs per use: 2 HP or +2% damage each (8 HP or +8% per use). Heals about 9–10 HP a second.",
+    "desc": "4 orbs per use: 2 HP or +2% damage each (8 HP or +8% per use). Heals about 9.4–10.7 HP a second.",
     "nodps": true
    },
    {
     "name": "Oasis Vessel III",
     "img": "images/items/oasis-vessel-3.png",
     "note": "Cost: 8 emeralds",
-    "desc": "5 orbs per use: 3 HP or +3% damage each (15 HP or +15% per use). Heals about 16–20 HP a second.",
+    "desc": "5 orbs per use: 3 HP or +3% damage each (15 HP or +15% per use). Heals about 17.6–20 HP a second.",
     "nodps": true
    }
   ],
@@ -16118,7 +16118,7 @@
       "3",
       "3",
       "+3%",
-      "~4",
+      "3.5–4",
       "90 HP in ~22s"
      ],
      [
@@ -16127,7 +16127,7 @@
       "4",
       "8",
       "+8%",
-      "~9–10",
+      "9.4–10.7",
       "100 HP in ~10s"
      ],
      [
@@ -16136,11 +16136,11 @@
       "5",
       "15",
       "+15%",
-      "~16–20",
+      "17.6–20",
       "100 HP in ~5s, 90 HP in ~5.5–6s"
      ]
     ],
-    "note": "Even though the cooldown is 0.5 seconds, the tests line up with about one use every 0.75–1 second, whether you hold or spam click. Damage support maxes at +20%: 7 uses on Vessel I, 3 on II, 2 on III."
+    "note": "The Vessel can be used about every 0.75–0.85 seconds (the healing per second column covers that range), whether you hold or spam click. Damage support maxes at +20%: 7 uses on Vessel I, 3 on II, 2 on III."
    },
    {
     "title": "Oasis Heal Veil",
