@@ -19756,7 +19756,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Use a Frost Staff to slow and freeze enemies!",
-  "adv": "Sophia spawns with a Magic Wand and Frost Staff I. The staff sprays a freezing mist up to 8 blocks away in a 4 block radius, hitting everyone inside every 0.25 seconds. Each hit adds a slow stack, about 5% slower per stack, up to about 50% at 10 stacks. Hitting someone with 10 stacks one more time freezes them solid for 1.75 seconds. Stacks last 7 seconds, refreshed with each hit, and are cleared by a freeze.\nAfter a freeze, the enemy gets Cold Resistance for 10 seconds, making them twice as hard to freeze, doubling again if they're frozen while it's active.\nFrost Staff II (4 emeralds) and III (8 emeralds) make the mist stronger and add a frost bolt (0.85 second cooldown). It does more damage the longer you charge it, up to 1 second: 17 to 34 on Staff II (3 slow stacks), 25 to 50 on Staff III (4 stacks). Everything has 15% armor penetration.\nSophia is slowed while using the staff: the mist makes you about 65% slower, and charging a bolt about 75% slower. There's a 0.5 second wait before you can use the mist again after stopping.",
+  "adv": "Sophia spawns with a Magic Wand and Frost Staff I. The staff sprays a freezing mist up to 8 blocks away in a 4 block radius, hitting everyone inside every 0.25 seconds. Each hit adds a slow stack, about 5% slower per stack, up to about 50% at 10 stacks. Hitting someone with 10 stacks one more time freezes them solid for 1.75 seconds. Stacks last 7 seconds, refreshed with each hit, and are cleared by a freeze.\nAfter a freeze, the enemy gets Cold Resistance for 10 seconds, making them twice as hard to freeze, doubling again if they're frozen while it's active.\nFrost Staff II (4 emeralds) and III (8 emeralds) make the mist stronger and add a frost bolt (0.85 second cooldown). It does more damage the longer you charge it, up to 1 second: 17 to 34 on Staff II, 25 to 50 on Staff III. Bolts always add 3 slow stacks on Staff II and 4 on Staff III, whatever the charge; charging only adds damage. Everything has 15% armor penetration.\nSophia is slowed while using the staff: the mist makes you about 65% slower, and charging a bolt about 75% slower. There's a 0.5 second wait before you can use the mist again after stopping.",
   "items": [
    {
     "name": "Frost Staff I",
@@ -20000,7 +20000,8 @@
       "4",
       "3"
      ]
-    ]
+    ],
+    "note": "Bolts add the same stacks at any charge, so uncharged spam freezes just as fast."
    }
   ],
   "strategy": [
