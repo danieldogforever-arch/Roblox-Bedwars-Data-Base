@@ -20155,7 +20155,7 @@
       "35% (max)"
      ]
     ],
-    "note": "In testing, crits dealt up to about 45% extra damage. The wiki's crit damage formula (base + base × 1.25 × (100 − stars) / 100) would give +100% at 20 stars, so it's probably outdated."
+    "note": "In testing, crits dealt up to about 45% extra damage."
    }
   ],
   "strategy": [
@@ -20173,7 +20173,7 @@
    },
    {
     "title": "Critical Strike",
-    "text": "Pair it with the Critical Strike enchant for a very high crit rate and insane damage."
+    "text": "Pair it with the Critical Strike enchant. Together they make about 90% of your hits crit, for insane damage."
    }
   ],
   "counter": [
@@ -22935,27 +22935,40 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Use a high tech tablet to control camera turrets across the map. While holding the tablet, mark enemies or link to your turrets' view.",
-  "adv": "",
+  "adv": "Vulcan buys Camera Turrets for 1 emerald each, with no limit on how many you can buy or place. Picking a placed turret back up takes 0.5 seconds. Turrets can turn all the way around, but only aim 90 degrees up or down. They have about 25 health and break like a pickaxe block: 10 hits with a wood pickaxe, 3 with diamond. A Fireball destroys one in 1–2 hits, depending on whether it's a direct hit.\nYour Tablet has two abilities. Turret Link lets you take control of a turret and shoot 18 damage every 0.2 seconds, with no cooldown or overheating. Artillery Mark (16 second cooldown) makes up to 3 turrets within 13 blocks fire at the enemy you're looking at: each turret hits 5 times for 8 damage, once every 0.6 seconds. Both have 40% armor penetration and knock enemies back.",
   "items": [
    {
     "name": "Tablet",
-    "img": "images/items/tablet.png"
+    "img": "images/items/tablet.png",
+    "note": "Spawn with it",
+    "desc": "Use Turret Link and Artillery Mark.",
+    "nodps": true
    },
    {
     "name": "Camera Turret",
-    "img": "images/items/camera-turret.png"
+    "img": "images/items/camera-turret.png",
+    "note": "Cost: 1 emerald",
+    "desc": "No placement limit. ~25 health (10 hits with a wood pickaxe, 3 with diamond). 0.5 seconds to pick back up.",
+    "nodps": true
    }
   ],
   "abilities": [
    {
-    "name": "Artillery Mark",
+    "name": "Turret Link",
+    "img": "images/abilities/ability-template.png",
     "note": "Only while holding the Tablet",
-    "img": "images/abilities/ability-template.png"
+    "dmg": 18,
+    "dmgText": "18 every 0.2s",
+    "desc": "Control a turret: 18 damage every 0.2 seconds (90 per second), 40% armor penetration. No cooldown.",
+    "nodps": true
    },
    {
-    "name": "Turret Link",
+    "name": "Artillery Mark",
+    "img": "images/abilities/ability-template.png",
+    "cd": 16,
     "note": "Only while holding the Tablet",
-    "img": "images/abilities/ability-template.png"
+    "desc": "Up to 3 turrets within 13 blocks each hit the enemy you're looking at 5 times: 8 damage every 0.6 seconds, 40% armor penetration (up to 120 total).",
+    "nodps": true
    }
   ],
   "history": [
@@ -23053,7 +23066,116 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "tables": [
+   {
+    "title": "Turret damage",
+    "head": [
+     "Attack",
+     "No armor",
+     "Leather",
+     "Iron",
+     "Diamond",
+     "Emerald"
+    ],
+    "rows": [
+     [
+      "Turret Link (per shot)",
+      "18",
+      "13.46",
+      "10.21",
+      "6.21",
+      "4.34"
+     ],
+     [
+      "Artillery Mark (per hit)",
+      "8",
+      "5.98",
+      "4.54",
+      "2.76",
+      "1.93"
+     ]
+    ],
+    "note": "Iron is tested for both (10.21 and 4.54), which works out to exactly 40% armor penetration. Turret Link fires every 0.2 seconds: 90 damage per second with no armor, about 51 on iron. Artillery Mark is up to 3 turrets × 5 hits."
+   },
+   {
+    "title": "Camera Turret",
+    "head": [
+     "",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Cost",
+      "1 emerald, no limit"
+     ],
+     [
+      "Health",
+      "~25 (10 wood pickaxe hits, 3 diamond)"
+     ],
+     [
+      "Fireball",
+      "1–2 to destroy"
+     ],
+     [
+      "Aim",
+      "All the way around, 90° up and down"
+     ],
+     [
+      "Pick up",
+      "0.5s"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Tower turret",
+    "text": "Get 1 emerald from mid, build a tower, put the turret on top, then break the tower with Shears so people can't Fireball it."
+   },
+   {
+    "title": "Two directions",
+    "text": "Place 2 turrets, one facing each side of your base, so you can shoot at different teams."
+   },
+   {
+    "title": "Bring it to mid",
+    "text": "You can also pick it up and bring it to mid, just stay out of the fights yourself."
+   },
+   {
+    "title": "Defend with Artillery",
+    "text": "Artillery Mark is great against bed breakers, since it does good chip damage and knockback."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Fireballs",
+    "text": "Get a Fireball and aim it carefully at the turret."
+   },
+   {
+    "title": "Block it",
+    "text": "Place a block to stop it from shooting you, or stand directly under it."
+   },
+   {
+    "title": "Find Vulcan",
+    "text": "Vulcan stands still while linked, like Whisper, Cyber and Drill. Kill it when it least expects it, then break the turret."
+   }
+  ],
+  "bal": "sop",
+  "balWhy": "For a single emerald you get something that deals insane damage with a fast fire rate and no cooldown. It needs an overheat nerf, or a price increase to 2 emeralds.",
+  "skins": [
+   {
+    "name": "Lunar Skin",
+    "img": "images/skins/vulcan-lunar.webp"
+   },
+   {
+    "name": "Cyber Vampire Skin",
+    "img": "images/skins/vulcan-cyber-vampire.webp"
+   },
+   {
+    "name": "Cream Soda Skin",
+    "img": "images/skins/vulcan-cream-soda.webp"
+   }
+  ]
  },
  {
   "name": "Warden",
