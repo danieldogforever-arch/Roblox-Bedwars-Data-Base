@@ -21265,7 +21265,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Summon creatures from the spirit world to assist you in combat, healing, and resource collecting!",
-  "adv": "Uma throws spirits with its Spirit Staff. Each throw uses a Summon Stone: you get a free one every 20 seconds, or buy them for 30 iron each, and you can hold up to 10. Use Change Spirit Affinity to swap between Attack and Heal spirits. Spirits reach 28 blocks and affect everything within 5 blocks of where they land, with a 0.75 second cooldown between throws.\nBoth spirits do the same thing to whoever they land on: a direct hit, then 4 ticks every 0.5 seconds. On enemies they deal damage, and on teammates they heal. The Attack spirit's ticks are stronger on enemies, and the Heal spirit's ticks are stronger on teammates. If you miss but they're within 5 blocks, they only get the ticks. Spirit damage has 70% armor penetration and works with enchants.\nUpgrade the staff to Spirit Tier II for 3 emeralds and Tier III for 6 to make every spirit stronger. Spirits thrown at a generator or loot on the ground pick it up and bring it to you, though they go for players first if any are in range.",
+  "adv": "Uma throws spirits with its Spirit Staff. Each throw uses a Summon Stone: you get a free one every 20 seconds, or buy them for 30 iron each, and you can hold up to 10. Use Change Spirit Affinity to swap between Attack and Heal spirits, and click either spirit while holding the staff to store stones as that type. Spirits reach 28 blocks and affect everything within 5 blocks of where they land, with a 0.75 second cooldown between throws.\nBoth spirits do the same thing to whoever they land on: a direct hit, then 4 ticks every 0.5 seconds. On enemies they deal damage, and on teammates they heal. The Attack spirit's ticks are stronger on enemies, and the Heal spirit's ticks are stronger on teammates. If you miss but they're within 5 blocks, they only get the ticks. Spirit damage has 70% armor penetration and works with enchants.\nUpgrade the staff to Spirit Tier II for 3 emeralds and Tier III for 6 to make every spirit stronger. Spirits thrown at a generator or loot on the ground pick it up and bring it to you, though they go for players first if any are in range.",
   "items": [
    {
     "name": "Spirit Staff",
@@ -21331,7 +21331,7 @@
      [
       "II",
       "10 + 4.5 × 4 = 28",
-      "10 + ? × 4",
+      "10 + 3 × 4 = 22",
       "20.26"
      ],
      [
@@ -21341,7 +21341,7 @@
       "28.22"
      ]
     ],
-    "note": "Direct hit + 4 ticks, 0.5 seconds apart. A near miss only does the ticks. All three iron tests work out to exactly 70% armor penetration."
+    "note": "Direct hit + 4 ticks, 0.5 seconds apart. A near miss only does the ticks. The iron tests (and a ticks-only test at Tier III: 24 → 17.37) work out to exactly 70% armor penetration for both the direct hit and the ticks."
    },
    {
     "title": "Spirits on teammates (healing)",
