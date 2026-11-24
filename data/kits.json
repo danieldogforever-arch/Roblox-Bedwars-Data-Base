@@ -16720,7 +16720,7 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Trigger the darkness of Midnight to deal ramping increased damage and armor pen.",
-  "adv": "Nyx charges Midnight by dealing damage: 120 damage unlocks it. While Midnight is active (12 seconds), you get a speed boost (72 blocks in 9.83 seconds, about 7% faster than walking), and every sword hit makes you stronger. Your damage goes up by 1.2% × hits² and you get 0.6% × hits² armor penetration, maxing at +30% damage and 15% armor penetration on the 5th hit.\nThe bonus applies to all your damage, but only sword hits build it up. You also take more damage while in Midnight if you're wearing armor, since enemies ignore about 10% of it. Without armor, you take normal damage.\nAfter Midnight ends, you need another 120 damage to charge it again, and damage only starts counting 10 seconds later. You can't charge it during Midnight.",
+  "adv": "Nyx charges Midnight by dealing damage: 120 damage unlocks it. While Midnight is active (12 seconds), you get a speed boost (72 blocks in 9.83 seconds, about 7% faster than walking), and every sword hit makes you stronger. Your damage goes up by 1.2% × hits² and you get 0.6% × hits² armor penetration, maxing at +30% damage and 15% armor penetration on the 5th hit.\nThe bonus applies to all your damage, but only sword hits build it up. You also take more damage while in Midnight if you're wearing armor, since enemies ignore about 10% of it. Without armor, you take normal damage.\nMidnight has no cooldown. You just need another 120 damage to charge it again, and damage only starts counting 10 seconds after Midnight ends. Damage that would push the bar past full doesn't count: at 110, a 20 damage hit won't fill it, so you can sit at up to 119 and need one more hit that fits.",
   "items": [],
   "abilities": [
    {
@@ -19207,17 +19207,23 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Summon your void wolf companion Fenrir to mark an enemy. Deal extra damage to your marked target, gain a speed boost when following their trail, and see them through walls. You can detonate the mark to end the effect and deal damage.",
-  "adv": "",
+  "adv": "Skoll sends its wolf Fenrir after the nearest enemy. Fenrir flies 24 blocks in about 1.8 seconds and chases for up to 3.5 seconds. If it latches on, it stays attached for 20 seconds: you can see that enemy through walls, your sword hits on them do 20% more damage (24 with a wood sword) with about 36% armor penetration, and you get a speed boost while following their trail (48 blocks in 4.68 seconds, about 50% faster than walking).\nWhile Fenrir is attached you can use Hunt's End, which detonates the mark for a flat 24 damage with 50% armor penetration and removes Fenrir.\nFenrir has a 20 second cooldown. If it misses, the cooldown is only 7 seconds, and if you kill the marked enemy, it resets right away.",
   "items": [],
   "abilities": [
    {
     "name": "Fenrir",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 20,
+    "desc": "Fenrir chases an enemy (24 blocks in ~1.8s, up to 3.5s) and attaches for 20 seconds: +20% sword damage on them with ~36% armor penetration, a ~50% speed boost on their trail, and you see them through walls. 7 second cooldown if it misses; resets if you kill the target.",
+    "nodps": true
    },
    {
     "name": "Hunt's End",
+    "img": "images/abilities/ability-template.png",
     "note": "Only while Fenrir is on a target",
-    "img": "images/abilities/ability-template.png"
+    "dmg": 24,
+    "desc": "Detonates the mark for a flat 24 damage with 50% armor penetration, and removes Fenrir.",
+    "nodps": true
    }
   ],
   "history": [
@@ -19262,7 +19268,100 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "tables": [
+   {
+    "title": "Damage on a marked enemy",
+    "head": [
+     "Attack",
+     "No armor",
+     "Leather",
+     "Iron",
+     "Diamond",
+     "Emerald"
+    ],
+    "rows": [
+     [
+      "Wood sword (marked)",
+      "24",
+      "17.63",
+      "13.2",
+      "7.9",
+      "5.48"
+     ],
+     [
+      "Hunt's End",
+      "24",
+      "18.73",
+      "14.67",
+      "9.29",
+      "6.62"
+     ]
+    ],
+    "note": "No armor and iron are tested. The marked sword hit works out to about 36% armor penetration and Hunt's End to 50%; the other armor values are worked out from that."
+   },
+   {
+    "title": "Fenrir",
+    "head": [
+     "",
+     "Value"
+    ],
+    "rows": [
+     [
+      "Cooldown",
+      "20s (7s if it misses, resets on kill)"
+     ],
+     [
+      "Travel speed",
+      "24 blocks in ~1.8s"
+     ],
+     [
+      "Chases for",
+      "3.5s"
+     ],
+     [
+      "Attached for",
+      "20s"
+     ],
+     [
+      "Speed boost",
+      "~50% (48 blocks in 4.68s)"
+     ],
+     [
+      "Damage boost",
+      "+20% on the marked enemy"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Chase and hit harder",
+    "text": "Use Fenrir to chase enemies down, or to deal extra damage in a fight."
+   },
+   {
+    "title": "Save Hunt's End",
+    "text": "Only use Hunt's End if the enemy gets too far away, or when you're both low and need one more hit to finish them."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Build up",
+    "text": "When Fenrir is chasing you, build up fast so it misses."
+   },
+   {
+    "title": "Don't run",
+    "text": "If it latches on, stall and build up. Don't run away: Skoll wants you to, since it's faster on your trail."
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "It's a unique kit with great damage and speed, but a smart enemy can avoid it.",
+  "skins": [
+   {
+    "name": "NecroSoul Skin",
+    "img": "images/skins/skoll-necrosoul.webp"
+   }
+  ]
  },
  {
   "name": "Smoke",
