@@ -25922,33 +25922,51 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Wields a Cutlass and Blunderbuss. Ability fires the Blunderbuss, damaging and marking enemies ahead while knocking you back. Melee hits on marked foes reset cooldown, cause bleeding, and grant a speed boost.",
-  "adv": "",
+  "adv": "Zarrah's swords are replaced by a Cutlass and Blunderbuss, which hit the same as normal swords but cost more. While holding it, Fire! (8 second cooldown) blasts enemies within 8 blocks in a 5 block wide area for 130% of your cutlass damage (26 with wood), with 10% armor penetration, and Marks them for 8 seconds. It also knocks you back: about 1.5 blocks standing, or about 8 if you jump first. Turn your camera the other way before firing to launch yourself forward instead.\nHitting a Marked enemy with your cutlass triggers the Mark: that hit does 35% more damage (27 with wood), they bleed for 2 damage 4 times (30% armor penetration), you get 50% speed for 3 seconds, and Fire!'s cooldown resets.\nGrounded doesn't stop Fire!, it only stops the knockback.",
   "items": [
    {
     "name": "Wood Cutlass",
-    "img": "images/items/wood-cutlass.png"
+    "img": "images/items/wood-cutlass.png",
+    "note": "Spawn with it",
+    "desc": "Hits like a wood sword (20). Fire!: 26 damage. Marked hit: 27.",
+    "nodps": true
    },
    {
     "name": "Stone Cutlass",
-    "img": "images/items/stone-cutlass.png"
+    "img": "images/items/stone-cutlass.png",
+    "note": "Cost: 28 iron",
+    "desc": "Hits like a stone sword (25). Fire!: 32.5 damage. Marked hit: 33.75.",
+    "nodps": true
    },
    {
     "name": "Iron Cutlass",
-    "img": "images/items/iron-cutlass.png"
+    "img": "images/items/iron-cutlass.png",
+    "note": "Cost: 85 iron",
+    "desc": "Hits like a iron sword (30). Fire!: 39 damage. Marked hit: 40.5.",
+    "nodps": true
    },
    {
     "name": "Diamond Cutlass",
-    "img": "images/items/diamond-cutlass.png"
+    "img": "images/items/diamond-cutlass.png",
+    "note": "Cost: 5 emeralds",
+    "desc": "Hits like a diamond sword (42). Fire!: 54.6 damage. Marked hit: 56.7.",
+    "nodps": true
    },
    {
     "name": "Emerald Cutlass",
-    "img": "images/items/emerald-cutlass.png"
+    "img": "images/items/emerald-cutlass.png",
+    "note": "Cost: 22 emeralds",
+    "desc": "Hits like a emerald sword (55). Fire!: 71.5 damage. Marked hit: 74.25.",
+    "nodps": true
    }
   ],
   "abilities": [
    {
     "name": "Fire!",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 8,
+    "desc": "130% of your cutlass damage to enemies within 8 blocks (5 block wide), 10% armor penetration, and Marks them for 8 seconds. Knocks you back 1.5 blocks, or ~8 if you jump. A cutlass hit on a Marked enemy resets the cooldown.",
+    "nodps": true
    }
   ],
   "history": [
@@ -26030,7 +26048,119 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "passives": [
+   {
+    "name": "Mark",
+    "when": "Cutlass hit on a Marked enemy",
+    "desc": "+35% damage on that hit, bleed 2 × 4 (30% armor penetration), 50% speed for 3 seconds, and Fire! resets."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Cutlass and Blunderbuss",
+    "head": [
+     "Cutlass",
+     "Cost",
+     "Hit",
+     "Fire! (130%)",
+     "Marked hit (+35%)",
+     "Bleed"
+    ],
+    "rows": [
+     [
+      "img:images/items/wood-cutlass.png|Wood",
+      "Spawn with it",
+      "20",
+      "26",
+      "27",
+      "2 × 4"
+     ],
+     [
+      "img:images/items/stone-cutlass.png|Stone",
+      "28 iron",
+      "25",
+      "32.5",
+      "33.75",
+      "2 × 4"
+     ],
+     [
+      "img:images/items/iron-cutlass.png|Iron",
+      "85 iron",
+      "30",
+      "39",
+      "40.5",
+      "2 × 4"
+     ],
+     [
+      "img:images/items/diamond-cutlass.png|Diamond",
+      "5 emeralds",
+      "42",
+      "54.6",
+      "56.7",
+      "2 × 4"
+     ],
+     [
+      "img:images/items/emerald-cutlass.png|Emerald",
+      "22 emeralds",
+      "55",
+      "71.5",
+      "74.25",
+      "2 × 4"
+     ]
+    ],
+    "note": "No armor. Wood is tested: Fire! 26, marked hit 27 (17.28 on leather, no armor penetration) and bleed 8 (5.74 on leather, 30% armor penetration). Fire! has 10% armor penetration."
+   },
+   {
+    "title": "Fire! recoil",
+    "head": [
+     "How",
+     "You move"
+    ],
+    "rows": [
+     [
+      "Standing",
+      "~1.5 blocks back"
+     ],
+     [
+      "Jumping",
+      "~8 blocks back"
+     ],
+     [
+      "Grounded",
+      "No recoil"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Hit and back off",
+    "text": "Use Fire!, hit them to trigger the Mark, then back off. Repeat until they're low enough to swoop in and finish them."
+   },
+   {
+    "title": "Fire for movement",
+    "text": "Learn to use Fire! for movement: face the other way so it launches you forward. Firing normally knocks you backward, which is great for escaping."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Make it miss",
+    "text": "Make Zarrah miss Fire!, then you have 8 seconds before it can use it again."
+   },
+   {
+    "title": "Stall the Mark",
+    "text": "If you get Marked, build up or run away until the 8 seconds run out, so it can't trigger the speed boost, bonus damage and bleed."
+   }
+  ],
+  "bal": "sop",
+  "balWhy": "50% speed, great movement and insane DPS make it basically unstoppable. No other movement/fighter hybrid gets this much love: it's so much better than Elektra, Yuzi and Yamini.",
+  "skins": [
+   {
+    "name": "Riptide Skin",
+    "img": "images/skins/zarrah-riptide.webp"
+   }
+  ]
  },
  {
   "name": "Zenith",
