@@ -16211,7 +16211,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Give up out-of-combat health regeneration to manipulate your life force and empower your attacks or heal. Gain life force by landing shots with life arrows and attacking.",
-  "adv": "Nazar runs on Life Force, a 150 point bar above the hotbar, and doesn't regenerate health normally. You gain Life Force by dealing damage (about 1 point per 4 damage after armor, at most once every 0.75 seconds), and passively 10 every 7–8 seconds, but passive gain stops at 50%. Healing from other sources is turned into Life Force too.\nConsume Life Force (3 second cooldown) instantly heals you, using up to 35 Life Force for up to 28 HP (1.25 Life Force per HP).\nEnable Empowered Attacks (1 second to switch on or off) gives your hits +40% damage, up to +10, plus extra armor penetration: +8% on swords, +17.5% on the Life Bow, +21.5% on the Life Crossbow and +26.5% on the Life Headhunter. Each empowered hit uses about 8–10 Life Force, and it stays on until you turn it off.\nNazar can buy Life versions of the bow, crossbow and headhunter instead of the normal ones. They shoot using your HP instead of arrows (5 / 10 / 12 per shot), won't fire if the shot would kill you, and refill Life Force quickly when they hit.",
+  "adv": "Nazar runs on Life Force, a 150 point bar above the hotbar, and doesn't regenerate health normally. You gain Life Force by dealing damage (about 1 point per 4 damage after armor, at most once every 0.75 seconds), and passively 10 every 7 seconds, but passive gain stops at 50%. Healing from other sources is turned into Life Force too.\nConsume Life Force (3 second cooldown) instantly heals you, using up to 35 Life Force for up to 28 HP (1.25 Life Force per HP).\nEnable Empowered Attacks (1 second to switch on or off) gives your hits +40% damage, up to +10, plus extra armor penetration: +8% on swords, +17.5% on the Life Bow, +21.5% on the Life Crossbow and +26.5% on the Life Headhunter. Each empowered hit uses about 8–10 Life Force, and it stays on until you turn it off.\nNazar can buy Life versions of the bow, crossbow and headhunter instead of the normal ones, for the same price. They shoot using your HP instead of arrows (5 / 10 / 12 per shot), won't fire if the shot would kill you, and refill Life Force quickly when they hit.",
   "items": [
    {
     "name": "Life Bow",
@@ -16303,7 +16303,7 @@
    {
     "name": "Life Force",
     "when": "Dealing damage, and passively",
-    "desc": "150 max. ~1 per 4 damage dealt (0.75s cooldown), +10 every 7–8 seconds up to 50%. No normal health regeneration."
+    "desc": "150 max. ~1 per 4 damage dealt (0.75s cooldown), +10 every 7 seconds up to 50%. No normal health regeneration."
    }
   ],
   "tables": [
@@ -16366,7 +16366,7 @@
      ],
      [
       "Passive",
-      "+10 every 7–8s, only up to 50%"
+      "+10 every 7s, only up to 50%"
      ],
      [
       "Max heal",
@@ -16413,7 +16413,13 @@
    }
   ],
   "bal": "op",
-  "balWhy": "You get Sheep Herder level damage with armor penetration from the start, plus healing. The Life weapons shoot for free, so it's very cost efficient. Even under Static it still heals 20 at a time."
+  "balWhy": "You get Sheep Herder level damage with armor penetration from the start, plus healing. The Life weapons shoot for free, so it's very cost efficient. Even under Static it still heals 20 at a time.",
+  "skins": [
+   {
+    "name": "Mummy Skin",
+    "img": "images/skins/nazar-mummy.webp"
+   }
+  ]
  },
  {
   "name": "Noelle",
@@ -19990,15 +19996,19 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Pick up floating stars around the map. Consume them while near teammates to share permanent Max Health and Critical Strike chance!",
-  "adv": "",
+  "adv": "Stella collects stars that spawn around the map, a bit like Gompy's souls but less often. Stars last 3 minutes before despawning, and you can stand on them. There are two kinds:\nVitality Stars give permanent max HP: +2 for each of the first 5, then +1.6, +1.2, +0.8 and +0.4 for each group of 5 after that, and +0.2 for every star past 25.\nCrit Stars give permanent critical hit chance: +2% for each of the first 15, then +1% for the next 5, up to 35% at 20 stars. In testing, crits dealt up to about 45% extra damage.\nConsuming a star takes 1 second and slows you while you do it. Every teammate within 12 blocks gets the same buff, so it's best to use your stars when your whole team is together.",
   "items": [
    {
     "name": "Vitality Star",
-    "img": "images/items/vitality-star.png"
+    "img": "images/items/vitality-star.png",
+    "desc": "+2 max HP each for the first 5, then less with each group of 5, down to +0.2 after 25. Shared with teammates within 12 blocks.",
+    "nodps": true
    },
    {
     "name": "Crit Star",
-    "img": "images/items/crit-star.png"
+    "img": "images/items/crit-star.png",
+    "desc": "+2% crit chance each for the first 15, then +1% for the next 5 (35% max). Shared with teammates within 12 blocks.",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -20083,7 +20093,97 @@
    "tier": "40 (free)",
    "badge": "images/bp/s5.webp",
    "rent": 2000
-  }
+  },
+  "tables": [
+   {
+    "title": "Vitality Stars",
+    "head": [
+     "Stars",
+     "HP per star",
+     "Total max HP"
+    ],
+    "rows": [
+     [
+      "1–5",
+      "+2",
+      "10"
+     ],
+     [
+      "6–10",
+      "+1.6",
+      "18.0"
+     ],
+     [
+      "11–15",
+      "+1.2",
+      "24.0"
+     ],
+     [
+      "16–20",
+      "+0.8",
+      "28.0"
+     ],
+     [
+      "21–25",
+      "+0.4",
+      "30.0"
+     ],
+     [
+      "26+",
+      "+0.2",
+      "30 + 0.2 per star"
+     ]
+    ],
+    "note": "Totals are the extra max HP at the end of each group."
+   },
+   {
+    "title": "Crit Stars",
+    "head": [
+     "Stars",
+     "Crit chance per star",
+     "Total crit chance"
+    ],
+    "rows": [
+     [
+      "1–15",
+      "+2%",
+      "30%"
+     ],
+     [
+      "16–20",
+      "+1%",
+      "35% (max)"
+     ]
+    ],
+    "note": "In testing, crits dealt up to about 45% extra damage. The wiki's crit damage formula (base + base × 1.25 × (100 − stars) / 100) would give +100% at 20 stars, so it's probably outdated."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "20 of each",
+    "text": "The sweet spot is 20 of each star. After 20 Crit Stars, ignore them. Keep picking up Vitality Stars, but don't go out of your way, since they don't give much health anymore."
+   },
+   {
+    "title": "Bring blocks",
+    "text": "Get a lot of blocks. It's basically Beekeeper, but for support."
+   },
+   {
+    "title": "Use them together",
+    "text": "Use all your stars when your teammates are near you, so everyone gets the buffs."
+   },
+   {
+    "title": "Critical Strike",
+    "text": "Pair it with the Critical Strike enchant for a very high crit rate and insane damage."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Catch it collecting",
+    "text": "Target Stella while it's getting stars. It's almost always outside its base collecting, or waiting at base for teammates to come back so it can use them."
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "Its buffs are pretty nice, but it's mainly a late game kit. Your whole team gets the buffs, which puts you above the other team, so it's almost a must-have if matches last 18 minutes or more."
  },
  {
   "name": "Styx",
