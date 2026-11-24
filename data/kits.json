@@ -26180,7 +26180,6 @@
     "img": "images/items/wizard-staff-1.png",
     "note": "Spawn with it",
     "desc": "Lightning strikes up to 16.5 blocks away: 12 damage, 50% armor penetration, 5 block radius, Zapped for 10 seconds. 4 mana bars, 1 back every 6 seconds.",
-    "dmg": 12,
     "nodps": true
    },
    {
@@ -26188,7 +26187,6 @@
     "img": "images/items/wizard-staff-2.png",
     "note": "Cost: 4 emeralds",
     "desc": "Same strikes, 5 mana bars, 1 back every 4 seconds. Unlocks Shockwave.",
-    "dmg": 12,
     "nodps": true
    },
    {
@@ -26196,7 +26194,6 @@
     "img": "images/items/wizard-staff-3.png",
     "note": "Cost: 6 emeralds",
     "desc": "Same strikes, 6 mana bars, 1 back every 3.25 seconds. Unlocks Lightning Storm.",
-    "dmg": 12,
     "nodps": true
    }
   ],
