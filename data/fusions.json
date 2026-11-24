@@ -655,11 +655,6 @@
   "note": ""
  },
  {
-  "a": "Lassy",
-  "b": "Trapper",
-  "note": ""
- },
- {
   "a": "Lian",
   "b": "Marrow",
   "note": ""
@@ -1482,6 +1477,26 @@
  {
   "a": "Trixie",
   "b": "Jade",
+  "note": ""
+ },
+ {
+  "a": "Trapper",
+  "b": "Lassy",
+  "note": ""
+ },
+ {
+  "a": "Trapper",
+  "b": "Miner",
+  "note": ""
+ },
+ {
+  "a": "Trapper",
+  "b": "Taliyah",
+  "note": ""
+ },
+ {
+  "a": "Trapper",
+  "b": "Cogsworth",
   "note": ""
  }
 ]

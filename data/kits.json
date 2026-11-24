@@ -21074,7 +21074,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Place Snap Traps to stun unexpecting enemies, Damaging a recently trapped enemy will consume a mark dealing extra damage.",
-  "adv": "",
+  "adv": "Trapper buys traps and throws them up to 14 blocks with Throw Trap (0.3 second cooldown), onto floors, walls or ceilings. Use Switch Trap to pick which kind to throw. You can buy as many as you want and keep them when you die, but only 10 of each kind can be placed at once. Traps are visible for 1 second after landing, then turn invisible, though they show faintly when an enemy is right under them. They have the same health as Blastproof Ceramic and can be broken with a pickaxe or explosives.\nSnap Trap (12 iron) stuns the enemy for 1.75 seconds, Grounds them for 2 seconds, and Snaps them for 5 seconds: your next sword hit on them does 60% more damage and 2x knockback.\nVenom Trap (16 iron) poisons enemies who step in it (3×3 area) for 5 damage a second for 5 seconds (25 total), ignoring armor completely. The poison can't kill.\nExplosive Trap (18 iron) explodes for 30 damage with no armor penetration, and breaks wool, planks and stone brick very easily. Use Detonate Traps to set off all your Explosive Traps at once.",
   "items": [
    {
     "name": "Snap Trap",
@@ -21092,15 +21092,22 @@
   "abilities": [
    {
     "name": "Throw Trap",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 0.3,
+    "desc": "Throw the selected trap up to 14 blocks, onto floors, walls or ceilings.",
+    "nodps": true
    },
    {
     "name": "Switch Trap",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Pick which trap to throw.",
+    "nodps": true
    },
    {
     "name": "Detonate Traps",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "Set off all your Explosive Traps.",
+    "nodps": true
    }
   ],
   "history": [
@@ -21213,7 +21220,101 @@
    "badge": "images/bp/s2.webp",
    "rent": 2000,
    "buy": 25000
-  }
+  },
+  "tables": [
+   {
+    "title": "Traps",
+    "head": [
+     "Trap",
+     "Cost",
+     "Effect"
+    ],
+    "rows": [
+     [
+      "Snap Trap",
+      "12 iron",
+      "Stun 1.75s, Grounded 2s, Snapped 5s (next sword hit +60% damage, 2x knockback)"
+     ],
+     [
+      "Venom Trap",
+      "16 iron",
+      "5 poison a second for 5s (25 total), 100% armor penetration, 3×3, can't kill"
+     ],
+     [
+      "Explosive Trap",
+      "18 iron",
+      "30 damage, 0% armor penetration, breaks wool, planks and stone easily"
+     ]
+    ],
+    "note": "Max 10 placed of each kind. Same health as Blastproof Ceramic."
+   },
+   {
+    "title": "Explosive Trap damage",
+    "head": [
+     "Armor",
+     "Damage"
+    ],
+    "rows": [
+     [
+      "None",
+      "30"
+     ],
+     [
+      "img:images/armor/leather.png|Leather",
+      "19.2"
+     ],
+     [
+      "img:images/armor/iron.png|Iron",
+      "13.2"
+     ],
+     [
+      "img:images/armor/diamond.png|Diamond",
+      "7.2"
+     ],
+     [
+      "img:images/armor/emerald.png|Emerald",
+      "4.8"
+     ]
+    ],
+    "note": "Diamond is tested (7.20), which means no armor penetration."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Snap for combos",
+    "text": "Use Snap Traps to start combos: the stun, Grounded and +60% hit set up an easy kill."
+   },
+   {
+    "title": "Venom for groups",
+    "text": "Use Venom Traps for area damage where enemies walk."
+   },
+   {
+    "title": "Explosive for breaking",
+    "text": "Use Explosive Traps to break bed defenses and bridges, and for area damage."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Check with your tool",
+    "text": "Hold your pickaxe out and feel for traps, then break them."
+   },
+   {
+    "title": "TNT their base",
+    "text": "If you're going into a Trapper's base, TNT around it first to clear any traps."
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "The traps are all very good, but they're too easy to break. Once people know there's a Trapper, they just check for traps with their pickaxe, so you can't really trap anyone. Pickaxes shouldn't be able to break traps, only explosives.",
+  "skins": [
+   {
+    "name": "Pearlescent Skin",
+    "img": "images/skins/trapper-pearlescent.webp"
+   },
+   {
+    "name": "OG Chroma Skin",
+    "img": "images/skins/trapper-og-chroma.webp"
+   }
+  ]
  },
  {
   "name": "Trinity",
