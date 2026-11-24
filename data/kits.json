@@ -21265,15 +21265,21 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Summon creatures from the spirit world to assist you in combat, healing, and resource collecting!",
-  "adv": "",
+  "adv": "Uma throws spirits with its Spirit Staff. Each throw uses a Summon Stone: you get a free one every 20 seconds, or buy them for 30 iron each, and you can hold up to 10. Use Change Spirit Affinity to swap between Attack and Heal spirits. Spirits reach 28 blocks and affect everything within 5 blocks of where they land, with a 0.75 second cooldown between throws.\nBoth spirits do the same thing to whoever they land on: a direct hit, then 4 ticks every 0.5 seconds. On enemies they deal damage, and on teammates they heal. The Attack spirit's ticks are stronger on enemies, and the Heal spirit's ticks are stronger on teammates. If you miss but they're within 5 blocks, they only get the ticks. Spirit damage has 70% armor penetration and works with enchants.\nUpgrade the staff to Spirit Tier II for 3 emeralds and Tier III for 6 to make every spirit stronger. Spirits thrown at a generator or loot on the ground pick it up and bring it to you, though they go for players first if any are in range.",
   "items": [
    {
-    "name": "Summon Stone",
-    "img": "images/items/summon-stone.png"
+    "name": "Spirit Staff",
+    "img": "images/items/spirit-staff.png",
+    "note": "Spawn with it (Tier II: 3 emeralds, Tier III: 6)",
+    "desc": "Throw Attack or Heal spirits (0.75 second cooldown, 28 block range, 5 block radius). Picks up loot from generators and the ground.",
+    "nodps": true
    },
    {
-    "name": "Spirit Staff",
-    "img": "images/items/spirit-staff.png"
+    "name": "Summon Stone",
+    "img": "images/items/summon-stone.png",
+    "note": "Cost: 30 iron (free every 20s)",
+    "desc": "Used for each spirit. Hold up to 10.",
+    "nodps": true
    }
   ],
   "abilities": [
@@ -21305,7 +21311,97 @@
    "src": "Kit Shop",
    "buy": 10000,
    "rent": 1500
-  }
+  },
+  "tables": [
+   {
+    "title": "Spirits on enemies (damage)",
+    "head": [
+     "Tier",
+     "Attack spirit",
+     "Heal spirit",
+     "Attack spirit on iron armor"
+    ],
+    "rows": [
+     [
+      "I",
+      "5 + 3 × 4 = 17",
+      "5 + 2 × 4 = 13",
+      "12.3"
+     ],
+     [
+      "II",
+      "10 + 4.5 × 4 = 28",
+      "10 + ? × 4",
+      "20.26"
+     ],
+     [
+      "III",
+      "15 + 6 × 4 = 39",
+      "15 + 4 × 4 = 31",
+      "28.22"
+     ]
+    ],
+    "note": "Direct hit + 4 ticks, 0.5 seconds apart. A near miss only does the ticks. All three iron tests work out to exactly 70% armor penetration."
+   },
+   {
+    "title": "Spirits on teammates (healing)",
+    "head": [
+     "Tier",
+     "Heal spirit",
+     "Attack spirit"
+    ],
+    "rows": [
+     [
+      "I",
+      "5 + 4 × 4 = 21",
+      "5 + 2 × 4 = 13"
+     ],
+     [
+      "II",
+      "10 + 6 × 4 = 34",
+      "10 + 3 × 4 = 22"
+     ],
+     [
+      "III",
+      "15 + 8 × 4 = 47",
+      "15 + 4 × 4 = 31"
+     ]
+    ],
+    "note": "Direct hit + 4 ticks, 0.5 seconds apart. A near miss only heals the ticks."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Cycle generators",
+    "text": "Throw spirits at generators to pull in loot, get Tier III, then use it to heal and deal damage."
+   },
+   {
+    "title": "Mix your spirits",
+    "text": "Keep about 4 Attack and 6 Heal spirits at a time, or the other way around for a more offensive build. Or go all Attack or all Heal, depending on how you want to play."
+   },
+   {
+    "title": "Stay close",
+    "text": "Direct hits do the most, so it's easier when teammates and enemies are close to you."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Cycle your gens",
+    "text": "If you see an Uma, collect your generators quickly before it throws a spirit to steal the loot."
+   },
+   {
+    "title": "Static",
+    "text": "You can't avoid the damage inside the 5 block radius, so get Static (Zapped) to stop its healing, which is really strong."
+   }
+  ],
+  "bal": "sop",
+  "balWhy": "It's very versatile and the best at most of what it does. It can cycle loot from generators, has the best healing in the game, and shreds with high armor penetration that works with enchants. Getting the most out of it does take good aim.",
+  "skins": [
+   {
+    "name": "Bunny Skin",
+    "img": "images/skins/uma-bunny.webp"
+   }
+  ]
  },
  {
   "name": "Umbra",
