@@ -21677,21 +21677,21 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Warp around and confuse your enemies with evasive combat. Every time you use Rift Warp you gain a buff that allows you to reduce Rift Warp's cooldown with melee attacks. You can also use Rift Rewind to teleport back to your last warp point.",
-  "adv": "Rift Warp (20 second cooldown) sends Trixie through a rift 9 blocks in the direction you're looking. It can't go through walls. The portal you warped from stays open for about 6 seconds, and you get Rift Madness for that time.\nWhile Rift Madness is active, Rift Rewind takes you back to that portal from anywhere, and every melee hit on an enemy takes 3 seconds off Rift Warp's cooldown. Using a Telepearl while a portal is open closes it.\nIf you use Rift Warp while falling fast or after a cannon launch, you don't move or get a portal, but the cooldown is still used up.",
+  "adv": "Rift Warp (20 second cooldown) sends Trixie through a rift 9 blocks in the direction you're looking. It can't go through walls. A portal opens where you land and stays for about 6 seconds, and you get Rift Madness for that time.\nWhile Rift Madness is active, Rift Rewind takes you back to that portal from anywhere, and every melee hit on an enemy takes 3 seconds off Rift Warp's cooldown. Using a Telepearl while a portal is open closes it.\nIf you use Rift Warp while falling fast or after a cannon launch, you don't move or get a portal, but the cooldown is still used up.",
   "items": [],
   "abilities": [
    {
     "name": "Rift Warp",
     "img": "images/abilities/ability-template.png",
     "cd": 20,
-    "desc": "Warp 9 blocks the way you're looking (not through walls). Leaves a portal and gives Rift Madness for ~6 seconds: melee hits take 3 seconds off this cooldown.",
+    "desc": "Warp 9 blocks the way you're looking (not through walls). A portal opens where you land, and you get Rift Madness for ~6 seconds: melee hits take 3 seconds off this cooldown.",
     "nodps": true
    },
    {
     "name": "Rift Rewind",
     "img": "images/abilities/ability-template.png",
     "note": "Only during Rift Madness",
-    "desc": "Teleport back to your portal from anywhere.",
+    "desc": "Teleport back to the portal where you landed, from anywhere.",
     "nodps": true
    }
   ],
@@ -21757,7 +21757,7 @@
      ],
      [
       "Rift Rewind",
-      "Back to the portal from any distance"
+      "Back to the portal where you landed, from any distance"
      ]
     ]
    }
@@ -21765,11 +21765,11 @@
   "strategy": [
    {
     "title": "Break their tracking",
-    "text": "In a fight, warp upward to mess up the enemy's aim, get a few hits in, then rewind back."
+    "text": "In a fight, warp upward to mess up the enemy's aim, drop down and get a few hits in, then rewind back up to your portal."
    },
    {
-    "title": "In and out",
-    "text": "Use it like a stopwatch: warp in, fight, then rewind back to safety."
+    "title": "Safe spot",
+    "text": "Use it like a stopwatch: warp to a safe spot to leave a portal there, go fight, then rewind back to it."
    }
   ],
   "counter": [
