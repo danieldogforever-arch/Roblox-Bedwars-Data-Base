@@ -23145,11 +23145,21 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Master arcane secrets to unlock elemental powers! Spawn with a magic spellbook. Deal 20% reduced damage with swords and take 10% increased damage from all sources.",
-  "adv": "",
+  "adv": "Whim spawns with a Magic Wand instead of a wood sword, and can buy normal swords at the normal price. Whim deals 20% less damage with swords (the Wand's 15 becomes 12) and takes 5% more damage.\nWhim fights with its Mage Spellbook. Each spell takes 0.8 seconds to fly and has a 0.8 second cooldown, and costs about 15% of your mana (you need about 10% to cast). Landing a hit gives half of it back. Mana refills in 20 seconds (5 per second). If you miss every shot, a full bar gives 6 spells, plus one more after a second of recharging.\nElemental Knowledge Books spawn around mid. The first appears at 0:30, and each new one 3 minutes after you pick up the last. Hold one for 0.5 seconds to learn its spell:\nNature (1st book): doubles normal spell damage to 20, and every 3rd spell becomes Nature, which deals 35 and heals you 4 a second for 3 seconds.\nFire (2nd book): 37 damage, then burns for 3.75 every 0.5 seconds, 11 times (41.25).\nIce (3rd book): 40 damage with 70% armor penetration, slows, and Grounds the enemy for 6 seconds. After this, your spells only cycle Nature, Fire and Ice.",
   "items": [
    {
+    "name": "Magic Wand",
+    "img": "images/items/magic-wand.png",
+    "note": "Spawn with it",
+    "desc": "Replaces the Wood Sword. 15 damage, 12 after Whim's sword penalty (5.28 to iron).",
+    "nodps": true
+   },
+   {
     "name": "Mage Spellbook",
-    "img": "images/items/mage-spellbook.png"
+    "img": "images/items/mage-spellbook.png",
+    "note": "Spawn with it",
+    "desc": "Casts spells (0.8 second cooldown) using mana: ~15% per spell, half back on a hit, full in 20 seconds. Elemental Books add Nature, Fire and Ice spells.",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -23324,7 +23334,171 @@
    "tier": "25 (free)",
    "badge": "images/bp/s6.webp",
    "rent": 2000
-  }
+  },
+  "passives": [
+   {
+    "name": "Mana",
+    "when": "Casting",
+    "desc": "~15% per spell (needs ~10% to cast). Half back on a hit. Refills 5 per second (20 seconds from empty)."
+   },
+   {
+    "name": "Elemental Knowledge",
+    "when": "Picking up a book at mid",
+    "desc": "0:30, then 3 minutes after each pickup: Nature, then Fire, then Ice."
+   },
+   {
+    "name": "Frail Mage",
+    "when": "Always",
+    "desc": "20% less sword damage, and 5% more damage taken."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Spells",
+    "head": [
+     "Spell",
+     "No armor",
+     "Leather",
+     "Iron",
+     "Diamond",
+     "Emerald",
+     "Armor pen"
+    ],
+    "rows": [
+     [
+      "Normal spell (no book)",
+      "10",
+      "6.4",
+      "4.4",
+      "2.4",
+      "1.6",
+      "0%"
+     ],
+     [
+      "Normal spell (after a book)",
+      "20",
+      "12.8",
+      "8.8",
+      "4.8",
+      "3.2",
+      "0%"
+     ],
+     [
+      "Nature",
+      "35",
+      "25.11",
+      "18.51",
+      "10.88",
+      "7.49",
+      "30%"
+     ],
+     [
+      "Fire (hit)",
+      "37",
+      "26.55",
+      "19.57",
+      "11.5",
+      "7.91",
+      "30%"
+     ],
+     [
+      "Ice",
+      "40",
+      "34.22",
+      "28.95",
+      "20.51",
+      "15.53",
+      "70%"
+     ]
+    ],
+    "note": "Tested: normal spells on iron (4.4 and 8.8), Nature on iron (18.51), Fire on leather (26.55) and Ice on iron (28.95). Nature also heals you 4 a second for 3 seconds. Fire then burns for 3.75 every 0.5 seconds, 11 times; the burn seems to get through armor better (roughly 60% on leather, estimated). Ice also slows and Grounds for 6 seconds."
+   },
+   {
+    "title": "Spell rotation",
+    "head": [
+     "Books",
+     "Rotation"
+    ],
+    "rows": [
+     [
+      "None",
+      "Normal spells (10 damage)"
+     ],
+     [
+      "Nature",
+      "Normal, Normal, Nature (normal spells now 20)"
+     ],
+     [
+      "Nature + Fire",
+      "Normal spells, Nature and Fire"
+     ],
+     [
+      "All 3",
+      "Nature, Fire, Ice only"
+     ]
+    ]
+   },
+   {
+    "title": "Mana",
+    "head": [
+     "",
+     "Mana"
+    ],
+    "rows": [
+     [
+      "Cost per spell",
+      "~15%"
+     ],
+     [
+      "Needed to cast",
+      "~10%"
+     ],
+     [
+      "Back on a hit",
+      "Half (~7.5%)"
+     ],
+     [
+      "Regeneration",
+      "5 per second (20s from empty)"
+     ],
+     [
+      "Spells if you miss everything",
+      "6 (+1 after 1s)"
+     ]
+    ],
+    "note": "Measured from the mana bar."
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Rush the first book",
+    "text": "Head to mid when you spawn to get the first Elemental Book. It doubles your damage."
+   },
+   {
+    "title": "Watch your mana",
+    "text": "Don't shoot mindlessly. Only shoot when you know you'll hit, since hits give half the mana back. Make sure the Elemental spells land, since they hit hardest and have special effects."
+   },
+   {
+    "title": "Stay at range",
+    "text": "Avoid close fights and shoot from mid to far range instead."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Wall and dodge",
+    "text": "Build a wall and dodge spells. Whim can't spam because of mana, and it's easy to kill up close."
+   },
+   {
+    "title": "Pearl and Gloop",
+    "text": "Later in the game, pearl onto Whim, then Gloop it to finish it easily."
+   },
+   {
+    "title": "Don't chase",
+    "text": "Chasing a Whim feeds it mana and gets you hit with a lot of spells."
+   }
+  ],
+  "bal": "sop",
+  "balWhy": "The fire burn, the huge damage and all the extra effects are crazy. It's easier to kill up close, but you usually get destroyed by spells before you reach it. It needs a slight nerf."
  },
  {
   "name": "Whisper",
