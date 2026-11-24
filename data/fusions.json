@@ -656,11 +656,6 @@
  },
  {
   "a": "Lassy",
-  "b": "Trixie",
-  "note": ""
- },
- {
-  "a": "Lassy",
   "b": "Trapper",
   "note": ""
  },
@@ -1477,6 +1472,16 @@
  {
   "a": "Warden",
   "b": "Hannah",
+  "note": ""
+ },
+ {
+  "a": "Trixie",
+  "b": "Lassy",
+  "note": ""
+ },
+ {
+  "a": "Trixie",
+  "b": "Jade",
   "note": ""
  }
 ]
