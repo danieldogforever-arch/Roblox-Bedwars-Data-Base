@@ -21486,7 +21486,7 @@
       "~4.75s"
      ]
     ],
-    "note": "1.25 seconds to start, then 1.5 seconds plus about 0.02 seconds per block. Tested next to the player and at 50 blocks."
+    "note": "1.25 seconds to start, then 1.5 seconds plus about 0.02 seconds per block (1 second per 50 blocks). Tested next to the player, at 50 blocks and at 100 blocks."
    },
    {
     "title": "Teleport effects",
