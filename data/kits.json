@@ -21318,21 +21318,29 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Toss a hat onto other players to gain the ability to teleport to them from anywhere on the map. Ally players near the target destination are given boosted movement speed and several seconds of invulnerability while enemy players are knocked back and briefly slowed.",
-  "adv": "",
+  "adv": "Umbra buys a Teleport Hat for 35 iron and throws it onto a teammate or an enemy (10 second cooldown). The hat goes through walls, and stays on until you die or teleport to that player. Buying another hat lets you throw it onto someone else, which removes the old one.\nWhile your hat is on someone, you can Peek (1 second cooldown) to see where they are, with your screen turning gray. They also get a Request Teleport button, which only notifies you; it doesn't teleport you.\nTeleporting takes 1.25 seconds to start, then 1.5 seconds plus about 1 second per 50 blocks of distance. Teleporting to a teammate gives you both 20 shield for 6 seconds and a 20% speed boost for 3 seconds. Teleporting to an enemy knocks them back like a sword hit, with no damage and no shield or speed for you.",
   "items": [
    {
     "name": "Teleport Hat",
-    "img": "images/items/teleport-hat.png"
+    "img": "images/items/teleport-hat.png",
+    "note": "Cost: 35 iron",
+    "desc": "Throw onto a teammate or enemy (10 second cooldown). Goes through walls. Stays on until you die or teleport to them. A new hat replaces the old one.",
+    "nodps": true
    }
   ],
   "abilities": [
    {
     "name": "Teleport",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "desc": "1.25 seconds to start, then 1.5 seconds + ~1 second per 50 blocks. To a teammate: 20 shield (6s) and 20% speed (3s) for both of you. To an enemy: sword-like knockback, no damage.",
+    "nodps": true
    },
    {
     "name": "Peek",
-    "img": "images/abilities/ability-template.png"
+    "img": "images/abilities/ability-template.png",
+    "cd": 1,
+    "desc": "See where the player with your hat is. Your screen turns gray.",
+    "nodps": true
    }
   ],
   "history": [
@@ -21452,7 +21460,82 @@
    "tier": "35 (free)",
    "badge": "images/bp/s7.webp",
    "rent": 2000
-  }
+  },
+  "tables": [
+   {
+    "title": "Teleport time",
+    "head": [
+     "Distance",
+     "Total time"
+    ],
+    "rows": [
+     [
+      "Right next to them",
+      "~2.75s (1.25 + 1.5)"
+     ],
+     [
+      "25 blocks",
+      "~3.25s"
+     ],
+     [
+      "50 blocks",
+      "~3.75s (1.25 + 2.5)"
+     ],
+     [
+      "100 blocks",
+      "~4.75s"
+     ]
+    ],
+    "note": "1.25 seconds to start, then 1.5 seconds plus about 0.02 seconds per block. Tested next to the player and at 50 blocks."
+   },
+   {
+    "title": "Teleport effects",
+    "head": [
+     "Target",
+     "Effect"
+    ],
+    "rows": [
+     [
+      "Teammate",
+      "20 shield for 6s and 20% speed for 3s, for both of you"
+     ],
+     [
+      "Enemy",
+      "Knockback like a sword hit, no damage"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Escape home",
+    "text": "Keep a hat on a teammate at base so you can teleport home when you're in trouble."
+   },
+   {
+    "title": "Bed break",
+    "text": "Throw a hat on an enemy in their base, then teleport in to break their bed."
+   },
+   {
+    "title": "Knock them off",
+    "text": "Teleport onto enemies while they're building up to knock them off."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Dodge the hat",
+    "text": "Try to dodge it. Umbra has to wait 10 seconds to throw again."
+   },
+   {
+    "title": "Reset",
+    "text": "If Umbra's hat is on you, put your loot in your chest and reset so it can't teleport in when you least expect it."
+   },
+   {
+    "title": "Stop the teleport",
+    "text": "Gloop it or interrupt it during the 1.25 seconds before it starts teleporting."
+   }
+  ],
+  "bal": "bal",
+  "balWhy": "It used to give 40 shield and a huge speed boost, but at 20 shield it isn't unfair to face anymore. Most teams use it for bypass strategies, which got nerfed overall since the shield isn't as broken as it once was. It's a very fun kit now, with lots of playstyles."
  },
  {
   "name": "Umeko",
