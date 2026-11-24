@@ -19756,19 +19756,28 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Use a Frost Staff to slow and freeze enemies!",
-  "adv": "",
+  "adv": "Sophia spawns with a Magic Wand and Frost Staff I. The staff sprays a freezing mist up to 8 blocks away in a 4 block radius, hitting everyone inside every 0.25 seconds. Each hit adds a slow stack, about 5% slower per stack, up to about 50% at 10 stacks. Hitting someone with 10 stacks one more time freezes them solid for 1.75 seconds. Stacks last 7 seconds, refreshed with each hit, and are cleared by a freeze.\nAfter a freeze, the enemy gets Cold Resistance for 10 seconds, making them twice as hard to freeze, doubling again if they're frozen while it's active.\nFrost Staff II (4 emeralds) and III (8 emeralds) make the mist stronger and add a frost bolt (0.85 second cooldown). It does more damage the longer you charge it, up to 1 second: 17 to 34 on Staff II (3 slow stacks), 25 to 50 on Staff III (4 stacks). Everything has 15% armor penetration.\nSophia is slowed while using the staff: the mist makes you about 65% slower, and charging a bolt about 75% slower. There's a 0.5 second wait before you can use the mist again after stopping.",
   "items": [
    {
-    "name": "Frost Staff 1",
-    "img": "images/items/frost-staff-1.png"
+    "name": "Frost Staff I",
+    "img": "images/items/frost-staff-1.png",
+    "note": "Spawn with it",
+    "desc": "Mist: 4 damage every 0.25 seconds, +1 slow stack each.",
+    "nodps": true
    },
    {
-    "name": "Frost Staff 2",
-    "img": "images/items/frost-staff-2.png"
+    "name": "Frost Staff II",
+    "img": "images/items/frost-staff-2.png",
+    "note": "Cost: 4 emeralds",
+    "desc": "Mist: 7 damage per tick. Frost bolt: 17–34 by charge, 3 slow stacks.",
+    "nodps": true
    },
    {
-    "name": "Frost Staff 3",
-    "img": "images/items/frost-staff-3.png"
+    "name": "Frost Staff III",
+    "img": "images/items/frost-staff-3.png",
+    "note": "Cost: 8 emeralds",
+    "desc": "Mist: 12 damage per tick. Frost bolt: 25–50 by charge, 4 slow stacks.",
+    "nodps": true
    }
   ],
   "abilities": [],
@@ -19823,7 +19832,203 @@
   "obtain": {
    "src": "Holiday Bundle 2025",
    "rent": 2500
-  }
+  },
+  "passives": [
+   {
+    "name": "Slow Stacks",
+    "when": "Each mist tick or bolt",
+    "desc": "About 5% slower per stack (≈50% at 10). One more hit at 10 freezes for 1.75 seconds. Stacks last 7 seconds."
+   },
+   {
+    "name": "Cold Resistance",
+    "when": "After being frozen",
+    "desc": "10 seconds of being twice as hard to freeze, doubling again if frozen while it's active."
+   }
+  ],
+  "tables": [
+   {
+    "title": "Slow stacks",
+    "head": [
+     "Stacks",
+     "24 blocks took",
+     "Slower than walking"
+    ],
+    "rows": [
+     [
+      "1",
+      "3.45s",
+      "~0–5%"
+     ],
+     [
+      "2",
+      "4s",
+      "12.5%"
+     ],
+     [
+      "3",
+      "4.15s",
+      "16%"
+     ],
+     [
+      "4",
+      "4.4s",
+      "20.5%"
+     ],
+     [
+      "5",
+      "4.8s",
+      "27%"
+     ],
+     [
+      "6",
+      "4.93s",
+      "29%"
+     ],
+     [
+      "7",
+      "5.3s",
+      "34%"
+     ],
+     [
+      "8",
+      "5.6s",
+      "37.5%"
+     ],
+     [
+      "9",
+      "6.2s",
+      "43.5%"
+     ],
+     [
+      "10",
+      "6.75s",
+      "48%"
+     ]
+    ],
+    "note": "Walking takes about 3.5 seconds for 24 blocks. Roughly 5% slower per stack."
+   },
+   {
+    "title": "Frost Staff damage",
+    "head": [
+     "Attack",
+     "No armor",
+     "Leather",
+     "Iron",
+     "Diamond",
+     "Emerald"
+    ],
+    "rows": [
+     [
+      "Mist I (per tick)",
+      "4",
+      "2.71",
+      "1.92",
+      "1.08",
+      "0.73"
+     ],
+     [
+      "Mist II (per tick)",
+      "7",
+      "4.74",
+      "3.36",
+      "1.9",
+      "1.28"
+     ],
+     [
+      "Mist III (per tick)",
+      "12",
+      "8.12",
+      "5.76",
+      "3.25",
+      "2.2"
+     ],
+     [
+      "Bolt II (no charge)",
+      "17",
+      "11.5",
+      "8.17",
+      "4.6",
+      "3.11"
+     ],
+     [
+      "Bolt II (full charge)",
+      "34",
+      "23",
+      "16.33",
+      "9.21",
+      "6.22"
+     ],
+     [
+      "Bolt III (no charge)",
+      "25",
+      "16.91",
+      "12.01",
+      "6.77",
+      "4.58"
+     ],
+     [
+      "Bolt III (full charge)",
+      "50",
+      "33.83",
+      "24.02",
+      "13.54",
+      "9.15"
+     ]
+    ],
+    "note": "All 15% armor penetration (tested on iron for every mist tier and the full Staff II bolt). Bolt damage scales evenly with charge time, up to 1 second."
+   },
+   {
+    "title": "Hits to freeze",
+    "head": [
+     "Attack",
+     "Stacks per hit",
+     "Hits to freeze"
+    ],
+    "rows": [
+     [
+      "Mist (any staff)",
+      "1 per 0.25s",
+      "11 ticks (~2.75s)"
+     ],
+     [
+      "Bolt II",
+      "3",
+      "4"
+     ],
+     [
+      "Bolt III",
+      "4",
+      "3"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Don't fully charge",
+    "text": "Spam uncharged bolts instead. If you hit your shots, you deal more damage and stack slows faster, freezing enemies sooner."
+   },
+   {
+    "title": "Mist for groups",
+    "text": "Use the mist in group fights to slow and freeze several people at once."
+   },
+   {
+    "title": "Bolts to chase",
+    "text": "Use bolts when you're chasing someone."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Block the shots",
+    "text": "Place blocks behind you so you can't get hit, or build a wall if a Sophia is shooting at your base."
+   },
+   {
+    "title": "Use projectiles",
+    "text": "Fight Sophia with projectiles. Going in close when it can freeze you is a bad idea."
+   }
+  ],
+  "bal": "adj",
+  "balWhy": "It's weaker at spawn than it used to be, but freezing enemies in just 3 hits is insane. Slowing them after 1–2 hits is already enough, and the later staffs are too strong. Maybe 1 stack for the lowest charge, and the most only at full charge."
  },
  {
   "name": "Spirit Catcher",
