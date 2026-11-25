@@ -16432,37 +16432,57 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Tame slimes to befriend your team, providing your teammates with unique buffs that strengthen over time!",
-  "adv": "",
+  "adv": "Noelle spawns with the Slime Flute and buys slimes to put on teammates or itself: Frosty and Sticky Slimes cost 2 emeralds, Void and Blessed Slimes cost 3 (10 emeralds for all four). Use Direct/Recall Slime (1 second cooldown) to send a slime to a player or call it back, and Cycle Slimes (no cooldown) to pick which slime you're directing.\nSlimes start weak and get stronger over time, up to max after about 20 minutes, or faster when they help (dealing damage, healing or collecting resources). They level up faster on teammates than on Noelle.\nSticky Slime has a 5–25% chance to duplicate diamonds and emeralds from generators, and collects them into your inventory if you're within 5 blocks. Void Slime adds 5–15% damage. Blessed Slime heals 5–10% of your current HP every 2.5 seconds. Frosty Slime slows enemies you hit by 5–30% for 2 seconds.\nStacking slimes on one player makes them much weaker: with 3 on one player each works at about 30%, and with all 4 at about 12%.",
   "items": [
    {
-    "name": "Blessed Slime",
-    "img": "images/items/blessed-slime.png"
+    "name": "Slime Flute",
+    "img": "images/items/slime-flute.png",
+    "note": "Spawn with it",
+    "desc": "Direct, recall and cycle your slimes.",
+    "nodps": true
    },
    {
     "name": "Sticky Slime",
-    "img": "images/items/sticky-slime.png"
-   },
-   {
-    "name": "Void Slime",
-    "img": "images/items/void-slime.png"
+    "img": "images/items/sticky-slime.png",
+    "note": "Cost: 2 emeralds",
+    "desc": "5–25% chance to duplicate diamonds and emeralds from generators. Collects them for you within 5 blocks.",
+    "nodps": true
    },
    {
     "name": "Frost Slime",
-    "img": "images/items/frost-slime.png"
+    "img": "images/items/frost-slime.png",
+    "note": "Cost: 2 emeralds",
+    "desc": "Hits slow enemies by 5–30% for 2 seconds.",
+    "nodps": true
    },
    {
-    "name": "Slime Flute",
-    "img": "images/items/slime-flute.png"
+    "name": "Void Slime",
+    "img": "images/items/void-slime.png",
+    "note": "Cost: 3 emeralds",
+    "desc": "+5–15% damage.",
+    "nodps": true
+   },
+   {
+    "name": "Blessed Slime",
+    "img": "images/items/blessed-slime.png",
+    "note": "Cost: 3 emeralds",
+    "desc": "Heals 5–10% of current HP every 2.5 seconds.",
+    "nodps": true
    }
   ],
   "abilities": [
    {
-    "name": "Cycle Slimes",
-    "img": "images/abilities/ability-template.png"
+    "name": "Direct/Recall Slime",
+    "img": "images/abilities/ability-template.png",
+    "cd": 1,
+    "desc": "Send the selected slime to a player, or call it back.",
+    "nodps": true
    },
    {
-    "name": "Direct/Recall Slime",
-    "img": "images/abilities/ability-template.png"
+    "name": "Cycle Slimes",
+    "img": "images/abilities/ability-template.png",
+    "desc": "Pick which slime to direct or recall. No cooldown.",
+    "nodps": true
    }
   ],
   "history": [
@@ -16569,7 +16589,84 @@
    "tier": "40 (paid)",
    "badge": "images/bp/s9.webp",
    "rent": 2000
-  }
+  },
+  "tables": [
+   {
+    "title": "Slimes",
+    "head": [
+     "Slime",
+     "Cost",
+     "Starts at",
+     "Max (~20 min)"
+    ],
+    "rows": [
+     [
+      "img:images/items/sticky-slime.png|Sticky",
+      "2 emeralds",
+      "5% dupe chance",
+      "25%"
+     ],
+     [
+      "img:images/items/frost-slime.png|Frosty",
+      "2 emeralds",
+      "5% slow",
+      "30%"
+     ],
+     [
+      "img:images/items/void-slime.png|Void",
+      "3 emeralds",
+      "+5% damage",
+      "+15%"
+     ],
+     [
+      "img:images/items/blessed-slime.png|Blessed",
+      "3 emeralds",
+      "5% of current HP / 2.5s",
+      "10%"
+     ]
+    ],
+    "note": "Slimes level up faster from helping (damage, healing, resources), and faster on teammates than on Noelle."
+   },
+   {
+    "title": "Slimes on one player",
+    "head": [
+     "Slimes",
+     "Each slime works at"
+    ],
+    "rows": [
+     [
+      "1–2",
+      "100%"
+     ],
+     [
+      "3",
+      "~30%"
+     ],
+     [
+      "4",
+      "~12%"
+     ]
+    ]
+   }
+  ],
+  "strategy": [
+   {
+    "title": "Max 2 per player",
+    "text": "Put at most 2 slimes on one player, and spread the rest across teammates."
+   },
+   {
+    "title": "Who gets what",
+    "text": "Put Blessed and Void on your main attacker, and Frosty and Sticky on movement or damage-over-time kits."
+   }
+  ],
+  "counter": [
+   {
+    "title": "Not worth chasing",
+    "text": "You can't really counter it, and it's not worth going out of your way to. Target the enemy with the Sticky Slime, though, since they'll be carrying more loot."
+   }
+  ],
+  "bal": "sup",
+  "balWhy": "Almost all the slimes are useless, and the okay ones aren't worth picking the kit for. It needs a lot of preparation just to match support kits that are better from spawn, and with 10 emeralds for all four you usually won't get them maxed."
  },
  {
   "name": "Nyoka",
