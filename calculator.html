@@ -219,6 +219,7 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
       <li>Isabel's shield blocks a set amount of the first hit (10 / 15 / 20 / 30, or all of it with an emerald sword), then needs 10 seconds to come back.</li>
       <li>Silas takes 1% less damage per Triumph stack, up to 20%. Press the Attack gives 10 shield, plus 0.5 per stack (20 at 20 stacks). The game shows it rounded up, so 10.5 shows as 11.</li>
       <li>Warrior armor replaces diamond armor for Warrior and blocks 80% of damage (a wood sword does 4). Emerald armor is the same as normal. Warrior takes 30% less damage while using Warrior's Strike (not included).</li>
+      <li>Aery's butterfly bonus is an approximate curve from tests (about 2 × stacks^0.71 on swords); projectiles get 80% of it.</li>
       <li>Health Regen Axolotl's healing (about 9% HP over 5 seconds) is counted as extra shield.</li>
     </ul>
   </div>
@@ -235,6 +236,7 @@ var KITBUFF={"Void Knight":{lab:"Void Ascension",o:[{n:"Void Ascension",m:1.2,no
  "Silas":{lab:"Damage aura",o:[{n:"Aura",m:1.05,note:"+5%"},{n:"With Press the Attack",m:1.1,note:"+10%"}]},
  "Nazar":{lab:"Empowered Attacks",o:[{n:"Empowered (sword)",m:1.4,cap:10,pen:8,note:"+40% (max +10), +8% pen"},{n:"Empowered (Life Bow)",m:1.4,cap:10,pen:17.5,note:"+17.5% pen"},{n:"Empowered (Life Crossbow)",m:1.4,cap:10,pen:21.5,note:"+21.5% pen"},{n:"Empowered (Life Headhunter)",m:1.4,cap:10,pen:26.5,note:"+26.5% pen"}]},
  "Zarrah":{lab:"Mark",o:[{n:"Marked hit",m:1.35,note:"+35% on the hit that triggers the Mark"}]},
+ "Aery":{lab:"Butterfly stacks",o:[2,4,6,10,16,20,30,40,50].map(function(n){var b=Math.round(2*Math.pow(n,0.71)*100)/100;return {n:n+" butterflies",m:1,add:b,addProj:0.8,note:"+"+b+" sword, +"+Math.round(b*80)/100+" projectiles"};})},
  "Zephyr":{lab:"Wind stacks",o:[1,2,3,4,5].map(function(n){return {n:n+" wind stack"+(n>1?"s":""),m:1,add:n+1,addPen:50,note:"+"+(n+1)+" wind strike"};})},
  "Skoll":{lab:"Fenrir",o:[{n:"Fenrir attached",m:1.2,note:"+20% damage on the marked enemy"}]},
  "Nyx":{lab:"Midnight hits",o:[1,2,3,4,5].map(function(n){return {n:(n===5?"5+ hits":n+(n>1?" hits":" hit")),m:1+0.012*n*n,pen:0.6*n*n,note:"+"+(1.2*n*n).toFixed(1).replace(".0","")+"% damage, +"+(0.6*n*n).toFixed(1).replace(".0","")+"% pen"};})},
@@ -329,7 +331,7 @@ function compute(){
   if(S.dk==="Infernal Shielder"){ if(S.ish&&w.proj){ d=0; out.push({x:"Deflected by the Infernal Shield",v:"0",c:"down"}); } else { var isr=S.ish?.4:.1; kd=1-(1-kd)*(1-isr); d*=1-isr; out.push({x:"Infernal Shielder -"+Math.round(isr*100)+"%"+(S.ish?" (holding shield)":""),v:fmt(d),c:"down"}); } }
   var bon=0;
   if(w.bonus){ var bp=(w.bonus.pen||0)/100, bm=1; if(arm.dr){ var br=arm.dr/(1-arm.dr); bm=1/(1+br*(1-bp)); } bon=w.bonus.dmg*bm*(1-au)*(1-kd); d+=bon; out.push({x:"+ "+w.bonus.label+" ("+fmt(w.bonus.dmg)+(w.bonus.pen?", "+w.bonus.pen+"% pen)":", no armor penetration)"),v:fmt(d),c:"up"}); }
-  if(asc&&KB.add){ var ap=(KB.addPen||0)/100, abm=1; if(arm.dr){ var abr=arm.dr/(1-arm.dr); abm=1/(1+abr*(1-ap)); } var ad=KB.add*abm*(1-au)*(1-kd); d+=ad; out.push({x:"+ "+KB.n+" ("+fmt(KB.add)+(KB.addPen?", "+KB.addPen+"% pen)":")"),v:fmt(d),c:"up"}); }
+  if(asc&&KB.add){ var addV=KB.add*(w.proj&&KB.addProj?KB.addProj:1); var ap=(KB.addPen||0)/100, abm=1; if(arm.dr){ var abr=arm.dr/(1-arm.dr); abm=1/(1+abr*(1-ap)); } var ad=addV*abm*(1-au)*(1-kd); d+=ad; out.push({x:"+ "+KB.n+" ("+fmt(addV)+(KB.addPen?", "+KB.addPen+"% pen)":")"),v:fmt(d),c:"up"}); }
   var hp=+S.hp||1, sh=+S.sh||0, tot=hp+sh;
   if(S.dk==="Isabel" && S.ib){ var ib=ISAB[S.ib], blk=ib.b<0?d:Math.min(ib.b,d); tot+=blk; out.push({x:ib.t+" shield blocks "+(ib.b<0?"the whole first hit":ib.b+" of the first hit"),v:"-"+fmt(blk)+" once",c:"down"}); }
   var hits=d>0?Math.ceil(tot/d - 1e-9):Infinity;

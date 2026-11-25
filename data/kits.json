@@ -490,7 +490,7 @@
   "diff": "hard",
   "hp": "90",
   "desc": "Killing enemies adds to your collection of spirit butterflies. Each spirit butterfly amplifies sword and projectile damage. Aery's base health is reduced by 10%.",
-  "adv": "Aery spawns with 90 HP. You gain 2 butterflies for every kill, and none for assists. Each butterfly is one stack, and stacks increase your projectile damage by 80% of the butterfly's value.\nThe bonus slows down as you collect more: each new stack adds less damage than the last, and eventually each butterfly adds less than 1 damage. After killing an enemy, you have to wait 25 seconds before you can gain stacks from that same enemy again.\nWhen you die you lose part of your stacks, and the more stacks you have, the bigger the share you lose (see the stack loss table).",
+  "adv": "Aery spawns with 90 HP. You gain 2 butterflies for every kill, and none for assists. Each butterfly is one stack, and stacks add flat damage to your sword hits, and projectiles get 80% of that bonus (if your sword gets +10, your bow gets +8).\nThe bonus slows down as you collect more: each new stack adds less damage than the last, and eventually each butterfly adds less than 1 damage. After killing an enemy, you have to wait 25 seconds before you can gain stacks from that same enemy again.\nWhen you die you lose part of your stacks, and the more stacks you have, the bigger the share you lose (see the stack loss table).",
   "items": [],
   "abilities": [],
   "calc": {
@@ -653,6 +653,62 @@
       "33%"
      ]
     ]
+   },
+   {
+    "title": "Butterfly damage bonus",
+    "head": [
+     "Stacks",
+     "Sword bonus",
+     "Projectile bonus (80%)"
+    ],
+    "rows": [
+     [
+      "2",
+      "+3.3",
+      "+2.6"
+     ],
+     [
+      "4",
+      "+5.4",
+      "+4.3"
+     ],
+     [
+      "6",
+      "+7.1",
+      "+5.7"
+     ],
+     [
+      "10",
+      "+10.3",
+      "+8.2"
+     ],
+     [
+      "16",
+      "+14.3",
+      "+11.5"
+     ],
+     [
+      "20",
+      "+16.8",
+      "+13.4"
+     ],
+     [
+      "30",
+      "+22.4",
+      "+17.9"
+     ],
+     [
+      "40",
+      "+27.4",
+      "+22"
+     ],
+     [
+      "50",
+      "+32.2",
+      "+25.7"
+     ]
+    ],
+    "note": "Approximate curve fitted from tests (sword bonus ≈ 2 × stacks^0.71). Projectiles get 80% of the sword bonus: +10 on your sword means +8 on a bow."
    }
   ],
   "obtain": {
@@ -4880,14 +4936,14 @@
      ],
      [
       "Speed",
-      "8.73 blocks/s (about +27% faster than walking)"
+      "24 blocks in ~2.75s (~27% faster than walking), ~2.25s with the boost (~55% faster)"
      ],
      [
       "Speed Boost",
       "About 8.6 blocks/s for 4 seconds (12s cooldown): 24 blocks in 2.8s, about 25% faster than walking"
      ]
     ],
-    "note": "From tests."
+    "note": "From tests. Normal drone speed changes a bit depending on how far into the match it is."
    }
   ],
   "strategy": [
@@ -21601,7 +21657,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Place Snap Traps to stun unexpecting enemies, Damaging a recently trapped enemy will consume a mark dealing extra damage.",
-  "adv": "Trapper buys traps and throws them up to 14 blocks with Throw Trap (0.3 second cooldown), onto floors, walls or ceilings. Use Switch Trap to pick which kind to throw. You can buy as many as you want and keep them when you die, but only 10 of each kind can be placed at once. Traps are visible for 1 second after landing, then turn invisible, though they show faintly when an enemy is right under them. They have the same health as Blastproof Ceramic and can be broken with a pickaxe or explosives.\nSnap Trap (12 iron) stuns the enemy for 1.75 seconds, Grounds them for 2 seconds, and Snaps them for 5 seconds: your next sword hit on them does 60% more damage and 2x knockback.\nVenom Trap (16 iron) poisons enemies who step in it (3×3 area) for 5 damage a second for 5 seconds (25 total), ignoring armor completely. The poison can't kill.\nExplosive Trap (18 iron) explodes for 30 damage with no armor penetration, and breaks wool, planks and stone brick very easily. Use Detonate Traps to set off all your Explosive Traps at once.",
+  "adv": "Trapper buys traps and throws them up to 14 blocks with Throw Trap (0.3 second cooldown), onto floors, walls or ceilings. Use Switch Trap to pick which kind to throw. You can buy as many as you want and keep them when you die, but only 10 of each kind can be placed at once. Traps are visible for 1 second after landing, then turn invisible, though they show faintly when an enemy is right under them. They have the same health as Blastproof Ceramic and can be broken with a pickaxe or explosives.\nSnap Trap (12 iron) does no damage itself, but stuns the enemy for 1.75 seconds, Grounds them for 2 seconds, and Snaps them for 5 seconds: your next sword hit on them does 60% more damage and 2x knockback.\nVenom Trap (16 iron) poisons enemies who step in it (3×3 area) for 5 damage a second for 5 seconds (25 total), ignoring armor completely. The poison can't kill.\nExplosive Trap (18 iron) explodes for 30 damage with no armor penetration, and breaks wool, planks and stone brick very easily. Use Detonate Traps to set off all your Explosive Traps at once.",
   "items": [
    {
     "name": "Snap Trap",
