@@ -17528,7 +17528,37 @@
    }
   ],
   "bal": "sop",
-  "balWhy": "It takes skill to aim quickly and learn to fire TNT, but once you do, you're almost unstoppable: it's basically the best movement kit disguised as a Destroyer. TNT works out to about 57% cheaper per TNT, so enemies can't stop the TNT rain, and teammates can use the Cannon for movement too, which only a couple of kits can offer."
+  "balWhy": "It takes skill to aim quickly and learn to fire TNT, but once you do, you're almost unstoppable: it's basically the best movement kit disguised as a Destroyer. TNT works out to about 57% cheaper per TNT, so enemies can't stop the TNT rain, and teammates can use the Cannon for movement too, which only a couple of kits can offer.",
+  "skins": [
+   {
+    "name": "Ghost Skin",
+    "img": "images/skins/pirate-davey-ghost.webp"
+   },
+   {
+    "name": "Deep Sea Skin",
+    "img": "images/skins/pirate-davey-deep-sea.webp"
+   },
+   {
+    "name": "Victorious Gold Skin",
+    "img": "images/skins/pirate-davey-victorious-gold.webp"
+   },
+   {
+    "name": "Victorious Platinum Skin",
+    "img": "images/skins/pirate-davey-victorious-platinum.webp"
+   },
+   {
+    "name": "Victorious Diamond Skin",
+    "img": "images/skins/pirate-davey-victorious-diamond.webp"
+   },
+   {
+    "name": "Victorious Emerald Skin",
+    "img": "images/skins/pirate-davey-victorious-emerald.webp"
+   },
+   {
+    "name": "Victorious Nightmare Skin",
+    "img": "images/skins/pirate-davey-victorious-nightmare.webp"
+   }
+  ]
  },
  {
   "name": "Pyro",
