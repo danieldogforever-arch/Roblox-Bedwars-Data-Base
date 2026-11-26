@@ -91,7 +91,7 @@ select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
 </head>
 <body>
 <header class="site-head"><a class="brand" href="index.html"><img src="images/logo.png" alt="" width="96" height="96"><span><b>Bedwars User Guide</b><small>Kits, tiers, damage and more</small></span></a></header>
-<nav class="site-nav" aria-label="Pages"><div class="in"><a href="index.html">Home</a><a href="kit-machine.html">Kit Machine</a><a href="charts.html">Tier Lists</a><a href="calculator.html">Damage Calculator</a><a href="randomizer.html" aria-current="page">Kit Randomizer</a><a href="updates.html">Update Log</a></div></nav>
+<nav class="site-nav" aria-label="Pages"><div class="in"><a href="index.html">Home</a><a href="kit-machine.html">Kit Machine</a><a href="charts.html">Tier Lists</a><a href="calculator.html">Damage Calculator</a><a href="randomizer.html" aria-current="page">Kit Randomizer</a><a href="guides.html">Guides</a><a href="updates.html">Update Log</a></div></nav>
 <script src="js/music.js" defer></script>
 <div class="wrap">
   <h1>Kit Randomizer</h1>
@@ -129,6 +129,11 @@ select:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
         <div class="lab">Other</div>
         <div class="chips"><button type="button" class="chip" id="norep" aria-pressed="true">No repeats</button></div>
       </div>
+      <div id="bfilters" class="hidden">
+        <div class="lab">Leave out classes <button type="button" data-clear="xcls">None</button></div>
+        <div class="chips" id="fxcls"></div>
+        <p class="hint" style="margin:6px 0 0">Skips any Best fusion where either kit is one of these classes.</p>
+      </div>
       <p class="count" id="count"></p>
     </aside>
   </div>
@@ -141,7 +146,7 @@ var FUSIONS=[{"a":"Abaddon","b":"Lucía","note":""},{"a":"Adetunde","b":"Grim Re
 var TIERS=["OP","S","A","B","C","F"], TCOL={OP:"#ff4d6d",S:"#ff8a5c",A:"#ffd166",B:"#5fe3a1",C:"#5cc8ff",F:"#a98bff"};
 var DIFFS=[["easy","Easy","#5fe3a1"],["moderate","Moderate","#ffd166"],["hard","Hard","#ff6b81"],["extreme","Extreme","#a98bff"]];
 var CLS=["Fighter","Economy","Tank","Movement","Support","Ranged","Defender","Destroyer","Miscellaneous"];
-var S={first:"",mode:"kit",cls:[],tier:[],tl:"casual",diff:[],norep:true,fm:"best",lock:[false,false],cur:[null,null],busy:false,hist:[],seen:{}};
+var S={first:"",mode:"kit",cls:[],xcls:[],tier:[],tl:"casual",diff:[],norep:true,fm:"best",lock:[false,false],cur:[null,null],busy:false,hist:[],seen:{}};
 var $=function(id){return document.getElementById(id);};
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
 function slug(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");}
@@ -150,6 +155,11 @@ function clsIcon(c){return c&&c!=="Miscellaneous"?'<img src="images/classes/'+c.
 function rnd(a){return a[Math.floor(Math.random()*a.length)];}
 var reduce=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+function bestPool(){ return FUSIONS.filter(function(x){
+  if(S.first && x.a!==S.first && x.b!==S.first) return false;
+  if(!S.xcls.length) return true;
+  var a=byName(x.a), b=byName(x.b);
+  return S.xcls.indexOf(a.cls)<0 && S.xcls.indexOf(b.cls)<0; }); }
 function pool(){ return KITS.filter(function(k){
   if(S.cls.length && S.cls.indexOf(k.cls)<0) return false;
   if(S.tier.length && S.tier.indexOf(k.tiers[S.tl])<0) return false;
@@ -166,9 +176,11 @@ function renderFilters(){
   $("norep").setAttribute("aria-pressed",S.norep);
   var bestMode=S.mode==="fus"&&S.fm==="best";
   $("filters").classList.toggle("hidden",bestMode);
+  $("bfilters").classList.toggle("hidden",!bestMode);
+  chips("fxcls",CLS.map(function(c){return {v:c,l:c,icon:clsIcon(c)};}),S.xcls);
   $("fmHint").textContent=bestMode?"Picks from the "+FUSIONS.length+" fusions on the Kit Machine's Best fusions tabs.":"Two random kits that match your filters. Lock one to keep it and re-spin the other.";
   var n=pool().length;
-  var nf=S.first?FUSIONS.filter(function(x){return x.a===S.first||x.b===S.first;}).length:FUSIONS.length;
+  var nf=bestPool().length;
   $("count").innerHTML=bestMode?'<b>'+nf+'</b> fusion'+(nf===1?'':'s')+' to pick from'+(S.first?' with '+esc(S.first):''):'<b>'+n+'</b> of '+KITS.length+' kits match'+(n<2&&S.mode==="fus"?' (need at least 2)':'');
 }
 
@@ -217,8 +229,9 @@ function spin(){
   if(S.busy) return;
   var picks=[], note="";
   if(S.mode==="kit"){ var k=pickKit(pool(),[]); if(!k){ $("result").innerHTML='<p class="hint">No kits match these filters.</p>'; return; } picks=[k]; }
-  else if(S.fm==="best"){ var cand=S.first?FUSIONS.filter(function(x){return x.a===S.first||x.b===S.first;}):FUSIONS;
-    if(!cand.length){ var me=byName(S.first), other=pickKit(KITS,[S.first]); picks=[me,other]; note="There are no Best fusions with "+S.first+" yet, so here's a random partner."; }
+  else if(S.fm==="best"){ var cand=bestPool();
+    if(!cand.length&&!S.first){ $("result").innerHTML='<p class="hint">No Best fusions left with those classes left out.</p>'; return; }
+    if(!cand.length){ var me=byName(S.first), other=pickKit(KITS.filter(function(k){return S.xcls.indexOf(k.cls)<0;}),[S.first]); picks=[me,other]; note="There are no Best fusions with "+S.first+(S.xcls.length?" that skip those classes":"")+", so here's a random partner."; }
     else { var f=rnd(cand), a=byName(f.a), b=byName(f.b); if(S.first? b.name===S.first : Math.random()<.5){ var t=a; a=b; b=t; } picks=[a,b]; note=f.note||""; } }
   else { var p=pool(); if(p.length<2&&!(S.lock[0]||S.lock[1])){ $("result").innerHTML='<p class="hint">At least 2 kits need to match your filters.</p>'; return; }
     var a2=S.first?byName(S.first):(S.lock[0]&&S.cur[0]?S.cur[0]:null), b2=S.lock[1]&&S.cur[1]?S.cur[1]:null;
@@ -247,6 +260,7 @@ $("spin").onclick=spin;
 $("fcls").onclick=function(e){ var b=e.target.closest(".chip"); if(!b) return; toggle(S.cls,b.dataset.v); renderFilters(); };
 $("ftier").onclick=function(e){ var b=e.target.closest(".chip"); if(!b) return; toggle(S.tier,b.dataset.v); renderFilters(); };
 $("ftl").onclick=function(e){ var b=e.target.closest(".chip"); if(!b) return; S.tl=b.dataset.v; renderFilters(); };
+$("fxcls").onclick=function(e){ var b=e.target.closest(".chip"); if(!b) return; toggle(S.xcls,b.dataset.v); renderFilters(); };
 $("fdiff").onclick=function(e){ var b=e.target.closest(".chip"); if(!b) return; toggle(S.diff,b.dataset.v); renderFilters(); };
 $("fmode").onclick=function(e){ var b=e.target.closest(".chip"); if(!b||S.busy) return; S.fm=b.dataset.v; S.lock=[false,false]; renderFilters(); renderReels(); };
 $("first").innerHTML+=KITS.map(function(k){return '<option>'+esc(k.name)+'</option>';}).join('');
