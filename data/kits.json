@@ -2897,7 +2897,7 @@
       "10 - 15"
      ]
     ],
-    "note": "These are approximate amounts. They don't include the double rewards from level 5. The Nov 27, 2026 patch raised the base iron per reward from 10 to 15, so iron rewards are a bit higher than these older numbers."
+    "note": "These are approximate amounts. They don't include the double rewards from level 5. Since the Nov 27, 2026 patch, iron rewards start at 15 instead of 10."
    }
   ],
   "strategy": [
@@ -9964,14 +9964,14 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Consuming enemy souls grants health regen, movespeed and invulnerability for 2.5s. Combat is disabled while consuming.",
-  "adv": "When you get a kill or an assist, the enemy drops a soul. You have 15 seconds to consume it with your ability button from up to 40 blocks away. You can have several souls around at once, but you can only consume a new one after the current one ends.\nConsuming a soul heals about 25 HP while it lasts. For 2.75 seconds you're invincible, take no fall damage, and move about 75% faster (from tests), but you can't attack or mine anything.",
+  "adv": "When you get a kill or an assist, the enemy drops a soul. You have 15 seconds to consume it with your ability button from up to 40 blocks away. You can have several souls around at once, but you can only consume a new one after the current one ends.\nConsuming a soul heals 25 HP over 2.75 seconds. For those 2.75 seconds you're invincible, take no fall damage, and move about 75% faster (from tests), but you can't attack or mine anything.",
   "items": [],
   "abilities": [
    {
     "name": "Consume Soul",
     "img": "images/abilities/ability-template.png",
     "note": "Within 10s of a kill or assist",
-    "desc": "Press to consume a soul up to 40 blocks away. Heals about 25 HP and makes you invincible and about 75% faster for 2.75 seconds, with no fall damage. You can't attack or mine while it lasts, and you can't consume another soul until it ends."
+    "desc": "Press to consume a soul up to 40 blocks away. Heals 25 HP over 2.75 seconds and makes you invincible and about 75% faster while it lasts, with no fall damage. You can't attack or mine while it lasts, and you can't consume another soul until it ends."
    }
   ],
   "history": [
@@ -10066,7 +10066,7 @@
     "rows": [
      [
       "Healing",
-      "~25 HP while it lasts"
+      "25 HP over 2.75s"
      ],
      [
       "Invincibility",
@@ -14013,8 +14013,8 @@
     "img": "images/skins/lumen-festive.webp"
    }
   ],
-  "bal": "sop",
-  "balWhy": "Its light waves had such high armor penetration that Lumen keeps up the whole game while being this cheap. You can spam them, and there are few counters. (The Nov 27, 2026 patch cut wave armor penetration from 80% to 50%.)"
+  "bal": "bal",
+  "balWhy": "Lumen is cheap and its light waves can still be spammed from range, but since the Nov 27, 2026 patch cut their armor penetration from 80% to 50%, it no longer keeps up the whole game as easily. It's balanced now."
  },
  {
   "name": "Lyla",
@@ -23632,8 +23632,8 @@
     "img": "images/skins/void-knight-pumpkin.webp"
    }
   ],
-  "bal": "op",
-  "balWhy": "Void Knight is insanely tanky, and you don't have to worry about spending emeralds on gear because you just consume them. Combine Void Ascension's extra HP with other HP buffs like the Forest enchant or Star Collector Stella's Vitality Stars and you are almost unkillable."
+  "bal": "sop",
+  "balWhy": "Void Knight is insanely tanky, and you don't have to worry about spending emeralds on gear because you just consume them. Combine Void Ascension's extra HP with other HP buffs like the Forest enchant or Star Collector Stella's Vitality Stars and you are almost unkillable. Since the Nov 27, 2026 patch (shield 30 → 20, Void Ascension health 30% → 20%), it's slightly overpowered instead of overpowered."
  },
  {
   "name": "Void Regent",
