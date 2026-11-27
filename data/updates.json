@@ -39572,5 +39572,77 @@
     ]
    }
   ]
+ },
+ {
+  "date": "2026-11-27",
+  "title": "Balance Changes & Thanksgiving Update",
+  "summary": "Nerfs to Zeno, Lumen, Jack and Void Knight, buffs to Bounty Hunter, Jade, Caitlyn and Grim Reaper, and an Eldertree HP rework. New Fallen Angel Spirit Catcher and Void Gompy skins, Ranked Blitz: Duels results, and more Thanksgiving Food.",
+  "tags": [
+   "balance",
+   "event",
+   "ranked"
+  ],
+  "newkits": [],
+  "major": true,
+  "secs": [
+   {
+    "h": "Balance Changes",
+    "e": "⚖️",
+    "items": [
+     "Zeno (nerf): Shockwave knockback reduced by 20%",
+     "Lumen (nerf): Light Sword projectile armor penetration 80% → 50%",
+     "Jack (nerf): Oil Spitter now has to be bought from the shop for 2 emeralds",
+     "Void Knight (nerf): Shield 30 → 20, Void Ascension extra health 30% → 20%",
+     "Bounty Hunter (buff): Base iron per reward 10 → 15",
+     "Jade (buff): Hammer I base damage 10 → 15, and damage is no longer reduced when multiple enemies are hit",
+     "Caitlyn (buff): Tinker and Eldertree now count toward contracts based on their Mech level and max HP",
+     "Grim Reaper (buff): Soul orb expire time 10s → 15s, invisible duration 2.35s → 2.75s",
+     "Eldertree (neutral): Less health from early stacks, more from later stacks"
+    ]
+   },
+   {
+    "h": "Fallen Angel Spirit Catcher & Void Gompy Skins",
+    "e": "👻",
+    "items": [
+     "Coming to the shop for 799 Robux each."
+    ]
+   },
+   {
+    "h": "Ranked Blitz: Duels - Top Players",
+    "e": "🎖️",
+    "items": [
+     "1st: Gorilla (@GorillaWithASuit)",
+     "2nd: Wonder (@WonderDaGoat)",
+     "3rd: mbnnbnb (@MBN0013)",
+     "Diamond 1 or above gets a Golden Crossbow item skin, the Top 200 get titles (unique ones for the top 3), and Gold 1 or higher earns BedCoins."
+    ]
+   },
+   {
+    "h": "Thanksgiving Event Update",
+    "e": "🦃",
+    "items": [
+     "Daily event missions now give 4–5 Food, and match wins give up to 4 Food based on match length.",
+     "New community milestone: if everyone donates 12 million Food together, everyone who donated at least 1 Food can claim 7,000 BedCoins from the lobby Cornucopia after the event ends."
+    ]
+   },
+   {
+    "h": "Free Kits",
+    "e": "🆓",
+    "items": [
+     "Spirit Catcher",
+     "Axolotl Amy",
+     "Builder",
+     "Yuzi (Player Level 20)"
+    ]
+   },
+   {
+    "h": "Other Changes",
+    "e": "⚖️",
+    "items": [
+     "More matchmaking tweaks. Report any issues in the bug reports channel on Discord.",
+     "Map changes"
+    ]
+   }
+  ]
  }
 ]

@@ -2897,7 +2897,7 @@
       "10 - 15"
      ]
     ],
-    "note": "These are approximate amounts. They don't include the double rewards from level 5."
+    "note": "These are approximate amounts. They don't include the double rewards from level 5. The Nov 27, 2026 patch raised the base iron per reward from 10 to 15, so iron rewards are a bit higher than these older numbers."
    }
   ],
   "strategy": [
@@ -2933,6 +2933,14 @@
    }
   ],
   "history": [
+   {
+    "type": "buff",
+    "date": "Nov 27, 2026",
+    "title": "",
+    "changes": [
+     "Base iron per reward: 10 → 15"
+    ]
+   },
    {
     "type": "nerf",
     "date": "Aug 21, 2026",
@@ -3279,7 +3287,7 @@
   "diff": "hard",
   "hp": "100",
   "desc": "Fulfill assassination contracts to empower your attacks with a deadly decay.",
-  "adv": "Caitlyn's attacks apply decay, which deals 2 damage per second for 2 seconds. Hitting an enemy that is already decaying makes the decay 25% stronger per hit, stacking up to 3 times. Contracts upgrade the decay so it hits harder, lasts longer, and gets special effects.\nPress R to open the contracts menu. It shows the stats of her Dark Decay (duration, damage and bonus effects) and three random players with their team color, armor type and distance in blocks. Pick one to assassinate and upgrade your ability. The target is highlighted in red, so you can see where they are, until they are killed (teammates can help) or you reject the contract, which you can do once every minute.\nBetter armor on the target gives better upgrades. Sometimes a special contract appears on a player with diamond armor or higher, and completing it gives your decay a special effect. The upgrade and its amount are shown on the contract screen. Amounts are random and scale with the target's armor and how long the game has gone on.",
+  "adv": "Caitlyn's attacks apply decay, which deals 2 damage per second for 2 seconds. Hitting an enemy that is already decaying makes the decay 25% stronger per hit, stacking up to 3 times. Contracts upgrade the decay so it hits harder, lasts longer, and gets special effects.\nPress R to open the contracts menu. It shows the stats of her Dark Decay (duration, damage and bonus effects) and three random players with their team color, armor type and distance in blocks. Pick one to assassinate and upgrade your ability. The target is highlighted in red, so you can see where they are, until they are killed (teammates can help) or you reject the contract, which you can do once every minute.\nBetter armor on the target gives better upgrades. Hephaestus (Tinker) and Eldertree targets also count their Mech level and max HP. Sometimes a special contract appears on a player with diamond armor or higher, and completing it gives your decay a special effect. The upgrade and its amount are shown on the contract screen. Amounts are random and scale with the target's armor and how long the game has gone on.",
   "items": [],
   "abilities": [
    {
@@ -3401,6 +3409,14 @@
   "bal": "adj",
   "balWhy": "It's only good in Ranked 5v5s, and even there it has fallen off a bit. In every other mode it's very weak, and it's very late game prone, which most games don't reach. It needs a rework.",
   "history": [
+   {
+    "type": "buff",
+    "date": "Nov 27, 2026",
+    "title": "",
+    "changes": [
+     "Tinker and Eldertree now count toward Caitlyn's contracts based on their Mech level and max HP"
+    ]
+   },
    {
     "type": "nerf",
     "date": "Jan 16, 2026",
@@ -5779,10 +5795,18 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Collect tree orbs around the map to increase size and max HP. Cannot buy armor.",
-  "adv": "Eldertree can't buy armor. Instead, it grows by collecting tree orbs that spawn around the map, most often near the middle. Walk within 2 blocks of an orb to pick it up automatically. Orbs disappear after 2 minutes and 30 seconds.\nEvery orb gives you more max HP, makes you bigger, and makes you take 1% less knockback (up and sideways), up to 15% less at 15 orbs. You start at normal player size (2 blocks tall, 1.5 wide). The HP gain shrinks a little with each orb: the first orb gives +30, and by 60 orbs each one gives about +11. You start at 100 HP and reach about 500 HP at 26 orbs and 1,000 HP at 70 orbs.",
+  "adv": "Eldertree can't buy armor. Instead, it grows by collecting tree orbs that spawn around the map, most often near the middle. Walk within 2 blocks of an orb to pick it up automatically. Orbs disappear after 2 minutes and 30 seconds.\nEvery orb gives you more max HP, makes you bigger, and makes you take 1% less knockback (up and sideways), up to 15% less at 15 orbs. You start at normal player size (2 blocks tall, 1.5 wide). The HP gain shrinks a little with each orb: the first orb gives +30, and by 60 orbs each one gives about +11. You start at 100 HP and reach about 500 HP at 26 orbs and 1,000 HP at 70 orbs.\nAs of the Nov 27, 2026 patch, early orbs give less HP and later orbs give more, so the numbers below are from before that change and need retesting.",
   "items": [],
   "abilities": [],
   "history": [
+   {
+    "type": "bal",
+    "date": "Nov 27, 2026",
+    "title": "",
+    "changes": [
+     "Less HP from early orbs, more HP from later orbs"
+    ]
+   },
    {
     "type": "nerf",
     "date": "Sep 4, 2026",
@@ -5980,7 +6004,7 @@
    "max": 300,
    "start": 26,
    "hideTable": true,
-   "note": "Max HP for any number of orbs. Up to 70 orbs the numbers are from tests; past that they use the formula HP = 100 + 27.87 × orbs^0.82.",
+   "note": "Numbers from before the Nov 27, 2026 patch (early orbs now give less HP, later orbs more). Up to 70 orbs they're from tests; past that they use HP = 100 + 27.87 × orbs^0.82.",
    "table": {
     "1": 130.0,
     "2": 149.0,
@@ -9940,17 +9964,26 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Consuming enemy souls grants health regen, movespeed and invulnerability for 2.5s. Combat is disabled while consuming.",
-  "adv": "When you get a kill or an assist, the enemy drops a soul. You have 10 seconds to consume it with your ability button from up to 40 blocks away. You can have several souls around at once, but you can only consume a new one after the current 2.5 seconds end.\nConsuming a soul heals 25 HP over 2.5 seconds (2.5 HP, 10 times). For those 2.5 seconds you're invincible, take no fall damage, and move about 75% faster (from tests), but you can't attack or mine anything.",
+  "adv": "When you get a kill or an assist, the enemy drops a soul. You have 15 seconds to consume it with your ability button from up to 40 blocks away. You can have several souls around at once, but you can only consume a new one after the current one ends.\nConsuming a soul heals about 25 HP while it lasts. For 2.75 seconds you're invincible, take no fall damage, and move about 75% faster (from tests), but you can't attack or mine anything.",
   "items": [],
   "abilities": [
    {
     "name": "Consume Soul",
     "img": "images/abilities/ability-template.png",
     "note": "Within 10s of a kill or assist",
-    "desc": "Press to consume a soul up to 40 blocks away. Heals 25 HP over 2.5 seconds and makes you invincible and about 75% faster, with no fall damage. You can't attack or mine while it lasts, and you can't consume another soul until it ends."
+    "desc": "Press to consume a soul up to 40 blocks away. Heals about 25 HP and makes you invincible and about 75% faster for 2.75 seconds, with no fall damage. You can't attack or mine while it lasts, and you can't consume another soul until it ends."
    }
   ],
   "history": [
+   {
+    "type": "buff",
+    "date": "Nov 27, 2026",
+    "title": "",
+    "changes": [
+     "Soul orb expire time: 10s → 15s",
+     "Invisible duration: 2.35s → 2.75s"
+    ]
+   },
    {
     "type": "bal",
     "date": "Mar 27, 2026",
@@ -10033,11 +10066,11 @@
     "rows": [
      [
       "Healing",
-      "25 HP over 2.5s (2.5 × 10)"
+      "~25 HP while it lasts"
      ],
      [
       "Invincibility",
-      "2.5s"
+      "2.75s"
      ],
      [
       "Speed",
@@ -10055,7 +10088,8 @@
       "Time to collect",
       "10s after the kill"
      ]
-    ]
+    ],
+    "note": "The Nov 27, 2026 patch made the invincible part last 2.75 seconds instead of about 2.5, and souls stay for 15 seconds instead of 10."
    }
   ],
   "strategy": [
@@ -11604,12 +11638,12 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Lob bundles of poisonous pumpkin oil across the map.",
-  "adv": "Jack spawns with the Oil Blob and an Oil Bar that holds 60 oil. The bar refills 1 oil per second (a full minute from empty), and each kill gives 24 oil. You need at least 10 oil to throw.\nTap to throw a tiny blob (about 0.5 block radius) for 10 oil, or charge for up to 3 seconds to make a bigger one. A full charge uses about 40 oil (two-thirds of the bar) and covers an 8 block radius. Blobs work on anyone up to 2 blocks above or below them and last 50 seconds, slowly shrinking before they disappear.\nA blob deals 5 damage when it lands. Enemies standing in oil are Grounded for 3 seconds (no pearls or movement abilities), slowed by about a third for 2 seconds (from tests) and poisoned for 5 seconds. Poison deals 1 damage per second with about 70% armor penetration (from tests) and can't kill, but the 5 landing damage can.\nBuy Fire Matches for 8 iron each (no limit) to light a blob on fire. Burning oil instantly sets nearby flammable blocks like wool and wood on fire, then burns out after 10 seconds. While it burns, enemies in it take 8 fire damage per tick with no armor penetration (like the Fire enchant) and are still Grounded and slowed, but the poison stops reapplying. Fire can kill, and Jack heals 3 HP for every fire tick on every enemy (2 HP in 16v16), so 5 burning enemies heal 15 per tick. A fireball can also light the oil again.",
+  "adv": "Jack buys the Oil Blob (Oil Spitter) from the shop for 2 emeralds, and has an Oil Bar that holds 60 oil. The bar refills 1 oil per second (a full minute from empty), and each kill gives 24 oil. You need at least 10 oil to throw.\nTap to throw a tiny blob (about 0.5 block radius) for 10 oil, or charge for up to 3 seconds to make a bigger one. A full charge uses about 40 oil (two-thirds of the bar) and covers an 8 block radius. Blobs work on anyone up to 2 blocks above or below them and last 50 seconds, slowly shrinking before they disappear.\nA blob deals 5 damage when it lands. Enemies standing in oil are Grounded for 3 seconds (no pearls or movement abilities), slowed by about a third for 2 seconds (from tests) and poisoned for 5 seconds. Poison deals 1 damage per second with about 70% armor penetration (from tests) and can't kill, but the 5 landing damage can.\nBuy Fire Matches for 8 iron each (no limit) to light a blob on fire. Burning oil instantly sets nearby flammable blocks like wool and wood on fire, then burns out after 10 seconds. While it burns, enemies in it take 8 fire damage per tick with no armor penetration (like the Fire enchant) and are still Grounded and slowed, but the poison stops reapplying. Fire can kill, and Jack heals 3 HP for every fire tick on every enemy (2 HP in 16v16), so 5 burning enemies heal 15 per tick. A fireball can also light the oil again.",
   "items": [
    {
     "name": "Oil Blob",
     "img": "images/items/oil-blob.png",
-    "note": "Spawns with it",
+    "note": "Cost: 2 emeralds",
     "desc": "Tap for a tiny blob (about 0.5 blocks, 10 oil) or charge up to 3 seconds for an 8 block radius blob (about 40 oil). 5 damage on landing, then Grounds, slows and poisons enemies in it (1 damage per second, can't kill). Lasts 50 seconds.",
     "dmg": 5,
     "dmgText": "5 + 1/s poison",
@@ -11627,6 +11661,14 @@
   ],
   "abilities": [],
   "history": [
+   {
+    "type": "nerf",
+    "date": "Nov 27, 2026",
+    "title": "",
+    "changes": [
+     "Oil Spitter now has to be bought from the shop for 2 emeralds"
+    ]
+   },
    {
     "type": "nerf",
     "date": "Oct 30, 2026",
@@ -11832,15 +11874,15 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Launch into the air with a giant war hammer. Higher launches deal more slam damage, and the hammer can be upgraded throughout the match.",
-  "adv": "Jade spawns with Hammer I, and buys upgrades in the shop: Hammer II for 80 iron and Hammer III for 4 emeralds. Each has a 5 second cooldown.\nUsing the hammer launches you into the air and gives you a speed boost until you land: 2.5 blocks up and about a 7 block dash with Hammer I, 3.5 and 9 with Hammer II, and 4.5 and 11 with Hammer III. When you land, you slam enemies within 4 blocks and launch them up to 5 blocks into the air.\nThe higher you fall from, the more the slam deals, up to 40 blocks: Hammer I deals 10 on the ground and 77.5 from 40 blocks, Hammer II 24 to 114, and Hammer III 33 to 150 (111.3 from 20 blocks). Slam damage is highest at the point of impact and falls off the farther away an enemy is, so pearling in from far away deals less than landing right on someone. Hitting several enemies splits the damage evenly: 2 enemies take half each, 3 take a third each. Higher hammer tiers also have more armor penetration: 0% for Hammer I, 20% for Hammer II and 40% for Hammer III (from tests).\nHitting someone with the slam means you take no fall damage. If you miss, you still take some, but much less: a 40 block fall that would deal 99 only dealt 20 with a missed slam (from tests).",
+  "adv": "Jade spawns with Hammer I, and buys upgrades in the shop: Hammer II for 80 iron and Hammer III for 4 emeralds. Each has a 5 second cooldown.\nUsing the hammer launches you into the air and gives you a speed boost until you land: 2.5 blocks up and about a 7 block dash with Hammer I, 3.5 and 9 with Hammer II, and 4.5 and 11 with Hammer III. When you land, you slam enemies within 4 blocks and launch them up to 5 blocks into the air.\nThe higher you fall from, the more the slam deals, up to 40 blocks: Hammer I deals 15 on the ground and 82.5 from 40 blocks, Hammer II 24 to 114, and Hammer III 33 to 150 (111.3 from 20 blocks). Slam damage is highest at the point of impact and falls off the farther away an enemy is, so pearling in from far away deals less than landing right on someone. Higher hammer tiers also have more armor penetration: 0% for Hammer I, 20% for Hammer II and 40% for Hammer III (from tests).\nHitting someone with the slam means you take no fall damage. If you miss, you still take some, but much less: a 40 block fall that would deal 99 only dealt 20 with a missed slam (from tests).",
   "items": [
    {
     "name": "Jade Hammer I",
     "img": "images/items/jade-hammer.png",
     "note": "Spawn with it",
-    "desc": "Slam for 10 damage on the ground, up to 77.5 from 40 blocks up. Launches you 2.5 blocks up and about 7 blocks forward. No armor penetration. 5 second cooldown.",
+    "desc": "Slam for 15 damage on the ground, up to 82.5 from 40 blocks up. Launches you 2.5 blocks up and about 7 blocks forward. No armor penetration. 5 second cooldown.",
     "dmg": 77.5,
-    "dmgText": "10 – 77.5",
+    "dmgText": "15 – 82.5",
     "cd": 5,
     "nodps": true
    },
@@ -11867,6 +11909,15 @@
   ],
   "abilities": [],
   "history": [
+   {
+    "type": "buff",
+    "date": "Nov 27, 2026",
+    "title": "",
+    "changes": [
+     "Hammer I base damage: 10 → 15",
+     "Damage is no longer reduced when multiple enemies are hit"
+    ]
+   },
    {
     "type": "bal",
     "date": "Nov 13, 2026",
@@ -12012,11 +12063,11 @@
      [
       "img:images/items/jade-hammer.png|Hammer I",
       "Spawn with it",
-      "10",
-      "40.2",
-      "55.26",
-      "67.1",
-      "77.5",
+      "15",
+      "45.2",
+      "60.26",
+      "72.1",
+      "82.5",
       "0%"
      ],
      [
@@ -12040,7 +12091,7 @@
       "40%"
      ]
     ],
-    "note": "Hammer I at the ground, 20 and 40 blocks, and the other hammers' ground and 40 block damage, are from tests; the rest are estimated. Damage falls off with distance from the impact. No armor."
+    "note": "Hammer I is +5 at every height since the Nov 27, 2026 patch (base 10 → 15). Hammer I at the ground, 20 and 40 blocks, and the other hammers' ground and 40 block damage, are from tests; the rest are estimated. Damage falls off with distance from the impact, but is no longer split between multiple enemies. No armor."
    },
    {
     "title": "Hammer movement",
@@ -12097,10 +12148,6 @@
    {
     "title": "Build a roof",
     "text": "Put blocks above you so the slam can't reach you."
-   },
-   {
-    "title": "Stick together",
-    "text": "Stay close to teammates or other enemies so the slam's damage gets split."
    },
    {
     "title": "Dodge it",
@@ -13750,19 +13797,27 @@
   "diff": "moderate",
   "hp": "100",
   "desc": "Charge the Sword of Light to shoot powerful waves at enemies! Hitting light waves OR killing Ember will upgrade your ability to shoot many powerful beams at once.",
-  "adv": "Lumen can buy the Light Sword for 3 emeralds. It replaces the Diamond Sword, and Lumen can't buy the Emerald Sword. It hits for 47 every 0.3 seconds, with no armor penetration. If you lose it when you die, buying it again costs only 2 emeralds.\nCharge the Light Sword to fire light waves. A half charge fires 1 wave for 21 damage; a full charge fires the X, a single X-shaped wave, for 34. Light waves have 80% armor penetration (from tests), travel 55 blocks in about 2.35 seconds, and can pass through thin walls. You move about 22.5% slower while charging.\nHit enemies wearing armor with 10 light waves (or kill an Ember) to upgrade the Light Sword. The upgrade progress isn't lost when you die. Once upgraded, a 0.5 second charge fires 1 wave, 0.75 seconds fires the X, and a full 1 second charge fires 3 single waves one after another, 0.3 seconds apart, and then the X: 21 + 21 + 21 + 34 = 97 damage if they all hit. You can't charge again until the X has been fired.",
+  "adv": "Lumen can buy the Light Sword for 3 emeralds. It replaces the Diamond Sword, and Lumen can't buy the Emerald Sword. It hits for 47 every 0.3 seconds, with no armor penetration. If you lose it when you die, buying it again costs only 2 emeralds.\nCharge the Light Sword to fire light waves. A half charge fires 1 wave for 21 damage; a full charge fires the X, a single X-shaped wave, for 34. Light waves have 50% armor penetration, travel 55 blocks in about 2.35 seconds, and can pass through thin walls. You move about 22.5% slower while charging.\nHit enemies wearing armor with 10 light waves (or kill an Ember) to upgrade the Light Sword. The upgrade progress isn't lost when you die. Once upgraded, a 0.5 second charge fires 1 wave, 0.75 seconds fires the X, and a full 1 second charge fires 3 single waves one after another, 0.3 seconds apart, and then the X: 21 + 21 + 21 + 34 = 97 damage if they all hit. You can't charge again until the X has been fired.",
   "items": [
    {
     "name": "Light Sword",
     "img": "images/items/light-sword.png",
     "note": "3 emeralds, replaces Diamond Sword",
-    "desc": "47 damage every 0.3 seconds, no armor penetration. Charge to fire light waves: 1 wave for 21, or the X (one X-shaped wave) for 34, with 80% armor penetration and 55 block range. Repurchase costs 2 emeralds.",
+    "desc": "47 damage every 0.3 seconds, no armor penetration. Charge to fire light waves: 1 wave for 21, or the X (one X-shaped wave) for 34, with 50% armor penetration and 55 block range. Repurchase costs 2 emeralds.",
     "dmg": 47,
     "cd": 0.3
    }
   ],
   "abilities": [],
   "history": [
+   {
+    "type": "nerf",
+    "date": "Nov 27, 2026",
+    "title": "",
+    "changes": [
+     "Light Sword projectile armor penetration: 80% → 50%"
+    ]
+   },
    {
     "type": "buff",
     "date": "Aug 21, 2026",
@@ -13925,7 +13980,7 @@
       "3 waves + the X, 0.3s apart: 21 + 21 + 21 + 34 = 97"
      ]
     ],
-    "note": "The X is a single X-shaped wave. Light waves have 80% armor penetration: 21 → 16.71 and 34 → 27.1 against iron (from tests). Waves travel 55 blocks in about 2.35 seconds. Normal sword swings have none."
+    "note": "The X is a single X-shaped wave. Light waves have 50% armor penetration (80% before the Nov 27, 2026 patch): 21 → 12.83 and 34 → 20.78 against iron. Waves travel 55 blocks in about 2.35 seconds. Normal sword swings have none."
    }
   ],
   "strategy": [
@@ -13959,7 +14014,7 @@
    }
   ],
   "bal": "sop",
-  "balWhy": "Its light waves have such high armor penetration that Lumen keeps up the whole game while being this cheap. You can spam them, and there are few counters."
+  "balWhy": "Its light waves had such high armor penetration that Lumen keeps up the whole game while being this cheap. You can spam them, and there are few counters. (The Nov 27, 2026 patch cut wave armor penetration from 80% to 50%.)"
  },
  {
   "name": "Lyla",
@@ -23318,7 +23373,7 @@
   "diff": "easy",
   "hp": "90",
   "desc": "Feed your Void Corruption with resources and kills to upgrade your gear and unlock your abilities of Void Decay and Shielding. With enough resources, unlock the full power of the Void and become the Ascended Void Knight. Void Knight's base health is reduced by 10%.",
-  "adv": "Void Knight spawns with 90 HP, a Noctium Blade I and the Consume ability. Consume eats 10 resources at a time (0.1 second cooldown), and you level up by consuming resources and dealing sword damage, and every kill counts as 200 damage toward that. Damage to NPCs (like Diamond Guards) and any damage that isn't from your sword only counts 50%. There are 5 forms: Base, Enhanced, Empowered, Corrupt and Chosen. Each form upgrades your blade and gives more damage reduction.\nEmpowered Form adds Void Decay to your hits: the first hit takes away 10% of the enemy's total HP, and the decay lasts 10 seconds before you need to hit them again. Corrupt Form gives you a 30 HP shield that fully comes back after 15 seconds of not taking damage.\nChosen Form is the last upgrade: Consume is replaced by Void Ascension, your damage reduction goes up to 84%, and you keep the Noctium Blade IV and the shield. Void Ascension gives you 20% more damage on everything (not just your sword) and 30% more health for 15 seconds, with a 60 second cooldown.",
+  "adv": "Void Knight spawns with 90 HP, a Noctium Blade I and the Consume ability. Consume eats 10 resources at a time (0.1 second cooldown), and you level up by consuming resources and dealing sword damage, and every kill counts as 200 damage toward that. Damage to NPCs (like Diamond Guards) and any damage that isn't from your sword only counts 50%. There are 5 forms: Base, Enhanced, Empowered, Corrupt and Chosen. Each form upgrades your blade and gives more damage reduction.\nEmpowered Form adds Void Decay to your hits: the first hit takes away 10% of the enemy's total HP, and the decay lasts 10 seconds before you need to hit them again. Corrupt Form gives you a 20 HP shield that fully comes back after 15 seconds of not taking damage.\nChosen Form is the last upgrade: Consume is replaced by Void Ascension, your damage reduction goes up to 84%, and you keep the Noctium Blade IV and the shield. Void Ascension gives you 20% more damage on everything (not just your sword) and 20% more health for 15 seconds, with a 60 second cooldown.",
   "items": [
    {
     "name": "Noctium Blade I",
@@ -23366,12 +23421,21 @@
     "name": "Void Ascension",
     "img": "images/abilities/ability-template.png",
     "note": "Chosen Form only",
-    "desc": "Replaces Consume. Gives you 20% more damage on all your attacks, not just your sword, and 30% more health (90 → 117 HP) for 15 seconds.",
+    "desc": "Replaces Consume. Gives you 20% more damage on all your attacks, not just your sword, and 20% more health (90 → 108 HP) for 15 seconds.",
     "cd": 60,
     "nodps": true
    }
   ],
   "history": [
+   {
+    "type": "nerf",
+    "date": "Nov 27, 2026",
+    "title": "",
+    "changes": [
+     "Shield: 30 → 20",
+     "Void Ascension extra health: 30% → 20%"
+    ]
+   },
    {
     "type": "nerf",
     "date": "Apr 10, 2026",
@@ -23471,7 +23535,7 @@
       "img:images/items/noctium-blade-4.png|Blade IV",
       "47",
       "76%",
-      "Void Decay, 30 shield",
+      "Void Decay, 20 shield",
       "44 emeralds + 1200 damage"
      ],
      [
@@ -23479,7 +23543,7 @@
       "img:images/items/noctium-blade-4.png|Blade IV",
       "47 (56.4 with Void Ascension)",
       "84%",
-      "Void Decay, 30 shield, Void Ascension",
+      "Void Decay, 20 shield, Void Ascension",
       "-"
      ]
     ],
@@ -23514,21 +23578,21 @@
      ],
      [
       "Corrupt",
-      "90 + 30 shield",
+      "90 + 20 shield",
       "76%",
-      "375 effective HP, 500 with shield"
+      "375 effective HP, 458 with shield"
      ],
      [
       "Chosen",
-      "90 + 30 shield",
+      "90 + 20 shield",
       "84%",
-      "562 effective HP, 750 with shield"
+      "562 effective HP, 688 with shield"
      ],
      [
       "Chosen + Void Ascension",
-      "117 + 30 shield",
+      "108 + 20 shield",
       "84%",
-      "731 effective HP, 919 with shield"
+      "675 effective HP, 800 with shield"
      ]
     ],
     "note": "True HP is how much HP you would need to take the same hits with no damage reduction: HP ÷ (1 − reduction). Armor is not included, and the damage reduction also applies to the shield."
@@ -26919,7 +26983,7 @@
   "diff": "easy",
   "hp": "100",
   "desc": "Use a magical staff to cast lightning spells.",
-  "adv": "Zeno spawns with a Magic Wand (12 damage) instead of a wood sword, and its stone sword costs 40 iron. Its real weapon is the Wizard Staff, which calls lightning strikes on a spot up to 16.5 blocks away. Each strike deals 12 damage with 50% armor penetration in a 5 block radius, and applies Zapped (Static) for 10 seconds.\nEach strike uses 1 bar of mana. Wizard Staff I has 4 bars and regains one every 6 seconds. Staff II (4 emeralds) has 5 bars, regains one every 4 seconds, and adds Shockwave: 8 damage in a 2 block radius with huge knockback that can fling enemies 10+ blocks. Staff III (6 emeralds) has 6 bars, regains one every 3.25 seconds, and adds Lightning Storm: it uses 4 bars to strike one spot 10 times, 24 damage on the first strike and 12 on the other 9 (132 total).",
+  "adv": "Zeno spawns with a Magic Wand (12 damage) instead of a wood sword, and its stone sword costs 40 iron. Its real weapon is the Wizard Staff, which calls lightning strikes on a spot up to 16.5 blocks away. Each strike deals 12 damage with 50% armor penetration in a 5 block radius, and applies Zapped (Static) for 10 seconds.\nEach strike uses 1 bar of mana. Wizard Staff I has 4 bars and regains one every 6 seconds. Staff II (4 emeralds) has 5 bars, regains one every 4 seconds, and adds Shockwave: 8 damage in a 2 block radius with big knockback that can fling enemies about 8+ blocks. Staff III (6 emeralds) has 6 bars, regains one every 3.25 seconds, and adds Lightning Storm: it uses 4 bars to strike one spot 10 times, 24 damage on the first strike and 12 on the other 9 (132 total).",
   "items": [
    {
     "name": "Magic Wand",
@@ -26963,11 +27027,19 @@
     "img": "images/abilities/ability-template.png",
     "note": "Wizard Staff II and up",
     "dmg": 8,
-    "desc": "8 damage in a 2 block radius (no armor penetration) with huge knockback, flinging enemies 10+ blocks.",
+    "desc": "8 damage in a 2 block radius (no armor penetration) with big knockback, flinging enemies about 8+ blocks.",
     "nodps": true
    }
   ],
   "history": [
+   {
+    "type": "nerf",
+    "date": "Nov 27, 2026",
+    "title": "",
+    "changes": [
+     "Shockwave knockback reduced by 20%"
+    ]
+   },
    {
     "type": "buff",
     "date": "Sep 4, 2026",
