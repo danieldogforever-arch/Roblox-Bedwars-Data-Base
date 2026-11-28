@@ -1070,7 +1070,7 @@
   "tiers": {
    "casual": "B",
    "ranked": "C",
-   "duels": "A"
+   "duels": "S"
   },
   "diff": "easy",
   "hp": "100",
@@ -3551,7 +3551,7 @@
   "cls": "Tank",
   "tiers": {
    "casual": "S",
-   "ranked": "A",
+   "ranked": "S",
    "duels": "S"
   },
   "diff": "easy",
@@ -11587,7 +11587,7 @@
   "tiers": {
    "casual": "S",
    "ranked": "S",
-   "duels": "OP"
+   "duels": "A"
   },
   "diff": "easy",
   "hp": "100",
@@ -11823,7 +11823,7 @@
   "cls": "Movement",
   "tiers": {
    "casual": "S",
-   "ranked": "B"
+   "ranked": "A"
   },
   "diff": "moderate",
   "hp": "100",
@@ -13746,7 +13746,7 @@
   "cls": "Fighter",
   "tiers": {
    "casual": "S",
-   "ranked": "A"
+   "ranked": "C"
   },
   "diff": "moderate",
   "hp": "100",
@@ -14525,7 +14525,7 @@
   "cls": "Miscellaneous",
   "tiers": {
    "casual": "B",
-   "ranked": "C",
+   "ranked": "B",
    "duels": "S"
   },
   "diff": "easy",
@@ -18068,7 +18068,7 @@
   "tiers": {
    "casual": "B",
    "ranked": "A",
-   "duels": "S"
+   "duels": "A"
   },
   "diff": "easy",
   "hp": "100",

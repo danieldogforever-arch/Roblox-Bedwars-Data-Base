@@ -179,12 +179,12 @@
       "Hephaestus",
       "Beekeeper Beatrix",
       "Zeno",
-      "Jack",
       "Milo",
       "Nazar",
       "Star Collector Stella",
       "Baker",
       "Krystal",
+      "Jack",
       "Silas",
       "Fisherman",
       "Sigrid",
@@ -196,6 +196,7 @@
       "Axolotl Amy",
       "Void Regent",
       "Whisper",
+      "Cobalt",
       "Miner",
       "Alchemist",
       "Sheep Herder",
@@ -215,7 +216,6 @@
       "Sophia",
       "Zarrah",
       "Spirit Catcher",
-      "Lumen",
       "Nyoka",
       "Melody",
       "Gingerbread Man",
@@ -225,9 +225,9 @@
       "Adetunde",
       "Pyro",
       "Freiya",
-      "Ramil",
-      "Cobalt",
       "Trinity",
+      "Jade",
+      "Ramil",
       "Fortuna",
       "Warrior",
       "Taliyah",
@@ -253,13 +253,13 @@
       "Aery",
       "Builder",
       "Evelynn",
-      "Jade",
       "Kaida",
       "Conqueror",
       "Elektra",
       "Lyla",
       "Lucía",
       "Yeti",
+      "Marrow",
       "Merchant Marco",
       "Vanessa",
       "Yamini",
@@ -273,8 +273,9 @@
      "label": "C",
      "kits": [
       "Archer",
+      "Grim Reaper",
       "Gompy",
-      "Marrow",
+      "Lumen",
       "Lani",
       "Eldric",
       "Grove",
@@ -289,7 +290,6 @@
       "Crypt",
       "Cyber",
       "Dino Tamer Dom",
-      "Grim Reaper",
       "Santa",
       "Trixie",
       "Marina",
@@ -308,20 +308,24 @@
      ]
     }
    ],
-   "prev": {}
+   "prev": {
+    "Cobalt": "A",
+    "Jade": "B",
+    "Marrow": "C",
+    "Lumen": "A"
+   }
   },
   {
    "id": "duels",
    "name": "Duels",
-   "sub": "Ranked Blitz",
+   "sub": "Casuals",
    "title": "Bedwars User Guide",
-   "subt": "Duels (Ranked Blitz)",
+   "subt": "Duels (Casuals)",
    "note": "Only the best kits for Duels are ranked.",
    "rows": [
     {
      "label": "OP",
      "kits": [
-      "Jack",
       "Sigrid",
       "Hephaestus"
      ]
@@ -329,35 +333,38 @@
     {
      "label": "S",
      "kits": [
-      "Cobalt",
       "Marrow",
-      "Milo",
-      "Bounty Hunter",
+      "Cobalt",
+      "Nazar",
       "Flora",
-      "Zarrah",
+      "Bounty Hunter",
       "Kaida",
       "Lassy",
-      "Nazar",
       "Spirit Catcher",
-      "Elektra",
-      "Eldertree",
-      "Frosty",
+      "Zarrah",
       "Umeko",
-      "Ramil",
+      "Eldertree",
+      "Elektra",
+      "Milo",
+      "Frosty",
+      "Arachne",
       "Terra"
      ]
     },
     {
      "label": "A",
      "kits": [
-      "Void Regent",
+      "Skoll",
+      "Lian",
+      "Ramil",
+      "Yuzi",
       "Krystal",
       "Pirate Davey",
-      "Arachne",
-      "Lian",
+      "Jack",
       "Builder",
-      "Alchemist",
       "Agni",
+      "Void Regent",
+      "Alchemist",
       "Gingerbread Man",
       "Drill",
       "Kaliyah",
@@ -370,13 +377,15 @@
       "Merchant Marco",
       "Ragnar",
       "Zola",
-      "Skoll",
-      "Yamini",
-      "Yuzi"
+      "Yamini"
      ]
     }
    ],
-   "prev": {}
+   "prev": {
+    "Arachne": "A",
+    "Ramil": "S",
+    "Jack": "OP"
+   }
   }
  ]
 }
