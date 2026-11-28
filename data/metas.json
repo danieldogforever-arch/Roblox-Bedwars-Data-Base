@@ -23,5 +23,30 @@
     "text": [
       "This strategy relies on bed breaking and finishing games before late game. Early game, Farmer plants his crops and defends the bed, Conqueror cycles the diamond generators, and Amy and Conqueror will be in the middle getting emeralds. Conqueror needs his Healing and KB Banners, Amy needs max tools and the Breakspeed Axolotl, and they both need Telepearls. Conqueror pearls first and places his banners, then Amy follows shortly after to bed break. Conqueror tanks the hits, and with Amy's Shield Axolotl and the Heal Banner, she'll have time to bed break without getting knocked away. Repeat this after every team's bed is broken, then wipe them."
     ]
+  },
+  {
+    "title": "SIN",
+    "mode": "Ranked Squads",
+    "kits": [
+      {
+        "kit": "Silas",
+        "alt": ""
+      },
+      {
+        "kit": "Infernal Shielder",
+        "alt": ""
+      },
+      {
+        "kit": "Nyoka",
+        "alt": ""
+      },
+      {
+        "kit": "Farmer Cletus",
+        "alt": "Taliyah"
+      }
+    ],
+    "text": [
+      "Silas and Nyoka combine their healing for an insane amount of AoE heals, while Infernal Shielder prevents bow spam and Static damage. This is one of the safest strats you can run. Get early Forest with Silas and start farming, and you'll be almost impossible to kill with Infernal's damage reduction and Nyoka's heals, not to mention the shields as well."
+    ]
   }
 ]
