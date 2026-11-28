@@ -32,8 +32,8 @@ h1{font-weight:400;font-size:2rem;margin:0 0 4px}
 .box{position:relative;aspect-ratio:1;border:4px solid #fff;border-radius:22px;display:block;transition:border-color .15s,box-shadow .15s,transform .15s}
 .box:hover,.box:focus-visible{border-color:var(--accent);box-shadow:0 0 24px rgba(169,139,255,.75),inset 0 0 18px rgba(169,139,255,.25);transform:translateY(-3px);outline:none}
 .box.hit{border-color:var(--gold);box-shadow:0 0 24px rgba(255,209,102,.6)}
-.box>img{position:absolute;inset:6%;width:88%;height:88%;object-fit:contain;filter:drop-shadow(0 6px 10px rgba(0,0,0,.5))}
-.alt{position:absolute;top:7%;right:7%;width:30%;aspect-ratio:1;border:4px solid #fff;border-radius:16px;background:rgba(21,11,56,.9);display:grid;place-items:center;overflow:hidden;transition:border-color .15s,box-shadow .15s}
+.box>img{position:absolute;inset:14%;width:72%;height:72%;object-fit:contain;filter:drop-shadow(0 6px 10px rgba(0,0,0,.5))}
+.alt{position:absolute;top:0;right:0;width:30%;aspect-ratio:1;border:0 solid #fff;border-width:0 0 4px 4px;border-radius:0 18px 0 16px;background:rgba(21,11,56,.9);display:grid;place-items:center;overflow:hidden;transition:border-color .15s,box-shadow .15s}
 .alt img{width:84%;height:84%;object-fit:contain}
 .alt[data-k]{cursor:pointer}
 .alt[data-k]:hover{border-color:var(--accent);box-shadow:0 0 18px rgba(169,139,255,.85)}
@@ -109,6 +109,7 @@ document.getElementById("modes").onclick=function(e){var b=e.target.closest("but
 function loadImg(s){return new Promise(function(r){ if(!s){r(null);return;} var i=new Image(); i.onload=function(){r(i);}; i.onerror=function(){r(null);}; i.src=s; });}
 function rr(c,x,y,w,h,r){c.beginPath();c.moveTo(x+r,y);c.arcTo(x+w,y,x+w,y+h,r);c.arcTo(x+w,y+h,x,y+h,r);c.arcTo(x,y+h,x,y,r);c.arcTo(x,y,x+w,y,r);c.closePath();}
 function wrap(c,t,maxW){var w=t.split(" "),L=[],s="";w.forEach(function(x){var tt=s?s+" "+x:x; if(c.measureText(tt).width>maxW&&s){L.push(s);s=x;}else s=tt;}); if(s)L.push(s); return L;}
+function tab(c,x,y,s,tr,bl){c.beginPath();c.moveTo(x,y);c.lineTo(x+s-tr,y);c.arcTo(x+s,y,x+s,y+tr,tr);c.lineTo(x+s,y+s);c.lineTo(x+bl,y+s);c.arcTo(x,y+s,x,y+s-bl,bl);c.closePath();}
 function fit(c,im,x,y,size){ var r=bounds(im), k=size/Math.max(r.w,r.h), w=r.w*k, h=r.h*k; c.drawImage(im,r.x,r.y,r.w,r.h,x+(size-w)/2,y+(size-h)/2,w,h); }
 function draw(m){
   var F='"Jua","Trebuchet MS",sans-serif', W=1600, n=m.kits.length;
@@ -127,10 +128,10 @@ function draw(m){
     var x0=(W-(bw*n+gap*(n-1)))/2;
     m.kits.forEach(function(k,i){ var x=x0+i*(bw+gap), y=top, a=ki[i*2], b=ki[i*2+1];
       c.lineWidth=7; c.strokeStyle="#fff"; rr(c,x,y,bw,bw,30); c.stroke();
-      if(a){ var p=bw*.08; c.save(); c.shadowColor="rgba(0,0,0,.5)"; c.shadowBlur=14; fit(c,a,x+p,y+p,bw-2*p); c.restore(); }
-      var s=bw*.3, ax=x+bw-s-bw*.07, ay=y+bw*.07; c.fillStyle="rgba(21,11,56,.92)"; rr(c,ax,ay,s,s,20); c.fill(); c.lineWidth=6; c.strokeStyle="#fff";
-      var core=k.alt==='Core'; if(!b&&!core){ c.setLineDash([10,8]); c.globalAlpha=.5; } rr(c,ax,ay,s,s,20); c.stroke(); c.setLineDash([]); c.globalAlpha=1;
-      if(b){ c.save(); rr(c,ax,ay,s,s,20); c.clip(); fit(c,b,ax+s*.1,ay+s*.1,s*.8); c.restore(); } if(core){ c.save(); c.fillStyle="#ffd166"; c.textAlign="center"; c.font=Math.round(s*.26)+'px '+F; c.fillText("CORE",ax+s/2,ay+s/2+2); c.restore(); }
+      if(a){ var p=bw*.14; c.save(); c.shadowColor="rgba(0,0,0,.5)"; c.shadowBlur=14; fit(c,a,x+p,y+p,bw-2*p); c.restore(); }
+      var s=bw*.3, ax=x+bw-s, ay=y; c.fillStyle="rgba(21,11,56,.92)"; tab(c,ax,ay,s,30,20); c.fill(); c.lineWidth=6; c.strokeStyle="#fff";
+      var core=k.alt==='Core'; if(!b&&!core){ c.setLineDash([10,8]); c.globalAlpha=.5; } tab(c,ax,ay,s,30,20); c.stroke(); c.setLineDash([]); c.globalAlpha=1;
+      if(b){ c.save(); tab(c,ax,ay,s,30,20); c.clip(); fit(c,b,ax+s*.1,ay+s*.1,s*.8); c.restore(); } if(core){ c.save(); c.fillStyle="#ffd166"; c.textAlign="center"; c.font=Math.round(s*.26)+'px '+F; c.fillText("CORE",ax+s/2,ay+s/2+2); c.restore(); }
     });
     c.font='38px '+F; c.fillStyle="#fff"; c.shadowColor="rgba(0,0,0,.6)"; c.shadowBlur=8;
     lines.forEach(function(L,i){ c.fillText(L,W/2,top+bw+80+i*50); });
