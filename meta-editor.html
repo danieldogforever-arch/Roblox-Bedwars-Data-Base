@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Metas Editor · Bedwars User Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0a0418;--muted:#b9aee0;--accent:#a98bff;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;color:#fff;font:400 1.05rem/1.5 "Jua","Trebuchet MS",system-ui,sans-serif;background:radial-gradient(circle at 15% 30%,rgba(110,60,220,.3),transparent 40%),radial-gradient(circle at 85% 92%,rgba(120,50,230,.28),transparent 45%),radial-gradient(circle,rgba(255,255,255,.4) 1px,transparent 1.6px) 0 0/87px 87px,radial-gradient(circle,rgba(180,156,255,.32) 2px,transparent 2.8px) 37px 51px/131px 131px,var(--bg);background-attachment:fixed;padding-bottom:env(safe-area-inset-bottom,0)}
+
+main{max-width:1180px;margin:0 auto;padding:28px 18px 60px}
+h1{font-weight:400;font-size:2rem;margin:0 0 4px}
+.sub{color:var(--muted);margin:0 0 16px}
+.panel{background:rgba(21,11,56,.9);border:2px solid rgba(255,255,255,.85);border-radius:18px;padding:16px 20px;margin:0 0 18px}
+.panel h3{font-weight:400;margin:0 0 10px}
+button,select,input,textarea{font:inherit;color:#fff}
+button{background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.4);border-radius:999px;padding:5px 14px;cursor:pointer}
+button:hover{border-color:#fff}
+button.primary{background:#fff;color:#150b38;border-color:#fff}
+button.danger{border-color:#ff6b81;color:#ffb3bf}
+input,select,textarea{background:rgba(255,255,255,.08);border:2px solid rgba(255,255,255,.3);border-radius:12px;padding:6px 10px}
+textarea{width:100%;min-height:120px;resize:vertical}
+.list{display:flex;flex-wrap:wrap;gap:8px}
+.list button.on{background:#fff;color:#150b38}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+label.f{display:flex;flex-direction:column;gap:4px;color:var(--muted)}
+.kits{display:flex;flex-direction:column;gap:8px;margin:8px 0}
+.krow{display:grid;grid-template-columns:28px 1fr 1fr 70px;gap:8px;align-items:center}
+.krow span{color:var(--muted);text-align:center}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.note{color:var(--muted);font-size:.9rem}
+.msg{color:#9dffb0;min-height:1.4em}
+.meta{position:relative;border-radius:22px;overflow:hidden;margin:0 0 26px;border:2px solid rgba(255,255,255,.85);background:linear-gradient(rgba(10,4,24,.35),rgba(10,4,24,.55)),url(images/tierlist-bg.jpg) center/cover;padding:22px 26px 26px}
+.mtop{display:flex;align-items:center;gap:14px;margin-bottom:14px}
+.mtop img.logo{width:58px;height:58px;filter:drop-shadow(0 0 10px rgba(169,139,255,.55))}
+.mtop .brand b{display:block;font-weight:400;font-size:1.05rem}.mtop .brand small{color:var(--muted)}
+.mtop .mode{margin-left:auto;border:2px solid rgba(255,255,255,.6);border-radius:999px;padding:3px 14px;font-size:.95rem}
+.meta h2{font-weight:400;font-size:2.3rem;text-align:center;margin:0 0 16px;text-shadow:0 2px 10px rgba(0,0,0,.5)}
+.row{display:grid;grid-template-columns:repeat(var(--n,5),1fr);gap:clamp(8px,2vw,26px);margin:0 auto 18px;max-width:1080px}
+.box{position:relative;aspect-ratio:1;border:4px solid #fff;border-radius:22px;display:block}
+.box>img{position:absolute;inset:6%;width:88%;height:88%;object-fit:contain;filter:drop-shadow(0 6px 10px rgba(0,0,0,.5))}
+.alt{position:absolute;top:-4px;right:-4px;width:34%;aspect-ratio:1;border:4px solid #fff;border-radius:16px;background:rgba(21,11,56,.85);display:grid;place-items:center;overflow:hidden}
+.alt img{width:92%;height:92%;object-fit:contain}
+.alt.empty{border-style:dashed;opacity:.45}
+.box .kn{position:absolute;left:0;right:0;bottom:-1.6em;text-align:center;font-size:.92rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.text{margin:30px auto 0;max-width:980px;text-align:center;font-size:clamp(1rem,1.6vw,1.45rem);line-height:1.45;text-shadow:0 2px 8px rgba(0,0,0,.6)}
+.text p{margin:0 0 6px}
+.tools{display:flex;justify-content:flex-end;gap:8px;margin-top:14px}
+.tools button{font:inherit;color:#fff;background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.4);border-radius:999px;padding:4px 14px;cursor:pointer}
+.tools button:hover{border-color:#fff}
+
+</style>
+</head>
+<body>
+<main>
+<h1>Metas Editor</h1>
+<p class="sub">Make and edit metas here, then press <b>Copy layout</b> and paste it in the chat so it goes on the Metas page. Your work is also saved in this browser.</p>
+
+<div class="panel"><h3>Your metas</h3><div class="list" id="mlist"></div>
+ <div class="bar"><button class="primary" id="add">+ New meta</button><button class="danger" id="del">Delete this meta</button><button id="up">Move up</button><button id="down">Move down</button></div></div>
+
+<div class="panel" id="edit">
+ <div class="grid">
+  <label class="f">Strat name<input id="title" maxlength="40" placeholder="Strat name"></label>
+  <label class="f">Mode<select id="mode"></select></label>
+ </div>
+ <h3 style="margin-top:14px">Kits <span class="note">(2 to 5)</span></h3>
+ <div class="kits" id="kits"></div>
+ <div class="bar"><button id="kadd">+ Add kit</button><button id="krem">− Remove last kit</button></div>
+ <label class="f" style="margin-top:14px">Description <span class="note">One line per paragraph</span><textarea id="text" placeholder="Explain the strat and each kit's role..."></textarea></label>
+</div>
+
+<h3 style="font-weight:400">Preview</h3>
+<div id="preview"></div>
+
+<div class="panel"><h3>Save</h3>
+ <div class="bar"><button class="primary" id="exp">Copy layout</button><button id="dl">Download file</button><button id="imp">Load layout</button><button id="reset">Reset to the site's metas</button></div>
+ <p class="msg" id="msg"></p>
+ <textarea id="json" spellcheck="false" placeholder="Layout text appears here. Paste a layout here and press Load layout to restore it."></textarea>
+</div>
+<datalist id="kitnames"></datalist>
+</main>
+<script>
+var SITE=[], KITS={"Abaddon": "images/kits/abaddon.webp", "Adetunde": "images/kits/adetunde.webp", "Aery": "images/kits/aery.webp", "Agni": "images/kits/agni.webp", "Alchemist": "images/kits/alchemist.webp", "Arachne": "images/kits/arachne.webp", "Archer": "images/kits/archer.webp", "Ares": "images/kits/ares.webp", "Axolotl Amy": "images/kits/axolotl-amy.webp", "Baker": "images/kits/baker.webp", "Barbarian": "images/kits/barbarian.webp", "Beekeeper Beatrix": "images/kits/beekeeper-beatrix.webp", "Bekzat": "images/kits/bekzat.webp", "Bounty Hunter": "images/kits/bounty-hunter.webp", "Builder": "images/kits/builder.webp", "Caitlyn": "images/kits/caitlyn.webp", "Cobalt": "images/kits/cobalt.webp", "Cogsworth": "images/kits/cogsworth.webp", "Conqueror": "images/kits/conqueror.webp", "Crocowolf": "images/kits/crocowolf.webp", "Crypt": "images/kits/crypt.webp", "Cyber": "images/kits/cyber.webp", "Death Adder": "images/kits/death-adder.webp", "Dino Tamer Dom": "images/kits/dino-tamer-dom.webp", "Drill": "images/kits/drill.webp", "Eldertree": "images/kits/eldertree.webp", "Eldric": "images/kits/eldric.webp", "Elektra": "images/kits/elektra.webp", "Ember": "images/kits/ember.webp", "Evelynn": "images/kits/evelynn.webp", "Farmer Cletus": "images/kits/farmer-cletus.webp", "Fisherman": "images/kits/fisherman.webp", "Flora": "images/kits/flora.webp", "Fortuna": "images/kits/fortuna.webp", "Freiya": "images/kits/freiya.webp", "Frosty": "images/kits/frosty.webp", "Gingerbread Man": "images/kits/gingerbread-man.webp", "Gompy": "images/kits/gompy.webp", "Gregory": "images/kits/gregory.webp", "Grim Reaper": "images/kits/grim-reaper.webp", "Grove": "images/kits/grove.webp", "Hannah": "images/kits/hannah.webp", "Hephaestus": "images/kits/hephaestus.webp", "Ignis": "images/kits/ignis.webp", "Infernal Shielder": "images/kits/infernal-shielder.webp", "Isabel": "images/kits/isabel.webp", "Jack": "images/kits/jack.webp", "Jade": "images/kits/jade.webp", "Kaida": "images/kits/kaida.webp", "Kaliyah": "images/kits/kaliyah.webp", "Krystal": "images/kits/krystal.webp", "Lani": "images/kits/lani.webp", "Lassy": "images/kits/lassy.webp", "Lian": "images/kits/lian.webp", "Lucía": "images/kits/lucia.webp", "Lumen": "images/kits/lumen.webp", "Lyla": "images/kits/lyla.webp", "Marcel": "images/kits/marcel.webp", "Marina": "images/kits/marina.webp", "Marrow": "images/kits/marrow.webp", "Martin": "images/kits/martin.webp", "Melody": "images/kits/melody.webp", "Merchant Marco": "images/kits/merchant-marco.webp", "Metal Detector": "images/kits/metal-detector.webp", "Milo": "images/kits/milo.webp", "Miner": "images/kits/miner.webp", "Nahla": "images/kits/nahla.webp", "Nazar": "images/kits/nazar.webp", "Noelle": "images/kits/noelle.webp", "Nyoka": "images/kits/nyoka.webp", "Nyx": "images/kits/nyx.webp", "Pirate Davey": "images/kits/pirate-davey.webp", "Pyro": "images/kits/pyro.webp", "Ragnar": "images/kits/ragnar.webp", "Ramil": "images/kits/ramil.webp", "Raven": "images/kits/raven.webp", "Santa": "images/kits/santa.webp", "Sheep Herder": "images/kits/sheep-herder.webp", "Sheila": "images/kits/sheila.webp", "Sigrid": "images/kits/sigrid.webp", "Silas": "images/kits/silas.webp", "Skoll": "images/kits/skoll.webp", "Smoke": "images/kits/smoke.webp", "Sophia": "images/kits/sophia.webp", "Spirit Catcher": "images/kits/spirit-catcher.webp", "Star Collector Stella": "images/kits/star-collector-stella.webp", "Styx": "images/kits/styx.webp", "Taliyah": "images/kits/taliyah.webp", "Terra": "images/kits/terra.webp", "Trapper": "images/kits/trapper.webp", "Trinity": "images/kits/trinity.webp", "Triton": "images/kits/triton.webp", "Trixie": "images/kits/trixie.webp", "Uma": "images/kits/uma.webp", "Umbra": "images/kits/umbra.webp", "Umeko": "images/kits/umeko.webp", "Vanessa": "images/kits/vanessa.webp", "Void Knight": "images/kits/void-knight.webp", "Void Regent": "images/kits/void-regent.webp", "Vulcan": "images/kits/vulcan.webp", "Warden": "images/kits/warden.webp", "Warrior": "images/kits/warrior.webp", "Whim": "images/kits/whim.webp", "Whisper": "images/kits/whisper.webp", "Wren": "images/kits/wren.webp", "Xu'rot": "images/kits/xu-rot.webp", "Yamini": "images/kits/yamini.webp", "Yeti": "images/kits/yeti.webp", "Yuzi": "images/kits/yuzi.webp", "Zarrah": "images/kits/zarrah.webp", "Zenith": "images/kits/zenith.webp", "Zeno": "images/kits/zeno.webp", "Zephyr": "images/kits/zephyr.webp", "Zola": "images/kits/zola.webp"}, NAMES=Object.keys(KITS).sort();
+var MODES=["Duos","Squads","Duels","Ranked","16v16"], KEY="bwug-metas-draft";
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+function $(i){return document.getElementById(i);}
+var M; try{ M=JSON.parse(localStorage.getItem(KEY)); }catch(e){} if(!Array.isArray(M)) M=JSON.parse(JSON.stringify(SITE));
+var cur=0;
+function save(){ try{ localStorage.setItem(KEY,JSON.stringify(M)); }catch(e){} }
+function blank(){ return {title:"New meta",mode:"Squads",kits:[{kit:"",alt:""},{kit:"",alt:""}],text:[]}; }
+$("mode").innerHTML=MODES.map(function(m){return '<option>'+m+'</option>';}).join('');
+$("kitnames").innerHTML=NAMES.map(function(n){return '<option value="'+esc(n)+'">';}).join('');
+function list(){ $("mlist").innerHTML=M.length?M.map(function(m,i){return '<button class="'+(i===cur?'on':'')+'" data-i="'+i+'">'+esc(m.title||'Untitled')+' <span class="note">'+esc(m.mode)+'</span></button>';}).join(''):'<span class="note">No metas yet. Press + New meta.</span>';
+  $("edit").style.display=M.length?'':'none'; }
+function form(){ var m=M[cur]; if(!m){ $("preview").innerHTML=''; return; }
+  $("title").value=m.title; $("mode").value=m.mode; $("text").value=m.text.join("\n");
+  $("kits").innerHTML=m.kits.map(function(k,i){ return '<div class="krow"><span>'+(i+1)+'</span><input list="kitnames" data-k="'+i+'" data-f="kit" value="'+esc(k.kit)+'" placeholder="Kit"><input list="kitnames" data-k="'+i+'" data-f="alt" value="'+esc(k.alt)+'" placeholder="Replacement (optional)"><span class="note">'+(k.kit&&!KITS[k.kit]?'?':'')+'</span></div>'; }).join('');
+  $("kadd").disabled=m.kits.length>=5; $("krem").disabled=m.kits.length<=2; preview(); }
+function preview(){ var m=M[cur]; if(!m) return; $("preview").innerHTML=card(m); }
+function slug(n){return n.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");}
+function img(n){return KITS[n]||"";}
+function card(m,i){
+  var n=m.kits.length;
+  return '<section class="meta" id="'+slug(m.title)+'"><div class="mtop"><img class="logo" src="images/logo.png" alt=""><span class="brand"><b>Bedwars User Guide</b><small>Metas</small></span><span class="mode">'+esc(m.mode)+'</span></div>'+
+   '<h2>'+esc(m.title)+'</h2><div class="row" style="--n:'+n+'">'+m.kits.map(function(k){
+     return '<a class="box" href="kit-machine.html#'+slug(k.kit)+'" title="'+esc(k.kit)+(k.alt?' (or '+esc(k.alt)+')':'')+'"><img src="'+esc(img(k.kit))+'" alt="'+esc(k.kit)+'">'+
+       (k.alt?'<span class="alt"><img src="'+esc(img(k.alt))+'" alt="'+esc(k.alt)+'" title="Replacement: '+esc(k.alt)+'"></span>':'<span class="alt empty"></span>')+'<span class="kn">'+esc(k.kit)+(k.alt?' / '+esc(k.alt):'')+'</span></a>';
+   }).join('')+'</div><div class="text">'+m.text.map(function(t){return '<p>'+esc(t)+'</p>';}).join('')+'</div>'+
+   '</section>';
+}
+
+function all(){ list(); form(); }
+$("mlist").onclick=function(e){ var b=e.target.closest("[data-i]"); if(!b) return; cur=+b.dataset.i; all(); };
+$("add").onclick=function(){ M.push(blank()); cur=M.length-1; save(); all(); };
+$("del").onclick=function(){ if(!M.length) return; if(!confirm('Delete "'+M[cur].title+'"?')) return; M.splice(cur,1); cur=Math.max(0,cur-1); save(); all(); };
+$("up").onclick=function(){ if(cur>0){ var t=M[cur]; M[cur]=M[cur-1]; M[cur-1]=t; cur--; save(); all(); } };
+$("down").onclick=function(){ if(cur<M.length-1){ var t=M[cur]; M[cur]=M[cur+1]; M[cur+1]=t; cur++; save(); all(); } };
+$("title").oninput=function(){ M[cur].title=this.value; save(); list(); preview(); };
+$("mode").onchange=function(){ M[cur].mode=this.value; save(); list(); preview(); };
+$("text").oninput=function(){ M[cur].text=this.value.split("\n").map(function(s){return s.trim();}).filter(Boolean); save(); preview(); };
+$("kits").oninput=function(e){ var t=e.target; if(!t.dataset.f) return; M[cur].kits[+t.dataset.k][t.dataset.f]=t.value.trim(); save(); preview(); };
+$("kits").addEventListener("change",function(e){ var t=e.target; if(!t.dataset.f) return; var row=t.closest(".krow"), k=M[cur].kits[+t.dataset.k]; row.lastChild.textContent=(k.kit&&!KITS[k.kit])||(k.alt&&!KITS[k.alt])?"Not a kit":""; });
+$("kadd").onclick=function(){ if(M[cur].kits.length<5){ M[cur].kits.push({kit:"",alt:""}); save(); form(); } };
+$("krem").onclick=function(){ if(M[cur].kits.length>2){ M[cur].kits.pop(); save(); form(); } };
+function problems(){ var p=[]; M.forEach(function(m){ m.kits.forEach(function(k,i){ if(!KITS[k.kit]) p.push(m.title+': kit '+(i+1)+(k.kit?' "'+k.kit+'" not found':' is empty')); if(k.alt&&!KITS[k.alt]) p.push(m.title+': replacement "'+k.alt+'" not found'); }); }); return p; }
+function out(){ return "BWUG-METAS "+JSON.stringify(M); }
+$("exp").onclick=function(){ var p=problems(), s=out(); $("json").value=s; if(p.length){ $("msg").style.color="#ffb3bf"; $("msg").textContent="Fix these first: "+p.join("; "); return; }
+  (navigator.clipboard?navigator.clipboard.writeText(s):Promise.reject()).then(function(){ $("msg").style.color=""; $("msg").textContent="Copied! Paste it in the chat."; },function(){ $("json").select(); $("msg").style.color=""; $("msg").textContent="Select the text below and copy it."; }); };
+$("dl").onclick=function(){ var a=document.createElement("a"); a.href=URL.createObjectURL(new Blob([out()],{type:"text/plain"})); a.download="bwug-metas.txt"; a.click(); };
+$("imp").onclick=function(){ try{ var t=$("json").value.trim().replace(/^BWUG-METAS\s*/,''); var v=JSON.parse(t); if(!Array.isArray(v)) throw 0; M=v; cur=0; save(); all(); $("msg").style.color=""; $("msg").textContent="Loaded."; }catch(e){ $("msg").style.color="#ffb3bf"; $("msg").textContent="That doesn't look like a metas layout."; } };
+$("reset").onclick=function(){ if(!confirm("Replace your draft with the metas on the site?")) return; M=JSON.parse(JSON.stringify(SITE)); cur=0; save(); all(); };
+all();
+</script>
+</body>
+</html>
