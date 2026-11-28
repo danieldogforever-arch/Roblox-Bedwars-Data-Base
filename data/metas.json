@@ -1,1 +1,27 @@
-[]
+[
+  {
+    "title": "The Big Mac",
+    "mode": "Ranked Squads",
+    "kits": [
+      {
+        "kit": "Miner",
+        "alt": "Uma"
+      },
+      {
+        "kit": "Axolotl Amy",
+        "alt": "Core"
+      },
+      {
+        "kit": "Conqueror",
+        "alt": "Lani"
+      },
+      {
+        "kit": "Farmer Cletus",
+        "alt": "Taliyah"
+      }
+    ],
+    "text": [
+      "This strategy relies on bed breaking and finishing games before late game. Early game, Farmer plants his crops and defends the bed, Conqueror cycles the diamond generators, and Amy and Conqueror will be in the middle getting emeralds. Conqueror needs his Healing and KB Banners, Amy needs max tools and the Breakspeed Axolotl, and they both need Telepearls. Conqueror pearls first and places his banners, then Amy follows shortly after to bed break. Conqueror tanks the hits, and with Amy's Shield Axolotl and the Heal Banner, she'll have time to bed break without getting knocked away. Repeat this after every team's bed is broken, then wipe them."
+    ]
+  }
+]

@@ -46,6 +46,9 @@ a.tool p{margin:0;color:var(--muted);font-size:.98rem}
 .calc{display:flex;flex-direction:column;align-items:center;gap:4px}
 .calc img{width:56px;height:56px;object-fit:contain}
 .calc span{font-size:.95rem;color:var(--gold)}
+.mm{display:grid;grid-template-columns:repeat(2,44px);gap:8px}
+.mm i{width:44px;height:44px;border:3px solid #fff;border-radius:12px;background:rgba(255,255,255,.08);display:grid;place-items:center}
+.mm img{width:36px;height:36px;object-fit:contain}
 .rand{display:flex;align-items:center;gap:2px}
 .rand .slot{width:52px;height:52px;overflow:hidden;background:rgba(255,255,255,.08);border-radius:12px;border:2px solid var(--gold)}
 .rand .reel{display:flex;flex-direction:column}
@@ -72,7 +75,7 @@ a.tool p{margin:0;color:var(--muted);font-size:.98rem}
 </head>
 <body>
 <header class="site-head"><a class="brand" href="index.html"><img src="images/logo.png" alt="" width="96" height="96"><span><b>Bedwars User Guide</b><small>Kits, tiers, damage and more</small></span></a></header>
-<nav class="site-nav" aria-label="Pages"><div class="in"><a href="index.html" aria-current="page">Home</a><a href="kit-machine.html">Kit Machine</a><a href="charts.html">Tier Lists</a><a href="calculator.html">Damage Calculator</a><a href="randomizer.html">Kit Randomizer</a><a href="guides.html">Guides</a><a href="metas.html">Metas</a><a href="updates.html">Update Log</a></div></nav>
+<nav class="site-nav" aria-label="Pages"><div class="in"><a href="index.html" aria-current="page">Home</a><a href="kit-machine.html">Kit Machine</a><a href="charts.html">Tier Lists</a><a href="metas.html">Metas</a><a href="calculator.html">Damage Calculator</a><a href="guides.html">Guides</a><a href="randomizer.html">Kit Randomizer</a><a href="updates.html">Update Log</a></div></nav>
 <script src="js/music.js" defer></script>
 <main class="wrap">
   <section class="intro">
@@ -93,10 +96,11 @@ a.tool p{margin:0;color:var(--muted);font-size:.98rem}
   <div class="tools">
     <a class="tool" href="kit-machine.html"><span class="art km" id="kmArt"><img class="k p0" data-p="0" src="images/kits/eldertree.webp" alt=""><img class="k p1" data-p="1" src="images/kits/void-knight.webp" alt=""><img class="k p2" data-p="2" src="images/kits/crocowolf.webp" alt=""><img class="k p3" data-p="3" src="images/kits/cobalt.webp" alt=""><img class="k p4" data-p="4" src="images/kits/zephyr.webp" alt=""></span><span><h3>Kit Machine</h3><p>Look up any kit: stats, tier, class, skins, abilities, best fusions and balance history.</p></span></a>
     <a class="tool" href="charts.html"><span class="art"><span class="tiers"><i style="background:#ff4d6d">OP</i><i style="background:#ff8a5c">S</i><i style="background:#ffd166">A</i><i style="background:#5fe3a1">B</i><i style="background:#5cc8ff">C</i><i style="background:#a98bff">F</i></span></span><span><h3>Tier Lists</h3><p>Casual, Ranked and Duels tier lists. Search for a kit, or download the list as an image.</p></span></a>
+    <a class="tool" href="metas.html"><span class="art"><span class="mm"><i><img src="images/kits/miner.webp" alt=""></i><i><img src="images/kits/axolotl-amy.webp" alt=""></i><i><img src="images/kits/conqueror.webp" alt=""></i><i><img src="images/kits/farmer-cletus.webp" alt=""></i></span></span><span><h3>Metas</h3><p>Team setups for every mode: which kits to run together, what each one does, and a replacement for each spot.</p></span></a>
     <a class="tool" href="calculator.html"><span class="art"><span class="calc"><img src="images/items/diamond-sword.png" alt=""><span>42 → 18.48</span></span></span><span><h3>Damage Calculator</h3><p>Pick a weapon, buffs, enchants, armor and a target kit to see damage per hit, hits to kill and true HP.</p></span></a>
-    <a class="tool" href="updates.html"><span class="art"><span class="calc"><span style="font-size:2.2rem;line-height:1">📜</span><span>507 updates</span></span></span><span><h3>Update Log</h3><p>Every update since 2021 with a short summary, plus all the details, balance changes and bug fixes.</p></span></a>
-    <a class="tool" href="randomizer.html"><span class="art"><span class="rand"><span class="slot"><span class="reel"><img src="images/kits/cogsworth.webp" alt=""></span></span><b>+</b><span class="slot"><span class="reel"><img src="images/kits/farmer-cletus.webp" alt=""></span></span></span></span><span><h3>Kit Randomizer</h3><p>Can't decide? Spin for a random kit or a random fusion, with filters for class, tier and difficulty.</p></span></a>
     <a class="tool" href="guides.html"><span class="art"><span class="ups"><img class="u1" src="images/upgrades/armor.png" alt=""><img class="u2" src="images/upgrades/team-gen.png" alt=""><img class="u3" src="images/upgrades/break-speed.png" alt=""></span></span><span><h3>Guides</h3><p>Tested guides for everything outside kits, like which team upgrades to buy and in what order.</p></span></a>
+    <a class="tool" href="randomizer.html"><span class="art"><span class="rand"><span class="slot"><span class="reel"><img src="images/kits/cogsworth.webp" alt=""></span></span><b>+</b><span class="slot"><span class="reel"><img src="images/kits/farmer-cletus.webp" alt=""></span></span></span></span><span><h3>Kit Randomizer</h3><p>Can't decide? Spin for a random kit or a random fusion, with filters for class, tier and difficulty.</p></span></a>
+    <a class="tool" href="updates.html"><span class="art"><span class="calc"><span style="font-size:2.2rem;line-height:1">📜</span><span>507 updates</span></span></span><span><h3>Update Log</h3><p>Every update since 2021 with a short summary, plus all the details, balance changes and bug fixes.</p></span></a>
   </div>
 
   <h2 class="sec">Finished kit guides <small>114 of 114 kits</small></h2>
