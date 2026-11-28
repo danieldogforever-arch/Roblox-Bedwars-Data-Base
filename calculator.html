@@ -104,7 +104,7 @@ select:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid 
 </head>
 <body>
 <header class="site-head"><a class="brand" href="index.html"><img src="images/logo.png" alt="" width="96" height="96"><span><b>Bedwars User Guide</b><small>Kits, tiers, damage and more</small></span></a></header>
-<nav class="site-nav" aria-label="Pages"><div class="in"><a href="index.html">Home</a><a href="kit-machine.html">Kit Machine</a><a href="charts.html">Tier Lists</a><a href="metas.html">Metas</a><a href="calculator.html" aria-current="page">Damage Calculator</a><a href="guides.html">Guides</a><a href="randomizer.html">Kit Randomizer</a><a href="updates.html">Update Log</a></div></nav>
+<nav class="site-nav" aria-label="Pages"><div class="in"><a href="index.html">Home</a><a href="kit-machine.html">Kit Machine</a><a href="charts.html">Tier Lists</a><a href="calculator.html" aria-current="page">Damage Calculator</a><a href="randomizer.html">Kit Randomizer</a><a href="updates.html">Update Log</a></div></nav>
 <script src="js/music.js" defer></script>
 <div class="wrap">
   <h1>Damage Calculator</h1>
@@ -268,8 +268,8 @@ function helmSvg(c){return '<svg width="18" height="18" viewBox="0 0 20 20" aria
 
 var S={sls:0,slp:false,ib:0,ish:false,ak:"",w:"g:Diamond Sword",wv:0,wn:null,gf:0,gd:0,hm:1,axs:false,axr:false,head:false,asc:0,du:0,extra:0,pen:null,en:[],cm:0,bhp:10,ss:0,dk:"",vt:4,dasc:false,dfor:false,orbs:0,ar:"iron",au:0,hp:null,sh:null};
 var $=function(id){return document.getElementById(id);};
-var ORBHP=[100, 130, 149, 167, 185, 202, 219, 235, 251, 266, 282, 297, 312, 327, 341, 355, 369, 383, 397, 411, 424, 438, 451, 464, 477, 490, 503, 516, 529, 541, 554, 566, 578, 591, 603, 615, 627, 639, 651, 663, 674, 686, 698, 709, 721, 732, 744, 755, 766, 778, 789, 800, 811, 822, 833, 844, 855, 866, 877, 888, 899, 909, 920, 931, 941, 952, 962, 973, 983, 994, 1004];
-function orbHp(n){ n=Math.max(0,Math.floor(n)); return n<ORBHP.length?ORBHP[n]:Math.round(100+27.8657*Math.pow(n,0.8196)); }
+var ORBHP=[100, 135, 156, 176, 196, 216, 235, 254, 273, 292, 310, 328, 346, 364, 381, 398, 416, 433, 450, 466, 483, 500, 516];
+function orbHp(n){ n=Math.max(0,Math.floor(n)); return n<ORBHP.length?ORBHP[n]:Math.round(108.1488+25.6088*Math.pow(n,0.8961)); }
 var NOARMOR=["Void Knight","Hephaestus","Eldertree"];
 function tArm(){ if(NOARMOR.indexOf(S.dk)>=0) return "none"; if(S.dk==="Warrior"&&S.ar==="diamond") return "warrior"; if(S.dk!=="Warrior"&&S.ar==="warrior") return "diamond"; return S.ar; }
 function has(id){ return S.en.indexOf(id)>=0; }
